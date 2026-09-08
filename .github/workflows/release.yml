@@ -6,6 +6,7 @@ on:
     paths:
       - package.json
       - app/version.js
+      - app/games-v2.css
       - .github/workflows/release.yml
   workflow_dispatch:
 
@@ -50,6 +51,33 @@ jobs:
             throw 'The installed app update feed must point to this release repository.'
           }
           $tag = "v$version"
+          # Recover only the known unpublished draft left by run 34275198896.
+          # Published releases and any other commit are never cleanup targets.
+          if ($env:GITHUB_REPOSITORY -eq 'JadenTrask/dropzone-releases' -and $tag -eq 'v2.0.0') {
+            $failedCommit = '3dc1526f4383e3f6fb35b0d219013df010d024ca'
+            $pages = gh api --paginate --slurp "repos/$env:GITHUB_REPOSITORY/releases?per_page=100" | ConvertFrom-Json
+            $old = @(foreach ($page in $pages) { foreach ($release in $page) { if ($release.tag_name -eq $tag) { $release } } })
+            $oldRefs = gh api "repos/$env:GITHUB_REPOSITORY/git/matching-refs/tags/$tag" | ConvertFrom-Json
+            $oldTag = @($oldRefs | Where-Object { $_.ref -eq "refs/tags/$tag" })
+            $knownTag = $oldTag.Count -eq 1 -and $oldTag[0].object.type -eq 'commit' -and $oldTag[0].object.sha -eq $failedCommit
+            if ($old.Count -eq 1 -and $old[0].draft -eq $true -and -not $old[0].published_at -and $old[0].target_commitish -eq $failedCommit -and $knownTag) {
+              $draftCheck = gh api "repos/$env:GITHUB_REPOSITORY/releases/$($old[0].id)" | ConvertFrom-Json
+              if ($draftCheck.tag_name -ne $tag -or $draftCheck.draft -ne $true -or $draftCheck.published_at -or $draftCheck.target_commitish -ne $failedCommit) {
+                throw 'The failed draft changed; refusing cleanup.'
+              }
+              gh api --method DELETE "repos/$env:GITHUB_REPOSITORY/releases/$($draftCheck.id)"
+              $old = @()
+            }
+            if ($old.Count -eq 0 -and $knownTag) {
+              $pages = gh api --paginate --slurp "repos/$env:GITHUB_REPOSITORY/releases?per_page=100" | ConvertFrom-Json
+              $remaining = @(foreach ($page in $pages) { foreach ($release in $page) { if ($release.tag_name -eq $tag) { $release } } })
+              $tagCheck = gh api "repos/$env:GITHUB_REPOSITORY/git/ref/tags/$tag" | ConvertFrom-Json
+              if ($remaining.Count -or $tagCheck.object.type -ne 'commit' -or $tagCheck.object.sha -ne $failedCommit) {
+                throw 'The failed tag changed or has a release; refusing cleanup.'
+              }
+              gh api --method DELETE "repos/$env:GITHUB_REPOSITORY/git/refs/tags/$tag"
+            }
+          }
           $refs = gh api "repos/$env:GITHUB_REPOSITORY/git/matching-refs/tags/$tag" | ConvertFrom-Json
           $releases = gh release list --repo $env:GITHUB_REPOSITORY --limit 1000 --json tagName,isDraft | ConvertFrom-Json
           $existingRelease = @($releases | Where-Object { $_.tagName -eq $tag })
@@ -123,13 +151,17 @@ jobs:
           Set-Content -LiteralPath $notesPath -Value $notes -Encoding utf8
 
           # Creating the ref is atomic and fails if another publisher won the race.
-          # No force-update, overwrite, --clobber, or release deletion is used.
+          # Publication never force-updates a tag or overwrites an asset.
           gh api --method POST "repos/$env:GITHUB_REPOSITORY/git/refs" --raw-field "ref=refs/tags/$env:RELEASE_TAG" --raw-field "sha=$env:GITHUB_SHA"
           gh release create $env:RELEASE_TAG --repo $env:GITHUB_REPOSITORY --verify-tag --target $env:GITHUB_SHA --draft --title "Dropzone $env:RELEASE_VERSION" --notes-file $notesPath
 
           $assets = @($manifest.assets | ForEach-Object { Join-Path 'release/installer' $_.name })
           gh release upload $env:RELEASE_TAG @assets --repo $env:GITHUB_REPOSITORY
-          $draft = gh api "repos/$env:GITHUB_REPOSITORY/releases/tags/$env:RELEASE_TAG" | ConvertFrom-Json
+          $pages = gh api --paginate --slurp "repos/$env:GITHUB_REPOSITORY/releases?per_page=100" | ConvertFrom-Json
+          $matchingDrafts = @(foreach ($page in $pages) { foreach ($release in $page) { if ($release.tag_name -eq $env:RELEASE_TAG -and $release.draft -eq $true -and $release.target_commitish -eq $env:GITHUB_SHA) { $release } } })
+          if ($matchingDrafts.Count -ne 1) { throw 'Could not identify exactly one matching draft release.' }
+          $releaseId = $matchingDrafts[0].id
+          $draft = gh api "repos/$env:GITHUB_REPOSITORY/releases/$releaseId" | ConvertFrom-Json
           if (-not $draft.draft -or $draft.target_commitish -ne $env:GITHUB_SHA -or $draft.assets.Count -ne 4) {
             throw 'The draft does not match the verified release.'
           }
@@ -151,7 +183,7 @@ jobs:
             throw 'Release tag no longer points to the verified source commit.'
           }
 
-          gh release edit $env:RELEASE_TAG --repo $env:GITHUB_REPOSITORY --draft=false --prerelease=false --latest
+          gh api --method PATCH "repos/$env:GITHUB_REPOSITORY/releases/$releaseId" --field draft=false --field prerelease=false --raw-field make_latest=true
           $published = gh api "repos/$env:GITHUB_REPOSITORY/releases/latest" | ConvertFrom-Json
           if ($published.tag_name -ne $env:RELEASE_TAG -or $published.draft -or $published.prerelease) {
             throw 'GitHub did not report the verified release as latest stable.'
