@@ -1,0 +1,229 @@
+/* League workspace: a restrained surface that keeps the build in focus. */
+#league-app{--league-surface:#151a1b;--league-raised:#1b2223;--league-border:#303a3b;--league-text:#e8efed;--league-muted:#a3b0ad;--league-accent:var(--accent,#8de0bd);color:var(--league-text)}
+#league-app .content{padding:22px 26px 32px;max-width:1500px}
+#league-app :is(h1,h2,h3){color:var(--league-text)}
+#league-app h2{font-size:1.125rem;letter-spacing:-.025em;font-weight:650}
+#league-app :is(.eyebrow,.muted,.footnote,.method-note,.panel-subtitle){color:var(--league-muted)}
+#league-app .eyebrow{font-size:.75rem;letter-spacing:.08em}
+#league-app .panel-subtitle{font-size:.8125rem;line-height:1.5;margin-top:5px}
+#league-app :is(.league-accent,.text-button,.settings-links button){color:var(--league-accent)}
+#league-app :is(button,a,input,select):focus-visible{outline-color:var(--league-accent)}
+#league-app ::selection{background:#8de0bd38}
+
+/* The art identifies the champion without competing with the build. */
+#league-app .league-hero{min-height:200px;border:1px solid var(--league-border);border-radius:12px;background:#131a1b;box-shadow:none}
+#league-app .hero-art{object-position:center 34%;opacity:.66}
+#league-app .hero-shade{background:linear-gradient(90deg,#111819f5 0%,#111819b3 38%,#11181952 60%,#111819d9 100%),linear-gradient(0deg,#111819de,transparent 80%)}
+#league-app .hero-body{min-height:158px;gap:24px;align-items:center;padding:21px 24px 17px}
+#league-app .hero-copy{min-width:0}
+#league-app .hero-tags{gap:8px;flex-wrap:wrap;margin-bottom:8px}
+#league-app .hero-tags span{color:#becbc6;background:transparent;border:0;padding:0;font-size:.6875rem;text-transform:none;letter-spacing:.015em}
+#league-app .hero-tags span+span:before{content:'·';margin-right:8px;color:#768982}
+#league-app .hero-tags .role-tag{color:var(--league-accent)}
+#league-app .hero h1{font-size:2.6rem;line-height:1.06;letter-spacing:-.045em;font-weight:700;text-shadow:none}
+#league-app .hero-copy>p{font-size:.8125rem;color:#bac5c1;letter-spacing:0;margin:5px 0 13px}
+#league-app .change-champion{font-size:.8125rem;color:var(--league-text);gap:7px}
+#league-app .change-champion svg{color:var(--league-accent)}
+#league-app .favorite-button{position:absolute;right:17px;top:17px;width:30px;height:30px;background:#111819a6;border-color:#a5bcb13d;color:#bccac3}
+#league-app .favorite-button.selected{background:#8de0bd1a;color:var(--league-accent);border-color:#8de0bd70}
+#league-app .favorite-button.selected svg{fill:#8de0bd30}
+#league-app .hero-stats{border:0;background:transparent;box-shadow:none;backdrop-filter:none;padding:10px 28px 10px 10px;margin:12px 0 0}
+#league-app .hero-numbers{gap:24px;flex-direction:row;flex-wrap:wrap}
+#league-app .hero-numbers strong{color:#f0f5f2;font-size:1.35rem;line-height:1.2;letter-spacing:-.035em;font-weight:650}
+#league-app .hero-numbers small{font-size:.6875rem;letter-spacing:0;color:#b4c1bb;margin-top:5px}
+#league-app .hero-source-tier strong{color:var(--league-accent)}
+#league-app .hero-bottom{gap:12px;flex-wrap:wrap;padding:11px 24px;background:#1118198c;border-color:#ffffff13;color:#a9b8b1;font-size:.75rem;letter-spacing:0}
+#league-app .hero-bottom>span:first-child{color:#d0dbd5}
+
+/* Mode controls occupy one row; all additional queues stay in More. */
+#league-app .filter-bar{margin:18px 0 20px;gap:16px;flex-wrap:wrap}
+#league-app .mode-tabs{background:#111617;border-color:var(--league-border);padding:3px;gap:3px;border-radius:8px;flex-wrap:wrap}
+#league-app .mode-tabs button{font-size:.8125rem;padding:8px 11px;color:#a7b4b0;border-radius:5px}
+#league-app .mode-tabs button.active{background:#263b33;color:var(--league-accent);box-shadow:none}
+#league-app .mode-tabs button:hover{background:var(--league-raised)}
+#league-app .selects{gap:16px;flex-wrap:wrap}
+#league-app .selects label{border-color:var(--league-border);padding-left:13px}
+#league-app .selects label>span{color:#899a93;font-size:.625rem;letter-spacing:.1em}
+#league-app .selects select{color:#d9e2de;font-size:.8125rem}
+
+/* Build cards use quiet divisions and one consistent accent. */
+#league-app .build-layout{display:grid;grid-template-columns:minmax(0,1fr) minmax(260px,29%);gap:18px}
+#league-app :is(.build-left,.build-right){gap:18px;min-width:0}
+#league-app .panel{padding:21px;background:var(--league-surface);border-color:var(--league-border);border-radius:10px;box-shadow:none}
+#league-app .panel-heading{margin-bottom:18px}
+#league-app .strategy-row{margin-bottom:21px;gap:12px;flex-wrap:wrap}
+#league-app .segmented{background:#111617;border-color:var(--league-border);border-radius:6px}
+#league-app .segmented button{color:#a8b5af;font-size:.75rem;padding:7px 10px}
+#league-app .segmented button.active{color:var(--league-accent);background:#263b33;box-shadow:none}
+#league-app .confidence{color:#a6b7ab;font-size:.6875rem}
+#league-app .build-caption{margin-bottom:10px;font-size:.75rem;letter-spacing:0;color:#c7d2cd;font-weight:600}
+#league-app .build-caption>span:last-child{font-size:.6875rem;font-weight:400;color:#92a39a}
+#league-app .starter-row{margin-bottom:20px;gap:8px}
+#league-app .starter-item{background:var(--league-raised);border-color:var(--league-border);color:#cbd7d0;font-size:.75rem;padding:5px 9px 5px 5px}
+#league-app .starter-item img{border-color:#61766a55}
+#league-app .item-path{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+#league-app .item-card{display:grid;grid-template-columns:48px minmax(0,1fr);align-items:center;gap:12px;padding:12px;background:var(--league-raised);border:1px solid var(--league-border);border-radius:7px;min-height:94px}
+#league-app .item-card.core-item{border-left:3px solid var(--league-accent);padding-left:10px}
+#league-app .item-copy{min-width:0}
+#league-app .item-art{display:block;background:#111717;border-color:#45534e;border-radius:8px;box-shadow:none}
+#league-app .item-art img{display:block}
+#league-app .core-item .item-art{border-color:#8de0bd88;box-shadow:inset 0 0 0 1px #8de0bd22}
+#league-app .core-item .item-art:after{background:linear-gradient(0deg,#102d2455,transparent 40%)}
+#league-app .item-card:hover img{transform:scale(1.035)}
+#league-app .item-card strong{color:#d4dfd8;font-size:.8125rem;line-height:1.4;margin-top:0;min-height:0;font-weight:550;overflow-wrap:normal}
+#league-app .item-card small{color:#91a397;font-size:.6875rem;letter-spacing:0;margin-top:5px}
+#league-app .item-number{position:static;display:inline-block;color:#b5c5bb;font-size:.625rem;font-weight:500;text-shadow:none;margin-right:7px}
+#league-app .mini-dot{background:var(--league-accent)}
+#league-app .core-result{margin-top:19px;padding:13px 14px;background:#8de0bd06;border-color:#8de0bd25;gap:12px}
+#league-app .core-result>div{min-width:0}
+#league-app .core-result strong{font-size:1.5rem;color:var(--league-accent);letter-spacing:-.025em}
+#league-app .core-result strong>span{color:#b1cfbd}
+#league-app .core-result b{font-size:.75rem;color:#d1ddd6}
+#league-app .core-result small{font-size:.6875rem;color:#9caf9f;line-height:1.5}
+#league-app .result-badge{display:inline-block;white-space:normal;color:#a6b7ab;background:#1c2721;border-color:#405347;font-size:.625rem;padding:4px 6px;max-width:38%}
+#league-app .method-note{font-size:.75rem;line-height:1.6;margin-top:12px}
+#league-app .method-note .icon{margin-top:3px;flex-shrink:0}
+#league-app .build-actions{border-color:var(--league-border);margin-top:17px;padding-top:16px;gap:9px}
+#league-app .button{background:var(--league-accent);border-color:transparent;color:#12261c;box-shadow:none;border-radius:6px;font-size:.8125rem;padding:10px 12px}
+#league-app .button:hover:not(:disabled){background:#a6efce;color:#10291d;transform:none}
+#league-app .button.secondary{background:#202a26;border-color:#3b4a42;color:#d1dfd6}
+#league-app .button.secondary:hover:not(:disabled){background:#2b3a31;color:#eef7f1}
+#league-app .build-actions>.text-button{margin-left:auto;font-size:.75rem}
+#league-app .icon-button{color:#a6b5ab}
+#league-app .icon-button:hover{background:#26342c;border-color:#405749}
+
+/* Adaptation, skill choices and runes retain all their available detail. */
+#league-app .threat-pills{gap:7px;margin:15px 0}
+#league-app .threat-pills button{border-color:#34473d;background:#19251f;color:#aebeb2;font-size:.75rem;padding:8px 9px}
+#league-app .threat-pills button.active{border-color:#8de0bd75;background:#2a4033;color:var(--league-accent)}
+#league-app .adapt-empty{padding-top:12px;color:#a0afa4}
+#league-app .adapt-empty :is(strong,span){color:#a6b6a9;line-height:1.6}
+#league-app .situation{border-color:var(--league-border)}
+#league-app .situation img{border-color:#53735f}
+#league-app .situation strong{color:#d3e0d5}
+#league-app .situation span{color:#b0c4b5}
+#league-app .situation p{color:#9eb2a4}
+#league-app .skill-priority b{border-color:#486353;background:#263b2f;color:#c9ecd8;font-size:.8125rem}
+#league-app .skill-priority svg{color:#91ab9a}
+#league-app :is(.level-numbers>span,.skill-key){color:#a3b8aa}
+#league-app .skill-cell{background:#16201a;border-color:#2d3e33}
+#league-app .skill-cell.chosen{background:#304f3c;border-color:#719b7f;color:#dbf2e2;box-shadow:none}
+#league-app .skill-cell.chosen.ultimate{background:#413c27;border-color:#9e8f52;color:#eadca7}
+#league-app .rune-panel{padding:21px}
+#league-app .rune-panel h2{font-size:1.125rem}
+#league-app .rune-tree-title{color:#b8c8bf;font-size:.75rem;gap:7px;margin-bottom:11px}
+#league-app .rune{color:#afbeb5;font-size:.75rem}
+#league-app .rune.keystone{background:#202c25;border-color:#3a5242;min-height:59px}
+#league-app .rune.keystone>span{color:#dae9df;font-size:.875rem}
+#league-app .rune.keystone small{color:#96af9d;letter-spacing:.03em;font-size:.625rem}
+#league-app :is(.secondary-tree,.shards,.summoner-heading){border-color:var(--league-border)}
+#league-app .secondary-tree .rune-tree-title{color:#b6c4ad}
+#league-app .shard-icon{background:#202c24;border-color:#49604f;color:#b6ccbc}
+#league-app .summoner-heading{color:#9db2a4;letter-spacing:.05em;font-size:.6875rem}
+#league-app .summoners img{border-color:#607969}
+#league-app .summoners kbd{background:#26362c;color:#c5dace;border-color:#536c5c}
+#league-app .summoners span{color:#b8cdbf;font-size:.75rem}
+#league-app .rune-panel .footnote{color:#9bad9f}
+#league-app .matchup-panel h2{font-size:1.0625rem;margin:0 0 8px}
+#league-app .matchup-select{background:#1b2921;border-color:#3c5143;color:#bfd5c6}
+#league-app .augment{border-color:var(--league-border)}
+#league-app :is(.augment-rank,.augment>svg,.augment>div span){color:#9aafa0}
+#league-app .augment strong{color:#c9dfd0}
+#league-app .prismatics img{border-color:#5b8267}
+#league-app .prismatics span{color:#c0d7c8}
+#league-app .prismatics small{color:#94ad9e}
+
+/* Status stays legible and visible, including stale and offline warnings. */
+#league-app .source-card{padding:3px;color:#9aac9f;line-height:1.6}
+#league-app .source-card>div{gap:7px;flex-wrap:wrap}
+#league-app .source-card strong{color:#b3c6ba}
+#league-app .source-card>div>span:last-child{color:#97ad9f;font-size:.6875rem;letter-spacing:.04em}
+#league-app .source-card p{color:#9fb2a6;font-size:.75rem}
+#league-app .notice{font-size:.75rem;align-items:flex-start}
+#league-app .notice.foundation{background:#25372d55;border-color:#4e6b5766;color:#bcd1c3}
+#league-app .notice.warning{background:#40351e55;border-color:#8f77474d;color:#e0c99d}
+#league-app .notice button{color:#cbe6d6;font-size:.75rem}
+#league-app .notice>.icon{margin-top:2px}
+#league-app .loading-banner{border-color:#3c5445;background:#22342a66;color:#c5dece}
+#league-app .loading-banner>span{color:#99b5a4}
+#league-app .loading-grid{grid-template-columns:minmax(0,1fr) minmax(260px,29%);gap:18px}
+#league-app .skeleton{border-color:#2c3e32;background:linear-gradient(110deg,#15211a 25%,#22342a 45%,#15211a 65%);background-size:250% 100%}
+
+/* Champion library, saved builds, and settings share the same surfaces. */
+#league-app .page-heading{padding:5px 0 23px}
+#league-app .page-heading h1{font-size:1.9rem;letter-spacing:-.04em;margin:6px 0 8px}
+#league-app .page-heading p{font-size:.875rem;color:#a0b2a6}
+#league-app .page-heading .eyebrow{color:#8da396}
+#league-app .roster-total{font-size:1.75rem;color:#bdd9c7}
+#league-app .roster-total span{font-size:.6875rem;color:#96aa9d;letter-spacing:.06em}
+#league-app .quiet-tag{color:#aabdaf;background:#1b2921;border-color:#3b5143;font-size:.6875rem;letter-spacing:.04em}
+#league-app .picker-search{background:#141e18;border-color:#3c5445;color:#a1b8ab}
+#league-app .picker-search input{color:#dfebe3}
+#league-app .picker-search input::placeholder{color:#91a699}
+#league-app .filter-pills button{color:#abc0b2;background:#1a251e;border-color:#354c3d;font-size:.75rem}
+#league-app .filter-pills button.active{color:var(--league-accent);background:#2b4234;border-color:#79b18e}
+#league-app .roster-grid{grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:12px}
+#league-app .roster-card{background:var(--league-surface);border-color:var(--league-border);padding:12px}
+#league-app .roster-card:hover{transform:none;background:#203027;border-color:#597764}
+#league-app .roster-card-image>img{border-color:#536c5c}
+#league-app .roster-card-image>svg{fill:var(--league-accent);color:#d0f3dd}
+#league-app .roster-card strong{color:#d5e4da;font-size:.875rem}
+#league-app .roster-card :is(small,svg){color:#99b3a3}
+#league-app .saved-card-top>img{border-color:#5f7c6a}
+#league-app .saved-card-top p{color:#a1bba9}
+#league-app .saved-items img{border-color:#506f5b}
+#league-app .saved-meta{color:#9db5a6}
+#league-app .settings-grid{gap:18px}
+#league-app :is(.setting-row,.coverage-table>div){border-color:var(--league-border)}
+#league-app :is(.setting-row>span,.coverage-table span,.methodology ol,.privacy-panel p,.privacy-panel .legal,.privacy-panel>small){color:#a2b7a9}
+#league-app :is(.setting-row>strong,.coverage-table strong,.methodology strong){color:#c7ddcf}
+#league-app .empty-state{min-height:270px;background:var(--league-surface);border-color:#435c4b;padding:36px}
+#league-app .empty-state h2{color:#d1e5d7;font-size:1.3rem}
+#league-app .empty-state p{color:#a2b9aa;font-size:.875rem}
+#league-app .empty-state>svg{color:var(--league-accent);width:30px;height:30px}
+#league-app .guide-state{background:var(--league-surface);border-color:var(--league-border);min-height:255px;padding:30px;gap:23px}
+#league-app .guide-orbit{width:64px;height:64px;border-color:#567963;box-shadow:none;margin:6px;border-radius:12px}
+#league-app .guide-orbit svg{width:28px;height:28px;color:var(--league-accent)}
+#league-app .guide-state h2{color:#d3e5da;font-size:1.35rem}
+#league-app .guide-state :is(p,small){color:#a3baa9}
+#league-app .boot-state h1{color:#d6e6dc}
+#league-app .boot-state p{color:#a3baac}
+
+@media(max-width:1100px){
+ #league-app .content{padding:18px 20px 28px}
+ #league-app .hero-body{padding:20px;gap:20px}
+ #league-app .hero-numbers{gap:17px}
+ #league-app .hero-stats{padding-right:22px}
+ #league-app .hero-numbers strong{font-size:1.2rem}
+ #league-app .build-layout{grid-template-columns:minmax(0,1fr) 270px;gap:14px}
+ #league-app .panel{padding:18px}
+ #league-app .item-path{gap:7px}
+ #league-app .build-actions>.text-button{margin-left:0}
+}
+@media(max-width:850px){
+ #league-app .hero-body{align-items:flex-start;flex-direction:column;gap:14px}
+ #league-app .hero-stats{margin:0;padding:0}
+ #league-app .hero-numbers{gap:24px}
+ #league-app .hero-bottom{padding:10px 20px}
+ #league-app .build-layout,#league-app .loading-grid{grid-template-columns:1fr}
+ #league-app .build-right{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));align-items:start}
+ #league-app .source-card{grid-column:1/-1}
+ #league-app .settings-grid{grid-template-columns:1fr}
+}
+@media(max-width:600px){
+ #league-app .content{padding:14px}
+ #league-app .hero h1{font-size:2.1rem}
+ #league-app .selects{gap:12px}
+ #league-app .selects label{padding-left:0;border-left:0}
+ #league-app .item-path{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+ #league-app .build-right,#league-app .saved-grid{grid-template-columns:1fr}
+ #league-app .core-result{align-items:flex-start;flex-wrap:wrap}
+ #league-app .result-badge{max-width:100%}
+ #league-app .notice{flex-wrap:wrap}
+ #league-app .notice button{margin-left:25px}
+ #league-app .guide-state{padding:23px;align-items:flex-start;flex-direction:column;gap:10px}
+}
+@container(min-width:42rem){#league-app .item-path{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@container(max-width:25rem){#league-app .item-path{grid-template-columns:1fr}}
+html:is([data-text-size="150"],[data-text-size="175"],[data-text-size="200"]) #league-app :is(.build-layout,.loading-grid,.settings-grid){grid-template-columns:1fr}
+@media(prefers-reduced-motion:reduce){#league-app .item-art img{transition:none}#league-app .skeleton{animation:none}}

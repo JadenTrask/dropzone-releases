@@ -1,0 +1,83 @@
+/* Maps share the app rail while retaining space for their controls and canvas. */
+#hub-app .sotf-workspace{grid-template-columns:300px minmax(320px,1fr);height:100%;min-height:0;overflow:hidden}
+#hub-app .sotf-sidebar{min-width:0;overflow:auto;overscroll-behavior:contain}
+#hub-app .sotf-sidebar>header,
+#hub-app .sotf-sidebar>.sotf-search,
+#hub-app .sotf-sidebar>.sotf-presets,
+#hub-app .sotf-sidebar>.sotf-region,
+#hub-app .sotf-sidebar>.sotf-hide,
+#hub-app .sotf-sidebar>footer{flex-shrink:0}
+#hub-app .sotf-sidebar-scroll{flex:1 0 160px;min-height:160px;overflow:auto}
+#hub-app .sotf-presets{flex-wrap:wrap}
+#hub-app .sotf-presets button{min-width:0;overflow-wrap:anywhere}
+#hub-app .sotf-region{min-width:0;flex-wrap:wrap}
+#hub-app .sotf-region .select-control{min-width:0}
+#hub-app .sotf-map-area{min-height:320px;min-width:0}
+#hub-app .sotf-map-tools{top:12px;right:12px;max-width:calc(100% - 24px);display:grid;grid-template-columns:auto auto minmax(0,1fr)}
+#hub-app .sotf-map-tools button{min-width:39px;overflow-wrap:anywhere}
+#hub-app .sotf-map-caption{left:12px;bottom:12px;max-width:calc(100% - 24px);overflow-wrap:anywhere}
+#hub-app .sotf-detail{right:12px;top:80px;width:min(310px,calc(100% - 24px));max-height:calc(100% - 170px);overflow:auto;overflow-wrap:anywhere}
+#hub-app .sotf-map-error{max-width:calc(100% - 36px);overflow-wrap:anywhere}
+
+#hub-app .hub-main.wardogs-page.wd-fixed{padding:12px;min-height:0;overflow:hidden}
+#hub-app .wd-fixed>.wd-workspace{grid-template-columns:320px minmax(340px,1fr);gap:12px}
+/* Let the full control column scroll when headings or results grow. */
+#hub-app .wd-fixed .wd-controls{overflow-y:auto;overflow-x:hidden;overscroll-behavior:contain;scrollbar-gutter:stable}
+#hub-app .wd-fixed .wd-panel-body{flex:1 0 auto;min-height:0;overflow:visible}
+#hub-app .wd-fixed .wd-sidebar-footer{flex-wrap:wrap}
+#hub-app .wd-fixed .wd-panel-tabs{flex-wrap:wrap}
+#hub-app .wd-fixed .wd-panel-tabs button{flex:1 0 auto;min-width:0;white-space:nowrap}
+#hub-app .wd-fixed .wd-selectors{grid-template-columns:repeat(2,minmax(0,1fr))}
+#hub-app .wd-fixed .wd-selectors .select-control{width:100%;gap:8px;padding-inline:9px}
+#hub-app .wd-fixed .wd-result .wd-elevation{grid-template-columns:minmax(0,1fr) auto}
+#hub-app .wd-fixed .wd-result .wd-elevation>span{overflow-wrap:anywhere}
+#hub-app .wd-fixed .wd-coordinate-fields{grid-template-columns:repeat(2,minmax(0,1fr))}
+#hub-app .wd-fixed .wd-coordinate-fields button{grid-column:1/-1}
+#hub-app .wd-fixed .wd-position-summary button{flex-wrap:wrap}
+#hub-app .wd-fixed .wd-position-summary strong{overflow-wrap:anywhere}
+#hub-app .wd-fixed .wd-map-card{overflow:auto;overscroll-behavior:contain}
+#hub-app .wd-fixed .wd-map-frame{min-height:280px;flex:1 0 280px}
+#hub-app .wd-fixed .wd-map-footer>span{min-width:0;overflow-wrap:anywhere}
+#hub-app .wd-fixed .wd-source-status>span{min-width:0;overflow-wrap:anywhere}
+
+html:is([data-text-size="150"],[data-text-size="175"],[data-text-size="200"]) #hub-app .sotf-region{flex-direction:column;align-items:stretch;gap:7px}
+html:is([data-text-size="150"],[data-text-size="175"],[data-text-size="200"]) #hub-app .sotf-region .select-control{width:100%;flex:none}
+html:is([data-text-size="175"],[data-text-size="200"]) #hub-app .sotf-workspace{grid-template-columns:340px minmax(320px,1fr)}
+html:is([data-text-size="175"],[data-text-size="200"]) #hub-app .sotf-detail{top:112px;max-height:calc(100% - 222px)}
+html:is([data-text-size="175"],[data-text-size="200"]) #hub-app .wd-fixed>.wd-workspace{grid-template-columns:360px minmax(340px,1fr)}
+html:is([data-text-size="175"],[data-text-size="200"]) #hub-app .wd-fixed .wd-result .wd-elevation{grid-template-columns:minmax(0,1fr)}
+/* Large labels should not cover the map. Keep the range key below the canvas. */
+html:is([data-text-size="175"],[data-text-size="200"]) #hub-app .wd-fixed .wd-map-frame{display:grid;grid-template-rows:minmax(320px,1fr) auto;min-height:320px;flex:1 0 auto;overflow:visible}
+html:is([data-text-size="175"],[data-text-size="200"]) #hub-app .wd-fixed #wd-map-canvas{position:relative;grid-row:1;min-height:320px;width:100%;height:100%}
+html:is([data-text-size="175"],[data-text-size="200"]) #hub-app .wd-fixed .wd-range-legend{position:static;grid-row:2;max-width:none;margin:8px 12px 12px;font-size:.8125rem}
+
+@media(max-width:1200px){
+ #hub-app .sotf-workspace{grid-template-columns:280px minmax(320px,1fr)}
+ #hub-app .wd-fixed>.wd-workspace{grid-template-columns:300px minmax(340px,1fr)}
+}
+
+/* In a narrow preview, stack the panes and scroll the workspace as a whole. */
+@media(max-width:940px){
+ #hub-app .sotf-workspace,
+ html:is([data-text-size="175"],[data-text-size="200"]) #hub-app .sotf-workspace{grid-template-columns:minmax(0,1fr);grid-template-rows:auto auto;align-content:start;height:100%;min-height:0;overflow:auto}
+ #hub-app .sotf-sidebar{height:auto;max-height:none;overflow:visible;border-right:0;border-bottom:1px solid #35413b}
+ #hub-app .sotf-sidebar-scroll{flex:none;height:240px;min-height:160px;overflow:auto}
+ #hub-app .sotf-map-area{height:65dvh;min-height:420px}
+ #hub-app .hub-main.wardogs-page.wd-fixed{display:block;overflow:auto}
+ #hub-app .wd-fixed>.wd-workspace,
+ html:is([data-text-size="175"],[data-text-size="200"]) #hub-app .wd-fixed>.wd-workspace{grid-template-columns:minmax(0,1fr);height:auto;min-height:100%;align-content:start}
+ #hub-app .wd-fixed .wd-controls{height:auto;overflow:visible}
+ #hub-app .wd-fixed .wd-map-card{height:auto;min-height:480px;overflow:visible}
+ #hub-app .wd-fixed .wd-map-frame{height:55dvh;min-height:340px;flex:none}
+ html:is([data-text-size="175"],[data-text-size="200"]) #hub-app .wd-fixed .wd-map-frame{height:auto;grid-template-rows:minmax(340px,55dvh) auto;flex:none}
+}
+
+@media(max-width:440px){
+ #hub-app .hub-main.wardogs-page.wd-fixed{padding:8px}
+ #hub-app .wd-fixed .wd-selectors{grid-template-columns:minmax(0,1fr)}
+ #hub-app .wd-fixed .wd-result{grid-template-columns:minmax(0,1fr)}
+ #hub-app .wd-fixed .wd-result>div{border-right:0}
+ #hub-app .wd-fixed .wd-control-buttons{grid-template-columns:minmax(0,1fr)}
+ #hub-app .sotf-sidebar>header,#hub-app .sotf-search,#hub-app .sotf-region,#hub-app .sotf-hide,#hub-app .sotf-sidebar>footer{padding-left:16px;padding-right:16px}
+ #hub-app .sotf-presets{padding-inline:16px}
+}

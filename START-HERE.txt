@@ -1,23 +1,36 @@
-DROPZONE 1.2.2 — WINDOWS x64
+DROPZONE 2.0.0 — WINDOWS x64
 
-INSTALL
-Run Dropzone-Setup-1.2.2-x64.exe. Existing app profiles are preserved.
-Publish the setup EXE, blockmap and latest.yml to GitHub release v1.2.2 for
-installed users to receive it through App updates. Installer is unsigned.
+INSTALL OR UPDATE
+Once the 2.0.0 release is published, run Dropzone-Setup-2.0.0-x64.exe from
+https://github.com/JadenTrask/dropzone-releases/releases.
+Existing installed copies can receive it through App updates. Portable
+copies need the installer once. The installer remains unsigned.
+
+WHAT CHANGED
+A balanced game library, a sidebar for switching games, a more consistent
+League workspace, and a compact Sources page with game/status filters.
+The charcoal interface uses softer accents and clearer spacing throughout.
+See docs/RELEASE-NOTES.md for the 2.0 changes.
+
+YOUR EXISTING TOOLS AND SAVES
+League, Call of Duty, THE FINALS, Siege, WARDOGS and Sons of the Forest
+retain their existing tools. Saved builds, map progress, targets, review
+preferences and text settings use the same formats and app profile.
+Supported source refreshes, patch notes, videos and exports remain available.
 
 GRAY ZONE WARFARE
-Under construction. GZW tools and background refreshes are disabled.
-Existing local progress is preserved.
+Still in development. GZW tools and background refreshes are disabled.
+Previously stored local progress is retained. MW4 build support also
+remains coming soon.
 
-RAINBOW SIX SIEGE
-Map picks offers attack/defense lineups and ban suggestions. Pick & ban rates
-separates official PC and console snapshots. Operators supports role/search
-filters. Patch notes and Videos have their own game tabs.
-Official feeds refresh on launch and every 15 minutes. Guides download from
-Dropzone's website without a rebuild; tactical advice needs manual review.
-No verified live per-map ranked rates are available. Charts show their actual
-measured patch and publication date. Failed refreshes retain saved data.
+SOURCE AND DEVELOPMENT
+The full source download is Dropzone-Source-2.0.0.zip. Extract it before
+opening the project. Use Node.js 24.13.0, then run npm ci and npm start.
+Dependencies and generated installers are excluded from the source archive;
+app assets, scripts, tests and documentation are included.
 
-VALIDATION
-Automated data/behavior tests and packaging checks are documented in
-VALIDATION.md. Native Windows visual/upgrade confirmation is still needed.
+RELEASE AND VALIDATION
+docs/PUBLISH-RELEASE.md describes the Windows build and draft-release
+verification workflow. docs/VALIDATION.md records checks actually completed.
+A source ZIP or passing integrity check is not evidence of a completed
+native installation, installed upgrade, or in-game accuracy check.

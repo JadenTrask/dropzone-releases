@@ -1,18 +1,28 @@
-# New in 1.2.2
-
-Sons of the Forest joins the game library with an offline island map, 1,023 locations, 21 map layers, item search and local found-item progress. See [the map guide](docs/SONS-OF-THE-FOREST.md). This release targets Windows x64.
-
 # Dropzone
 
-Version 1.2.2 · Windows x64
+Version 2.0.0 · Windows x64
 
 A Windows companion for League of Legends, Call of Duty, THE FINALS, WARDOGS, Rainbow Six Siege, and Sons of the Forest. Gray Zone Warfare is under construction.
 
+## New in 2.0
+
+- A centered game library with balanced cards and a sidebar for switching between games. Titles in development have their own section.
+- A consistent charcoal interface with softer accents, clearer spacing, and more readable controls across game workspaces.
+- A simpler League workspace that brings champion builds, filters, runes, and saved builds into the shared app layout.
+- A compact Sources overview with game/status filters, grouped rows, and expandable dates, review preferences, and coverage details.
+- Text-size shortcuts remain available while using the Sons of the Forest map.
+
+The existing game tools, saved builds, map progress, targets, source preferences, and text settings retain their existing storage formats and app profile. See [the 2.0 release notes](docs/RELEASE-NOTES.md).
+
 ## Install or update
 
-Run **Dropzone-Setup-1.2.2-x64.exe**. Existing installed copies receive the release through App updates after its three assets are published to `JadenTrask/dropzone-releases`. Older portable copies need the installer once. The installer remains unsigned.
+Run **Dropzone-Setup-2.0.0-x64.exe** from the [GitHub releases page](https://github.com/JadenTrask/dropzone-releases/releases). Once 2.0.0 is published, existing installed copies can receive it through **App updates**. Older portable copies need the installer once. The installer remains unsigned.
 
-Saved builds, map progress, targets and text settings retain the existing app profile.
+The release workflow builds and verifies the installer, blockmap, updater metadata, and full source archive before publication. See [the publishing guide](docs/PUBLISH-RELEASE.md). The existence of this source or guide does not mean the release has already been published.
+
+## Previous changes in 1.2.2
+
+Sons of the Forest joined the game library with an offline island map, 1,023 locations, 21 map layers, item search and local found-item progress. See [the map guide](docs/SONS-OF-THE-FOREST.md).
 
 ## Previous changes in 1.2.1
 
@@ -38,7 +48,9 @@ See `docs/GRAY-ZONE-WARFARE.md`, `docs/SIEGE.md`, and `docs/UPDATE-COVERAGE.md` 
 - A two-second local splash and per-user Windows installer.
 - Update-page alignment and the website footer fix in 1.0.2.
 
-The user confirmed the earlier Beta 2 to 1.0.0 automatic upgrade worked. Version 1.2.0 requires publishing its release assets to GitHub. Native Windows visual and upgrade confirmation is still needed.
+The user confirmed the earlier Beta 2 to 1.0.0 automatic upgrade worked. That historical result is not verification of a 2.0.0 installation or upgrade. Current checks and their limits belong in [the validation record](docs/VALIDATION.md).
+
+The historical development notes below are retained from the source archive and apply only to the versions they name.
 
 ## Previous changes in 2.3.3
 
@@ -122,8 +134,10 @@ A successful download does not establish that a publisher's recommendations are 
 | Warzone ranked | CODMunity's `warzoneranked` page and actual `Warzone Ranked` / `wz-br-ranked` collection. |
 | THE FINALS | TheFinalsLoadout.com community loadouts plus Embark's official patch feed. Season 11, loadout-source review September 1 for patch 11.7.0 in this release. |
 | WARDOGS | [Apollyon’s calculator](https://wardogs-artillery.com/) for map calibration and game firing tables. [MetaForge](https://metaforge.app/wardogs/map/bakurani) is linked as an additional map reference. |
-| Gray Zone Warfare | GZW Data API mission/key index; locally bundled community map snapshot, estimated grid and limited region/LZ markers. |
-| Patch notes | Official Riot, Activision, Embark, WARDOGS and Gray Zone Warfare developer Steam posts. Titles, dates, short previews, and direct links; full articles are not copied. |
+| Rainbow Six Siege | Ubisoft operator/map catalog and published PC/console ranked charts; map guides from the Dropzone website. |
+| Sons of the Forest | Bundled island map, locations, layers, item information, and local found-item progress. |
+| Gray Zone Warfare | Under construction. Its tools, patch-note feeds, and background refreshes remain disabled; existing local progress stays stored. |
+| Patch notes | Official Riot, Activision, Embark, Ubisoft and WARDOGS developer posts. Titles, dates, short previews, and direct links; full articles are not copied. |
 | Videos | Official YouTube RSS, channel playlist pages, and broadcast pages. Selected match playlists refresh when opened or manually refreshed. |
 | MW4 | Release-date checks against the linked official announcement. Build support requires a future app update. |
 
@@ -148,11 +162,11 @@ Players load only after a click. YouTube controls embedding, regional availabili
 
 ## Get the source on Windows
 
-Download [Dropzone-Source-1.2.2.zip](https://github.com/JadenTrask/dropzone-releases/releases/download/v1.2.2/Dropzone-Source-1.2.2.zip), right-click it in File Explorer, and choose **Extract All**. Open the extracted `Dropzone-Source-1.2.2` folder in Codex on your Windows PC.
+When the 2.0.0 release is published, download **Dropzone-Source-2.0.0.zip** from the [GitHub releases page](https://github.com/JadenTrask/dropzone-releases/releases), right-click it in File Explorer, and choose **Extract All**. Open the extracted `Dropzone-Source-2.0.0` folder in Codex on your Windows PC.
 
 You can also clone this repository, or choose **Code → Download ZIP** for the current source.
 
-Install Node.js 22 or newer, then run in the project folder:
+Use Node.js **24.13.0**, the runtime pinned in the Windows release workflow, then run in the project folder:
 
 ```powershell
 npm ci
@@ -163,7 +177,7 @@ Run `npm test` to check the project, or `npm run package:installer` to build the
 
 ## Development
 
-Node.js 22+ and npm:
+Node.js 24.13.0 and npm:
 
 ```sh
 npm ci
@@ -188,7 +202,7 @@ The pinned Electron runtime is included in the Windows distribution. The install
 - `app/hub.js`, `app/finals-ui.js`, `app/watch-ui.js`: game interfaces
 - `desktop/main.cjs`: isolated Electron shell and allowlisted external links
 
-See `docs/ADDING-GAMES.md` for integration instructions and `docs/VALIDATION.md` for what was and was not tested. The Windows app is unsigned and has been cross-packaged; native Windows launch and embedded playback have not been verified in this environment.
+See [the integration guide](docs/ADDING-GAMES.md) for adding games and [the validation record](docs/VALIDATION.md) for the checks actually completed. Automated tests and package-integrity checks do not establish native installation, upgrade, embedded-playback, or in-game accuracy results.
 
 ## Attribution
 

@@ -1,3 +1,17 @@
+# Version 2.0.0 validation — September 8, 2026
+
+- All 101 automated tests pass on Windows with Node 24.13.0, including source parsing, saved snapshot models, app updater behavior, release artifact verification, map keyboard handling, and renderer lifecycle regressions.
+- Browser checks exercised the balanced library, game navigation, League Rift/ARAM/Arena rendering and saves, BO7 public/ranked variants and saved attachments, Finals three-player team saves, Siege operator search/side selection/chart dialogs, source filtering, and map controls.
+- At 1000 by 720 with 200% app text, map sidebars and controls remain scrollable. WARDOGS coordinate entry produced the expected 400 m / 90.0 degree shot, saved and restored a named target. Sons of the Forest search, layer restoration and found-item persistence were checked.
+- A real Windows x64 NSIS install upgraded an existing 1.2.2 installation successfully. The 2.0 app reused the existing legacy profile, retained its 115% text preference and all three existing League saves, and opened an original dated build snapshot.
+- Native clipboard output contained the saved champion and item names. The native Save dialog exported valid League item-set JSON for that saved champion.
+- The installed Windows app played an official League match in its embedded YouTube player. Returning directly to League removed the player; a regression test also verifies removal and invalidation of pending video requests.
+- The website was checked at desktop and phone sizes with no broken images or horizontal overflow. The existing Siege JSON feed and legal pages remain in the site artifact.
+- The release workflow separately verifies exact committed app/source bytes, Windows x64 packaging, updater metadata, and hashes of all four uploaded draft assets before publication. These artifact gates are separate from UI checks.
+- Limits: the hosted automatic updater install path and in-game numerical accuracy were not exercised by these local checks. Live upstream feeds may be old or temporarily unavailable; the Sources screen retains those warnings. Gray Zone Warfare remains in development.
+
+## Historical validation
+
 # Version 1.2.2 validation — September 8, 2026
 
 - All 91 tests pass (87 existing plus 4 Sons of the Forest tests).

@@ -1,0 +1,165 @@
+name: Publish Windows release
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - package.json
+      - app/version.js
+      - .github/workflows/release.yml
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: dropzone-windows-release
+  cancel-in-progress: false
+
+jobs:
+  release:
+    if: github.ref == 'refs/heads/main'
+    runs-on: windows-2022
+    timeout-minutes: 45
+    permissions:
+      contents: write
+    defaults:
+      run:
+        shell: pwsh
+    steps:
+      - name: Preserve committed file bytes
+        run: git config --global core.autocrlf false
+
+      - name: Check out the exact release commit
+        uses: actions/checkout@v7
+        with:
+          ref: ${{ github.sha }}
+          persist-credentials: false
+
+      - name: Check the version and refuse to replace existing releases
+        id: version
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          $ErrorActionPreference = 'Stop'
+          $PSNativeCommandUseErrorActionPreference = $true
+          $version = (Get-Content -LiteralPath package.json -Raw | ConvertFrom-Json).version
+          if ($version -notmatch '^\d+\.\d+\.\d+$') { throw 'Only a stable x.y.z version can become the latest release.' }
+          $feed = (Get-Content -LiteralPath release-feed.json -Raw | ConvertFrom-Json).feed
+          if ($feed.provider -ne 'github' -or "$($feed.owner)/$($feed.repo)" -ne $env:GITHUB_REPOSITORY) {
+            throw 'The installed app update feed must point to this release repository.'
+          }
+          $tag = "v$version"
+          $refs = gh api "repos/$env:GITHUB_REPOSITORY/git/matching-refs/tags/$tag" | ConvertFrom-Json
+          $releases = gh release list --repo $env:GITHUB_REPOSITORY --limit 1000 --json tagName,isDraft | ConvertFrom-Json
+          $existingRelease = @($releases | Where-Object { $_.tagName -eq $tag })
+          if (@($existingRelease | Where-Object { $_.isDraft }).Count) {
+            throw "A draft for $tag already exists. Resolve that draft explicitly; this workflow never replaces or resumes an existing release."
+          }
+          "version=$version" | Add-Content -LiteralPath $env:GITHUB_OUTPUT
+          "tag=$tag" | Add-Content -LiteralPath $env:GITHUB_OUTPUT
+          if (@($refs | Where-Object { $_.ref -eq "refs/tags/$tag" }).Count -or $existingRelease.Count) {
+            'publish=false' | Add-Content -LiteralPath $env:GITHUB_OUTPUT
+            "Release $tag already exists. Nothing was overwritten or published." | Add-Content -LiteralPath $env:GITHUB_STEP_SUMMARY
+          } else {
+            'publish=true' | Add-Content -LiteralPath $env:GITHUB_OUTPUT
+          }
+
+      - name: Set up the tested Node runtime
+        if: steps.version.outputs.publish == 'true'
+        uses: actions/setup-node@v7
+        with:
+          node-version: '24.13.0'
+          package-manager-cache: false
+
+      - name: Install the exact locked dependencies
+        if: steps.version.outputs.publish == 'true'
+        run: npm ci
+
+      - name: Run the full test suite
+        if: steps.version.outputs.publish == 'true'
+        run: npm test
+
+      - name: Build the Windows x64 installer
+        if: steps.version.outputs.publish == 'true'
+        env:
+          CSC_IDENTITY_AUTO_DISCOVERY: 'false'
+        run: npm run package:installer
+
+      - name: Verify the packaged app and create the full source archive
+        if: steps.version.outputs.publish == 'true'
+        env:
+          RELEASE_VERSION: ${{ steps.version.outputs.version }}
+        run: |
+          $ErrorActionPreference = 'Stop'
+          $PSNativeCommandUseErrorActionPreference = $true
+          $executable = Get-Item -LiteralPath release/installer/win-unpacked/Dropzone.exe
+          if (@($env:RELEASE_VERSION, "$($env:RELEASE_VERSION).0") -notcontains $executable.VersionInfo.ProductVersion) {
+            throw 'Windows executable product version does not match package.json.'
+          }
+          node scripts/verify-release.cjs build $env:GITHUB_SHA "$env:RUNNER_TEMP/dropzone-release-assets.json"
+
+      - name: Upload and verify a draft before publishing latest
+        if: steps.version.outputs.publish == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          RELEASE_VERSION: ${{ steps.version.outputs.version }}
+          RELEASE_TAG: ${{ steps.version.outputs.tag }}
+        run: |
+          $ErrorActionPreference = 'Stop'
+          $PSNativeCommandUseErrorActionPreference = $true
+          $manifestPath = Join-Path $env:RUNNER_TEMP 'dropzone-release-assets.json'
+          $manifest = Get-Content -LiteralPath $manifestPath -Raw | ConvertFrom-Json
+          if ($manifest.commit -ne $env:GITHUB_SHA -or $manifest.version -ne $env:RELEASE_VERSION) {
+            throw 'Verified artifacts do not match this run.'
+          }
+          $notesPath = Join-Path $env:RUNNER_TEMP 'dropzone-release-notes.md'
+          if (Test-Path -LiteralPath docs/RELEASE-NOTES.md) {
+            $notes = Get-Content -LiteralPath docs/RELEASE-NOTES.md -Raw
+          } else {
+            $notes = "Dropzone $env:RELEASE_VERSION for Windows x64."
+          }
+          $notes += "`n`nThe installer and full source archive were built from commit $env:GITHUB_SHA. The source archive includes app assets, scripts, tests, and documentation."
+          Set-Content -LiteralPath $notesPath -Value $notes -Encoding utf8
+
+          # Creating the ref is atomic and fails if another publisher won the race.
+          # No force-update, overwrite, --clobber, or release deletion is used.
+          gh api --method POST "repos/$env:GITHUB_REPOSITORY/git/refs" --raw-field "ref=refs/tags/$env:RELEASE_TAG" --raw-field "sha=$env:GITHUB_SHA"
+          gh release create $env:RELEASE_TAG --repo $env:GITHUB_REPOSITORY --verify-tag --target $env:GITHUB_SHA --draft --title "Dropzone $env:RELEASE_VERSION" --notes-file $notesPath
+
+          $assets = @($manifest.assets | ForEach-Object { Join-Path 'release/installer' $_.name })
+          gh release upload $env:RELEASE_TAG @assets --repo $env:GITHUB_REPOSITORY
+          $draft = gh api "repos/$env:GITHUB_REPOSITORY/releases/tags/$env:RELEASE_TAG" | ConvertFrom-Json
+          if (-not $draft.draft -or $draft.target_commitish -ne $env:GITHUB_SHA -or $draft.assets.Count -ne 4) {
+            throw 'The draft does not match the verified release.'
+          }
+          foreach ($expected in $manifest.assets) {
+            $uploaded = @($draft.assets | Where-Object { $_.name -eq $expected.name })
+            if ($uploaded.Count -ne 1 -or $uploaded[0].state -ne 'uploaded' -or $uploaded[0].size -ne $expected.size) {
+              throw "Uploaded asset is missing or incomplete: $($expected.name)"
+            }
+          }
+
+          $downloadDirectory = Join-Path $env:RUNNER_TEMP 'dropzone-release-download'
+          New-Item -ItemType Directory -Path $downloadDirectory | Out-Null
+          foreach ($asset in $manifest.assets) {
+            gh release download $env:RELEASE_TAG --repo $env:GITHUB_REPOSITORY --dir $downloadDirectory --pattern $asset.name
+          }
+          node scripts/verify-release.cjs downloaded $downloadDirectory $manifestPath
+          $tagRef = gh api "repos/$env:GITHUB_REPOSITORY/git/ref/tags/$env:RELEASE_TAG" | ConvertFrom-Json
+          if ($tagRef.object.type -ne 'commit' -or $tagRef.object.sha -ne $env:GITHUB_SHA) {
+            throw 'Release tag no longer points to the verified source commit.'
+          }
+
+          gh release edit $env:RELEASE_TAG --repo $env:GITHUB_REPOSITORY --draft=false --prerelease=false --latest
+          $published = gh api "repos/$env:GITHUB_REPOSITORY/releases/latest" | ConvertFrom-Json
+          if ($published.tag_name -ne $env:RELEASE_TAG -or $published.draft -or $published.prerelease) {
+            throw 'GitHub did not report the verified release as latest stable.'
+          }
+          "Published [Dropzone $env:RELEASE_VERSION]($($published.html_url)) from commit $env:GITHUB_SHA." | Add-Content -LiteralPath $env:GITHUB_STEP_SUMMARY
+          'All tests passed. Windows x64 packaging, source completeness, updater SHA512/size, and all four uploaded asset hashes were verified before publication.' | Add-Content -LiteralPath $env:GITHUB_STEP_SUMMARY
+
+      - name: Explain an interrupted publication
+        if: failure() && steps.version.outputs.publish == 'true'
+        run: |
+          'The release did not pass every gate. If a draft or tag was created, it was intentionally left in place for inspection. This workflow never overwrites existing release assets; resolve an interrupted draft explicitly before a new publication attempt.' | Add-Content -LiteralPath $env:GITHUB_STEP_SUMMARY

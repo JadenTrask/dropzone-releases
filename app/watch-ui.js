@@ -9,7 +9,7 @@ function videos(){
   let list=tab==='latest'?(channel()?.videos||[]).filter(v=>!v.short&&relevant(v)):archiveId==='broadcasts'?[...(channel()?.broadcasts?.videos||[]),...(channel()?.featured||[])]:archive?.videos||[];
   const seen=new Set();return list.filter(v=>{if(seen.has(v.id)||!v.title.toLowerCase().includes(query.toLowerCase()))return false;seen.add(v.id);return true;});
 }
-export function leaveWatch(){active=false;request++;playing=false;selected=null;}
+export function leaveWatch(){active=false;request++;playing=false;selected=null;$('#watch-player-section')?.remove();}
 export async function mountWatch(filter){
   if(!Object.hasOwn(names,filter))throw new Error('Choose a game for videos.');
   active=true;game=filter;data=null;archive=null;selected=null;playing=false;tab='matches';archiveId='broadcasts';query='';limit=18;

@@ -8,8 +8,14 @@ export class ForestMap{
     canvas.addEventListener('pointermove',e=>{const p=this.pointer(e);if(this.drag){const dx=p.x-this.drag.start.x,dy=p.y-this.drag.start.y;this.drag.moved||=Math.hypot(dx,dy)>5;this.camera.x=this.drag.camera.x-dx/this.camera.scale;this.camera.y=this.drag.camera.y+dy/this.camera.scale;this.constrain();this.draw();}else{const hit=this.hit(p);canvas.style.cursor=hit?'pointer':'grab';canvas.title=hit?.title||'Drag to pan · Scroll to zoom';}},{signal});
     canvas.addEventListener('pointerup',e=>{if(this.drag&&!this.drag.moved){const hit=this.hit(this.pointer(e));if(hit)this.onSelect(hit.id);}this.drag=null;},{signal});
     canvas.addEventListener('pointercancel',()=>{this.drag=null;},{signal});
-    canvas.addEventListener('keydown',e=>{const step=80/this.camera.scale;if(e.key==='ArrowLeft')this.camera.x-=step;else if(e.key==='ArrowRight')this.camera.x+=step;else if(e.key==='ArrowUp')this.camera.y+=step;else if(e.key==='ArrowDown')this.camera.y-=step;else if(['+','='].includes(e.key))this.zoom(1.4);else if(e.key==='-')this.zoom(1/1.4);else if(e.key==='0')this.fit();else return;e.preventDefault();this.constrain();this.draw();},{signal});
+    canvas.addEventListener('keydown',e=>this.key(e),{signal});
     this.observer=new ResizeObserver(()=>this.resize());this.observer.observe(canvas);this.resize();
+  }
+  key(e){
+    if(e.ctrlKey||e.metaKey||e.altKey)return;
+    const step=80/this.camera.scale;
+    if(e.key==='ArrowLeft')this.camera.x-=step;else if(e.key==='ArrowRight')this.camera.x+=step;else if(e.key==='ArrowUp')this.camera.y+=step;else if(e.key==='ArrowDown')this.camera.y-=step;else if(['+','='].includes(e.key))this.zoom(1.4);else if(e.key==='-')this.zoom(1/1.4);else if(e.key==='0')this.fit();else return;
+    e.preventDefault();this.constrain();this.draw();
   }
   resize(){const {width,height}=this.canvas.getBoundingClientRect();if(!width||!height)return;this.width=width;this.height=height;this.dpr=Math.min(devicePixelRatio||1,2);this.canvas.width=Math.round(width*this.dpr);this.canvas.height=Math.round(height*this.dpr);this.minScale=Math.min(width,height)/4200;this.camera??={x:0,y:0,scale:this.minScale};this.camera.scale=clamp(this.camera.scale,this.minScale,4);this.draw();}
   pointer(e){const r=this.canvas.getBoundingClientRect();return{x:e.clientX-r.left,y:e.clientY-r.top};}
