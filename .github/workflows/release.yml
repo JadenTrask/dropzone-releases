@@ -84,6 +84,16 @@ jobs:
           if (@($existingRelease | Where-Object { $_.isDraft }).Count) {
             throw "A draft for $tag already exists. Resolve that draft explicitly; this workflow never replaces or resumes an existing release."
           }
+          # Recover the unused 2.0.1 tag that points to the old 2.0.0 source.
+          # Never remove a tag associated with a draft or published release.
+          $orphan = @($refs | Where-Object { $_.ref -eq 'refs/tags/v2.0.1' })
+          if ($tag -eq 'v2.0.1' -and $existingRelease.Count -eq 0 -and $orphan.Count -eq 1 -and $orphan[0].object.type -eq 'commit' -and $orphan[0].object.sha -eq '3aae38387621be7c725501ef88c4428b37043c7d') {
+            $checkReleases = gh release list --repo $env:GITHUB_REPOSITORY --limit 1000 --json tagName | ConvertFrom-Json
+            $checkTag = gh api "repos/$env:GITHUB_REPOSITORY/git/ref/tags/$tag" | ConvertFrom-Json
+            if (@($checkReleases | Where-Object { $_.tagName -eq $tag }).Count -or $checkTag.object.sha -ne '3aae38387621be7c725501ef88c4428b37043c7d') { throw 'The unused tag changed; refusing cleanup.' }
+            gh api --method DELETE "repos/$env:GITHUB_REPOSITORY/git/refs/tags/$tag"
+            $refs = gh api "repos/$env:GITHUB_REPOSITORY/git/matching-refs/tags/$tag" | ConvertFrom-Json
+          }
           "version=$version" | Add-Content -LiteralPath $env:GITHUB_OUTPUT
           "tag=$tag" | Add-Content -LiteralPath $env:GITHUB_OUTPUT
           if (@($refs | Where-Object { $_.ref -eq "refs/tags/$tag" }).Count -or $existingRelease.Count) {
