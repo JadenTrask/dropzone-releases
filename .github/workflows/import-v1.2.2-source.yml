@@ -1,0 +1,84 @@
+name: Import Dropzone 1.2.2 source
+
+on:
+  push:
+    branches: [main]
+    paths: [.github/workflows/import-v1.2.2-source.yml]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  import-source:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download and verify the published source
+        env:
+          SOURCE_URL: https://github.com/JadenTrask/dropzone-releases/releases/download/v1.2.2/Dropzone-Source-1.2.2.zip
+        run: |
+          curl --fail --location --retry 3 "$SOURCE_URL" --output "$RUNNER_TEMP/dropzone-source.zip"
+          echo "039f5dc5c5e72d3db098d1d2a34c514d0dfa69475bacc853306a0fcc6eea142c  $RUNNER_TEMP/dropzone-source.zip" | sha256sum --check
+      - name: Import verified source files
+        shell: python
+        run: |
+          import os
+          import stat
+          import zipfile
+          from pathlib import Path, PurePosixPath
+
+          archive = Path(os.environ["RUNNER_TEMP"]) / "dropzone-source.zip"
+          prefix = "Dropzone-Source-1.2.2"
+          with zipfile.ZipFile(archive) as source:
+              files = [entry for entry in source.infolist() if not entry.is_dir()]
+              assert len(files) == 2732, "Unexpected source file count"
+              for entry in files:
+                  parts = PurePosixPath(entry.filename).parts
+                  assert parts[0] == prefix and len(parts) > 1
+                  assert not any(part in ("..", ".git", ".github") for part in parts)
+                  assert not stat.S_ISLNK(entry.external_attr >> 16)
+                  destination = Path(*parts[1:])
+                  data = source.read(entry)
+                  if destination.exists() and destination.name != "README.md":
+                      assert destination.is_file() and destination.read_bytes() == data, f"Existing file differs: {destination}"
+                  destination.parent.mkdir(parents=True, exist_ok=True)
+                  destination.write_bytes(data)
+                  mode = (entry.external_attr >> 16) & 0o777
+                  if mode:
+                      destination.chmod(mode)
+
+          readme = Path("README.md")
+          text = readme.read_text()
+          text = text.replace("Rainbow Six Siege. Gray Zone", "Rainbow Six Siege, and Sons of the Forest. Gray Zone", 1)
+          instructions = """## Get the source on Windows
+
+          Download [Dropzone-Source-1.2.2.zip](https://github.com/JadenTrask/dropzone-releases/releases/download/v1.2.2/Dropzone-Source-1.2.2.zip), right-click it in File Explorer, and choose **Extract All**. Open the extracted `Dropzone-Source-1.2.2` folder in Codex on your Windows PC.
+
+          You can also clone this repository, or choose **Code → Download ZIP** for the current source.
+
+          Install Node.js 22 or newer, then run in the project folder:
+
+          ```powershell
+          npm ci
+          npm start
+          ```
+
+          Run `npm test` to check the project, or `npm run package:installer` to build the Windows x64 installer. Source downloads contain the offline map assets; installed dependencies and generated installers are excluded.
+
+          """
+          text = text.replace("## Development\n", instructions + "## Development\n", 1)
+          readme.write_text(text)
+          print(f"Imported {len(files)} source files with Windows setup instructions.")
+      - name: Commit source to the repository
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add .
+          if git diff --cached --quiet; then
+            echo "Source is already up to date."
+          else
+            git commit -m "Add complete Dropzone 1.2.2 source and Windows setup instructions"
+            git push origin HEAD:main
+          fi
