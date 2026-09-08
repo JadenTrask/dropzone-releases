@@ -3,6 +3,10 @@ import {$,e,api,toast} from './shared.js';
 import {DEFAULT_LAYERS,validateMap,filterLocations,matchesLocation,normalizePreferences} from './sotf-model.js';
 import {ForestMap} from './sotf-map.js';
 const KEY='dropzone-sotf-v1';
+const layerIcons={poi:'poi',vehicle:'golf-cart',cave:'cave',weapons:'pistol','cave-loot':'utility-crate',attachments:'laser-sight','bunker-hatch':'bunker-hatch',outfits:'outfit','bunker-loot':'utility-case',tools:'shovel',village:'village',resources:'aloe-vera','abandoned-camp':'abandoned-camp',laptop:'laptop',pond:'water',printer:'printer',lake:'water',blueprint:'document',loot:'ammo-case',artifact:'artifact-a',documents:'book'};
+const layerIcon=id=>`assets/sotf/icons/${layerIcons[id]||'poi'}.webp`;
+const locationIcon=p=>{const type=types.get(p.type);return type?.icon||layerIcon(type?.layers[0]);};
+const iconMarkup=(src,color)=>`<span class="sotf-marker-icon" style="border-color:${e(color)}"><img src="${e(src)}" alt="" aria-hidden="true" loading="lazy"></span>`;
 let view=null,events=null,prefs,query='',region='all',selected=null,visible=[],types,layers;
 function persist(){try{localStorage.setItem(KEY,JSON.stringify(prefs));}catch{toast('Could not save map preferences on this device.');}}
 const color=p=>{const ids=types.get(p.type).layers;return layers.get(ids[0])?.color||'#d8e9e0';};
@@ -23,14 +27,14 @@ export function mountForest(){
     if(b.hasAttribute('data-sotf-found')&&selected){prefs.found=prefs.found.includes(selected.id)?prefs.found.filter(id=>id!==selected.id):[...prefs.found,selected.id];persist();renderDetail();update();}
     if(b.dataset.sotfSource)api.openSource(b.dataset.sotfSource).catch(()=>toast('Could not open the source.'));
   },{signal});
-  view=new ForestMap($('#sotf-canvas'),{getLocations:()=>visible,getFound:()=>prefs.found,getColor:color,onSelect:choose,onStatus:message=>{const el=$('#sotf-map-error');if(el){el.textContent=message;el.hidden=false;}}});
+  view=new ForestMap($('#sotf-canvas'),{getLocations:()=>visible,getFound:()=>prefs.found,getColor:color,getIcon:locationIcon,onSelect:choose,onStatus:message=>{const el=$('#sotf-map-error');if(el){el.textContent=message;el.hidden=false;}}});
   renderLayers();update();
 }
-function renderLayers(){$('#sotf-layers').innerHTML=data.layers.map(l=>`<label><input type="checkbox" data-sotf-layer="${e(l.id)}" ${prefs.layers.includes(l.id)?'checked':''}><span class="sotf-dot" style="background:${e(l.color)}"></span><span>${e(l.label)}</span><small>${data.locations.filter(p=>types.get(p.type).layers.includes(l.id)).length}</small></label>`).join('');}
+function renderLayers(){$('#sotf-layers').innerHTML=data.layers.map(l=>`<label><input type="checkbox" data-sotf-layer="${e(l.id)}" ${prefs.layers.includes(l.id)?'checked':''}>${iconMarkup(layerIcon(l.id),l.color)}<span>${e(l.label)}</span><small>${data.locations.filter(p=>types.get(p.type).layers.includes(l.id)).length}</small></label>`).join('');}
 function update(){
   visible=filterLocations(data,{...prefs,query,region});$('#sotf-count').textContent=`${visible.length.toLocaleString()} markers shown / ${data.locations.length.toLocaleString()} total`;
   const results=data.locations.filter(p=>matchesLocation(p,query));$('#sotf-index-count').textContent=results.length;
-  $('#sotf-results').innerHTML=results.length?results.map(p=>`<button data-sotf-id="${p.id}" class="${p.id===selected?.id?'selected':''}"><span class="sotf-dot" style="background:${e(color(p))}"></span><span><strong>${e(p.title)}</strong><small>${e(types.get(p.type).label)}${prefs.found.includes(p.id)?' · Found':''}</small></span><span aria-hidden="true">↗</span></button>`).join(''):'<p class="sotf-empty">No locations match. Try another item name.</p>';
+  $('#sotf-results').innerHTML=results.length?results.map(p=>`<button data-sotf-id="${p.id}" class="${p.id===selected?.id?'selected':''}">${iconMarkup(locationIcon(p),color(p))}<span><strong>${e(p.title)}</strong><small>${e(types.get(p.type).label)}${prefs.found.includes(p.id)?' · Found':''}</small></span><span aria-hidden="true">↗</span></button>`).join(''):'<p class="sotf-empty">No locations match. Try another item name.</p>';
   view?.draw();
 }
 function choose(id){
