@@ -1,0 +1,10 @@
+{
+  "feed": {
+    "provider": "github",
+    "owner": "JadenTrask",
+    "repo": "dropzone-releases",
+    "private": false,
+    "channel": "latest",
+    "releaseType": "release"
+  }
+}

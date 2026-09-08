@@ -1,0 +1,1202 @@
+{
+  "schema": 1,
+  "patch": "Y11S3",
+  "reviewedAt": "2026-09-07T00:00:00.000Z",
+  "maps": {
+    "bank": {
+      "attack": [
+        {
+          "id": "hibana",
+          "reason": "Open reinforced hatches and create ranged breach angles."
+        },
+        {
+          "id": "buck",
+          "reason": "Clear defenders through soft floors and ceilings."
+        },
+        {
+          "id": "thatcher",
+          "reason": "Disable wall denial before your hard breacher commits."
+        },
+        {
+          "id": "nomad",
+          "reason": "Cover flanks while the team breaches and plants."
+        },
+        {
+          "id": "brava",
+          "reason": "Use hacked defender electronics to support the push."
+        }
+      ],
+      "defense": [
+        {
+          "id": "kaid",
+          "reason": "Deny reinforced hatches and key walls."
+        },
+        {
+          "id": "mira",
+          "reason": "Build protected sightlines with the team\u2019s reinforcement setup."
+        },
+        {
+          "id": "smoke",
+          "reason": "Keep gas for the late execute or plant denial."
+        },
+        {
+          "id": "mute",
+          "reason": "Deny drones and protect the setup from early intel."
+        },
+        {
+          "id": "azami",
+          "reason": "Build protected angles around the hold and repair exposed cover."
+        }
+      ],
+      "plan": "Start with a basement hatch plan; clear the floor above before the execute. If the site is upstairs, use the same breach and flank roles to open a second angle.",
+      "attackBans": [
+        "hibana",
+        "ace"
+      ],
+      "defenseBans": [
+        "mira",
+        "kaid"
+      ],
+      "provisional": false
+    },
+    "chalet": {
+      "attack": [
+        {
+          "id": "thermite",
+          "reason": "Make a full-size entry through the main reinforced wall."
+        },
+        {
+          "id": "thatcher",
+          "reason": "Disable wall denial before your hard breacher commits."
+        },
+        {
+          "id": "buck",
+          "reason": "Clear defenders through soft floors and ceilings."
+        },
+        {
+          "id": "nomad",
+          "reason": "Cover flanks while the team breaches and plants."
+        },
+        {
+          "id": "grim",
+          "reason": "Use swarm intel to clear or hold the execute route."
+        }
+      ],
+      "defense": [
+        {
+          "id": "kaid",
+          "reason": "Deny reinforced hatches and key walls."
+        },
+        {
+          "id": "azami",
+          "reason": "Build protected angles around the hold and repair exposed cover."
+        },
+        {
+          "id": "smoke",
+          "reason": "Keep gas for the late execute or plant denial."
+        },
+        {
+          "id": "mute",
+          "reason": "Deny drones and protect the setup from early intel."
+        },
+        {
+          "id": "valkyrie",
+          "reason": "Place cameras for useful callouts and act on shared intel."
+        }
+      ],
+      "plan": "Coordinate the main wall breach with pressure from a second floor or entry. Secure the flank before concentrating on the plant.",
+      "attackBans": [
+        "thermite",
+        "ace"
+      ],
+      "defenseBans": [
+        "kaid",
+        "azami"
+      ],
+      "provisional": false
+    },
+    "kafe-dostoyevsky": {
+      "attack": [
+        {
+          "id": "hibana",
+          "reason": "Open reinforced hatches and create ranged breach angles."
+        },
+        {
+          "id": "buck",
+          "reason": "Clear defenders through soft floors and ceilings."
+        },
+        {
+          "id": "nomad",
+          "reason": "Cover flanks while the team breaches and plants."
+        },
+        {
+          "id": "ying",
+          "reason": "Coordinate Candelas with entry or a plant; call flashes first."
+        },
+        {
+          "id": "thatcher",
+          "reason": "Disable wall denial before your hard breacher commits."
+        }
+      ],
+      "defense": [
+        {
+          "id": "azami",
+          "reason": "Build protected angles around the hold and repair exposed cover."
+        },
+        {
+          "id": "wamai",
+          "reason": "Protect the hold from thrown projectiles."
+        },
+        {
+          "id": "mute",
+          "reason": "Deny drones and protect the setup from early intel."
+        },
+        {
+          "id": "smoke",
+          "reason": "Keep gas for the late execute or plant denial."
+        },
+        {
+          "id": "valkyrie",
+          "reason": "Place cameras for useful callouts and act on shared intel."
+        }
+      ],
+      "plan": "Build the clear from the upper floor. Keep flank coverage while opening hatches or vertical angles, then save utility for the final push.",
+      "attackBans": [
+        "ying",
+        "ram"
+      ],
+      "defenseBans": [
+        "azami",
+        "mira"
+      ],
+      "provisional": false
+    },
+    "border": {
+      "attack": [
+        {
+          "id": "ace",
+          "reason": "Open reinforced walls from range; save a charge for a second angle."
+        },
+        {
+          "id": "buck",
+          "reason": "Clear defenders through soft floors and ceilings."
+        },
+        {
+          "id": "nomad",
+          "reason": "Cover flanks while the team breaches and plants."
+        },
+        {
+          "id": "brava",
+          "reason": "Use hacked defender electronics to support the push."
+        },
+        {
+          "id": "ying",
+          "reason": "Coordinate Candelas with entry or a plant; call flashes first."
+        }
+      ],
+      "defense": [
+        {
+          "id": "azami",
+          "reason": "Build protected angles around the hold and repair exposed cover."
+        },
+        {
+          "id": "bandit",
+          "reason": "Deny the main reinforced wall; coordinate any battery trick."
+        },
+        {
+          "id": "mute",
+          "reason": "Deny drones and protect the setup from early intel."
+        },
+        {
+          "id": "smoke",
+          "reason": "Keep gas for the late execute or plant denial."
+        },
+        {
+          "id": "valkyrie",
+          "reason": "Place cameras for useful callouts and act on shared intel."
+        }
+      ],
+      "plan": "Pair a main-wall breach with vertical pressure. Remove utility protecting the doorway before asking the entry player to take the fight.",
+      "attackBans": [
+        "ace",
+        "buck"
+      ],
+      "defenseBans": [
+        "azami",
+        "mira"
+      ],
+      "provisional": false
+    },
+    "clubhouse": {
+      "attack": [
+        {
+          "id": "hibana",
+          "reason": "Open reinforced hatches and create ranged breach angles."
+        },
+        {
+          "id": "thatcher",
+          "reason": "Disable wall denial before your hard breacher commits."
+        },
+        {
+          "id": "buck",
+          "reason": "Clear defenders through soft floors and ceilings."
+        },
+        {
+          "id": "maverick",
+          "reason": "Work a reinforced wall when electronic breach support is banned."
+        },
+        {
+          "id": "nomad",
+          "reason": "Cover flanks while the team breaches and plants."
+        }
+      ],
+      "defense": [
+        {
+          "id": "kaid",
+          "reason": "Deny reinforced hatches and key walls."
+        },
+        {
+          "id": "mute",
+          "reason": "Deny drones and protect the setup from early intel."
+        },
+        {
+          "id": "smoke",
+          "reason": "Keep gas for the late execute or plant denial."
+        },
+        {
+          "id": "azami",
+          "reason": "Build protected angles around the hold and repair exposed cover."
+        },
+        {
+          "id": "valkyrie",
+          "reason": "Place cameras for useful callouts and act on shared intel."
+        }
+      ],
+      "plan": "Bring hatch access for basement and a wall plan for upstairs. The spare breacher gives an alternative when denial survives or a teammate dies.",
+      "attackBans": [
+        "hibana",
+        "maverick"
+      ],
+      "defenseBans": [
+        "kaid",
+        "mira"
+      ],
+      "provisional": false
+    },
+    "lair": {
+      "attack": [
+        {
+          "id": "ace",
+          "reason": "Open reinforced walls from range; save a charge for a second angle."
+        },
+        {
+          "id": "thatcher",
+          "reason": "Disable wall denial before your hard breacher commits."
+        },
+        {
+          "id": "ram",
+          "reason": "Open soft floors from above; protect the BU-GI while it works."
+        },
+        {
+          "id": "nomad",
+          "reason": "Cover flanks while the team breaches and plants."
+        },
+        {
+          "id": "grim",
+          "reason": "Use swarm intel to clear or hold the execute route."
+        }
+      ],
+      "defense": [
+        {
+          "id": "kaid",
+          "reason": "Deny reinforced hatches and key walls."
+        },
+        {
+          "id": "mute",
+          "reason": "Deny drones and protect the setup from early intel."
+        },
+        {
+          "id": "azami",
+          "reason": "Build protected angles around the hold and repair exposed cover."
+        },
+        {
+          "id": "smoke",
+          "reason": "Keep gas for the late execute or plant denial."
+        },
+        {
+          "id": "fenrir",
+          "reason": "Pressure choke points with mines; watch the activated routes."
+        }
+      ],
+      "plan": "Keep breach support and flank control together during the clear. Establish a second line of pressure before spending execute utility.",
+      "attackBans": [
+        "ace",
+        "ram"
+      ],
+      "defenseBans": [
+        "kaid",
+        "azami"
+      ],
+      "provisional": false
+    },
+    "nighthaven-labs": {
+      "attack": [
+        {
+          "id": "ace",
+          "reason": "Open reinforced walls from range; save a charge for a second angle."
+        },
+        {
+          "id": "thatcher",
+          "reason": "Disable wall denial before your hard breacher commits."
+        },
+        {
+          "id": "buck",
+          "reason": "Clear defenders through soft floors and ceilings."
+        },
+        {
+          "id": "nomad",
+          "reason": "Cover flanks while the team breaches and plants."
+        },
+        {
+          "id": "grim",
+          "reason": "Use swarm intel to clear or hold the execute route."
+        }
+      ],
+      "defense": [
+        {
+          "id": "kaid",
+          "reason": "Deny reinforced hatches and key walls."
+        },
+        {
+          "id": "azami",
+          "reason": "Build protected angles around the hold and repair exposed cover."
+        },
+        {
+          "id": "mute",
+          "reason": "Deny drones and protect the setup from early intel."
+        },
+        {
+          "id": "smoke",
+          "reason": "Keep gas for the late execute or plant denial."
+        },
+        {
+          "id": "solis",
+          "reason": "Use electronic detection to locate enemy utility and pressure plants."
+        }
+      ],
+      "plan": "Use the hard breach to force movement, then punish it with vertical pressure. Keep someone responsible for the team\u2019s rear as the clear expands.",
+      "attackBans": [
+        "ace",
+        "buck"
+      ],
+      "defenseBans": [
+        "kaid",
+        "azami"
+      ],
+      "provisional": false
+    },
+    "consulate": {
+      "attack": [
+        {
+          "id": "hibana",
+          "reason": "Open reinforced hatches and create ranged breach angles."
+        },
+        {
+          "id": "thatcher",
+          "reason": "Disable wall denial before your hard breacher commits."
+        },
+        {
+          "id": "buck",
+          "reason": "Clear defenders through soft floors and ceilings."
+        },
+        {
+          "id": "nomad",
+          "reason": "Cover flanks while the team breaches and plants."
+        },
+        {
+          "id": "ying",
+          "reason": "Coordinate Candelas with entry or a plant; call flashes first."
+        }
+      ],
+      "defense": [
+        {
+          "id": "kaid",
+          "reason": "Deny reinforced hatches and key walls."
+        },
+        {
+          "id": "mute",
+          "reason": "Deny drones and protect the setup from early intel."
+        },
+        {
+          "id": "azami",
+          "reason": "Build protected angles around the hold and repair exposed cover."
+        },
+        {
+          "id": "smoke",
+          "reason": "Keep gas for the late execute or plant denial."
+        },
+        {
+          "id": "valkyrie",
+          "reason": "Place cameras for useful callouts and act on shared intel."
+        }
+      ],
+      "plan": "Have a hatch or wall plan for the chosen site. Clear above the defense before opening the plant route, with a dedicated flank watcher.",
+      "attackBans": [
+        "hibana",
+        "buck"
+      ],
+      "defenseBans": [
+        "kaid",
+        "mira"
+      ],
+      "provisional": false
+    },
+    "fortress": {
+      "attack": [
+        {
+          "id": "thermite",
+          "reason": "Make a full-size entry through the main reinforced wall."
+        },
+        {
+          "id": "thatcher",
+          "reason": "Disable wall denial before your hard breacher commits."
+        },
+        {
+          "id": "buck",
+          "reason": "Clear defenders through soft floors and ceilings."
+        },
+        {
+          "id": "nomad",
+          "reason": "Cover flanks while the team breaches and plants."
+        },
+        {
+          "id": "lion",
+          "reason": "Time a scan with the team\u2019s clear or execute."
+        }
+      ],
+      "defense": [
+        {
+          "id": "kaid",
+          "reason": "Deny reinforced hatches and key walls."
+        },
+        {
+          "id": "mute",
+          "reason": "Deny drones and protect the setup from early intel."
+        },
+        {
+          "id": "azami",
+          "reason": "Build protected angles around the hold and repair exposed cover."
+        },
+        {
+          "id": "smoke",
+          "reason": "Keep gas for the late execute or plant denial."
+        },
+        {
+          "id": "melusi",
+          "reason": "Slow entries and give the team an audible warning."
+        }
+      ],
+      "plan": "Avoid stretching the clear into separate solo fights. Open a reinforced route, hold the flank, and synchronize the final push with intel.",
+      "attackBans": [
+        "thermite",
+        "ace"
+      ],
+      "defenseBans": [
+        "kaid",
+        "azami"
+      ],
+      "provisional": false
+    },
+    "kanal": {
+      "attack": [
+        {
+          "id": "thermite",
+          "reason": "Make a full-size entry through the main reinforced wall."
+        },
+        {
+          "id": "thatcher",
+          "reason": "Disable wall denial before your hard breacher commits."
+        },
+        {
+          "id": "buck",
+          "reason": "Clear defenders through soft floors and ceilings."
+        },
+        {
+          "id": "nomad",
+          "reason": "Cover flanks while the team breaches and plants."
+        },
+        {
+          "id": "grim",
+          "reason": "Use swarm intel to clear or hold the execute route."
+        }
+      ],
+      "defense": [
+        {
+          "id": "bandit",
+          "reason": "Deny the main reinforced wall; coordinate any battery trick."
+        },
+        {
+          "id": "azami",
+          "reason": "Build protected angles around the hold and repair exposed cover."
+        },
+        {
+          "id": "mute",
+          "reason": "Deny drones and protect the setup from early intel."
+        },
+        {
+          "id": "smoke",
+          "reason": "Keep gas for the late execute or plant denial."
+        },
+        {
+          "id": "valkyrie",
+          "reason": "Place cameras for useful callouts and act on shared intel."
+        }
+      ],
+      "plan": "Plan the exterior wall breach and account for rotations between buildings. Keep crossfire pressure while the breacher works.",
+      "attackBans": [
+        "thermite",
+        "ace"
+      ],
+      "defenseBans": [
+        "bandit",
+        "azami"
+      ],
+      "provisional": false
+    },
+    "oregon": {
+      "attack": [
+        {
+          "id": "hibana",
+          "reason": "Open reinforced hatches and create ranged breach angles."
+        },
+        {
+          "id": "thatcher",
+          "reason": "Disable wall denial before your hard breacher commits."
+        },
+        {
+          "id": "buck",
+          "reason": "Clear defenders through soft floors and ceilings."
+        },
+        {
+          "id": "ying",
+          "reason": "Coordinate Candelas with entry or a plant; call flashes first."
+        },
+        {
+          "id": "nomad",
+          "reason": "Cover flanks while the team breaches and plants."
+        }
+      ],
+      "defense": [
+        {
+          "id": "kaid",
+          "reason": "Deny reinforced hatches and key walls."
+        },
+        {
+          "id": "mute",
+          "reason": "Deny drones and protect the setup from early intel."
+        },
+        {
+          "id": "smoke",
+          "reason": "Keep gas for the late execute or plant denial."
+        },
+        {
+          "id": "wamai",
+          "reason": "Protect the hold from thrown projectiles."
+        },
+        {
+          "id": "melusi",
+          "reason": "Slow entries and give the team an audible warning."
+        }
+      ],
+      "plan": "Keep hatch access for basement and a coordinated entry plan for upstairs. Clear utility before using Candelas for the execute.",
+      "attackBans": [
+        "hibana",
+        "ying"
+      ],
+      "defenseBans": [
+        "kaid",
+        "mira"
+      ],
+      "provisional": false
+    },
+    "theme-park": {
+      "attack": [
+        {
+          "id": "thermite",
+          "reason": "Make a full-size entry through the main reinforced wall."
+        },
+        {
+          "id": "thatcher",
+          "reason": "Disable wall denial before your hard breacher commits."
+        },
+        {
+          "id": "maverick",
+          "reason": "Work a reinforced wall when electronic breach support is banned."
+        },
+        {
+          "id": "nomad",
+          "reason": "Cover flanks while the team breaches and plants."
+        },
+        {
+          "id": "buck",
+          "reason": "Clear defenders through soft floors and ceilings."
+        }
+      ],
+      "defense": [
+        {
+          "id": "kaid",
+          "reason": "Deny reinforced hatches and key walls."
+        },
+        {
+          "id": "mute",
+          "reason": "Deny drones and protect the setup from early intel."
+        },
+        {
+          "id": "azami",
+          "reason": "Build protected angles around the hold and repair exposed cover."
+        },
+        {
+          "id": "smoke",
+          "reason": "Keep gas for the late execute or plant denial."
+        },
+        {
+          "id": "melusi",
+          "reason": "Slow entries and give the team an audible warning."
+        }
+      ],
+      "plan": "Build around opening reinforced access to the site. Bring a backup way through denial and use soft destruction to force defenders off the wall.",
+      "attackBans": [
+        "thermite",
+        "maverick"
+      ],
+      "defenseBans": [
+        "kaid",
+        "bandit"
+      ],
+      "provisional": false
+    },
+    "villa": {
+      "attack": [
+        {
+          "id": "ace",
+          "reason": "Open reinforced walls from range; save a charge for a second angle."
+        },
+        {
+          "id": "buck",
+          "reason": "Clear defenders through soft floors and ceilings."
+        },
+        {
+          "id": "nomad",
+          "reason": "Cover flanks while the team breaches and plants."
+        },
+        {
+          "id": "brava",
+          "reason": "Use hacked defender electronics to support the push."
+        },
+        {
+          "id": "grim",
+          "reason": "Use swarm intel to clear or hold the execute route."
+        }
+      ],
+      "defense": [
+        {
+          "id": "azami",
+          "reason": "Build protected angles around the hold and repair exposed cover."
+        },
+        {
+          "id": "mute",
+          "reason": "Deny drones and protect the setup from early intel."
+        },
+        {
+          "id": "smoke",
+          "reason": "Keep gas for the late execute or plant denial."
+        },
+        {
+          "id": "valkyrie",
+          "reason": "Place cameras for useful callouts and act on shared intel."
+        },
+        {
+          "id": "wamai",
+          "reason": "Protect the hold from thrown projectiles."
+        }
+      ],
+      "plan": "Combine a reinforced-wall opening with control of the floor below or adjacent rooms. Scout the Y11S3 changes before relying on an older setup.",
+      "attackBans": [
+        "ace",
+        "buck"
+      ],
+      "defenseBans": [
+        "azami",
+        "mira"
+      ],
+      "provisional": false
+    },
+    "calypso-casino": {
+      "attack": [
+        {
+          "id": "ace",
+          "reason": "Open reinforced walls from range; save a charge for a second angle."
+        },
+        {
+          "id": "buck",
+          "reason": "Clear defenders through soft floors and ceilings."
+        },
+        {
+          "id": "nomad",
+          "reason": "Cover flanks while the team breaches and plants."
+        },
+        {
+          "id": "thatcher",
+          "reason": "Disable wall denial before your hard breacher commits."
+        },
+        {
+          "id": "grim",
+          "reason": "Use swarm intel to clear or hold the execute route."
+        }
+      ],
+      "defense": [
+        {
+          "id": "mute",
+          "reason": "Deny drones and protect the setup from early intel."
+        },
+        {
+          "id": "azami",
+          "reason": "Build protected angles around the hold and repair exposed cover."
+        },
+        {
+          "id": "smoke",
+          "reason": "Keep gas for the late execute or plant denial."
+        },
+        {
+          "id": "melusi",
+          "reason": "Slow entries and give the team an audible warning."
+        },
+        {
+          "id": "kaid",
+          "reason": "Deny reinforced hatches and key walls."
+        }
+      ],
+      "plan": "Use this as a role-based starting lineup while learning the site: breach, breach support, soft destruction, flank cover and execute intel. A site-specific setup has not been verified.",
+      "attackBans": [
+        "ace",
+        "ram"
+      ],
+      "defenseBans": [
+        "mira",
+        "kaid"
+      ],
+      "provisional": true
+    }
+  },
+  "bans": [
+    {
+      "id": "ace",
+      "platform": "pc",
+      "side": "attack",
+      "rate": 48,
+      "chartUrl": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/1Tzxv6obzAPy4bggynkKZj/14039708729d389b41655cc17f138230/-R6S-_Y11S3_Designer-s_Notes-Group3-1_Y11S2.3_PC_BANMATRIX_ATT.jpg",
+      "dataPatch": "Y11S2.3",
+      "population": "Platinum and above",
+      "publishedAt": "2026-08-17T15:01:38.000Z"
+    },
+    {
+      "id": "dokkaebi",
+      "platform": "pc",
+      "side": "attack",
+      "rate": 37,
+      "chartUrl": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/1Tzxv6obzAPy4bggynkKZj/14039708729d389b41655cc17f138230/-R6S-_Y11S3_Designer-s_Notes-Group3-1_Y11S2.3_PC_BANMATRIX_ATT.jpg",
+      "dataPatch": "Y11S2.3",
+      "population": "Platinum and above",
+      "publishedAt": "2026-08-17T15:01:38.000Z"
+    },
+    {
+      "id": "solid-snake",
+      "platform": "pc",
+      "side": "attack",
+      "rate": 24,
+      "chartUrl": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/1Tzxv6obzAPy4bggynkKZj/14039708729d389b41655cc17f138230/-R6S-_Y11S3_Designer-s_Notes-Group3-1_Y11S2.3_PC_BANMATRIX_ATT.jpg",
+      "dataPatch": "Y11S2.3",
+      "population": "Platinum and above",
+      "publishedAt": "2026-08-17T15:01:38.000Z"
+    },
+    {
+      "id": "ram",
+      "platform": "pc",
+      "side": "attack",
+      "rate": 20,
+      "chartUrl": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/1Tzxv6obzAPy4bggynkKZj/14039708729d389b41655cc17f138230/-R6S-_Y11S3_Designer-s_Notes-Group3-1_Y11S2.3_PC_BANMATRIX_ATT.jpg",
+      "dataPatch": "Y11S2.3",
+      "population": "Platinum and above",
+      "publishedAt": "2026-08-17T15:01:38.000Z"
+    },
+    {
+      "id": "maverick",
+      "platform": "pc",
+      "side": "attack",
+      "rate": 17,
+      "chartUrl": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/1Tzxv6obzAPy4bggynkKZj/14039708729d389b41655cc17f138230/-R6S-_Y11S3_Designer-s_Notes-Group3-1_Y11S2.3_PC_BANMATRIX_ATT.jpg",
+      "dataPatch": "Y11S2.3",
+      "population": "Platinum and above",
+      "publishedAt": "2026-08-17T15:01:38.000Z"
+    },
+    {
+      "id": "thermite",
+      "platform": "pc",
+      "side": "attack",
+      "rate": 15,
+      "chartUrl": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/1Tzxv6obzAPy4bggynkKZj/14039708729d389b41655cc17f138230/-R6S-_Y11S3_Designer-s_Notes-Group3-1_Y11S2.3_PC_BANMATRIX_ATT.jpg",
+      "dataPatch": "Y11S2.3",
+      "population": "Platinum and above",
+      "publishedAt": "2026-08-17T15:01:38.000Z"
+    },
+    {
+      "id": "thatcher",
+      "platform": "pc",
+      "side": "attack",
+      "rate": 10,
+      "chartUrl": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/1Tzxv6obzAPy4bggynkKZj/14039708729d389b41655cc17f138230/-R6S-_Y11S3_Designer-s_Notes-Group3-1_Y11S2.3_PC_BANMATRIX_ATT.jpg",
+      "dataPatch": "Y11S2.3",
+      "population": "Platinum and above",
+      "publishedAt": "2026-08-17T15:01:38.000Z"
+    },
+    {
+      "id": "montagne",
+      "platform": "pc",
+      "side": "attack",
+      "rate": 5,
+      "chartUrl": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/1Tzxv6obzAPy4bggynkKZj/14039708729d389b41655cc17f138230/-R6S-_Y11S3_Designer-s_Notes-Group3-1_Y11S2.3_PC_BANMATRIX_ATT.jpg",
+      "dataPatch": "Y11S2.3",
+      "population": "Platinum and above",
+      "publishedAt": "2026-08-17T15:01:38.000Z"
+    },
+    {
+      "id": "blackbeard",
+      "platform": "pc",
+      "side": "attack",
+      "rate": 3,
+      "chartUrl": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/1Tzxv6obzAPy4bggynkKZj/14039708729d389b41655cc17f138230/-R6S-_Y11S3_Designer-s_Notes-Group3-1_Y11S2.3_PC_BANMATRIX_ATT.jpg",
+      "dataPatch": "Y11S2.3",
+      "population": "Platinum and above",
+      "publishedAt": "2026-08-17T15:01:38.000Z"
+    },
+    {
+      "id": "blitz",
+      "platform": "pc",
+      "side": "attack",
+      "rate": 3,
+      "chartUrl": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/1Tzxv6obzAPy4bggynkKZj/14039708729d389b41655cc17f138230/-R6S-_Y11S3_Designer-s_Notes-Group3-1_Y11S2.3_PC_BANMATRIX_ATT.jpg",
+      "dataPatch": "Y11S2.3",
+      "population": "Platinum and above",
+      "publishedAt": "2026-08-17T15:01:38.000Z"
+    },
+    {
+      "id": "mira",
+      "platform": "pc",
+      "side": "defense",
+      "rate": 89,
+      "chartUrl": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/2wD5dl7r2WSIvWROcYZseI/68f30a5649b94df61ac99ccc77de5624/-R6S-_Y11S3_Designer-s_Notes-Group3-2_Y11S2.3_PC_BANMATRIX_DEF.jpg",
+      "dataPatch": "Y11S2.3",
+      "population": "Platinum and above",
+      "publishedAt": "2026-08-17T15:01:38.000Z"
+    },
+    {
+      "id": "kaid",
+      "platform": "pc",
+      "side": "defense",
+      "rate": 45,
+      "chartUrl": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/2wD5dl7r2WSIvWROcYZseI/68f30a5649b94df61ac99ccc77de5624/-R6S-_Y11S3_Designer-s_Notes-Group3-2_Y11S2.3_PC_BANMATRIX_DEF.jpg",
+      "dataPatch": "Y11S2.3",
+      "population": "Platinum and above",
+      "publishedAt": "2026-08-17T15:01:38.000Z"
+    },
+    {
+      "id": "azami",
+      "platform": "pc",
+      "side": "defense",
+      "rate": 15,
+      "chartUrl": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/2wD5dl7r2WSIvWROcYZseI/68f30a5649b94df61ac99ccc77de5624/-R6S-_Y11S3_Designer-s_Notes-Group3-2_Y11S2.3_PC_BANMATRIX_DEF.jpg",
+      "dataPatch": "Y11S2.3",
+      "population": "Platinum and above",
+      "publishedAt": "2026-08-17T15:01:38.000Z"
+    },
+    {
+      "id": "aruni",
+      "platform": "pc",
+      "side": "defense",
+      "rate": 10,
+      "chartUrl": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/2wD5dl7r2WSIvWROcYZseI/68f30a5649b94df61ac99ccc77de5624/-R6S-_Y11S3_Designer-s_Notes-Group3-2_Y11S2.3_PC_BANMATRIX_DEF.jpg",
+      "dataPatch": "Y11S2.3",
+      "population": "Platinum and above",
+      "publishedAt": "2026-08-17T15:01:38.000Z"
+    },
+    {
+      "id": "bandit",
+      "platform": "pc",
+      "side": "defense",
+      "rate": 8,
+      "chartUrl": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/2wD5dl7r2WSIvWROcYZseI/68f30a5649b94df61ac99ccc77de5624/-R6S-_Y11S3_Designer-s_Notes-Group3-2_Y11S2.3_PC_BANMATRIX_DEF.jpg",
+      "dataPatch": "Y11S2.3",
+      "population": "Platinum and above",
+      "publishedAt": "2026-08-17T15:01:38.000Z"
+    },
+    {
+      "id": "thorn",
+      "platform": "pc",
+      "side": "defense",
+      "rate": 5,
+      "chartUrl": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/2wD5dl7r2WSIvWROcYZseI/68f30a5649b94df61ac99ccc77de5624/-R6S-_Y11S3_Designer-s_Notes-Group3-2_Y11S2.3_PC_BANMATRIX_DEF.jpg",
+      "dataPatch": "Y11S2.3",
+      "population": "Platinum and above",
+      "publishedAt": "2026-08-17T15:01:38.000Z"
+    },
+    {
+      "id": "clash",
+      "platform": "pc",
+      "side": "defense",
+      "rate": 4,
+      "chartUrl": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/2wD5dl7r2WSIvWROcYZseI/68f30a5649b94df61ac99ccc77de5624/-R6S-_Y11S3_Designer-s_Notes-Group3-2_Y11S2.3_PC_BANMATRIX_DEF.jpg",
+      "dataPatch": "Y11S2.3",
+      "population": "Platinum and above",
+      "publishedAt": "2026-08-17T15:01:38.000Z"
+    },
+    {
+      "id": "mute",
+      "platform": "pc",
+      "side": "defense",
+      "rate": 4,
+      "chartUrl": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/2wD5dl7r2WSIvWROcYZseI/68f30a5649b94df61ac99ccc77de5624/-R6S-_Y11S3_Designer-s_Notes-Group3-2_Y11S2.3_PC_BANMATRIX_DEF.jpg",
+      "dataPatch": "Y11S2.3",
+      "population": "Platinum and above",
+      "publishedAt": "2026-08-17T15:01:38.000Z"
+    },
+    {
+      "id": "valkyrie",
+      "platform": "pc",
+      "side": "defense",
+      "rate": 3,
+      "chartUrl": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/2wD5dl7r2WSIvWROcYZseI/68f30a5649b94df61ac99ccc77de5624/-R6S-_Y11S3_Designer-s_Notes-Group3-2_Y11S2.3_PC_BANMATRIX_DEF.jpg",
+      "dataPatch": "Y11S2.3",
+      "population": "Platinum and above",
+      "publishedAt": "2026-08-17T15:01:38.000Z"
+    },
+    {
+      "id": "tubarao",
+      "platform": "pc",
+      "side": "defense",
+      "rate": 2,
+      "chartUrl": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/2wD5dl7r2WSIvWROcYZseI/68f30a5649b94df61ac99ccc77de5624/-R6S-_Y11S3_Designer-s_Notes-Group3-2_Y11S2.3_PC_BANMATRIX_DEF.jpg",
+      "dataPatch": "Y11S2.3",
+      "population": "Platinum and above",
+      "publishedAt": "2026-08-17T15:01:38.000Z"
+    },
+    {
+      "id": "ace",
+      "platform": "console",
+      "side": "attack",
+      "rate": 63,
+      "chartUrl": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/3Qi9xceeMGcqVSE6O5aylD/5332367d64286835b0822a2b678633a3/-R6S-_Y11S3_Designer-s_Notes-Group4-1_Y11S2.3_CON_BANMATRIX_ATT.jpg",
+      "dataPatch": "Y11S2.3",
+      "population": "Platinum and above",
+      "publishedAt": "2026-08-17T15:01:38.000Z"
+    },
+    {
+      "id": "dokkaebi",
+      "platform": "console",
+      "side": "attack",
+      "rate": 25,
+      "chartUrl": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/3Qi9xceeMGcqVSE6O5aylD/5332367d64286835b0822a2b678633a3/-R6S-_Y11S3_Designer-s_Notes-Group4-1_Y11S2.3_CON_BANMATRIX_ATT.jpg",
+      "dataPatch": "Y11S2.3",
+      "population": "Platinum and above",
+      "publishedAt": "2026-08-17T15:01:38.000Z"
+    },
+    {
+      "id": "ram",
+      "platform": "console",
+      "side": "attack",
+      "rate": 25,
+      "chartUrl": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/3Qi9xceeMGcqVSE6O5aylD/5332367d64286835b0822a2b678633a3/-R6S-_Y11S3_Designer-s_Notes-Group4-1_Y11S2.3_CON_BANMATRIX_ATT.jpg",
+      "dataPatch": "Y11S2.3",
+      "population": "Platinum and above",
+      "publishedAt": "2026-08-17T15:01:38.000Z"
+    },
+    {
+      "id": "thermite",
+      "platform": "console",
+      "side": "attack",
+      "rate": 22,
+      "chartUrl": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/3Qi9xceeMGcqVSE6O5aylD/5332367d64286835b0822a2b678633a3/-R6S-_Y11S3_Designer-s_Notes-Group4-1_Y11S2.3_CON_BANMATRIX_ATT.jpg",
+      "dataPatch": "Y11S2.3",
+      "population": "Platinum and above",
+      "publishedAt": "2026-08-17T15:01:38.000Z"
+    },
+    {
+      "id": "solid-snake",
+      "platform": "console",
+      "side": "attack",
+      "rate": 19,
+      "chartUrl": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/3Qi9xceeMGcqVSE6O5aylD/5332367d64286835b0822a2b678633a3/-R6S-_Y11S3_Designer-s_Notes-Group4-1_Y11S2.3_CON_BANMATRIX_ATT.jpg",
+      "dataPatch": "Y11S2.3",
+      "population": "Platinum and above",
+      "publishedAt": "2026-08-17T15:01:38.000Z"
+    },
+    {
+      "id": "maverick",
+      "platform": "console",
+      "side": "attack",
+      "rate": 15,
+      "chartUrl": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/3Qi9xceeMGcqVSE6O5aylD/5332367d64286835b0822a2b678633a3/-R6S-_Y11S3_Designer-s_Notes-Group4-1_Y11S2.3_CON_BANMATRIX_ATT.jpg",
+      "dataPatch": "Y11S2.3",
+      "population": "Platinum and above",
+      "publishedAt": "2026-08-17T15:01:38.000Z"
+    },
+    {
+      "id": "thatcher",
+      "platform": "console",
+      "side": "attack",
+      "rate": 6,
+      "chartUrl": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/3Qi9xceeMGcqVSE6O5aylD/5332367d64286835b0822a2b678633a3/-R6S-_Y11S3_Designer-s_Notes-Group4-1_Y11S2.3_CON_BANMATRIX_ATT.jpg",
+      "dataPatch": "Y11S2.3",
+      "population": "Platinum and above",
+      "publishedAt": "2026-08-17T15:01:38.000Z"
+    },
+    {
+      "id": "montagne",
+      "platform": "console",
+      "side": "attack",
+      "rate": 3,
+      "chartUrl": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/3Qi9xceeMGcqVSE6O5aylD/5332367d64286835b0822a2b678633a3/-R6S-_Y11S3_Designer-s_Notes-Group4-1_Y11S2.3_CON_BANMATRIX_ATT.jpg",
+      "dataPatch": "Y11S2.3",
+      "population": "Platinum and above",
+      "publishedAt": "2026-08-17T15:01:38.000Z"
+    },
+    {
+      "id": "grim",
+      "platform": "console",
+      "side": "attack",
+      "rate": 2,
+      "chartUrl": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/3Qi9xceeMGcqVSE6O5aylD/5332367d64286835b0822a2b678633a3/-R6S-_Y11S3_Designer-s_Notes-Group4-1_Y11S2.3_CON_BANMATRIX_ATT.jpg",
+      "dataPatch": "Y11S2.3",
+      "population": "Platinum and above",
+      "publishedAt": "2026-08-17T15:01:38.000Z"
+    },
+    {
+      "id": "fuze",
+      "platform": "console",
+      "side": "attack",
+      "rate": 2,
+      "chartUrl": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/3Qi9xceeMGcqVSE6O5aylD/5332367d64286835b0822a2b678633a3/-R6S-_Y11S3_Designer-s_Notes-Group4-1_Y11S2.3_CON_BANMATRIX_ATT.jpg",
+      "dataPatch": "Y11S2.3",
+      "population": "Platinum and above",
+      "publishedAt": "2026-08-17T15:01:38.000Z"
+    },
+    {
+      "id": "mira",
+      "platform": "console",
+      "side": "defense",
+      "rate": 89,
+      "chartUrl": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/4xGnDdsIavCzodfEjVejNR/9d3d7de5df53323ed2a30a9ddcad19dd/-R6S-_Y11S3_Designer-s_Notes-Group4-2_Y11S2.3_CON_BANMATRIX_DEF.jpg",
+      "dataPatch": "Y11S2.3",
+      "population": "Platinum and above",
+      "publishedAt": "2026-08-17T15:01:38.000Z"
+    },
+    {
+      "id": "kaid",
+      "platform": "console",
+      "side": "defense",
+      "rate": 50,
+      "chartUrl": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/4xGnDdsIavCzodfEjVejNR/9d3d7de5df53323ed2a30a9ddcad19dd/-R6S-_Y11S3_Designer-s_Notes-Group4-2_Y11S2.3_CON_BANMATRIX_DEF.jpg",
+      "dataPatch": "Y11S2.3",
+      "population": "Platinum and above",
+      "publishedAt": "2026-08-17T15:01:38.000Z"
+    },
+    {
+      "id": "azami",
+      "platform": "console",
+      "side": "defense",
+      "rate": 12,
+      "chartUrl": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/4xGnDdsIavCzodfEjVejNR/9d3d7de5df53323ed2a30a9ddcad19dd/-R6S-_Y11S3_Designer-s_Notes-Group4-2_Y11S2.3_CON_BANMATRIX_DEF.jpg",
+      "dataPatch": "Y11S2.3",
+      "population": "Platinum and above",
+      "publishedAt": "2026-08-17T15:01:38.000Z"
+    },
+    {
+      "id": "mute",
+      "platform": "console",
+      "side": "defense",
+      "rate": 9,
+      "chartUrl": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/4xGnDdsIavCzodfEjVejNR/9d3d7de5df53323ed2a30a9ddcad19dd/-R6S-_Y11S3_Designer-s_Notes-Group4-2_Y11S2.3_CON_BANMATRIX_DEF.jpg",
+      "dataPatch": "Y11S2.3",
+      "population": "Platinum and above",
+      "publishedAt": "2026-08-17T15:01:38.000Z"
+    },
+    {
+      "id": "bandit",
+      "platform": "console",
+      "side": "defense",
+      "rate": 8,
+      "chartUrl": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/4xGnDdsIavCzodfEjVejNR/9d3d7de5df53323ed2a30a9ddcad19dd/-R6S-_Y11S3_Designer-s_Notes-Group4-2_Y11S2.3_CON_BANMATRIX_DEF.jpg",
+      "dataPatch": "Y11S2.3",
+      "population": "Platinum and above",
+      "publishedAt": "2026-08-17T15:01:38.000Z"
+    },
+    {
+      "id": "clash",
+      "platform": "console",
+      "side": "defense",
+      "rate": 4,
+      "chartUrl": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/4xGnDdsIavCzodfEjVejNR/9d3d7de5df53323ed2a30a9ddcad19dd/-R6S-_Y11S3_Designer-s_Notes-Group4-2_Y11S2.3_CON_BANMATRIX_DEF.jpg",
+      "dataPatch": "Y11S2.3",
+      "population": "Platinum and above",
+      "publishedAt": "2026-08-17T15:01:38.000Z"
+    },
+    {
+      "id": "aruni",
+      "platform": "console",
+      "side": "defense",
+      "rate": 4,
+      "chartUrl": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/4xGnDdsIavCzodfEjVejNR/9d3d7de5df53323ed2a30a9ddcad19dd/-R6S-_Y11S3_Designer-s_Notes-Group4-2_Y11S2.3_CON_BANMATRIX_DEF.jpg",
+      "dataPatch": "Y11S2.3",
+      "population": "Platinum and above",
+      "publishedAt": "2026-08-17T15:01:38.000Z"
+    },
+    {
+      "id": "vigil",
+      "platform": "console",
+      "side": "defense",
+      "rate": 3,
+      "chartUrl": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/4xGnDdsIavCzodfEjVejNR/9d3d7de5df53323ed2a30a9ddcad19dd/-R6S-_Y11S3_Designer-s_Notes-Group4-2_Y11S2.3_CON_BANMATRIX_DEF.jpg",
+      "dataPatch": "Y11S2.3",
+      "population": "Platinum and above",
+      "publishedAt": "2026-08-17T15:01:38.000Z"
+    },
+    {
+      "id": "thorn",
+      "platform": "console",
+      "side": "defense",
+      "rate": 3,
+      "chartUrl": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/4xGnDdsIavCzodfEjVejNR/9d3d7de5df53323ed2a30a9ddcad19dd/-R6S-_Y11S3_Designer-s_Notes-Group4-2_Y11S2.3_CON_BANMATRIX_DEF.jpg",
+      "dataPatch": "Y11S2.3",
+      "population": "Platinum and above",
+      "publishedAt": "2026-08-17T15:01:38.000Z"
+    },
+    {
+      "id": "valkyrie",
+      "platform": "console",
+      "side": "defense",
+      "rate": 2,
+      "chartUrl": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/4xGnDdsIavCzodfEjVejNR/9d3d7de5df53323ed2a30a9ddcad19dd/-R6S-_Y11S3_Designer-s_Notes-Group4-2_Y11S2.3_CON_BANMATRIX_DEF.jpg",
+      "dataPatch": "Y11S2.3",
+      "population": "Platinum and above",
+      "publishedAt": "2026-08-17T15:01:38.000Z"
+    }
+  ],
+  "sourceUrls": [
+    "https://www.ubisoft.com/en-us/game/rainbow-six/siege/game-info/maps",
+    "https://www.ubisoft.com/en-us/game/rainbow-six/siege/game-info/operators",
+    "https://www.ubisoft.com/en-us/game/rainbow-six/siege/news-updates/PONCuRt8LaCr3O31NkBQb/y11s3-designers-notes"
+  ],
+  "method": "Dropzone editorial role recommendations, based on operator utility and map requirements. Not measured per-map pick rates or a statistically optimal team.",
+  "feed": "siege-guides",
+  "sourceUpdatedAt": "2026-09-07T00:00:00.000Z",
+  "fetchedAt": "2026-09-07T00:00:00.000Z"
+}

@@ -1,0 +1,13 @@
+{
+  "officialGameArt": {
+    "bo7": "https://imgs.callofduty.com/content/dam/atvi/callofduty/cod-touchui/blackops7/meta/Chimera_KA_16x9_BR.webp",
+    "warzone": "https://imgs.callofduty.com/content/dam/atvi/callofduty/cod-touchui/warzone2/blackops7/evergreen/WZ_LP-Update_Hero-BG_Desktop-LG.webp",
+    "mw4": "https://imgs.callofduty.com/content/dam/atvi/callofduty/cod-touchui/mw4/home/hero/MW4LP_BGHero_XL.webp",
+    "finals": "https://images.squarespace-cdn.com/content/v1/62d66fa29e72c560f8efc020/1783593958262-06OG72XHAKHXKFLBWRW9/S11_KEYART_BLOGPOST_THUMB.png",
+    "finals-light": "https://images.squarespace-cdn.com/content/62d66fa29e72c560f8efc020/f3113c1a-a68e-49fb-899c-c62d83bb9deb/Playstyle_Light-Scout_Character.png",
+    "finals-medium": "https://images.squarespace-cdn.com/content/62d66fa29e72c560f8efc020/43fa3ade-d417-4a76-a508-5695d02509ef/Playstyle_Medium-Medic_Character.png",
+    "finals-heavy": "https://images.squarespace-cdn.com/content/62d66fa29e72c560f8efc020/3ac46fcb-5e7c-4b42-9c88-2cf8a7f7fe77/Playstyle_Heavy-Guardian_Character.png"
+  },
+  "weaponImages": "https://assets.codmunity.gg/",
+  "owners": "Game artwork belongs to Activision; weapon loadout images are provided by CODMunity. THE FINALS artwork belongs to Embark Studios."
+}

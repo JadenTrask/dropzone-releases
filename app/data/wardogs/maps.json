@@ -1,0 +1,181 @@
+{
+  "revision": "c3252c9d24a22d1aad5d3fa4408807aef591bb56",
+  "reviewedAt": "2026-09-06",
+  "maps": [
+    {
+      "id": "bakurani",
+      "name": "Bakurani",
+      "bounds": {
+        "minX": 23.35,
+        "maxX": 133.6,
+        "minY": 19.34,
+        "maxY": 129.65
+      },
+      "tileBounds": {
+        "minX": -0.03,
+        "maxX": 163.81,
+        "minY": -0.01,
+        "maxY": 163.83
+      },
+      "coordinateMetersPerUnit": 100,
+      "tiles": {
+        "path": "assets/wardogs/bakurani",
+        "tileSize": 256,
+        "minZoom": 0,
+        "maxZoom": 5,
+        "limits": {
+          "0": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "1": [
+            0,
+            1,
+            0,
+            1
+          ],
+          "2": [
+            0,
+            3,
+            0,
+            3
+          ],
+          "3": [
+            1,
+            6,
+            1,
+            7
+          ],
+          "4": [
+            2,
+            13,
+            3,
+            14
+          ],
+          "5": [
+            4,
+            26,
+            6,
+            28
+          ]
+        }
+      },
+      "markers": [
+        {
+          "x": 83.64,
+          "y": 72.85,
+          "name": "Tower 4"
+        },
+        {
+          "x": 77.19,
+          "y": 73.44,
+          "name": "Tower 3"
+        },
+        {
+          "x": 77.19,
+          "y": 70.0,
+          "name": "Tower 2"
+        },
+        {
+          "x": 80.52,
+          "y": 69.85,
+          "name": "Tower 1"
+        },
+        {
+          "x": 82.22,
+          "y": 68.41,
+          "name": "Tower 5"
+        }
+      ],
+      "sourceUrl": "https://wardogs-artillery.com/",
+      "referenceUrl": "https://metaforge.app/wardogs/map/bakurani"
+    },
+    {
+      "id": "ozeti",
+      "name": "Ozeti",
+      "bounds": {
+        "minX": 57.58,
+        "maxX": 143.07,
+        "minY": 21.81,
+        "maxY": 99.56
+      },
+      "tileBounds": {
+        "minX": -0.03,
+        "maxX": 163.81,
+        "minY": -0.01,
+        "maxY": 163.83
+      },
+      "coordinateMetersPerUnit": 100,
+      "tiles": {
+        "path": "assets/wardogs/ozeti",
+        "tileSize": 256,
+        "minZoom": 0,
+        "maxZoom": 5,
+        "limits": {
+          "0": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "1": [
+            0,
+            1,
+            0,
+            1
+          ],
+          "2": [
+            1,
+            3,
+            1,
+            3
+          ],
+          "3": [
+            2,
+            6,
+            3,
+            6
+          ],
+          "4": [
+            5,
+            13,
+            6,
+            13
+          ],
+          "5": [
+            11,
+            27,
+            12,
+            27
+          ]
+        }
+      },
+      "markers": [
+        {
+          "x": 100.62,
+          "y": 67.64,
+          "name": "Tower 4"
+        },
+        {
+          "x": 104.49,
+          "y": 63.71,
+          "name": "Tower 3"
+        },
+        {
+          "x": 100.37,
+          "y": 59.23,
+          "name": "Tower 2"
+        },
+        {
+          "x": 95.8,
+          "y": 62.82,
+          "name": "Tower 1"
+        }
+      ],
+      "sourceUrl": "https://wardogs-artillery.com/",
+      "referenceUrl": "https://metaforge.app/wardogs/map/ozeti"
+    }
+  ]
+}

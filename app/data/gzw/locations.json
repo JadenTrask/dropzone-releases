@@ -1,0 +1,283 @@
+{
+  "regions": [
+    {
+      "id": "kiu-vongsa",
+      "name": "Kiu Vongsa",
+      "x": 140.17,
+      "y": 161.452,
+      "faction": "crimson",
+      "aliases": [
+        "Kiu Vongsa"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Kiu_Vongsa",
+      "precision": "region"
+    },
+    {
+      "id": "nam-thaven",
+      "name": "Nam Thaven",
+      "x": 170.449,
+      "y": 116.853,
+      "faction": "mithras",
+      "aliases": [
+        "Nam Thaven"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Nam_Thaven",
+      "precision": "region"
+    },
+    {
+      "id": "pha-lang",
+      "name": "Pha Lang",
+      "x": 202.648,
+      "y": 160.136,
+      "faction": "lamang",
+      "aliases": [
+        "Pha Lang"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Pha_Lang",
+      "precision": "region"
+    },
+    {
+      "id": "hunters-paradise",
+      "name": "Hunter's Paradise",
+      "x": 156.122,
+      "y": 167.788,
+      "faction": null,
+      "aliases": [
+        "Hunter's Paradise"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Hunter's_Paradise",
+      "precision": "region"
+    },
+    {
+      "id": "midnight-sapphire",
+      "name": "Midnight Sapphire",
+      "x": 172.369,
+      "y": 164.826,
+      "faction": null,
+      "aliases": [
+        "Midnight Sapphire"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Midnight_Sapphire",
+      "precision": "region"
+    },
+    {
+      "id": "pha-lang-airfield",
+      "name": "Pha Lang Airfield",
+      "x": 186.105,
+      "y": 156.186,
+      "faction": null,
+      "aliases": [
+        "Pha Lang Airfield"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Pha_Lang_Airfield",
+      "precision": "region"
+    },
+    {
+      "id": "sawmill",
+      "name": "Sawmill",
+      "x": 138.398,
+      "y": 142.28,
+      "faction": null,
+      "aliases": [
+        "Sawmill"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Sawmill",
+      "precision": "region"
+    },
+    {
+      "id": "fort-narith",
+      "name": "Fort Narith",
+      "x": 141.942,
+      "y": 129.032,
+      "faction": null,
+      "aliases": [
+        "Fort Narith"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Fort_Narith",
+      "precision": "region"
+    },
+    {
+      "id": "ybl-1",
+      "name": "YBL-1",
+      "x": 146.078,
+      "y": 117.759,
+      "faction": null,
+      "aliases": [
+        "YBL-1"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/YBL-1",
+      "precision": "region"
+    },
+    {
+      "id": "ban-pa",
+      "name": "Ban Pa",
+      "x": 206.931,
+      "y": 136.273,
+      "faction": null,
+      "aliases": [
+        "Ban Pa"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Ban_Pa",
+      "precision": "region"
+    },
+    {
+      "id": "tiger-bay",
+      "name": "Tiger Bay",
+      "x": 197.626,
+      "y": 126.563,
+      "faction": null,
+      "aliases": [
+        "Tiger Bay"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Tiger_Bay",
+      "precision": "region"
+    },
+    {
+      "id": "blue-lagoon",
+      "name": "Blue Lagoon",
+      "x": 200.432,
+      "y": 115.043,
+      "faction": null,
+      "aliases": [
+        "Blue Lagoon"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Blue_Lagoon",
+      "precision": "region"
+    }
+  ],
+  "locations": [
+    {
+      "id": "india-1",
+      "name": "INDIA 1",
+      "x": 206.5,
+      "y": 142.5,
+      "type": "lz",
+      "region": "ban-pa",
+      "precision": "grid cell",
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Ban_Pa"
+    },
+    {
+      "id": "india-2",
+      "name": "INDIA 2",
+      "x": 202.5,
+      "y": 136.5,
+      "type": "lz",
+      "region": "ban-pa",
+      "precision": "grid cell",
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Ban_Pa"
+    },
+    {
+      "id": "india-3",
+      "name": "INDIA 3",
+      "x": 202.5,
+      "y": 141.5,
+      "type": "lz",
+      "region": "ban-pa",
+      "precision": "grid cell",
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Ban_Pa"
+    },
+    {
+      "id": "oscar-1",
+      "name": "OSCAR 1",
+      "x": 203.5,
+      "y": 152.5,
+      "type": "lz",
+      "region": "ban-pa",
+      "precision": "grid cell",
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Ban_Pa"
+    },
+    {
+      "id": "oscar-2",
+      "name": "OSCAR 2",
+      "x": 196.5,
+      "y": 151.5,
+      "type": "lz",
+      "region": "ban-pa",
+      "precision": "grid cell",
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Ban_Pa"
+    },
+    {
+      "id": "oscar-3",
+      "name": "OSCAR 3",
+      "x": 196.5,
+      "y": 141.5,
+      "type": "lz",
+      "region": "ban-pa",
+      "precision": "grid cell",
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Ban_Pa"
+    },
+    {
+      "id": "juliett-4",
+      "name": "JULIETT 4",
+      "x": 190.5,
+      "y": 131.5,
+      "type": "lz",
+      "region": "blue-lagoon",
+      "precision": "grid cell",
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Blue_Lagoon"
+    },
+    {
+      "id": "kilo-1",
+      "name": "KILO 1",
+      "x": 202.5,
+      "y": 118.5,
+      "type": "lz",
+      "region": "blue-lagoon",
+      "precision": "grid cell",
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Blue_Lagoon"
+    },
+    {
+      "id": "kilo-2",
+      "name": "KILO 2",
+      "x": 207.5,
+      "y": 118.5,
+      "type": "lz",
+      "region": "blue-lagoon",
+      "precision": "grid cell",
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Blue_Lagoon"
+    },
+    {
+      "id": "kilo-3",
+      "name": "KILO 3",
+      "x": 205.5,
+      "y": 122.5,
+      "type": "lz",
+      "region": "blue-lagoon",
+      "precision": "grid cell",
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Blue_Lagoon"
+    },
+    {
+      "id": "november-1",
+      "name": "NOVEMBER 1",
+      "x": 180.5,
+      "y": 125.5,
+      "type": "lz",
+      "region": "blue-lagoon",
+      "precision": "grid cell",
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Blue_Lagoon"
+    },
+    {
+      "id": "november-2",
+      "name": "NOVEMBER 2",
+      "x": 185.5,
+      "y": 125.5,
+      "type": "lz",
+      "region": "blue-lagoon",
+      "precision": "grid cell",
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Blue_Lagoon"
+    },
+    {
+      "id": "november-3",
+      "name": "NOVEMBER 3",
+      "x": 195.5,
+      "y": 118.5,
+      "type": "lz",
+      "region": "blue-lagoon",
+      "precision": "grid cell",
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Blue_Lagoon"
+    }
+  ],
+  "reviewedAt": "2026-09-06",
+  "sourceUpdatedAt": null,
+  "coverage": "12 region centers and 13 published landing-zone grid cells. This is not a complete POI or landing-zone database."
+}

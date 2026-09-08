@@ -1,0 +1,444 @@
+{
+  "metas": [
+    {
+      "name": "bo6-ranked",
+      "game": "bo7",
+      "collection": "bo6-rankedplay"
+    }
+  ],
+  "lastUpdated": 1781493368804,
+  "sections": [
+    {
+      "name": "absolute-meta",
+      "cards": [
+        {
+          "_id": "698d555210e691ed57ce4feb",
+          "active": true,
+          "WeaponName": "M15 Mod 0",
+          "Playstyle": "AR",
+          "Playstyle2": "AR",
+          "LoadoutCode": "A01-AUY8U-ETU65-1",
+          "Optic": "Lethal Tools ELO",
+          "Barrel": "20\" Delta-F2 Barrel",
+          "Rear Grip": "Hexcut Grip",
+          "Stock": "Wander-3V Stock",
+          "Fire Mods": "Buffer Spring",
+          "Game": "bo7",
+          "Category": "Assault Rifle",
+          "image": "https://assets.codmunity.gg/optimized/M15-Mod-0-AR-Black-Ops-7-Loadout-CODMunity-2634.webp",
+          "collec": "bo6-rankedplay",
+          "appGame": "bo7",
+          "meta": "bo6-ranked",
+          "updated": 1781493368801,
+          "proFavorite": true,
+          "weaponSlug": "m15-mod-0",
+          "weaponGame": "bo7",
+          "countAttachments": 5,
+          "attachments": {
+            "Optic": {
+              "weapon": "Peacekeeper Mk1",
+              "levelText": "Level 5",
+              "level": 5,
+              "icon": "https://assets.codmunity.gg/optimized/lethaltoolselo_bo7_icon.webp",
+              "label": "Mini Reflex 03",
+              "game": "bo7",
+              "slug": "peacekeeper-mk1"
+            },
+            "Barrel": {
+              "weapon": "M15 Mod 0",
+              "levelText": "Level 6",
+              "level": 6,
+              "icon": "https://assets.codmunity.gg/optimized/20deltaf2barrel_bo7_icon.webp",
+              "label": "Mid Range Barrel",
+              "game": "bo7",
+              "slug": "m15-mod-0"
+            },
+            "Rear Grip": {
+              "weapon": "M15 Mod 0",
+              "levelText": "Level 36",
+              "level": 36,
+              "icon": "https://assets.codmunity.gg/optimized/hexcutgrip_bo7_icon.webp",
+              "label": "Mobile Quickdraw Grip",
+              "game": "bo7",
+              "slug": "m15-mod-0"
+            },
+            "Stock": {
+              "weapon": "M15 Mod 0",
+              "levelText": "Level 25",
+              "level": 25,
+              "icon": "https://assets.codmunity.gg/optimized/wander3vstock_bo7_icon.webp",
+              "label": "ADS Movement Stock",
+              "game": "bo7",
+              "slug": "m15-mod-0"
+            },
+            "Fire Mods": {
+              "weapon": "M15 Mod 0",
+              "levelText": "Level 26",
+              "level": 26,
+              "icon": "https://assets.codmunity.gg/optimized/recoilsprings_bo7_icon.webp",
+              "label": "Recoil Springs",
+              "game": "bo7",
+              "slug": "m15-mod-0"
+            }
+          }
+        },
+        {
+          "_id": "69d85c3207c5f91099d185a0",
+          "active": true,
+          "WeaponName": "MPC-25",
+          "Playstyle": "SMG",
+          "Playstyle2": "SMG",
+          "LoadoutCode": "S06-8E469-UY51",
+          "Barrel": "13.1\" Razorback Barrel",
+          "Underbarrel": "Zero Shift Handstop",
+          "Rear Grip": "Magnate Grip",
+          "Stock": "K-1 Pedal Stock",
+          "Fire Mods": "Recoil Sync Unit",
+          "Game": "bo7",
+          "Category": "SMG",
+          "collec": "bo6-rankedplay",
+          "appGame": "bo7",
+          "meta": "bo6-ranked",
+          "updated": 1781493368802,
+          "image": "https://assets.codmunity.gg/optimized/MPC-25-SMG-Black-Ops-7-Loadout-CODMunity-5308.webp",
+          "proFavorite": true,
+          "weaponSlug": "mpc-25",
+          "weaponGame": "bo7",
+          "countAttachments": 5,
+          "attachments": {
+            "Barrel": {
+              "weapon": "MPC-25",
+              "levelText": "Level 2",
+              "level": 2,
+              "icon": "https://assets.codmunity.gg/optimized/razorbackbarrel_bo7_icon.webp",
+              "label": "Handling Control Barrel",
+              "game": "bo7",
+              "slug": "mpc-25"
+            },
+            "Underbarrel": {
+              "weapon": "MPC-25",
+              "levelText": "Level 34",
+              "level": 34,
+              "icon": "https://assets.codmunity.gg/optimized/zeroshifthandstop_bo7_icon.webp",
+              "label": "Steady Sway Handstop",
+              "game": "bo7",
+              "slug": "mpc-25"
+            },
+            "Rear Grip": {
+              "weapon": "MPC-25",
+              "levelText": "Level 40",
+              "level": 40,
+              "icon": "https://assets.codmunity.gg/optimized/magnategrip_bo7_icon.webp",
+              "label": "Accuracy Grip",
+              "game": "bo7",
+              "slug": "mpc-25"
+            },
+            "Stock": {
+              "weapon": "MPC-25",
+              "levelText": "Level 18",
+              "level": 18,
+              "icon": "https://assets.codmunity.gg/optimized/k1pedalstock_bo7_icon.webp",
+              "label": "ADS Movement Stock",
+              "game": "bo7",
+              "slug": "mpc-25"
+            },
+            "Fire Mods": {
+              "weapon": "MPC-25",
+              "levelText": "Level 19",
+              "level": 19,
+              "icon": "https://assets.codmunity.gg/optimized/recoilsprings_bo7_icon.webp",
+              "label": "Recoil Springs",
+              "game": "bo7",
+              "slug": "mpc-25"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "meta",
+      "cards": [
+        {
+          "_id": "6989a5149c96a564ce9e26d6",
+          "active": true,
+          "WeaponName": "M15 Mod 0",
+          "Playstyle": "AR",
+          "Playstyle2": "AR",
+          "LoadoutCode": "A01-AUY8U-ETTN5-1",
+          "Optic": "Lethal Tools ELO",
+          "Barrel": "16.5\" Fusion Barrel",
+          "Rear Grip": "Hexcut Grip",
+          "Stock": "Wander-3V Stock",
+          "Fire Mods": "Buffer Spring",
+          "Game": "bo7",
+          "Category": "Assault Rifle",
+          "image": "https://assets.codmunity.gg/optimized/M15-Mod-0-AR-Black-Ops-7-Loadout-CODMunity-2558.webp",
+          "collec": "bo6-rankedplay",
+          "appGame": "bo7",
+          "meta": "bo6-ranked",
+          "updated": 1781493368803,
+          "weaponSlug": "m15-mod-0",
+          "weaponGame": "bo7",
+          "countAttachments": 5,
+          "attachments": {
+            "Optic": {
+              "weapon": "Peacekeeper Mk1",
+              "levelText": "Level 5",
+              "level": 5,
+              "icon": "https://assets.codmunity.gg/optimized/lethaltoolselo_bo7_icon.webp",
+              "label": "Mini Reflex 03",
+              "game": "bo7",
+              "slug": "peacekeeper-mk1"
+            },
+            "Barrel": {
+              "weapon": "M15 Mod 0",
+              "levelText": "Level 29",
+              "level": 29,
+              "icon": "https://assets.codmunity.gg/optimized/165fusionbarrel_bo7_icon.webp",
+              "label": "Hybrid Barrel",
+              "game": "bo7",
+              "slug": "m15-mod-0"
+            },
+            "Rear Grip": {
+              "weapon": "M15 Mod 0",
+              "levelText": "Level 36",
+              "level": 36,
+              "icon": "https://assets.codmunity.gg/optimized/hexcutgrip_bo7_icon.webp",
+              "label": "Mobile Quickdraw Grip",
+              "game": "bo7",
+              "slug": "m15-mod-0"
+            },
+            "Stock": {
+              "weapon": "M15 Mod 0",
+              "levelText": "Level 25",
+              "level": 25,
+              "icon": "https://assets.codmunity.gg/optimized/wander3vstock_bo7_icon.webp",
+              "label": "ADS Movement Stock",
+              "game": "bo7",
+              "slug": "m15-mod-0"
+            },
+            "Fire Mods": {
+              "weapon": "M15 Mod 0",
+              "levelText": "Level 26",
+              "level": 26,
+              "icon": "https://assets.codmunity.gg/optimized/recoilsprings_bo7_icon.webp",
+              "label": "Recoil Springs",
+              "game": "bo7",
+              "slug": "m15-mod-0"
+            }
+          }
+        },
+        {
+          "_id": "69d70acdbb52fb58e162b3d4",
+          "active": true,
+          "WeaponName": "Voyak KT-3",
+          "Playstyle": "AR",
+          "Playstyle2": "AR",
+          "LoadoutCode": "A09-AV7KF-DJQQ1-1",
+          "Optic": "Lethal Tools ELO",
+          "Barrel": "19.2\" Greaves-C5 Barrel",
+          "Underbarrel": "VAS Convergence Foregrip",
+          "Rear Grip": "Crisis-Q Grip",
+          "Stock": "Bowen Tread Pad",
+          "Game": "bo7",
+          "Category": "Assault Rifle",
+          "collec": "bo6-rankedplay",
+          "appGame": "bo7",
+          "meta": "bo6-ranked",
+          "updated": 1781493368803,
+          "image": "https://assets.codmunity.gg/optimized/Voyak-KT-3-AR-Black-Ops-7-Loadout-CODMunity-6707.webp",
+          "weaponSlug": "voyak-kt-3",
+          "weaponGame": "bo7",
+          "countAttachments": 5,
+          "attachments": {
+            "Optic": {
+              "weapon": "Peacekeeper Mk1",
+              "levelText": "Level 5",
+              "level": 5,
+              "icon": "https://assets.codmunity.gg/optimized/lethaltoolselo_bo7_icon.webp",
+              "label": "Mini Reflex 03",
+              "game": "bo7",
+              "slug": "peacekeeper-mk1"
+            },
+            "Barrel": {
+              "weapon": "Voyak KT-3",
+              "levelText": "Level 7",
+              "level": 7,
+              "icon": "https://assets.codmunity.gg/optimized/192greavesc5barrel_bo7_icon.webp",
+              "label": "Mid Range Barrel",
+              "game": "bo7",
+              "slug": "voyak-kt-3"
+            },
+            "Underbarrel": {
+              "weapon": "Voyak KT-3",
+              "levelText": "Season 3 Battle Pass",
+              "level": "Season 3 Battle Pass",
+              "icon": "https://assets.codmunity.gg/optimized/vasconvergenceforegrip_bo7_icon.webp",
+              "label": "Bullet Deviation Foregrip",
+              "game": "bo7",
+              "slug": "voyak-kt-3"
+            },
+            "Rear Grip": {
+              "weapon": "Voyak KT-3",
+              "levelText": "Level 11",
+              "level": 11,
+              "icon": "https://assets.codmunity.gg/optimized/crisisqgrip_bo7_icon.webp",
+              "label": "Quickdraw Grip",
+              "game": "bo7",
+              "slug": "voyak-kt-3"
+            },
+            "Stock": {
+              "weapon": "Voyak KT-3",
+              "levelText": "Level 3",
+              "level": 3,
+              "icon": "https://assets.codmunity.gg/optimized/bowentreadpad_bo7_icon.webp",
+              "label": "ADS Movement Stock",
+              "game": "bo7",
+              "slug": "voyak-kt-3"
+            }
+          }
+        },
+        {
+          "_id": "698d553f20a6efc1729d72c4",
+          "updated": 1781493368804,
+          "active": true,
+          "WeaponName": "Dravec 45",
+          "Playstyle": "SMG",
+          "Playstyle2": "SMG",
+          "LoadoutCode": "S04-CWWDU-911",
+          "Muzzle": "Hawker Hybrid .45",
+          "Barrel": "14\" Verse Barrel",
+          "Magazine": "FrontGate Fast Loader",
+          "Rear Grip": "Herald-Z1 Grip",
+          "Stock": "Serval Q-Step Stock",
+          "Game": "bo7",
+          "Category": "SMG",
+          "image": "https://assets.codmunity.gg/optimized/Dravec-45-SMG-Black-Ops-7-Loadout-CODMunity-2907.webp",
+          "collec": "bo6-rankedplay",
+          "appGame": "bo7",
+          "meta": "bo6-ranked",
+          "weaponSlug": "dravec-45",
+          "weaponGame": "bo7",
+          "countAttachments": 5,
+          "attachments": {
+            "Muzzle": {
+              "weapon": "Dravec 45",
+              "levelText": "Level 30",
+              "level": 30,
+              "icon": "https://assets.codmunity.gg/optimized/hawkerhybrid45_bo7_icon.webp",
+              "label": "Mobility Spread Muzzle",
+              "game": "bo7",
+              "slug": "dravec-45"
+            },
+            "Barrel": {
+              "weapon": "Dravec 45",
+              "levelText": "Level 32",
+              "level": 32,
+              "icon": "https://assets.codmunity.gg/optimized/14versebarrel_bo7_icon.webp",
+              "label": "Hybrid Barrel",
+              "game": "bo7",
+              "slug": "dravec-45"
+            },
+            "Magazine": {
+              "weapon": "Dravec 45",
+              "levelText": "Level 3",
+              "level": 3,
+              "icon": "https://assets.codmunity.gg/optimized/frontgatefastloader_bo7_icon.webp",
+              "label": "Fast Mag I",
+              "game": "bo7",
+              "slug": "dravec-45"
+            },
+            "Rear Grip": {
+              "weapon": "Dravec 45",
+              "levelText": "Level 36",
+              "level": 36,
+              "icon": "https://assets.codmunity.gg/optimized/heraldz1grip_bo7_icon.webp",
+              "label": "Mobile Quickdraw Grip",
+              "game": "bo7",
+              "slug": "dravec-45"
+            },
+            "Stock": {
+              "weapon": "Dravec 45",
+              "levelText": "Level 14",
+              "level": 14,
+              "icon": "https://assets.codmunity.gg/optimized/servalqstepstock_bo7_icon.webp",
+              "label": "ADS Movement Stock",
+              "game": "bo7",
+              "slug": "dravec-45"
+            }
+          }
+        },
+        {
+          "_id": "69d70acdbb52fb58e162b3d5",
+          "active": true,
+          "WeaponName": "Kogot-7",
+          "Playstyle": "SMG",
+          "Playstyle2": "SMG",
+          "LoadoutCode": "S10-IVC9L-Y31",
+          "Muzzle": "Hawker Series 45",
+          "Barrel": "11.7\" Cinerous Barrel",
+          "Rear Grip": "EMT3 Vulpine Grip",
+          "Stock": "Targil Orbiter Stock",
+          "Fire Mods": "Buffer Spring",
+          "Game": "bo7",
+          "Category": "SMG",
+          "collec": "bo6-rankedplay",
+          "appGame": "bo7",
+          "meta": "bo6-ranked",
+          "updated": 1781493368804,
+          "image": "https://assets.codmunity.gg/optimized/Kogot-7-SMG-Black-Ops-7-Loadout-CODMunity-6135.webp",
+          "weaponSlug": "kogot-7",
+          "weaponGame": "bo7",
+          "countAttachments": 5,
+          "attachments": {
+            "Muzzle": {
+              "weapon": "Kogot-7",
+              "levelText": "Level 0",
+              "level": 0,
+              "icon": "https://assets.codmunity.gg/optimized/hawkerseries45_bo7_icon.webp",
+              "label": "Compensator",
+              "game": "bo7",
+              "slug": "kogot-7"
+            },
+            "Barrel": {
+              "weapon": "Kogot-7",
+              "levelText": "Level 4",
+              "level": 4,
+              "icon": "https://assets.codmunity.gg/optimized/cinerousbarrel_bo7_icon.webp",
+              "label": "Handling Control Barrel",
+              "game": "bo7",
+              "slug": "kogot-7"
+            },
+            "Rear Grip": {
+              "weapon": "Kogot-7",
+              "levelText": "Level 20",
+              "level": 20,
+              "icon": "https://assets.codmunity.gg/optimized/emt3vulpinegrip_bo7_icon.webp",
+              "label": "Stabilization Grip",
+              "game": "bo7",
+              "slug": "kogot-7"
+            },
+            "Stock": {
+              "weapon": "Kogot-7",
+              "levelText": "Level 21",
+              "level": 21,
+              "icon": "https://assets.codmunity.gg/optimized/targilorbiterstock_bo7_icon.webp",
+              "label": "ADS Movement Stock",
+              "game": "bo7",
+              "slug": "kogot-7"
+            },
+            "Fire Mods": {
+              "weapon": "Kogot-7",
+              "levelText": "Level 28",
+              "level": 28,
+              "icon": "https://assets.codmunity.gg/optimized/recoilsprings_bo7_icon.webp",
+              "label": "Recoil Springs",
+              "game": "bo7",
+              "slug": "kogot-7"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

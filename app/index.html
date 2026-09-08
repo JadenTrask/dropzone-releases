@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://ddragon.leagueoflegends.com https://assets.codmunity.gg https://i.ytimg.com https://raw.githubusercontent.com https://cdn.gzwtacmap.com https://staticctf.ubisoft.com https://clan.akamai.steamstatic.com; connect-src 'self'; font-src 'self'; object-src 'none'; base-uri 'none'; frame-src https://www.youtube-nocookie.com">
+  <title>Dropzone</title>
+  <link rel="icon" href="assets/brand.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="hub.css">
+  <link rel="stylesheet" href="expansion.css">
+  <link rel="stylesheet" href="wardogs.css">
+  <link rel="stylesheet" href="app-updates.css">
+  <link rel="stylesheet" href="siege.css">
+  <link rel="stylesheet" href="sotf.css">
+</head>
+<body>
+  <div class="titlebar"><div class="titlebrand"><img src="assets/brand.svg" alt="">DROPZONE<span data-app-version>1.2.2</span></div><button id="app-update-ready" class="app-update-ready" data-route="updates" hidden>Update ready</button><div class="window-controls"><button data-window="minimize" aria-label="Minimize">−</button><button data-window="maximize" aria-label="Maximize">□</button><button data-window="close" aria-label="Close">×</button></div></div>
+  <header class="global-toolbar"><div class="global-toolbar-inner"><div class="global-location"><button class="home-control" data-route="home" aria-label="Choose a game"><svg width="19" height="19" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M3 3h7v7H3zm11 0h7v7h-7zM3 14h7v7H3zm11 0h7v7h-7z"/></svg>Games</button><span class="location-divider">/</span><span id="game-location">Your library</span></div><div class="global-tools"><button class="utility-button global-nav-link" data-route="updates">App updates</button><button class="utility-button global-nav-link update-badge" id="updates-button" data-route="sources" data-status="checking">Sources</button><button class="utility-button" data-hub-action="saved">Saved loadouts</button><details class="font-menu"><summary><span aria-hidden="true">Aa</span> Text size <span id="text-size-summary">100%</span></summary><div class="font-popover"><strong>Text size</strong><div class="text-size-controls" role="group" aria-label="Text size"><span>Text</span><button data-text-step="-1" aria-label="Decrease text size" title="Smaller text (Ctrl −)">A−</button><button id="text-size-reset" data-text-reset aria-label="Reset text size to 100 percent" title="Reset text size (Ctrl 0)"><output id="text-size-value" aria-live="polite">100%</output></button><button data-text-step="1" aria-label="Increase text size" title="Larger text (Ctrl +)">A+</button></div><p>Ctrl + / − to resize · Ctrl 0 to reset</p></div></details></div></div></header>
+  <div id="game-tabs" class="game-tabs-shell" hidden><div class="game-tabs-inner"><nav class="game-page-tabs" aria-label="Game pages"><strong id="game-tabs-name"></strong><button data-game-page="loadouts" class="active">Loadouts</button><button data-game-page="progression" hidden>Progression</button><button data-game-page="patches">Patch notes</button><button data-game-page="videos"><span aria-hidden="true">▶</span> Videos</button></nav><div class="top-actions league-tools" id="league-tools" hidden><button id="global-search" class="search-button"><i data-icon="search"></i>Find your champion<kbd>Ctrl K</kbd></button><span class="patch-pill"><span class="status-dot"></span><span id="patch-label">Loading catalog</span></span><button id="refresh" class="icon-button" title="Refresh the champion catalog and current build" aria-label="Refresh data"><i data-icon="refresh"></i></button></div></div></div>
+  <div id="hub-app"><main class="hub-main"><p class="muted">Opening your game library…</p></main></div>
+  <div id="league-app" hidden>
+  <div class="shell">
+    <aside class="sidebar">
+      <a class="brand" href="#" data-view="lab"><img src="assets/brand.svg" alt="League build companion"><div>LEAGUE<span>OF LEGENDS</span></div></a>
+      <div class="sidebar-label">LEAGUE</div>
+      <nav id="main-nav" aria-label="Main navigation">
+        <button class="nav-link active" data-view="lab"><i data-icon="layers"></i>Build lab<span class="nav-dot"></span></button>
+        <button class="nav-link" data-view="roster"><i data-icon="grid"></i>Champions<span id="champ-count" class="nav-count">173</span></button>
+        <button class="nav-link" data-view="saved"><i data-icon="bookmark"></i>Saved builds<span id="saved-count" class="nav-count">0</span></button>
+      </nav>
+      <div class="sidebar-divider"></div>
+      <div class="sidebar-label">GAME MODES</div>
+      <nav id="mode-nav" aria-label="Game modes"></nav>
+      <button id="all-modes" class="all-modes">Explore all modes<i data-icon="arrow-right"></i></button>
+      <div class="sidebar-bottom"><div class="local-note"><span class="status-dot"></span>Saved on this PC<small>No League login required</small></div><button class="nav-link" data-view="settings"><i data-icon="settings"></i>Data & settings</button><div class="profile"><div class="avatar">DZ</div><div>Your workspace<small>LEAGUE OF LEGENDS</small></div><i data-icon="chevron-right"></i></div></div>
+    </aside>
+    <main class="main">
+
+      <div id="content" class="content"><div class="boot-state"><img src="assets/brand.svg" alt=""><h1>Loading League of Legends</h1><p>Loading the champion catalog…</p></div></div>
+      <footer class="footer"><span>DROPZONE <b data-app-version>1.2.2</b></span><span>Independent League companion · <button data-view="settings">Sources & methodology</button></span></footer>
+    </main>
+  </div>
+  </div>
+  <dialog id="picker-dialog"><div class="dialog-head"><div><span class="eyebrow">CHOOSE YOUR CHAMPION</span><h2 id="picker-title">Choose a champion</h2></div><button class="icon-button close-dialog" aria-label="Close champion picker"><i data-icon="x"></i></button></div><div class="picker-search"><i data-icon="search"></i><input id="picker-input" placeholder="Search 173 champions…" autocomplete="off" aria-label="Search champions"><kbd>ESC</kbd></div><div id="picker-filters" class="filter-pills"></div><div id="picker-results" class="picker-grid"></div></dialog>
+  <dialog id="modes-dialog"><div class="dialog-head"><div><span class="eyebrow">GAME MODES</span><h2>Choose a mode.</h2></div><button class="icon-button close-dialog" aria-label="Close mode picker"><i data-icon="x"></i></button></div><p class="muted">Live data, clearly labeled foundations, and dedicated guides for rotating modes. Queue availability is controlled by Riot.</p><div id="modes-grid" class="modes-grid"></div></dialog>
+  <dialog id="item-dialog"><div id="item-detail"></div><button class="button secondary close-dialog">Back to build</button></dialog>
+  <div id="toast" role="status" aria-live="polite"></div>
+  <script type="module" src="hub.js"></script>
+</body>
+</html>

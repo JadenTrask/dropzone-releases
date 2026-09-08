@@ -1,0 +1,4294 @@
+{
+  "source": "GZW Data API \u00b7 community wiki index",
+  "sourceUrl": "https://gzw-data.dev/",
+  "sourceUpdatedAt": "2026-09-04T10:13:08.157Z",
+  "tasks": [
+    {
+      "id": "a-shot-in-the-dark",
+      "name": "A Shot in the Dark",
+      "vendor": "Banshee",
+      "location": "Hunter's Paradise",
+      "alternate": "Up to Snuff",
+      "types": [
+        "Side mission"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/A_Shot_in_the_Dark"
+    },
+    {
+      "id": "a-single-drop",
+      "name": "A Single Drop",
+      "vendor": "Gunny",
+      "location": "Pha Lang Airfield",
+      "alternate": "",
+      "types": [
+        "Side mission"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/A_Single_Drop"
+    },
+    {
+      "id": "a-small-favor",
+      "name": "A Small Favor",
+      "vendor": "Turncoat",
+      "location": "Fort Narith",
+      "alternate": "No Escape",
+      "types": [
+        "Unclassified"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/A_Small_Favor"
+    },
+    {
+      "id": "a-tiding-of-magpies",
+      "name": "A Tiding of Magpies",
+      "vendor": "Turncoat",
+      "location": "",
+      "alternate": "",
+      "types": [
+        "Side mission"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/A_Tiding_of_Magpies"
+    },
+    {
+      "id": "a-voice-from-the-stars",
+      "name": "A Voice from the Stars",
+      "vendor": "Lab Rat",
+      "location": "YBL-1",
+      "alternate": "",
+      "types": [
+        "Hidden mission",
+        "Side mission"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/A_Voice_from_the_Stars"
+    },
+    {
+      "id": "a-walk-in-the-park",
+      "name": "A Walk in the Park",
+      "vendor": "Handshake",
+      "location": "Kiu Vongsa , Nam Thaven , Pha Lang",
+      "alternate": "",
+      "types": [
+        "Main mission"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/A_Walk_in_the_Park"
+    },
+    {
+      "id": "academic-interest",
+      "name": "Academic Interest",
+      "vendor": "Turncoat",
+      "location": "Midnight Sapphire",
+      "alternate": "Noble Powder",
+      "types": [
+        "Side mission"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Academic_Interest"
+    },
+    {
+      "id": "artisans-list",
+      "name": "Artisan's List",
+      "vendor": "Artisan",
+      "location": "Tiger Bay",
+      "alternate": "",
+      "types": [
+        "Unclassified"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Artisan's_List"
+    },
+    {
+      "id": "artisans-list-ii",
+      "name": "Artisan's List II",
+      "vendor": "Artisan",
+      "location": "Tiger Bay",
+      "alternate": "",
+      "types": [
+        "Unclassified"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Artisan's_List_II"
+    },
+    {
+      "id": "at-dooms-gate",
+      "name": "At Doom's Gate",
+      "vendor": "Handshake",
+      "location": "Lamang Island",
+      "alternate": "",
+      "types": [
+        "Hidden mission"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/At_Doom's_Gate"
+    },
+    {
+      "id": "at-the-mounds-of-madness",
+      "name": "At the Mounds of Madness",
+      "vendor": "Artisan",
+      "location": "Ban pa",
+      "alternate": "",
+      "types": [
+        "Unclassified"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/At_the_Mounds_of_Madness"
+    },
+    {
+      "id": "at-the-mounds-of-madness-ii",
+      "name": "At the Mounds of Madness II",
+      "vendor": "Artisan",
+      "location": "Ban Pa",
+      "alternate": "The Shadow Over Ban Pa II",
+      "types": [
+        "Unclassified"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/At_the_Mounds_of_Madness_II"
+    },
+    {
+      "id": "atrocity-probe",
+      "name": "Atrocity Probe",
+      "vendor": "Banshee",
+      "location": "Hunter's Paradise",
+      "alternate": "",
+      "types": [
+        "Side mission"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Atrocity_Probe"
+    },
+    {
+      "id": "aye-aye,-captain",
+      "name": "Aye Aye, Captain",
+      "vendor": "Gunny",
+      "location": "Tiger Bay",
+      "alternate": "",
+      "types": [
+        "Unclassified"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Aye_Aye%2C_Captain"
+    },
+    {
+      "id": "baked",
+      "name": "Baked",
+      "vendor": "Banshee",
+      "location": "Tiger Bay",
+      "alternate": "Narcotic Bargain",
+      "types": [
+        "Unclassified"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Baked"
+    },
+    {
+      "id": "big-entrance",
+      "name": "Big Entrance",
+      "vendor": "Gunny",
+      "location": "Tiger Bay",
+      "alternate": "",
+      "types": [
+        "Unclassified"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Big_Entrance"
+    },
+    {
+      "id": "big-fish",
+      "name": "Big Fish",
+      "vendor": "Handshake",
+      "location": "Midnight Sapphire",
+      "alternate": "",
+      "types": [
+        "Main mission"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Big_Fish"
+    },
+    {
+      "id": "binary-choir",
+      "name": "Binary Choir",
+      "vendor": "Handshake",
+      "location": "Fort Narith",
+      "alternate": "",
+      "types": [
+        "Squad mission"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Binary_Choir"
+    },
+    {
+      "id": "blacktop-wasteland",
+      "name": "Blacktop Wasteland",
+      "vendor": "Lab Rat",
+      "location": "Pha Lang Airfield",
+      "alternate": "",
+      "types": [
+        "Squad mission"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Blacktop_Wasteland"
+    },
+    {
+      "id": "breadcrumbs",
+      "name": "Breadcrumbs",
+      "vendor": "Gunny",
+      "location": "Pha Lang Airfield",
+      "alternate": "",
+      "types": [
+        "Contract"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Breadcrumbs"
+    },
+    {
+      "id": "buried-on-paper",
+      "name": "Buried on Paper",
+      "vendor": "Banshee",
+      "location": "Tiger Bay",
+      "alternate": "",
+      "types": [
+        "Side mission"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Buried_on_Paper"
+    },
+    {
+      "id": "business-or-pleasure",
+      "name": "Business or Pleasure",
+      "vendor": "Handshake",
+      "location": "Pha Lang Airfield",
+      "alternate": "",
+      "types": [
+        "Main mission"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Business_or_Pleasure"
+    },
+    {
+      "id": "buyer-of-untold-truths",
+      "name": "Buyer of Untold Truths",
+      "vendor": "Turncoat",
+      "location": "Tiger Bay",
+      "alternate": "Crumb Collector",
+      "types": [
+        "Unclassified"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Buyer_of_Untold_Truths"
+    },
+    {
+      "id": "cache-report",
+      "name": "Cache Report",
+      "vendor": "Gunny",
+      "location": "YBL-1",
+      "alternate": "",
+      "types": [
+        "Contract"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Cache_Report"
+    },
+    {
+      "id": "cache-report-iii",
+      "name": "Cache Report III",
+      "vendor": "Gunny",
+      "location": "Sawmill",
+      "alternate": "",
+      "types": [
+        "Contract"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Cache_Report_III"
+    },
+    {
+      "id": "cache-report-iv",
+      "name": "Cache Report IV",
+      "vendor": "Gunny",
+      "location": "Hunter's Paradise",
+      "alternate": "",
+      "types": [
+        "Contract"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Cache_Report_IV"
+    },
+    {
+      "id": "cache-report-v",
+      "name": "Cache Report V",
+      "vendor": "Gunny",
+      "location": "Midnight Sapphire",
+      "alternate": "",
+      "types": [
+        "Contract"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Cache_Report_V"
+    },
+    {
+      "id": "cache-report-vi",
+      "name": "Cache Report VI",
+      "vendor": "Gunny",
+      "location": "South east of Pha Lang Airfield",
+      "alternate": "",
+      "types": [
+        "Contract"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Cache_Report_VI"
+    },
+    {
+      "id": "cache-report-vii",
+      "name": "Cache Report VII",
+      "vendor": "Gunny",
+      "location": "Tiger Bay",
+      "alternate": "",
+      "types": [
+        "Contract"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Cache_Report_VII"
+    },
+    {
+      "id": "cache-report-viii",
+      "name": "Cache Report VIII",
+      "vendor": "Gunny",
+      "location": "Blue Lagoon",
+      "alternate": "",
+      "types": [
+        "Contract"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Cache_Report_VIII"
+    },
+    {
+      "id": "cache-retrieval",
+      "name": "Cache Retrieval",
+      "vendor": "Gunny",
+      "location": "Kiu Vongsa , Nam Thaven , Pha Lang",
+      "alternate": "",
+      "types": [
+        "Side mission"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Cache_Retrieval"
+    },
+    {
+      "id": "carnivore",
+      "name": "Carnivore",
+      "vendor": "Lab Rat",
+      "location": "Hunter's Paradise",
+      "alternate": "",
+      "types": [
+        "Unclassified"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Carnivore"
+    },
+    {
+      "id": "celebrity-crash",
+      "name": "Celebrity Crash",
+      "vendor": "Handshake",
+      "location": "Midnight Sapphire",
+      "alternate": "Dirt Digger",
+      "types": [
+        "Side mission"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Celebrity_Crash"
+    },
+    {
+      "id": "chameleon---ak-308-ht",
+      "name": "Chameleon - AK-308 (HT)",
+      "vendor": "Vulture",
+      "location": "Fort Narith",
+      "alternate": "",
+      "types": [
+        "Side mission"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Chameleon_-_AK-308_(HT)"
+    },
+    {
+      "id": "chameleon---akmn-jc",
+      "name": "Chameleon - AKMN (JC)",
+      "vendor": "Artisan",
+      "location": "Lamang Island",
+      "alternate": "",
+      "types": [
+        "Side mission"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Chameleon_-_AKMN_(JC)"
+    },
+    {
+      "id": "chameleon---ddm4-pl",
+      "name": "Chameleon - DDM4 (PL)",
+      "vendor": "Gunny",
+      "location": "Fort Narith",
+      "alternate": "",
+      "types": [
+        "Side mission"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Chameleon_-_DDM4_(PL)"
+    },
+    {
+      "id": "chameleon---m14-bh",
+      "name": "Chameleon - M14 (BH)",
+      "vendor": "Banshee",
+      "location": "Hunter's Paradise",
+      "alternate": "",
+      "types": [
+        "Side mission"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Chameleon_-_M14_(BH)"
+    },
+    {
+      "id": "chameleon---m700-gc",
+      "name": "Chameleon - M700 (GC)",
+      "vendor": "Banshee",
+      "location": "Midnight Sapphire",
+      "alternate": "",
+      "types": [
+        "Side mission"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Chameleon_-_M700_(GC)"
+    },
+    {
+      "id": "chameleon---mossberg-590-rt",
+      "name": "Chameleon - Mossberg 590 (RT)",
+      "vendor": "Gunny",
+      "location": "YBL-1",
+      "alternate": "",
+      "types": [
+        "Side mission"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Chameleon_-_Mossberg_590_(RT)"
+    },
+    {
+      "id": "chameleon---mp7a2-sc",
+      "name": "Chameleon - MP7A2 (SC)",
+      "vendor": "Banshee",
+      "location": "Blue Lagoon",
+      "alternate": "",
+      "types": [
+        "Side mission"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Chameleon_-_MP7A2_(SC)"
+    },
+    {
+      "id": "chameleon---sig-mcx-gn",
+      "name": "Chameleon - SIG MCX (GN)",
+      "vendor": "Banshee",
+      "location": "Midnight Sapphire",
+      "alternate": "",
+      "types": [
+        "Side mission"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Chameleon_-_SIG_MCX_(GN)"
+    },
+    {
+      "id": "chameleon---svd-dragunov-sw",
+      "name": "Chameleon - SVD Dragunov (SW)",
+      "vendor": "Artisan",
+      "location": "Tiger Bay",
+      "alternate": "",
+      "types": [
+        "Side mission"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Chameleon_-_SVD_Dragunov_(SW)"
+    },
+    {
+      "id": "coastal-signals",
+      "name": "Coastal Signals",
+      "vendor": "Lab Rat",
+      "location": "Tiger Bay",
+      "alternate": "",
+      "types": [
+        "Squad mission"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Coastal_Signals"
+    },
+    {
+      "id": "combat-sweep-ii",
+      "name": "Combat Sweep II",
+      "vendor": "Handshake",
+      "location": "Sawmill",
+      "alternate": "",
+      "types": [
+        "Contract"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Combat_Sweep_II"
+    },
+    {
+      "id": "combat-sweep-v",
+      "name": "Combat Sweep V",
+      "vendor": "Handshake",
+      "location": "Midnight Sapphire",
+      "alternate": "",
+      "types": [
+        "Contract"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Combat_Sweep_V"
+    },
+    {
+      "id": "combat-sweep-vii",
+      "name": "Combat Sweep VII",
+      "vendor": "Handshake",
+      "location": "Ban Pa",
+      "alternate": "",
+      "types": [
+        "Contract"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Combat_Sweep_VII"
+    },
+    {
+      "id": "concrete-whisperers",
+      "name": "Concrete Whisperers",
+      "vendor": "Lab Rat",
+      "location": "Fort Narith",
+      "alternate": "",
+      "types": [
+        "Squad mission"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Concrete_Whisperers"
+    },
+    {
+      "id": "covert-research",
+      "name": "Covert Research",
+      "vendor": "Lab Rat",
+      "location": "Kiu Vongsa , Nam Thaven , Pha Lang",
+      "alternate": "Reclamation",
+      "types": [
+        "Main mission"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Covert_Research"
+    },
+    {
+      "id": "crash",
+      "name": "Crash",
+      "vendor": "Banshee",
+      "location": "Midnight Sapphire",
+      "alternate": "",
+      "types": [
+        "Side mission"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Crash"
+    },
+    {
+      "id": "crime-doesnt-pay",
+      "name": "Crime Doesn't Pay",
+      "vendor": "Artisan",
+      "location": "Midnight Sapphire",
+      "alternate": "",
+      "types": [
+        "Side mission"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Crime_Doesn't_Pay"
+    },
+    {
+      "id": "crumb-collector",
+      "name": "Crumb Collector",
+      "vendor": "Lab Rat",
+      "location": "Tiger Bay",
+      "alternate": "Buyer of Untold Truths",
+      "types": [
+        "Unclassified"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Crumb_Collector"
+    },
+    {
+      "id": "cult-business",
+      "name": "Cult Business",
+      "vendor": "Lab Rat",
+      "location": "Ban Pa",
+      "alternate": "",
+      "types": [
+        "Main mission"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Cult_Business"
+    },
+    {
+      "id": "cutthroat-island",
+      "name": "Cutthroat Island",
+      "vendor": "Gunny",
+      "location": "Ban Pa",
+      "alternate": "",
+      "types": [
+        "Squad mission"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Cutthroat_Island"
+    },
+    {
+      "id": "data-in-the-sawdust",
+      "name": "Data in the Sawdust",
+      "vendor": "Lab Rat",
+      "location": "Sawmill",
+      "alternate": "",
+      "types": [
+        "Squad mission"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Data_in_the_Sawdust"
+    },
+    {
+      "id": "deal-of-the-century",
+      "name": "Deal of the Century",
+      "vendor": "Banshee",
+      "location": "Fort Narith",
+      "alternate": "",
+      "types": [
+        "Unclassified"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Deal_of_the_Century"
+    },
+    {
+      "id": "deep-depravity",
+      "name": "Deep Depravity",
+      "vendor": "Banshee",
+      "location": "YBL-1",
+      "alternate": "",
+      "types": [
+        "Unclassified"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Deep_Depravity"
+    },
+    {
+      "id": "deepest,-darkest-fantasies",
+      "name": "Deepest, Darkest Fantasies",
+      "vendor": "Handshake",
+      "location": "Midnight Sapphire",
+      "alternate": "",
+      "types": [
+        "Side mission"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Deepest%2C_Darkest_Fantasies"
+    },
+    {
+      "id": "delayed-package",
+      "name": "Delayed Package",
+      "vendor": "Turncoat",
+      "location": "Pha Lang Airfield",
+      "alternate": "",
+      "types": [
+        "Side mission"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Delayed_Package"
+    },
+    {
+      "id": "dirge-of-the-fallen",
+      "name": "Dirge of the Fallen",
+      "vendor": "Gunny",
+      "location": "YBL-1",
+      "alternate": "",
+      "types": [
+        "Squad mission"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Dirge_of_the_Fallen"
+    },
+    {
+      "id": "dirt-digger",
+      "name": "Dirt Digger",
+      "vendor": "Banshee",
+      "location": "Midnight Sapphire",
+      "alternate": "Celebrity Crash",
+      "types": [
+        "Side mission"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Dirt_Digger"
+    },
+    {
+      "id": "dishonest-practices",
+      "name": "Dishonest Practices",
+      "vendor": "Turncoat",
+      "location": "Tiger Bay",
+      "alternate": "",
+      "types": [
+        "Unclassified"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Dishonest_Practices"
+    },
+    {
+      "id": "domesticated-rat",
+      "name": "Domesticated Rat",
+      "vendor": "Handshake",
+      "location": "Hunter's Paradise",
+      "alternate": "",
+      "types": [
+        "Unclassified"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Domesticated_Rat"
+    },
+    {
+      "id": "dont-speak",
+      "name": "Don't Speak",
+      "vendor": "Artisan",
+      "location": "Ban Pa",
+      "alternate": "",
+      "types": [
+        "Side mission"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Don't_Speak"
+    },
+    {
+      "id": "double-agent",
+      "name": "Double Agent",
+      "vendor": "Turncoat",
+      "location": "Hunter's Paradise",
+      "alternate": "",
+      "types": [
+        "Side mission"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Double_Agent"
+    },
+    {
+      "id": "double-exposure",
+      "name": "Double Exposure",
+      "vendor": "Turncoat",
+      "location": "Fort Narith",
+      "alternate": "",
+      "types": [
+        "Unclassified"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Double_Exposure"
+    },
+    {
+      "id": "downsizing",
+      "name": "Downsizing",
+      "vendor": "Turncoat",
+      "location": "Fort Narith",
+      "alternate": "",
+      "types": [
+        "Unclassified"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Downsizing"
+    },
+    {
+      "id": "dragonslayer",
+      "name": "Dragonslayer",
+      "vendor": "Turncoat",
+      "location": "Fort Narith",
+      "alternate": "",
+      "types": [
+        "Unclassified"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Dragonslayer"
+    },
+    {
+      "id": "draw-no-bet",
+      "name": "Draw No Bet",
+      "vendor": "Artisan",
+      "location": "Hunter's Paradise",
+      "alternate": "",
+      "types": [
+        "Side mission"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Draw_No_Bet"
+    },
+    {
+      "id": "duty-to-the-country",
+      "name": "Duty to the Country",
+      "vendor": "Lab Rat",
+      "location": "YBL-1",
+      "alternate": "",
+      "types": [
+        "Side mission"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Duty_to_the_Country"
+    },
+    {
+      "id": "echoes-of-exposure",
+      "name": "Echoes of Exposure",
+      "vendor": "Lab Rat",
+      "location": "Sawmill",
+      "alternate": "",
+      "types": [
+        "Side mission"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Echoes_of_Exposure"
+    },
+    {
+      "id": "elderly-delivery",
+      "name": "Elderly Delivery",
+      "vendor": "Lab Rat",
+      "location": "YBL-1",
+      "alternate": "",
+      "types": [
+        "Side mission"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Elderly_Delivery"
+    },
+    {
+      "id": "emergency-response",
+      "name": "Emergency Response",
+      "vendor": "Lab Rat",
+      "location": "Kiu Vongsa , Nam Thaven , Pha Lang",
+      "alternate": "",
+      "types": [
+        "Side mission"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Emergency_Response"
+    },
+    {
+      "id": "enigmatic-unlra",
+      "name": "Enigmatic UNLRA",
+      "vendor": "Lab Rat",
+      "location": "Fort Narith",
+      "alternate": "",
+      "types": [
+        "Squad mission"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Enigmatic_UNLRA"
+    },
+    {
+      "id": "eod",
+      "name": "EOD",
+      "vendor": "Banshee",
+      "location": "Sawmill",
+      "alternate": "",
+      "types": [
+        "Side mission"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/EOD"
+    },
+    {
+      "id": "escort-ii",
+      "name": "Escort II",
+      "vendor": "Lab Rat",
+      "location": "Blue Lagoon",
+      "alternate": "",
+      "types": [
+        "Contract"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Escort_II"
+    },
+    {
+      "id": "ethical-issues",
+      "name": "Ethical Issues",
+      "vendor": "Lab Rat",
+      "location": "Fort Narith",
+      "alternate": "",
+      "types": [
+        "Squad mission"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Ethical_Issues"
+    },
+    {
+      "id": "ethnographer",
+      "name": "Ethnographer",
+      "vendor": "Handshake",
+      "location": "Ban Pa",
+      "alternate": "",
+      "types": [
+        "Squad mission"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Ethnographer"
+    },
+    {
+      "id": "evacuation-question",
+      "name": "Evacuation Question",
+      "vendor": "Artisan",
+      "location": "Fort Narith",
+      "alternate": "In The Right Hands",
+      "types": [
+        "Unclassified"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Evacuation_Question"
+    },
+    {
+      "id": "exodus",
+      "name": "Exodus",
+      "vendor": "Lab Rat",
+      "location": "Hunter's Paradise",
+      "alternate": "",
+      "types": [
+        "Side mission"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Exodus"
+    },
+    {
+      "id": "expansion",
+      "name": "Expansion",
+      "vendor": "Gunny",
+      "location": "YBL-1",
+      "alternate": "",
+      "types": [
+        "Unclassified"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Expansion"
+    },
+    {
+      "id": "false-positive",
+      "name": "False Positive",
+      "vendor": "Lab Rat",
+      "location": "Hunter's Paradise",
+      "alternate": "",
+      "types": [
+        "Side mission"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/False_Positive"
+    },
+    {
+      "id": "family-heirloom",
+      "name": "Family Heirloom",
+      "vendor": "Turncoat",
+      "location": "Fort Narith",
+      "alternate": "",
+      "types": [
+        "Unclassified"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Family_Heirloom"
+    },
+    {
+      "id": "felony-and-punishment",
+      "name": "Felony and Punishment",
+      "vendor": "Banshee",
+      "location": "Midnight Sapphire",
+      "alternate": "The Congressman",
+      "types": [
+        "Side mission"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Felony_and_Punishment"
+    },
+    {
+      "id": "final-check-out",
+      "name": "Final Check Out",
+      "vendor": "Handshake",
+      "location": "Pha Lang Airfield",
+      "alternate": "",
+      "types": [
+        "Side mission"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Final_Check_Out"
+    },
+    {
+      "id": "final-liberation",
+      "name": "Final Liberation",
+      "vendor": "Turncoat",
+      "location": "YBL-1",
+      "alternate": "",
+      "types": [
+        "Unclassified"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Final_Liberation"
+    },
+    {
+      "id": "fire-and-water",
+      "name": "Fire and Water",
+      "vendor": "Gunny",
+      "location": "Sawmill",
+      "alternate": "",
+      "types": [
+        "Side mission"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Fire_and_Water"
+    },
+    {
+      "id": "firestarter",
+      "name": "Firestarter",
+      "vendor": "Lab Rat",
+      "location": "Lamang Island",
+      "alternate": "",
+      "types": [
+        "Unclassified"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Firestarter"
+    },
+    {
+      "id": "first-hit",
+      "name": "First Hit",
+      "vendor": "Handshake",
+      "location": "Starting town",
+      "alternate": "",
+      "types": [
+        "Unclassified"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/First_Hit"
+    },
+    {
+      "id": "first-recon",
+      "name": "First Recon",
+      "vendor": "Handshake",
+      "location": "Kiu Vongsa , Nam Thaven , Pha Lang",
+      "alternate": "",
+      "types": [
+        "Main mission"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/First_Recon"
+    },
+    {
+      "id": "fort-narith-stroll",
+      "name": "Fort Narith Stroll",
+      "vendor": "Handshake",
+      "location": "Fort Narith",
+      "alternate": "",
+      "types": [
+        "Unclassified"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Fort_Narith_Stroll"
+    },
+    {
+      "id": "fragile-goods",
+      "name": "Fragile Goods",
+      "vendor": "Handshake",
+      "location": "Midnight Sapphire",
+      "alternate": "",
+      "types": [
+        "Squad mission"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Fragile_Goods"
+    },
+    {
+      "id": "freedom-fighter",
+      "name": "Freedom Fighter",
+      "vendor": "Gunny",
+      "location": "Hunter's Paradise",
+      "alternate": "",
+      "types": [
+        "Side mission"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Freedom_Fighter"
+    },
+    {
+      "id": "freedom-for-all",
+      "name": "Freedom for All",
+      "vendor": "Artisan",
+      "location": "YBL-1",
+      "alternate": "",
+      "types": [
+        "Side mission"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Freedom_for_All"
+    },
+    {
+      "id": "fresh-meat",
+      "name": "Fresh Meat",
+      "vendor": "Handshake",
+      "location": "Blue Lagoon",
+      "alternate": "",
+      "types": [
+        "Main mission"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Fresh_Meat"
+    },
+    {
+      "id": "fresh-meat-ii",
+      "name": "Fresh Meat II",
+      "vendor": "Banshee",
+      "location": "Blue Lagoon",
+      "alternate": "",
+      "types": [
+        "Unclassified"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Fresh_Meat_II"
+    },
+    {
+      "id": "fresh-meat-iii",
+      "name": "Fresh Meat III",
+      "vendor": "Banshee",
+      "location": "Blue Lagoon",
+      "alternate": "",
+      "types": [
+        "Unclassified"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Fresh_Meat_III"
+    },
+    {
+      "id": "friendly-suggestion",
+      "name": "Friendly Suggestion",
+      "vendor": "Turncoat",
+      "location": "Tiger Bay",
+      "alternate": "",
+      "types": [
+        "Unclassified"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Friendly_Suggestion"
+    },
+    {
+      "id": "from-the-sky",
+      "name": "From the Sky",
+      "vendor": "Gunny",
+      "location": "Blue Lagoon",
+      "alternate": "",
+      "types": [
+        "Side mission"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/From_the_Sky"
+    },
+    {
+      "id": "fuel-shortage",
+      "name": "Fuel Shortage",
+      "vendor": "Gunny",
+      "location": "Sawmill",
+      "alternate": "",
+      "types": [
+        "Contract"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Fuel_Shortage"
+    },
+    {
+      "id": "garbage-disposal",
+      "name": "Garbage Disposal",
+      "vendor": "Artisan",
+      "location": "Fort Narith",
+      "alternate": "",
+      "types": [
+        "Unclassified"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Garbage_Disposal"
+    },
+    {
+      "id": "girls-just-wanna-have-fun",
+      "name": "Girls Just Wanna Have Fun",
+      "vendor": "Artisan",
+      "location": "Midnight Sapphire",
+      "alternate": "",
+      "types": [
+        "Unclassified"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Girls_Just_Wanna_Have_Fun"
+    },
+    {
+      "id": "goods-hunting",
+      "name": "Goods Hunting",
+      "vendor": "Gunny",
+      "location": "Khonwan Village (East of Nam Thaven)",
+      "alternate": "",
+      "types": [
+        "Hidden mission"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Goods_Hunting"
+    },
+    {
+      "id": "groundbreaking-prototype",
+      "name": "Groundbreaking Prototype",
+      "vendor": "Gunny",
+      "location": "Fort Narith",
+      "alternate": "",
+      "types": [
+        "Squad mission"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Groundbreaking_Prototype"
+    },
+    {
+      "id": "guns-&-ammo",
+      "name": "Guns & Ammo",
+      "vendor": "Gunny",
+      "location": "Hunter's Paradise",
+      "alternate": "",
+      "types": [
+        "Main mission"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Guns_%26_Ammo"
+    },
+    {
+      "id": "hacker",
+      "name": "Hacker",
+      "vendor": "Handshake",
+      "location": "Fort Narith",
+      "alternate": "",
+      "types": [
+        "Main mission"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Hacker"
+    },
+    {
+      "id": "hacker-ii",
+      "name": "Hacker II",
+      "vendor": "Handshake",
+      "location": "Fort Narith",
+      "alternate": "",
+      "types": [
+        "Unclassified"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Hacker_II"
+    },
+    {
+      "id": "hacking-to-the-limit",
+      "name": "Hacking to the Limit",
+      "vendor": "Handshake",
+      "location": "Pha Lang Airfield",
+      "alternate": "",
+      "types": [
+        "Squad mission"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Hacking_to_the_Limit"
+    },
+    {
+      "id": "handyman",
+      "name": "Handyman",
+      "vendor": "Artisan",
+      "location": "Blue Lagoon",
+      "alternate": "",
+      "types": [
+        "Side mission"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Handyman"
+    },
+    {
+      "id": "harvest-moon",
+      "name": "Harvest Moon",
+      "vendor": "Banshee",
+      "location": "Pha Lang Airfield",
+      "alternate": "",
+      "types": [
+        "Side mission"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Harvest_Moon"
+    },
+    {
+      "id": "hazardous-treasures",
+      "name": "Hazardous Treasures",
+      "vendor": "Handshake",
+      "location": "Sawmill Blue Lagoon Hunter's Paradise Ban Pa Pha Lang Airfield YBL-1",
+      "alternate": "",
+      "types": [
+        "Unclassified"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Hazardous_Treasures"
+    },
+    {
+      "id": "helping-hand",
+      "name": "Helping Hand",
+      "vendor": "Handshake",
+      "location": "Kiu Vongsa , Nam Thaven , Pha Lang",
+      "alternate": "",
+      "types": [
+        "Main mission"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Helping_Hand"
+    },
+    {
+      "id": "hide-and-seek",
+      "name": "Hide And Seek",
+      "vendor": "Gunny",
+      "location": "Tiger Bay",
+      "alternate": "",
+      "types": [
+        "Unclassified"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Hide_And_Seek"
+    },
+    {
+      "id": "his-majestys-secrets",
+      "name": "His Majesty's Secrets",
+      "vendor": "Handshake",
+      "location": "Blue Lagoon",
+      "alternate": "",
+      "types": [
+        "Squad mission"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/His_Majesty's_Secrets"
+    },
+    {
+      "id": "hoarder",
+      "name": "Hoarder",
+      "vendor": "Gunny",
+      "location": "Kiu Vongsa , Nam Thaven , Pha Lang",
+      "alternate": "",
+      "types": [
+        "Side mission"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Hoarder"
+    },
+    {
+      "id": "i-went,-i-saw,-i-conquered",
+      "name": "I went, I saw, I conquered",
+      "vendor": "Handshake",
+      "location": "Sawmill",
+      "alternate": "",
+      "types": [
+        "Main mission"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/I_went%2C_I_saw%2C_I_conquered"
+    },
+    {
+      "id": "i-went,-i-saw,-i-conquered-ii",
+      "name": "I Went, I Saw, I Conquered II",
+      "vendor": "Handshake",
+      "location": "Sawmill",
+      "alternate": "",
+      "types": [
+        "Unclassified"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/I_Went%2C_I_Saw%2C_I_Conquered_II"
+    },
+    {
+      "id": "i-went,-i-saw,-i-conquered-iii",
+      "name": "I Went, I Saw, I Conquered III",
+      "vendor": "Handshake",
+      "location": "Sawmill",
+      "alternate": "",
+      "types": [
+        "Unclassified"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/I_Went%2C_I_Saw%2C_I_Conquered_III"
+    },
+    {
+      "id": "in-the-right-hands",
+      "name": "In The Right Hands",
+      "vendor": "Turncoat",
+      "location": "Fort Narith",
+      "alternate": "Evacuation Question",
+      "types": [
+        "Unclassified"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/In_The_Right_Hands"
+    },
+    {
+      "id": "in-the-trenches",
+      "name": "In the Trenches",
+      "vendor": "Turncoat",
+      "location": "Sawmill",
+      "alternate": "",
+      "types": [
+        "Side mission"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/In_the_Trenches"
+    },
+    {
+      "id": "incognito",
+      "name": "Incognito",
+      "vendor": "Gunny",
+      "location": "Tiger Bay",
+      "alternate": "",
+      "types": [
+        "Hidden mission"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Incognito"
+    },
+    {
+      "id": "interrupted-aid",
+      "name": "Interrupted Aid",
+      "vendor": "Lab Rat",
+      "location": "Lamang Island",
+      "alternate": "",
+      "types": [
+        "Unclassified"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Interrupted_Aid"
+    },
+    {
+      "id": "invaders-from-afar",
+      "name": "Invaders From Afar",
+      "vendor": "Artisan",
+      "location": "Sawmill",
+      "alternate": "",
+      "types": [
+        "Unclassified"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Invaders_From_Afar"
+    },
+    {
+      "id": "its-in-the-water",
+      "name": "It's in the Water",
+      "vendor": "Lab Rat",
+      "location": "Ban Pa",
+      "alternate": "",
+      "types": [
+        "Unclassified"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/It's_in_the_Water"
+    },
+    {
+      "id": "its-in-the-water-ii",
+      "name": "It's in the Water II",
+      "vendor": "Lab Rat",
+      "location": "Ban Pa",
+      "alternate": "",
+      "types": [
+        "Unclassified"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/It's_in_the_Water_II"
+    },
+    {
+      "id": "its-like-cutting",
+      "name": "It's Like Cutting",
+      "vendor": "Handshake",
+      "location": "Fort Narith",
+      "alternate": "",
+      "types": [
+        "Squad mission"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/It's_Like_Cutting"
+    },
+    {
+      "id": "jetsnmarks",
+      "name": "Jets'N'Marks",
+      "vendor": "Banshee",
+      "location": "Fort Narith",
+      "alternate": "",
+      "types": [
+        "Unclassified"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Jets'N'Marks"
+    },
+    {
+      "id": "king-of-the-crossroads",
+      "name": "King of the Crossroads",
+      "vendor": "Handshake",
+      "location": "Blue Lagoon",
+      "alternate": "",
+      "types": [
+        "Unclassified"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/King_of_the_Crossroads"
+    },
+    {
+      "id": "know-your-enemy",
+      "name": "Know Your Enemy",
+      "vendor": "Gunny",
+      "location": "Midnight Sapphire",
+      "alternate": "",
+      "types": [
+        "Main mission"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Know_Your_Enemy"
+    },
+    {
+      "id": "lagoon-shipment",
+      "name": "Lagoon Shipment",
+      "vendor": "Gunny",
+      "location": "Blue Lagoon",
+      "alternate": "",
+      "types": [
+        "Squad mission"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Lagoon_Shipment"
+    },
+    {
+      "id": "lamang-connection",
+      "name": "Lamang Connection",
+      "vendor": "Banshee",
+      "location": "Ban Pa",
+      "alternate": "",
+      "types": [
+        "Unclassified"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Lamang_Connection"
+    },
+    {
+      "id": "last-farewell",
+      "name": "Last Farewell",
+      "vendor": "Gunny",
+      "location": "Kiu Vongsa , Nam Thaven , Pha Lang",
+      "alternate": "Left Behind",
+      "types": [
+        "Side mission"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Last_Farewell"
+    },
+    {
+      "id": "last-farewell-ii",
+      "name": "Last Farewell II",
+      "vendor": "Gunny",
+      "location": "",
+      "alternate": "Left Behind II",
+      "types": [
+        "Unclassified"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Last_Farewell_II"
+    },
+    {
+      "id": "last-flight",
+      "name": "Last Flight",
+      "vendor": "Artisan",
+      "location": "Pha Lang Airfield",
+      "alternate": "",
+      "types": [
+        "Unclassified"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Last_Flight"
+    },
+    {
+      "id": "last-letter",
+      "name": "Last Letter",
+      "vendor": "Artisan",
+      "location": "YBL-1",
+      "alternate": "",
+      "types": [
+        "Side mission"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Last_Letter"
+    },
+    {
+      "id": "last-resort",
+      "name": "Last Resort",
+      "vendor": "Handshake",
+      "location": "Midnight Sapphire",
+      "alternate": "",
+      "types": [
+        "Unclassified"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Last_Resort"
+    },
+    {
+      "id": "leave-no-man-behind",
+      "name": "Leave No Man Behind",
+      "vendor": "Gunny",
+      "location": "Kiu Vongsa , Nam Thaven , Pha Lang",
+      "alternate": "",
+      "types": [
+        "Side mission"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Leave_No_Man_Behind"
+    },
+    {
+      "id": "left-behind",
+      "name": "Left Behind",
+      "vendor": "Handshake",
+      "location": "Kiu Vongsa , Nam Thaven , Pha Lang",
+      "alternate": "Last Farewell",
+      "types": [
+        "Side mission"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Left_Behind"
+    },
+    {
+      "id": "left-behind-ii",
+      "name": "Left Behind II",
+      "vendor": "Handshake",
+      "location": "",
+      "alternate": "Last Farewell II",
+      "types": [
+        "Unclassified"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Left_Behind_II"
+    },
+    {
+      "id": "lethal-dose",
+      "name": "Lethal Dose",
+      "vendor": "Lab Rat",
+      "location": "Hunter's Paradise",
+      "alternate": "",
+      "types": [
+        "Side mission"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Lethal_Dose"
+    },
+    {
+      "id": "letters-from-lamang",
+      "name": "Letters from Lamang",
+      "vendor": "Turncoat",
+      "location": "Blue Lagoon",
+      "alternate": "",
+      "types": [
+        "Hidden mission",
+        "Side mission"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Letters_from_Lamang"
+    },
+    {
+      "id": "like-a-boss---brokers-m9a1",
+      "name": "Like a Boss - Broker's M9A1",
+      "vendor": "Gunny",
+      "location": "Hunter's Paradise",
+      "alternate": "",
+      "types": [
+        "Side mission"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Like_a_Boss_-_Broker's_M9A1"
+    },
+    {
+      "id": "like-a-boss---burans-ak-74n",
+      "name": "Like a Boss - Buran's AK-74N",
+      "vendor": "Turncoat",
+      "location": "Fort Narith",
+      "alternate": "",
+      "types": [
+        "Side mission"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Like_a_Boss_-_Buran's_AK-74N"
+    },
+    {
+      "id": "like-a-boss---colonels-type-51",
+      "name": "Like a Boss - Colonel's Type 51",
+      "vendor": "Artisan",
+      "location": "Tiger Bay",
+      "alternate": "",
+      "types": [
+        "Side mission"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Like_a_Boss_-_Colonel's_Type_51"
+    },
+    {
+      "id": "like-a-boss---firebrands-aks-74u",
+      "name": "Like a Boss - Firebrand's AKS-74u",
+      "vendor": "Turncoat",
+      "location": "YBL-1",
+      "alternate": "",
+      "types": [
+        "Side mission"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Like_a_Boss_-_Firebrand's_AKS-74u"
+    },
+    {
+      "id": "like-a-boss---grins-1911-c",
+      "name": "Like a Boss - Grin's 1911 C",
+      "vendor": "Vulture",
+      "location": "Blue Lagoon",
+      "alternate": "",
+      "types": [
+        "Side mission"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Like_a_Boss_-_Grin's_1911_C"
+    },
+    {
+      "id": "like-a-boss---kapteis-glock-17",
+      "name": "Like a Boss - Kaptei's Glock 17",
+      "vendor": "Gunny",
+      "location": "Sawmill",
+      "alternate": "",
+      "types": [
+        "Side mission"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Like_a_Boss_-_Kaptei's_Glock_17"
+    },
+    {
+      "id": "like-a-boss---nagas-type-51",
+      "name": "Like a Boss - Naga's Type 51",
+      "vendor": "Artisan",
+      "location": "Ban Pa",
+      "alternate": "",
+      "types": [
+        "Side mission"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Like_a_Boss_-_Naga's_Type_51"
+    },
+    {
+      "id": "like-a-boss---vipers-1911-c",
+      "name": "Like a Boss - Viper's 1911 C",
+      "vendor": "Vulture",
+      "location": "Pha Lang Airfield",
+      "alternate": "",
+      "types": [
+        "Side mission"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Like_a_Boss_-_Viper's_1911_C"
+    },
+    {
+      "id": "like-a-boss---yens-m700",
+      "name": "Like a Boss - Yen's M700",
+      "vendor": "Banshee",
+      "location": "Midnight Sapphire",
+      "alternate": "",
+      "types": [
+        "Side mission"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Like_a_Boss_-_Yen's_M700"
+    },
+    {
+      "id": "line-in-the-sand",
+      "name": "Line in the sand",
+      "vendor": "Gunny",
+      "location": "Ban Pa",
+      "alternate": "The Value of Sharing",
+      "types": [
+        "Unclassified"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Line_in_the_sand"
+    },
+    {
+      "id": "lip-out",
+      "name": "Lip Out",
+      "vendor": "Handshake",
+      "location": "Midnight Sapphire",
+      "alternate": "",
+      "types": [
+        "Unclassified"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Lip_Out"
+    },
+    {
+      "id": "little-bird-down",
+      "name": "Little Bird Down",
+      "vendor": "Handshake",
+      "location": "Kiu Vongsa , Nam Thaven , Pha Lang",
+      "alternate": "",
+      "types": [
+        "Main mission"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Little_Bird_Down"
+    },
+    {
+      "id": "livestock",
+      "name": "Livestock",
+      "vendor": "Banshee",
+      "location": "Blue Lagoon",
+      "alternate": "",
+      "types": [
+        "Side mission"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Livestock"
+    },
+    {
+      "id": "living-in-burrows",
+      "name": "Living In Burrows",
+      "vendor": "Lab Rat",
+      "location": "YBL-1",
+      "alternate": "",
+      "types": [
+        "Unclassified"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Living_In_Burrows"
+    },
+    {
+      "id": "local-golf-star",
+      "name": "Local Golf Star",
+      "vendor": "Turncoat",
+      "location": "Midnight Sapphire",
+      "alternate": "Priceless Possessions",
+      "types": [
+        "Side mission"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Local_Golf_Star"
+    },
+    {
+      "id": "lost-and-found",
+      "name": "Lost and Found",
+      "vendor": "Artisan",
+      "location": "Kiu Vongsa , Nam Thaven , Pha Lang",
+      "alternate": "",
+      "types": [
+        "Side mission"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Lost_and_Found"
+    },
+    {
+      "id": "lost-girl",
+      "name": "Lost Girl",
+      "vendor": "Gunny",
+      "location": "Blue Lagoon",
+      "alternate": "",
+      "types": [
+        "Main mission"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Lost_Girl"
+    },
+    {
+      "id": "lost-girl-ii",
+      "name": "Lost Girl II",
+      "vendor": "Gunny",
+      "location": "Blue Lagoon",
+      "alternate": "",
+      "types": [
+        "Unclassified"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Lost_Girl_II"
+    },
+    {
+      "id": "lost-hope",
+      "name": "Lost Hope",
+      "vendor": "Artisan",
+      "location": "Ban Pa",
+      "alternate": "",
+      "types": [
+        "Unclassified"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Lost_Hope"
+    },
+    {
+      "id": "lost-lover",
+      "name": "Lost Lover",
+      "vendor": "Lab Rat",
+      "location": "Fort Narith",
+      "alternate": "",
+      "types": [
+        "Unclassified"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Lost_Lover"
+    },
+    {
+      "id": "mall-quickie",
+      "name": "Mall Quickie",
+      "vendor": "Handshake",
+      "location": "Tiger Bay",
+      "alternate": "",
+      "types": [
+        "Squad mission"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Mall_Quickie"
+    },
+    {
+      "id": "mall-vigilante",
+      "name": "Mall Vigilante",
+      "vendor": "Handshake",
+      "location": "Tiger Bay",
+      "alternate": "",
+      "types": [
+        "Unclassified"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Mall_Vigilante"
+    },
+    {
+      "id": "manifest-destiny",
+      "name": "Manifest Destiny",
+      "vendor": "Handshake",
+      "location": "Pha Lang Airfield",
+      "alternate": "",
+      "types": [
+        "Unclassified"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Manifest_Destiny"
+    },
+    {
+      "id": "medical-detective",
+      "name": "Medical Detective",
+      "vendor": "Gunny",
+      "location": "Kiu Vongsa , Nam Thaven , Pha Lang",
+      "alternate": "",
+      "types": [
+        "Side mission"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Medical_Detective"
+    },
+    {
+      "id": "meds-wanted",
+      "name": "Meds Wanted",
+      "vendor": "Lab Rat",
+      "location": "Kiu Vongsa , Nam Thaven , Pha Lang",
+      "alternate": "",
+      "types": [
+        "Side mission"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Meds_Wanted"
+    },
+    {
+      "id": "memory-leak",
+      "name": "Memory Leak",
+      "vendor": "Lab Rat",
+      "location": "Midnight Sapphire",
+      "alternate": "",
+      "types": [
+        "Main mission"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Memory_Leak"
+    },
+    {
+      "id": "mire-job",
+      "name": "Mire Job",
+      "vendor": "Handshake",
+      "location": "Sawmill",
+      "alternate": "",
+      "types": [
+        "Side mission"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Mire_Job"
+    },
+    {
+      "id": "missing-children",
+      "name": "Missing Children",
+      "vendor": "Handshake",
+      "location": "YBL-1",
+      "alternate": "",
+      "types": [
+        "Side mission"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Missing_Children"
+    },
+    {
+      "id": "missing-colleague",
+      "name": "Missing Colleague",
+      "vendor": "Artisan",
+      "location": "Fort Narith",
+      "alternate": "",
+      "types": [
+        "Unclassified"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Missing_Colleague"
+    },
+    {
+      "id": "missing-colleague-ii",
+      "name": "Missing Colleague II",
+      "vendor": "Artisan",
+      "location": "Fort narith",
+      "alternate": "",
+      "types": [
+        "Unclassified"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Missing_Colleague_II"
+    },
+    {
+      "id": "mob-job",
+      "name": "Mob Job",
+      "vendor": "Handshake",
+      "location": "Pha Lang Airfield",
+      "alternate": "",
+      "types": [
+        "Squad mission"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Mob_Job"
+    },
+    {
+      "id": "muddy-buddy",
+      "name": "Muddy Buddy",
+      "vendor": "Handshake",
+      "location": "Ban Pa",
+      "alternate": "",
+      "types": [
+        "Contract"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Muddy_Buddy"
+    },
+    {
+      "id": "mystery-machines",
+      "name": "Mystery Machines",
+      "vendor": "Lab Rat",
+      "location": "YBL-1",
+      "alternate": "",
+      "types": [
+        "Main mission"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Mystery_Machines"
+    },
+    {
+      "id": "name-your-poison",
+      "name": "Name Your Poison",
+      "vendor": "Turncoat",
+      "location": "Fort Narith",
+      "alternate": "Spit Out the Poison",
+      "types": [
+        "Unclassified"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Name_Your_Poison"
+    },
+    {
+      "id": "narcotic-bargain",
+      "name": "Narcotic Bargain",
+      "vendor": "Turncoat",
+      "location": "Tiger Bay",
+      "alternate": "Baked",
+      "types": [
+        "Unclassified"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Narcotic_Bargain"
+    },
+    {
+      "id": "native-negotiations",
+      "name": "Native Negotiations",
+      "vendor": "Handshake",
+      "location": "Kiu Vongsa , Nam Thaven , Pha Lang",
+      "alternate": "",
+      "types": [
+        "Unclassified"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Native_Negotiations"
+    },
+    {
+      "id": "needle-in-a-jungle",
+      "name": "Needle in a Jungle",
+      "vendor": "Gunny",
+      "location": "Lamang Island",
+      "alternate": "",
+      "types": [
+        "Hidden mission",
+        "Side mission"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Needle_in_a_Jungle"
+    },
+    {
+      "id": "neighborly-help",
+      "name": "Neighborly Help",
+      "vendor": "Gunny",
+      "location": "Fort Narith",
+      "alternate": "",
+      "types": [
+        "Unclassified"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Neighborly_Help"
+    },
+    {
+      "id": "new-neighbors",
+      "name": "New Neighbors",
+      "vendor": "Handshake",
+      "location": "YBL-1",
+      "alternate": "",
+      "types": [
+        "Side mission"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/New_Neighbors"
+    },
+    {
+      "id": "nicked-shipment",
+      "name": "Nicked Shipment",
+      "vendor": "Gunny",
+      "location": "Hunter's Paradise",
+      "alternate": "",
+      "types": [
+        "Contract"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Nicked_Shipment"
+    },
+    {
+      "id": "no-casualties",
+      "name": "No Casualties",
+      "vendor": "Artisan",
+      "location": "YBL-1",
+      "alternate": "",
+      "types": [
+        "Unclassified"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/No_Casualties"
+    },
+    {
+      "id": "no-escape",
+      "name": "No Escape",
+      "vendor": "Banshee",
+      "location": "Fort Narith",
+      "alternate": "A Small Favor",
+      "types": [
+        "Unclassified"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/No_Escape"
+    },
+    {
+      "id": "no-questions-asked",
+      "name": "No Questions Asked",
+      "vendor": "Turncoat",
+      "location": "Midnight Sapphire",
+      "alternate": "",
+      "types": [
+        "Unclassified"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/No_Questions_Asked"
+    },
+    {
+      "id": "no-way-up",
+      "name": "No Way Up",
+      "vendor": "Gunny",
+      "location": "Ban Pa",
+      "alternate": "",
+      "types": [
+        "Side mission"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/No_Way_Up"
+    },
+    {
+      "id": "noble-powder",
+      "name": "Noble Powder",
+      "vendor": "Banshee",
+      "location": "Midnight Sapphire",
+      "alternate": "Academic Interest",
+      "types": [
+        "Side mission"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Noble_Powder"
+    },
+    {
+      "id": "observation-duty",
+      "name": "Observation Duty",
+      "vendor": "Gunny",
+      "location": "Fort Narith",
+      "alternate": "",
+      "types": [
+        "Unclassified"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Observation_Duty"
+    },
+    {
+      "id": "on-the-green",
+      "name": "On the Green",
+      "vendor": "Handshake",
+      "location": "Midnight Sapphire",
+      "alternate": "",
+      "types": [
+        "Squad mission"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/On_the_Green"
+    },
+    {
+      "id": "on-the-range",
+      "name": "On the Range",
+      "vendor": "Gunny",
+      "location": "Hunter's Paradise",
+      "alternate": "",
+      "types": [
+        "Unclassified"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/On_the_Range"
+    },
+    {
+      "id": "one-mans-trash",
+      "name": "One Man's Trash",
+      "vendor": "Turncoat",
+      "location": "Blue Lagoon",
+      "alternate": "What Was Left",
+      "types": [
+        "Unclassified"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/One_Man's_Trash"
+    },
+    {
+      "id": "one-shot,-one-kill",
+      "name": "One Shot, One Kill",
+      "vendor": "Handshake",
+      "location": "Hunter's Paradise",
+      "alternate": "",
+      "types": [
+        "Unclassified"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/One_Shot%2C_One_Kill"
+    },
+    {
+      "id": "ordnance-delivery",
+      "name": "Ordnance Delivery",
+      "vendor": "Gunny",
+      "location": "Pha Lang Airfield",
+      "alternate": "",
+      "types": [
+        "Side mission"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Ordnance_Delivery"
+    },
+    {
+      "id": "out-of-the-blue",
+      "name": "Out Of the Blue",
+      "vendor": "Gunny",
+      "location": "Blue Lagoon",
+      "alternate": "",
+      "types": [
+        "Unclassified"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Out_Of_the_Blue"
+    },
+    {
+      "id": "paparazzi",
+      "name": "Paparazzi",
+      "vendor": "Handshake",
+      "location": "Midnight Sapphire",
+      "alternate": "",
+      "types": [
+        "Unclassified"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Paparazzi"
+    },
+    {
+      "id": "paperwork",
+      "name": "Paperwork",
+      "vendor": "Handshake",
+      "location": "YBL-1",
+      "alternate": "",
+      "types": [
+        "Squad mission"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Paperwork"
+    },
+    {
+      "id": "paranoia-agent",
+      "name": "Paranoia Agent",
+      "vendor": "Gunny",
+      "location": "Kiu Vongsa , Nam Thaven , Pha Lang",
+      "alternate": "",
+      "types": [
+        "Side mission"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Paranoia_Agent"
+    },
+    {
+      "id": "peacekeeper",
+      "name": "Peacekeeper",
+      "vendor": "Lab Rat",
+      "location": "Tiger Bay",
+      "alternate": "",
+      "types": [
+        "Unclassified"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Peacekeeper"
+    },
+    {
+      "id": "plan-b",
+      "name": "Plan B",
+      "vendor": "Handshake",
+      "location": "Sawmill",
+      "alternate": "",
+      "types": [
+        "Side mission"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Plan_B"
+    },
+    {
+      "id": "postman-rings-twice",
+      "name": "Postman Rings Twice",
+      "vendor": "Lab Rat",
+      "location": "Pha Lang Airfield",
+      "alternate": "",
+      "types": [
+        "Unclassified"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Postman_Rings_Twice"
+    },
+    {
+      "id": "priceless-possessions",
+      "name": "Priceless Possessions",
+      "vendor": "Handshake",
+      "location": "Midnight Sapphire",
+      "alternate": "Local Golf Star",
+      "types": [
+        "Side mission"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Priceless_Possessions"
+    },
+    {
+      "id": "prisoner-23",
+      "name": "Prisoner 23",
+      "vendor": "Artisan",
+      "location": "YBL-1",
+      "alternate": "",
+      "types": [
+        "Unclassified"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Prisoner_23"
+    },
+    {
+      "id": "propaganda-problems",
+      "name": "Propaganda Problems",
+      "vendor": "Gunny",
+      "location": "Lamang Island",
+      "alternate": "",
+      "types": [
+        "Unclassified"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Propaganda_Problems"
+    },
+    {
+      "id": "questionable-shipment",
+      "name": "Questionable Shipment",
+      "vendor": "Gunny",
+      "location": "Sawmill",
+      "alternate": "",
+      "types": [
+        "Side mission"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Questionable_Shipment"
+    },
+    {
+      "id": "radio-silence",
+      "name": "Radio Silence",
+      "vendor": "Handshake",
+      "location": "Kiu Vongsa , Nam Thaven , Pha Lang",
+      "alternate": "",
+      "types": [
+        "Main mission"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Radio_Silence"
+    },
+    {
+      "id": "radio-star",
+      "name": "Radio Star",
+      "vendor": "Handshake",
+      "location": "Lamang",
+      "alternate": "",
+      "types": [
+        "Unclassified"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Radio_Star"
+    },
+    {
+      "id": "rats-nest",
+      "name": "Rat's Nest",
+      "vendor": "Handshake",
+      "location": "Kiu Vongsa , Nam Thaven , Pha Lang",
+      "alternate": "",
+      "types": [
+        "Main mission"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Rat's_Nest"
+    },
+    {
+      "id": "rebel-scum",
+      "name": "Rebel Scum",
+      "vendor": "Handshake",
+      "location": "YBL-1",
+      "alternate": "Save The Rebellion",
+      "types": [
+        "Unclassified"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Rebel_Scum"
+    },
+    {
+      "id": "reclamation",
+      "name": "Reclamation",
+      "vendor": "Handshake",
+      "location": "Kiu Vongsa , Nam Thaven , Pha Lang",
+      "alternate": "Covert Research",
+      "types": [
+        "Main mission"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Reclamation"
+    },
+    {
+      "id": "reconnaissance-in-force",
+      "name": "Reconnaissance-in-Force",
+      "vendor": "Handshake",
+      "location": "Fort Narith",
+      "alternate": "",
+      "types": [
+        "Unclassified"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Reconnaissance-in-Force"
+    },
+    {
+      "id": "repossession",
+      "name": "Repossession",
+      "vendor": "Turncoat",
+      "location": "Fort Narith",
+      "alternate": "",
+      "types": [
+        "Contract"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Repossession"
+    },
+    {
+      "id": "repossession-iii",
+      "name": "Repossession III",
+      "vendor": "Turncoat",
+      "location": "Blue Lagoon",
+      "alternate": "",
+      "types": [
+        "Contract"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Repossession_III"
+    },
+    {
+      "id": "repossession-iv",
+      "name": "Repossession IV",
+      "vendor": "Turncoat",
+      "location": "Pha Lang Airfield",
+      "alternate": "",
+      "types": [
+        "Contract"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Repossession_IV"
+    },
+    {
+      "id": "repossession-ix",
+      "name": "Repossession IX",
+      "vendor": "Turncoat",
+      "location": "Tiger Bay",
+      "alternate": "",
+      "types": [
+        "Contract"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Repossession_IX"
+    },
+    {
+      "id": "repossession-v",
+      "name": "Repossession V",
+      "vendor": "Turncoat",
+      "location": "Blue Lagoon",
+      "alternate": "",
+      "types": [
+        "Contract"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Repossession_V"
+    },
+    {
+      "id": "repossession-vi",
+      "name": "Repossession VI",
+      "vendor": "Turncoat",
+      "location": "Pha Lang Airfield",
+      "alternate": "",
+      "types": [
+        "Contract"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Repossession_VI"
+    },
+    {
+      "id": "repossession-vii",
+      "name": "Repossession VII",
+      "vendor": "Turncoat",
+      "location": "YBL-1",
+      "alternate": "",
+      "types": [
+        "Contract"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Repossession_VII"
+    },
+    {
+      "id": "repossession-viii",
+      "name": "Repossession VIII",
+      "vendor": "Turncoat",
+      "location": "Blue Lagoon",
+      "alternate": "",
+      "types": [
+        "Contract"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Repossession_VIII"
+    },
+    {
+      "id": "resorting-to-help",
+      "name": "Resorting to Help",
+      "vendor": "Handshake",
+      "location": "Midnight Sapphire",
+      "alternate": "",
+      "types": [
+        "Squad mission"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Resorting_to_Help"
+    },
+    {
+      "id": "restoring-order",
+      "name": "Restoring Order",
+      "vendor": "Handshake",
+      "location": "Kiu Vongsa , Nam Thaven , Pha Lang",
+      "alternate": "",
+      "types": [
+        "Contract"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Restoring_Order"
+    },
+    {
+      "id": "revolutionary-road",
+      "name": "Revolutionary Road",
+      "vendor": "Handshake",
+      "location": "YBL-1",
+      "alternate": "",
+      "types": [
+        "Side mission"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Revolutionary_Road"
+    },
+    {
+      "id": "ripper",
+      "name": "Ripper",
+      "vendor": "Lab Rat",
+      "location": "Tiger Bay",
+      "alternate": "",
+      "types": [
+        "Unclassified"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Ripper"
+    },
+    {
+      "id": "riverfront-view",
+      "name": "Riverfront View",
+      "vendor": "Handshake",
+      "location": "Midnight Sapphire",
+      "alternate": "",
+      "types": [
+        "Unclassified"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Riverfront_View"
+    },
+    {
+      "id": "sanctioned-exploitation",
+      "name": "Sanctioned Exploitation",
+      "vendor": "Banshee",
+      "location": "Tiger Bay",
+      "alternate": "N/A",
+      "types": [
+        "Side mission"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Sanctioned_Exploitation"
+    },
+    {
+      "id": "save-the-rebellion",
+      "name": "Save The Rebellion",
+      "vendor": "Artisan",
+      "location": "YBL-1",
+      "alternate": "Rebel Scum",
+      "types": [
+        "Unclassified"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Save_The_Rebellion"
+    },
+    {
+      "id": "scandal-snatcher",
+      "name": "Scandal Snatcher",
+      "vendor": "Handshake",
+      "location": "Midnight Sapphire",
+      "alternate": "",
+      "types": [
+        "Squad mission"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Scandal_Snatcher"
+    },
+    {
+      "id": "secret-compassion",
+      "name": "Secret Compassion",
+      "vendor": "Artisan",
+      "location": "Kiu Vongsa , Nam Thaven , Pha Lang",
+      "alternate": "",
+      "types": [
+        "Side mission"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Secret_Compassion"
+    },
+    {
+      "id": "seeker-of-change",
+      "name": "Seeker of Change",
+      "vendor": "Lab Rat",
+      "location": "Fort Narith",
+      "alternate": "",
+      "types": [
+        "Main mission"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Seeker_of_Change"
+    },
+    {
+      "id": "shimmer-on-the-surface",
+      "name": "Shimmer on the Surface",
+      "vendor": "Lab Rat",
+      "location": "Blue Lagoon",
+      "alternate": "",
+      "types": [
+        "Squad mission"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Shimmer_on_the_Surface"
+    },
+    {
+      "id": "shoot-your-shot",
+      "name": "Shoot Your Shot",
+      "vendor": "Handshake",
+      "location": "Hunter's Paradise",
+      "alternate": "",
+      "types": [
+        "Squad mission"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Shoot_Your_Shot"
+    },
+    {
+      "id": "shooting-gallery",
+      "name": "Shooting Gallery",
+      "vendor": "Handshake",
+      "location": "Hunter's Paradise",
+      "alternate": "",
+      "types": [
+        "Unclassified"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Shooting_Gallery"
+    },
+    {
+      "id": "shopping-spree",
+      "name": "Shopping Spree",
+      "vendor": "Handshake",
+      "location": "Tiger Bay",
+      "alternate": "",
+      "types": [
+        "Squad mission"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Shopping_Spree"
+    },
+    {
+      "id": "shortcut",
+      "name": "Shortcut",
+      "vendor": "Handshake",
+      "location": "YBL-1",
+      "alternate": "",
+      "types": [
+        "Unclassified"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Shortcut"
+    },
+    {
+      "id": "silent-village",
+      "name": "Silent Village",
+      "vendor": "Artisan",
+      "location": "Sawmill",
+      "alternate": "",
+      "types": [
+        "Side mission"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Silent_Village"
+    },
+    {
+      "id": "sisyphus",
+      "name": "Sisyphus",
+      "vendor": "Handshake",
+      "location": "Lamang Island",
+      "alternate": "",
+      "types": [
+        "Unclassified"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Sisyphus"
+    },
+    {
+      "id": "skycrawlers",
+      "name": "Skycrawlers",
+      "vendor": "Gunny",
+      "location": "Pha Lang Airfield",
+      "alternate": "",
+      "types": [
+        "Main mission"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Skycrawlers"
+    },
+    {
+      "id": "skycrawlers-ii",
+      "name": "Skycrawlers II",
+      "vendor": "Banshee",
+      "location": "Pha Lang Airfield",
+      "alternate": "",
+      "types": [
+        "Unclassified"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Skycrawlers_II"
+    },
+    {
+      "id": "snooper",
+      "name": "Snooper",
+      "vendor": "Gunny",
+      "location": "Lamang Island",
+      "alternate": "",
+      "types": [
+        "Unclassified"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Snooper"
+    },
+    {
+      "id": "snow-white",
+      "name": "Snow White",
+      "vendor": "Artisan",
+      "location": "Lamang Island",
+      "alternate": "",
+      "types": [
+        "Unclassified"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Snow_White"
+    },
+    {
+      "id": "so-close",
+      "name": "So Close",
+      "vendor": "Lab Rat",
+      "location": "Blue Lagoon",
+      "alternate": "",
+      "types": [
+        "Side mission"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/So_Close"
+    },
+    {
+      "id": "specter-in-the-computer",
+      "name": "Specter in the Computer",
+      "vendor": "Handshake",
+      "location": "Tiger Bay",
+      "alternate": "",
+      "types": [
+        "Squad mission"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Specter_in_the_Computer"
+    },
+    {
+      "id": "spit-out-the-poison",
+      "name": "Spit Out the Poison",
+      "vendor": "Lab Rat",
+      "location": "Fort Narith",
+      "alternate": "Name Your Poison",
+      "types": [
+        "Unclassified"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Spit_Out_the_Poison"
+    },
+    {
+      "id": "state-of-weapon-shipment",
+      "name": "State of Weapon Shipment",
+      "vendor": "Banshee",
+      "location": "Fort Narith",
+      "alternate": "",
+      "types": [
+        "Unclassified"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/State_of_Weapon_Shipment"
+    },
+    {
+      "id": "static-echoes",
+      "name": "Static Echoes",
+      "vendor": "Handshake",
+      "location": "Fort Narith",
+      "alternate": "",
+      "types": [
+        "Squad mission"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Static_Echoes"
+    },
+    {
+      "id": "stationary-targets",
+      "name": "Stationary Targets",
+      "vendor": "Lab Rat",
+      "location": "Hunter's Paradise",
+      "alternate": "",
+      "types": [
+        "Squad mission"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Stationary_Targets"
+    },
+    {
+      "id": "street-spotter",
+      "name": "Street Spotter",
+      "vendor": "Gunny",
+      "location": "Kiu Vongsa , Nam Thaven , Pha Lang",
+      "alternate": "",
+      "types": [
+        "Side mission"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Street_Spotter"
+    },
+    {
+      "id": "sunken-bird",
+      "name": "Sunken Bird",
+      "vendor": "Gunny",
+      "location": "YBL-1",
+      "alternate": "",
+      "types": [
+        "Side mission"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Sunken_Bird"
+    },
+    {
+      "id": "sunny-skies",
+      "name": "Sunny Skies",
+      "vendor": "Banshee",
+      "location": "Pha Lang Airfield",
+      "alternate": "",
+      "types": [
+        "Side mission"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Sunny_Skies"
+    },
+    {
+      "id": "supernatural",
+      "name": "Supernatural",
+      "vendor": "Gunny",
+      "location": "North of Ban Pa",
+      "alternate": "",
+      "types": [
+        "Unclassified"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Supernatural"
+    },
+    {
+      "id": "sweet-little-lies",
+      "name": "Sweet Little Lies",
+      "vendor": "Handshake",
+      "location": "Midnight Sapphire Tiger Bay Fort Narith",
+      "alternate": "",
+      "types": [
+        "Unclassified"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Sweet_Little_Lies"
+    },
+    {
+      "id": "technoarcheologist",
+      "name": "Technoarcheologist",
+      "vendor": "Handshake",
+      "location": "YBL-1",
+      "alternate": "",
+      "types": [
+        "Squad mission"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Technoarcheologist"
+    },
+    {
+      "id": "terminal-initiative",
+      "name": "Terminal Initiative",
+      "vendor": "Handshake",
+      "location": "Fort Narith , Tiger Bay , Midnight Sapphire",
+      "alternate": "",
+      "types": [
+        "Main mission"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Terminal_Initiative"
+    },
+    {
+      "id": "test-results",
+      "name": "Test Results",
+      "vendor": "Lab Rat",
+      "location": "Tiger Bay",
+      "alternate": "",
+      "types": [
+        "Unclassified"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Test_Results"
+    },
+    {
+      "id": "the-art-of-deception",
+      "name": "The Art of Deception",
+      "vendor": "Handshake",
+      "location": "Fort Narith Midnight Sapphire",
+      "alternate": "",
+      "types": [
+        "Unclassified"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/The_Art_of_Deception"
+    },
+    {
+      "id": "the-brave",
+      "name": "The Brave",
+      "vendor": "Lab Rat",
+      "location": "Hunter's Paradise",
+      "alternate": "",
+      "types": [
+        "Unclassified"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/The_Brave"
+    },
+    {
+      "id": "the-cleaner",
+      "name": "The Cleaner",
+      "vendor": "Handshake",
+      "location": "Lamang Island",
+      "alternate": "",
+      "types": [
+        "Unclassified"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/The_Cleaner"
+    },
+    {
+      "id": "the-congressman",
+      "name": "The Congressman",
+      "vendor": "Handshake",
+      "location": "Midnight Sapphire",
+      "alternate": "Felony and Punishment",
+      "types": [
+        "Side mission"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/The_Congressman"
+    },
+    {
+      "id": "the-last-broadcast",
+      "name": "The Last Broadcast",
+      "vendor": "Lab Rat",
+      "location": "Ban Pa",
+      "alternate": "",
+      "types": [
+        "Hidden mission",
+        "Side mission"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/The_Last_Broadcast"
+    },
+    {
+      "id": "the-liberator",
+      "name": "The Liberator",
+      "vendor": "Handshake",
+      "location": "Ban Pa",
+      "alternate": "",
+      "types": [
+        "Contract"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/The_Liberator"
+    },
+    {
+      "id": "the-lull",
+      "name": "The Lull",
+      "vendor": "Gunny",
+      "location": "Hunter's Paradise",
+      "alternate": "",
+      "types": [
+        "Side mission"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/The_Lull"
+    },
+    {
+      "id": "the-man-who-disappeared",
+      "name": "The Man Who Disappeared",
+      "vendor": "Handshake",
+      "location": "Midnight Sapphire",
+      "alternate": "",
+      "types": [
+        "Unclassified"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/The_Man_Who_Disappeared"
+    },
+    {
+      "id": "the-mistress",
+      "name": "The Mistress",
+      "vendor": "Artisan",
+      "location": "Tiger Bay",
+      "alternate": "",
+      "types": [
+        "Unclassified"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/The_Mistress"
+    },
+    {
+      "id": "the-more-the-merrier",
+      "name": "The More the Merrier",
+      "vendor": "Handshake",
+      "location": "Fort Narith",
+      "alternate": "",
+      "types": [
+        "Unclassified"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/The_More_the_Merrier"
+    },
+    {
+      "id": "the-most-dangerous-game",
+      "name": "The Most Dangerous Game",
+      "vendor": "Lab Rat",
+      "location": "Hunter's Paradise",
+      "alternate": "",
+      "types": [
+        "Main mission"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/The_Most_Dangerous_Game"
+    },
+    {
+      "id": "the-negotiator",
+      "name": "The Negotiator",
+      "vendor": "Gunny",
+      "location": "YBL-1",
+      "alternate": "",
+      "types": [
+        "Main mission"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/The_Negotiator"
+    },
+    {
+      "id": "the-rebel-path",
+      "name": "The Rebel Path",
+      "vendor": "Gunny",
+      "location": "YBL-1 , Tiger Bay , Ban Pa , Midnight Sapphire",
+      "alternate": "",
+      "types": [
+        "Hidden mission"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/The_Rebel_Path"
+    },
+    {
+      "id": "the-runaway",
+      "name": "The Runaway",
+      "vendor": "Lab Rat",
+      "location": "Blue Lagoon",
+      "alternate": "",
+      "types": [
+        "Unclassified"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/The_Runaway"
+    },
+    {
+      "id": "the-scent-of-salt-and-horror",
+      "name": "The Scent of Salt and Horror",
+      "vendor": "Lab Rat",
+      "location": "Ban Pa",
+      "alternate": "",
+      "types": [
+        "Squad mission"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/The_Scent_of_Salt_and_Horror"
+    },
+    {
+      "id": "the-shadow-over-ban-pa",
+      "name": "The Shadow over Ban Pa",
+      "vendor": "Handshake",
+      "location": "Ban Pa",
+      "alternate": "",
+      "types": [
+        "Main mission"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/The_Shadow_over_Ban_Pa"
+    },
+    {
+      "id": "the-shadow-over-ban-pa-ii",
+      "name": "The Shadow Over Ban Pa II",
+      "vendor": "Handshake",
+      "location": "Ban Pa",
+      "alternate": "At the Mounds of Madness II",
+      "types": [
+        "Unclassified"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/The_Shadow_Over_Ban_Pa_II"
+    },
+    {
+      "id": "the-snitch",
+      "name": "The Snitch",
+      "vendor": "Turncoat",
+      "location": "Tiger Bay",
+      "alternate": "",
+      "types": [
+        "Unclassified"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/The_Snitch"
+    },
+    {
+      "id": "the-stand",
+      "name": "The Stand",
+      "vendor": "Gunny",
+      "location": "Pha Lang Airfield",
+      "alternate": "",
+      "types": [
+        "Side mission"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/The_Stand"
+    },
+    {
+      "id": "the-trickster",
+      "name": "The Trickster",
+      "vendor": "Lab Rat",
+      "location": "Tiger Bay",
+      "alternate": "",
+      "types": [
+        "Unclassified"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/The_Trickster"
+    },
+    {
+      "id": "the-value-of-sharing",
+      "name": "The Value of Sharing",
+      "vendor": "Turncoat",
+      "location": "Ban Pa",
+      "alternate": "Line in the sand",
+      "types": [
+        "Unclassified"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/The_Value_of_Sharing"
+    },
+    {
+      "id": "the-way-below",
+      "name": "The Way Below",
+      "vendor": "Gunny",
+      "location": "YBL-1",
+      "alternate": "",
+      "types": [
+        "Unclassified"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/The_Way_Below"
+    },
+    {
+      "id": "timber",
+      "name": "Timber",
+      "vendor": "Banshee",
+      "location": "Sawmill",
+      "alternate": "",
+      "types": [
+        "Unclassified"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Timber"
+    },
+    {
+      "id": "too-close-to-the-sun",
+      "name": "Too Close to the Sun",
+      "vendor": "Lab Rat",
+      "location": "Pha Lang Airfield",
+      "alternate": "What Comes Up",
+      "types": [
+        "Side mission"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Too_Close_to_the_Sun"
+    },
+    {
+      "id": "tools-of-the-trade",
+      "name": "Tools of the Trade",
+      "vendor": "Artisan",
+      "location": "Kiu Vongsa , Nam Thaven , Pha Lang",
+      "alternate": "",
+      "types": [
+        "Side mission"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Tools_of_the_Trade"
+    },
+    {
+      "id": "troll-bridge",
+      "name": "Troll Bridge",
+      "vendor": "Handshake",
+      "location": "Tiger Bay",
+      "alternate": "",
+      "types": [
+        "Unclassified"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Troll_Bridge"
+    },
+    {
+      "id": "true-grit",
+      "name": "True Grit",
+      "vendor": "Handshake",
+      "location": "Hunter's Paradise",
+      "alternate": "",
+      "types": [
+        "Side mission"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/True_Grit"
+    },
+    {
+      "id": "unattainable-luxury",
+      "name": "Unattainable Luxury",
+      "vendor": "Handshake",
+      "location": "Ban Pa",
+      "alternate": "",
+      "types": [
+        "Side mission"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Unattainable_Luxury"
+    },
+    {
+      "id": "uncanny-files",
+      "name": "Uncanny Files",
+      "vendor": "Lab Rat",
+      "location": "Fort Narith",
+      "alternate": "",
+      "types": [
+        "Unclassified"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Uncanny_Files"
+    },
+    {
+      "id": "under-our-noses",
+      "name": "Under Our Noses",
+      "vendor": "Gunny",
+      "location": "Lamang Island",
+      "alternate": "",
+      "types": [
+        "Unclassified"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Under_Our_Noses"
+    },
+    {
+      "id": "uninvited-guests",
+      "name": "Uninvited Guests",
+      "vendor": "Turncoat",
+      "location": "Ban Pa",
+      "alternate": "",
+      "types": [
+        "Unclassified"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Uninvited_Guests"
+    },
+    {
+      "id": "unlisted-flight",
+      "name": "Unlisted Flight",
+      "vendor": "Lab Rat",
+      "location": "Sawmill",
+      "alternate": "",
+      "types": [
+        "Main mission"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Unlisted_Flight"
+    },
+    {
+      "id": "unlra",
+      "name": "UNLRA",
+      "vendor": "Handshake",
+      "location": "Tiger Bay",
+      "alternate": "",
+      "types": [
+        "Unclassified"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/UNLRA"
+    },
+    {
+      "id": "unlra-ii",
+      "name": "UNLRA II",
+      "vendor": "Handshake",
+      "location": "Tiger Bay",
+      "alternate": "",
+      "types": [
+        "Unclassified"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/UNLRA_II"
+    },
+    {
+      "id": "unlra-iii",
+      "name": "UNLRA III",
+      "vendor": "Handshake",
+      "location": "Tiger Bay",
+      "alternate": "",
+      "types": [
+        "Unclassified"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/UNLRA_III"
+    },
+    {
+      "id": "unnameable",
+      "name": "Unnameable",
+      "vendor": "Gunny",
+      "location": "Tiger Bay",
+      "alternate": "",
+      "types": [
+        "Unclassified"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Unnameable"
+    },
+    {
+      "id": "unprotected",
+      "name": "Unprotected",
+      "vendor": "Lab Rat",
+      "location": "Kiu Vongsa , Nam Thaven , Pha Lang",
+      "alternate": "",
+      "types": [
+        "Side mission"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Unprotected"
+    },
+    {
+      "id": "unrefusable-offer",
+      "name": "Unrefusable Offer",
+      "vendor": "Handshake",
+      "location": "Lamang Island",
+      "alternate": "",
+      "types": [
+        "Unclassified"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Unrefusable_Offer"
+    },
+    {
+      "id": "unresponsive",
+      "name": "Unresponsive",
+      "vendor": "Gunny",
+      "location": "Kiu Vongsa , Nam Thaven , Pha Lang",
+      "alternate": "",
+      "types": [
+        "Hidden mission",
+        "Side mission"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Unresponsive"
+    },
+    {
+      "id": "unstable-meeting",
+      "name": "Unstable Meeting",
+      "vendor": "Banshee",
+      "location": "YBL-1",
+      "alternate": "",
+      "types": [
+        "Contract"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Unstable_Meeting"
+    },
+    {
+      "id": "up-the-stream",
+      "name": "Up the Stream",
+      "vendor": "Lab Rat",
+      "location": "Sawmill",
+      "alternate": "",
+      "types": [
+        "Side mission"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Up_the_Stream"
+    },
+    {
+      "id": "up-to-snuff",
+      "name": "Up to Snuff",
+      "vendor": "Handshake",
+      "location": "Hunter's Paradise",
+      "alternate": "A Shot in the Dark",
+      "types": [
+        "Side mission"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Up_to_Snuff"
+    },
+    {
+      "id": "victor-charlie-heritage",
+      "name": "Victor Charlie Heritage",
+      "vendor": "Gunny",
+      "location": "Hunter's Paradise",
+      "alternate": "",
+      "types": [
+        "Squad mission"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Victor_Charlie_Heritage"
+    },
+    {
+      "id": "wanted-man",
+      "name": "Wanted Man",
+      "vendor": "Gunny",
+      "location": "Fort Narith",
+      "alternate": "",
+      "types": [
+        "Unclassified"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Wanted_Man"
+    },
+    {
+      "id": "wanted-man-ii",
+      "name": "Wanted Man II",
+      "vendor": "Gunny",
+      "location": "Fort Narith",
+      "alternate": "",
+      "types": [
+        "Unclassified"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Wanted_Man_II"
+    },
+    {
+      "id": "warm-welcome",
+      "name": "Warm Welcome",
+      "vendor": "Turncoat",
+      "location": "Ban Pa",
+      "alternate": "",
+      "types": [
+        "Unclassified"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Warm_Welcome"
+    },
+    {
+      "id": "weapon-redistribution",
+      "name": "Weapon Redistribution",
+      "vendor": "Gunny",
+      "location": "Sawmill",
+      "alternate": "",
+      "types": [
+        "Squad mission"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Weapon_Redistribution"
+    },
+    {
+      "id": "weeding",
+      "name": "Weeding",
+      "vendor": "Handshake",
+      "location": "Midnight Sapphire",
+      "alternate": "",
+      "types": [
+        "Unclassified"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Weeding"
+    },
+    {
+      "id": "what-comes-up",
+      "name": "What Comes Up",
+      "vendor": "Handshake",
+      "location": "Pha Lang Airfield",
+      "alternate": "Too Close to the Sun",
+      "types": [
+        "Side mission"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/What_Comes_Up"
+    },
+    {
+      "id": "what-remains",
+      "name": "What Remains",
+      "vendor": "Lab Rat",
+      "location": "Tiger Bay",
+      "alternate": "",
+      "types": [
+        "Unclassified"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/What_Remains"
+    },
+    {
+      "id": "what-was-left",
+      "name": "What Was Left",
+      "vendor": "Banshee",
+      "location": "Blue Lagoon",
+      "alternate": "One Man's Trash",
+      "types": [
+        "Unclassified"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/What_Was_Left"
+    },
+    {
+      "id": "whats-in-store",
+      "name": "What's in Store",
+      "vendor": "Gunny",
+      "location": "Tiger Bay",
+      "alternate": "",
+      "types": [
+        "Unclassified"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/What's_in_Store"
+    },
+    {
+      "id": "whats-in-the-box",
+      "name": "What's in the Box",
+      "vendor": "Banshee",
+      "location": "Midnight Sapphire",
+      "alternate": "",
+      "types": [
+        "Unclassified"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/What's_in_the_Box"
+    },
+    {
+      "id": "when-a-tree-falls",
+      "name": "When a Tree Falls",
+      "vendor": "Artisan",
+      "location": "Sawmill",
+      "alternate": "",
+      "types": [
+        "Side mission"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/When_a_Tree_Falls"
+    },
+    {
+      "id": "whos-in-charge",
+      "name": "Who's In Charge",
+      "vendor": "Turncoat",
+      "location": "Fort Narith",
+      "alternate": "",
+      "types": [
+        "Unclassified"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Who's_In_Charge"
+    },
+    {
+      "id": "wing-clipping",
+      "name": "Wing Clipping",
+      "vendor": "Handshake",
+      "location": "Pha Lang Airfield",
+      "alternate": "",
+      "types": [
+        "Unclassified"
+      ],
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Wing_Clipping"
+    }
+  ],
+  "keys": [
+    {
+      "id": "a102-key",
+      "name": "A102 Key",
+      "type": "Key",
+      "usage": "Unlocks door A102 in Fort Narith",
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/A102_Key"
+    },
+    {
+      "id": "a103-key",
+      "name": "A103 Key",
+      "type": "Key",
+      "usage": "Unlocks door A103 in Fort Narith",
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/A103_Key"
+    },
+    {
+      "id": "a208-key",
+      "name": "A208 Key",
+      "type": "Key",
+      "usage": "Unlocks door A208 in Fort Narith barracks",
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/A208_Key"
+    },
+    {
+      "id": "a210-key",
+      "name": "A210 Key",
+      "type": "Key",
+      "usage": "Unlocks door A210 in Pha Lang",
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/A210_Key"
+    },
+    {
+      "id": "airport-storage-shed-key",
+      "name": "Airport Storage Shed Key",
+      "type": "Key",
+      "usage": "Unlocks door storage shed in Pha Lang Airfield",
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Airport_Storage_Shed_Key"
+    },
+    {
+      "id": "ban-khamphet-house-key",
+      "name": "Ban Khamphet House Key",
+      "type": "Key",
+      "usage": "Unlocks door XXX in Lamang Island",
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Ban_Khamphet_House_Key"
+    },
+    {
+      "id": "ban-pa-elders-house-key",
+      "name": "Ban Pa Elder's House Key",
+      "type": "Key",
+      "usage": "Unlocks door Elder House in Ban Pa",
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Ban_Pa_Elder's_House_Key"
+    },
+    {
+      "id": "ban-pa-elders-room-key",
+      "name": "Ban Pa Elder's Room Key",
+      "type": "Key",
+      "usage": "Unlocks door Elder Room in Pha Lang",
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Ban_Pa_Elder's_Room_Key"
+    },
+    {
+      "id": "ban-pa-fishing-hut-key",
+      "name": "Ban Pa Fishing Hut Key",
+      "type": "Key",
+      "usage": "Unlocks door Fishing Hut in Ban Pa",
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Ban_Pa_Fishing_Hut_Key"
+    },
+    {
+      "id": "ban-pa-warehouse-key",
+      "name": "Ban Pa Warehouse Key",
+      "type": "Key",
+      "usage": "Unlocks door Warehouse in Ban Pa",
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Ban_Pa_Warehouse_Key"
+    },
+    {
+      "id": "ban-phouphienge-room-key",
+      "name": "Ban Phouphienge Room Key",
+      "type": "Key",
+      "usage": "Unlocks a door on the top floor of a house in Ban Phouphienge",
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Ban_Phouphienge_Room_Key"
+    },
+    {
+      "id": "blue-lagoon-office-storage-key",
+      "name": "Blue Lagoon Office Storage Key",
+      "type": "Key",
+      "usage": "Unlocks door Office Storage in Blue Lagoon",
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Blue_Lagoon_Office_Storage_Key"
+    },
+    {
+      "id": "blue-lagoon-restaurant-storage-key",
+      "name": "Blue Lagoon Restaurant Storage Key",
+      "type": "Key",
+      "usage": "Unlocks door Storage room in Blue Lagoon",
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Blue_Lagoon_Restaurant_Storage_Key"
+    },
+    {
+      "id": "blue-lagoon-shack-key",
+      "name": "Blue Lagoon Shack Key",
+      "type": "Key",
+      "usage": "Unlocks door Shack in Blue Lagoon",
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Blue_Lagoon_Shack_Key"
+    },
+    {
+      "id": "c101-key",
+      "name": "C101 Key",
+      "type": "Key",
+      "usage": "Unlocks door C101 in Fort Narith",
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/C101_Key"
+    },
+    {
+      "id": "c108-key",
+      "name": "C108 Key",
+      "type": "Key",
+      "usage": "Unlocks door C108 in Fort Narith",
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/C108_Key"
+    },
+    {
+      "id": "cement-factory-storage-key",
+      "name": "Cement Factory Storage Key",
+      "type": "Key",
+      "usage": "Unlocks door cement factory storage in Tiger Bay",
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Cement_Factory_Storage_Key"
+    },
+    {
+      "id": "construction-site-storage-key",
+      "name": "Construction Site Storage Key",
+      "type": "Key",
+      "usage": "Unlocks door Storage in the Construction Site",
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Construction_Site_Storage_Key"
+    },
+    {
+      "id": "dongphou-hiking-camp-cottage-key",
+      "name": "Dongphou Hiking Camp Cottage Key",
+      "type": "Key",
+      "usage": "Unlocks door Cottage in the Hiking Camp, west of Pha Lang",
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Dongphou_Hiking_Camp_Cottage_Key"
+    },
+    {
+      "id": "fanny-paradise-office-key",
+      "name": "Fanny Paradise Office Key",
+      "type": "Key",
+      "usage": "Unlocks door manager's office in Fanny Paradise",
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Fanny_Paradise_Office_Key"
+    },
+    {
+      "id": "fort-narith-air-traffic-control-tower-key",
+      "name": "Fort Narith Air Traffic Control Tower Key",
+      "type": "Key",
+      "usage": "Unlocks door Control Tower in Fort Narith",
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Fort_Narith_Air_Traffic_Control_Tower_Key"
+    },
+    {
+      "id": "fort-narith-dumping-ground-storage-shed-key",
+      "name": "Fort Narith Dumping Ground Storage Shed Key",
+      "type": "Key",
+      "usage": "Unlocks door Storage Shed in Dumping Ground, Fort Narith",
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Fort_Narith_Dumping_Ground_Storage_Shed_Key"
+    },
+    {
+      "id": "fort-narith-garage-office-key",
+      "name": "Fort Narith Garage Office Key",
+      "type": "Key",
+      "usage": "Unlocks door garage office in Fort Narith",
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Fort_Narith_Garage_Office_Key"
+    },
+    {
+      "id": "fort-narith-hq-archive-key",
+      "name": "Fort Narith HQ Archive Key",
+      "type": "Key",
+      "usage": "Unlocks door Archives in Fort Narith",
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Fort_Narith_HQ_Archive_Key"
+    },
+    {
+      "id": "fort-narith-hq-reception-storage-key-card",
+      "name": "Fort Narith HQ Reception Storage Key Card",
+      "type": "Keycard",
+      "usage": "Unlocks door storage room in Fort Narith Headquarters.",
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Fort_Narith_HQ_Reception_Storage_Key_Card"
+    },
+    {
+      "id": "fort-narith-hq-storage-room-key",
+      "name": "Fort Narith HQ Storage Room Key",
+      "type": "Key",
+      "usage": "Unlocks door storage room in Pha Lang",
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Fort_Narith_HQ_Storage_Room_Key"
+    },
+    {
+      "id": "fort-narith-infirmary-icu-key",
+      "name": "Fort Narith Infirmary ICU Key",
+      "type": "Key",
+      "usage": "Unlocks door ICU in Fort Narith infirmary",
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Fort_Narith_Infirmary_ICU_Key"
+    },
+    {
+      "id": "fort-narith-motel-makeshift-armory-key",
+      "name": "Fort Narith Motel Makeshift Armory Key",
+      "type": "Key",
+      "usage": "Unlocks door motel room nearby Fort Narith",
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Fort_Narith_Motel_Makeshift_Armory_Key"
+    },
+    {
+      "id": "fort-narith-operations-room-key-card",
+      "name": "Fort Narith Operations Room Key Card",
+      "type": "Keycard",
+      "usage": "Unlocks door Operations Room in Fort Narith Headquarters.",
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Fort_Narith_Operations_Room_Key_Card"
+    },
+    {
+      "id": "fort-narith-outskirts-makeshift-armory-key",
+      "name": "Fort Narith Outskirts Makeshift Armory Key",
+      "type": "Key",
+      "usage": "Unlocks door bandit armory nearby Fort Narith",
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Fort_Narith_Outskirts_Makeshift_Armory_Key"
+    },
+    {
+      "id": "fort-narith-shooting-range-office-key",
+      "name": "Fort Narith Shooting Range Office Key",
+      "type": "Key",
+      "usage": "Unlocks door shooting range office in Fort Narith",
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Fort_Narith_Shooting_Range_Office_Key"
+    },
+    {
+      "id": "forth-narith-hq-comms-room-key",
+      "name": "Forth Narith HQ Comms Room Key",
+      "type": "Key",
+      "usage": "Unlocks door Comms room in Fort Narith",
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Forth_Narith_HQ_Comms_Room_Key"
+    },
+    {
+      "id": "golf-club-storage-key",
+      "name": "Golf Club Storage Key",
+      "type": "Key",
+      "usage": "Unlocks door storage room in Midnight Sapphire",
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Golf_Club_Storage_Key"
+    },
+    {
+      "id": "hangar-03-key",
+      "name": "Hangar 03 Key",
+      "type": "Key",
+      "usage": "Unlocks door Hangar 03 in Pha Lang Airfield",
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Hangar_03_Key"
+    },
+    {
+      "id": "hidden-fields-02-hut-key",
+      "name": "Hidden Fields 02 Hut Key",
+      "type": "Key",
+      "usage": "Unlocks door hut in north Hidden Poppy",
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Hidden_Fields_02_Hut_Key"
+    },
+    {
+      "id": "hidden-fields-03-hut-key",
+      "name": "Hidden Fields 03 Hut Key",
+      "type": "Key",
+      "usage": "Unlocks door hut in south Hidden Poppy Fields",
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Hidden_Fields_03_Hut_Key"
+    },
+    {
+      "id": "hotel-supply-closet-key-card",
+      "name": "Hotel Supply Closet Key Card",
+      "type": "Keycard",
+      "usage": "Unlocks door Supply Closet in Midnight Sapphire Hotel",
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Hotel_Supply_Closet_Key_Card"
+    },
+    {
+      "id": "house-by-the-pond-key",
+      "name": "House by the Pond Key",
+      "type": "Key",
+      "usage": "Unlocks door house in Tiger Bay outskirts",
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/House_by_the_Pond_Key"
+    },
+    {
+      "id": "hunter\u2019s-paradise-bunker-key",
+      "name": "Hunter\u2019s Paradise Bunker Key",
+      "type": "Key",
+      "usage": "Unlocks door bunker room in Hunter's Paradise",
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Hunter%E2%80%99s_Paradise_Bunker_Key"
+    },
+    {
+      "id": "hunters-paradise-makeshift-motel-armory-key",
+      "name": "Hunter's Paradise Makeshift Motel Armory Key",
+      "type": "Key",
+      "usage": "Unlocks door HP 104 in Hunter's Paradise",
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Hunter's_Paradise_Makeshift_Motel_Armory_Key"
+    },
+    {
+      "id": "hunters-paradise-motel-room-101-key",
+      "name": "Hunter's Paradise Motel Room 101 Key",
+      "type": "Key",
+      "usage": "Unlocks door HP 101 in Hunter's Paradise",
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Hunter's_Paradise_Motel_Room_101_Key"
+    },
+    {
+      "id": "hunter\u2019s-paradise-motel-room-101-key",
+      "name": "Hunter\u2019s Paradise Motel Room 101 Key",
+      "type": "Key",
+      "usage": "Unlocks door HP 101 in Hunter's Paradise",
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Hunter%E2%80%99s_Paradise_Motel_Room_101_Key"
+    },
+    {
+      "id": "hunters-paradise-motel-room-102-key",
+      "name": "Hunter's Paradise Motel Room 102 Key",
+      "type": "Key",
+      "usage": "Unlocks door HP 102 in Hunter's Paradise",
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Hunter's_Paradise_Motel_Room_102_Key"
+    },
+    {
+      "id": "hunters-paradise-shooting-lines-storage-key",
+      "name": "Hunter's Paradise Shooting Lines Storage Key",
+      "type": "Key",
+      "usage": "Unlocks door shooting lines storage in Hunter's Paradise",
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Hunter's_Paradise_Shooting_Lines_Storage_Key"
+    },
+    {
+      "id": "hunters-paradise-weapon-storage-key",
+      "name": "Hunter's Paradise Weapon Storage Key",
+      "type": "Key",
+      "usage": "",
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Hunter's_Paradise_Weapon_Storage_Key"
+    },
+    {
+      "id": "hunter\u2019s-paradise-weapon-storage-key",
+      "name": "Hunter\u2019s Paradise Weapon Storage Key",
+      "type": "Key",
+      "usage": "Unlocks door Weapon Storage in Hunter's Paradise",
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Hunter%E2%80%99s_Paradise_Weapon_Storage_Key"
+    },
+    {
+      "id": "inthavong-farm-shed-key",
+      "name": "Inthavong Farm Shed Key",
+      "type": "Key",
+      "usage": "Unlocks door storage shed in Inthavong farm",
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Inthavong_Farm_Shed_Key"
+    },
+    {
+      "id": "keys",
+      "name": "Keys",
+      "type": "Keycard",
+      "usage": "",
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Keys"
+    },
+    {
+      "id": "khamhao-rice-depot-room-key",
+      "name": "Khamhao Rice Depot Room Key",
+      "type": "Key",
+      "usage": "Unlocks door Depot Room in Khamhao Rice Depot",
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Khamhao_Rice_Depot_Room_Key"
+    },
+    {
+      "id": "khonwan-village-house-key",
+      "name": "Khonwan Village House Key",
+      "type": "Key",
+      "usage": "Unlocks door house in Khonwa Village",
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Khonwan_Village_House_Key"
+    },
+    {
+      "id": "kiu-vongsa-doctors-office-key",
+      "name": "Kiu Vongsa Doctor's Office Key",
+      "type": "Key",
+      "usage": "Unlocks door Doctor's office in Kiu Vongsa",
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Kiu_Vongsa_Doctor's_Office_Key"
+    },
+    {
+      "id": "kiu-vongsa-lumberyard-maintenance-room-key",
+      "name": "Kiu Vongsa Lumberyard Maintenance Room Key",
+      "type": "Key",
+      "usage": "Unlocks door lumberyard maintenance in Kiu Vongsa",
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Kiu_Vongsa_Lumberyard_Maintenance_Room_Key"
+    },
+    {
+      "id": "kiu-vongsa-marketplace-broom-closet-key",
+      "name": "Kiu Vongsa Marketplace Broom Closet Key",
+      "type": "Key",
+      "usage": "Unlocks door marketplace broom closet in Kiu Vongsa",
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Kiu_Vongsa_Marketplace_Broom_Closet_Key"
+    },
+    {
+      "id": "kiu-vongsa-marketplace-office-key",
+      "name": "Kiu Vongsa Marketplace Office Key",
+      "type": "Key",
+      "usage": "Unlocks door Marketplace Office in Kiu Vongsa",
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Kiu_Vongsa_Marketplace_Office_Key"
+    },
+    {
+      "id": "kiu-vongsa-marketplace-storeroom-key",
+      "name": "Kiu Vongsa Marketplace Storeroom Key",
+      "type": "Key",
+      "usage": "Unlocks door marketplace storeroom in Kiu Vongsa",
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Kiu_Vongsa_Marketplace_Storeroom_Key"
+    },
+    {
+      "id": "kiu-vongsa-mayors-mansion-room-key",
+      "name": "Kiu Vongsa Mayor's Mansion Room Key",
+      "type": "Key",
+      "usage": "Unlocks door Mayor Room in Kiu Vongsa mayor's mansion.",
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Kiu_Vongsa_Mayor's_Mansion_Room_Key"
+    },
+    {
+      "id": "kiu-vongsa-motel-room-key",
+      "name": "Kiu Vongsa Motel Room Key",
+      "type": "Key",
+      "usage": "Unlocks door motel room in Kiu Vongsa",
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Kiu_Vongsa_Motel_Room_Key"
+    },
+    {
+      "id": "kiu-vongsa-occupied-villa-bedroom-key",
+      "name": "Kiu Vongsa Occupied Villa Bedroom Key",
+      "type": "Key",
+      "usage": "Unlocks door occupied villa bedroom in Kiu Vongsa",
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Kiu_Vongsa_Occupied_Villa_Bedroom_Key"
+    },
+    {
+      "id": "kiu-vongsa-restaurant-storage-key",
+      "name": "Kiu Vongsa Restaurant Storage Key",
+      "type": "Key",
+      "usage": "Unlocks door attic storage in Kiu Vongsa",
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Kiu_Vongsa_Restaurant_Storage_Key"
+    },
+    {
+      "id": "kiu-vongsa-town-hall-finance-department-key-card",
+      "name": "Kiu Vongsa Town Hall Finance Department Key Card",
+      "type": "Keycard",
+      "usage": "Unlocks door Finance Department in Kiu Vongsa Town Hall",
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Kiu_Vongsa_Town_Hall_Finance_Department_Key_Card"
+    },
+    {
+      "id": "kiu-vongsa-unlra-office-key",
+      "name": "Kiu Vongsa UNLRA Office Key",
+      "type": "Key",
+      "usage": "Unlocks door UNLRA Office in Kiu Vongsa",
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Kiu_Vongsa_UNLRA_Office_Key"
+    },
+    {
+      "id": "laf-radio-tower-room-key",
+      "name": "LAF Radio Tower Room Key",
+      "type": "Key",
+      "usage": "Unlocks door Radio Tower Room on Lamang Island",
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/LAF_Radio_Tower_Room_Key"
+    },
+    {
+      "id": "makeshift-bandit-lookout-key",
+      "name": "Makeshift Bandit Lookout Key",
+      "type": "Key",
+      "usage": "Unlocks door Bandit Lookout in Tiger Bay",
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Makeshift_Bandit_Lookout_Key"
+    },
+    {
+      "id": "midnight-sapphire-employee-housing-office-key",
+      "name": "Midnight Sapphire Employee Housing Office Key",
+      "type": "Key",
+      "usage": "Unlocks door Employee housing office in Midnight Sapphire",
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Midnight_Sapphire_Employee_Housing_Office_Key"
+    },
+    {
+      "id": "midnight-sapphire-hotel-\"party-room\"-key",
+      "name": "Midnight Sapphire Hotel \"Party Room\" Key",
+      "type": "Key",
+      "usage": "Unlocks Party Room door in the Midnight Sapphire Hotel",
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Midnight_Sapphire_Hotel_%22Party_Room%22_Key"
+    },
+    {
+      "id": "midnight-sapphire-hotel-office-key",
+      "name": "Midnight Sapphire Hotel Office Key",
+      "type": "Key",
+      "usage": "Unlocks door office in Midnight Sapphire",
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Midnight_Sapphire_Hotel_Office_Key"
+    },
+    {
+      "id": "nam-thaven-doctors-office-key",
+      "name": "Nam Thaven Doctor's Office Key",
+      "type": "Key",
+      "usage": "Unlocks door doctor's office in Nam Thaven",
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Nam_Thaven_Doctor's_Office_Key"
+    },
+    {
+      "id": "nam-thaven-lumberyard-maintenance-room-key",
+      "name": "Nam Thaven Lumberyard Maintenance Room Key",
+      "type": "Key",
+      "usage": "Unlocks door lumberyard maintenance in Nam Thaven",
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Nam_Thaven_Lumberyard_Maintenance_Room_Key"
+    },
+    {
+      "id": "nam-thaven-marketplace-broom-closet-key",
+      "name": "Nam Thaven Marketplace Broom Closet Key",
+      "type": "Key",
+      "usage": "Unlocks door marketplace broom closet in Pha Lang",
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Nam_Thaven_Marketplace_Broom_Closet_Key"
+    },
+    {
+      "id": "nam-thaven-marketplace-office-key",
+      "name": "Nam Thaven Marketplace Office Key",
+      "type": "Key",
+      "usage": "Unlocks door marketplace office in Pha Lang",
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Nam_Thaven_Marketplace_Office_Key"
+    },
+    {
+      "id": "nam-thaven-marketplace-storeroom-key",
+      "name": "Nam Thaven Marketplace Storeroom Key",
+      "type": "Key",
+      "usage": "Unlocks door marketplace storeroom in Nam Thaven",
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Nam_Thaven_Marketplace_Storeroom_Key"
+    },
+    {
+      "id": "nam-thaven-motel-room-key",
+      "name": "Nam Thaven Motel Room Key",
+      "type": "Key",
+      "usage": "Unlocks door motel room in Nam Thaven",
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Nam_Thaven_Motel_Room_Key"
+    },
+    {
+      "id": "nam-thaven-occupied-villa-bedroom-key",
+      "name": "Nam Thaven Occupied Villa Bedroom Key",
+      "type": "Key",
+      "usage": "Unlocks door occupied villa bedroom in Nam Thaven",
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Nam_Thaven_Occupied_Villa_Bedroom_Key"
+    },
+    {
+      "id": "nam-thaven-restaurant-storage-key",
+      "name": "Nam Thaven Restaurant Storage Key",
+      "type": "Key",
+      "usage": "Unlocks door Attic Storage in Nam Thaven",
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Nam_Thaven_Restaurant_Storage_Key"
+    },
+    {
+      "id": "nam-thaven-town-hall-finance-department-key-card",
+      "name": "Nam Thaven Town Hall Finance Department Key Card",
+      "type": "Keycard",
+      "usage": "Unlocks door Finance Department in Nam Thaven Town Hall",
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Nam_Thaven_Town_Hall_Finance_Department_Key_Card"
+    },
+    {
+      "id": "nam-thaven-unlra-office-key",
+      "name": "Nam Thaven UNLRA Office Key",
+      "type": "Key",
+      "usage": "Unlocks door UNLRA office in Nam Thaven",
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Nam_Thaven_UNLRA_Office_Key"
+    },
+    {
+      "id": "pha-lang-airfield-meeting-room-key",
+      "name": "Pha Lang Airfield Meeting Room Key",
+      "type": "Key",
+      "usage": "Unlocks door meeting room in Pha Lang Airfield",
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Pha_Lang_Airfield_Meeting_Room_Key"
+    },
+    {
+      "id": "pha-lang-airfield-storage-office-key",
+      "name": "Pha Lang Airfield Storage Office Key",
+      "type": "Key",
+      "usage": "Unlocks door office room in Pha Lang Airfield",
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Pha_Lang_Airfield_Storage_Office_Key"
+    },
+    {
+      "id": "pha-lang-doctors-office-key",
+      "name": "Pha Lang Doctor's Office Key",
+      "type": "Key",
+      "usage": "Unlocks door Doctor's Office in Pha Lang",
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Pha_Lang_Doctor's_Office_Key"
+    },
+    {
+      "id": "pha-lang-lumberyard-maintenance-room-key",
+      "name": "Pha Lang Lumberyard Maintenance Room Key",
+      "type": "Key",
+      "usage": "Unlocks door lumberyard maintenance room in Pha Lang",
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Pha_Lang_Lumberyard_Maintenance_Room_Key"
+    },
+    {
+      "id": "pha-lang-marketplace-broom-closet-key",
+      "name": "Pha Lang Marketplace Broom Closet Key",
+      "type": "Key",
+      "usage": "Unlocks door marketplace broom closet in Pha Lang",
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Pha_Lang_Marketplace_Broom_Closet_Key"
+    },
+    {
+      "id": "pha-lang-marketplace-office-key",
+      "name": "Pha Lang Marketplace Office Key",
+      "type": "Key",
+      "usage": "Unlocks door Attic Storage in Pha Lang",
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Pha_Lang_Marketplace_Office_Key"
+    },
+    {
+      "id": "pha-lang-marketplace-storeroom-key",
+      "name": "Pha Lang Marketplace Storeroom Key",
+      "type": "Key",
+      "usage": "Unlocks door marketplace storeroom in Pha Lang",
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Pha_Lang_Marketplace_Storeroom_Key"
+    },
+    {
+      "id": "pha-lang-motel-room-key",
+      "name": "Pha Lang Motel Room Key",
+      "type": "Key",
+      "usage": "Unlocks door motel room in Pha Lang",
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Pha_Lang_Motel_Room_Key"
+    },
+    {
+      "id": "pha-lang-occupied-villa-bedroom-key",
+      "name": "Pha Lang Occupied Villa Bedroom Key",
+      "type": "Key",
+      "usage": "Unlocks door occupied villa bedroom in Pha Lang",
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Pha_Lang_Occupied_Villa_Bedroom_Key"
+    },
+    {
+      "id": "pha-lang-restaurant-storage-key",
+      "name": "Pha Lang Restaurant Storage Key",
+      "type": "Key",
+      "usage": "Unlocks door Attic Storage in Pha Lang",
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Pha_Lang_Restaurant_Storage_Key"
+    },
+    {
+      "id": "pha-lang-town-hall-finance-department-key-card",
+      "name": "Pha Lang Town Hall Finance Department Key Card",
+      "type": "Keycard",
+      "usage": "Unlocks door Finance Department in Pha Lang Town Hall",
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Pha_Lang_Town_Hall_Finance_Department_Key_Card"
+    },
+    {
+      "id": "pha-lang-unlra-office-key",
+      "name": "Pha Lang UNLRA Office Key",
+      "type": "Key",
+      "usage": "Unlocks door UNLRA office in Pha Lang",
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Pha_Lang_UNLRA_Office_Key"
+    },
+    {
+      "id": "phouarun-restaurant-attic-room-key",
+      "name": "Phouarun Restaurant Attic Room Key",
+      "type": "Key",
+      "usage": "Unlocks door Attic Storage in Phouarun Restaurant",
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Phouarun_Restaurant_Attic_Room_Key"
+    },
+    {
+      "id": "phousai-village-house-key",
+      "name": "Phousai Village House Key",
+      "type": "Key",
+      "usage": "Unlocks door Attic Storage in Pha Lang",
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Phousai_Village_House_Key"
+    },
+    {
+      "id": "pier-storage-key",
+      "name": "Pier Storage Key",
+      "type": "Key",
+      "usage": "Unlocks door pier storage in Tiger Bay",
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Pier_Storage_Key"
+    },
+    {
+      "id": "pla-shed",
+      "name": "PLA Shed",
+      "type": "Key",
+      "usage": "",
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/PLA_Shed"
+    },
+    {
+      "id": "sawmill-office-key",
+      "name": "Sawmill Office Key",
+      "type": "Key",
+      "usage": "Unlocks door Sawmill Office in Sawmill",
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Sawmill_Office_Key"
+    },
+    {
+      "id": "sawmill-office-storage-room-key",
+      "name": "Sawmill Office Storage Room Key",
+      "type": "Key",
+      "usage": "Unlocks door office storage room in Sawmill",
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Sawmill_Office_Storage_Room_Key"
+    },
+    {
+      "id": "sawmill-storage-shed-key",
+      "name": "Sawmill Storage Shed Key",
+      "type": "Key",
+      "usage": "Unlocks door storage shed in Sawmill",
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Sawmill_Storage_Shed_Key"
+    },
+    {
+      "id": "sawmill-toilet-key",
+      "name": "Sawmill Toilet Key",
+      "type": "Key",
+      "usage": "Unlocks door toilets in Sawmill",
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Sawmill_Toilet_Key"
+    },
+    {
+      "id": "sc-case",
+      "name": "SC Case",
+      "type": "Key",
+      "usage": "",
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/SC_Case"
+    },
+    {
+      "id": "school-room-key",
+      "name": "School Room Key",
+      "type": "Key",
+      "usage": "Unlocks door school room on Lamang Island",
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/School_Room_Key"
+    },
+    {
+      "id": "siang-radio-station-room-key",
+      "name": "Siang Radio Station Room Key",
+      "type": "Key",
+      "usage": "Unlocks door Radio Station room in Siang Radio Station.",
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Siang_Radio_Station_Room_Key"
+    },
+    {
+      "id": "small-marketplace-house-key",
+      "name": "Small Marketplace House Key",
+      "type": "Key",
+      "usage": "Unlocks door marketplace house on Lamang Island",
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Small_Marketplace_House_Key"
+    },
+    {
+      "id": "sunset-chalet-cottage-key",
+      "name": "Sunset Chalet Cottage Key",
+      "type": "Key",
+      "usage": "Unlocks door Sunset Chalet Cottage at Sunset Chalet in Hunter's Paradise region.",
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Sunset_Chalet_Cottage_Key"
+    },
+    {
+      "id": "sunset-chalet-firearms-case-key",
+      "name": "Sunset Chalet Firearms Case Key",
+      "type": "Key",
+      "usage": "Unlocks container sunset chalet case at Sunset Chalet",
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Sunset_Chalet_Firearms_Case_Key"
+    },
+    {
+      "id": "tiger-bay-central-armory-card",
+      "name": "Tiger Bay Central Armory Card",
+      "type": "Key",
+      "usage": "Unlocks door armory in Tiger Bay Central",
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Tiger_Bay_Central_Armory_Card"
+    },
+    {
+      "id": "tiger-bay-outskirts-garage-key",
+      "name": "Tiger Bay Outskirts Garage Key",
+      "type": "Key",
+      "usage": "Unlocks door garage southwest of Tiger Bay",
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Tiger_Bay_Outskirts_Garage_Key"
+    },
+    {
+      "id": "tiger-bay-trade-depot-office-key",
+      "name": "Tiger Bay Trade Depot Office Key",
+      "type": "Key",
+      "usage": "Unlocks door Trade Depot Office in Tiger Bay",
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Tiger_Bay_Trade_Depot_Office_Key"
+    },
+    {
+      "id": "toto-hardware-storage-key",
+      "name": "Toto Hardware Storage Key",
+      "type": "Key",
+      "usage": "Unlocks door Hardware Storage in Tiger Bay Central",
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Toto_Hardware_Storage_Key"
+    },
+    {
+      "id": "turncoats-house-key",
+      "name": "Turncoat's House Key",
+      "type": "Key",
+      "usage": "Unlocks door bedroom in Nakasa village",
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Turncoat's_House_Key"
+    },
+    {
+      "id": "unlra-equipment-container-key",
+      "name": "UNLRA Equipment Container Key",
+      "type": "Key",
+      "usage": "Unlocks door equipment shipping container in Tiger Bay",
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/UNLRA_Equipment_Container_Key"
+    },
+    {
+      "id": "unlra-hq-office-key-card",
+      "name": "UNLRA HQ Office Key Card",
+      "type": "Keycard",
+      "usage": "Unlocks door office in Tiger Bay UNLRA HQ.",
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/UNLRA_HQ_Office_Key_Card"
+    },
+    {
+      "id": "unlra-medical-container-key",
+      "name": "UNLRA Medical Container Key",
+      "type": "Key",
+      "usage": "Unlocks door medical shipping container in Tiger Bay",
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/UNLRA_Medical_Container_Key"
+    },
+    {
+      "id": "unlra-quarantine-key",
+      "name": "UNLRA Quarantine Key",
+      "type": "Key",
+      "usage": "Unlocks door UNLRA quarantine container in Tiger Bay",
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/UNLRA_Quarantine_Key"
+    },
+    {
+      "id": "unrla-dorm-container-key",
+      "name": "UNRLA Dorm Container Key",
+      "type": "Key",
+      "usage": "",
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/UNRLA_Dorm_Container_Key"
+    },
+    {
+      "id": "unter\u2019s-paradise-motel-room-102-key",
+      "name": "Unter\u2019s Paradise Motel Room 102 Key",
+      "type": "Key",
+      "usage": "Unlocks door HP 102 in Hunter's Paradise",
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Unter%E2%80%99s_Paradise_Motel_Room_102_Key"
+    },
+    {
+      "id": "villa-anna-jana-key",
+      "name": "Villa Anna Jana Key",
+      "type": "Key",
+      "usage": "Unlocks door Villa Anna Jana in Midnight Sapphire",
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Villa_Anna_Jana_Key"
+    },
+    {
+      "id": "villa-elena-garage-key",
+      "name": "Villa Elena Garage Key",
+      "type": "Key",
+      "usage": "Unlocks door Villa Elena Garage in Midnight Sapphire",
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Villa_Elena_Garage_Key"
+    },
+    {
+      "id": "villa-katherine-key",
+      "name": "Villa Katherine Key",
+      "type": "Key",
+      "usage": "Unlocks door Villa Katherine in Midnight Sapphire",
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Villa_Katherine_Key"
+    },
+    {
+      "id": "villa-luisa-key",
+      "name": "Villa Luisa Key",
+      "type": "Key",
+      "usage": "Unlocks door Villa Luisa in Midnight Sapphire",
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Villa_Luisa_Key"
+    },
+    {
+      "id": "villa-lusia-key",
+      "name": "Villa Lusia Key",
+      "type": "Key",
+      "usage": "",
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Villa_Lusia_Key"
+    },
+    {
+      "id": "villa-marta-monica-garage-key",
+      "name": "Villa Marta Monica Garage Key",
+      "type": "Key",
+      "usage": "Unlocks door Marta Monica Garage in Midnight Sapphire",
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Villa_Marta_Monica_Garage_Key"
+    },
+    {
+      "id": "villa-vongphet-room-key",
+      "name": "Villa Vongphet Room Key",
+      "type": "Key",
+      "usage": "Unlocks door villa vongphet room on Lamang Island",
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/Villa_Vongphet_Room_Key"
+    },
+    {
+      "id": "ybl-1-bedroom-key",
+      "name": "YBL-1 Bedroom Key",
+      "type": "Key",
+      "usage": "Unlocks door Bedroom in YBL-1",
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/YBL-1_Bedroom_Key"
+    },
+    {
+      "id": "ybl-1-corridor-d-storage-room-key",
+      "name": "YBL-1 Corridor D Storage Room Key",
+      "type": "Key",
+      "usage": "Unlocks door Corridor D Storage in YBL-1",
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/YBL-1_Corridor_D_Storage_Room_Key"
+    },
+    {
+      "id": "ybl-1-generator-room-key",
+      "name": "YBL-1 Generator Room Key",
+      "type": "Key",
+      "usage": "Unlocks door generator room in YBL-1",
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/YBL-1_Generator_Room_Key"
+    },
+    {
+      "id": "ybl-1-maintenance-door-key",
+      "name": "YBL-1 Maintenance Door Key",
+      "type": "Key",
+      "usage": "Unlocks door Maintenance door in YBL-1",
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/YBL-1_Maintenance_Door_Key"
+    },
+    {
+      "id": "ybl-1-office-02-key",
+      "name": "YBL-1 Office 02 Key",
+      "type": "Key",
+      "usage": "Unlocks door Office-2 in YBL-1",
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/YBL-1_Office_02_Key"
+    },
+    {
+      "id": "ybl-1-office-key-01",
+      "name": "YBL-1 Office Key 01",
+      "type": "Key",
+      "usage": "Unlocks door Office-1 in YBL-1",
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/YBL-1_Office_Key_01"
+    },
+    {
+      "id": "ybl-1-weapon-storage-key",
+      "name": "YBL-1 Weapon Storage Key",
+      "type": "Key",
+      "usage": "Unlocks door weapon storage in YBL-1",
+      "sourceUrl": "https://gray-zone-warfare.fandom.com/wiki/YBL-1_Weapon_Storage_Key"
+    }
+  ],
+  "counts": {
+    "tasks": 249,
+    "main_task": 26,
+    "side_task": 96,
+    "hidden_task": 7,
+    "contract": 26,
+    "squad_strike_missions": 32,
+    "keys": 126,
+    "keycards": 8
+  },
+  "fingerprint": "dd70c273cab5632651a4ac1eca4a360e5dd5632d5d8a91f6625c01ec9023a7cd",
+  "schema": 1,
+  "feed": "gzw-data",
+  "fetchedAt": "2026-09-06T22:28:13.724Z"
+}

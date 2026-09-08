@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<feed xmlns:yt="http://www.youtube.com/xml/schemas/2015" xmlns:media="http://search.yahoo.com/mrss/" xmlns="http://www.w3.org/2005/Atom">
+ <link rel="self" href="http://www.youtube.com/feeds/videos.xml?channel_id=UCvqRdlKsE5Q8mf8YXbdIJLw"/>
+ <id>yt:channel:vqRdlKsE5Q8mf8YXbdIJLw</id>
+ <yt:channelId>vqRdlKsE5Q8mf8YXbdIJLw</yt:channelId>
+ <title>LoL Esports</title>
+ <link rel="alternate" href="https://www.youtube.com/channel/UCvqRdlKsE5Q8mf8YXbdIJLw"/>
+ <author>
+  <name>LoL Esports</name>
+  <uri>https://www.youtube.com/channel/UCvqRdlKsE5Q8mf8YXbdIJLw</uri>
+ </author>
+ <published>2012-09-27T22:35:21+00:00</published>
+ <entry><yt:videoId>d2TFD2Wo-tE</yt:videoId><yt:channelId>UCvqRdlKsE5Q8mf8YXbdIJLw</yt:channelId><title>BLG guys smurfing the League Classic Geoguessr challenge 📍</title><published>2026-09-06T03:00:03+00:00</published><link rel="alternate" href="https://www.youtube.com/shorts/d2TFD2Wo-tE"/></entry><entry><yt:videoId>qgFRpLiFp1U</yt:videoId><yt:channelId>UCvqRdlKsE5Q8mf8YXbdIJLw</yt:channelId><title>Name a better Lee Sin, we'll wait...</title><published>2026-09-05T15:00:21+00:00</published><link rel="alternate" href="https://www.youtube.com/shorts/qgFRpLiFp1U"/></entry></feed>

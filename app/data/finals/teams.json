@@ -1,0 +1,89 @@
+{
+  "season": 11,
+  "reviewedPatch": "11.7.0",
+  "reviewedAt": "2026-09-06",
+  "methodology": "Composition picks are supported by Season 11 creator coverage and community guides. The equipment below combines current source loadouts for each role; it is not a claimed copy of the video\u2019s exact gear. Composition choices require review after balance changes.",
+  "sourceUrls": [
+    "https://thefinalsloadout.com/loadouts",
+    "https://thefinalsloadout.com/specializations",
+    "https://thefinalsloadout.com/gadgets"
+  ],
+  "teams": [
+    {
+      "id": "hhm",
+      "name": "Double Heavy + healer",
+      "comp": "H \u00b7 H \u00b7 M",
+      "tag": "CASHOUT DEFENSE",
+      "description": "Two Heavies hold space while the Medium heals and revives. Alternate Dome Shields and avoid leaving the healer exposed.",
+      "tradeoff": "Less mobility. Wide flanks and isolated fights can pull the team apart.",
+      "players": [
+        {
+          "className": "Heavy",
+          "build": "mesh-fortress",
+          "role": "Shield anchor",
+          "task": "Hold the contested angle with Mesh Shield. Make space for the Medium to heal and revive.",
+          "weapon": "Lewis Gun"
+        },
+        {
+          "className": "Heavy",
+          "build": "winch-aggro",
+          "role": "Frontline initiator",
+          "task": "Control the cashout approach with Winch Claw. Commit when your anchor and healer are in range.",
+          "weapon": "SA1216"
+        },
+        {
+          "className": "Medium",
+          "build": "fcar-aggro",
+          "role": "Sustain & revive",
+          "task": "Stay a step behind the Heavies. Preserve Defibrillator for a recoverable revive and use Jump Pad for team rotations.",
+          "weapon": "FCAR"
+        }
+      ],
+      "evidence": {
+        "title": "HHM Is The New META Ranked Comp In S11",
+        "creator": "commit",
+        "url": "https://www.youtube.com/watch?v=Jz73hjvpl_A",
+        "publishedAt": "2026-07-12",
+        "note": "Also supported by the community\u2019s patch 11.7 specialization and gadget guides."
+      }
+    },
+    {
+      "id": "hml",
+      "name": "Heavy + Medium + Light",
+      "comp": "H \u00b7 M \u00b7 L",
+      "tag": "MOBILITY & SUPPORT",
+      "description": "Heavy takes the objective fight, Medium provides healing and revives, and Light supplies Gateway and disruption.",
+      "tradeoff": "The Light is vulnerable alone. Gateway positioning and synchronized engagements matter more than chasing eliminations.",
+      "players": [
+        {
+          "className": "Heavy",
+          "build": "winch-aggro",
+          "role": "Cashout pressure",
+          "task": "Take the close objective fight after the Light creates an opening. Cover the Medium with Dome Shield.",
+          "weapon": "ShAK-50"
+        },
+        {
+          "className": "Medium",
+          "build": "fcar-aggro",
+          "role": "Team sustain",
+          "task": "Support the Heavy, keep a safe revive lane, and call when the team needs to reset.",
+          "weapon": "FCAR"
+        },
+        {
+          "className": "Light",
+          "build": "cloak-recon",
+          "role": "Route & disruption",
+          "task": "Prepare Gateway for entry or escape. Use Glitch Grenade to disrupt the hold and H+ Infuser for timely support.",
+          "weapon": "XP-54"
+        }
+      ],
+      "evidence": {
+        "title": "HML Domination In Season 11 Ranked",
+        "creator": "commit",
+        "url": "https://www.youtube.com/watch?v=1akZyd8wgM8",
+        "publishedAt": "2026-07-22",
+        "note": "A demonstrated Season 11 ranked composition. No measured team win-rate ranking is available."
+      }
+    }
+  ]
+}

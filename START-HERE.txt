@@ -1,0 +1,23 @@
+DROPZONE 1.2.2 — WINDOWS x64
+
+INSTALL
+Run Dropzone-Setup-1.2.2-x64.exe. Existing app profiles are preserved.
+Publish the setup EXE, blockmap and latest.yml to GitHub release v1.2.2 for
+installed users to receive it through App updates. Installer is unsigned.
+
+GRAY ZONE WARFARE
+Under construction. GZW tools and background refreshes are disabled.
+Existing local progress is preserved.
+
+RAINBOW SIX SIEGE
+Map picks offers attack/defense lineups and ban suggestions. Pick & ban rates
+separates official PC and console snapshots. Operators supports role/search
+filters. Patch notes and Videos have their own game tabs.
+Official feeds refresh on launch and every 15 minutes. Guides download from
+Dropzone's website without a rebuild; tactical advice needs manual review.
+No verified live per-map ranked rates are available. Charts show their actual
+measured patch and publication date. Failed refreshes retain saved data.
+
+VALIDATION
+Automated data/behavior tests and packaging checks are documented in
+VALIDATION.md. Native Windows visual/upgrade confirmation is still needed.

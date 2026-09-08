@@ -1,0 +1,75 @@
+{
+  "game": "gray-zone",
+  "source": "MADFINGER Games",
+  "sourceUrl": "https://store.steampowered.com/news/app/2479810",
+  "sourceUpdatedAt": "2026-09-03T18:19:44.000Z",
+  "articles": [
+    {
+      "title": "Gray Zone Warfare Enters Alpha This Fall",
+      "publishedAt": "2026-09-03T18:19:44.000Z",
+      "dateLabel": "Published",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1842846814444292",
+      "excerpt": "Hey, everyone, This fall , Gray Zone Warfare officially enters the Alpha stage of development. The next major milestone, Update\u2026",
+      "kind": "Announcement"
+    },
+    {
+      "title": "Get Gray Zone Warfare Now at 30% Off",
+      "publishedAt": "2026-09-01T17:00:51.000Z",
+      "dateLabel": "Published",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1842212951314148",
+      "excerpt": "Hey, everyone, Deploy to Lamang now with 30% off ! To celebrate the first-ever FPS Games Show , all Gray\u2026",
+      "kind": "Announcement"
+    },
+    {
+      "title": "Update 0.5 Sneak Peeks Revealed at Gamescom | Dev Stream VOD",
+      "publishedAt": "2026-09-01T15:45:45.000Z",
+      "dateLabel": "Published",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1842212951313854",
+      "excerpt": "Hey, everyone, Catch up on the latest Gray Zone Warfare news shared during Gamescom 2026 and get a sneak peek\u2026",
+      "kind": "Patch notes"
+    },
+    {
+      "title": "Hotfix 0.4.7.3 Now Live - Changelog",
+      "publishedAt": "2026-08-31T09:22:40.000Z",
+      "dateLabel": "Published",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1842212951309652",
+      "excerpt": "Hey, everyone, We have deployed Hotfix 0.4.7.3 to the live servers. If the update does not appear automatically, please restart\u2026",
+      "kind": "Patch notes"
+    },
+    {
+      "title": "Join us for the Gamescom Stream",
+      "publishedAt": "2026-08-21T15:25:55.000Z",
+      "dateLabel": "Published",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1841579228669172",
+      "excerpt": "Hello, everyone, We are bringing you right into the heart of Gamescom in Cologne, Germany . Tune in next Friday\u2026",
+      "kind": "Announcement"
+    },
+    {
+      "title": "Tune In for the First-Ever FPS Games Show, Featuring GZW and 15 More FPS Titles",
+      "publishedAt": "2026-08-19T13:01:45.000Z",
+      "dateLabel": "Published",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1841579228662520",
+      "excerpt": "Hey, everyone, The FPS Games Show , a brand-new showcase dedicated entirely to first-person shooters , will debut live on\u2026",
+      "kind": "Announcement"
+    },
+    {
+      "title": "Hotfix 0.4.7.2 Now Live - Changelog",
+      "publishedAt": "2026-08-18T09:01:15.000Z",
+      "dateLabel": "Published",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1840944183788224",
+      "excerpt": "Hey, everyone, We have deployed Hotfix 0.4.7.2 to the live servers. If the update does not appear automatically, please restart\u2026",
+      "kind": "Patch notes"
+    },
+    {
+      "title": "Arma Creative Director Ivan Buchta Joins the Gray Zone Warfare Team",
+      "publishedAt": "2026-08-13T14:00:51.000Z",
+      "dateLabel": "Published",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1840944183776865",
+      "excerpt": "Hey, everyone, We\u2019re excited to welcome a great new addition to our team: Ivan Buchta, who joins our studio as\u2026",
+      "kind": "Announcement"
+    }
+  ],
+  "schema": 1,
+  "feed": "patches-gray-zone",
+  "fetchedAt": "2026-09-06T22:34:00.546Z"
+}

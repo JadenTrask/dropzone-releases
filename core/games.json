@@ -1,0 +1,185 @@
+[
+  {
+    "id": "cod",
+    "parent": null,
+    "kind": "collection",
+    "name": "Call of Duty",
+    "shortName": "Call of Duty",
+    "eyebrow": "CALL OF DUTY",
+    "description": "Black Ops 7, Warzone, and Modern Warfare 4.",
+    "theme": "cod",
+    "accent": "#ff9b54",
+    "cover": "assets/games/cod.webp",
+    "status": "active",
+    "childPrompt": "Choose your Call of Duty"
+  },
+  {
+    "id": "lol",
+    "parent": null,
+    "kind": "league",
+    "name": "League of Legends",
+    "shortName": "League",
+    "eyebrow": "LEAGUE OF LEGENDS",
+    "description": "Champion builds, runes, and game modes.",
+    "theme": "league",
+    "accent": "#d9bc81",
+    "cover": "assets/splashes/Ahri.jpg",
+    "status": "active"
+  },
+  {
+    "id": "siege",
+    "kind": "siege",
+    "name": "Rainbow Six Siege",
+    "shortName": "SIEGE",
+    "eyebrow": "RANKED",
+    "description": "Map picks, bans, operator roles and official ranked stats.",
+    "theme": "siege",
+    "accent": "#f0cf65",
+    "cover": "assets/games/siege.jpg",
+    "status": "active",
+    "modes": [],
+    "videos": true
+  },
+  {
+    "id": "finals",
+    "parent": null,
+    "kind": "finals",
+    "provider": "finals",
+    "name": "THE FINALS",
+    "shortName": "THE FINALS",
+    "eyebrow": "RANKED CASHOUT",
+    "description": "Class loadouts and meta team compositions.",
+    "theme": "finals",
+    "accent": "#ff4c60",
+    "cover": "assets/games/finals.webp",
+    "status": "active",
+    "modes": [
+      {
+        "id": "ranked",
+        "name": "Ranked Cashout",
+        "feed": "finals-ranked"
+      }
+    ],
+    "sourceName": "TheFinalsLoadout.com"
+  },
+  {
+    "id": "wardogs",
+    "parent": null,
+    "kind": "calculator",
+    "name": "WARDOGS",
+    "shortName": "WARDOGS",
+    "eyebrow": "ARTILLERY & TACTICAL MAPS",
+    "description": "Personal artillery maps and progression links.",
+    "theme": "wardogs",
+    "accent": "#efcf69",
+    "cover": "assets/games/wardogs.svg",
+    "status": "active",
+    "videos": false,
+    "pages": [
+      "progression"
+    ]
+  },
+  {
+    "id": "gray-zone",
+    "parent": null,
+    "kind": "tacmap",
+    "name": "Gray Zone Warfare",
+    "shortName": "Gray Zone Warfare",
+    "eyebrow": "GRAY ZONE WARFARE",
+    "description": "Under construction.",
+    "theme": "gray-zone",
+    "accent": "#d4db9a",
+    "cover": "assets/games/gray-zone.webp",
+    "status": "under-construction",
+    "videos": false,
+    "modes": []
+  },
+  {
+    "id": "bo7",
+    "parent": "cod",
+    "kind": "loadouts",
+    "provider": "codmunity",
+    "name": "Black Ops 7",
+    "shortName": "BO7",
+    "eyebrow": "MULTIPLAYER",
+    "description": "Public matches and ranked play.",
+    "theme": "bo7",
+    "accent": "#ff9450",
+    "cover": "assets/games/bo7.webp",
+    "status": "active",
+    "modes": [
+      {
+        "id": "public",
+        "name": "Public matches",
+        "feed": "bo7-public"
+      },
+      {
+        "id": "ranked",
+        "name": "Ranked play",
+        "feed": "bo7-ranked"
+      }
+    ],
+    "sourceName": "CODMunity"
+  },
+  {
+    "id": "warzone",
+    "parent": "cod",
+    "kind": "loadouts",
+    "provider": "codmunity",
+    "name": "Warzone",
+    "shortName": "Warzone",
+    "eyebrow": "BATTLE ROYALE & RANKED",
+    "description": "Weapon builds for battle royale and ranked.",
+    "theme": "warzone",
+    "accent": "#c4dc68",
+    "cover": "assets/games/warzone.webp",
+    "status": "active",
+    "modes": [
+      {
+        "id": "battle-royale",
+        "name": "Battle royale",
+        "feed": "warzone"
+      },
+      {
+        "id": "ranked",
+        "name": "Ranked Resurgence",
+        "feed": "warzone-ranked"
+      }
+    ],
+    "sourceName": "CODMunity"
+  },
+  {
+    "id": "mw4",
+    "parent": "cod",
+    "kind": "loadouts",
+    "provider": "codmunity",
+    "name": "Modern Warfare 4",
+    "shortName": "MW4",
+    "eyebrow": "COMING SOON",
+    "description": "Modern Warfare 4 launches October 23, 2026.",
+    "theme": "mw4",
+    "accent": "#ffdd00",
+    "cover": "assets/games/mw4.webp",
+    "status": "coming-soon",
+    "releaseDate": "2026-10-23",
+    "releaseSource": "https://www.callofduty.com/blog/2026/05/call-of-duty-modern-warfare-4-announcement",
+    "releaseVerifiedAt": "2026-09-06",
+    "modes": [],
+    "sourceName": "CODMunity"
+  },
+  {
+    "id": "sotf",
+    "parent": null,
+    "kind": "forest",
+    "name": "Sons of the Forest",
+    "shortName": "Sons of the Forest",
+    "eyebrow": "ISLAND SURVIVAL",
+    "description": "Explore the full island. Find tools, weapons, keycards and supplies with map layers.",
+    "theme": "sotf",
+    "accent": "#bbdf8b",
+    "cover": "assets/games/sotf.webp",
+    "status": "active",
+    "videos": false,
+    "patches": false
+  }
+]
