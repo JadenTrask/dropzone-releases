@@ -3,6 +3,8 @@ const {contextBridge,ipcRenderer}=require('electron');
 let startupRevealed=false;const startupCallbacks=new Set();
 ipcRenderer.once('startup-reveal',()=>{startupRevealed=true;for(const callback of startupCallbacks)callback();startupCallbacks.clear();});
 contextBridge.exposeInMainWorld('rift',Object.freeze({
+  metaforgePanel:input=>ipcRenderer.invoke('metaforge-panel',input),
+  onMetaForgeStatus:callback=>{if(typeof callback!=='function')return ()=>{};const listener=(_event,value)=>callback(value);ipcRenderer.on('metaforge-status',listener);return ()=>ipcRenderer.removeListener('metaforge-status',listener);},
   games:()=>ipcRenderer.invoke('games'),
   loadouts:options=>ipcRenderer.invoke('loadouts',options),
   media:options=>ipcRenderer.invoke('media',options),

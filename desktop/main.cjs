@@ -1,4 +1,4 @@
-const {app,BrowserWindow,ipcMain,dialog,shell,clipboard,session,powerMonitor}=require('electron');
+const {app,BrowserWindow,WebContentsView,ipcMain,dialog,shell,clipboard,session,powerMonitor}=require('electron');
 const path=require('node:path');
 const fs=require('node:fs/promises');
 const {createServices}=require('../core/services.cjs');
@@ -37,6 +37,8 @@ app.whenReady().then(()=>{
   window.webContents.on('will-navigate',(e)=>e.preventDefault());
   const trusted=e=>e.sender===window.webContents&&e.senderFrame===window.webContents.mainFrame;
   const handle=(name,fn)=>ipcMain.handle(name,(e,...args)=>{if(!trusted(e))throw new Error('Untrusted caller.');return fn(...args);});
+  const metaforgePanel=require('./metaforge-panel.cjs').createMetaForgePanel({main:window,WebContentsView,BrowserWindow,session});
+  handle('metaforge-panel',input=>metaforgePanel.command(input));
   handle('games',()=>games.list());
   handle('loadouts',options=>games.builds(options));
   handle('media',options=>services.media.list(options));

@@ -12,7 +12,7 @@ import {mountSources,leaveSources,startUpdatePolling} from './updates-ui.js';
 import {mountPatches,leavePatches} from './patches-ui.js';
 import {mountWardogs,leaveWardogs} from './wardogs-ui.js';
 import {mountSiege,leaveSiege} from './siege-ui.js';
-import {mountWardogsProgression} from './wardogs-progression-ui.js';
+import {mountWardogsProgression,leaveWardogsProgression} from './wardogs-progression-ui.js';
 
 const $=s=>document.querySelector(s);
 const paths={arrow:'M4 12h16m-6-6 6 6-6 6',back:'M20 12H4m6-6-6 6 6 6',search:'m21 21-5-5M10 3a7 7 0 1 0 0 14 7 7 0 0 0 0-14',bookmark:'M6 3h12v19l-6-4-6 4Z',copy:'M8 8h13v13H8ZM3 16H2V2h14v2',external:'M5 19 19 5M5 5h14v14',refresh:'M20 7a9 9 0 0 0-15-2L2 8m0-6v6h6m-4 9a9 9 0 0 0 15 2l3-3m0 6v-6h-6',shield:'m12 2 9 4v6c0 5-5 8-9 10-4-2-9-5-9-10V6Z',check:'m5 12 4 4L20 5',clock:'M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20m0 4v6l4 2',target:'M12 2v4m0 12v4M2 12h4m12 0h4M12 5a7 7 0 1 0 0 14 7 7 0 0 0 0-14Z',x:'m6 6 12 12M6 18 18 6',grid:'M3 3h7v7H3Zm11 0h7v7h-7ZM3 14h7v7H3Zm11 0h7v7h-7Z'};
@@ -53,7 +53,7 @@ function renderComingSoon(g){
 }
 async function route(id,watchGame=null,initialView=null){
   const navigation=++navigationRevision;
-  leaveFinals();leaveWatch();leaveSources();leavePatches();leaveWardogs();leaveSiege();leaveForest();
+  leaveFinals();leaveWatch();leaveSources();leavePatches();leaveWardogs();leaveWardogsProgression();leaveSiege();leaveForest();
   if(id==='progression'){const target=state.games.find(g=>g.id===(watchGame||state.watchGame));if(!target?.pages?.includes(id))return;state.watchGame=target.id;}
   if(id==='watch'||id==='patches'){state.watchGame=watchGame||game()?.id||state.watchGame;if(!(id==='watch'?['lol','bo7','warzone','finals','mw4','siege']:['lol','bo7','warzone','finals','mw4','wardogs','siege']).includes(state.watchGame))return;}
   ++state.request;state.route=id;state.data=null;state.error=null;state.snapshot=false;
@@ -143,7 +143,7 @@ document.addEventListener('click',async event=>{
     if(b.dataset.hubAction)return await action(b.dataset.hubAction);
     if(b.dataset.hubDelete){const next=state.saved.filter(s=>s.key!==b.dataset.hubDelete);if(save('tbb-saved-loadouts',next)){state.saved=next;renderSaved();}return;}
     if(b.dataset.hubSaved){
-      const s=state.saved.find(s=>s.key===b.dataset.hubSaved);if(!s||!eligibleSavedBuild(s))return;++navigationRevision;leaveFinals();leaveWatch();leaveSources();leavePatches();leaveWardogs();leaveSiege();leaveForest();++state.request;state.route=s.game;state.mode=s.mode;setTheme(game());resetFilters();state.tier='all';state.data={builds:[s.build],source:s.source,sourceUrl:s.sourceUrl,sourceUpdatedAt:s.sourceUpdatedAt,fetchedAt:s.fetchedAt,cacheState:'snapshot',methodology:'Saved source attachment set.'};state.selected=s.build.id;state.loading=false;state.error=null;state.snapshot=true;location(game(),game().name+' / Saved loadout');gameTabs(game());renderArsenal();
+      const s=state.saved.find(s=>s.key===b.dataset.hubSaved);if(!s||!eligibleSavedBuild(s))return;++navigationRevision;leaveFinals();leaveWatch();leaveSources();leavePatches();leaveWardogs();leaveWardogsProgression();leaveSiege();leaveForest();++state.request;state.route=s.game;state.mode=s.mode;setTheme(game());resetFilters();state.tier='all';state.data={builds:[s.build],source:s.source,sourceUrl:s.sourceUrl,sourceUpdatedAt:s.sourceUpdatedAt,fetchedAt:s.fetchedAt,cacheState:'snapshot',methodology:'Saved source attachment set.'};state.selected=s.build.id;state.loading=false;state.error=null;state.snapshot=true;location(game(),game().name+' / Saved loadout');gameTabs(game());renderArsenal();
     }
   }catch(error){toast(error.message||'Something went wrong. Please try again.');}
 });

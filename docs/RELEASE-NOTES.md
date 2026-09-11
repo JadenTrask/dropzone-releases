@@ -1,3 +1,10 @@
+# Dropzone 2.0.4
+
+- Open MetaForge progression, player profile and career tables inside the WARDOGS Progression tab.
+- Keep remote content in an isolated browser session with no access to Dropzone's local data or desktop bridge.
+- Add Reload, clear loading/error feedback, and Open in browser for site or login restrictions.
+- Preserve MetaForge branding, content and sign-in; no scraping or automatic progression import.
+
 # Dropzone 2.0.3
 
 - Add a first-use WARDOGS tutorial with highlighted controls, arrows, and a permanent Tutorial replay button.
