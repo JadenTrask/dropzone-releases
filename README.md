@@ -1,3 +1,6 @@
+Warning: truncated output (original token count: 5058)
+Total output lines: 226
+
 # Dropzone
 
 Version 2.0.3 · Windows x64
@@ -6,12 +9,17 @@ A Windows companion for League of Legends, Call of Duty, THE FINALS, WARDOGS, Ra
 
 ## New in 2.0.3
 
+- A first-use WARDOGS guide with highlighted controls and a Tutorial replay button.
+- A transparent Blender opening that reveals the app in one window.
+
+### Included from 2.0.2
+
 - WARDOGS: Zestafona, offline community terrain estimates, manual heights and structure offsets.
 - Prominent sight distance with an optional experimental SPH-2 height correction. Mortar correction remains unavailable without calibration.
 - Clear gun/target placement, automatic gun lock, drag-to-pan, undo, fit shot and per-map state.
 - A Blender-rendered 3D opening ident that transitions into the ready app.
 
-See [accuracy limits, data provenance and validation](docs/WARDOGS-2.0.3.md). Community terrain and firing estimates are not independently game-validated.
+See [accuracy limits, data provenance and validation](docs/WARDOGS-2.0.2.md). Community terrain and firing estimates are not independently game-validated.
 
 ## New in 2.0
 
@@ -99,27 +107,7 @@ The Ballistics tab described above was removed in 2.3.1. Progression remains an 
 - Added pan/zoom, draggable gun and target pins, coordinate entry/paste, gun locking, minimum/maximum range rings, a ruler, radio tower labels, and saved targets with JSON import/export.
 - Bundled 1,114 calibrated map tiles for offline use. Closer zoom can fetch extra detail from the same pinned map revision.
 - Added **Patch notes** tabs for League, BO7, Warzone, MW4, THE FINALS, and WARDOGS. Official post previews refresh on launch; full notes open on the publisher's website. Steam announcements are distinguished from patch notes.
-- Changed League items to compact rows with fixed 48px artwork and readable labels, removing the enlarged-image hover effect.
-- League client importing was not added.
-
-## Using the WARDOGS calculator
-
-1. Open **WARDOGS** and choose the map and weapon.
-2. Click **Gun**, then click your position. Click the target position next.
-3. Scroll to zoom and drag to pan. Drag either pin to adjust it. **Frame shot** fits the two positions into view.
-4. Read **range**, **azimuth** (0 degrees north, 90 east), and **elevation MIL**. SPH-2 has separate low/high trajectories where the source table supports them.
-5. Enter exact displayed game coordinates in the X/Y forms, or paste a pair such as `X100.00 Y80.00` and press Enter. One coordinate unit is 100 metres.
-6. Save named targets on this PC. **Use target** keeps your current gun. **Restore shot** restores the saved gun, weapon, and trajectory too. Export backs up targets from both maps; imports add valid records and never replace the current list.
-
-**Accuracy:** the release build has not been tested. This calculator uses community level-ground firing tables. Terrain height, obstacles, wind, dispersion, and chassis tilt are not corrected. Keep the SPH-2 level. Unsupported ranges and missing trajectories do not return invented MIL values. The current source supports Mortar at 132–684 m and SPH-2 at 780–2629 m; these limits can change when the source tables update.
-
-Firing tables are fetched on launch and every 15 minutes. Map calibration is checked against the bundled revision. If calibration changes, the affected map stops showing elevation solutions until an app update. Downloading a source does not establish release-build accuracy. Please test short, middle, and long shots when the game is available, recording gun/target coordinates, weapon, MIL, and actual impact coordinates for a useful calibration report.
-
-Saved positions and targets are local. There are no squad rooms, account requirements, client hooks, or automated game controls. **Shot / Positions / Layers** switch sidebar controls. **Saved targets** and **Data & help** open separate dialogs. Keyboard controls work while the map has focus; coordinate forms provide an alternative to pointing.
-
-## Previous changes in 2.1.0
-
-- Renamed the app to **Dropzone**, including the window, EXE, icon, exports, and ZIPs.
+- Changed League items to compact rows with fixed 48px artwork and readable labels, removing the enlarged-image ho…558 tokens truncated…Ps.
 - Added **Warzone → Ranked Resurgence**, using the actual ranked feed and its 13 complete attachment sets in the bundled snapshot.
 - Restricted BO7 ranked primary builds to **M15 Mod 0** and **MPC-25**. The M15 has two source variants. The filter also applies to older feed caches and saved snapshots.
 - Replaced the corrupt Peacekeeper Mk1 image. All 308 referenced bundled weapon images decode successfully. New online builds can fall back to a bundled image of the same weapon if their image fails.
@@ -218,3 +206,4 @@ See [the integration guide](docs/ADDING-GAMES.md) for adding games and [the vali
 Dropzone is independent and is not endorsed by Riot Games, Activision, Embark Studios, BULKHEAD, Team17, YouTube, or CODMunity. Game names, artwork, and source data belong to their owners. Source links appear in the app; weapon-image provenance is recorded in `app/assets/weapons/sources.json`. App code is MIT licensed. The MIT license does not transfer ownership of third-party artwork or data.
 
 WARDOGS reference code/calibration credits and the MIT notice are in `third-party/`. Map imagery remains the game rights holders’ property; the source repository’s MIT license does not license the game artwork. Map asset hashes and source revision are recorded in `app/data/wardogs/assets.json`.
+
