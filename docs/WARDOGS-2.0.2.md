@@ -61,4 +61,8 @@ For each weapon/ammunition/charge and arc, record same-height range versus game 
 
 ## Run and design source
 
-Run `npm ci`, then `npm start` for Electron, or `npm run preview` for the real browser renderer (default localhost:4173). The working session preview uses localhost:4181. For an animation preview add `?intro=1`; add `&game=wardogs` to enter the calculator afterward. The Blender source is design/Dropzone-Intro.blend; scripts/create-splash.py and encode-splash.py reproduce the original 54-frame ident. Reduced motion uses a static frame. The same final frame bridges the startup window to the ready app; network feeds never gate it, and recovery has a timeout.
+Run `npm ci`, then `npm start` for Electron, or `npm run preview` for the real browser renderer (default localhost:4173). The working session preview uses localhost:4181. For an animation preview add `?intro=1`; add `&game=wardogs` to enter the calculator afterward. The Blender source is design/Dropzone-Intro.blend; scripts/create-splash.py and encode-splash.py reproduce the original 54-frame ident. Reduced motion uses a static frame. The revised transparent crystal ident runs over the actual destination in one window. The reveal waits for both animation completion and the destination mount; a 10-second recovery ceiling prevents a stalled boot from trapping the user. There is no separate splash-window handoff or slogan card. Preview reload restores its route before first rendering.
+
+### Startup visual revision
+
+Replaced the solid badge with an alpha-rendered frosted-glass emblem, restrained settling movement and a moving studio reflection. The application shows through a soft blur that clears during the reveal. Added tests for early/late route readiness, native display timing, reduced motion and recovery. The revision ships in 2.0.3, together with the first-use tutorial and its replay button.

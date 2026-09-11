@@ -1,3 +1,4 @@
+import {offerWardogsTutorial,startWardogsTutorial,stopWardogsTutorial} from './wardogs-tutorial.js';
 import {$,api,e,dateTime,stored,persist,toast,opts} from './shared.js';
 import {validPoint,clampPoint,firingSolution,milText,bearingText,parseCoordinates,coordinateText,validateBackup} from './wardogs-model.js';
 import {sightSolution} from './wardogs-sight.js';
@@ -66,8 +67,8 @@ function readSaved(){
     for(const t of raw.targets.slice(0,200)){try{const clean=validateBackup({schema:1,game:'wardogs',targets:[t]},maps)[0];memory.targets.push({...clean,id:typeof t.id==='string'&&/^[a-zA-Z0-9-]+$/.test(t.id)?t.id:clean.id});}catch{/* Ignore a damaged local record. */}}
   }
 }
-export function leaveWardogs(){if(view&&data)cameras.set(memory.map,{...view.camera});clearTimeout(terrainTimer);terrainRequests.cancel();active=false;++request;view?.destroy();view=null;}
-export async function mountWardogs(){active=true;loading=true;error=null;data=null;render();await load(false,true);}
+export function leaveWardogs(){stopWardogsTutorial();if(view&&data)cameras.set(memory.map,{...view.camera});clearTimeout(terrainTimer);terrainRequests.cancel();active=false;++request;view?.destroy();view=null;}
+export async function mountWardogs(){active=true;loading=true;error=null;data=null;render();await load(false,true);if(active&&data)offerWardogsTutorial();}
 async function load(refresh=false,initial=false){
   const token=++request;loading=true;updateSource();
   try{
@@ -113,7 +114,7 @@ function render(){
   if(!active)return;if(view)cameras.set(view.map.id,{...view.camera});view?.destroy();view=null;
   if(!data){$('#hub-app').innerHTML=`<main class="hub-main wardogs-page"><div class="library-intro"><div><span class="hub-eyebrow">WARDOGS</span><h1>Artillery calculator</h1></div></div><div class="cod-loading"><h2>${error?'Calculator unavailable':'Loading maps and firing tables…'}</h2>${error?`<p>${e(error)}</p><button class="hub-button" data-wd-action="refresh">Retry</button>`:''}</div></main>`;return;}
   const map=currentMap(),p=position();
-  $('#hub-app').innerHTML=`<main class="hub-main wardogs-page wd-fixed"><div class="wd-workspace"><aside class="wd-controls" aria-label="Firing controls"><div class="wd-sidebar-heading"><h1>Artillery calculator</h1></div><div class="wd-selectors"><label>Map<select id="wd-map" aria-label="WARDOGS map">${opts(data.maps.maps.map(m=>[m.id,m.name]),map.id)}</select></label><label>Weapon<select id="wd-weapon" aria-label="WARDOGS weapon">${opts(data.weapons.map(w=>[w.id,w.name]),p.weapon)}</select></label></div><div id="wd-result" class="wd-result" aria-live="polite" aria-atomic="true"></div><div id="wd-height-summary" class="wd-height-summary" aria-live="polite"></div>
+  $('#hub-app').innerHTML=`<main class="hub-main wardogs-page wd-fixed"><div class="wd-workspace"><aside class="wd-controls" aria-label="Firing controls"><div class="wd-sidebar-heading"><h1>Artillery calculator</h1><button class="wd-tutorial-button" data-wd-action="tutorial">Tutorial</button></div><div class="wd-selectors"><label>Map<select id="wd-map" aria-label="WARDOGS map">${opts(data.maps.maps.map(m=>[m.id,m.name]),map.id)}</select></label><label>Weapon<select id="wd-weapon" aria-label="WARDOGS weapon">${opts(data.weapons.map(w=>[w.id,w.name]),p.weapon)}</select></label></div><div id="wd-result" class="wd-result" aria-live="polite" aria-atomic="true"></div><div id="wd-height-summary" class="wd-height-summary" aria-live="polite"></div>
 <nav class="wd-panel-tabs" aria-label="Calculator controls">${[['shot','Shot'],['positions','Positions'],['layers','Layers']].map(([id,label])=>`<button data-wd-panel="${id}" class="${panel===id?'active':''}" aria-pressed="${panel===id}">${label}</button>`).join('')}</nav>
 <div class="wd-panel-body"><section data-wd-panel-content="shot" ${panel!=='shot'?'hidden':''}>${heightControls()}<div class="wd-control-block"><div class="wd-control-heading"><h3>Firing arc</h3><span id="wd-weapon-range"></span></div><div id="wd-arcs" class="wd-arcs"></div><p id="wd-arc-note" class="wd-small"></p><div class="wd-position-summary"><button data-wd-panel="positions">Gun <strong id="wd-origin-summary"></strong></button><button data-wd-panel="positions">Target <strong id="wd-target-summary"></strong></button></div><div class="wd-control-buttons"><button class="hub-button" data-wd-action="copy">Copy solution</button><button class="hub-button secondary" data-wd-action="swap">Swap points</button></div></div></section>
 <section data-wd-panel-content="positions" ${panel!=='positions'?'hidden':''}>${coordinateForm('origin','Gun position')}${coordinateForm('target','Target position')}</section>
@@ -149,6 +150,7 @@ function updateTargets(){
   el.innerHTML=targets.length?`<div class="wd-target-grid">${targets.map(t=>{const r=firingSolution(position().origin,t.target,currentMap(),weapon());return `<article class="wd-target"><div><h3>${e(t.name)}</h3><p>${coordinateText(t.target)}</p><small>${r?Math.round(r.distance)+' m from current gun · '+bearingText(r.azimuth):'Place your gun to see range'}</small></div><div class="wd-target-actions"><button class="hub-button secondary" data-wd-target="${e(t.id)}">Use target</button>${t.origin?`<button class="source-link" data-wd-restore="${e(t.id)}">Restore shot</button>`:''}<button class="source-link" data-wd-delete="${e(t.id)}" aria-label="Delete saved target ${e(t.name)}">Remove</button></div></article>`;}).join('')}</div>`:`<p class="wd-empty">No saved targets on ${e(currentMap().name)}.</p>`;
 }
 async function action(name){
+  if(name==='tutorial')return startWardogsTutorial();
   if(name==='refresh')return load(true,!data);
   if(!data)return;
   const p=position();

@@ -36,16 +36,17 @@ test('synchronous check failures do not leave a permanently locked check',async(
  const s=setup();let calls=0;s.updater.checkForUpdates=()=>{calls++;throw new Error('failure');};await s.service.check(true);await s.service.check(true);assert.equal(calls,2);
 });
 function startup(){
- const make=()=>{const w=new EventEmitter();w.webContents=new EventEmitter();w.dead=false;w.shown=false;w.isDestroyed=()=>w.dead;w.show=()=>{w.shown=true;};w.destroy=()=>{w.dead=true;};return w;};
- const main=make(),splash=make(),timers=[];coordinateStartup({main,splash,schedule:(fn,ms)=>{const t={fn,ms};timers.push(t);return t;},cancel:t=>{if(t)t.cancelled=true;}});return {main,splash,fire:ms=>{for(const t of timers)if(t.ms===ms&&!t.cancelled){t.cancelled=true;t.fn();}}};
+ const main=new EventEmitter();main.webContents=new EventEmitter();main.dead=false;main.shown=0;main.sent=0;
+ main.isDestroyed=()=>main.dead;main.show=()=>main.shown++;main.webContents.send=()=>main.sent++;
+ const timers=[];coordinateStartup({main,schedule:(fn,ms)=>{const t={fn,ms};timers.push(t);return t;},cancel:t=>{if(t)t.cancelled=true;}});
+ return {main,fire:()=>{for(const t of timers)if(!t.cancelled)t.fn();}};
 }
-test('splash stays for two seconds when the main window is ready early',()=>{
- const s=startup();s.splash.emit('ready-to-show');s.main.emit('ready-to-show');assert.equal(s.splash.shown,true);assert.equal(s.main.shown,false);s.fire(2000);assert.equal(s.main.shown,true);assert.equal(s.splash.dead,true);
+test('one ready window shows once and starts its renderer animation',()=>{
+ const s=startup();assert.equal(s.main.shown,0);s.main.emit('ready-to-show');s.fire();assert.equal(s.main.shown,1);assert.equal(s.main.sent,1);
 });
-test('a slow window waits for readiness after the splash minimum; a stalled window has a ceiling',()=>{
- const s=startup();s.splash.emit('ready-to-show');s.fire(2000);assert.equal(s.main.shown,false);s.main.emit('ready-to-show');assert.equal(s.main.shown,true);
- const stalled=startup();stalled.fire(10000);assert.equal(stalled.main.shown,true);assert.equal(stalled.splash.dead,true);
+test('a stalled window has a recovery ceiling without a second splash',()=>{
+ const s=startup();s.fire();s.main.emit('ready-to-show');assert.equal(s.main.shown,1);assert.equal(s.main.sent,1);
 });
-test('closing during startup cancels the splash and cannot reopen the main window',()=>{
- const s=startup();s.splash.emit('ready-to-show');s.main.dead=true;s.main.emit('closed');s.fire(2000);s.fire(10000);assert.equal(s.splash.dead,true);assert.equal(s.main.shown,false);
+test('closing during startup cannot reopen the main window',()=>{
+ const s=startup();s.main.dead=true;s.main.emit('closed');s.fire();s.main.emit('ready-to-show');assert.equal(s.main.shown,0);
 });

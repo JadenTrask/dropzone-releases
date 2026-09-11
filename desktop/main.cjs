@@ -13,21 +13,16 @@ for(const old of profileNames){const dir=path.join(app.getPath('appData'),old);i
 if(!app.isPackaged&&process.argv.includes('--isolated-preview'))app.setPath('userData',path.join(__dirname,'../.validation-cache/native-profile'));
 const applicationId='com.dropzone.desktop';
 if(process.platform==='win32')app.setAppUserModelId(applicationId);
-let window,splash,provider,games,services,appUpdates;
+let window,provider,games,services,appUpdates;
 const allowed=new Set(['lolalytics.com','mobalytics.gg','www.metasrc.com','www.leagueoflegends.com','developer.riotgames.com','codmunity.gg','www.callofduty.com','thefinalsloadout.com','www.reachthefinals.com','www.youtube.com','lolesports.com','www.callofdutyleague.com','callofduty.worldseriesofwarzone.com','support.activision.com','wardogs-artillery.com','wardogs.tools','metaforge.app','github.com','store.steampowered.com','steamcommunity.com','steamstore-a.akamaihd.net','gzw-data.dev','gray-zone-warfare.fandom.com','gzwtacmap.com','www.grayzonewarfare.com','www.ubisoft.com','dropzonecompanion.com','sonsoftheforest.wiki.gg']);
 function safeSource(value){try{const u=new URL(value);return u.protocol==='https:'&&allowed.has(u.hostname)&&!u.username&&!u.password;}catch{return false;}}
 if(!app.requestSingleInstanceLock())app.quit();
-app.on('second-instance',()=>{services?.updates.check();appUpdates?.check();const visible=window?.isVisible()?window:splash;if(visible&&!visible.isDestroyed()){if(visible.isMinimized())visible.restore();visible.focus();}});
+app.on('second-instance',()=>{services?.updates.check();appUpdates?.check();const visible=window;if(visible&&!visible.isDestroyed()){if(visible.isMinimized())visible.restore();visible.focus();}});
 app.whenReady().then(()=>{
   services=createServices({cacheDir:path.join(app.getPath('userData'),'feeds'),leagueCacheDir:path.join(app.getPath('userData'),'cache'),codCacheDir:path.join(app.getPath('userData'),'cod-cache'),bundleDir:path.join(__dirname,'../app/data')});
   ({provider,games}=services);
   window=new BrowserWindow({width:1480,height:980,minWidth:1000,minHeight:720,show:false,frame:false,backgroundColor:'#0b0c10',title:'Dropzone',icon:path.join(__dirname,'../app/assets/icon.png'),webPreferences:{preload:path.join(__dirname,'preload.cjs'),contextIsolation:true,nodeIntegration:false,sandbox:true,webSecurity:true}});
-  splash=new BrowserWindow({...window.getBounds(),show:false,frame:false,resizable:false,maximizable:false,minimizable:false,skipTaskbar:true,backgroundColor:'#0c1110',title:'Dropzone',webPreferences:{contextIsolation:true,nodeIntegration:false,sandbox:true,webSecurity:true}});
-  splash.removeMenu();
-  splash.webContents.setWindowOpenHandler(()=>({action:'deny'}));
-  splash.webContents.on('will-navigate',e=>e.preventDefault());
-  coordinateStartup({main:window,splash});
-  splash.loadFile(path.join(__dirname,'../app/splash.html')).catch(()=>{});
+  coordinateStartup({main:window});
   appUpdates=new AppUpdateService({version:app.getVersion(),feed:require('../release-feed.json').feed,packaged:app.isPackaged,installed:fsSync.existsSync(path.join(process.resourcesPath,'dropzone-installed')),createUpdater:()=>new (require('electron-updater').NsisUpdater)()});
   appUpdates.on('status',state=>{if(!window.isDestroyed()&&!window.webContents.isDestroyed())window.webContents.send('app-update-status',state);});
   window.removeMenu();

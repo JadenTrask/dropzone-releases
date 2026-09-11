@@ -1,3 +1,9 @@
+# Dropzone 2.0.3
+
+- Add a first-use WARDOGS tutorial with highlighted controls, arrows, and a permanent Tutorial replay button.
+- Replace the opening badge with a transparent Blender emblem and a single-window reveal; prevent the brief library flash.
+- Widen the website on large screens and update download links to 2.0.3.
+
 # Dropzone 2.0.2
 
 - Add Zestafona alongside Bakurani and Ozeti, with pinned offline map imagery.
@@ -5,7 +11,7 @@
 - Put sight distance first. SPH-2 offers an opt-in experimental 155 mm HE height correction and equivalent range readout. Mortar height correction is unavailable pending calibration; no invented adjustment is shown.
 - Make gun placement automatically switch to a locked-gun target workflow. Add Move gun, Clear target, Undo and Fit gun and target; dragging always pans.
 - Keep map views and markers independent per map. Protect against stale terrain lookups and corrupt/missing data.
-- Add an original Blender 3D opening animation with a matching-frame transition and reduced-motion fallback.
+- Add an original Blender 3D opening animation with a single-window transition and reduced-motion fallback.
 
 **Accuracy:** terrain is a community estimate, not independently game-validated altitude. SPH-2 corrections use experimental 10-MIL candidate bins on a level chassis; game validation is still required. Buildings, trees and trajectory clearance are not evaluated. Existing flat-ground tables are preserved. Full limits and calibration checklist: [WARDOGS 2.0.2](WARDOGS-2.0.2.md).
 

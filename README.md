@@ -1,17 +1,17 @@
 # Dropzone
 
-Version 2.0.2 · Windows x64
+Version 2.0.3 · Windows x64
 
 A Windows companion for League of Legends, Call of Duty, THE FINALS, WARDOGS, Rainbow Six Siege, and Sons of the Forest. Gray Zone Warfare is under construction.
 
-## New in 2.0.2
+## New in 2.0.3
 
 - WARDOGS: Zestafona, offline community terrain estimates, manual heights and structure offsets.
 - Prominent sight distance with an optional experimental SPH-2 height correction. Mortar correction remains unavailable without calibration.
 - Clear gun/target placement, automatic gun lock, drag-to-pan, undo, fit shot and per-map state.
 - A Blender-rendered 3D opening ident that transitions into the ready app.
 
-See [accuracy limits, data provenance and validation](docs/WARDOGS-2.0.2.md). Community terrain and firing estimates are not independently game-validated.
+See [accuracy limits, data provenance and validation](docs/WARDOGS-2.0.3.md). Community terrain and firing estimates are not independently game-validated.
 
 ## New in 2.0
 

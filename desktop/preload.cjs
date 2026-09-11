@@ -1,4 +1,7 @@
 const {contextBridge,ipcRenderer}=require('electron');
+// Buffer readiness even if the first paint precedes the intro module.
+let startupRevealed=false;const startupCallbacks=new Set();
+ipcRenderer.once('startup-reveal',()=>{startupRevealed=true;for(const callback of startupCallbacks)callback();startupCallbacks.clear();});
 contextBridge.exposeInMainWorld('rift',Object.freeze({
   games:()=>ipcRenderer.invoke('games'),
   loadouts:options=>ipcRenderer.invoke('loadouts',options),
@@ -7,7 +10,7 @@ contextBridge.exposeInMainWorld('rift',Object.freeze({
   siege:options=>ipcRenderer.invoke('siege',options),
   wardogs:options=>ipcRenderer.invoke('wardogs',options),
   wardogsTerrain:resource=>ipcRenderer.invoke('wardogs-terrain',resource),
-  onStartupReveal:callback=>{if(typeof callback==='function')ipcRenderer.once('startup-reveal',()=>callback());},
+  onStartupReveal:callback=>{if(typeof callback!=='function')return;if(startupRevealed)callback();else startupCallbacks.add(callback);},
   updates:refresh=>ipcRenderer.invoke('updates',refresh===true),
   appUpdates:()=>ipcRenderer.invoke('app-updates'),
   checkAppUpdates:()=>ipcRenderer.invoke('check-app-updates'),
