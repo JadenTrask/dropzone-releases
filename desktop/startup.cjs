@@ -4,7 +4,7 @@ function coordinateStartup({main,splash,delay=2000,limit=10000,schedule=setTimeo
   const finish=()=>{
     if(finished||main.isDestroyed())return;
     finished=true;cancel(minimumTimer);cancel(limitTimer);
-    main.show();if(!splash.isDestroyed())splash.destroy();
+    main.show();main.webContents.send?.('startup-reveal');if(!splash.isDestroyed())splash.destroy();
   };
   const maybe=()=>{if(mainReady&&minimumElapsed)finish();};
   main.once('ready-to-show',()=>{mainReady=true;maybe();});

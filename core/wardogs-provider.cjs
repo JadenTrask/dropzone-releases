@@ -3,7 +3,7 @@ const crypto = require('node:crypto');
 const {SourceCache, requestText} = require('./source-cache.cjs');
 const REPOSITORY = 'https://raw.githubusercontent.com/apollyon-sys/wardogs-calculator/main/';
 const SOURCE = 'https://wardogs-artillery.com/';
-const MAP_IDS = ['bakurani', 'ozeti'];
+const MAP_IDS = ['bakurani', 'ozeti', 'zestafona'];
 const geometry = m => ({bounds:['minX','maxX','minY','maxY'].map(k=>m.bounds?.[k]),tileBounds:['minX','maxX','minY','maxY'].map(k=>m.tileBounds?.[k]),coordinateMetersPerUnit:m.coordinateMetersPerUnit});
 function normalizeWeapon(w) {
   if (!['mortar','spg'].includes(w?.id)) throw new Error('The source added an unsupported weapon. An app update is required.');

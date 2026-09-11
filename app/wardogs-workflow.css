@@ -1,0 +1,79 @@
+/* WARDOGS-only refinement; app rail and other game workspaces are unchanged. */
+#hub-app .wd-fixed>.wd-workspace{grid-template-columns:310px minmax(340px,1fr)}
+#hub-app .wd-fixed .wd-result{display:flex;flex-wrap:wrap;background:#151d18}
+#hub-app .wd-fixed .wd-result>div{flex:1 1 45%;padding:9px 11px}
+#hub-app .wd-fixed .wd-result .wd-elevation{order:-2;flex:1 0 100%;border-radius:7px 7px 0 0;background:#30301e}
+#hub-app .wd-fixed .wd-result .wd-elevation strong{font-size:2.1rem;color:#f4d77b}
+#hub-app .wd-fixed .wd-result .wd-elevation>span{max-width:150px;line-height:1.5;letter-spacing:.8px}
+.wd-flat-label{grid-column:1/-1;font-size:.72rem;color:#dacda0;line-height:1.5}
+#hub-app .wd-fixed .wd-result>div>strong{font-size:1.45rem}
+#hub-app .wd-fixed .wd-result>div>p{font-size:.73rem}
+.wd-height-summary{margin:0 12px 10px;padding:10px 11px;border:1px solid #46513c;border-radius:6px;background:#172019;flex-shrink:0}
+.wd-height-heading{display:flex;justify-content:space-between;align-items:center;gap:8px;color:#c1cdb3}
+.wd-height-heading>span{font-size:.7rem;letter-spacing:.8px}
+.wd-height-heading>strong{color:#d5edda;font-size:1.1rem;font-variant-numeric:tabular-nums}
+.wd-height-summary p{font-size:.77rem;line-height:1.45;color:#c4cfb7;margin:5px 0}
+.wd-height-summary small{display:block;font-size:.68rem;line-height:1.4;color:#a6b69a;margin-top:6px}
+.wd-height-pair{display:flex;justify-content:space-between;gap:8px;font-size:.73rem;color:#b5c6ac}
+.wd-height-pair b{display:block;margin-top:3px;color:#e0e8d7;font-variant-numeric:tabular-nums;font-weight:500}
+.wd-height-controls{padding:10px 12px;border-bottom:1px solid #3b4530}
+.wd-height-controls>label{display:block;font-size:.78rem;color:#c0cbb5}
+.wd-height-controls select{margin-top:5px}
+#hub-app .wd-height-controls .select-control{margin:5px 0 0;font-size:.8rem;min-height:34px}
+.wd-height-controls details{margin-top:9px;font-size:.78rem;color:#c0cbb5}
+.wd-height-controls summary{cursor:pointer;line-height:1.6}
+.wd-height-controls>.source-link{font-size:.73rem;margin-top:7px}
+.wd-height-fields{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:8px}
+.wd-height-fields label{font-size:.72rem;line-height:1.5;color:#b9c7ae}
+.wardogs-page .wd-height-fields input{padding:5px 7px;font-size:.85rem}
+.wd-height-fields>small{grid-column:1/-1;color:#adbea1;font-size:.7rem;line-height:1.5}
+#hub-app .wd-fixed .wd-controls{scrollbar-gutter:auto}
+#hub-app .wd-fixed .wd-position-summary{display:none}
+#hub-app .wd-fixed .wd-arcs strong{display:none}
+#hub-app .wd-fixed .wd-arcs>button{text-align:center;padding:7px}
+#hub-app .wd-fixed .wd-arc-note{font-size:.75rem}
+#hub-app .wd-fixed .wd-map-toolbar{gap:5px;padding:7px}
+#hub-app .wd-fixed .wd-map-toolbar button{font-size:.78rem;min-height:34px;padding:6px 8px}
+#hub-app .wd-fixed .wd-tools button[data-wd-tool=origin]{border-color:#548367;color:#b1edc7}
+#hub-app .wd-fixed .wd-tools button[data-wd-tool=target]{border-color:#955c4e;color:#ffb29e}
+#hub-app .wd-fixed .wd-tools button.active{color:#172018;background:#e6cd7a;border-color:#e6cd7a}
+.wd-map-toolbar button:disabled{opacity:.4;cursor:default}
+.wd-height-controls [hidden]{display:none!important}
+@media(min-width:941px) and (min-height:820px){#hub-app .wd-fixed .wd-controls{overflow:hidden}#hub-app .wd-fixed .wd-panel-body{flex:1 1 auto;min-height:0;overflow:auto}}
+@media(max-width:940px){#hub-app .wd-fixed>.wd-workspace{grid-template-columns:minmax(0,1fr)}#hub-app .wd-fixed .wd-map-card{grid-row:1}#hub-app .wd-fixed .wd-controls{grid-row:2}.wd-height-summary{margin-bottom:10px}}
+.wd-result .wd-sight{grid-column:1/-1;order:-3;padding:12px;background:#a6e4ba0d;border:1px solid #a6e4ba40;border-radius:8px}
+.wd-result .wd-sight>strong{font-size:36px;color:var(--hub-accent,#bbd9a0);line-height:1.05}
+.wd-result .wd-sight>span{font-size:10px;letter-spacing:.06em}
+.wd-result .wd-sight p,.wd-result .wd-sight>small{font-size:11px;line-height:1.35;margin:5px 0 0}
+.wd-result .wd-sight[data-state=experimental]{border-color:#d2bb63;background:#d2bb630d}
+.wd-result .wd-sight[data-state=experimental]>strong{color:#e9ce83}
+.wd-experimental{display:flex!important;align-items:center;gap:8px;font-size:12px!important}
+.wd-experimental input{width:auto!important;accent-color:#e9ce83}
+#wd-experimental-wrap{padding-bottom:10px}
+#wd-experimental-wrap>small{display:block;color:#afb6b0;font-size:11px;line-height:1.4;margin:4px 0}
+.wd-result .wd-elevation>strong{font-size:24px}
+.wd-result .wd-elevation{padding-top:4px}
+#hub-app .wd-fixed .wd-result #wd-sight{display:block;flex:1 0 100%}
+#hub-app .wd-fixed .wd-result #wd-sight>strong{display:block;font-size:2rem;margin:4px 0}
+#hub-app .wd-fixed .wd-result .wd-elevation strong{font-size:1.5rem}
+#hub-app .wd-fixed .wd-result>div:not(#wd-sight){display:block;flex:1 1 30%;min-width:0;padding:8px}
+#hub-app .wd-fixed .wd-result .wd-elevation{order:0;background:transparent;border-radius:0}
+#hub-app .wd-fixed .wd-result>div:not(#wd-sight)>span{display:block;min-height:28px;font-size:.62rem;line-height:1.4;letter-spacing:.035em}
+#hub-app .wd-fixed .wd-result>div:not(#wd-sight)>strong{display:block;font-size:1.3rem;margin:2px 0}
+#hub-app .wd-fixed .wd-result>div:not(#wd-sight)>p{font-size:.66rem;line-height:1.35;margin:4px 0}
+#hub-app .wd-fixed .wd-result .wd-elevation>p{display:none}
+#hub-app .wd-fixed .wd-flat-label{display:block;font-size:.66rem;line-height:1.35;margin-top:4px}
+.wd-height-pair b{display:inline;margin-left:3px}
+.wd-height-summary{padding:8px 10px}
+.wd-height-summary small{margin-top:3px}
+@media(min-width:941px) and (max-height:900px){
+  #hub-app .wd-fixed .wd-controls{overflow:auto}
+  #hub-app .wd-fixed .wd-selectors{padding-top:6px;padding-bottom:6px}
+  #hub-app .wd-fixed .wd-result>div{padding:6px 10px}
+  #hub-app .wd-fixed .wd-result>div>p{margin:3px 0}
+  #hub-app .wd-fixed .wd-result #wd-sight>strong{font-size:1.65rem}
+  .wd-height-summary{padding:7px 10px;margin-bottom:6px}
+  .wd-height-summary small{font-size:.68rem;margin-top:3px}
+  .wd-height-pair b{display:inline;margin-left:4px}
+  #hub-app .wd-fixed .wd-panel-body{flex:0 0 auto;overflow:visible}
+}

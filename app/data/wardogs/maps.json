@@ -176,6 +176,88 @@
       ],
       "sourceUrl": "https://wardogs-artillery.com/",
       "referenceUrl": "https://metaforge.app/wardogs/map/ozeti"
+    },
+    {
+      "id": "zestafona",
+      "name": "Zestafona",
+      "bounds": {
+        "minX": 19.9,
+        "maxX": 124.89,
+        "minY": 50.7,
+        "maxY": 141.9
+      },
+      "tileBounds": {
+        "minX": -0.03,
+        "maxX": 163.81,
+        "minY": -0.01,
+        "maxY": 163.83
+      },
+      "coordinateMetersPerUnit": 100,
+      "tiles": {
+        "path": "assets/wardogs/zestafona",
+        "tileSize": 256,
+        "minZoom": 0,
+        "maxZoom": 5,
+        "limits": {
+          "0": [
+            0,
+            0,
+            0,
+            0
+          ],
+          "1": [
+            0,
+            1,
+            0,
+            1
+          ],
+          "2": [
+            0,
+            3,
+            0,
+            2
+          ],
+          "3": [
+            0,
+            6,
+            1,
+            5
+          ],
+          "4": [
+            1,
+            12,
+            2,
+            11
+          ],
+          "5": [
+            3,
+            24,
+            4,
+            22
+          ]
+        },
+        "remotePath": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona"
+      },
+      "markers": [
+        {
+          "x": 70.172672,
+          "y": 100.1717,
+          "name": "Tower 3"
+        },
+        {
+          "x": 68.599808,
+          "y": 104.15299999999999,
+          "name": "Tower 1"
+        },
+        {
+          "x": 72.892416,
+          "y": 105.07059199999999,
+          "name": "Tower 2"
+        }
+      ],
+      "sourceRevision": "b1463dab45fb7871a893f14d17f0064ef48e3724",
+      "sourceUrl": "https://wardogs-artillery.com/",
+      "referenceUrl": "https://wardogs-artillery.com/maps/zestafona/"
     }
   ]
 }

@@ -9,6 +9,8 @@ const fsSync=require('node:fs');
 app.setName('Dropzone');
 const profileNames=['Dropzone','dropzone',"Truck's Build Builder",'trucks-build-builder','rift-forge','Rift Forge'];
 for(const old of profileNames){const dir=path.join(app.getPath('appData'),old);if(fsSync.existsSync(dir)){app.setPath('userData',dir);break;}}
+// Development QA can run beside the installed app without touching its saves.
+if(!app.isPackaged&&process.argv.includes('--isolated-preview'))app.setPath('userData',path.join(__dirname,'../.validation-cache/native-profile'));
 const applicationId='com.dropzone.desktop';
 if(process.platform==='win32')app.setAppUserModelId(applicationId);
 let window,splash,provider,games,services,appUpdates;
@@ -20,7 +22,7 @@ app.whenReady().then(()=>{
   services=createServices({cacheDir:path.join(app.getPath('userData'),'feeds'),leagueCacheDir:path.join(app.getPath('userData'),'cache'),codCacheDir:path.join(app.getPath('userData'),'cod-cache'),bundleDir:path.join(__dirname,'../app/data')});
   ({provider,games}=services);
   window=new BrowserWindow({width:1480,height:980,minWidth:1000,minHeight:720,show:false,frame:false,backgroundColor:'#0b0c10',title:'Dropzone',icon:path.join(__dirname,'../app/assets/icon.png'),webPreferences:{preload:path.join(__dirname,'preload.cjs'),contextIsolation:true,nodeIntegration:false,sandbox:true,webSecurity:true}});
-  splash=new BrowserWindow({width:520,height:320,show:false,frame:false,resizable:false,maximizable:false,minimizable:false,skipTaskbar:true,backgroundColor:'#0c1110',title:'Dropzone',webPreferences:{contextIsolation:true,nodeIntegration:false,sandbox:true,webSecurity:true}});
+  splash=new BrowserWindow({...window.getBounds(),show:false,frame:false,resizable:false,maximizable:false,minimizable:false,skipTaskbar:true,backgroundColor:'#0c1110',title:'Dropzone',webPreferences:{contextIsolation:true,nodeIntegration:false,sandbox:true,webSecurity:true}});
   splash.removeMenu();
   splash.webContents.setWindowOpenHandler(()=>({action:'deny'}));
   splash.webContents.on('will-navigate',e=>e.preventDefault());
@@ -46,6 +48,7 @@ app.whenReady().then(()=>{
   handle('patches',options=>services.patches.list(options));
   handle('siege',options=>services.siege.get(options));
   handle('wardogs',options=>services.wardogs.get(options));
+  handle('wardogs-terrain',resource=>require('../core/wardogs-terrain-files.cjs').readTerrainFile(resource));
   handle('updates',refresh=>refresh===true?services.updates.check():services.updates.status());
   handle('app-updates',()=>appUpdates.status());
   handle('check-app-updates',()=>{appUpdates.check(true);return appUpdates.status();});

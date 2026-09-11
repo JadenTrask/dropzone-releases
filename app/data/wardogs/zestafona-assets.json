@@ -1,0 +1,3545 @@
+{
+  "revision": "b1463dab45fb7871a893f14d17f0064ef48e3724",
+  "files": [
+    {
+      "path": "assets/wardogs/zestafona/zoom_0/0_0.webp",
+      "bytes": 35346,
+      "sha256": "f0306d185ac57964c17106214a82ce2028b5d86e47c02623935873e4ff9f48b1",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_0/0_0.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_1/0_0.webp",
+      "bytes": 37234,
+      "sha256": "3dfa6d24ebfc15c9015081a6f4dcecc8858e34fbc0a786201bbc44fd999ddad1",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_1/0_0.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_1/1_0.webp",
+      "bytes": 38462,
+      "sha256": "9dbd7da4bd199c45584029937cd4c8344fdc7c3d9a139c06fe80cb1fecd97595",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_1/1_0.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_1/0_1.webp",
+      "bytes": 37014,
+      "sha256": "86ebb1efd12dd181564e4cda130c1daf1cf65318c4e1c0bf879cc9071e96737d",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_1/0_1.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_1/1_1.webp",
+      "bytes": 36042,
+      "sha256": "73dfa29c59d3c8ccc3d22bebfd50f15f195ea26dabe650cee32665b4e741cf90",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_1/1_1.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_2/0_0.webp",
+      "bytes": 39572,
+      "sha256": "49650678490cf26b86f9b9871a42c4a9d2ba5d7b6d07c5fce0243ed477ec49b6",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_2/0_0.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_2/1_0.webp",
+      "bytes": 37918,
+      "sha256": "fdf562649993aba4f145e01117a607bf35774f358691596f16a58d719822ad3a",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_2/1_0.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_2/2_0.webp",
+      "bytes": 39260,
+      "sha256": "45fbf3dc965107996e164941044d51d07535e1c30fe954b50fd7d6a0c9940c13",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_2/2_0.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_2/3_0.webp",
+      "bytes": 40548,
+      "sha256": "e4c665baaf72bb30fc800ca0ce77950bf610e7b06ec6479973b7dba1d32c46c5",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_2/3_0.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_2/0_1.webp",
+      "bytes": 40072,
+      "sha256": "b662efc74bc90f1df6707179efbbc3538024b0e265a574db515a85bd4c5238eb",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_2/0_1.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_2/1_1.webp",
+      "bytes": 36966,
+      "sha256": "061b73a2062f78086ea7c972a38368f4b10523a0d3f720f29fa2396d1fc03aff",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_2/1_1.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_2/2_1.webp",
+      "bytes": 35610,
+      "sha256": "f68d66ce53384d5efca58f75ad9b2ac0a0e441914234996bd6f0a6a56345839e",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_2/2_1.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_2/3_1.webp",
+      "bytes": 42424,
+      "sha256": "20e5bbcd692f7132301f3eb4da68a4a050d8a701119c092063f61705516b2c39",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_2/3_1.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_2/0_2.webp",
+      "bytes": 42996,
+      "sha256": "14c8bc8dc1a5d6f1a33a8f5cfd96a13d61102b9778f835335b11c129f67dcadc",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_2/0_2.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_2/1_2.webp",
+      "bytes": 35786,
+      "sha256": "942e0255a4d77de54cd716fafbf5ef31b5c76456b9daf60da74cb356d85ad152",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_2/1_2.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_2/2_2.webp",
+      "bytes": 34848,
+      "sha256": "99d9afacf142c4465686c4ff6cf494bb155eb0ee587279aa967dfbf3409f1f20",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_2/2_2.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_2/3_2.webp",
+      "bytes": 40296,
+      "sha256": "0807606d1d5f13e3f8dc168bb4e6a23f05c827f61edbecf5c10402a73f0a8b71",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_2/3_2.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_3/0_1.webp",
+      "bytes": 41910,
+      "sha256": "ea93782edbff58db4e02c7fe54ab11bf60466a8608b85c54267d333dcf9add03",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_3/0_1.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_3/1_1.webp",
+      "bytes": 38608,
+      "sha256": "83760fdd373dbedd11f32f07436d35b35ed1e8a8c6e0a6fcf2682b37a2b7a508",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_3/1_1.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_3/2_1.webp",
+      "bytes": 33902,
+      "sha256": "f7c044cff141e85a2ce22b71df5045e0d2ff080be695084c49cd4d76b8014262",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_3/2_1.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_3/3_1.webp",
+      "bytes": 39906,
+      "sha256": "c774e40324bb04f15b45fd6765bab8b24d8f8639d58d8ef496a040a6b23a1586",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_3/3_1.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_3/4_1.webp",
+      "bytes": 38046,
+      "sha256": "73da73f761bade73d91ac392a58e58f60af76a75d5664f429047abdb50b6e392",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_3/4_1.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_3/5_1.webp",
+      "bytes": 36604,
+      "sha256": "3834da7cf98e09952ba472696903f983ca105e02bd7d39293bf85d8651387f99",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_3/5_1.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_3/6_1.webp",
+      "bytes": 34802,
+      "sha256": "9f6a75658623b1e65452b9d3fd3f117903a1e41d17c9ba13930d6dc3dbafa6bd",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_3/6_1.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_3/0_2.webp",
+      "bytes": 41604,
+      "sha256": "8cf146d1b531fe056eb707ec0f9618c278d22e12fa909be1e85683a06312b2b3",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_3/0_2.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_3/1_2.webp",
+      "bytes": 34022,
+      "sha256": "b4d4f5aee5f85e73e1e977edff490d167b2004e82790e5caf68b1193bf57a41d",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_3/1_2.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_3/2_2.webp",
+      "bytes": 35990,
+      "sha256": "63920721f5b360e3b932cf5e11f828c80739035bfd8d0a6a48db68142c0ac25e",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_3/2_2.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_3/3_2.webp",
+      "bytes": 37106,
+      "sha256": "a269a55f13e1a78cde6dd971f41c57a38da6b88a76b795f12eeb1564e213137e",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_3/3_2.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_3/4_2.webp",
+      "bytes": 35804,
+      "sha256": "2d89d5d3a7d8ed4653dee2fd92a27a29f4dfaf1e167168a7c11a7b7a6ffb8ffc",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_3/4_2.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_3/5_2.webp",
+      "bytes": 35614,
+      "sha256": "952fa135d274790f040ab5075b83dc6fe9237b7e444e4b7e93ddbae9a620dce8",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_3/5_2.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_3/6_2.webp",
+      "bytes": 38312,
+      "sha256": "1ca8d85332aa5ea3ceee1f44e4501ace6be24d5783d496dde6b97cbf19382926",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_3/6_2.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_3/0_3.webp",
+      "bytes": 41776,
+      "sha256": "5c401fbc6f094f975ceab82037f447611dfb403c8d918b22e33d1cd4d3f83d5c",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_3/0_3.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_3/1_3.webp",
+      "bytes": 39496,
+      "sha256": "ad4432aec83a4832851f39d1a784e68ee42b7935e3afd9145241f6f1eba62f7a",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_3/1_3.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_3/2_3.webp",
+      "bytes": 34946,
+      "sha256": "a5a17154b92d4076a5b5a8f7b40106cd305335e0dc713b159e75cbeaa6d501a3",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_3/2_3.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_3/3_3.webp",
+      "bytes": 36552,
+      "sha256": "dbec4970a2f496fc364951bcc2aa8ff9a3889068d5bbc5ccda719fd24012e7b6",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_3/3_3.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_3/4_3.webp",
+      "bytes": 34212,
+      "sha256": "124c8d1dd16f6af7f0b4b0fed0b7c5b9f380b8504279296d8fbf04d0ada4746b",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_3/4_3.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_3/5_3.webp",
+      "bytes": 33588,
+      "sha256": "ba426b849112f37f12fa138b2ee94843ae50e3b67581e6fbba02ec3c8925a77e",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_3/5_3.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_3/6_3.webp",
+      "bytes": 38764,
+      "sha256": "81de2a23c2efff439dd3b6d51bfef89b516010b5e2dd7e7fac6eabcf9bd74e17",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_3/6_3.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_3/0_4.webp",
+      "bytes": 42758,
+      "sha256": "53b03c1b31eff0cfd53d03d14abdde82e07796bc8a93c53eb09f945bc0d818d3",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_3/0_4.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_3/1_4.webp",
+      "bytes": 40290,
+      "sha256": "5055dd5352cb6abd117a9061d6e6a2b703ac7afa52f94b136dd1c738bb61eb44",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_3/1_4.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_3/2_4.webp",
+      "bytes": 34268,
+      "sha256": "382d97b51c90309289c45a71c48537a5f23ceb2641eb62d16dbfc3c4af1c2272",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_3/2_4.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_3/3_4.webp",
+      "bytes": 36046,
+      "sha256": "5dd67f805d9dc342b44720806dab0eac8eeeba069abff9d1b51fbd3bd47cb632",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_3/3_4.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_3/4_4.webp",
+      "bytes": 34950,
+      "sha256": "70c4ac438b8d872bd872c8b1574f8035c3f82bfd4f16023d4aed457e9b00a6ca",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_3/4_4.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_3/5_4.webp",
+      "bytes": 31296,
+      "sha256": "8d2eaf882e9a18785dcd9f3294d4db3764d0f49add15408efc1bc1fad24f49c6",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_3/5_4.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_3/6_4.webp",
+      "bytes": 40000,
+      "sha256": "8f48d6ea094bb0ef58dab66bb897156c8e51ac699303b5cc3549e23567285961",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_3/6_4.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_3/0_5.webp",
+      "bytes": 41002,
+      "sha256": "dc658d99ef042f37848f24d4c779ec21483c2490fdc357d564cd86ec1ae39119",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_3/0_5.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_3/1_5.webp",
+      "bytes": 43662,
+      "sha256": "d41fc8227640ef6ed069ae4b245150facc631c8a4b12399c1926801a8860de80",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_3/1_5.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_3/2_5.webp",
+      "bytes": 37342,
+      "sha256": "177c91bbc0c915b355cf5c467d9e95a4eead8daaa97d2564b94574265701a989",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_3/2_5.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_3/3_5.webp",
+      "bytes": 34956,
+      "sha256": "5c87808ae2f6f3b53fb464e4aeab83d252204fca487029f523c33da293edce73",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_3/3_5.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_3/4_5.webp",
+      "bytes": 38262,
+      "sha256": "eb27d22a9d3ec483f5306ab18198a422aafb590c15f1892bbb23aee394c1a445",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_3/4_5.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_3/5_5.webp",
+      "bytes": 32588,
+      "sha256": "baed45a2c6d5d895d04e371de1d4a226273a62f395e8589bab672ed6d66ac038",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_3/5_5.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_3/6_5.webp",
+      "bytes": 33622,
+      "sha256": "046506b81ba910ecba6e7208c0687b0ca7779a14339df1fe4fe3177a6f4e01e9",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_3/6_5.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_4/1_2.webp",
+      "bytes": 40110,
+      "sha256": "0a56ec4fb0816c5fcace4a14affe716151938d47b661b1e670805d303daac833",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_4/1_2.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_4/2_2.webp",
+      "bytes": 38098,
+      "sha256": "e61d72ccae10997d3b594d72fa7a44b5ad3e583bbd75b4ecadb2114a09be2e0f",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_4/2_2.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_4/3_2.webp",
+      "bytes": 31230,
+      "sha256": "e8a3797e1e2b7ebce59c52ce32c1e58c3d9ec0336d4078fb3e62bdd6ab886b9c",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_4/3_2.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_4/4_2.webp",
+      "bytes": 28004,
+      "sha256": "deb5aa020aea897df5645fda309ba4039380b84c586cd0a7d2ad81d7ba93c4f8",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_4/4_2.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_4/5_2.webp",
+      "bytes": 28690,
+      "sha256": "5de502a503b1e1c89173637ce223c55b4a5eb2a0e2f955785bfb9cbfb9b044c2",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_4/5_2.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_4/6_2.webp",
+      "bytes": 34438,
+      "sha256": "b4bc7d24ae760ea37a869aded178e7461d526ba1b64a12f91c61295b5976beb2",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_4/6_2.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_4/7_2.webp",
+      "bytes": 40744,
+      "sha256": "1968ed07f3108f0c769ad8aa95ed240c429ddaa466f2aa21be4bc0c0015a8326",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_4/7_2.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_4/8_2.webp",
+      "bytes": 40358,
+      "sha256": "06de662a5ed4d9ab6c7b43198add82912a75f26e1ba71f398b6570a2d9406932",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_4/8_2.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_4/9_2.webp",
+      "bytes": 41616,
+      "sha256": "367287afbc1369757a98bde73f2f671f708d8d0f33acab36f0c6bfe3f3682b2d",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_4/9_2.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_4/10_2.webp",
+      "bytes": 32108,
+      "sha256": "42041d8845b0090464f943a3aeecf46e3bd70b3452c719fc5096c5f1647d9780",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_4/10_2.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_4/11_2.webp",
+      "bytes": 40908,
+      "sha256": "7a3044b296202ecbb68eb61a7f4c48a66d342dff2896c16162eec4b8656d40e9",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_4/11_2.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_4/12_2.webp",
+      "bytes": 36876,
+      "sha256": "234c7483adb2ae75b437f71d557b2b4e754dc3c31718a5e603f22cdc0014eac5",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_4/12_2.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_4/1_3.webp",
+      "bytes": 40288,
+      "sha256": "49fab3e113e8fbb5e29cc80d7fb5e96c9af57edefe5bffb711227dc2029da93b",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_4/1_3.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_4/2_3.webp",
+      "bytes": 41558,
+      "sha256": "1e9cdfdbf75c82d97bb7e682936afb393855c99df60fb0b524ff8dbc2af6df18",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_4/2_3.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_4/3_3.webp",
+      "bytes": 35068,
+      "sha256": "c4a46576d003b1a318010b85613bcff20f6068063459903abf25273e3424fc2f",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_4/3_3.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_4/4_3.webp",
+      "bytes": 29964,
+      "sha256": "869abd4d59d7fe07e0258a4b6d612a0be59bef911f97988d2abae1df60264dab",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_4/4_3.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_4/5_3.webp",
+      "bytes": 32492,
+      "sha256": "edee6f10de4a5242968dcc81cb4340d7eb742229b1964b0208f37f7260c2b4a2",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_4/5_3.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_4/6_3.webp",
+      "bytes": 38736,
+      "sha256": "9527aaab596566632ba091ceea4d5838b31129b036101e6ab99a2ad545eccd0d",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_4/6_3.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_4/7_3.webp",
+      "bytes": 36532,
+      "sha256": "fa83ded078efd97a7f8ddb3b3a3ef7e710f4237e9645e9e89f4c26cb0e1c7b84",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_4/7_3.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_4/8_3.webp",
+      "bytes": 31472,
+      "sha256": "3f915966cc9dc42b53b978c1a7943701ee3920445456abcabb706a399950f265",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_4/8_3.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_4/9_3.webp",
+      "bytes": 30030,
+      "sha256": "fc87aff39987064be3b526d8e45ec421c0761aa34ba060937c65c9528051a24a",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_4/9_3.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_4/10_3.webp",
+      "bytes": 31082,
+      "sha256": "be940343b7ec2cb03a65a1085e7a8d791549b6f34ae502df37e0afecbe490413",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_4/10_3.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_4/11_3.webp",
+      "bytes": 31490,
+      "sha256": "ca82289ec85582d5b88c2ad811827d8d0681f9ee7762fc60349ae42e164bbb10",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_4/11_3.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_4/12_3.webp",
+      "bytes": 28778,
+      "sha256": "0f956bcd16fb30e29a4143b8f717ce1a88706a33c447fecc575a7dc90af36df4",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_4/12_3.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_4/1_4.webp",
+      "bytes": 35514,
+      "sha256": "6950ffaeb02f30f1351ebfdd57f65377b54a70da2e815e8476ef91f4d22ab6be",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_4/1_4.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_4/2_4.webp",
+      "bytes": 29056,
+      "sha256": "02ba016104b135467de70b59263762a29adbac17694ee3acaf017116a36ff56d",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_4/2_4.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_4/3_4.webp",
+      "bytes": 30074,
+      "sha256": "a5620256a2a5f01d4fca753dca9eba633307d4348b4ac86928a2f08b53b74924",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_4/3_4.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_4/4_4.webp",
+      "bytes": 32874,
+      "sha256": "f119524491c5ca7ab529c74b91d9d0515ff90cd63bf950778545cc9d12e02ab8",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_4/4_4.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_4/5_4.webp",
+      "bytes": 34700,
+      "sha256": "f7cf02bd96319ab4fcf80a1738f6ebb4250356a90a259650d721be7f5da7a82f",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_4/5_4.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_4/6_4.webp",
+      "bytes": 33794,
+      "sha256": "a6eb7800636f9ee2d848f419e962fb14a049c4fad0810b00ae6346dd8f7db878",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_4/6_4.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_4/7_4.webp",
+      "bytes": 32368,
+      "sha256": "a486ad44bbb6b0292094b447c419ce345cb7499431b172baa020ef76f4d8d73f",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_4/7_4.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_4/8_4.webp",
+      "bytes": 32412,
+      "sha256": "17d1362679af86a289254cf7d4b651c3a04a6ae2eab228e84071d3ce8ec72877",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_4/8_4.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_4/9_4.webp",
+      "bytes": 33852,
+      "sha256": "b523fb4261ea2efc0138b8e09de5700548203da670ae489af59d50a268e541c5",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_4/9_4.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_4/10_4.webp",
+      "bytes": 33646,
+      "sha256": "4d8c14c542eb1921ae07167ec005ae90a8f782accf6eaf707dd71c4c2fae2735",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_4/10_4.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_4/11_4.webp",
+      "bytes": 32634,
+      "sha256": "9149a01f4bbc8ad2a24cbd03e6454ba1956670b2dd1bc3238c732cf9680036b9",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_4/11_4.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_4/12_4.webp",
+      "bytes": 28884,
+      "sha256": "aef29f9c632885f53afe86bc6e5ef5866778c8a6f6239ae533791e1ef6de9ab9",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_4/12_4.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_4/1_5.webp",
+      "bytes": 38740,
+      "sha256": "62b8a9fcc86662751a75b56123a24178537fc856872824c6870126b7e500f4b3",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_4/1_5.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_4/2_5.webp",
+      "bytes": 33502,
+      "sha256": "4247eedc2a5608e7105498d0aade56e21d3fa245f5f25e4c2753646ecd35bdb6",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_4/2_5.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_4/3_5.webp",
+      "bytes": 29368,
+      "sha256": "68a7d205695bbb1c2e2d922c0dd9bd079c525e55c7809322ce34a0ea78564171",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_4/3_5.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_4/4_5.webp",
+      "bytes": 32280,
+      "sha256": "c13f71cb637fe06aa6e66a3889cb3545cad6d8f9772afef27a6af9593ac6c80e",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_4/4_5.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_4/5_5.webp",
+      "bytes": 34572,
+      "sha256": "e71d82f05fbea1c184836f092f56ba40a93f551b6fce2d308f0259256212636f",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_4/5_5.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_4/6_5.webp",
+      "bytes": 36204,
+      "sha256": "3a474015c767170b10ad4fd25d595a160257b04adc6e8bd74e3d528cb287530e",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_4/6_5.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_4/7_5.webp",
+      "bytes": 34572,
+      "sha256": "0f042581d423e11b84b75716aaf81ab8c9c060b70a01fd59b494ed021121868d",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_4/7_5.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_4/8_5.webp",
+      "bytes": 32854,
+      "sha256": "0a0fd819cebd93532b05bdd600e0684ae42c2087dc3149f48c428c0fab2521e5",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_4/8_5.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_4/9_5.webp",
+      "bytes": 30982,
+      "sha256": "a35b95d9a8d174fe5316336c5df08e4d5d67a29613388fdc88ba3a74e62e1794",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_4/9_5.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_4/10_5.webp",
+      "bytes": 30582,
+      "sha256": "dd1c46bb99bb4d2ad9a3d21d5b97cebe0b35f8309bc2dd7289659f3452490d43",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_4/10_5.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_4/11_5.webp",
+      "bytes": 30470,
+      "sha256": "08b38975f993af540a6b7788147e4d9c21ae7b45f57da6d8675b7b81d65f596a",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_4/11_5.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_4/12_5.webp",
+      "bytes": 39218,
+      "sha256": "8efbe97b6ca8ab88acc9e73975d72d5bce92bd9d5966db62ee6edd8e49dbb6dd",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_4/12_5.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_4/1_6.webp",
+      "bytes": 37864,
+      "sha256": "77b2cf3c15414e1724d06eaa542916b40280a319e29b408c4860bd0066f86492",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_4/1_6.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_4/2_6.webp",
+      "bytes": 43520,
+      "sha256": "a167717945053b49b93c056d4dce9e22010450e57215941ab1205bae10f5f559",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_4/2_6.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_4/3_6.webp",
+      "bytes": 32232,
+      "sha256": "2e9c63ea05c4d10ea5aa451b0403a087f00760c0c18f33cea555bf1baab5bc24",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_4/3_6.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_4/4_6.webp",
+      "bytes": 32394,
+      "sha256": "0c6d2b6d590a7175254615d4cab4f68c70b2b1fb7cd554f7cda4f97c787ab488",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_4/4_6.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_4/5_6.webp",
+      "bytes": 33784,
+      "sha256": "2007e42ea2ea1a6696040631ed56aada66890fd970bdbf7ebdbaa11ef1f6f9a3",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_4/5_6.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_4/6_6.webp",
+      "bytes": 34390,
+      "sha256": "4c0c8272df0657f916019bfb7da539ae7557bd14038c21b203cdd200f01c1559",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_4/6_6.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_4/7_6.webp",
+      "bytes": 32296,
+      "sha256": "95587fd1a2e333d99c3409295741538bb8dcf5b4638f3aa425eae22e2c5568b2",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_4/7_6.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_4/8_6.webp",
+      "bytes": 33384,
+      "sha256": "1f4801b08a80df984adfa549fb1b3e97264af8a9a3e8eab40dfab2779cd92489",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_4/8_6.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_4/9_6.webp",
+      "bytes": 31096,
+      "sha256": "1894bdece54c96f25f9d4d830a02240f14ed52494949d52fe589f0076f7e96ff",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_4/9_6.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_4/10_6.webp",
+      "bytes": 30444,
+      "sha256": "60b52ca875dfc15efb5cf44d7bac08b4e3f0689403c8c18fc4faf3ca1f6905d8",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_4/10_6.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_4/11_6.webp",
+      "bytes": 33332,
+      "sha256": "dc252d8a118a5b776921b4821bbf547a5134620dbe38071dfb694d80e83d085f",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_4/11_6.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_4/12_6.webp",
+      "bytes": 39406,
+      "sha256": "9504da5e251f82e89466836e3c3688db7d7e28ec79fe086cd96bd885c69969ed",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_4/12_6.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_4/1_7.webp",
+      "bytes": 41236,
+      "sha256": "356b0cb1774313eff33df0ea7317bbd02f11b1bd5cfd918415a811afc4a46d35",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_4/1_7.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_4/2_7.webp",
+      "bytes": 38078,
+      "sha256": "5d92502525abb6672db7a6fae27022721cfe9c898e157529225e997e366f92e8",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_4/2_7.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_4/3_7.webp",
+      "bytes": 34020,
+      "sha256": "2ccf2a4306f50699fd3721a8881b0b763a92409aa5be143dbe84392945397d67",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_4/3_7.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_4/4_7.webp",
+      "bytes": 30160,
+      "sha256": "e9c3124765e80b2c45973f37e5f92f4a4f1ff9c96f1849f5bd5e48328e681d91",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_4/4_7.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_4/5_7.webp",
+      "bytes": 30712,
+      "sha256": "d5a2a392d35b252bd912026ced7cb0cd6d129d2d295df8a0744b84842496729e",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_4/5_7.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_4/6_7.webp",
+      "bytes": 33182,
+      "sha256": "fc79a7a5467e2ce7d3e254d24c89b735592ed3b46d9f4ccd3e365d1549ce2b7d",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_4/6_7.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_4/7_7.webp",
+      "bytes": 33686,
+      "sha256": "d840072bd8c0fbb462fff36c954f92cda288d13b442ec36074d946f8f93fce48",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_4/7_7.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_4/8_7.webp",
+      "bytes": 30772,
+      "sha256": "7358818c5364e50c6ee32c13062aa883f6eb72223b0140844a43ef521f4b1faf",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_4/8_7.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_4/9_7.webp",
+      "bytes": 28572,
+      "sha256": "148ccddd66ba91f44c6cd947845654c00b3199673935a7b05ffa502ad01c8ba4",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_4/9_7.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_4/10_7.webp",
+      "bytes": 26410,
+      "sha256": "81ea3845f7716fbf47037b7313520cbbacba6a095db216f2ae6a91a14367a44e",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_4/10_7.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_4/11_7.webp",
+      "bytes": 25806,
+      "sha256": "9490a73f490ba270a5e3b8da4b32c4986e4bc9513d2e2048a71b1bb9ee0c2f02",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_4/11_7.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_4/12_7.webp",
+      "bytes": 27280,
+      "sha256": "3d4253a669fc3425d061fdd65020f14d200eb0f165b3d039a2c99c0c00e64047",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_4/12_7.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_4/1_8.webp",
+      "bytes": 34218,
+      "sha256": "85e3431883d6eef1563cf79cda51a80d94ca30a0838979936a734d5d39b35fce",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_4/1_8.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_4/2_8.webp",
+      "bytes": 43610,
+      "sha256": "fa54c2f85b033c07aeececb48b327b3e74a34226b917da67979ba535bd5b6745",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_4/2_8.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_4/3_8.webp",
+      "bytes": 32374,
+      "sha256": "a6f2d41deaa8b7e86ba296cb916812ecdd24cfe81761f6224f0e90a44d207c0d",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_4/3_8.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_4/4_8.webp",
+      "bytes": 28510,
+      "sha256": "7963bc8d3811617efa17e7a0e9abcf2e20cef2e6dd882e889e2905be78b910f1",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_4/4_8.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_4/5_8.webp",
+      "bytes": 31262,
+      "sha256": "d23b8a137693cd5b7ada12c1dc9e6a932a3f4b6dfd9b58777b4ccfec9c659522",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_4/5_8.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_4/6_8.webp",
+      "bytes": 34442,
+      "sha256": "1f8e4290403f982962954eb17fc65a80168334bc8bd0058e2315acaa437c7a1f",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_4/6_8.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_4/7_8.webp",
+      "bytes": 34246,
+      "sha256": "a79a90e6a81ea870a4533044640cffd903dc7082e5cc15df1de4b2c7b07cd2e6",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_4/7_8.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_4/8_8.webp",
+      "bytes": 33456,
+      "sha256": "4f7b72ba391c0ef4b6dd86f42832436d653dda3eca99f0315e0890fdf95fbdba",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_4/8_8.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_4/9_8.webp",
+      "bytes": 26572,
+      "sha256": "6512b0346c9ee87b630ac2b254ac16b38daff4cce729ebde59ad81d515f6e7bf",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_4/9_8.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_4/10_8.webp",
+      "bytes": 26066,
+      "sha256": "8fad4a2ed2b15279a6b077fa8986dba1337e5bbda80a7ce14366ec68395819b8",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_4/10_8.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_4/11_8.webp",
+      "bytes": 28478,
+      "sha256": "bf8bdf0a5cc7daf4ec4ebdaccae46323f0b20777d400acf30c07b521b88e6261",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_4/11_8.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_4/12_8.webp",
+      "bytes": 35936,
+      "sha256": "a0a9edaa15f81edff2c88c4ebff81ccf0344fbf3c89663548dc137a005da337a",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_4/12_8.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_4/1_9.webp",
+      "bytes": 42580,
+      "sha256": "225f72e469fc233ace7a07af54e90aecd010b5e6cec0e023f3e93c5d993a4a95",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_4/1_9.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_4/2_9.webp",
+      "bytes": 35348,
+      "sha256": "b557469f2c898b0ce3554e7a214a890986a788425574324b745084d0d99f8201",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_4/2_9.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_4/3_9.webp",
+      "bytes": 37930,
+      "sha256": "2f0796edbee57f35ac42862d6f78dcbc6e3a6c7b51f9265b1a1dfe0d1bb9f920",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_4/3_9.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_4/4_9.webp",
+      "bytes": 31664,
+      "sha256": "4bcb477caed9189fedb5ae8fbe132300f037b63797b03338cb2a98c791e834f5",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_4/4_9.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_4/5_9.webp",
+      "bytes": 32202,
+      "sha256": "5c6d0438304655af9328659ebb1d93913bb4e625b0a83bc05131b242ab53a05e",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_4/5_9.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_4/6_9.webp",
+      "bytes": 34512,
+      "sha256": "d441675bc2b5fee9926b50b35b3597e8bc2cfce2aeb7edbb4b7f1d41ce2d6db8",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_4/6_9.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_4/7_9.webp",
+      "bytes": 32888,
+      "sha256": "7d7999228332e39891d721f7a6fdfa300f3607bbbecb20deb44ec4a5462d43a3",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_4/7_9.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_4/8_9.webp",
+      "bytes": 37492,
+      "sha256": "15b0e783e7c44d707989c977cdf5ddf7c17600aad7511a2d23425d6e345d8c66",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_4/8_9.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_4/9_9.webp",
+      "bytes": 33258,
+      "sha256": "4e1601392f9ed8e0ac2f80a4b741b77c5d9bfddfce3245b86e88516b27abc707",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_4/9_9.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_4/10_9.webp",
+      "bytes": 23874,
+      "sha256": "67117453ca9bfa988d6ff01b41d82bec5d11307548a139639d48ef4e56878fdc",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_4/10_9.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_4/11_9.webp",
+      "bytes": 26602,
+      "sha256": "50c9fed359372346beed65ac240a767c14cc70e61f67b13dfd937963f5d45798",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_4/11_9.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_4/12_9.webp",
+      "bytes": 31372,
+      "sha256": "d8c0b2d94a28823eb51e9c09fda9fc39e9122620b9ce2f746c50329cee90220c",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_4/12_9.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_4/1_10.webp",
+      "bytes": 33152,
+      "sha256": "e97aae482e41322c47883ee184271f7078aa33d69b0b343cb24dae7bd4120402",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_4/1_10.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_4/2_10.webp",
+      "bytes": 40984,
+      "sha256": "11af6001fff8579c65ed5bf93abe4f6e65307feed1ab60cf863b1749bc72f1ce",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_4/2_10.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_4/3_10.webp",
+      "bytes": 42160,
+      "sha256": "30a709df3eb82f21e5ce84174d78cfcf1bb5acd56fa287f068dd857a835297b9",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_4/3_10.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_4/4_10.webp",
+      "bytes": 31724,
+      "sha256": "3b2c023fc27b095b487d6f12b32c91b1a7ba015d9bd2ffc40849bb2a0f1b4700",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_4/4_10.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_4/5_10.webp",
+      "bytes": 34588,
+      "sha256": "189293e26d3739be1c35afb46559f59a5966504234afcef15835ccf55377b62d",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_4/5_10.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_4/6_10.webp",
+      "bytes": 32482,
+      "sha256": "f32c5dbc7feb1ad6d54c9188efb04644431be590545a09771d8e035627c4b8bf",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_4/6_10.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_4/7_10.webp",
+      "bytes": 30100,
+      "sha256": "6019ab3972158499ee8f257d2664049dbac1bcd8d01ccdb99f12497054e67e07",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_4/7_10.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_4/8_10.webp",
+      "bytes": 34216,
+      "sha256": "1904904a10d3764780146c9441d4d427bebb85eb15f9718ce3505ebbbcf085c3",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_4/8_10.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_4/9_10.webp",
+      "bytes": 35584,
+      "sha256": "3ecdc498b8f0107008d138c4385ba58a2930de9381b7e059891eaaf48ca80678",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_4/9_10.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_4/10_10.webp",
+      "bytes": 25872,
+      "sha256": "55111ad792a28885cef46dc17a6136a355d5ff14573b645482893234c6594a31",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_4/10_10.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_4/11_10.webp",
+      "bytes": 27102,
+      "sha256": "53d9f500ba6e89d047188325642906d2f3caef622014ca8d0f33b73c4c61bcb2",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_4/11_10.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_4/12_10.webp",
+      "bytes": 25680,
+      "sha256": "de5cca42f926456259942a694ec44bf4edadb6fd4d61fb6cd812f1f3e2be9cac",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_4/12_10.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_4/1_11.webp",
+      "bytes": 37926,
+      "sha256": "ebe9ec99ec4cb01c62c13e083231bf7a66244e77d87ff3e413f33cf1fb4d4f03",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_4/1_11.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_4/2_11.webp",
+      "bytes": 36402,
+      "sha256": "f974da546078f03d97d10414f85f7c16e560c684cdfa300f8c150c4dc85fc1ed",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_4/2_11.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_4/3_11.webp",
+      "bytes": 45236,
+      "sha256": "b367b1d6af8750ad1176bbbe110e9d49884332bb4f3ac137dcc889749d5b73ae",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_4/3_11.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_4/4_11.webp",
+      "bytes": 41256,
+      "sha256": "1455b2db89e02ab0c90561c1912ccd8f8d2dc6645c4c5a7c2594f27cb69fccf3",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_4/4_11.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_4/5_11.webp",
+      "bytes": 34806,
+      "sha256": "354b13f5968fa7acb2ccd6f97258b00f9632a2be6a3c32b6d838770a374b148e",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_4/5_11.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_4/6_11.webp",
+      "bytes": 34488,
+      "sha256": "4a228940da6af010b1e4e011606327ae0c48b83ffb51a422f99ee653a3fd271d",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_4/6_11.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_4/7_11.webp",
+      "bytes": 30838,
+      "sha256": "592ae5260e7cf70c6136b810eb7100fb763345b84e4bfbe42d0ed975e5e88013",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_4/7_11.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_4/8_11.webp",
+      "bytes": 40240,
+      "sha256": "c9177574c87f3c8c31768e4d95670d516ae2b80d2aa24f55017ae9f907f9ff1e",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_4/8_11.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_4/9_11.webp",
+      "bytes": 35222,
+      "sha256": "62a37d6a9604bbfbe678be7d30d0467a4c900810d553ed66b13b06f002ada64a",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_4/9_11.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_4/10_11.webp",
+      "bytes": 28080,
+      "sha256": "b789f6c83f9c8b0b4fec5e5ca42d85332ec29dd5af89cb3863b4fcabb6c591f5",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_4/10_11.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_4/11_11.webp",
+      "bytes": 30206,
+      "sha256": "46d1870895bed4a811737379afed93b6758e1aa013cf24b9a366e06f48bcfde3",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_4/11_11.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_4/12_11.webp",
+      "bytes": 35730,
+      "sha256": "a176e4aa206487260a30ea8cd0c6dab224ca5b7c470e4a5df36a5bee9c1178a7",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_4/12_11.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/3_4.webp",
+      "bytes": 41038,
+      "sha256": "20e3240b2bc2554ad30d0ee607c1ef5607c67c6f04237362dac9b2bc0cecd11c",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/3_4.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/4_4.webp",
+      "bytes": 36634,
+      "sha256": "375ca395832b56a7532672a6ecf877bc5aecdfb9842e5c18a5a64431c788bae2",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/4_4.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/5_4.webp",
+      "bytes": 28698,
+      "sha256": "19a83c018f45bae55c51f50f0c40c25aa29b7fd62472a13cfee3aa388324d312",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/5_4.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/6_4.webp",
+      "bytes": 26756,
+      "sha256": "0743acdf397c0f3a4464382e6c66db68595c5229fb704360f60d75a2e6090642",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/6_4.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/7_4.webp",
+      "bytes": 25054,
+      "sha256": "0414ee3ea2ef5172d5648ea6dc580c330b1003aab39372b48a6fac926cd4c9b2",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/7_4.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/8_4.webp",
+      "bytes": 24350,
+      "sha256": "433532ee7cb4f128afe2395e1e662aa8bff7b1cd636d980b9ce121de0167ee3d",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/8_4.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/9_4.webp",
+      "bytes": 22740,
+      "sha256": "5b9e68ce1b20ea0e76c65c013d538097604dd2642c5731f0d01f869e1728b397",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/9_4.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/10_4.webp",
+      "bytes": 25638,
+      "sha256": "fe1f7f62d20d1195a24d4d0c231a78358506f412617d34fcf20d79d37a0ddab4",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/10_4.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/11_4.webp",
+      "bytes": 23282,
+      "sha256": "549c2f415b23a66b233062a9fa6edf5ee7c1cc329c1cb7d2e6b49471a688a414",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/11_4.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/12_4.webp",
+      "bytes": 24410,
+      "sha256": "a0c58b7c4e989c84bcd558e42b1d9d3104069d8dcafd6ade38b2e5f8858192bc",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/12_4.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/13_4.webp",
+      "bytes": 24642,
+      "sha256": "f306cf18bee29c5f1e21477cf031c21aa93d4e4bae2ea46924c65c1d446a8c32",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/13_4.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/14_4.webp",
+      "bytes": 31800,
+      "sha256": "1894bba2b278d1e8631f0f66c8231c8c769adf64d036f3d257b88a685f0445b2",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/14_4.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/15_4.webp",
+      "bytes": 36350,
+      "sha256": "a912b849ff199908660308dc605a188af3da57de31871a312ff59049ac112538",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/15_4.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/16_4.webp",
+      "bytes": 38134,
+      "sha256": "fa118bd1826b90ae19a8a288cbf9bfd2b41761d4a6fe23b43bc1a968e0c16fc6",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/16_4.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/17_4.webp",
+      "bytes": 39154,
+      "sha256": "d1da93a0796cd3d99d58c23d88adfd3962bb1011545135101e89fdac8fbc5ad4",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/17_4.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/18_4.webp",
+      "bytes": 42932,
+      "sha256": "cb48515de864caefe7ba6c291b75ba61882fa6666e8ab5dce1a50efe3cf9fb64",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/18_4.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/19_4.webp",
+      "bytes": 40220,
+      "sha256": "08858203987acc83622dafc1666bf63516e1a3bde24cd9e839acacc3614ca1e7",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/19_4.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/20_4.webp",
+      "bytes": 34830,
+      "sha256": "708c52ddef09605bd5f58527b2bbe15d3d40204e3e1ebd0b9f808f43ed05c39e",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/20_4.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/21_4.webp",
+      "bytes": 30350,
+      "sha256": "82debd6dd9a2961d2854906189fd5d156934e26ea90fa6ccdfb1ab911292de26",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/21_4.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/22_4.webp",
+      "bytes": 36784,
+      "sha256": "1f525e1d4a8418d342dda7ff34cbff7d7acd2d6389f6b3476efd956b51046bcf",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/22_4.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/23_4.webp",
+      "bytes": 41586,
+      "sha256": "5c0be60445bc63c613f208c09aaa0efde1d14b764b8f4ffe3535a5b224524b9f",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/23_4.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/24_4.webp",
+      "bytes": 41998,
+      "sha256": "48d198596b662647b2a8570b478c27d82e6bcd3e5030d76974438b454809470d",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/24_4.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/3_5.webp",
+      "bytes": 36786,
+      "sha256": "9c19ff719d86d2fabf2bf054e32bb4fb982e39592fd511e1288871d10fd8b2ff",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/3_5.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/4_5.webp",
+      "bytes": 41394,
+      "sha256": "000979d22d2800e7612614c780b130f89189e0921e3ebf1e1c3a22718e40802c",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/4_5.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/5_5.webp",
+      "bytes": 33220,
+      "sha256": "1ef054e07656865f53b7835f4dceb1545191e373b7971807ddc22e265b0d6eb1",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/5_5.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/6_5.webp",
+      "bytes": 34660,
+      "sha256": "9683df94c46ed23f7bc16b861c1e651cbf96bd412396bf1ef42e66ab8a9221bf",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/6_5.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/7_5.webp",
+      "bytes": 26036,
+      "sha256": "70c1a926f980ad66f3bf1bfa727c373996f72dbe1f27f4b970953b23e8a97a82",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/7_5.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/8_5.webp",
+      "bytes": 25478,
+      "sha256": "52e0dc88f6cf234ee43b9c3c3f5e3abe9e4ff0d80d4b27570b0fa8397a2889c5",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/8_5.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/9_5.webp",
+      "bytes": 27380,
+      "sha256": "3b642a2b804cd5fa750ae5c1558d30d181fe35a188f3dd73812fa2d5c2b41f37",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/9_5.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/10_5.webp",
+      "bytes": 24648,
+      "sha256": "d71e98acf4b3c8b067df1863abbcdb0829227936ba05cb63a73f834892589049",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/10_5.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/11_5.webp",
+      "bytes": 28932,
+      "sha256": "b2b7321bdb3fec25eea256a25c8dc9bfdbc93c27e76ec02778acd04e895f246b",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/11_5.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/12_5.webp",
+      "bytes": 37878,
+      "sha256": "653d2f8635888dda75a8f94e9368ece685f8daad68da838e735e3966085c7a64",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/12_5.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/13_5.webp",
+      "bytes": 39356,
+      "sha256": "eab814e883d8e6809eb5d86da8d45d25bbae3001f072f4f835d59e6cc1ca3d33",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/13_5.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/14_5.webp",
+      "bytes": 41716,
+      "sha256": "eb54812a1abe529eb99b596cecff470de4a15dca19f59f9810041c0f1d02a6ab",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/14_5.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/15_5.webp",
+      "bytes": 40644,
+      "sha256": "cecb237c47691babdef16ee11a0f1969d5a5d23223166dbbd4df5ca544f2503d",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/15_5.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/16_5.webp",
+      "bytes": 31258,
+      "sha256": "0b5cc066c4a46c85f8125a20c2fae62249a34fff90f094234117b86aa60ef6ea",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/16_5.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/17_5.webp",
+      "bytes": 42688,
+      "sha256": "b90b288f9b789b2a61ffd178f607dc6e751bb0d030fa959d6624e292630f07c2",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/17_5.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/18_5.webp",
+      "bytes": 41276,
+      "sha256": "0d9d771d3c31ce93d9e59c4352db5de2cb4f647f8ae1296d86053b698a58b7b8",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/18_5.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/19_5.webp",
+      "bytes": 34362,
+      "sha256": "204780e3092e2d7eb091907208a19d04a576d80c8d06d210e22e76dae5520835",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/19_5.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/20_5.webp",
+      "bytes": 26016,
+      "sha256": "ca6d6467f6deeda63d2646dc924405c9f56ebc5b22cb719881d610219f4ff5ba",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/20_5.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/21_5.webp",
+      "bytes": 25390,
+      "sha256": "7a45c977c58fcce080dd5c7253001bb5b6b79bc0a32d28e773ba4ef4a42d8430",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/21_5.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/22_5.webp",
+      "bytes": 38944,
+      "sha256": "7368f0e62edb2f8e2be8f70faafa1353e9b35c9e0eb10ca64c2108044e6096c9",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/22_5.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/23_5.webp",
+      "bytes": 36014,
+      "sha256": "f04c630bf2ed9912a303ffdcbe72858c20f70e615cd923f6b8ced12c3de55a30",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/23_5.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/24_5.webp",
+      "bytes": 33748,
+      "sha256": "0bba6cb12afd36838d313437baff91ae4ec1f389488a5a5a5326c4f511652fd3",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/24_5.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/3_6.webp",
+      "bytes": 41658,
+      "sha256": "2d00ffc2314998a711d5ef9cec6093db45f47f29459668448167c783a825916e",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/3_6.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/4_6.webp",
+      "bytes": 42846,
+      "sha256": "8309010d2c88571b1e51154a4fc5dca469feff35cda0a747ef07979bcb359e35",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/4_6.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/5_6.webp",
+      "bytes": 43236,
+      "sha256": "a3117fadf156a692c99489a0e4d95760bf81595e61e6992ada888e14c401507a",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/5_6.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/6_6.webp",
+      "bytes": 38940,
+      "sha256": "e2a1063d17c10a8d4c47c9b53f16e25359e012cd3a2c22212dbde4f3d26a1529",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/6_6.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/7_6.webp",
+      "bytes": 28682,
+      "sha256": "594e81388e36802ab36a74f0d7251567a11f040940a0470d7779240f9947109a",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/7_6.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/8_6.webp",
+      "bytes": 25730,
+      "sha256": "96fd9b88efc0b7aa9ee7a2629571cfb8c6f8ec084a5ece600fa7df4018d769d3",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/8_6.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/9_6.webp",
+      "bytes": 28322,
+      "sha256": "c2e58a3f9af16ed259a7df92ba72acc0119fe0ef07ee8c2fc916bc1ad9cd171c",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/9_6.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/10_6.webp",
+      "bytes": 26118,
+      "sha256": "9a6d2aa9f863459ec7881e7e151673bb9c8532a844fd05276d8f2eae72f52066",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/10_6.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/11_6.webp",
+      "bytes": 30800,
+      "sha256": "5393855a02f97e3ca778874572b64dbf37394de7b2f16f7e4afa2d01156365bd",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/11_6.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/12_6.webp",
+      "bytes": 39562,
+      "sha256": "4421939e8d1c1913a961e5b0d4f9f367cadd5a3d976a367723762a4d34b2e535",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/12_6.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/13_6.webp",
+      "bytes": 42328,
+      "sha256": "1349b1a5ecb68c4961665a2d2712c2346600c65294cc4a3d309cc86bc6d256c3",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/13_6.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/14_6.webp",
+      "bytes": 39694,
+      "sha256": "813b4d08f5e9ca3a965501821847edeb0b36da8b3b37a68791bf4f416a8b7635",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/14_6.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/15_6.webp",
+      "bytes": 35878,
+      "sha256": "7b811c40b5318eb95ee046ef2b3b2acc68ce532b2a2c65df09149c921ece7af0",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/15_6.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/16_6.webp",
+      "bytes": 27956,
+      "sha256": "8039743cb07f751babe316d5b85bd14730dbdd66762a8d8eefcbce81d1c77d47",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/16_6.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/17_6.webp",
+      "bytes": 32618,
+      "sha256": "928832c0389cd1c851c02b0a2746245cfa74a4b7b7b610d9a0e41ab47098071e",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/17_6.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/18_6.webp",
+      "bytes": 28558,
+      "sha256": "1850155679e32b7bde45338ee5fc80b6ed0969c128c52fc954768dd34f9c94fc",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/18_6.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/19_6.webp",
+      "bytes": 25738,
+      "sha256": "41949e33033371b88ec0b27f99432ba511ffbe14e11e2561569f6a39c2c5d538",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/19_6.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/20_6.webp",
+      "bytes": 24786,
+      "sha256": "ca82599a84189e363348386df510aa8516f85d1b8e60cb3e24f706fdad77abf2",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/20_6.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/21_6.webp",
+      "bytes": 29310,
+      "sha256": "840f5341ad7ec1e3be50110dbe6ef4abe046d2a19082a75209892d77bab5ac5b",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/21_6.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/22_6.webp",
+      "bytes": 32474,
+      "sha256": "4f7dfd9cb2abe1d67bc58f1cc30e8544a55f2365c19c7f0a2d10d68837f276df",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/22_6.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/23_6.webp",
+      "bytes": 25250,
+      "sha256": "0a723e0efa46c6febb6b565c712b397f544a319029e76360ef1b361feb21b98d",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/23_6.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/24_6.webp",
+      "bytes": 25298,
+      "sha256": "2d491c160671a227aff4875fed90adf075da02a67857c7ec9efac7a8108bb584",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/24_6.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/3_7.webp",
+      "bytes": 34868,
+      "sha256": "a0c34c33853e97390c0919d0a9fcdd0f71c7f92edb0fcb1522b8656564acd616",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/3_7.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/4_7.webp",
+      "bytes": 33484,
+      "sha256": "11f56ab62018f1093a8ce139395b80768497a56d602df9ad1a6b2c4a8bbdb64d",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/4_7.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/5_7.webp",
+      "bytes": 37126,
+      "sha256": "69d665fcebe6e4edee7624c0ac7be2ea88c1237c48b7710b14472192c77767fe",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/5_7.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/6_7.webp",
+      "bytes": 34934,
+      "sha256": "9bc31057e3da6992e8a0f5b874ef42769e3d89982d78aa6f4340988c0bff53f7",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/6_7.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/7_7.webp",
+      "bytes": 30008,
+      "sha256": "1acd5e8694221ede0adff8f27b218a8669b484efa73138a7686c8fd63486d883",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/7_7.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/8_7.webp",
+      "bytes": 27258,
+      "sha256": "5e30cbb333263197fe9ab2d15858e6f914c75b3776fe1c31a2961b5694003359",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/8_7.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/9_7.webp",
+      "bytes": 26058,
+      "sha256": "0a9a41aab6ebaa92d797aa7dfc9e35a0de8e64f0c0a1d74a18285b2026d3f885",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/9_7.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/10_7.webp",
+      "bytes": 29368,
+      "sha256": "deabbe3cbc676504391daf847fd48f59ca11d6b547b029761ec891f7f2e08580",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/10_7.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/11_7.webp",
+      "bytes": 31194,
+      "sha256": "be4fb45a13f52efb03cb1f73c7a8d5baa716f9993c8b3af33a4f665719c1e361",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/11_7.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/12_7.webp",
+      "bytes": 31064,
+      "sha256": "f947fe443d006eeba3c5dcfa21d71dea51a30defb3bfb1e04381422f53a2a3de",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/12_7.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/13_7.webp",
+      "bytes": 30536,
+      "sha256": "25a815ce055f73e8b71610ae17439cb5f59753c3f919541b5d2612d91c7e7b26",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/13_7.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/14_7.webp",
+      "bytes": 28596,
+      "sha256": "ff288305bb76db102f7202467795127ae10fd29a60ac2d52d5c2bd45a6400923",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/14_7.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/15_7.webp",
+      "bytes": 29234,
+      "sha256": "071330c53d9d2f9554a64ced6b4c16dbfd30abaee834a35fed928c73b2d5e325",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/15_7.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/16_7.webp",
+      "bytes": 25704,
+      "sha256": "76c30febf429f3c7cd43275553a4c2ab2fed07e05cb8dfd42e0c1fcc61d26897",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/16_7.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/17_7.webp",
+      "bytes": 25524,
+      "sha256": "1aaadcef732590e3d332bb0a858e964fdf1fc158ac23578538e402b98df4a187",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/17_7.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/18_7.webp",
+      "bytes": 25774,
+      "sha256": "f8a7a20bb1ddc4a8140392fa0846d3fa78cde67e58a4666b43f86a2bec25b72a",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/18_7.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/19_7.webp",
+      "bytes": 27130,
+      "sha256": "fccfafe0cd3129205eac42c519b076b0073eb678703149ad8dd65501d16bc5d6",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/19_7.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/20_7.webp",
+      "bytes": 27568,
+      "sha256": "42af9b5c5835efb8852f8eca648fb958c113f208963f0bc946783c6b05fd06af",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/20_7.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/21_7.webp",
+      "bytes": 28480,
+      "sha256": "78fb5355bcffc9ae4dd04e8084544040a6ff29c9ca148c8224982fee0e762af3",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/21_7.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/22_7.webp",
+      "bytes": 29624,
+      "sha256": "26d95e486c9bad9811eceedce373004e296799b87dd30e9a29918b459012cfac",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/22_7.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/23_7.webp",
+      "bytes": 27572,
+      "sha256": "904f6e4e27209878ef59758fd22b5c95b4290b789d477375bf3789775ba2f044",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/23_7.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/24_7.webp",
+      "bytes": 28320,
+      "sha256": "77925fa85572eeeadbc5c180540e0b9bdfb9e9cca94c34b0c44b2cee4cd8348b",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/24_7.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/3_8.webp",
+      "bytes": 29770,
+      "sha256": "4eee461b46076b649ce2638d29235de5aeaaee494ca48272e064a4163d777015",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/3_8.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/4_8.webp",
+      "bytes": 25658,
+      "sha256": "51e4cd9a84b289b4b2b15d7e1cac845a053bbd8efb0b30818532a9dfc9e4608f",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/4_8.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/5_8.webp",
+      "bytes": 27488,
+      "sha256": "a9f70066f508552ad9d4db3f6cf5204dc11c7a0419f2a3076fbdcd29b5ad9d27",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/5_8.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/6_8.webp",
+      "bytes": 27224,
+      "sha256": "f441fbbb07cb40da0b7d1b0878b9ba65424bcadc596b013e7cf17374ba44761c",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/6_8.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/7_8.webp",
+      "bytes": 27682,
+      "sha256": "51358eb3123947558050cb4784d7f774441aa38d000bc9e2f97a8dad66e74fd6",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/7_8.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/8_8.webp",
+      "bytes": 29514,
+      "sha256": "41de975fdb9f9360eb75f9a2f6de67cf47b535359e107cd4788d2d6a8ecb5f24",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/8_8.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/9_8.webp",
+      "bytes": 31118,
+      "sha256": "c44344ce8b14fcd219aa2b6e23dbed252156803ac0822b81c346393bc41f3280",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/9_8.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/10_8.webp",
+      "bytes": 29914,
+      "sha256": "2a2eb78cbdc910adb4e58dae43cf054f2bbf325ca0619bd485bf678601dd059c",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/10_8.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/11_8.webp",
+      "bytes": 33536,
+      "sha256": "11b1a8bbc6c0798fe8f56a832cc0db3678152df7e1bf3c2c5ee91365fa5e0106",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/11_8.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/12_8.webp",
+      "bytes": 30560,
+      "sha256": "5abe525ed0fbf15bd6188d65c013bdd0dcfae3487f6a11ecc7b3170fe6a8f303",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/12_8.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/13_8.webp",
+      "bytes": 28240,
+      "sha256": "be79e395211c8ae4f228142f875e6f3311f7baf93cf7a31f63f3464b037258c0",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/13_8.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/14_8.webp",
+      "bytes": 28476,
+      "sha256": "f40dc295dc32d07b3c36a3c67a95d4e28a2f55214bb1ad95ab6377c1c5b44472",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/14_8.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/15_8.webp",
+      "bytes": 27248,
+      "sha256": "63b5d3a451afb5017674af786cc31aff985f70329ecb6c7f5e9f4bfddc3fb108",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/15_8.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/16_8.webp",
+      "bytes": 28140,
+      "sha256": "e7e20d02a682d90231269c60e2f568ad23092569e8da6db3969924e4d964398e",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/16_8.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/17_8.webp",
+      "bytes": 29288,
+      "sha256": "2792d7d48f79aa0b622fbdc562409ae31e67bb7d83961fe466942bb0c94ebec1",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/17_8.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/18_8.webp",
+      "bytes": 30644,
+      "sha256": "55c8e13be3aa1dcd45824c59d042d338bbcc0e95d14f75f29e5e7022dfd7be6f",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/18_8.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/19_8.webp",
+      "bytes": 30902,
+      "sha256": "bbc1e1edbc27818b82255f1d1bd8f951ba9fab491f8b4a39e670cc5e0b75d7db",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/19_8.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/20_8.webp",
+      "bytes": 31222,
+      "sha256": "9e5c6a8325344afbe807e561524c1369d12bf96657a46a75cdbd7399ec982c1b",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/20_8.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/21_8.webp",
+      "bytes": 29844,
+      "sha256": "b50912909e3d14009c6d3ccd8f49d10dbd3ea15a466fdf12bcfc65fafff28d52",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/21_8.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/22_8.webp",
+      "bytes": 29502,
+      "sha256": "e2e0123af1a58e939c88865578d62eb895ca0fb3e77db53360aa1b16c290fca4",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/22_8.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/23_8.webp",
+      "bytes": 28148,
+      "sha256": "a415e8d0a64d19159c051ddeb6863ed9f2c49d2a6350583332e95fe11a8218de",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/23_8.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/24_8.webp",
+      "bytes": 25566,
+      "sha256": "6af571c7c13cae75f31afbbd85c0136ae55d2a41c814184c78946c84eab30841",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/24_8.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/3_9.webp",
+      "bytes": 27682,
+      "sha256": "04eab9fc4946c6fafa3493b9462091f4e777606104462b99c722709c1b497269",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/3_9.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/4_9.webp",
+      "bytes": 25784,
+      "sha256": "b9386ddff42f32e953bc22f0f579356dcc1ca9ccdda6b0f056e5cccdf937efee",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/4_9.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/5_9.webp",
+      "bytes": 25338,
+      "sha256": "d61b0810bfd44d6cd2a2092c089e70920eebabaa86a1ccf0eb684c3e50e55737",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/5_9.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/6_9.webp",
+      "bytes": 28064,
+      "sha256": "f5f25db40c2018b12709528885a711e5b5252c5176f298b9ea636d4ac5f25043",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/6_9.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/7_9.webp",
+      "bytes": 26560,
+      "sha256": "80f4c94fc014ec6b4cede29ded973ec21faeac9f19ef13fcfeb6d360d6dac334",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/7_9.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/8_9.webp",
+      "bytes": 27918,
+      "sha256": "e5d9e67c1729f3e57d8ff372cad2b38e26ad2f600845acd8a05f92da6e8bfbdd",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/8_9.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/9_9.webp",
+      "bytes": 31824,
+      "sha256": "fb08e9aeb526c9e73d84a30afe52e8608f85e07fb6033f7b0415bdb1861efecc",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/9_9.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/10_9.webp",
+      "bytes": 31746,
+      "sha256": "34acd4a91e271ae5db8333d636c9731bee3b5773a2590e6d0f40a5601fa072e6",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/10_9.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/11_9.webp",
+      "bytes": 34280,
+      "sha256": "5d11139f69fbcb5727e953caf9048582eb566f0a2064066733c1dfd624cb8423",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/11_9.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/12_9.webp",
+      "bytes": 31432,
+      "sha256": "18962d46dce3e43e5a6df7b6425b24c9ff2475b7552ee647a49f03e54a03af5c",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/12_9.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/13_9.webp",
+      "bytes": 33430,
+      "sha256": "8d080caa4ddd0a8b1d8afae4260c87f4b3b2674ad689ec1f72e5b8d973b2a489",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/13_9.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/14_9.webp",
+      "bytes": 31350,
+      "sha256": "2fc68cb42b700c5305af9fe158327493396d8737cf23b669e9766b5fa5011b68",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/14_9.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/15_9.webp",
+      "bytes": 30552,
+      "sha256": "714cefacc90f9d872fe77efe50ad9e01f19433f2e45de4b7bc7ae45a65fefe36",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/15_9.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/16_9.webp",
+      "bytes": 30248,
+      "sha256": "0b0e1a294bfad09744599abcedd8c8d9bd8ed31acbb20bcffe9fb991d997233e",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/16_9.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/17_9.webp",
+      "bytes": 29494,
+      "sha256": "1a378d717db43a96b5a1012a8a27c303ca71ee7b86b2f592c8c200245428c890",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/17_9.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/18_9.webp",
+      "bytes": 30814,
+      "sha256": "20c533f7c55b51495759d684c756457c7664447aa69047a0dbb78456cc14926c",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/18_9.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/19_9.webp",
+      "bytes": 29354,
+      "sha256": "ca25a359d0332e4c6462aa366379a80b83e5c3d1966eb9d1fedbea432d41bf4b",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/19_9.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/20_9.webp",
+      "bytes": 30954,
+      "sha256": "ed67c87187c4376747524dc40c5ed6f1b36929dad644536dfe2c4198e17d8362",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/20_9.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/21_9.webp",
+      "bytes": 28642,
+      "sha256": "bac321c54f4a99d2a15bd73e76001ea441f6ef2d850c7ac16e282dfc32dc5665",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/21_9.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/22_9.webp",
+      "bytes": 29464,
+      "sha256": "113f3ce8ba605914ee80729b02c3264a4f05930c3db6798fc90a162ba1ceb084",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/22_9.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/23_9.webp",
+      "bytes": 27984,
+      "sha256": "ef267264faf2684f6d59ae878ec2c45951cbfcab29448baaddfbcf545e5f0ce0",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/23_9.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/24_9.webp",
+      "bytes": 29826,
+      "sha256": "5425453384435b0f105ecb465df9602c1ac1699088ff1938b349004edfa6ef2c",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/24_9.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/3_10.webp",
+      "bytes": 39360,
+      "sha256": "d077c275d30a49fbeadc912e1161fd7e8ea49ad6877c729dd1902a689b20cc28",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/3_10.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/4_10.webp",
+      "bytes": 26836,
+      "sha256": "bb6f31618f96ade672c7d6188508acd1ddab8531109d693f7f4d20df2f76e990",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/4_10.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/5_10.webp",
+      "bytes": 23624,
+      "sha256": "9d376ab862f787594d846d36bc52d0d2d47d3c95acbcba598d27c6d6c2195d14",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/5_10.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/6_10.webp",
+      "bytes": 26230,
+      "sha256": "68d8b827870744d4ae24e43d32e41052d7aa74b572ba544d63921bd81b540f95",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/6_10.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/7_10.webp",
+      "bytes": 29420,
+      "sha256": "43653c3288b2f64d0e24729c223532ae7b182b28925f77d1b069d96f762b3b09",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/7_10.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/8_10.webp",
+      "bytes": 27524,
+      "sha256": "53c05fd234821be2ca608c283e8d763891ffbfc6494dbb8175979e9cf08f8f5e",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/8_10.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/9_10.webp",
+      "bytes": 31228,
+      "sha256": "d009de65b4980a4c3bf8e1e19967a9a26a8659b4d30202564a24ab5c3cb3d265",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/9_10.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/10_10.webp",
+      "bytes": 32996,
+      "sha256": "eb8952de58351858e1ce46b4398de4d804554e49dc75bbd138e17f29bbc566bd",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/10_10.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/11_10.webp",
+      "bytes": 32310,
+      "sha256": "cb6a677853da09bf079b982408bae2640cd9194cb9b75a5734f69c4998ae6176",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/11_10.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/12_10.webp",
+      "bytes": 33384,
+      "sha256": "c35b3e4ddca929fe3479ecfda50bf8081fbe034ceccaa8c21978c08b678e2648",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/12_10.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/13_10.webp",
+      "bytes": 30764,
+      "sha256": "dc018f052449118161c45c588c70263c82690f10d9544a570915a2b414d8867c",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/13_10.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/14_10.webp",
+      "bytes": 30032,
+      "sha256": "331ca5a1745f44febe28a08e8a42a473966604b109dd09a9bf3d877f0e20153f",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/14_10.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/15_10.webp",
+      "bytes": 31200,
+      "sha256": "86e8a692ca70bdbd2a52d18e9b4b3df625a7ec111cedc7cb29dc18f1020b5b7d",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/15_10.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/16_10.webp",
+      "bytes": 29324,
+      "sha256": "9900c53d865f5d746034915e4c0ecdb6f1821e2714a7faa35b6be8477865fbac",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/16_10.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/17_10.webp",
+      "bytes": 30096,
+      "sha256": "8741c23d3b788cfac9c3ce3ae70fcd2465b35e8aefb2f51db4a32079497cfb32",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/17_10.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/18_10.webp",
+      "bytes": 29994,
+      "sha256": "0afb752225046c2a770e2e910c7f80e28f035384f2438caff410e59403124428",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/18_10.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/19_10.webp",
+      "bytes": 25762,
+      "sha256": "49de14fceee91783453601650e5e41f8efae6d1485b4d66136ea3ab5b08bd397",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/19_10.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/20_10.webp",
+      "bytes": 26064,
+      "sha256": "f8b6b32160d57d5711a33b9516b5ee9c9e2377045b6af9b971fdf97670e3329c",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/20_10.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/21_10.webp",
+      "bytes": 26502,
+      "sha256": "6ca25210d5fc8b8c9bbf5af457e91b9a710798f8e0d83b04317a8a615e5f600f",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/21_10.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/22_10.webp",
+      "bytes": 24316,
+      "sha256": "79a08a688918336f5174ab5173c8107a58d5b9df7f15c27b7d89c3ee7398aaed",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/22_10.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/23_10.webp",
+      "bytes": 32818,
+      "sha256": "cf30d2fa6fafba47aba3f098a0e31b79f5766d229c05c98de3f3a690653c67fe",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/23_10.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/24_10.webp",
+      "bytes": 39340,
+      "sha256": "f7e173ec99dbef158895d160d04628e725864d277488ec3ad311c6bea617c458",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/24_10.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/3_11.webp",
+      "bytes": 38330,
+      "sha256": "17d110771e59fcb9838b66bf3d272ef7cf9d5d9decd81572875616024da2143a",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/3_11.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/4_11.webp",
+      "bytes": 41030,
+      "sha256": "1b3e1a330be58ed3f0e26d1afff837b39542f5af4dd6145893339f271fd156dd",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/4_11.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/5_11.webp",
+      "bytes": 31738,
+      "sha256": "40a2407d9a8895cce1b0c83035258b73a8714497d85683ce178e76500fb65aa0",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/5_11.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/6_11.webp",
+      "bytes": 25164,
+      "sha256": "ef3b38e78125fa2ce919202f15bcc431cba948ec45f29771ecc09802afcd250d",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/6_11.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/7_11.webp",
+      "bytes": 25904,
+      "sha256": "32a7fe38be1ebfd770af1bdddf0cee0e03083946354eb898a8a12ff028a4b919",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/7_11.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/8_11.webp",
+      "bytes": 30132,
+      "sha256": "105e015b10f35624c69de45b6dd3303a5e016081cac35d017852fb276a739df2",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/8_11.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/9_11.webp",
+      "bytes": 29396,
+      "sha256": "c9f2799897b7900b04a2ef03c2f4d66c9c259cd1aafc273bcb139620a10cb4bd",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/9_11.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/10_11.webp",
+      "bytes": 30274,
+      "sha256": "7124b86bd0e50e7e459c66646508d1dcc4c41ab664d604da8d3cde82691dcaf9",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/10_11.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/11_11.webp",
+      "bytes": 31844,
+      "sha256": "60b7fad1920c802cc1fe95f67a1566d38f8052f29c5a25cab96b40d00907d4b4",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/11_11.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/12_11.webp",
+      "bytes": 31748,
+      "sha256": "5a40bc22e6aea0f942492817ea3000bafb4e5d7978c47fa069e30edf93090381",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/12_11.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/13_11.webp",
+      "bytes": 36940,
+      "sha256": "621399b300ecbd631a0ac614afbfb6808e0f05a44b404fc492630bc5dcf0a33d",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/13_11.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/14_11.webp",
+      "bytes": 34846,
+      "sha256": "3c64b9080a527548e30c4a3ab95c682651aff323151b2d0fc6abb97c99b0230b",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/14_11.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/15_11.webp",
+      "bytes": 28184,
+      "sha256": "e046e3894e0fd8063de171281f23639ec671930c904446bcc025c72e26f5c617",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/15_11.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/16_11.webp",
+      "bytes": 29062,
+      "sha256": "8e488635ef93a8cd0e046451d694e2534a1aaff07baefaf35b02d06fc9ea2af3",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/16_11.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/17_11.webp",
+      "bytes": 31746,
+      "sha256": "b4ee96376e2b9e267b5f6f13d2fb827777c9c24cf0ea1ab888389b803d1d917e",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/17_11.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/18_11.webp",
+      "bytes": 30922,
+      "sha256": "6c09657279b94553f00dd413d47cb24b3b5d0a86d592bb224992d0c2a5dcd1b9",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/18_11.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/19_11.webp",
+      "bytes": 26006,
+      "sha256": "4242cec290c19c7d51ed57cac36db4b50cb9bd56682240b8d82db407df40093f",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/19_11.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/20_11.webp",
+      "bytes": 29082,
+      "sha256": "6bf065afe0bb6ba6bd21ecc168e287d1c11116fcf1f3637c2f05def6dc4b0c60",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/20_11.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/21_11.webp",
+      "bytes": 28000,
+      "sha256": "1febd915f73dad22bcf8943d22b9fa37feb41b9918142ea170878930871b7ce9",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/21_11.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/22_11.webp",
+      "bytes": 24828,
+      "sha256": "dd372549e3d685f77241f2881c0cf54a072985c7373242131262deb51cc53027",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/22_11.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/23_11.webp",
+      "bytes": 32304,
+      "sha256": "b55d5d79c7046549d435fc32a79eacc65651986d546329f3cc612afaca872c7d",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/23_11.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/24_11.webp",
+      "bytes": 38420,
+      "sha256": "a3ca9deebf8995a2276af312fab3d4263b2355e2dd7b8618d12b4d039c56b9f1",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/24_11.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/3_12.webp",
+      "bytes": 20280,
+      "sha256": "723f7b6dcfd7bc2e0a90fcad6557c953f1c175b778d6cbe2c45db5d532b153db",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/3_12.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/4_12.webp",
+      "bytes": 35650,
+      "sha256": "7fc814b78ca33b29148e284b2a4ae18b080d763c93609d05780d192d104ff5a1",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/4_12.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/5_12.webp",
+      "bytes": 40884,
+      "sha256": "eb46aa1c66fcfc72919b8034caf9437f00174c895884b7550cd2c9fddd3ea637",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/5_12.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/6_12.webp",
+      "bytes": 29892,
+      "sha256": "e9f9993cb1305a5c1204a9aa41f544958a636524915104a2eb38626251d82b47",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/6_12.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/7_12.webp",
+      "bytes": 24750,
+      "sha256": "25434172408a87383fc457d5eaf96d208f98a551bedaac4d1e5e7e087d6e5523",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/7_12.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/8_12.webp",
+      "bytes": 26920,
+      "sha256": "cf02513a84b3041afec82fde32891f0aa61bc84f65e2bdf403c781c853cbd572",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/8_12.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/9_12.webp",
+      "bytes": 35316,
+      "sha256": "e8e68e1f257a821a7d624a8ca54de9445930b8dbeda6ffa3fa487ce7c40183ad",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/9_12.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/10_12.webp",
+      "bytes": 31170,
+      "sha256": "f6eb6c10a4eab8afa114ee1ee30695db7bb6256f7efba960c23b6a3703ec7ad2",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/10_12.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/11_12.webp",
+      "bytes": 30720,
+      "sha256": "4e83ce3d24983d3bac762b46d5a9f08e7d4f54dd9f2693464bd734a28f63ea20",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/11_12.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/12_12.webp",
+      "bytes": 28314,
+      "sha256": "197f3119c018e9b959941817ef0e23d92fd502a2fa7586cfbc05fc9f74543665",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/12_12.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/13_12.webp",
+      "bytes": 36562,
+      "sha256": "4d9ce32dabc60e981f464c993378f15bdd624a0def21525d8272321e03fc2357",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/13_12.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/14_12.webp",
+      "bytes": 33034,
+      "sha256": "755a4910e3e1e013d322641f3c4f3f4a228cd5f5f7257d5cf4d4836c57312319",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/14_12.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/15_12.webp",
+      "bytes": 27506,
+      "sha256": "6a28281391eb8a19a8ccf66f07267663e9961716eb370ff61dd68a77d8b2d526",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/15_12.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/16_12.webp",
+      "bytes": 26024,
+      "sha256": "db3a18001b51549c626d501a4e4256099f745dfd0f2c5d974188c5b5a24ef221",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/16_12.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/17_12.webp",
+      "bytes": 37526,
+      "sha256": "15c3b6e76c30a0c0c7ed0003f0a18e86d958a69b6796b28f324f6158953833aa",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/17_12.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/18_12.webp",
+      "bytes": 31082,
+      "sha256": "504dfe0bd6b9b1db7179e71ac1980f839a374518907de309963b2071b5dae071",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/18_12.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/19_12.webp",
+      "bytes": 26436,
+      "sha256": "a21cd8dd405ef1b24051b812cbbe35a57b501fe199150580ce86d7de5458f903",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/19_12.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/20_12.webp",
+      "bytes": 28128,
+      "sha256": "40600db14852b5a0dbf2b5407511cf21175392c3245c42a5e89a371e89dd98a8",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/20_12.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/21_12.webp",
+      "bytes": 27186,
+      "sha256": "2271b8c27df55c043378b23ed52c574cf4910fb2d51cce41886a724279629adf",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/21_12.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/22_12.webp",
+      "bytes": 27930,
+      "sha256": "428177471e81ffc6d3797c56e6c3e9e470e60f75aecd56c9ad497acbbf645564",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/22_12.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/23_12.webp",
+      "bytes": 40908,
+      "sha256": "f9a9b9f19cedca4b9e500e31f2c390d90fead97c5b1cc63a533bab77689e8ab0",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/23_12.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/24_12.webp",
+      "bytes": 41082,
+      "sha256": "e56d0d25ace35a493aae49e843f456ebfdfa6a5ca3af87d63a7d5817651e6b9a",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/24_12.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/3_13.webp",
+      "bytes": 43934,
+      "sha256": "4042505698325703617d602c82492a9534dfcb6e89cf8dbf6d04da55a8bf8945",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/3_13.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/4_13.webp",
+      "bytes": 41270,
+      "sha256": "19bd6c9ca96fb75129f8b3671b1ff4893e7ba5e16f2900dfda7b680220f48302",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/4_13.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/5_13.webp",
+      "bytes": 42368,
+      "sha256": "446b66e35a4dba032ab484f8bf9846515586c71924852dd5a40c751c3eca330f",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/5_13.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/6_13.webp",
+      "bytes": 31732,
+      "sha256": "9a1d8083bfff0318d4d67ab51a80786f93d1d55af959519fd49acced2325f3ab",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/6_13.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/7_13.webp",
+      "bytes": 29222,
+      "sha256": "1813caa01ad4c175f7501ebb6b1beb9fb7c6978fdb8e71fae431b7c80f294e0f",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/7_13.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/8_13.webp",
+      "bytes": 27384,
+      "sha256": "8b98515e86e1eeceea9f545ff576fa288ff66d9858afe3527dac8e144dbcd8d6",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/8_13.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/9_13.webp",
+      "bytes": 29578,
+      "sha256": "11740a07890fcf01bc2acfca228844eb190ead83d4e6977cf3f1e23a75c1b21f",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/9_13.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/10_13.webp",
+      "bytes": 29426,
+      "sha256": "b5490738f9bd758d2fb9375dddac5eb782ee1901ed755525b39e74640d25b582",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/10_13.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/11_13.webp",
+      "bytes": 32216,
+      "sha256": "7ccdc9fe1a2c4dc3dd432e6e3b7c72501b22a0a43a70e2adba63444ede2037aa",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/11_13.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/12_13.webp",
+      "bytes": 30766,
+      "sha256": "c384e3818a185de46acad4bebcb9394ff05cb2ca375d75ae699bd6495adac1b2",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/12_13.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/13_13.webp",
+      "bytes": 29826,
+      "sha256": "2abf603bfc70851bf000814bd520c64efc7da412e15e78c1fdb2488da59ad4dd",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/13_13.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/14_13.webp",
+      "bytes": 30910,
+      "sha256": "3f885682fa9f4d12b9094404bb718646d0f0d744a8c4c4dd0809cc6bcfacf9c1",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/14_13.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/15_13.webp",
+      "bytes": 27168,
+      "sha256": "f6266a44ff68c1aea0fe5a4ee415f4b26f494b2623b0822a729f2ac88b67c751",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/15_13.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/16_13.webp",
+      "bytes": 29576,
+      "sha256": "565464d1856ffde3c12616e83f93312cfe0e8c0ed4bbefad5df4b0956886db2c",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/16_13.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/17_13.webp",
+      "bytes": 36556,
+      "sha256": "a1505134386944f4aed94529ca85122dba68f7b984fdd9d0c08af77d49bd4e36",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/17_13.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/18_13.webp",
+      "bytes": 30492,
+      "sha256": "5d02d140923420f0d8ce3777ffbc963246064c1d2bdbb68972a2da25b0b20779",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/18_13.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/19_13.webp",
+      "bytes": 25722,
+      "sha256": "3302b9c7867b9eb26667e6a47fedce16ceada2d0ef97aef1234f7ef2fcdce440",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/19_13.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/20_13.webp",
+      "bytes": 23868,
+      "sha256": "34e1a04e8c79651b066a3dba730aaa1cb5bf6465b165be0648acf54a3c706d48",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/20_13.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/21_13.webp",
+      "bytes": 29392,
+      "sha256": "6cc843a3b34c46cc8aa3b62bb1cc075e938387ccd698844e7d6db43f9a3774d6",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/21_13.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/22_13.webp",
+      "bytes": 29568,
+      "sha256": "55ffda3ecb92e9091be216b47d02a7f16f88002a4a8d858b143e3278a2a608b1",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/22_13.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/23_13.webp",
+      "bytes": 25978,
+      "sha256": "b6ad9e8e256a7a3f30c3d560920fdf3b4663801885aa163708a66303ec93a001",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/23_13.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/24_13.webp",
+      "bytes": 25004,
+      "sha256": "63cbeb85e30a52bbb6bf14897f1a0542ae509d9c0ee37ce208fb341b926f84fc",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/24_13.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/3_14.webp",
+      "bytes": 33440,
+      "sha256": "1295780489b005bf744e99e9fa0ad2533b19a2f248b186c4d457256ef92ab92a",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/3_14.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/4_14.webp",
+      "bytes": 33876,
+      "sha256": "234941dd3e320dd124782020f89a98d58c840a0340ad03300ff5cc48b078c5e9",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/4_14.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/5_14.webp",
+      "bytes": 38256,
+      "sha256": "9f8da6c7fa92d22f0af29bf3a5a87b8c4e36a8090bb8e945cc4ff2b9d9d12758",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/5_14.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/6_14.webp",
+      "bytes": 35222,
+      "sha256": "ec410e346ae95395272b254985216fb5e8eb7999540d580dcd85e88f47f2f01e",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/6_14.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/7_14.webp",
+      "bytes": 28814,
+      "sha256": "8b0f9127385db356a53679f10950f645327d5bec6b60c1382bf4ed628fa33fb0",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/7_14.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/8_14.webp",
+      "bytes": 30838,
+      "sha256": "10484a4ad79c68647b13084cd29514c5d6069c8daa19eb78c7a4baac731c58b6",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/8_14.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/9_14.webp",
+      "bytes": 28244,
+      "sha256": "24549195f29e4cf30684dc343505f9f98134946dff42819d2d2381be4f334c43",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/9_14.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/10_14.webp",
+      "bytes": 28506,
+      "sha256": "23b0f843d1c5a7e1e844ce004bcde79c6273bb65ec11f60702181b8bb578f90e",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/10_14.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/11_14.webp",
+      "bytes": 28512,
+      "sha256": "ad67bac6054fd097bfd4443b790597e236654d26647e8dc671228a5b07284eeb",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/11_14.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/12_14.webp",
+      "bytes": 29072,
+      "sha256": "53e69641591c387521e207f3bfddc0aac21689b8ca6525367c3d75813679dbc1",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/12_14.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/13_14.webp",
+      "bytes": 30592,
+      "sha256": "b6f1dea3d1d4cec6d76b6f5ef0bd76d6be469aee027412e35d9e03d8f6cf67df",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/13_14.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/14_14.webp",
+      "bytes": 32514,
+      "sha256": "ec8bb5f0b60eb3164d8b4807e4b1cba03c6e8efbaa05c8e15169f30db059ffb9",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/14_14.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/15_14.webp",
+      "bytes": 30556,
+      "sha256": "e15c0d3666a55eb98e2f403b6b5f7ec1d6ceb844eac0e1ec691d97d11290dcc1",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/15_14.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/16_14.webp",
+      "bytes": 28960,
+      "sha256": "53064650edaabf7ec17ea0fa7b37a5df3f92cf4748bcd75912108ce7bfcdbcc7",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/16_14.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/17_14.webp",
+      "bytes": 27556,
+      "sha256": "1c852b77c2e4f29b1ef09a53022410a7c5edbb0d2eacbad9ea7c4c15ed345cbf",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/17_14.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/18_14.webp",
+      "bytes": 29860,
+      "sha256": "c974b3eeb707b7054a7bc81e59e176a2ee43d6f48a48dc89840d94c1e267c0d7",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/18_14.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/19_14.webp",
+      "bytes": 26190,
+      "sha256": "3abd2a73e34c5fcf47da9b72aa1e23f0304404c95b6ae9d5728ffac163ef98ad",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/19_14.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/20_14.webp",
+      "bytes": 23082,
+      "sha256": "38836f416fbcefc3a7956d6ae6b8eda832182e83b4e56c289676ae6a1da4a8bf",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/20_14.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/21_14.webp",
+      "bytes": 24484,
+      "sha256": "b499ed33a4cd87f98f79316bc7824b468b988fcb87f7950327a8b020183fdaae",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/21_14.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/22_14.webp",
+      "bytes": 24206,
+      "sha256": "b4b46524a401ee429136fca4bf832e76d46f595d5d7e2d2dd62eae37a296a995",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/22_14.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/23_14.webp",
+      "bytes": 23122,
+      "sha256": "6d6bba2e21da3e74956e2b46fbe12a6d9f9361c86f1b6597063538dc1fcfc977",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/23_14.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/24_14.webp",
+      "bytes": 24750,
+      "sha256": "954c8294cb5ba96e13c57732c396d86f1ebc895617f5165c0cf2ff333d27a2d7",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/24_14.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/3_15.webp",
+      "bytes": 42400,
+      "sha256": "c5d0335c027c0579de1381622333419c02a27e0838e5ca89f29189d4741eace8",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/3_15.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/4_15.webp",
+      "bytes": 33944,
+      "sha256": "bf3cb9922ec4019a27b2e6045fd37947bad7d134138ef347ec1171a1a32dd192",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/4_15.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/5_15.webp",
+      "bytes": 34994,
+      "sha256": "516271a5b810402f7edf64d2c3a07396b2e064d0407b31375b32f67d238d2d19",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/5_15.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/6_15.webp",
+      "bytes": 28610,
+      "sha256": "e0a491c4d105365e5b1c90d5f0680b4e13ef0cb6458357931e0ce1c8cb010baf",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/6_15.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/7_15.webp",
+      "bytes": 30534,
+      "sha256": "02c56617961676740d47173c6b384a3a39163341186dd2982d841b55c3ed66e1",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/7_15.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/8_15.webp",
+      "bytes": 25172,
+      "sha256": "5cee0b7c60ea64ba5c529c968143e49f5dfd9fc6b183406de302b5fb59ab96ed",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/8_15.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/9_15.webp",
+      "bytes": 24850,
+      "sha256": "86a42dcd075ce62dcfe02585aca5bef899aec3a06c5f9fe932ec1315230a5c90",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/9_15.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/10_15.webp",
+      "bytes": 28996,
+      "sha256": "e9c3831d69d2565b34a09c98780f30e4312520bb48fb162a6b7d104dd40450d1",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/10_15.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/11_15.webp",
+      "bytes": 27000,
+      "sha256": "1f48f6025b7c52b944b0534a26f613ddbde839213c3eb31858f466ac437bada9",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/11_15.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/12_15.webp",
+      "bytes": 30596,
+      "sha256": "c52f297be86fadb17cd460fa8be5160a19cfae3531c7590ea6baeaed78337bfc",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/12_15.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/13_15.webp",
+      "bytes": 32986,
+      "sha256": "6eec24485615ab51f0731f50f4add054f3d86057e6f1d0213b245ece30ebf6de",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/13_15.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/14_15.webp",
+      "bytes": 32198,
+      "sha256": "5dd8e9fd71f6cd2398ac5518b34fd24b1fc72c5fc851d58945a7e4c4306c65aa",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/14_15.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/15_15.webp",
+      "bytes": 27600,
+      "sha256": "2e5298b965c1e61b5e95a9d2e7f9174e4d74a5a403341ed26848318a34dfd8cd",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/15_15.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/16_15.webp",
+      "bytes": 28908,
+      "sha256": "37b434ad56f0efb6ec0444d3acef730a322d221d0cad204ec9b8143be38280e9",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/16_15.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/17_15.webp",
+      "bytes": 30000,
+      "sha256": "8012c1ec629f4673eba5759c6e87fe3e294366cf854b2b4726b9e1b4533cebbc",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/17_15.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/18_15.webp",
+      "bytes": 23560,
+      "sha256": "16cd240702e733b5007d9b2e62ca3ecb6bc1990b75c3e7e8c7c19ec41c83c956",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/18_15.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/19_15.webp",
+      "bytes": 23288,
+      "sha256": "2cf87b40c2a79f568410f0a68a680265cbf9c9dabccdb3ceef10fa55aae5afa1",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/19_15.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/20_15.webp",
+      "bytes": 23230,
+      "sha256": "2babf5b6544ad31bef1b4ac45ccd120a7b4ac9a28c176c2ce88e886be56f34da",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/20_15.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/21_15.webp",
+      "bytes": 22598,
+      "sha256": "d525a41074ace3e4f27a3ea8e74658d8560bb50209568ec4efe3d3b9a12c1855",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/21_15.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/22_15.webp",
+      "bytes": 23328,
+      "sha256": "58721b2fed8303609f87cb97e60acdf39e4a4bae25e01f2db5740dc398d70b93",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/22_15.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/23_15.webp",
+      "bytes": 22434,
+      "sha256": "ad03b54d3973311e01dcde24fde0412ef88f0d5eabc7a37591fdc9d7baa9075c",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/23_15.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/24_15.webp",
+      "bytes": 22516,
+      "sha256": "91e915c7ed7f46518ac0da24ec4f4da7ce2adae330ffc3ae0e607f656295ff67",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/24_15.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/3_16.webp",
+      "bytes": 28740,
+      "sha256": "dd9b30a35c5fae0b0abeca071ae8b34d77eb38ed06092d53b945dcdf98d6b88e",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/3_16.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/4_16.webp",
+      "bytes": 39276,
+      "sha256": "a64d0577eed25a5f0faea80f92186e1364e5dca64870f6e81511e0ba14d274df",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/4_16.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/5_16.webp",
+      "bytes": 44698,
+      "sha256": "55336eceaa56915b5ad197158d65582fb057412d66875fc553cdad4b2b698abc",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/5_16.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/6_16.webp",
+      "bytes": 32542,
+      "sha256": "df3a55ef4517cf51ca9f7a658ec31c0b8890083c64f9fa975fb575ef7da11268",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/6_16.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/7_16.webp",
+      "bytes": 27842,
+      "sha256": "89c2ad84db5c9259659cb67a708026d681dbe95cc9c6942e40a08eac4ef849be",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/7_16.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/8_16.webp",
+      "bytes": 24770,
+      "sha256": "7907a9ad5cdefa928fee594adf337bd56a6ede452cec66f2835a58df62b6953a",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/8_16.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/9_16.webp",
+      "bytes": 22672,
+      "sha256": "5e37f5dbf436cee1db2adc891b547dd403b79e34ffd0650aa95d4baf3284bcce",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/9_16.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/10_16.webp",
+      "bytes": 27758,
+      "sha256": "7c6a06c02a710973a969ade6862529303cc9937f65f94aeceb1af18405bd9918",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/10_16.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/11_16.webp",
+      "bytes": 29942,
+      "sha256": "66d0c7aea6a71ffd77e5d48fafce36639c14aa7710f20786579e0f85812f9958",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/11_16.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/12_16.webp",
+      "bytes": 31344,
+      "sha256": "555871fb8bdcf7d4fd7ad56e432c29d1396899f130be1644134fb1c6ac6bbe20",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/12_16.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/13_16.webp",
+      "bytes": 32118,
+      "sha256": "15a640d1c30575c7b2b8a7d32e7433a58851773b590d7306223dcbcc72a5250a",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/13_16.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/14_16.webp",
+      "bytes": 35172,
+      "sha256": "39ac265e3c7f009c1444ae141ed4f492a4453472149c478d2f685c426e9d5977",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/14_16.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/15_16.webp",
+      "bytes": 29300,
+      "sha256": "bd1787bcaf1206712f099365f453ae23a3651e0fd5e1f75f81fc8d021e6a44fe",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/15_16.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/16_16.webp",
+      "bytes": 29882,
+      "sha256": "fda610d59565237f42fff2f19f474bd14731ae03ec929e2f9a47fec119b1f2ed",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/16_16.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/17_16.webp",
+      "bytes": 30362,
+      "sha256": "bb18245a38e6068004e8369f8253efb66bef1bf4bed673146809cfa1b46c99b6",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/17_16.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/18_16.webp",
+      "bytes": 24714,
+      "sha256": "c4b7f46f338d4ad0838267f0e4914a0966c79037f38dc15a1a363bda17618689",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/18_16.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/19_16.webp",
+      "bytes": 21580,
+      "sha256": "77ad66a5d0041ceef4a0afa2845a147580660bf0c09064f679e437f35c58ab73",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/19_16.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/20_16.webp",
+      "bytes": 23846,
+      "sha256": "c2b69dd419a56f8792ed30b77ba9ed9a011a4f8227e0154c1e60e5a4066e27fc",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/20_16.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/21_16.webp",
+      "bytes": 22654,
+      "sha256": "88a431b19e3d67f259435e2e3040e2a1d2fd0d86361d42f146903dcf2d49ca88",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/21_16.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/22_16.webp",
+      "bytes": 23344,
+      "sha256": "9a75269576e83bb763f985a58868617c1d5f1b565488332ba861836fd65ba65c",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/22_16.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/23_16.webp",
+      "bytes": 27986,
+      "sha256": "2b4db882783627bbc8bab0d7ffe1464a9e223a79e5cb7a637c1c66d2ba825fe9",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/23_16.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/24_16.webp",
+      "bytes": 31540,
+      "sha256": "9acc7c05876a6517c84174b17adfe4f35804203bd950f5df25b92809c5f89371",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/24_16.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/3_17.webp",
+      "bytes": 23522,
+      "sha256": "6084820e570aad9b7d5506473574295f509e1c523fcbc8dc7dd0f74c6777797b",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/3_17.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/4_17.webp",
+      "bytes": 34230,
+      "sha256": "88bddfc78a76d388bb16acf7845b90c201da3c0e96211cb554adaf11d6b587fe",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/4_17.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/5_17.webp",
+      "bytes": 43600,
+      "sha256": "62363d03230a08288d3d50687bed1441ca84b652ad7eee069acbc1e30b51fa75",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/5_17.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/6_17.webp",
+      "bytes": 31132,
+      "sha256": "59ff51c9498ad067d47be3d746dff53aee1c647e3429d2b09e959baa6bcd281d",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/6_17.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/7_17.webp",
+      "bytes": 25390,
+      "sha256": "ab30c5a22bb5e813a25744f554935b0191a20649cb4fbcc976fbe1f7705c1654",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/7_17.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/8_17.webp",
+      "bytes": 24454,
+      "sha256": "52d5d6e76c59dfec5d1f24f9b9dd9127045ce9e0d960d5de48e56fb94781e7e4",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/8_17.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/9_17.webp",
+      "bytes": 29600,
+      "sha256": "3f8d75d149a6f84e93a46580853a0ac96c02ba140349b99dc31f07c1f91340ad",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/9_17.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/10_17.webp",
+      "bytes": 26104,
+      "sha256": "f59458b37df39ba913948ce40a6097832e9b5dab08c88fc880dee1009c34f7c1",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/10_17.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/11_17.webp",
+      "bytes": 29728,
+      "sha256": "a11d38ffc2d97dc4cf4b8f54b2a8844cd4cb02bb6d002fed8973c2b9153a6e99",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/11_17.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/12_17.webp",
+      "bytes": 29704,
+      "sha256": "82bae7fc867b25d94144823d62899269f99dfdb5cd74d42a7455c053d8f4496f",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/12_17.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/13_17.webp",
+      "bytes": 32144,
+      "sha256": "81ba5de48da5f8f17484eb71716bd01403b793dd4babb187c508c7eb753046d3",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/13_17.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/14_17.webp",
+      "bytes": 31488,
+      "sha256": "f1064cf9f7e20e4013b0733758cec09195436366b8149320f25ba74e0d864cc9",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/14_17.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/15_17.webp",
+      "bytes": 30948,
+      "sha256": "f12a8419a635cbe1d75419b356e772a5dcb1a96733083eda4685bb025b14d6a2",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/15_17.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/16_17.webp",
+      "bytes": 36376,
+      "sha256": "918fa7efe3c74296d1b565c5d869ab178a244faf94a3257c632433dd23675a74",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/16_17.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/17_17.webp",
+      "bytes": 34466,
+      "sha256": "efb3a02f52ef8e9ccb672582545cae860a4229662b7190cd257c72f4b75259dc",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/17_17.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/18_17.webp",
+      "bytes": 28022,
+      "sha256": "5405a652f62528b1d27597ae7134624421915334d247f67dfdfd7c57ac6b138f",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/18_17.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/19_17.webp",
+      "bytes": 21970,
+      "sha256": "268b036bd1d2266dcaa504c7e02c7f380722db5eb1ddbbda10eb7a38f03d720b",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/19_17.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/20_17.webp",
+      "bytes": 24678,
+      "sha256": "b0b32d2f57972570d94034ad6dc6c3b89bb6a6f733b636619fc97eaccca6a874",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/20_17.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/21_17.webp",
+      "bytes": 23176,
+      "sha256": "7c71d64dcfb91a6d5ab9f27c79c268f281f02b0837d7f7e3102a52f42e9e3adf",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/21_17.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/22_17.webp",
+      "bytes": 23690,
+      "sha256": "5819a3f8f072dc51cd4fbe66e0c3bc8b1ba2c0aa32c5fb7727dcfaecc2b5dc71",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/22_17.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/23_17.webp",
+      "bytes": 26134,
+      "sha256": "4561b8edffaf901d2f64b7dccdf7600b5ed855b83a05a9cbc6857e3901c06948",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/23_17.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/24_17.webp",
+      "bytes": 30982,
+      "sha256": "132944690827f4f01e9148280782adf51c94a0999c8458d820cd687b9b3aa2c5",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/24_17.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/3_18.webp",
+      "bytes": 38952,
+      "sha256": "c00342f094b7e84ccded14e954206ac6baabf40faac27bddb7d6acf5ed435991",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/3_18.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/4_18.webp",
+      "bytes": 26250,
+      "sha256": "4044fc9a19bf168c16b7cc8e1e5140169fa09b6d6481b943506004c05c7b7744",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/4_18.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/5_18.webp",
+      "bytes": 35862,
+      "sha256": "6ac9183ebe031f13530767808cabd282a9a103f782a02e0567c89c0ccbcd5960",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/5_18.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/6_18.webp",
+      "bytes": 39176,
+      "sha256": "6b03105150ee76ff883a140149145daae475f146a3266ca98896143ac3348754",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/6_18.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/7_18.webp",
+      "bytes": 30944,
+      "sha256": "d7f5af43617ccdc21e713b75b961c7dce0556c60fbb60e1cd102709ae1b8e2d9",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/7_18.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/8_18.webp",
+      "bytes": 28394,
+      "sha256": "aee9a956b8a16cdd01b1b71ce77a61c5e84edf4c0bca9389d6ee9ea159fa2d22",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/8_18.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/9_18.webp",
+      "bytes": 24096,
+      "sha256": "d5d6ae2fc3ae53ae30b2d51fd8cd37c4f11e0aa435d583f7c9395759654cb396",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/9_18.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/10_18.webp",
+      "bytes": 30176,
+      "sha256": "0c63611883f11c1037cf6b228354ef9c7aabacd3b725a8e098723766b6c41dd9",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/10_18.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/11_18.webp",
+      "bytes": 29680,
+      "sha256": "830894b6f071c3811a2b635adadb39f7cdd5ace739c694c386399db30625a8f6",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/11_18.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/12_18.webp",
+      "bytes": 30184,
+      "sha256": "6a4855262dfcc8f4763adc535118f9b66712e557241f0470e8d8e02b36717440",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/12_18.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/13_18.webp",
+      "bytes": 31366,
+      "sha256": "86580a367ae8dc4e5aed28a2335e25664cb3892becc70c98d12507069cc65f35",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/13_18.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/14_18.webp",
+      "bytes": 32698,
+      "sha256": "b91bc00f7b7e331680d18d5b9356d0ace8866324f512088ed638d8acfc84bc21",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/14_18.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/15_18.webp",
+      "bytes": 32116,
+      "sha256": "8909be9f5b6afdedf9409cc1c67951d888a69b4228928c73a7435063f0641f0b",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/15_18.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/16_18.webp",
+      "bytes": 30416,
+      "sha256": "bd24eacf29511bc6b9cc3e077b625c1d7afb7744d1d990205183766406fce053",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/16_18.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/17_18.webp",
+      "bytes": 40342,
+      "sha256": "76f00d69e4805bc17e96019a1f2a3903bb61af3ad6f408bd15005a0eab440aab",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/17_18.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/18_18.webp",
+      "bytes": 34320,
+      "sha256": "626a1f505c50da2b2eb75ec741d68af467c9382c51b1a47aad738a4080f330bc",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/18_18.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/19_18.webp",
+      "bytes": 24544,
+      "sha256": "2737bbced8776009e82248f72db4e6c4ae2e4a9ea6a3b6d0a41d03caf9d69095",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/19_18.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/20_18.webp",
+      "bytes": 21264,
+      "sha256": "d24f3fa8decd926dda3d6bc0b98ea97b6b7dc856f8167e900d1cd930c52a3c59",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/20_18.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/21_18.webp",
+      "bytes": 22246,
+      "sha256": "41666ffbe2e56f6c2decdd238ff9b7be962b5b168f40548dc9935c5c4a61ab46",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/21_18.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/22_18.webp",
+      "bytes": 22816,
+      "sha256": "c6e1f1508e35ae3131dd1ad862f32ebbb99be2702f8980bfd744f3ab9eac7e2f",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/22_18.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/23_18.webp",
+      "bytes": 24378,
+      "sha256": "d0e071b1a042b0b5bbc74f519f35b8abd59fae4d96b1c7e9b6096e38838f09d0",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/23_18.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/24_18.webp",
+      "bytes": 28548,
+      "sha256": "9cc842faf2bd02344ba5fee934d37b7e1b9fa7bdf08af454ce80a35a930dfc29",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/24_18.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/3_19.webp",
+      "bytes": 42964,
+      "sha256": "3cc001ea5bbf25a19f67214c2cb267d000eab07366c43a9455be220b8d9ac3f2",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/3_19.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/4_19.webp",
+      "bytes": 26802,
+      "sha256": "f331d4c2515094d516e11e0683470a24d4d0d418dd0d3baf09cc2d8b125bdf33",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/4_19.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/5_19.webp",
+      "bytes": 36190,
+      "sha256": "b596c270b2b8e4cbba35eab3eb179dbeb9f0180cbfa005e96ef42e409e551e13",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/5_19.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/6_19.webp",
+      "bytes": 41248,
+      "sha256": "9aa5d457bf2c04de63163db976f0eafc42f83ecc640879ce6c45f9e5d3c6dca6",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/6_19.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/7_19.webp",
+      "bytes": 29848,
+      "sha256": "841d921f38dfedda0f2442db7a001636cc5a991a73a0b3cdba6ad5962b7f4eec",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/7_19.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/8_19.webp",
+      "bytes": 27856,
+      "sha256": "7c3f91d324418ee61a8d0fd8a821ba1fcab67e08686c513533335f45a844789e",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/8_19.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/9_19.webp",
+      "bytes": 34610,
+      "sha256": "c245611d9f23f4a0e6242f4659dd17c966c3d400b7ec82694f401f2916208c38",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/9_19.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/10_19.webp",
+      "bytes": 28866,
+      "sha256": "e20bb540b5347d5f4cc29380601e1ecdf64fb430eb74e7aa2cf613c6f1c5b9a4",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/10_19.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/11_19.webp",
+      "bytes": 29440,
+      "sha256": "285d047870ce54525187f027883a78e14bdaf38f19b5879723de1fd4b4bd637c",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/11_19.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/12_19.webp",
+      "bytes": 30838,
+      "sha256": "82423733c54cb8363fe669a61b3ac9759d42d1caac8a2f0b6024f0dc346893d7",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/12_19.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/13_19.webp",
+      "bytes": 31740,
+      "sha256": "2d9a39111e79e956dcd8692d2643196a6e68357ccd11ef244f3e55603c28a2d5",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/13_19.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/14_19.webp",
+      "bytes": 28694,
+      "sha256": "aca81b2901eaa911977a8a4baa8d5ae40ddccfaf370aa7a2bfb0f0f05b2b226e",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/14_19.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/15_19.webp",
+      "bytes": 34326,
+      "sha256": "5af5766c1702c6ff22032217a4e11a970efa06ca3f8575abf8e0ae93d242d25a",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/15_19.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/16_19.webp",
+      "bytes": 32948,
+      "sha256": "57f1bb413423a4134c1b0196a34cffa4cec4abb16af5bfa791dd365e81aaa645",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/16_19.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/17_19.webp",
+      "bytes": 38244,
+      "sha256": "70ae5d6f23b67eddd70c94976d114cf32530cd57713781bc9b97e8ee0bcc8827",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/17_19.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/18_19.webp",
+      "bytes": 34936,
+      "sha256": "2d5191acd827535e8f8e406ee2e2c691a5f8be98f9755f90c364ef2e518ef824",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/18_19.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/19_19.webp",
+      "bytes": 29002,
+      "sha256": "6611eb1f443d0ee53c9e591c6b25cf498ace37178d67ce329af77fb04036c289",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/19_19.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/20_19.webp",
+      "bytes": 23304,
+      "sha256": "eda0605ce852d15c09c0ea9ca9b381d370f5c6b7f98671db5980d5273ad3eb71",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/20_19.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/21_19.webp",
+      "bytes": 22194,
+      "sha256": "1907cc79a54c5010f50d443b613b4a5c3b84d58fecdfeb0fe92a5db45d163ffc",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/21_19.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/22_19.webp",
+      "bytes": 23778,
+      "sha256": "7fcf9610bd012db762db448a5b6a370f6f2348651dd307fe50ad33c11d2fd9de",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/22_19.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/23_19.webp",
+      "bytes": 23876,
+      "sha256": "21a0f5bd223063ceb2e7dc3288739128b629955ffebdbcdb411b5dd88aac6275",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/23_19.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/24_19.webp",
+      "bytes": 23826,
+      "sha256": "0c80809afd34c3109036fb7d250ba82a2995fdf8a519582fb290c2206ac3bc2a",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/24_19.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/3_20.webp",
+      "bytes": 31996,
+      "sha256": "052add775d17e27a53651511b4afc975e219336b40b8f13ddbb625e95baafc1d",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/3_20.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/4_20.webp",
+      "bytes": 42950,
+      "sha256": "698f0f534c9b5f9218f3c2af3cec58cc7b0a81b864b050086baf031c81aaa2d1",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/4_20.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/5_20.webp",
+      "bytes": 26858,
+      "sha256": "15f304ec24b750b3843d72a3868b790a522f3d45a9690868715a1f77206304d3",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/5_20.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/6_20.webp",
+      "bytes": 39732,
+      "sha256": "6e5cf4ece864c88ef6f4cbdc26385014b8863abaaf45dbad8503d8b4d516747a",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/6_20.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/7_20.webp",
+      "bytes": 35514,
+      "sha256": "c23a947b7a2bfd8c4cf1d9aff24e17e81e229dea7a61770e208b9758c20ec78d",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/7_20.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/8_20.webp",
+      "bytes": 25848,
+      "sha256": "9cd6a375afe3e4b1292a2ff7cae81fb2185ffda12b64f0238ea3084b5e3823b0",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/8_20.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/9_20.webp",
+      "bytes": 28126,
+      "sha256": "5ac5171a0f65f009f94f8cde90b96a4bbee1df84b2bc0f7f726ea72987ae9f5b",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/9_20.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/10_20.webp",
+      "bytes": 35640,
+      "sha256": "621b1f2b1a101c9b08264af6aec8511a0b706d6c4904b77fa1ce44cc26c3daa4",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/10_20.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/11_20.webp",
+      "bytes": 32568,
+      "sha256": "20812acfdeb031f75cd2dd8fb26a2e417a224c8aee11cb9fd131edc210e0569a",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/11_20.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/12_20.webp",
+      "bytes": 33776,
+      "sha256": "1f26af8cef7ea61eaec520e9ff66e8b5ce7223650a2c5b526fcadbbc6d8e8f6b",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/12_20.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/13_20.webp",
+      "bytes": 28470,
+      "sha256": "b303cf2ae6d18dc9244eaf66a4c0230d81a55c84a095fde78ff19109a0982a44",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/13_20.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/14_20.webp",
+      "bytes": 26770,
+      "sha256": "fdda204f59aae3b68c9036aca0e900a393914331e01ceeb4312df1d9f79be77f",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/14_20.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/15_20.webp",
+      "bytes": 29434,
+      "sha256": "e365e41a49ed42ae86b52de1b5555ea81e8bc7a6dd33049e67827201482ed94f",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/15_20.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/16_20.webp",
+      "bytes": 30778,
+      "sha256": "c65a68ab824859ce9ce53fbb12dd4416b596d937258e9ba3b1d959b63485cba6",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/16_20.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/17_20.webp",
+      "bytes": 33168,
+      "sha256": "b4336daa399209c6a01077a547cf366e9ca3bc969820f864a7f047b60cab8884",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/17_20.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/18_20.webp",
+      "bytes": 37554,
+      "sha256": "5fe8f54c2588a558cc288d53952b96f41f2154dea8cd9d9bb0422ddd0ad5a78c",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/18_20.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/19_20.webp",
+      "bytes": 28590,
+      "sha256": "797ad9c574d40be447bf40a51c2c5570eb79aa7df20c5006dc809433d82fed9c",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/19_20.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/20_20.webp",
+      "bytes": 25266,
+      "sha256": "4140655c6cb1099ae627430e7d4bb92a0d7e71f5db45c031f4784987b2fe049e",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/20_20.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/21_20.webp",
+      "bytes": 21718,
+      "sha256": "e0dab9e25b265aa59ed7bafab663805b238670c804f494f744993f2ed0613af2",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/21_20.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/22_20.webp",
+      "bytes": 22598,
+      "sha256": "e67c1a380d6e2cd94ed88bca75f24357b24cdf90d9a85925ae33e38ac957b90a",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/22_20.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/23_20.webp",
+      "bytes": 24218,
+      "sha256": "c207f7f72f4a3bed0e15cbfc31a126983c5b52135056dca64f9273d9483d45a8",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/23_20.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/24_20.webp",
+      "bytes": 23036,
+      "sha256": "b9cc52e129972b4d05817418373401e0c783a90204b2547557c5b0974144f2aa",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/24_20.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/3_21.webp",
+      "bytes": 26004,
+      "sha256": "ce75794e4bb5fc416a40b4e9a0ca7f7b34a8ec084ed48319d2b83df6e3666b6f",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/3_21.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/4_21.webp",
+      "bytes": 35720,
+      "sha256": "7c6c372a1643ad395faf9603afa509f5f1919af8514b7cf634a49b2de4df186f",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/4_21.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/5_21.webp",
+      "bytes": 43470,
+      "sha256": "14ba607ef539742969bdf541160dc5f3702c1aec0dee0947a96f1534d9226306",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/5_21.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/6_21.webp",
+      "bytes": 35230,
+      "sha256": "5591dc4cda7749e017d087e4e27fc46c69b3d29e8e1607a57ab7eca01f7edad5",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/6_21.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/7_21.webp",
+      "bytes": 42470,
+      "sha256": "ac2f59290f96c0442285e597638fd5684ccd6564d27c6d05259743e01288b321",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/7_21.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/8_21.webp",
+      "bytes": 35100,
+      "sha256": "759d4a24e566c6bab3c97076211467b359a613a14064c33fc04f304c82d6ac16",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/8_21.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/9_21.webp",
+      "bytes": 26800,
+      "sha256": "7ef60c648ddbbe35d46ec95357afeb7d1b8c8ea8e0c83a80abbd49c344fb66e5",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/9_21.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/10_21.webp",
+      "bytes": 29668,
+      "sha256": "e71d24bf9ed7d03a62804d086e0bd02b62eaa9b687f16e3e18609b24d5f85d04",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/10_21.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/11_21.webp",
+      "bytes": 29936,
+      "sha256": "2fcc99a8b9ff6fcb5779cb18df7294ba2e84e10c8ea327215045ddaf5eb51b63",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/11_21.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/12_21.webp",
+      "bytes": 27370,
+      "sha256": "b8de035895aaa9d8e874a16335861f4db8ae27ddf881bb4cfbf15c492266da2d",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/12_21.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/13_21.webp",
+      "bytes": 27792,
+      "sha256": "6086d42057c9baa122e002d371d0c420a9741f638bb825fbfffcafcca35c3d98",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/13_21.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/14_21.webp",
+      "bytes": 27850,
+      "sha256": "f11287796a4617f1c99387e84e9ddcef5b68e9677e886d3e39515ebc73a3cc2c",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/14_21.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/15_21.webp",
+      "bytes": 26266,
+      "sha256": "dda28df6ed65a389d4b5c5ca9c810e57cc4314da4a11ea82dd354e97e06d4eec",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/15_21.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/16_21.webp",
+      "bytes": 26346,
+      "sha256": "d76395545d1b3bb97364a0c3b9c0966f4c2ff6f86cd0df54fc3701de298ac290",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/16_21.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/17_21.webp",
+      "bytes": 35904,
+      "sha256": "e0466a915ec727e36365d169d28732daad7d773b1ad6514f67c45a8ebfd1ea7f",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/17_21.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/18_21.webp",
+      "bytes": 39454,
+      "sha256": "025e3ddea055df2da9d0f060545322a03410a93e6563715515a2dd7d043910eb",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/18_21.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/19_21.webp",
+      "bytes": 28214,
+      "sha256": "4dd2434d9a4037e448d58e4dac7a67f32fb54eface452b3c9d3312ab84711119",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/19_21.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/20_21.webp",
+      "bytes": 23586,
+      "sha256": "efe61510584f131a7cbac0db6ac2b518f7b5e4c03c4f936748f20d9e5635eaa5",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/20_21.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/21_21.webp",
+      "bytes": 22940,
+      "sha256": "a246e796535e0d5b89942d20f2fe971172e5c193b143b6d9c5a128316ca31fa9",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/21_21.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/22_21.webp",
+      "bytes": 24126,
+      "sha256": "80d2232a46c6b75bfe750de7deab47f5fff4615e63d6bc0e8f2030a588be1b9f",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/22_21.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/23_21.webp",
+      "bytes": 27810,
+      "sha256": "8a522af3530ef7acf38d28082a05df5cad83ab35e3235f85b0893e1116d02c68",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/23_21.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/24_21.webp",
+      "bytes": 23380,
+      "sha256": "88599a82673e9410df00140bf80fcbba21836102d13354727e46f982b5e0b748",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/24_21.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/3_22.webp",
+      "bytes": 27696,
+      "sha256": "af9371aaf434d20d7b56c0165fdd63537c4ba9700c59292256aafcec38ee08e9",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/3_22.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/4_22.webp",
+      "bytes": 28360,
+      "sha256": "f69f05936d206ec37bd7351e4ad48638e02e561118f00058d8d8bfef787634b7",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/4_22.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/5_22.webp",
+      "bytes": 40998,
+      "sha256": "eda6d9927dea73be777645299e7ce3de15c8e2a0bd17d4f1810a99b6a7011c04",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/5_22.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/6_22.webp",
+      "bytes": 39752,
+      "sha256": "b41155ca6dc0dab07fa2375bc851d61cc17f9de7736c8bc624df6e8ac249a4c5",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/6_22.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/7_22.webp",
+      "bytes": 39312,
+      "sha256": "96b76a4fa7d3db9b468e38f34f7fcfb6334cded171c46edb6b63686ee135a4c1",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/7_22.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/8_22.webp",
+      "bytes": 43608,
+      "sha256": "916fcab06e2a7e229e73006a2c24ae3a054146fc48f801a430d58f947a9db081",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/8_22.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/9_22.webp",
+      "bytes": 33116,
+      "sha256": "913ea6e717da33981e9b3ffa2230f38833ba463d35a71ceacbf603c87a97639c",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/9_22.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/10_22.webp",
+      "bytes": 29438,
+      "sha256": "c887ad9c3bc955f3de709b1d1f55b7c468bda15edeb5a3e57d60d06e5fe7cf7b",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/10_22.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/11_22.webp",
+      "bytes": 31672,
+      "sha256": "abf1f97c502740a3349a910bffc264675c5a7b107107239d479b62214eee5a3f",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/11_22.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/12_22.webp",
+      "bytes": 34836,
+      "sha256": "9dad95f719c8751370ea3efa51c7c0933d71325750b039099ef4b094d657a5b3",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/12_22.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/13_22.webp",
+      "bytes": 27632,
+      "sha256": "3f5fab3c88a5e1ccb7f1017e9fb3a5a580c60bab35a0c019390f506841582464",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/13_22.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/14_22.webp",
+      "bytes": 29130,
+      "sha256": "3b340c6b1ceca5e6fec60bef4ce5a260ef2ab23843f9fcb4f39f74bd20501280",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/14_22.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/15_22.webp",
+      "bytes": 26538,
+      "sha256": "61b41b972191a076173801f32067b6b646f3f41a6a4cb1ed2e3b54cb71d75745",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/15_22.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/16_22.webp",
+      "bytes": 33492,
+      "sha256": "afba40b64e51aef516d4bdddfcb6f3cf951e513407a0a87a26a158b0746a781f",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/16_22.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/17_22.webp",
+      "bytes": 32314,
+      "sha256": "2578b9cedffc129c432c227ffc9c2b9b556e29dd4327c9601ab52a21c3cbb39f",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/17_22.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/18_22.webp",
+      "bytes": 30674,
+      "sha256": "e8d461aa8c7888db44ff3aa7afa12ec2bbc0270126245d9d76b123392bd4d252",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/18_22.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/19_22.webp",
+      "bytes": 25070,
+      "sha256": "8df19ab6a23aa1bf272e8a889b10e06ac0e18941be839eb85cabdf60efc4319e",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/19_22.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/20_22.webp",
+      "bytes": 24610,
+      "sha256": "cccc27c51859fef5dcd19cd16aa9aaea282f1a3d11c51f38ffa3dad97b1d9545",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/20_22.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/21_22.webp",
+      "bytes": 24578,
+      "sha256": "c1dfe7069de3ab51bea1119dcff939be9aef54d4f4900be9b44803bc3ea8a76e",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/21_22.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/22_22.webp",
+      "bytes": 24432,
+      "sha256": "74c0ac22f3ef52ee6d1223d7660657fb2e852962496002ed9b6ec10c707761cb",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/22_22.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/23_22.webp",
+      "bytes": 35802,
+      "sha256": "64e09e18bad9553c61764645a336149a067b6f18365364e2791df80f2050e6fa",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/23_22.webp"
+    },
+    {
+      "path": "assets/wardogs/zestafona/zoom_5/24_22.webp",
+      "bytes": 32468,
+      "sha256": "aff3398c3d7ea776a99e6794339e7c8cd1729504578b3a053eb6c57fb8be5a7d",
+      "source": "https://assets.wardogs-artillery.com/releases/assets-v1/maps/tiles/zestafona/zoom_5/24_22.webp"
+    }
+  ]
+}

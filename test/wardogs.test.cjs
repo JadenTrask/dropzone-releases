@@ -3,7 +3,7 @@ const assert=require('node:assert/strict');
 const fs=require('node:fs/promises'),path=require('node:path'),os=require('node:os');
 const {normalizeWardogs,WardogsProvider}=require('../core/wardogs-provider.cjs');
 const maps=require('../app/data/wardogs/maps.json');
-const raw={weapons:require('../app/data/wardogs/weapons-reference.json'),maps:['bakurani','ozeti'].map(m=>require('../app/data/wardogs/'+m+'-reference.json'))};
+const raw={weapons:require('../app/data/wardogs/weapons-reference.json'),maps:['bakurani','ozeti','zestafona'].map(m=>require('../app/data/wardogs/'+m+'-reference.json'))};
 const weapons=normalizeWardogs(raw,maps).weapons;
 const model=import('../app/wardogs-model.js');
 

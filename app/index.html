@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://ddragon.leagueoflegends.com https://assets.codmunity.gg https://i.ytimg.com https://raw.githubusercontent.com https://cdn.gzwtacmap.com https://staticctf.ubisoft.com https://clan.akamai.steamstatic.com; connect-src 'self'; font-src 'self'; object-src 'none'; base-uri 'none'; frame-src https://www.youtube-nocookie.com">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data: https://ddragon.leagueoflegends.com https://assets.codmunity.gg https://i.ytimg.com https://raw.githubusercontent.com https://assets.wardogs-artillery.com https://cdn.gzwtacmap.com https://staticctf.ubisoft.com https://clan.akamai.steamstatic.com; connect-src 'self'; font-src 'self'; object-src 'none'; base-uri 'none'; frame-src https://www.youtube-nocookie.com">
   <title>Dropzone</title>
   <link rel="icon" href="assets/brand.svg" type="image/svg+xml">
   <link rel="stylesheet" href="styles.css">
@@ -18,9 +18,10 @@
   <link rel="stylesheet" href="sources-v2.css">
   <link rel="stylesheet" href="games-v2.css">
   <link rel="stylesheet" href="maps-v2.css">
+  <link rel="stylesheet" href="wardogs-workflow.css">
 </head>
 <body>
-  <div class="titlebar"><div class="titlebrand"><img src="assets/brand.svg" alt="">DROPZONE<span data-app-version>2.0.1</span></div><button id="app-update-ready" class="app-update-ready" data-route="updates" hidden>Update ready</button><div class="window-controls"><button data-window="minimize" aria-label="Minimize">−</button><button data-window="maximize" aria-label="Maximize">□</button><button data-window="close" aria-label="Close">×</button></div></div>
+  <div class="titlebar"><div class="titlebrand"><img src="assets/brand.svg" alt="">DROPZONE<span data-app-version>2.0.2</span></div><button id="app-update-ready" class="app-update-ready" data-route="updates" hidden>Update ready</button><div class="window-controls"><button data-window="minimize" aria-label="Minimize">−</button><button data-window="maximize" aria-label="Maximize">□</button><button data-window="close" aria-label="Close">×</button></div></div>
   <aside class="app-rail" aria-label="Dropzone navigation">
     <div class="rail-brand"><img src="assets/brand.svg" alt=""><span>Dropzone<small>Your game companion</small></span></div>
     <nav class="rail-main" aria-label="Workspace"><button class="rail-link" data-route="home" aria-label="Game library" title="Game library"><i data-icon="grid"></i><span>Game library</span></button><button class="rail-link" data-route="saved" aria-label="Saved loadouts" title="Saved loadouts"><i data-icon="bookmark"></i><span>Saved loadouts</span></button></nav>
@@ -44,7 +45,7 @@
     <main class="main">
 
       <div id="content" class="content"><div class="boot-state"><img src="assets/brand.svg" alt=""><h1>Loading League of Legends</h1><p>Loading the champion catalog…</p></div></div>
-      <footer class="footer"><span>DROPZONE <b data-app-version>2.0.1</b></span><span>Independent League companion · <button data-view="settings">Sources & methodology</button></span></footer>
+      <footer class="footer"><span>DROPZONE <b data-app-version>2.0.2</b></span><span>Independent League companion · <button data-view="settings">Sources & methodology</button></span></footer>
     </main>
   </div>
   </div>
@@ -52,6 +53,8 @@
   <dialog id="modes-dialog"><div class="dialog-head"><div><span class="eyebrow">GAME MODES</span><h2>Choose a mode.</h2></div><button class="icon-button close-dialog" aria-label="Close mode picker"><i data-icon="x"></i></button></div><p class="muted">Live data, clearly labeled foundations, and dedicated guides for rotating modes. Queue availability is controlled by Riot.</p><div id="modes-grid" class="modes-grid"></div></dialog>
   <dialog id="item-dialog"><div id="item-detail"></div><button class="button secondary close-dialog">Back to build</button></dialog>
   <div id="toast" role="status" aria-live="polite"></div>
+  <link rel="stylesheet" href="intro.css">
+  <script type="module" src="intro.js"></script>
   <script type="module" src="hub.js"></script>
 </body>
 </html>

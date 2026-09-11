@@ -6,6 +6,8 @@ contextBridge.exposeInMainWorld('rift',Object.freeze({
   patches:options=>ipcRenderer.invoke('patches',options),
   siege:options=>ipcRenderer.invoke('siege',options),
   wardogs:options=>ipcRenderer.invoke('wardogs',options),
+  wardogsTerrain:resource=>ipcRenderer.invoke('wardogs-terrain',resource),
+  onStartupReveal:callback=>{if(typeof callback==='function')ipcRenderer.once('startup-reveal',()=>callback());},
   updates:refresh=>ipcRenderer.invoke('updates',refresh===true),
   appUpdates:()=>ipcRenderer.invoke('app-updates'),
   checkAppUpdates:()=>ipcRenderer.invoke('check-app-updates'),

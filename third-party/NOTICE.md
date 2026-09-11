@@ -11,6 +11,19 @@ Bundled map imagery and calibration were obtained from revision
 The maps' playable bounds and image bounds are kept separate. Original radio
 tower coordinates are converted from metres to the game's displayed units.
 
+Version 2.0.2 adds Zestafona tiles, three community collision-terrain datasets,
+and opt-in experimental SPH-2 candidate resolvers/data from Apollyon's revision
+`b1463dab45fb7871a893f14d17f0064ef48e3724`. The MIT notice above applies to
+reused source code and community data under that repository's license. Source
+manifests and SHA-256 hashes are retained. Terrain is downsampled from 2 m to
+4 m; its absolute datum and exact game build are not independently verified.
+The candidate solver's held-out validation remains outstanding. See
+`docs/WARDOGS-2.0.2.md` for transforms, provenance and accuracy limits.
+
+The 3D opening emblem and animation were created for Dropzone in Blender from
+the app's existing brand.svg. The editable scene and reproduction script are
+included in the source distribution.
+
 WARDOGS names, trademarks, game maps, and artwork belong to their respective
 rights holders, including BULKHEAD and Team17. The MIT license for the reference
 project and Dropzone does not grant ownership of those third-party assets.

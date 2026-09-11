@@ -1,0 +1,2082 @@
+{
+  "format": "dropzone-terrain-u16-v1",
+  "mapId": "zestafona",
+  "evidence": "COMMUNITY_ESTIMATE_NOT_GAME_VALIDATED",
+  "chunkXMin": 0,
+  "chunkXMax": 15,
+  "chunkYMin": 0,
+  "chunkYMax": 15,
+  "chunkCount": 256,
+  "chunkQuads": 510,
+  "verticesPerSide": 256,
+  "vertexSpacingMeters": 4,
+  "globalQuadOffsetX": 0,
+  "globalQuadOffsetY": 8160,
+  "gameUnitsToLandscapeQuads": 50,
+  "gameUnitsToLandscapeQuadsX": 50,
+  "gameUnitsToLandscapeQuadsY": -50,
+  "worldZOffsetMeters": 1225,
+  "worldZScaleMetersPerLocalUnit": 5.85,
+  "coverage": {
+    "gameXMin": 0,
+    "gameXMax": 163.2,
+    "gameYMin": 0,
+    "gameYMax": 163.2
+  },
+  "coordinateMappingEvidence": "",
+  "chunks": {
+    "0,0": {
+      "file": "chunks/0_0.bin",
+      "bytes": 131072,
+      "minLocalZ": -197.875,
+      "maxLocalZ": -147.8828125,
+      "sha256": "1b4abd49a789079cd833157d5cb6f268411030eceab2ecf3a9a8bcaffe19ea9f",
+      "sourceSha256": "1f2bbe7866edb49a8db039fb61d6c795c791eb721ae34f8eaec092a154819682"
+    },
+    "1,0": {
+      "file": "chunks/1_0.bin",
+      "bytes": 131072,
+      "minLocalZ": -198.2734375,
+      "maxLocalZ": -166.40625,
+      "sha256": "41e948eb62628b237cf0875010d4d15956dfb5d962563419b5466518479fe7d5",
+      "sourceSha256": "693b16c3401299ac8e4a8d1806474b1ffbf66543ece8833c82612b459221c568"
+    },
+    "2,0": {
+      "file": "chunks/2_0.bin",
+      "bytes": 131072,
+      "minLocalZ": -198.4921875,
+      "maxLocalZ": -147.8125,
+      "sha256": "62b70c286e4b3d0809e16d5e932b8cdf087e3044015f953aa9094ffc1cc35675",
+      "sourceSha256": "9ee82f2412f6dade4bb7d1fd3363778eb8e8ce9dd683c7d249dabc5b52f112e1"
+    },
+    "3,0": {
+      "file": "chunks/3_0.bin",
+      "bytes": 131072,
+      "minLocalZ": -183.46875,
+      "maxLocalZ": -143.8515625,
+      "sha256": "61488cf7837b4dc67544eb573e837dbc68057db4bbf056adceb44a0603cac275",
+      "sourceSha256": "942ce8f3c10a9cf916f194f2f3b5d926073615a97732d651307a38be50140bc6"
+    },
+    "4,0": {
+      "file": "chunks/4_0.bin",
+      "bytes": 131072,
+      "minLocalZ": -183.8359375,
+      "maxLocalZ": -155.2578125,
+      "sha256": "cec6cfa498980ef60471ec14977b78f5590feac8757bcf785ed3fc35fac80210",
+      "sourceSha256": "75764a5819065b6e529b56b3634a2a86577476ac144ff2b567031e73a4cc62ff"
+    },
+    "5,0": {
+      "file": "chunks/5_0.bin",
+      "bytes": 131072,
+      "minLocalZ": -183.53125,
+      "maxLocalZ": -144.3984375,
+      "sha256": "edda6b802a31667e808237fb47898ac78c387623652bf85addde5948c872fbe5",
+      "sourceSha256": "af9c81605dbc4054442cf05a43051f7f22b561b3f691600a5d44054529fec106"
+    },
+    "6,0": {
+      "file": "chunks/6_0.bin",
+      "bytes": 131072,
+      "minLocalZ": -184.1796875,
+      "maxLocalZ": -129.390625,
+      "sha256": "2e548ec9830ecaadd407230d5ffd7d977ff2ec2eaadf736e355917894ed374d0",
+      "sourceSha256": "351fab8f53a283a5b719e1a15bca19f1eedd89d0f704744ed1ba5603dcd83ad5"
+    },
+    "7,0": {
+      "file": "chunks/7_0.bin",
+      "bytes": 131072,
+      "minLocalZ": -167.359375,
+      "maxLocalZ": -121.84375,
+      "sha256": "984952f503ce79b43ed1982e82cbef882c7d3211befd293f712033dbfc38672a",
+      "sourceSha256": "d8476bddf4ede9fc01ac1911f0d7007efc7a04d03e16df8cda17833337879598"
+    },
+    "8,0": {
+      "file": "chunks/8_0.bin",
+      "bytes": 131072,
+      "minLocalZ": -181.2734375,
+      "maxLocalZ": -135.453125,
+      "sha256": "2d2b96027ad2597d9f3d3e68875ccd7b777edf8e6c51fd6778001aa0dfb2ec7d",
+      "sourceSha256": "7bcc7a32c5c1f924d0f364b412469b89acabdb842649cbd83c0b5523bd42bfb9"
+    },
+    "9,0": {
+      "file": "chunks/9_0.bin",
+      "bytes": 131072,
+      "minLocalZ": -184.9140625,
+      "maxLocalZ": -138.2421875,
+      "sha256": "91f747678fdb4e428d585cb0b4051ab25f227af07c46a7059c2048633dfc0a72",
+      "sourceSha256": "bfba9a73a5df995f629c3cdc01b321fbf7aacf52c103db43a40d1ae10fe6f5f9"
+    },
+    "10,0": {
+      "file": "chunks/10_0.bin",
+      "bytes": 131072,
+      "minLocalZ": -176.2734375,
+      "maxLocalZ": -127.3984375,
+      "sha256": "99a32cf611578bfb42cdb0ddc7fb363dfb504fb68310a19050f7b4b4b67641fa",
+      "sourceSha256": "cfcd909891068a27cf1baf660671a5ee6cef16e0f0de12c63029b20e0c744f03"
+    },
+    "11,0": {
+      "file": "chunks/11_0.bin",
+      "bytes": 131072,
+      "minLocalZ": -177.21875,
+      "maxLocalZ": -121.1328125,
+      "sha256": "3ea240ce2ce66bbfb14ed01af61019e126ffa3d0e3075f2a3cc90675d107515e",
+      "sourceSha256": "03b838aad3b85e310c5731ed13efa52a4d8cad18831333a9da4e3c60d0f3495f"
+    },
+    "12,0": {
+      "file": "chunks/12_0.bin",
+      "bytes": 131072,
+      "minLocalZ": -167.4765625,
+      "maxLocalZ": -118.75,
+      "sha256": "c5af8868c5c91b3e7a5a943171accc634ea1864386b4f3296a383fbf48b34495",
+      "sourceSha256": "f4a573ad5df5e594a12165ffab2161b7eeccef69951d230b5a65adfd64a751be"
+    },
+    "13,0": {
+      "file": "chunks/13_0.bin",
+      "bytes": 131072,
+      "minLocalZ": -168.5234375,
+      "maxLocalZ": -90.171875,
+      "sha256": "de2411f1b7a27d873ab4ce7aabdbf4006e039f58f1fadb68bbf06ce6b75b2996",
+      "sourceSha256": "39b15dfc2acdde186ddb7af220229b5190994439d99fab65e75e80b85e17b8bb"
+    },
+    "14,0": {
+      "file": "chunks/14_0.bin",
+      "bytes": 131072,
+      "minLocalZ": -162.078125,
+      "maxLocalZ": -105.9453125,
+      "sha256": "8631f8d487ae7ddd577697a3b6032b1fb2ab398dde1c307324a3f45a136646f5",
+      "sourceSha256": "ca0bb912f375d82d147063dbfcf524d3a41710554701e2ae8ebbde3e63a5340c"
+    },
+    "15,0": {
+      "file": "chunks/15_0.bin",
+      "bytes": 131072,
+      "minLocalZ": -171.515625,
+      "maxLocalZ": -126.4921875,
+      "sha256": "c6c51a65342a4f4dfd4b3d5f66f20b353835a1feae3e99de5ebd27d79fc37ec7",
+      "sourceSha256": "df00a1a413aa0d25f996bf4906f891367279d1d9375da2de4e98907a84499bcd"
+    },
+    "0,1": {
+      "file": "chunks/0_1.bin",
+      "bytes": 131072,
+      "minLocalZ": -177.703125,
+      "maxLocalZ": -116.546875,
+      "sha256": "2ef67c0b259909f6d26a3f2e16a96d9904d5d452b12ba4d66ce6fe476d40edde",
+      "sourceSha256": "4f4752b3264d1aeb7c74c37d61ecb64b488c9586476f6a6bab4f4c0f6d343a9c"
+    },
+    "1,1": {
+      "file": "chunks/1_1.bin",
+      "bytes": 131072,
+      "minLocalZ": -194.6796875,
+      "maxLocalZ": -114.515625,
+      "sha256": "5500d4a735c3fd78304b7e19bb9cc62300898caf0fa6681090883bb4d9ab5172",
+      "sourceSha256": "314538e4ba6b85c817b54407e3b65168c0a61878c5f2731340a5678c851cad38"
+    },
+    "2,1": {
+      "file": "chunks/2_1.bin",
+      "bytes": 131072,
+      "minLocalZ": -198.7578125,
+      "maxLocalZ": -164.3984375,
+      "sha256": "76453c0c68375770ed6d3737e798a8f3f057c2d25dcc20db4241d171234ed648",
+      "sourceSha256": "fa8eda295a7a943c93e43f5d19fe4d6916394c7b4305b19b96f169f63074ed56"
+    },
+    "3,1": {
+      "file": "chunks/3_1.bin",
+      "bytes": 131072,
+      "minLocalZ": -199.109375,
+      "maxLocalZ": -164.046875,
+      "sha256": "c2adfc68285493894e39e727cadf1a610d3ebc88343e255046d059a5bc01d5d2",
+      "sourceSha256": "81b37f8b96fb860c81cd2165455fa5d3d3664de8292e3170724e030bb69b5c76"
+    },
+    "4,1": {
+      "file": "chunks/4_1.bin",
+      "bytes": 131072,
+      "minLocalZ": -199.4609375,
+      "maxLocalZ": -160.703125,
+      "sha256": "857df5d1b5f8dd045ff45c4e74fa3dfe32448ea3886032d64a0dda6c6c192e52",
+      "sourceSha256": "ed486c5ef586e0f1c849b22593bb7e4c198bb2e1ffb4e149a827aa40b9840b00"
+    },
+    "5,1": {
+      "file": "chunks/5_1.bin",
+      "bytes": 131072,
+      "minLocalZ": -199.5234375,
+      "maxLocalZ": -148.34375,
+      "sha256": "f955870ab130746354c8407b7da01c01f0ab2d006eab1b1a4517792e600f73b1",
+      "sourceSha256": "ef87308507794b79e3668f8ee7716e91f32753b45c3d03435a801f6a0b2e9839"
+    },
+    "6,1": {
+      "file": "chunks/6_1.bin",
+      "bytes": 131072,
+      "minLocalZ": -190.171875,
+      "maxLocalZ": -141.4140625,
+      "sha256": "f7c7da7a771b25331a32e1a06ee40ac1c521eb97d6f63fe9a1eef452eb69d921",
+      "sourceSha256": "483ac153aa408c2b0253f2f8e31d9757c683828a63d3f9c41568d66953e6061e"
+    },
+    "7,1": {
+      "file": "chunks/7_1.bin",
+      "bytes": 131072,
+      "minLocalZ": -175.0703125,
+      "maxLocalZ": -134.3125,
+      "sha256": "6b5accbef117a38b70bef1ee2b223bb6b62e32cb2ad5e70ba318de19c87d2379",
+      "sourceSha256": "0f7c8fa307e5e80c620982271062a57efb2ef058ea4b6dc1a6697574bb0255ce"
+    },
+    "8,1": {
+      "file": "chunks/8_1.bin",
+      "bytes": 131072,
+      "minLocalZ": -170.1171875,
+      "maxLocalZ": -144.1953125,
+      "sha256": "c73b2e62f06c8273165bfd4c7379557eed20b6441ef8e7b4f32637be8ae6a3d4",
+      "sourceSha256": "3d2b80cbdd9260c5c85310ad513603693df140700699c3d2d4157a74fe929e76"
+    },
+    "9,1": {
+      "file": "chunks/9_1.bin",
+      "bytes": 131072,
+      "minLocalZ": -170.6171875,
+      "maxLocalZ": -119.4140625,
+      "sha256": "65eba1026df948ff41c29caf3671f8253141dcc61436a66e7ce2f3dcce985d1d",
+      "sourceSha256": "57eb26cb4cf9d9a117d82101ef9f880dcb484204772ee8fd1f97c8142fe8c050"
+    },
+    "10,1": {
+      "file": "chunks/10_1.bin",
+      "bytes": 131072,
+      "minLocalZ": -160.015625,
+      "maxLocalZ": -114.4609375,
+      "sha256": "378d6aae325ad09141d83a2d5aa4ea2bb90cc5623feca356761b89a03284524e",
+      "sourceSha256": "4bce484da4da705fb309ed61bc846dea5e7d2bc7c4a9e216af602680f9b3a328"
+    },
+    "11,1": {
+      "file": "chunks/11_1.bin",
+      "bytes": 131072,
+      "minLocalZ": -165.5625,
+      "maxLocalZ": -120.25,
+      "sha256": "ba23430e242fc2c1b8673cbd058961f218342252e5999c933b7177be9315b817",
+      "sourceSha256": "3d40a930cff4f517bfbffafe6448177440bfee00a2e496ec3f630f590cf40936"
+    },
+    "12,1": {
+      "file": "chunks/12_1.bin",
+      "bytes": 131072,
+      "minLocalZ": -150.71875,
+      "maxLocalZ": -99.1953125,
+      "sha256": "d2b23bd3d14b2ce2aa6704e28192b17871186110ebbf0524a8f29b10e3bab095",
+      "sourceSha256": "50098547ee5e25b442e7ce7ebe2bb887e1a57b8fa89fa769e70cdd920f09304d"
+    },
+    "13,1": {
+      "file": "chunks/13_1.bin",
+      "bytes": 131072,
+      "minLocalZ": -173.640625,
+      "maxLocalZ": -88.484375,
+      "sha256": "b93126739653dcc39d623eee3db3cd7aec950d4733685b5cf1e7ea0c115bf8ae",
+      "sourceSha256": "7c7b7c42a28fe572724188cdc942aae9f4ea6af03775e65d74ea2eb74ab8ae73"
+    },
+    "14,1": {
+      "file": "chunks/14_1.bin",
+      "bytes": 131072,
+      "minLocalZ": -176.4140625,
+      "maxLocalZ": -130.984375,
+      "sha256": "4aab2fec65a52992976d81c2edceb84f70a0b514bf0def7e33d739e050a15e5f",
+      "sourceSha256": "b77ccc78e336b504455aba1902c013883e42d9e71e60869a42727838f9b5b6f8"
+    },
+    "15,1": {
+      "file": "chunks/15_1.bin",
+      "bytes": 131072,
+      "minLocalZ": -175.109375,
+      "maxLocalZ": -143.890625,
+      "sha256": "c1c43c50a0d510ed21e3ab035f76a122e20c562f551b6574f597b3572efbce32",
+      "sourceSha256": "d774a082e01981419bd8dd66b36b7d574db42b48480edfca7fa5d5e0daea1a95"
+    },
+    "0,2": {
+      "file": "chunks/0_2.bin",
+      "bytes": 131072,
+      "minLocalZ": -162.53125,
+      "maxLocalZ": -100.3203125,
+      "sha256": "587f0c8bba153c16c11684adbfe8142ca0f55292e0dc0e444fc40bd943942d56",
+      "sourceSha256": "d7ee6ead40b8f0f6cb0ea430747d57af61310f9d537372b7ce68e4f41f61257c"
+    },
+    "1,2": {
+      "file": "chunks/1_2.bin",
+      "bytes": 131072,
+      "minLocalZ": -164.40625,
+      "maxLocalZ": -103.3125,
+      "sha256": "261ed5b2557e60c7255a89a88cc660d6e331fb57a4c94ac0af1a457de9b0854b",
+      "sourceSha256": "fdd4c3e4b8821de3f1da733d4df15fe6573a990129672cee991fbf16a0537d9a"
+    },
+    "2,2": {
+      "file": "chunks/2_2.bin",
+      "bytes": 131072,
+      "minLocalZ": -195.7109375,
+      "maxLocalZ": -128.3125,
+      "sha256": "54b37e6938b94c24a1e61f1cda4851183b6c4d2a050cb2fb00d219a34445c705",
+      "sourceSha256": "45cb1a9c82ba7b81230bd13db8d2346d08255305f11646877f66c47f62d2759b"
+    },
+    "3,2": {
+      "file": "chunks/3_2.bin",
+      "bytes": 131072,
+      "minLocalZ": -197.8125,
+      "maxLocalZ": -159.984375,
+      "sha256": "03e07dfe1169824426138bbf7b9629471e35e1f6dd97a195cd970c212e41325e",
+      "sourceSha256": "2f366a4e5039d6db6c8435a66bc1e078b94416e69a1c0c4b69e28b17fd2e7a71"
+    },
+    "4,2": {
+      "file": "chunks/4_2.bin",
+      "bytes": 131072,
+      "minLocalZ": -199.4375,
+      "maxLocalZ": -183.890625,
+      "sha256": "ad8467dbf2f77f544316c1cf5761dfb559e0f14e1a8a03aab6945422df04df6d",
+      "sourceSha256": "7c3aa3ed992fc0b86ecea8b414b2776bc8420634025e547cf62c778737e17964"
+    },
+    "5,2": {
+      "file": "chunks/5_2.bin",
+      "bytes": 131072,
+      "minLocalZ": -199.890625,
+      "maxLocalZ": -179.15625,
+      "sha256": "9c4c76938e156203875f6a9cf850e062bd3d0a044b6b64fd2b1339bee3ccd749",
+      "sourceSha256": "afa8128dd57e33b7a121b542fd2743af96147cadc954d3e959b46f402e48dc8b"
+    },
+    "6,2": {
+      "file": "chunks/6_2.bin",
+      "bytes": 131072,
+      "minLocalZ": -193.6875,
+      "maxLocalZ": -132.65625,
+      "sha256": "7f57f40fbcdfb3fc733f7616c6d9793ae1705f4864a5629dc9efe8a29b9e3ed9",
+      "sourceSha256": "8e3129175f4129af81fc1e4890105908559c3a1ef2715e09bac572eaa1cc1749"
+    },
+    "7,2": {
+      "file": "chunks/7_2.bin",
+      "bytes": 131072,
+      "minLocalZ": -175.265625,
+      "maxLocalZ": -136.953125,
+      "sha256": "a53e0a56d3bb2efe8d41eb4ea6960d75142653c4ead00e07795131da651a60da",
+      "sourceSha256": "a11b5b294bd016da01c23211cd021aed9d6ed3b2cb8c265cd4a3ac112d7dc64c"
+    },
+    "8,2": {
+      "file": "chunks/8_2.bin",
+      "bytes": 131072,
+      "minLocalZ": -169.3671875,
+      "maxLocalZ": -134.1328125,
+      "sha256": "32afa5f533e640529d8ecc22c58f034d665007d08d4b1a65cc5eea91b03fb46e",
+      "sourceSha256": "cac58c93d3f7447bca3eac1bdf1b170af4731d251e554e345b33a06d545915f4"
+    },
+    "9,2": {
+      "file": "chunks/9_2.bin",
+      "bytes": 131072,
+      "minLocalZ": -176.3828125,
+      "maxLocalZ": -134.796875,
+      "sha256": "cb8d876517d311ee13b12c25789c00c74d98757662558901d6e2dde24facdc28",
+      "sourceSha256": "13a14c293cc7f4bdd64a196bf2c174d5ff4a053b0f24aaf946990499a17c7310"
+    },
+    "10,2": {
+      "file": "chunks/10_2.bin",
+      "bytes": 131072,
+      "minLocalZ": -180.8984375,
+      "maxLocalZ": -146.703125,
+      "sha256": "47ceffae6bd56a300a18fed217ba64aac947f53c2ee41579478604e1f0456338",
+      "sourceSha256": "d2e6ee16e9821f58794627d537dd66d3b3dd57f54c240a73744ebc488080d87a"
+    },
+    "11,2": {
+      "file": "chunks/11_2.bin",
+      "bytes": 131072,
+      "minLocalZ": -175.40625,
+      "maxLocalZ": -133.4296875,
+      "sha256": "c628311a0211ccaeaa618676137eadbf270f70b3545af2d7a0f18572ed4a37ab",
+      "sourceSha256": "1df19df3f47773622ed802a3964e9bea7eb707ca1ba2402ffa26f20ef9538939"
+    },
+    "12,2": {
+      "file": "chunks/12_2.bin",
+      "bytes": 131072,
+      "minLocalZ": -181.9140625,
+      "maxLocalZ": -125.5703125,
+      "sha256": "7422e5e4b234dcdd2d1b4c21181bffed2f77263af756c60af98b74959fe76fcb",
+      "sourceSha256": "7d5577c763891d97fb462a00481cd84c319ee4192c6d8320369914230eddda28"
+    },
+    "13,2": {
+      "file": "chunks/13_2.bin",
+      "bytes": 131072,
+      "minLocalZ": -181.5703125,
+      "maxLocalZ": -149.9921875,
+      "sha256": "b77956262bb733872f298f56e1be664c190b6c36f087c14864bd9499f40ee2fa",
+      "sourceSha256": "0dd8b819b3f73f521af4c63922cbe5f1c1a77708e436fae578976000a43fe933"
+    },
+    "14,2": {
+      "file": "chunks/14_2.bin",
+      "bytes": 131072,
+      "minLocalZ": -179.203125,
+      "maxLocalZ": -162.40625,
+      "sha256": "3273da120fa3e752f53e4f508d5a4307ea1fac379e9ab328909d6e955d0d4383",
+      "sourceSha256": "164bdc65715efedc910cb083d68f543d9f65515782cb0fafe887231c15b9f066"
+    },
+    "15,2": {
+      "file": "chunks/15_2.bin",
+      "bytes": 131072,
+      "minLocalZ": -177.1328125,
+      "maxLocalZ": -147.8046875,
+      "sha256": "83e67900cb6816f2f76b5ff33b5297aa9924f71ec249af1f94e1b59d42b2b82b",
+      "sourceSha256": "791e7fb3228ffa1d67dcf3be08eebcc79dc89b88ed6f9c5b46dc543b3b203feb"
+    },
+    "0,3": {
+      "file": "chunks/0_3.bin",
+      "bytes": 131072,
+      "minLocalZ": -155.3359375,
+      "maxLocalZ": -93.6484375,
+      "sha256": "b3e0985e1de1f331f1dcd0115b0c4e6c2c8e42597d14246c6c2c867b1c9c5fde",
+      "sourceSha256": "ef90b02cfeb087b844da07b637c66631198f8db76488f2a2f156edc316036324"
+    },
+    "1,3": {
+      "file": "chunks/1_3.bin",
+      "bytes": 131072,
+      "minLocalZ": -182.1875,
+      "maxLocalZ": -102.1875,
+      "sha256": "9a2b6d7aa838bb6bfb1835cee8ce5585f7ecce122ae90daacefa138b13f7e02e",
+      "sourceSha256": "49ec7be71da94b3e33a3a305674fbc6ba8e904bf534cdc537eeaa7bd0e3410a4"
+    },
+    "2,3": {
+      "file": "chunks/2_3.bin",
+      "bytes": 131072,
+      "minLocalZ": -188.015625,
+      "maxLocalZ": -130.75,
+      "sha256": "aeec9cf4ac37209a48a4be75dfbc469dacdc19c6c81d7558bc49c16a13f5701e",
+      "sourceSha256": "86ec15fe21327c0f06e0cf46271878ff2faf915ca1fa4370a16cf07d5e00d5fe"
+    },
+    "3,3": {
+      "file": "chunks/3_3.bin",
+      "bytes": 131072,
+      "minLocalZ": -195.984375,
+      "maxLocalZ": -151.8046875,
+      "sha256": "23c2a406f4b287a265f0f7c28a950bd2b423584d9e410e44fe58e78cdacc7a71",
+      "sourceSha256": "499b98c2e3122457500ca37dc64fdabc73df76bc0bea62e26cbe1d895e07aa81"
+    },
+    "4,3": {
+      "file": "chunks/4_3.bin",
+      "bytes": 131072,
+      "minLocalZ": -197.8828125,
+      "maxLocalZ": -188.6640625,
+      "sha256": "9d86fb1776475519bfe05537f67f6459fb7d4e0fa7941efff5b21e8e104f4b33",
+      "sourceSha256": "d49190ada0dfa9b36d330e7d471a89339c853f2c0efc4fcaa410c41f152be1a0"
+    },
+    "5,3": {
+      "file": "chunks/5_3.bin",
+      "bytes": 131072,
+      "minLocalZ": -200.25,
+      "maxLocalZ": -178.4765625,
+      "sha256": "6a63f249702a2e81aeb310c20888ff3c41d2e3b449537af9212ff9f6a616927d",
+      "sourceSha256": "38207936e54e5d6d350abea309f6430a936e9193faa3829c08e6a4c9e04daf90"
+    },
+    "6,3": {
+      "file": "chunks/6_3.bin",
+      "bytes": 131072,
+      "minLocalZ": -198.3984375,
+      "maxLocalZ": -130.78125,
+      "sha256": "b5b96f1665f7ea6b4db5b37f79ef3309ed7ed4473bed650a195085d95c578182",
+      "sourceSha256": "5c3efe84f0d6e2d4a2a1f6a1d929ac89d1b276be68c58576ca76fa7f1fad5d91"
+    },
+    "7,3": {
+      "file": "chunks/7_3.bin",
+      "bytes": 131072,
+      "minLocalZ": -185.2890625,
+      "maxLocalZ": -141.7421875,
+      "sha256": "aea7dbc66004d2c7eda852832d254552e16f2fe31f7e1ecca5bad6a9b9029295",
+      "sourceSha256": "d5320ff9a302789678b857df8432c2c2006cc5e4043a27464dc47ce71817d71a"
+    },
+    "8,3": {
+      "file": "chunks/8_3.bin",
+      "bytes": 131072,
+      "minLocalZ": -188.859375,
+      "maxLocalZ": -153.3671875,
+      "sha256": "3f8f6bcbf6a4cabaa12d3ddb1b159202763d3ce924b8020d2a6ecaf4120f1ca8",
+      "sourceSha256": "d322bd5ad9499140102588f66019fcc86dd8fc5a3fcbc89d2663ba68d24ffdf8"
+    },
+    "9,3": {
+      "file": "chunks/9_3.bin",
+      "bytes": 131072,
+      "minLocalZ": -188.9765625,
+      "maxLocalZ": -160.4140625,
+      "sha256": "ed97a4ef4fbb66a11542400eee0e3d9fc86d4261544765d5c82cf7bc95339478",
+      "sourceSha256": "9737ebf0442661abf9b0db7011fcfabcb3674d126af2bfb98084fc288bb2c030"
+    },
+    "10,3": {
+      "file": "chunks/10_3.bin",
+      "bytes": 131072,
+      "minLocalZ": -188.0546875,
+      "maxLocalZ": -158.953125,
+      "sha256": "263517619e1c542591a21c35d216783719bdec88faf4b9938736d9eea3449df6",
+      "sourceSha256": "0dafa53b4a7b8e65b992371f672a2bca38637866c0f2c2589f06767bf12032a4"
+    },
+    "11,3": {
+      "file": "chunks/11_3.bin",
+      "bytes": 131072,
+      "minLocalZ": -185.8203125,
+      "maxLocalZ": -154.8828125,
+      "sha256": "186f59c8793dd0a431eee5a104c1b01dc6795fca63e1f29a02fdf7c4f93a7188",
+      "sourceSha256": "75fa9bef38962026b12c0be3f127ae5856fb63e9d3c0c10731bca6b27660683e"
+    },
+    "12,3": {
+      "file": "chunks/12_3.bin",
+      "bytes": 131072,
+      "minLocalZ": -184.375,
+      "maxLocalZ": -168.6015625,
+      "sha256": "b3ccd51eac4bc99fad1b059b0fe4c09be069385f51b9b67797667c8453fb0af3",
+      "sourceSha256": "d63dce2503166cade712b1aa11f6b44217008790c1adad41716cb93f36235360"
+    },
+    "13,3": {
+      "file": "chunks/13_3.bin",
+      "bytes": 131072,
+      "minLocalZ": -181.4453125,
+      "maxLocalZ": -147.984375,
+      "sha256": "787ad2c6a65671ced9f1ea70c42a0f02bc7aef174ae816dd301aef0ea5e37e4d",
+      "sourceSha256": "9a79589fbce2c3f238678af1b0c000e72bc2dee3031c4150c86900c194a5398a"
+    },
+    "14,3": {
+      "file": "chunks/14_3.bin",
+      "bytes": 131072,
+      "minLocalZ": -178.96875,
+      "maxLocalZ": -130.8671875,
+      "sha256": "da95a9efb8e3f749bfc2d07ff2a0a42732a99090000bdbb1f782750749b4de6d",
+      "sourceSha256": "5ec9fb81025e1211c8c6329f20275090b7863aa8e77dabbba7d91e27c2b0ebac"
+    },
+    "15,3": {
+      "file": "chunks/15_3.bin",
+      "bytes": 131072,
+      "minLocalZ": -165.3046875,
+      "maxLocalZ": -112.1015625,
+      "sha256": "a3fb2d7ffd71d2e4758adb522b335ce2899480fe781ffe224f98d506eaa00f97",
+      "sourceSha256": "c9121feb8cb34bf46e1fdc6678b72c0ee74f66308e09cdfab19383631701c31f"
+    },
+    "0,4": {
+      "file": "chunks/0_4.bin",
+      "bytes": 131072,
+      "minLocalZ": -173.2421875,
+      "maxLocalZ": -97.6328125,
+      "sha256": "89b747e400606f956eaad3d3b92634250e6261b539c16a6b1ca41db6bfc608fc",
+      "sourceSha256": "33acb32268e418b603476271b7df5c50c0b3edfa0f4d279edec736ef420f0108"
+    },
+    "1,4": {
+      "file": "chunks/1_4.bin",
+      "bytes": 131072,
+      "minLocalZ": -201.6796875,
+      "maxLocalZ": -139.390625,
+      "sha256": "11fff684e25f5c93db722fdec5acdf8d419ca43ed30e97fab03e6bf8c20353c7",
+      "sourceSha256": "b3f4b4fa9855d0fa91ef8ca0734a073d5e31380de7f8ed35dffaf6966d964d78"
+    },
+    "2,4": {
+      "file": "chunks/2_4.bin",
+      "bytes": 131072,
+      "minLocalZ": -202.6875,
+      "maxLocalZ": -174.3359375,
+      "sha256": "c3a1f595b905fe080d5b6316be17afde1b501098de8a1147915d5507bdc6b4a7",
+      "sourceSha256": "64463feafa1b6d94261e907ed8a1c3211b819ae1ef77da502395745fcd8bb29b"
+    },
+    "3,4": {
+      "file": "chunks/3_4.bin",
+      "bytes": 131072,
+      "minLocalZ": -196.7421875,
+      "maxLocalZ": -179.28125,
+      "sha256": "e422c077488325cde6c681026a28e82d23d2f3a303e9c3ed738365d15646aaac",
+      "sourceSha256": "3534da3365e8ec76451af6acb2c6610f14a7495fd2feaf3f5b5772b198a45a33"
+    },
+    "4,4": {
+      "file": "chunks/4_4.bin",
+      "bytes": 131072,
+      "minLocalZ": -198.59375,
+      "maxLocalZ": -183.9765625,
+      "sha256": "1ba1f6f1ae3b5d6a920e7a84101ca31b66af0dddf76018e30310f6630bbe1c51",
+      "sourceSha256": "f5c827ec672b044d16cb4cd273417cc8919d4fa1fe3520a3a80852a99070e039"
+    },
+    "5,4": {
+      "file": "chunks/5_4.bin",
+      "bytes": 131072,
+      "minLocalZ": -200.5859375,
+      "maxLocalZ": -182.8125,
+      "sha256": "5b26e57f442a785d5822c16dc5bbfd3eaad7e1070f67237bddf90ad5c1cf1e0e",
+      "sourceSha256": "832e0b87bd0b186cac04798164dce839389ee8c9fa78a1ae92ed1d23b0c27ce6"
+    },
+    "6,4": {
+      "file": "chunks/6_4.bin",
+      "bytes": 131072,
+      "minLocalZ": -197.9921875,
+      "maxLocalZ": -179.0703125,
+      "sha256": "a04824f88d2e9e22cd60664c37994455fc7c5fd90ee709e91179a452718ddf83",
+      "sourceSha256": "56b88c114936586cb41c443ca820378d4107499ff656be99a45199b917f04860"
+    },
+    "7,4": {
+      "file": "chunks/7_4.bin",
+      "bytes": 131072,
+      "minLocalZ": -195.890625,
+      "maxLocalZ": -175.71875,
+      "sha256": "e13dd933ac89ca32dd5a4e11d20251e28b18323caa1e09636de03c3aed5d9cef",
+      "sourceSha256": "5b456bbc173ea0ffa4b59a9a16b100b6e5924565fccf0d4376b13382be2b81c0"
+    },
+    "8,4": {
+      "file": "chunks/8_4.bin",
+      "bytes": 131072,
+      "minLocalZ": -193.2890625,
+      "maxLocalZ": -182.4609375,
+      "sha256": "3c915088f21aef247f0f13fdfcb81270aae566a9ca3dc822292cc1f2faecac63",
+      "sourceSha256": "3456d764aca1fb78f79527e81266df7102b097014f5afa0b54d2034a5bb0d161"
+    },
+    "9,4": {
+      "file": "chunks/9_4.bin",
+      "bytes": 131072,
+      "minLocalZ": -190.65625,
+      "maxLocalZ": -183.6640625,
+      "sha256": "3434ebb9f0b62b6c42f23b4d36d762205a20f0e28a96f9df1225f5570644cb76",
+      "sourceSha256": "a67de0d704db99e9cbe2ba85ff6b7c79847705e83bbd3027382c69013c65263d"
+    },
+    "10,4": {
+      "file": "chunks/10_4.bin",
+      "bytes": 131072,
+      "minLocalZ": -188.5859375,
+      "maxLocalZ": -178.0703125,
+      "sha256": "c9079a382a43f535960260d08b17f8e61c87a5e604e79e54e85856570f8ddc56",
+      "sourceSha256": "5628ee17056ad8dfca2a887e8557dc3e64511bf5213d3cfc39d06ad2b0a17ac8"
+    },
+    "11,4": {
+      "file": "chunks/11_4.bin",
+      "bytes": 131072,
+      "minLocalZ": -186.5078125,
+      "maxLocalZ": -160.8125,
+      "sha256": "183f36d94ba755a88c2e2ac98979b83375e9707afdc896fa5f970f66696b54e7",
+      "sourceSha256": "d30a45adcaa75428fa0dfc7a1a943ae41cf681c47d2eb4071d38e38006c7c4a1"
+    },
+    "12,4": {
+      "file": "chunks/12_4.bin",
+      "bytes": 131072,
+      "minLocalZ": -181.8359375,
+      "maxLocalZ": -153.2890625,
+      "sha256": "64d081cada2508edc28e9de01c423805b08f7e61ee7e12269735d4a9630ef22a",
+      "sourceSha256": "78edbb2e5d0805a2f3c26113a4356e08f78d877fa9777142aa512da1a3cb6913"
+    },
+    "13,4": {
+      "file": "chunks/13_4.bin",
+      "bytes": 131072,
+      "minLocalZ": -181.3359375,
+      "maxLocalZ": -148.0546875,
+      "sha256": "b73687ba62ec6e20e6158ea6e7c931ad115c59a587be88adf899b02c076aa401",
+      "sourceSha256": "556dc9e6b487b4b8323de7d2af177e3fc986106835eaa1380097cb10d60b7cf2"
+    },
+    "14,4": {
+      "file": "chunks/14_4.bin",
+      "bytes": 131072,
+      "minLocalZ": -160.5625,
+      "maxLocalZ": -104.03125,
+      "sha256": "f19c4d25959f5023670846146088174fa137a75fb4615948b6589394b5ae6235",
+      "sourceSha256": "93479aedb32e3782bc87fd3f1cf226493caec3b80a94e81a815022cb68d2594c"
+    },
+    "15,4": {
+      "file": "chunks/15_4.bin",
+      "bytes": 131072,
+      "minLocalZ": -158.8515625,
+      "maxLocalZ": -120.4296875,
+      "sha256": "95e331626e14846674a99acca05517e55cfab73de4f0e047085151be65a17b94",
+      "sourceSha256": "f27be59027e4cfa47ebac72326d2f52de3e3a021a68065ffc8a68005b100c87c"
+    },
+    "0,5": {
+      "file": "chunks/0_5.bin",
+      "bytes": 131072,
+      "minLocalZ": -161.1484375,
+      "maxLocalZ": -107.765625,
+      "sha256": "b802b7a7b2262517f187650a0efa00127b3a041612be4d7d606d02a31e1f63bb",
+      "sourceSha256": "33dc027a5dfa54dd8ef706b965a5db11fe079272532cae6d3ed4f5c1812300a8"
+    },
+    "1,5": {
+      "file": "chunks/1_5.bin",
+      "bytes": 131072,
+      "minLocalZ": -188.625,
+      "maxLocalZ": -99.890625,
+      "sha256": "6a3de9e786e74f479da7729870ee26a5965aa9f82617026f17ce5c3c91ae4b16",
+      "sourceSha256": "3f9e479d63c55b44e4008c064d200609de3367127972eff13ce02aef73fa3f70"
+    },
+    "2,5": {
+      "file": "chunks/2_5.bin",
+      "bytes": 131072,
+      "minLocalZ": -198.6796875,
+      "maxLocalZ": -126.5625,
+      "sha256": "99cd09208efd5ac2d1c2a82bd3f3678431500b4a06e6814fc30438eb3b7e3379",
+      "sourceSha256": "a68492d6b2c3902dff6451e7b12bdf4a52e86501ed0b98b9ef8e90272311c694"
+    },
+    "3,5": {
+      "file": "chunks/3_5.bin",
+      "bytes": 131072,
+      "minLocalZ": -199.40625,
+      "maxLocalZ": -178.4140625,
+      "sha256": "b47bf9ff722a238844c1d0c842191f60e89acfff3a52797b7b0e075183f93ce4",
+      "sourceSha256": "593a2c96d69197ce23cb8e6bf1b055e9acc47e77e30fd15d78c463032287d6ce"
+    },
+    "4,5": {
+      "file": "chunks/4_5.bin",
+      "bytes": 131072,
+      "minLocalZ": -199.6953125,
+      "maxLocalZ": -185.0390625,
+      "sha256": "25a20a1f63b6ae7aa182698476804e93455ae272aff744485f8c4bdfcf88afae",
+      "sourceSha256": "dc495c161165b8424499158a7e7ff75a7c84594cfc2c66ea930df5ed33842590"
+    },
+    "5,5": {
+      "file": "chunks/5_5.bin",
+      "bytes": 131072,
+      "minLocalZ": -201.0234375,
+      "maxLocalZ": -185.7890625,
+      "sha256": "4f9862b00c3c27fc8a5647bf66541f20ded910fa30a579a539d5268b68efd2f0",
+      "sourceSha256": "cc032a4f46bfa416ce212ec30a31a731c397a32c8a753732e3cac77483446219"
+    },
+    "6,5": {
+      "file": "chunks/6_5.bin",
+      "bytes": 131072,
+      "minLocalZ": -200.3046875,
+      "maxLocalZ": -186.3671875,
+      "sha256": "a27a4b40a4d9d79f07590d16c639b4747b2a87cd4a3950030032ee2b38b14020",
+      "sourceSha256": "7587cb4e9992aea3014d3ae19f96b074911d5538e1712756aa7db6fefe94ed6d"
+    },
+    "7,5": {
+      "file": "chunks/7_5.bin",
+      "bytes": 131072,
+      "minLocalZ": -196.15625,
+      "maxLocalZ": -188.75,
+      "sha256": "f59a5b0edda8de545131ea1e62c0f30ad6599b699a7ab1bed2d233bba122096a",
+      "sourceSha256": "cfbcd162e1a9b728d25035f54b0f09cb59754d5523a0f7dbe84b0d4ba337998f"
+    },
+    "8,5": {
+      "file": "chunks/8_5.bin",
+      "bytes": 131072,
+      "minLocalZ": -193.9765625,
+      "maxLocalZ": -169.265625,
+      "sha256": "c0507e64130456078510fc8af1c91c7a1ad22dd67086804bb745ba85677757dd",
+      "sourceSha256": "d578fd7c867b708607665db022545910f2a1d4230ebb91b5c3934a8977e3a0ae"
+    },
+    "9,5": {
+      "file": "chunks/9_5.bin",
+      "bytes": 131072,
+      "minLocalZ": -188.921875,
+      "maxLocalZ": -170.953125,
+      "sha256": "bd1ee40426744a0cf08577d7116298bf5004d57d006af07f0187b35ecf04ded5",
+      "sourceSha256": "65c25a0c6f20a963ec005e7f42d2f4b72428dc6ab2ce9c150b711961db8ebe30"
+    },
+    "10,5": {
+      "file": "chunks/10_5.bin",
+      "bytes": 131072,
+      "minLocalZ": -187.3203125,
+      "maxLocalZ": -164.8125,
+      "sha256": "71863acbe3dc2738ab72c82e522a60cb38023e1f3de197bb9aa98e95cc0bf400",
+      "sourceSha256": "b79bc48f3a4b978fdeda809b4d543703d4c9a34a3cb05f622264f147c0d5f342"
+    },
+    "11,5": {
+      "file": "chunks/11_5.bin",
+      "bytes": 131072,
+      "minLocalZ": -179.03125,
+      "maxLocalZ": -149.84375,
+      "sha256": "89e8f60c1a2c53b7bce233c2fc9476328e7334d32a60100e431efcdfe7a85e1b",
+      "sourceSha256": "524e5593d43889e687ddf81b81efbe96e61b0b9f20d10b40d6636791a14287cd"
+    },
+    "12,5": {
+      "file": "chunks/12_5.bin",
+      "bytes": 131072,
+      "minLocalZ": -164.53125,
+      "maxLocalZ": -130.65625,
+      "sha256": "2b4b6d553740bb2df81ad5b3f6b6cf067849dbee23afed5518d65d979109405e",
+      "sourceSha256": "0e4766349b11f1e7281f4e9f9db9f7c8dea3d31668a64e01f442d6a6347202cd"
+    },
+    "13,5": {
+      "file": "chunks/13_5.bin",
+      "bytes": 131072,
+      "minLocalZ": -174.5,
+      "maxLocalZ": -115.234375,
+      "sha256": "20ebcafad7e0c5fc26cb5e379dec13349a528351f2d0978c0dbadb4b9500bcf1",
+      "sourceSha256": "5d144462985f759eee5ccadaf5e738b1d5e5e90a82a200851c86ab2fd8a905e4"
+    },
+    "14,5": {
+      "file": "chunks/14_5.bin",
+      "bytes": 131072,
+      "minLocalZ": -159.5546875,
+      "maxLocalZ": -106.265625,
+      "sha256": "81ede963b7a99fd28138cc9817fe7026e4cd7d2887a2800a72c0751b593a9d2b",
+      "sourceSha256": "96980e5b9ea469af83d0a6f9a943615b7823c208c1eba2f87eca2f85ac3706c3"
+    },
+    "15,5": {
+      "file": "chunks/15_5.bin",
+      "bytes": 131072,
+      "minLocalZ": -154.8125,
+      "maxLocalZ": -110.640625,
+      "sha256": "adb5490e71058b599c699338ca9139a596ba4608d82e5c6ba068e61de0a539c1",
+      "sourceSha256": "5b08fe63df86d56f83a8f031a75948406e30d68f5f507e878ffb209aa966b0e8"
+    },
+    "0,6": {
+      "file": "chunks/0_6.bin",
+      "bytes": 131072,
+      "minLocalZ": -157.34375,
+      "maxLocalZ": -112.734375,
+      "sha256": "452c53a2fb50979db573c078e1190660a3430ab5738891f1b2aa0d7f9da5000a",
+      "sourceSha256": "1d758543fb1a032758f7ad9993d339b866ff76d531d0e486d0820b6ca61225e0"
+    },
+    "1,6": {
+      "file": "chunks/1_6.bin",
+      "bytes": 131072,
+      "minLocalZ": -164.6796875,
+      "maxLocalZ": -96.28125,
+      "sha256": "d3ac794d818408cfb488ebfcfbd738d8ed5d0daa103b00de0979da9a6a26dc3f",
+      "sourceSha256": "1ed3bd73ecbbf761744e8b273482d7b2a34b6264cba766bdd93a88a25dab64da"
+    },
+    "2,6": {
+      "file": "chunks/2_6.bin",
+      "bytes": 131072,
+      "minLocalZ": -178.4140625,
+      "maxLocalZ": -114.25,
+      "sha256": "c2048b16ea9f8018d40ce5eaea45a5eb499742b194cc3c7849d8a9416a870478",
+      "sourceSha256": "e4389fea103744ba195d8c993464c4e1136356e02ea16e34bb957494d817fea8"
+    },
+    "3,6": {
+      "file": "chunks/3_6.bin",
+      "bytes": 131072,
+      "minLocalZ": -194.3515625,
+      "maxLocalZ": -153.4609375,
+      "sha256": "8173e4e5422afce1468d049825e309e1dcc1bb4f84eac0d764196c1b0c1fd3ca",
+      "sourceSha256": "a560709d3febdbfb0fa4709a41f8dd14be5e652cf4a7e83aa037530920323c97"
+    },
+    "4,6": {
+      "file": "chunks/4_6.bin",
+      "bytes": 131072,
+      "minLocalZ": -201.8125,
+      "maxLocalZ": -177.3203125,
+      "sha256": "cb8462023b7474b949cac695e7c4c0e0ff88fd2ab9ab8ca3aefeaa61cccf305a",
+      "sourceSha256": "f83f6cca8e65abcb0365cab5e26770d38feaa52346119aa163b04c43029f00be"
+    },
+    "5,6": {
+      "file": "chunks/5_6.bin",
+      "bytes": 131072,
+      "minLocalZ": -201.8671875,
+      "maxLocalZ": -186.296875,
+      "sha256": "cc4b0d73396b4e94a6fbc26a81750127432813876ddede796e80b09886fbc1cf",
+      "sourceSha256": "59424e9d32572d51591115eea3196969b53be3c1625ec4fc9b3413ae514cd351"
+    },
+    "6,6": {
+      "file": "chunks/6_6.bin",
+      "bytes": 131072,
+      "minLocalZ": -198.2109375,
+      "maxLocalZ": -186.484375,
+      "sha256": "97ae986baf6769c951e60d9f7c8ae06976fc80ef913f797993395c60b32d8f10",
+      "sourceSha256": "60c691040446aa3d011a58c2a0be7225c07e2a439defd592109526108679988f"
+    },
+    "7,6": {
+      "file": "chunks/7_6.bin",
+      "bytes": 131072,
+      "minLocalZ": -195.78125,
+      "maxLocalZ": -189.5546875,
+      "sha256": "6eb4913ba70a6f781b342f809d554cf6e1b07e373f708de9d45ecd30723217b3",
+      "sourceSha256": "40e5f74520fcaf4dbf98a7581c8e54c5a72b28f9fef469714971ccee7f3c0d17"
+    },
+    "8,6": {
+      "file": "chunks/8_6.bin",
+      "bytes": 131072,
+      "minLocalZ": -193.71875,
+      "maxLocalZ": -166.4765625,
+      "sha256": "ddfa7dd5f45484434bfe7736b77f398d236c3881f4c1cd4cd1b9bb9f19cd6b16",
+      "sourceSha256": "a92fb9569410b491e1510b22ef181150d0b113da5f7b36ad72f873ff4a26a20e"
+    },
+    "9,6": {
+      "file": "chunks/9_6.bin",
+      "bytes": 131072,
+      "minLocalZ": -189.5,
+      "maxLocalZ": -171.765625,
+      "sha256": "08c10e63806e875ff1c0cd577a6ee9c8dd62c245aea6bd662cd8ecd2257800e0",
+      "sourceSha256": "93e9419c617aac0fda0c3375fc803545066650b712099926cd77ecec52e63265"
+    },
+    "10,6": {
+      "file": "chunks/10_6.bin",
+      "bytes": 131072,
+      "minLocalZ": -187.1015625,
+      "maxLocalZ": -159.21875,
+      "sha256": "6702ac5b6902f30928d1a9c982151ba6201f1b3cabb3f2a56f07363dddd96a25",
+      "sourceSha256": "3691049bc8368e5e791db191f6d5566aa826893d15f8510c166529bef7ba9352"
+    },
+    "11,6": {
+      "file": "chunks/11_6.bin",
+      "bytes": 131072,
+      "minLocalZ": -174.65625,
+      "maxLocalZ": -150.328125,
+      "sha256": "d99457bec48375d4d9ad2a8e7d9eb5b04725c30ba9caa1a64811912f43d344f5",
+      "sourceSha256": "e3d112885cc54d9c18353921f53a447901f9b5ce52d303b17799c816ca56bad1"
+    },
+    "12,6": {
+      "file": "chunks/12_6.bin",
+      "bytes": 131072,
+      "minLocalZ": -171.234375,
+      "maxLocalZ": -121.09375,
+      "sha256": "21efa5fc6d0704533a7096b020eb3b718f8c2bf875effb790e37889c1074b73c",
+      "sourceSha256": "cba16787fc0c299b1e0c6625b3634340030ca71d0921ab9d55214ccba19c4c35"
+    },
+    "13,6": {
+      "file": "chunks/13_6.bin",
+      "bytes": 131072,
+      "minLocalZ": -157.875,
+      "maxLocalZ": -111.9140625,
+      "sha256": "be4101c8912a3935623fd1ba6faa0642b6f1ca55edf3f47bc69b37dadfa9b3b0",
+      "sourceSha256": "53f91a1b9a1b537da6057c7558373b3c8e33f73d6e00428637c18daeda99d593"
+    },
+    "14,6": {
+      "file": "chunks/14_6.bin",
+      "bytes": 131072,
+      "minLocalZ": -140.8203125,
+      "maxLocalZ": -101.453125,
+      "sha256": "bc3e921ad27806e6aa78211b1fcb3d0be47d407003019af4f373cc4610d487ab",
+      "sourceSha256": "5c86a90eb46f450fdc8ca9fc8b854c37471ee6a654fd4050c0e1dc6492b4d882"
+    },
+    "15,6": {
+      "file": "chunks/15_6.bin",
+      "bytes": 131072,
+      "minLocalZ": -165.2109375,
+      "maxLocalZ": -124.7890625,
+      "sha256": "8a32cc86fddc2d6cf8e60c145a6b5570f03bc90fb1b1914b3acd21c5823c1ca3",
+      "sourceSha256": "41e8201c00f59c095a550c3d7f732c3128cf52bd8a842200f4f0cf027e582cbb"
+    },
+    "0,7": {
+      "file": "chunks/0_7.bin",
+      "bytes": 131072,
+      "minLocalZ": -158.6640625,
+      "maxLocalZ": -109.3046875,
+      "sha256": "6eed174cba6f65e4147c08ab830a3e890d20b4b910add6c517a351f1099ebee3",
+      "sourceSha256": "b9f15921a541dbb0240a17c799c3ef79351672fd2e6d2e8b06e4af731ad360e3"
+    },
+    "1,7": {
+      "file": "chunks/1_7.bin",
+      "bytes": 131072,
+      "minLocalZ": -166.21875,
+      "maxLocalZ": -107.5625,
+      "sha256": "3ea34d8ba2726df2a53ece93020a235f22565e5f6e1609dcc5533d2f1b80ded8",
+      "sourceSha256": "ca764c4d6967fd9d0fa421f3d5063c0c6e7f98526a043021a0fd51858bfe0412"
+    },
+    "2,7": {
+      "file": "chunks/2_7.bin",
+      "bytes": 131072,
+      "minLocalZ": -166.546875,
+      "maxLocalZ": -139.6875,
+      "sha256": "d679b6a21de2f91789d0fa89ed9cf13bf211fc56f1804477286fe95d175e8bee",
+      "sourceSha256": "597b25606636aecbdb3937de59cba82650c9a04af3662a4c4716d4e42133d5f8"
+    },
+    "3,7": {
+      "file": "chunks/3_7.bin",
+      "bytes": 131072,
+      "minLocalZ": -180.2109375,
+      "maxLocalZ": -150.1328125,
+      "sha256": "54af66ee1b9001040a1581c2eabb55dffe357eac67053efc1f881a96debf951c",
+      "sourceSha256": "4b1900beea7bc8c46d7a8048b02a68e9f3621921aaea3bd70f4e4cf87ace9e3f"
+    },
+    "4,7": {
+      "file": "chunks/4_7.bin",
+      "bytes": 131072,
+      "minLocalZ": -201.7734375,
+      "maxLocalZ": -169.703125,
+      "sha256": "cdaaa8b7a9a3ccd5047722b8003ee19c09f6b77a41916b24c7284fb44713d041",
+      "sourceSha256": "39dd253ce72558cf7d0f16e69b7a7d560f9dafb298b058e92a011e242b5bbbfb"
+    },
+    "5,7": {
+      "file": "chunks/5_7.bin",
+      "bytes": 131072,
+      "minLocalZ": -201.890625,
+      "maxLocalZ": -187.015625,
+      "sha256": "f12797f848f575eeac69625cca35ee836cbe8ad9d461402671b6c4a25fa85783",
+      "sourceSha256": "3a8679b6b05c41f05d313a70ce15bf33393e4f5ecd607c1d80d0c5d6bc7d105f"
+    },
+    "6,7": {
+      "file": "chunks/6_7.bin",
+      "bytes": 131072,
+      "minLocalZ": -198.3515625,
+      "maxLocalZ": -175.578125,
+      "sha256": "d19a9e8e735ed7bd4ab58ef14b8ffe9435f7cfd25c6e581a8f4012edab80f338",
+      "sourceSha256": "6a78e3ae3f8e2f32cdae90e6ceb0066dbda9b3d403d1521c8050fd51fb0399b2"
+    },
+    "7,7": {
+      "file": "chunks/7_7.bin",
+      "bytes": 131072,
+      "minLocalZ": -193.921875,
+      "maxLocalZ": -175.5390625,
+      "sha256": "a562a7d75e224694afb0e60bedba44ff1dd078ec05c41772537bfa60cfe8c554",
+      "sourceSha256": "5bdd088b4a821e0fe03ac333335819ec3aac8857205bc51d9dc1024858683c39"
+    },
+    "8,7": {
+      "file": "chunks/8_7.bin",
+      "bytes": 131072,
+      "minLocalZ": -193.3671875,
+      "maxLocalZ": -180.9375,
+      "sha256": "3e74e29dcbd464a01ffdd07d5dd189d3e81d68a1d812179b1512da1a2f2e43d5",
+      "sourceSha256": "70597786f53ae7a6e2caa0531a29959f168dd23f4e7c0ee0de711d994012bb35"
+    },
+    "9,7": {
+      "file": "chunks/9_7.bin",
+      "bytes": 131072,
+      "minLocalZ": -190.7734375,
+      "maxLocalZ": -171.2734375,
+      "sha256": "328c0296c711c6aefc10f0c138c1826a330975b9d36403f30fda5745dda7ed18",
+      "sourceSha256": "62e072313d673206d943f431e775fb47438780bec9c861b59714054756db2a42"
+    },
+    "10,7": {
+      "file": "chunks/10_7.bin",
+      "bytes": 131072,
+      "minLocalZ": -186.0078125,
+      "maxLocalZ": -163.9921875,
+      "sha256": "3cfff9b0ab704910e3c0fa8550a64758b37c2ac013e9ce7245dfea85d0177a11",
+      "sourceSha256": "3cb9f9a41fa4a9b6618c9f2bd99c3b9f50570be347ce185f09e8df412d024218"
+    },
+    "11,7": {
+      "file": "chunks/11_7.bin",
+      "bytes": 131072,
+      "minLocalZ": -181.859375,
+      "maxLocalZ": -163.7578125,
+      "sha256": "82fa6d5885b9d36e8602ddb9fee5b8823fc6786f002785128a277f4060ac676d",
+      "sourceSha256": "3e7af30492a432bc1c4eb8ac05c42086e2c3330d0aa26d4d5f3e00ee3b5662fb"
+    },
+    "12,7": {
+      "file": "chunks/12_7.bin",
+      "bytes": 131072,
+      "minLocalZ": -177.6953125,
+      "maxLocalZ": -156.234375,
+      "sha256": "7159c04b64327cf3022445717394a9f7fa1ec3c3c68f5fc3509543e466fee580",
+      "sourceSha256": "21f9f7afea685a8ce4ff24d75188d1b147cf34908fe924f43bbc436f48b82dbb"
+    },
+    "13,7": {
+      "file": "chunks/13_7.bin",
+      "bytes": 131072,
+      "minLocalZ": -176.0390625,
+      "maxLocalZ": -115.46875,
+      "sha256": "fd7c50a265f9d5de2961338eeeb4d0411b64bf7625c66907c2f68495d8b525c4",
+      "sourceSha256": "973b5ff762f1e74a3cfdad6177ab9b5f16fe01055cfc083e81eed0059282b743"
+    },
+    "14,7": {
+      "file": "chunks/14_7.bin",
+      "bytes": 131072,
+      "minLocalZ": -157.6171875,
+      "maxLocalZ": -98.7890625,
+      "sha256": "d39204309ade9b9fd57dbe533b72b8ad131edf94f6670c96b26f77b2100c415a",
+      "sourceSha256": "81b0f752b256a5f600248aa4da378ceb730cf5e26ffbfbee3db4418b7721e582"
+    },
+    "15,7": {
+      "file": "chunks/15_7.bin",
+      "bytes": 131072,
+      "minLocalZ": -166.34375,
+      "maxLocalZ": -116.8046875,
+      "sha256": "17d46474032f1dd88932f9217d4a559b7fbccff6f05911a782c38feb7c823d9b",
+      "sourceSha256": "671c6362e729bb9e2281613419d7ea6a77448dccfc5a4f029704dad57262f86f"
+    },
+    "0,8": {
+      "file": "chunks/0_8.bin",
+      "bytes": 131072,
+      "minLocalZ": -150.625,
+      "maxLocalZ": -113.6328125,
+      "sha256": "9e7eba3e59257d01ee67af11825c6a04a42ce5eb87b3eb70660eea513de01605",
+      "sourceSha256": "560427314a23c5278885a12197275495d76571b989e2eda60d5c1493e7add222"
+    },
+    "1,8": {
+      "file": "chunks/1_8.bin",
+      "bytes": 131072,
+      "minLocalZ": -147.609375,
+      "maxLocalZ": -97.8671875,
+      "sha256": "5c933cdce563364ef3fe6381a91996f07db88f749d5ff7662fb0d3a8465a1fae",
+      "sourceSha256": "0fae500c333723c64349d1ac9ac93fbbb495be19a3802aa539195d1c0946833f"
+    },
+    "2,8": {
+      "file": "chunks/2_8.bin",
+      "bytes": 131072,
+      "minLocalZ": -165.9453125,
+      "maxLocalZ": -100.5546875,
+      "sha256": "e7f2fc5e26e1890ed3a8b4cac66ecb5841ed220e0fa0691b9fb04f8990c85ab5",
+      "sourceSha256": "b3b6d15efe2331a9507af8258006eee3fc90f74cef26db141184580ab448751b"
+    },
+    "3,8": {
+      "file": "chunks/3_8.bin",
+      "bytes": 131072,
+      "minLocalZ": -180.8671875,
+      "maxLocalZ": -150.8203125,
+      "sha256": "58f538a6d29661a4ab5911d7b1fd7835b6dd15a2d45d3e3b4cb360d09c732353",
+      "sourceSha256": "7f6e5bcec5689f7c78656a510b24587516f35a7becefccbbc4f12a20a6e0f34e"
+    },
+    "4,8": {
+      "file": "chunks/4_8.bin",
+      "bytes": 131072,
+      "minLocalZ": -201.2578125,
+      "maxLocalZ": -172.0234375,
+      "sha256": "1958d682f59d0947e7907e94cd28d691dcf3e6daf3e124c329c3b2ba28be7ce2",
+      "sourceSha256": "e2e01cd1e15f54c8084e50428141d29f8c6d2a394bfd8f27980c42118a064cc0"
+    },
+    "5,8": {
+      "file": "chunks/5_8.bin",
+      "bytes": 131072,
+      "minLocalZ": -202.234375,
+      "maxLocalZ": -187.9140625,
+      "sha256": "e620362ce412d437473dae89d14545b48fdbd18b10072efcc69aa7caf54fd101",
+      "sourceSha256": "133ebc4f84948a85b4dd9ce92fbb54522c78fa9c3b182be911aa7838c5d2c7d9"
+    },
+    "6,8": {
+      "file": "chunks/6_8.bin",
+      "bytes": 131072,
+      "minLocalZ": -201.1875,
+      "maxLocalZ": -178.6796875,
+      "sha256": "b4cfe76eb5c3eb7c26b4e8f166abe8036b96021f0bdb0cd2857ea8b21ce7fcf5",
+      "sourceSha256": "49fd309d96854fe8b61996af9b1ee848a55c5ed429350173fc5872918fcd4cf1"
+    },
+    "7,8": {
+      "file": "chunks/7_8.bin",
+      "bytes": 131072,
+      "minLocalZ": -196.1328125,
+      "maxLocalZ": -174.5390625,
+      "sha256": "2fb11f19b32544a3753ff20df5f07ef8f4688d9341213eff514e05d29bba244a",
+      "sourceSha256": "8508c7b7f2b10e7bd1f8797ab9988b81c321c669962179ffe7c25aefb8321927"
+    },
+    "8,8": {
+      "file": "chunks/8_8.bin",
+      "bytes": 131072,
+      "minLocalZ": -192.203125,
+      "maxLocalZ": -160.640625,
+      "sha256": "e900d85c697f169604cc9434ce6cfd6863418b1f5ab5b844fd4602fec0b8a1ac",
+      "sourceSha256": "62ac1197ac7dfb0484eacd6b5cbc56d9e3cd855d55fefcf9de4b3dca32d8b34a"
+    },
+    "9,8": {
+      "file": "chunks/9_8.bin",
+      "bytes": 131072,
+      "minLocalZ": -190.4921875,
+      "maxLocalZ": -166.765625,
+      "sha256": "eba9d40aa49b6f96b3f994b60a308f4ab1e32f1b431518c8aac54eab32af64c9",
+      "sourceSha256": "33eabb4ead5d1aecd2808e3bf4feff30d44aa28f32dcb6a053cd851f5d2a363a"
+    },
+    "10,8": {
+      "file": "chunks/10_8.bin",
+      "bytes": 131072,
+      "minLocalZ": -188.2578125,
+      "maxLocalZ": -175.90625,
+      "sha256": "00f8c7227e0d1925fb0508a067dcd979e3b98aa5ef50650d80b2cd75ab8ce1f1",
+      "sourceSha256": "b9d74ab86e0c3e8b69b0596ba1a616413629f5070a82d963f5c32df1d6959604"
+    },
+    "11,8": {
+      "file": "chunks/11_8.bin",
+      "bytes": 131072,
+      "minLocalZ": -184.3984375,
+      "maxLocalZ": -158.6484375,
+      "sha256": "3f1f25a9f71da81a5804c8ae1a2ea3d0c7752bc7c878c1226e2f39899b3a794a",
+      "sourceSha256": "a554911233d766c68cf54683bafc90d8c4899363a3bdf40cd543a8bc0814b865"
+    },
+    "12,8": {
+      "file": "chunks/12_8.bin",
+      "bytes": 131072,
+      "minLocalZ": -173.4140625,
+      "maxLocalZ": -141.8046875,
+      "sha256": "ae3ec3c73cdf383fb3d1e66c72b85a6f7aa435cc215795b0e692dd8b1e428210",
+      "sourceSha256": "7a33a7c036779510c2f4f02208379137f376aca8078e6df741bd29bdfe9d4f58"
+    },
+    "13,8": {
+      "file": "chunks/13_8.bin",
+      "bytes": 131072,
+      "minLocalZ": -168.90625,
+      "maxLocalZ": -118.6796875,
+      "sha256": "6711a35c25dbc0394ae6dca6ea46d5c007703a5bb791f6a39301cde12c35056f",
+      "sourceSha256": "45304f3c3df5c6003218b0f7c74969e7e2d71a5c2830a094b16914e9e05a475b"
+    },
+    "14,8": {
+      "file": "chunks/14_8.bin",
+      "bytes": 131072,
+      "minLocalZ": -157.046875,
+      "maxLocalZ": -106.9609375,
+      "sha256": "36d8b6fa42aa03b81374b74b3cf9a19b3cf312d661d297021ee5bfc732ec130e",
+      "sourceSha256": "4d60e2c33b98743a185c5298c502e2f5a1f0fbfc2c136f60aea795eb8d124c6a"
+    },
+    "15,8": {
+      "file": "chunks/15_8.bin",
+      "bytes": 131072,
+      "minLocalZ": -144.140625,
+      "maxLocalZ": -101.046875,
+      "sha256": "5a6150446e7e94fe6f038017443c1ed40739b546a80784433072cc2b72720d2b",
+      "sourceSha256": "f931e5bb864369c4d76bf81f531b67430e22b728fc9f744de90356bde363dd91"
+    },
+    "0,9": {
+      "file": "chunks/0_9.bin",
+      "bytes": 131072,
+      "minLocalZ": -173.4609375,
+      "maxLocalZ": -136.6875,
+      "sha256": "60169cb6a50f95877afb7151c3bd698ae5d0cd7130a069b4437b75782dbbfc52",
+      "sourceSha256": "843399889e9ce6ad846e06ba48f1cd673083b9380dbed396c14a8aae7b205de8"
+    },
+    "1,9": {
+      "file": "chunks/1_9.bin",
+      "bytes": 131072,
+      "minLocalZ": -173.9296875,
+      "maxLocalZ": -94.6796875,
+      "sha256": "f3b6fb3359341104785f1861211db0eec9d3da727cc980375c48a4eb12abd4ad",
+      "sourceSha256": "7979520ec26e706c30387e48a323c54195c5abc4462145812ce2a0c6a1b3f0c1"
+    },
+    "2,9": {
+      "file": "chunks/2_9.bin",
+      "bytes": 131072,
+      "minLocalZ": -166.03125,
+      "maxLocalZ": -94.5625,
+      "sha256": "917a39bda8b89deecd5ad9c95ea3e83ad7a89f60246f333549b621ab832e8385",
+      "sourceSha256": "e15e5f858026f6a6b13b1771855744039c5e0f574cd2f2d9b0bf8d0ef7db3080"
+    },
+    "3,9": {
+      "file": "chunks/3_9.bin",
+      "bytes": 131072,
+      "minLocalZ": -173.3671875,
+      "maxLocalZ": -129.84375,
+      "sha256": "33e5f30ef8ec3959084c6d7003a6cedf734ece86a306ce5545e049a2259986fd",
+      "sourceSha256": "0c881eb2c163ff7ebdb688ec69c7f17f19047567d4700d44fd6113e7854be37e"
+    },
+    "4,9": {
+      "file": "chunks/4_9.bin",
+      "bytes": 131072,
+      "minLocalZ": -188.1015625,
+      "maxLocalZ": -151.890625,
+      "sha256": "83d3ee4f94ac391a764e113973b70cfe3d46cad32a996270396e2d24b11ac7f2",
+      "sourceSha256": "e7e41d2fea5da31dffa7fe2dfbeb14a82a42b5087622d7030d803e92bd44ff11"
+    },
+    "5,9": {
+      "file": "chunks/5_9.bin",
+      "bytes": 131072,
+      "minLocalZ": -202.4140625,
+      "maxLocalZ": -158.3984375,
+      "sha256": "62e9b50565833bdc19f292c8570f25d3c2ab474825ab2078b9f957f9d61de6ba",
+      "sourceSha256": "940a4ce73cfb1c00ecc1c8be1b46178a1f18ee089bddd842acbabfe6c4d6e11d"
+    },
+    "6,9": {
+      "file": "chunks/6_9.bin",
+      "bytes": 131072,
+      "minLocalZ": -202.765625,
+      "maxLocalZ": -180.6484375,
+      "sha256": "36aff474530d6fb8500fb690caed2e7cc2fff4e31d9da8ae2f7cd82d17929d09",
+      "sourceSha256": "89e747cd02f065e915f504f7dd2f725395c8e7a3bbb3e3f670b8d4a1cd6fc6e5"
+    },
+    "7,9": {
+      "file": "chunks/7_9.bin",
+      "bytes": 131072,
+      "minLocalZ": -200.4609375,
+      "maxLocalZ": -174.7109375,
+      "sha256": "1c3277374e5caf69005b9e66b01fb8124a13339b65566ca26f0f6abf66354b2e",
+      "sourceSha256": "d86e8d3ae1755522d146b6c1377c8d2b0b5f7d186fcbb8d8c6e56dc9aa5f9ea2"
+    },
+    "8,9": {
+      "file": "chunks/8_9.bin",
+      "bytes": 131072,
+      "minLocalZ": -191.4453125,
+      "maxLocalZ": -147.71875,
+      "sha256": "6eb09eadcbfbe7e330b79143d6b66d9849976bb17ebeffe8fc3b1e225bde1fc6",
+      "sourceSha256": "aa1ab792b887d2d3a1ff8fbfb4d7e4160cfd98d4d15ea7e712508233971b30ee"
+    },
+    "9,9": {
+      "file": "chunks/9_9.bin",
+      "bytes": 131072,
+      "minLocalZ": -188.765625,
+      "maxLocalZ": -148.6953125,
+      "sha256": "437f5d2780ae844d454fba775dc33a4d0d21e8630affee69496f49a5904d1eae",
+      "sourceSha256": "8037d0077afe6cebfbb49af801d55a16440b011476f51763a0ffd32910b26a55"
+    },
+    "10,9": {
+      "file": "chunks/10_9.bin",
+      "bytes": 131072,
+      "minLocalZ": -189.765625,
+      "maxLocalZ": -179.8984375,
+      "sha256": "67aade02aaa008d5a37c1ee6ebc7d288cb2f098f6242bd3476bc5087dd340c01",
+      "sourceSha256": "c7a94a362a3da4b84a8879f23ad8106fa49039d5f9f731ab5619a71ce7e9c008"
+    },
+    "11,9": {
+      "file": "chunks/11_9.bin",
+      "bytes": 131072,
+      "minLocalZ": -189.375,
+      "maxLocalZ": -168.5234375,
+      "sha256": "7e31b695cc907d8b3d3859dbee58156b5e3fe5c57f230d5208622fabfae52560",
+      "sourceSha256": "124300b88e0e5c47c7bdab150879bf60addb5497064be46ab5327da10b6f990a"
+    },
+    "12,9": {
+      "file": "chunks/12_9.bin",
+      "bytes": 131072,
+      "minLocalZ": -187.078125,
+      "maxLocalZ": -147.59375,
+      "sha256": "a6b6a478387b2aba79d41bfa5474e99f0c0b54697822936a10d3ccbb8585b20b",
+      "sourceSha256": "0dfbbc7b503d489d2bacc2435ded5cbae8bd3ab7755f5531022bdd75e3c13fd0"
+    },
+    "13,9": {
+      "file": "chunks/13_9.bin",
+      "bytes": 131072,
+      "minLocalZ": -174.578125,
+      "maxLocalZ": -123.96875,
+      "sha256": "be6c0a5836954ffb6ea59f61a74059111c751ac867148210e2d6e57f36774000",
+      "sourceSha256": "aa567313fad4f84d7b4f5a9911ad79ec0fc78cdf5cde339b8a166198a2b59a91"
+    },
+    "14,9": {
+      "file": "chunks/14_9.bin",
+      "bytes": 131072,
+      "minLocalZ": -175.3515625,
+      "maxLocalZ": -113.1484375,
+      "sha256": "f3124fda3428f3620dcbeee7f9916ef99e678e87f1f81450ec97e3066ee83ea6",
+      "sourceSha256": "c210ae6ff7cae13a48d805ad515117bd9ae18efd498922304535d93849ed48a9"
+    },
+    "15,9": {
+      "file": "chunks/15_9.bin",
+      "bytes": 131072,
+      "minLocalZ": -143.046875,
+      "maxLocalZ": -99.484375,
+      "sha256": "4db1c4d8f37d5bceb9f7286a806a8d6719a98546c1bfdc531652afbad22c0807",
+      "sourceSha256": "35e9e0c0470966f7a3447058c23833143805b4a7c2064b112a932027ea443c7f"
+    },
+    "0,10": {
+      "file": "chunks/0_10.bin",
+      "bytes": 131072,
+      "minLocalZ": -174.0234375,
+      "maxLocalZ": -133.6875,
+      "sha256": "e9837b49ea96db0b94e0534c200154070951fa76301fdce512c47ca72b80aedd",
+      "sourceSha256": "4b01b7a0a35ca3b133022eb43d88bb48129d3b8ade69fb28a3c287299493eab1"
+    },
+    "1,10": {
+      "file": "chunks/1_10.bin",
+      "bytes": 131072,
+      "minLocalZ": -176.0859375,
+      "maxLocalZ": -137.8828125,
+      "sha256": "e77c5ede801b5075f0a385c7fa5400a1b1e3182d853a90d8c02fdc283183b111",
+      "sourceSha256": "0e8d260dbb13137b3413755b4e608df0cb6e2c1c0038e683654383abb0f1f3b2"
+    },
+    "2,10": {
+      "file": "chunks/2_10.bin",
+      "bytes": 131072,
+      "minLocalZ": -168.484375,
+      "maxLocalZ": -104.109375,
+      "sha256": "0698ddf2a80ac2c118929a8c841908101be03ecd7904b11e329dd75ed9dc25ff",
+      "sourceSha256": "beca9ccf06936c854edfc63d83085cf7a280b4bdd15d85dd191d1474355ca1c7"
+    },
+    "3,10": {
+      "file": "chunks/3_10.bin",
+      "bytes": 131072,
+      "minLocalZ": -168.109375,
+      "maxLocalZ": -109.78125,
+      "sha256": "33f99a89c21e418a7205c77537ce8f93d459d1398f422ce76da223006a8973ba",
+      "sourceSha256": "2436f206ea8c87d0fe7c07dd16be7b1eb96533fe2968d4510a07ee70c18a1bfc"
+    },
+    "4,10": {
+      "file": "chunks/4_10.bin",
+      "bytes": 131072,
+      "minLocalZ": -176.5234375,
+      "maxLocalZ": -141.5,
+      "sha256": "2c12962abeabcf1e9e9d17c9c4a67a4944d1a34ece9b4341ce3b94f903c55cd4",
+      "sourceSha256": "5ba77fec0e1fb9e68d14e2f2c3ef563799c848dc0e28920673fa366df397a58c"
+    },
+    "5,10": {
+      "file": "chunks/5_10.bin",
+      "bytes": 131072,
+      "minLocalZ": -180.65625,
+      "maxLocalZ": -153.1484375,
+      "sha256": "3d273d6aac30554a49821c5cf05dd209c0f0317a1cccacc1d3db65a3e5e10a14",
+      "sourceSha256": "d65110abd6c0057f2340f0b2824a603691ffee92a0cad44922d072a4bcfd0c8c"
+    },
+    "6,10": {
+      "file": "chunks/6_10.bin",
+      "bytes": 131072,
+      "minLocalZ": -203.4453125,
+      "maxLocalZ": -169.640625,
+      "sha256": "dcac89297bf0ae2b9238513d2aca3af17747602ac9eb0c5ee9ef2aa588a197fa",
+      "sourceSha256": "2578e9160d7c7b557313be1e3d2404debb171f08ccb3a063796eb757888c3947"
+    },
+    "7,10": {
+      "file": "chunks/7_10.bin",
+      "bytes": 131072,
+      "minLocalZ": -203.1328125,
+      "maxLocalZ": -187.3203125,
+      "sha256": "c91adcf3f8c02e7a65316a82cba4ab7be96bd4f2eefb95ee6d573c28bd492972",
+      "sourceSha256": "d365047a7fb22ddbb762327136dcdb6edf02a1c4d46aa0cf9478464ea4f8f82b"
+    },
+    "8,10": {
+      "file": "chunks/8_10.bin",
+      "bytes": 131072,
+      "minLocalZ": -196.3125,
+      "maxLocalZ": -145.28125,
+      "sha256": "5da492a421056a863b20144be956c8b0562fe8f29596c039ff05f81a0819aa13",
+      "sourceSha256": "ae4da77c8eb9c41560b14d9247d5b48d5d518d1c4b4b52a974040515ca18ccf5"
+    },
+    "9,10": {
+      "file": "chunks/9_10.bin",
+      "bytes": 131072,
+      "minLocalZ": -184.8046875,
+      "maxLocalZ": -139.109375,
+      "sha256": "83d29b5dde22ad58e5a31f46df951aae646ccd12dabe89437ada9736a70726aa",
+      "sourceSha256": "fb68260354bff68630d984bf381c0e92d4779615be88f825b356f41c5c35cbe9"
+    },
+    "10,10": {
+      "file": "chunks/10_10.bin",
+      "bytes": 131072,
+      "minLocalZ": -189.859375,
+      "maxLocalZ": -169.0546875,
+      "sha256": "d46022afa89b23f27d170ece8b9ffc1a405303ead7c62a633f1d96c620f12a12",
+      "sourceSha256": "0bb0eed816b37152dee8c84c11d59b0b79ff28af12399ea3289d9a4c7c32781e"
+    },
+    "11,10": {
+      "file": "chunks/11_10.bin",
+      "bytes": 131072,
+      "minLocalZ": -187.734375,
+      "maxLocalZ": -164.09375,
+      "sha256": "6122eb000b7645bbb4e3cebb5db4eb7f49e419a73c4cacab259049a349238839",
+      "sourceSha256": "fcbd92b281af301abae6cf2c5e925ffe0a6a2b6358d2d518a186c48aa879d273"
+    },
+    "12,10": {
+      "file": "chunks/12_10.bin",
+      "bytes": 131072,
+      "minLocalZ": -187.265625,
+      "maxLocalZ": -165.3203125,
+      "sha256": "f03eedd0f7778322243808df913cef20f3c345907f7c6c9c5086c39a5feb417a",
+      "sourceSha256": "06efbe0fa37538e825fd53726bb235ebd2b90456f1eb89ddf7d4463987c49da7"
+    },
+    "13,10": {
+      "file": "chunks/13_10.bin",
+      "bytes": 131072,
+      "minLocalZ": -183.46875,
+      "maxLocalZ": -165.6328125,
+      "sha256": "19572ac9f07c040de860c3ad0c87b773182bfdead2537202ae14bd2f078cbd69",
+      "sourceSha256": "6d172fb44af6775e2821fd3400b81338a3f8e95c57a57910aedf4a6a78b4aff8"
+    },
+    "14,10": {
+      "file": "chunks/14_10.bin",
+      "bytes": 131072,
+      "minLocalZ": -175.7734375,
+      "maxLocalZ": -114.4453125,
+      "sha256": "be3f805a5c7570b690a5d572675643541941e936a6e774858b5f7527a716173c",
+      "sourceSha256": "8d747dc120e89d8e353fec5ae5308770f3543f2a7bddab3d9a7112095b468290"
+    },
+    "15,10": {
+      "file": "chunks/15_10.bin",
+      "bytes": 131072,
+      "minLocalZ": -160.8671875,
+      "maxLocalZ": -105.640625,
+      "sha256": "076516cf7cca3c670312180a48f2a61bef369b29b293aab4f8a72d3108f4b978",
+      "sourceSha256": "f1142986fda0e93c77f1d97bc3ba0ce1132aed1eb8ef3cca895ace8bd4d0fbbf"
+    },
+    "0,11": {
+      "file": "chunks/0_11.bin",
+      "bytes": 131072,
+      "minLocalZ": -155.859375,
+      "maxLocalZ": -115.0390625,
+      "sha256": "cde8c2b1e73e5dd64e5a52a9677eb6295fb04446203a9a439790b9e3a9d5b62f",
+      "sourceSha256": "5a3c3fe84b51ec42da23f38cd47e5aa6de268958879dc1ab660f212effc588fc"
+    },
+    "1,11": {
+      "file": "chunks/1_11.bin",
+      "bytes": 131072,
+      "minLocalZ": -170.9296875,
+      "maxLocalZ": -119.28125,
+      "sha256": "b72538ae5de2023f01e26795501d08fb3a645e7ad2ea9439c800a7676655bad3",
+      "sourceSha256": "2ce1a94090b44ca435ff88eb0b5ff50e555f8b715b589dfd13604e90bbc23d15"
+    },
+    "2,11": {
+      "file": "chunks/2_11.bin",
+      "bytes": 131072,
+      "minLocalZ": -174.921875,
+      "maxLocalZ": -134.9609375,
+      "sha256": "5a74f80044573606388cd64c66539e2fa47b8136d39ba86d04456feaa02b8d77",
+      "sourceSha256": "8fe43aafa015c701ef643692a48d321895576e9095042e7526f195e86223711b"
+    },
+    "3,11": {
+      "file": "chunks/3_11.bin",
+      "bytes": 131072,
+      "minLocalZ": -166.6875,
+      "maxLocalZ": -112.875,
+      "sha256": "8b5c07698a92d9958f4455778774b75707e904ba9789ca5905b7273143e18791",
+      "sourceSha256": "18434495b3880524bf8d9d08181e2d6ae128d787284a91612e025397d1fa4cbb"
+    },
+    "4,11": {
+      "file": "chunks/4_11.bin",
+      "bytes": 131072,
+      "minLocalZ": -181.296875,
+      "maxLocalZ": -121.328125,
+      "sha256": "766ccfa267b04159ecb8e3eb9c87c3276d6fe0d365c67a21670a4c2c185f568a",
+      "sourceSha256": "b7e7befdb7f63a42bc0b85474af14c1cd77e721d21bf7d297cd4b845aebb5023"
+    },
+    "5,11": {
+      "file": "chunks/5_11.bin",
+      "bytes": 131072,
+      "minLocalZ": -188.1875,
+      "maxLocalZ": -153.265625,
+      "sha256": "244569ac9d1cc9c3ef357b62fa15449059d0790914226c5e0b9f07aa4d4401b0",
+      "sourceSha256": "02cb03f95c387518266ab6b4e6bcf66ff312ee726757f80cf6ab9757015a5ba8"
+    },
+    "6,11": {
+      "file": "chunks/6_11.bin",
+      "bytes": 131072,
+      "minLocalZ": -203.5859375,
+      "maxLocalZ": -154.609375,
+      "sha256": "5045b402697f4c46fe8fed66b72c245ee943d43d839d1d3cb8d4dba422036397",
+      "sourceSha256": "f97957f9172f287a89fe74b50b82cd905c1b427332d54e7c0d617c7a21acd426"
+    },
+    "7,11": {
+      "file": "chunks/7_11.bin",
+      "bytes": 131072,
+      "minLocalZ": -203.6328125,
+      "maxLocalZ": -165.6953125,
+      "sha256": "5223148fff8a20ac71ad870ae789ab8613fa1e27ccca9a3adbd3e8071a17acdf",
+      "sourceSha256": "3566aa83c4fbc4edf50854adf31554b9076fb87ce8e74c9a8b342df59883eb23"
+    },
+    "8,11": {
+      "file": "chunks/8_11.bin",
+      "bytes": 131072,
+      "minLocalZ": -191.140625,
+      "maxLocalZ": -130.3515625,
+      "sha256": "0ddb83bdde9e16b818d6dff377585aef125ccc688f13168e54da9b007a20e5cb",
+      "sourceSha256": "0a44d812049b45560d10b3fa2722b2f877ce73278f690341f9e1832440bf55af"
+    },
+    "9,11": {
+      "file": "chunks/9_11.bin",
+      "bytes": 131072,
+      "minLocalZ": -184.4609375,
+      "maxLocalZ": -137.2421875,
+      "sha256": "31a474838c4bc392f1fdbec5717111c42b6354f22ecb29e76497a692bf9f47af",
+      "sourceSha256": "7f3f248922fb544eaec0995e6ed90fd77e93c98ce3411238697574b1fb01a56f"
+    },
+    "10,11": {
+      "file": "chunks/10_11.bin",
+      "bytes": 131072,
+      "minLocalZ": -189.71875,
+      "maxLocalZ": -157.4140625,
+      "sha256": "eee4c96109203fe18813ef6ae92f53dcf4556eb298f3c5f47fb63e363603de64",
+      "sourceSha256": "cccafd22135488703f49c0aa9563cb2656394849d6883cfec5dce19a2b8db051"
+    },
+    "11,11": {
+      "file": "chunks/11_11.bin",
+      "bytes": 131072,
+      "minLocalZ": -188.4140625,
+      "maxLocalZ": -152.1640625,
+      "sha256": "80fb8a274e75c85762bf9723e250620ce2a36c4bac27ff1b1f5a10713b1ab787",
+      "sourceSha256": "f15f5407a4f6904434835e6c42311a58511d125569a796e185692199a098d092"
+    },
+    "12,11": {
+      "file": "chunks/12_11.bin",
+      "bytes": 131072,
+      "minLocalZ": -181.1484375,
+      "maxLocalZ": -147.375,
+      "sha256": "cc1b3026904d9b0f94d31ab3c076ef24547fea96532b51ed52031fac6daae3ee",
+      "sourceSha256": "a198790ac8868fa565691cb5296e2e94bcd22068e21bf29e918bdd427952643f"
+    },
+    "13,11": {
+      "file": "chunks/13_11.bin",
+      "bytes": 131072,
+      "minLocalZ": -182.3671875,
+      "maxLocalZ": -150.578125,
+      "sha256": "2d9171bbc2899950a106e6288dbe336e7a1868a68d806a2ab2f736a4bdb4879b",
+      "sourceSha256": "c10a72ee62d4c57b6ab075f48b44d63844123d0c511e54b75f2ade45783c53c2"
+    },
+    "14,11": {
+      "file": "chunks/14_11.bin",
+      "bytes": 131072,
+      "minLocalZ": -176.015625,
+      "maxLocalZ": -126.515625,
+      "sha256": "c72eeb2b32ce06270e663757b381c101cbbc98445b9fc534ec368f62e37523ed",
+      "sourceSha256": "779710357ad17ee545755a60c41f662d951fb7be2f66877ae01f6bd66c04c147"
+    },
+    "15,11": {
+      "file": "chunks/15_11.bin",
+      "bytes": 131072,
+      "minLocalZ": -179.328125,
+      "maxLocalZ": -134.84375,
+      "sha256": "30b01941533107daee45e9dce5221cf17c16361ca07550cd247e910b4b4eefcc",
+      "sourceSha256": "2fe982c3657a0fd36c91c102ed94e43e14675b167e506d4aca79354d42636f88"
+    },
+    "0,12": {
+      "file": "chunks/0_12.bin",
+      "bytes": 131072,
+      "minLocalZ": -150.9765625,
+      "maxLocalZ": -101.3515625,
+      "sha256": "6a62a363b1413dc7a6b786723758ec4e28e1ab3cae6fec1944380f9026d48e15",
+      "sourceSha256": "91a62cb0efaea3c42cacc975c599d787fbec11f4691a782a0a7660afe451e356"
+    },
+    "1,12": {
+      "file": "chunks/1_12.bin",
+      "bytes": 131072,
+      "minLocalZ": -166.6796875,
+      "maxLocalZ": -104.7109375,
+      "sha256": "a1c45be9f703a766fd744007d1c38ecb50c828a591039021ad192d2a63d52821",
+      "sourceSha256": "c20603c220282e938f3e8b3909e4c4903525a5581bf6ef607b53639841537049"
+    },
+    "2,12": {
+      "file": "chunks/2_12.bin",
+      "bytes": 131072,
+      "minLocalZ": -196.3828125,
+      "maxLocalZ": -155.515625,
+      "sha256": "831691f9e4c21829c7f9bd8c8603828035b18c10fc57ae978c4f5098c4fd2c08",
+      "sourceSha256": "f8b167fae918ce21893a9c0749003e85c7720b0db8b3a9900653f08c1631b4ff"
+    },
+    "3,12": {
+      "file": "chunks/3_12.bin",
+      "bytes": 131072,
+      "minLocalZ": -194.984375,
+      "maxLocalZ": -140.171875,
+      "sha256": "37e09a20aa6bb622cd1d01a9192045abe8098bc1c1e6cf358f6b166be596066a",
+      "sourceSha256": "9d18287c8c6f0d966b5e2f8c7397124cc6dd344c9a6c5411129ff0bd12e7f9a6"
+    },
+    "4,12": {
+      "file": "chunks/4_12.bin",
+      "bytes": 131072,
+      "minLocalZ": -191.8046875,
+      "maxLocalZ": -158.390625,
+      "sha256": "0940ac05321a23477f986a2debf385775df0405a39d3081c1c3c0fa4fe5a19c5",
+      "sourceSha256": "749a3f987ca40e78581be9c47cc615d3738d84251c4f8b50c634ca93b87413d6"
+    },
+    "5,12": {
+      "file": "chunks/5_12.bin",
+      "bytes": 131072,
+      "minLocalZ": -191.296875,
+      "maxLocalZ": -160.21875,
+      "sha256": "e6c9edd805c89093035663e0b9d22ea0cfde7c8aaf19d55474a969b1c92318f9",
+      "sourceSha256": "a075c96fb3a90271f3c061a2c9fc2f233ae40bda2fcb7e97da34e2a63f06eec6"
+    },
+    "6,12": {
+      "file": "chunks/6_12.bin",
+      "bytes": 131072,
+      "minLocalZ": -203.984375,
+      "maxLocalZ": -166.4453125,
+      "sha256": "2f82d79254a81617242ed0c1a2a39c452e6945e3b81b3c3dd3648095a279f4c1",
+      "sourceSha256": "d7c4cc23f95ed390de71539036c35b0b4b1d17d37bfca945edf9fb92405c1fc1"
+    },
+    "7,12": {
+      "file": "chunks/7_12.bin",
+      "bytes": 131072,
+      "minLocalZ": -203.9296875,
+      "maxLocalZ": -160.8828125,
+      "sha256": "a118752918f937cb41decb660cc0e696e7b6e19b470ae5e158fcf2d099cef2d6",
+      "sourceSha256": "4a947081d72c88c4448ab6d44e9464e859d79f5033b2b7f38a50973c4c813356"
+    },
+    "8,12": {
+      "file": "chunks/8_12.bin",
+      "bytes": 131072,
+      "minLocalZ": -179.4921875,
+      "maxLocalZ": -124.71875,
+      "sha256": "c33bdb222aa80adde393bf76757eb02228c45074aa0d66c079132fcdb2af8fcf",
+      "sourceSha256": "ad9f0d0ab38884f3d48f8b9636033be6a2560be394100483f6e64e941e324c00"
+    },
+    "9,12": {
+      "file": "chunks/9_12.bin",
+      "bytes": 131072,
+      "minLocalZ": -157.4140625,
+      "maxLocalZ": -119.9375,
+      "sha256": "e40aed46e5cd3dde0189816b46ab0c8663ff820f225e2f975b3ba1cf082e2830",
+      "sourceSha256": "10aac769080e75647c35017d3f76e37e73681dc02a27842233d296a7f72f1ff9"
+    },
+    "10,12": {
+      "file": "chunks/10_12.bin",
+      "bytes": 131072,
+      "minLocalZ": -185.65625,
+      "maxLocalZ": -132.53125,
+      "sha256": "ca41e0143a2de92fa25e436072829ed315aa8f43ad3e7f805496709ea7383dd0",
+      "sourceSha256": "3fff5867c74e2eb41d79a3f0e90cb86b6352b7475db2c72532e9fd634eb970fd"
+    },
+    "11,12": {
+      "file": "chunks/11_12.bin",
+      "bytes": 131072,
+      "minLocalZ": -185.84375,
+      "maxLocalZ": -159.015625,
+      "sha256": "96d20b4a96880ec9082fc6fc4662053d795fd9cd5765bbb235059c4a491e4c89",
+      "sourceSha256": "f658c49e115e2d5da87b3cd5934af864e530d380b0c0af0042c396a11cb01cd7"
+    },
+    "12,12": {
+      "file": "chunks/12_12.bin",
+      "bytes": 131072,
+      "minLocalZ": -181.9296875,
+      "maxLocalZ": -141.3125,
+      "sha256": "1246378a999afba1fc20d66d52d7282702449a841fcab0e8b040c56f190f36a2",
+      "sourceSha256": "876ec8f955ffe97150c5d3fa17741d3064aaa3906fa4a26bceabf74b7b0620b7"
+    },
+    "13,12": {
+      "file": "chunks/13_12.bin",
+      "bytes": 131072,
+      "minLocalZ": -180.5078125,
+      "maxLocalZ": -145.7734375,
+      "sha256": "8fe196e3554ed31050e19389e7aa3083a715a618610b32a1f40cce36fe7a6dc2",
+      "sourceSha256": "249efef71abb513d278d83f2ddf207efdabc72b1ee04756d26733b80d515a632"
+    },
+    "14,12": {
+      "file": "chunks/14_12.bin",
+      "bytes": 131072,
+      "minLocalZ": -176.8515625,
+      "maxLocalZ": -140.8828125,
+      "sha256": "7c4fa75295dee9a9898612e9c95c68d2d83647d5151c9a9e9570086592f9cc1a",
+      "sourceSha256": "eb49f008a5230995d3dd267ebd18d98e8301bb4d1c660bbb9df8bcd297f9036a"
+    },
+    "15,12": {
+      "file": "chunks/15_12.bin",
+      "bytes": 131072,
+      "minLocalZ": -179.328125,
+      "maxLocalZ": -154.25,
+      "sha256": "92cf3901611bddefc7fa92666732d2ceb6a2e46b3b091b98907c0e7968c49897",
+      "sourceSha256": "bce3047de550c94d80396bd04a34771cea123c50e9a33ed55076a2b828477e38"
+    },
+    "0,13": {
+      "file": "chunks/0_13.bin",
+      "bytes": 131072,
+      "minLocalZ": -169.953125,
+      "maxLocalZ": -99.171875,
+      "sha256": "93a3eef55bcd4324eda41306934466cc6f35221b93e1b1c7f2f2502d5ad24733",
+      "sourceSha256": "6a44222d8789b15d0d5334d408758d464602e88cbaed2fec6cb81869d3186d67"
+    },
+    "1,13": {
+      "file": "chunks/1_13.bin",
+      "bytes": 131072,
+      "minLocalZ": -177.7421875,
+      "maxLocalZ": -107.6640625,
+      "sha256": "1f27c1655cbae04dba5465b705cb4df985d8ea2467e68028631d0bb452f5e174",
+      "sourceSha256": "f0485824c230476ea8d63b8c50fd839993e1131a4474a12aa44fc6d599656482"
+    },
+    "2,13": {
+      "file": "chunks/2_13.bin",
+      "bytes": 131072,
+      "minLocalZ": -196.7890625,
+      "maxLocalZ": -156.125,
+      "sha256": "32ee246df957a7e7f014b6d92412fb954339bcd59b71fb202f093232b6467aa9",
+      "sourceSha256": "ade4c0c29d93cfd640ec8e15b33ad444e663235af7a747b950751c94c80df1ac"
+    },
+    "3,13": {
+      "file": "chunks/3_13.bin",
+      "bytes": 131072,
+      "minLocalZ": -196.7421875,
+      "maxLocalZ": -163.7578125,
+      "sha256": "683760c3620435b563a713df7bc87958d6576da8004597c9928ccfa518c42e65",
+      "sourceSha256": "768317ac210473a0b4748b41674b86c4426d3da7cc650822eab7766d68862464"
+    },
+    "4,13": {
+      "file": "chunks/4_13.bin",
+      "bytes": 131072,
+      "minLocalZ": -195.90625,
+      "maxLocalZ": -159.40625,
+      "sha256": "105adbe27efb06242b3a710ebb0939ce51934bbc8d2ffd3aed993f9858d44c3f",
+      "sourceSha256": "88aab0f0b374b3bd73dc19e94ee0ae976e96a4dfe8c724c8f5531f3be3536835"
+    },
+    "5,13": {
+      "file": "chunks/5_13.bin",
+      "bytes": 131072,
+      "minLocalZ": -195.9296875,
+      "maxLocalZ": -158.9453125,
+      "sha256": "2a06c071c209a34fadf5a9282bed6366ebd4a7aeaeb3239558e5b7868e2341dd",
+      "sourceSha256": "3b9a4ede2267e803382396f178f3d06e472210dabef890685e5655214183769f"
+    },
+    "6,13": {
+      "file": "chunks/6_13.bin",
+      "bytes": 131072,
+      "minLocalZ": -204.3359375,
+      "maxLocalZ": -166.359375,
+      "sha256": "56222d3c1fc488103817ec4f677ed5052e31261422f18d2efd3ccbdd7b39153d",
+      "sourceSha256": "2d7b095b639f3bd50b6cd86b3919e53e63e72f242a2f7643f15954e79aedec3c"
+    },
+    "7,13": {
+      "file": "chunks/7_13.bin",
+      "bytes": 131072,
+      "minLocalZ": -200.84375,
+      "maxLocalZ": -154.75,
+      "sha256": "b85049c88c7965e8e7e5e1f08dfd3be233eac4ec4d27d291e3128c71328a7727",
+      "sourceSha256": "182183037b8092197b5034ecd8c54b12d572493916c065eeced2e0c9f5f4a450"
+    },
+    "8,13": {
+      "file": "chunks/8_13.bin",
+      "bytes": 131072,
+      "minLocalZ": -183.578125,
+      "maxLocalZ": -150.078125,
+      "sha256": "c2e8f4fd94c4abb0ac86059a3bc810a83e1d65bec4f9253b4489c4de9803293a",
+      "sourceSha256": "17ad09b9d59b11fc59cc9591738c5cbde0e94db6f8b31b8b788e3690c0984699"
+    },
+    "9,13": {
+      "file": "chunks/9_13.bin",
+      "bytes": 131072,
+      "minLocalZ": -180.3828125,
+      "maxLocalZ": -130,
+      "sha256": "797690eb6b688a499321d149cf5fe1db9caa8f66677a5fdeafd06c9572a4eee9",
+      "sourceSha256": "3a696f66c2fc7d0429bb24714c5201260fe9c1798db71ce7aed365ab12cab752"
+    },
+    "10,13": {
+      "file": "chunks/10_13.bin",
+      "bytes": 131072,
+      "minLocalZ": -179.984375,
+      "maxLocalZ": -123.4609375,
+      "sha256": "e24d8da989925dcc1f50c1f0adfd762849d428529dd0fa28f9ae9a7549386b27",
+      "sourceSha256": "c26ee3c66e988beeff28db399411709b063540cefd425d904554014d3105a99a"
+    },
+    "11,13": {
+      "file": "chunks/11_13.bin",
+      "bytes": 131072,
+      "minLocalZ": -186.2265625,
+      "maxLocalZ": -152.03125,
+      "sha256": "dc15dfe96b96ba96f50b838bdb4b50f0aa9eb8f528526a537a94384ee9aba663",
+      "sourceSha256": "a314f8827d735462dae80b927ce188ced74cc279eb0c5ce4d26b3cee0faea15b"
+    },
+    "12,13": {
+      "file": "chunks/12_13.bin",
+      "bytes": 131072,
+      "minLocalZ": -185.2578125,
+      "maxLocalZ": -155.3359375,
+      "sha256": "0f68b7fa7bc2282b8c028dff2abd1129ace3f4ee0ac12e161268077f3f53f3f8",
+      "sourceSha256": "29193b0276dcdad9b53a7a437c3857928668fc4328f8d38f6e84b072165f77bd"
+    },
+    "13,13": {
+      "file": "chunks/13_13.bin",
+      "bytes": 131072,
+      "minLocalZ": -177.625,
+      "maxLocalZ": -146.203125,
+      "sha256": "eb13a4463dd5f161c9ae72075758f2e45b94043dec2005836f5ec97a8a06ddab",
+      "sourceSha256": "1f8ff61cafc0f1e030f372a3720ae0c478a49ef641d7927aa5d0c2e1922ffeec"
+    },
+    "14,13": {
+      "file": "chunks/14_13.bin",
+      "bytes": 131072,
+      "minLocalZ": -163.46875,
+      "maxLocalZ": -133.625,
+      "sha256": "78f1c569a129857fe5478510432b83a4d3037137ce5be01ffb545c89bae8052e",
+      "sourceSha256": "1f54ee4dc673b632e866eac0b38e160c1581a03f6dd190b1263a80c0c8291852"
+    },
+    "15,13": {
+      "file": "chunks/15_13.bin",
+      "bytes": 131072,
+      "minLocalZ": -175.640625,
+      "maxLocalZ": -135.1640625,
+      "sha256": "149a4719a29720c2c91af72e2cf19181c0950dae07cdb6a7e2b64d159243b792",
+      "sourceSha256": "7c0d374880bc353c10c4d87811d201b455aaed5b8e137b92ea07bb4daab73e90"
+    },
+    "0,14": {
+      "file": "chunks/0_14.bin",
+      "bytes": 131072,
+      "minLocalZ": -179.375,
+      "maxLocalZ": -118.046875,
+      "sha256": "d99fdde87c787a110bc81ac9a067d1c072d5d94c134e6286bcc42c37aa789823",
+      "sourceSha256": "58a41bf3879bfa5f68fcf2fa5c59f1691694b01d95b575aafc920938ab217a07"
+    },
+    "1,14": {
+      "file": "chunks/1_14.bin",
+      "bytes": 131072,
+      "minLocalZ": -160.4375,
+      "maxLocalZ": -98.953125,
+      "sha256": "3fec945569429a362fffbee673c5b86f0bc9df816b4c94bd24216c4719b641a7",
+      "sourceSha256": "3bd5f6bbc34420339bcd4c349bb3150c2cb4ff5f7dd471b9adca49196e9d9068"
+    },
+    "2,14": {
+      "file": "chunks/2_14.bin",
+      "bytes": 131072,
+      "minLocalZ": -183.4296875,
+      "maxLocalZ": -113.46875,
+      "sha256": "404c54880ee4c3e80e20f9274815ac3f09ce16b4fb89595fe95e8bdb95b6d22d",
+      "sourceSha256": "9a84ff90b2672dc894babea35d166e2405e1572ee4542038634ab1978ca8cd9e"
+    },
+    "3,14": {
+      "file": "chunks/3_14.bin",
+      "bytes": 131072,
+      "minLocalZ": -179.84375,
+      "maxLocalZ": -131.5,
+      "sha256": "7af10031097da750d74f8ae69283fd12f2c967d3155aabe25a1ad756efee8beb",
+      "sourceSha256": "a06d0d54e8de6321c52fa4ce6a63a111a814f75438f519988600085eb86cce3a"
+    },
+    "4,14": {
+      "file": "chunks/4_14.bin",
+      "bytes": 131072,
+      "minLocalZ": -194.796875,
+      "maxLocalZ": -147.921875,
+      "sha256": "880c271f4f800f2af5091593f45c99579479e14d32252d6fcf8b6c9b3508664c",
+      "sourceSha256": "7bf4e5325a9560f261487fd9cc34a7ba20d1f356926264e0b6d7d9d71d609a22"
+    },
+    "5,14": {
+      "file": "chunks/5_14.bin",
+      "bytes": 131072,
+      "minLocalZ": -203.84375,
+      "maxLocalZ": -172.8046875,
+      "sha256": "50faa2d1c01faad98b635526a7003771ebe9f47a659116aea32ee1e818eb803c",
+      "sourceSha256": "d812dc7f7b0336814cdc71abf315c428d97cc0d584262294421db8e296855adc"
+    },
+    "6,14": {
+      "file": "chunks/6_14.bin",
+      "bytes": 131072,
+      "minLocalZ": -204.734375,
+      "maxLocalZ": -170.0390625,
+      "sha256": "a06e086b185982313884ec08babc634b259efb81145faa3067e26fa94fbbb676",
+      "sourceSha256": "9ed6fc0d16f8fc38a5bb3927a90ae5831783273663cb4689637231d28d289bd4"
+    },
+    "7,14": {
+      "file": "chunks/7_14.bin",
+      "bytes": 131072,
+      "minLocalZ": -192.421875,
+      "maxLocalZ": -124.421875,
+      "sha256": "b153a7b5a9b7f0403190d86db40788ad9392163220bb91349544e00cfdede564",
+      "sourceSha256": "b38525831f8498244ba24061964f3db0190a2ddd4bd8a079288aea825412d687"
+    },
+    "8,14": {
+      "file": "chunks/8_14.bin",
+      "bytes": 131072,
+      "minLocalZ": -187.7734375,
+      "maxLocalZ": -129.7421875,
+      "sha256": "5bc7410c7f21a0bbbb1e42e5bb8fb3f980b0fe733cf23c82e4e4de43a29ac4ab",
+      "sourceSha256": "8ce0d38b0559c6b04807e1aaa3570fb69199cb857aeafa8b2bc1b7aa65b6f2f9"
+    },
+    "9,14": {
+      "file": "chunks/9_14.bin",
+      "bytes": 131072,
+      "minLocalZ": -189.2421875,
+      "maxLocalZ": -144.421875,
+      "sha256": "bd0366b2a8cc0951f74894340ed66aa32b4ecb7f65326ae2b9882168c7246db0",
+      "sourceSha256": "9cd26293cf9e1665312df02845eb572b2cdd52b7fb15d776c4a4c1276240ac8d"
+    },
+    "10,14": {
+      "file": "chunks/10_14.bin",
+      "bytes": 131072,
+      "minLocalZ": -166.5234375,
+      "maxLocalZ": -127.4140625,
+      "sha256": "174c5878db09a0d4420a3ca7d0a56311188d675078aa73e697e4a63534dcbbb0",
+      "sourceSha256": "a80992a8fbb115ea4092c55c030bbbdc0dc436df9db9148bfc61f1f336c2c113"
+    },
+    "11,14": {
+      "file": "chunks/11_14.bin",
+      "bytes": 131072,
+      "minLocalZ": -178.3984375,
+      "maxLocalZ": -136.3984375,
+      "sha256": "63940e5a2aad74ee4b646c1d8a2be9317d8a34f073ed037b2cfca7561e7fed2c",
+      "sourceSha256": "984f68b38a21a9c645d3885e0e977f69530879917095e7fd6cd870d5280bc290"
+    },
+    "12,14": {
+      "file": "chunks/12_14.bin",
+      "bytes": 131072,
+      "minLocalZ": -183.59375,
+      "maxLocalZ": -153.203125,
+      "sha256": "bed17399e527cd9100dfbc3493aa9d67a25c3595e6663b6edc35cd36ac74e22d",
+      "sourceSha256": "7e70a5c027f7b2f2aaaa0f3e667ed626874d6236c864c4cd1410e7ece11003e8"
+    },
+    "13,14": {
+      "file": "chunks/13_14.bin",
+      "bytes": 131072,
+      "minLocalZ": -175.421875,
+      "maxLocalZ": -108.125,
+      "sha256": "75b1c9df6426456bdb31a7b1ed9bc143b7722d22d224656d795208228ffa2a48",
+      "sourceSha256": "dd6f14749e55bd74ee76ef5adbf6e80cc1fb244b59baa3bdd46310c3c12e3577"
+    },
+    "14,14": {
+      "file": "chunks/14_14.bin",
+      "bytes": 131072,
+      "minLocalZ": -146.3046875,
+      "maxLocalZ": -102.234375,
+      "sha256": "5a9f396439d8f9562fb9e52cf939e8fc200159d4d34d07d0c80c46c18ba4d511",
+      "sourceSha256": "f53c158527e0f973923b4a8fdd8859d59939f51af32e6373ae3d49e5e5ef40e9"
+    },
+    "15,14": {
+      "file": "chunks/15_14.bin",
+      "bytes": 131072,
+      "minLocalZ": -164.1953125,
+      "maxLocalZ": -114.6484375,
+      "sha256": "498834e50f99ebc8e49ed1c12ac6f0cf6f057f1ea026b142bee1355ed12ba221",
+      "sourceSha256": "3cae7eb17b04db3292fe178cc9320ea51cb5a0948443dee25b49fb4d4a2c71fe"
+    },
+    "0,15": {
+      "file": "chunks/0_15.bin",
+      "bytes": 131072,
+      "minLocalZ": -185.7578125,
+      "maxLocalZ": -135.4140625,
+      "sha256": "274b99e87b64d8e31fb5bd9010ae319cc0bf5e3212fbb6706ac1189c10a44a24",
+      "sourceSha256": "586f087e5bcd23081a9ec4c0c0915277552b2e47d12a9f275e7f49a5cbe438d1"
+    },
+    "1,15": {
+      "file": "chunks/1_15.bin",
+      "bytes": 131072,
+      "minLocalZ": -185.7265625,
+      "maxLocalZ": -112.3828125,
+      "sha256": "2cc8d31df979388f5503c3ee798165520f81dc569471d427dfe083c6eda2c9f8",
+      "sourceSha256": "09bd21ea25366de24412b45dda2e96cfd677c6ccdfd7799ff5ef6cff2e3a954e"
+    },
+    "2,15": {
+      "file": "chunks/2_15.bin",
+      "bytes": 131072,
+      "minLocalZ": -185.0625,
+      "maxLocalZ": -112.140625,
+      "sha256": "2ea3d6175b15565a02d2b8eca1f6b43c3ff7778e60031d37c573ac5896382236",
+      "sourceSha256": "68c3fa73da622beedbe9c40eb94b9f2baaab2274b31ed05e1d64a7c42bb825ff"
+    },
+    "3,15": {
+      "file": "chunks/3_15.bin",
+      "bytes": 131072,
+      "minLocalZ": -175.0625,
+      "maxLocalZ": -124.609375,
+      "sha256": "ddaa242386deea9d2da4ebc6eb7046fc157bd8b1e33764cd490bd5624ed7b684",
+      "sourceSha256": "cd2b64e0fc8d9343e777ba649b939265b0c13b30cd94cfe8192fae41fef3b9d5"
+    },
+    "4,15": {
+      "file": "chunks/4_15.bin",
+      "bytes": 131072,
+      "minLocalZ": -186.796875,
+      "maxLocalZ": -135.9140625,
+      "sha256": "6a70c873c25eec3846a13d11f55ca43884e55e375ab899f450fd52dd63b3492d",
+      "sourceSha256": "e181210eac0e6250f1ca88a8f01767a90e38dcee56092c5da9ec9b2c7c94e5e6"
+    },
+    "5,15": {
+      "file": "chunks/5_15.bin",
+      "bytes": 131072,
+      "minLocalZ": -205.109375,
+      "maxLocalZ": -153.78125,
+      "sha256": "4123c6fa6cbfe0f148fac0f8f3cbed424049a3218a57206f76e17147a774f0bd",
+      "sourceSha256": "7d09fc67bee95c909fb473391cc84d0eb702d586c91e4d883fd0397e8dc81518"
+    },
+    "6,15": {
+      "file": "chunks/6_15.bin",
+      "bytes": 131072,
+      "minLocalZ": -204.9609375,
+      "maxLocalZ": -166.765625,
+      "sha256": "00a8df38c3426559fa420fd896b408960243ce05df90794b93599c3bbd190530",
+      "sourceSha256": "0107f125f39b503b8e0f01f33572bbc3419b755e141a93b45e93432606baa0b5"
+    },
+    "7,15": {
+      "file": "chunks/7_15.bin",
+      "bytes": 131072,
+      "minLocalZ": -193.125,
+      "maxLocalZ": -126.9375,
+      "sha256": "aae758c4bc69f5b01efffc981b7f9f0c6e1b01b52f3588ba5aa4160159313f40",
+      "sourceSha256": "b10edc5f8090b11eacfe4373a4aac580253b21aac79b6e240fafcffdc9c16ddb"
+    },
+    "8,15": {
+      "file": "chunks/8_15.bin",
+      "bytes": 131072,
+      "minLocalZ": -186.15625,
+      "maxLocalZ": -128.984375,
+      "sha256": "f46f42155ef4e5c2664cb9c2c962a35558154326817e435a8bf2c7bd22fc6107",
+      "sourceSha256": "7a0a67b34b9ce7ce5f46d5c42974042b7fe93a8f6811519b6494f8a2cd4addbf"
+    },
+    "9,15": {
+      "file": "chunks/9_15.bin",
+      "bytes": 131072,
+      "minLocalZ": -199.796875,
+      "maxLocalZ": -161.8671875,
+      "sha256": "a525e9132989f8106142401b926422f1c98f456355f302ede87acab3fa9c6b65",
+      "sourceSha256": "978c812bfc30568c89a87cb366225c7d519b6e9111188bb8211e5b1997c50428"
+    },
+    "10,15": {
+      "file": "chunks/10_15.bin",
+      "bytes": 131072,
+      "minLocalZ": -201.640625,
+      "maxLocalZ": -157.25,
+      "sha256": "649909c4e322f32c2c6c2d88d91cbf10444b7270ac918a80f75fc3e0d2ca9958",
+      "sourceSha256": "565013fe456d41ba61feaee24cba5f05da659ca8031e826076310a66bb5e83f6"
+    },
+    "11,15": {
+      "file": "chunks/11_15.bin",
+      "bytes": 131072,
+      "minLocalZ": -201.03125,
+      "maxLocalZ": -155.7890625,
+      "sha256": "576a91b10342d8df6aea12d0f2b9cfe626abb096aecbea25ec1ce116ce54169b",
+      "sourceSha256": "cb2dc0094ae21a9db9bdc0c753acf89e8e4b83e2648bfebc3fbc1cdbcda48f9c"
+    },
+    "12,15": {
+      "file": "chunks/12_15.bin",
+      "bytes": 131072,
+      "minLocalZ": -192.046875,
+      "maxLocalZ": -157.6953125,
+      "sha256": "d8eb2021f7694fb79c77ba137ffc1510ad4864cb3658687c1891315137cb2c60",
+      "sourceSha256": "cc0e004f70f576243975d233d0b907011014608eb213c39f295611626cc6d858"
+    },
+    "13,15": {
+      "file": "chunks/13_15.bin",
+      "bytes": 131072,
+      "minLocalZ": -186.75,
+      "maxLocalZ": -136.859375,
+      "sha256": "9904db94387291aa96bede79b2a7d1f606342261c5befe8b26125acb5cddf54a",
+      "sourceSha256": "cbd3fbad9d7532d42ec4dfcb3acb89aaa1eb68b7c4578723b0762846707cb8a5"
+    },
+    "14,15": {
+      "file": "chunks/14_15.bin",
+      "bytes": 131072,
+      "minLocalZ": -175.7421875,
+      "maxLocalZ": -116.9296875,
+      "sha256": "aca46673ea95f83281cdb09e6ca137ff8fdd1cf24954ee21ed38208ac415f888",
+      "sourceSha256": "8a60595f261d16a8e26e35a2e6fc067ce329e274c07c0946d0f447fe9ae1d957"
+    },
+    "15,15": {
+      "file": "chunks/15_15.bin",
+      "bytes": 131072,
+      "minLocalZ": -175.6015625,
+      "maxLocalZ": -118.4296875,
+      "sha256": "b0c48208899a0f31b86bcdb97a4865aa6f3139d07326d0208a62d1b2867acb50",
+      "sourceSha256": "1df862866fe35ab8a848e2a6ac3be6b77100a3f8a712954bca67ca3006a23763"
+    }
+  },
+  "sampleStrideQuads": 2,
+  "sourceRevision": "b1463dab45fb7871a893f14d17f0064ef48e3724",
+  "gameBuild": "Not recorded by source; current game validation pending",
+  "accuracy": "Community collision terrain; absolute datum unverified",
+  "upstreamEvidenceLabel": "VERIFIED"
+}

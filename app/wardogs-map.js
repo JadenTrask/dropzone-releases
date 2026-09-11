@@ -12,6 +12,7 @@ export class WardogsMap {
     canvas.addEventListener('pointermove',e=>this.move(e),{signal});
     canvas.addEventListener('pointerup',e=>this.up(e),{signal});
     canvas.addEventListener('pointercancel',()=>{this.drag=null;this.cursor=null;this.updateCursor();delete this.canvas.dataset.dragging;this.draw();},{signal});
+    canvas.addEventListener('lostpointercapture',()=>{this.drag=null;delete this.canvas.dataset.dragging;this.draw();},{signal});
     canvas.addEventListener('contextmenu',e=>e.preventDefault(),{signal});
     canvas.addEventListener('keydown',e=>this.key(e),{signal});
     this.observer=new ResizeObserver(()=>this.resize());this.observer.observe(canvas);this.resize();
@@ -58,13 +59,15 @@ export class WardogsMap {
   down(e){
     if(this.drag||![0,1,2].includes(e.button))return;
     this.stopZoom();e.preventDefault();this.canvas.focus({preventScroll:true});this.canvas.setPointerCapture(e.pointerId);
-    const p=this.mouse(e),s=this.getState(),hit=e.button===0?this.hit(p):null;
-    const mode=hit&&!(hit==='origin'&&s.lockOrigin)?hit:'pan';
+    const p=this.mouse(e);
+    // Every drag pans. Relocation is an explicit tool followed by a click.
+    const mode='pan';
     this.drag={id:e.pointerId,start:p,last:p,mode,moved:false,button:e.button};
     this.canvas.dataset.dragging='true';
   }
   move(e){
     const p=this.mouse(e),w=this.world(p);this.cursor=e.pointerType==='touch'?null:p;
+    if(this.drag&&e.pointerType!=='touch'&&e.buttons===0){this.drag=null;delete this.canvas.dataset.dragging;this.updateCursor();this.draw();return;}
     const d=this.drag;if(!d||d.id!==e.pointerId){this.updateCursor();return;}
     if(Math.hypot(p.x-d.start.x,p.y-d.start.y)>4)d.moved=true;
     if(d.moved){
@@ -78,7 +81,8 @@ export class WardogsMap {
     const d=this.drag;if(!d||d.id!==e.pointerId)return;
     this.drag=null;delete this.canvas.dataset.dragging;
     if(this.canvas.hasPointerCapture(e.pointerId))this.canvas.releasePointerCapture(e.pointerId);
-    const point=this.world(this.mouse(e)),s=this.getState();
+    const pointer=this.mouse(e);if(Math.hypot(pointer.x-d.start.x,pointer.y-d.start.y)>4)d.moved=true;
+    const point=this.world(pointer),s=this.getState();
     if(d.moved&&d.mode!=='pan')this.onPoint(d.mode,clampPoint(point,this.map),true);
     if(!d.moved&&d.button===0&&validPoint(point,this.map)){
       if(s.tool==='ruler'){if(this.ruler.length===2)this.ruler=[];this.ruler.push(point);}
@@ -101,7 +105,7 @@ export class WardogsMap {
     if(local){const [left,right,top,bottom]=this.map.tiles.limits[z];if(x<left||x>right||y<top||y>bottom)return null;}
     const record={image:new Image(),ready:false,failed:false,local,used:performance.now()};this.images.set(key,record);
     record.image.onload=()=>{record.ready=true;this.draw();};record.image.onerror=()=>{record.failed=true;this.draw();};
-    record.image.src=local?`${this.map.tiles.path}/zoom_${z}/${x}_${y}.webp`:`https://raw.githubusercontent.com/apollyon-sys/wardogs-calculator/${this.revision}/maps/tiles/${this.map.id}/zoom_${z}/${x}_${y}.webp`;
+    record.image.src=local?`${this.map.tiles.path}/zoom_${z}/${x}_${y}.webp`:this.map.tiles.remotePath?`${this.map.tiles.remotePath}/zoom_${z}/${x}_${y}.webp`:`https://raw.githubusercontent.com/apollyon-sys/wardogs-calculator/${this.revision}/maps/tiles/${this.map.id}/zoom_${z}/${x}_${y}.webp`;
     return record;
   }
   draw(){if(this.dead||this.pending)return;this.pending=requestAnimationFrame(now=>{
@@ -116,7 +120,7 @@ export class WardogsMap {
   pin(point,label,color,outline=false){
     if(!point)return;const p=this.screen(point),c=this.ctx;
     if(p.x<-80||p.x>this.width+80||p.y<-80||p.y>this.height+80)return;
-    c.beginPath();c.arc(p.x,p.y,outline?6:11,0,Math.PI*2);c.fillStyle=outline?'#141a18':color;c.fill();c.strokeStyle=outline?color:'#101411';c.lineWidth=outline?2:3;c.stroke();
+    c.beginPath();if(!outline&&label.startsWith('GUN')){c.rect(p.x-10,p.y-10,20,20);}else if(!outline&&label==='TARGET'){c.moveTo(p.x,p.y-13);c.lineTo(p.x+13,p.y);c.lineTo(p.x,p.y+13);c.lineTo(p.x-13,p.y);c.closePath();}else c.arc(p.x,p.y,outline?6:11,0,Math.PI*2);c.fillStyle=outline?'#141a18':color;c.fill();c.strokeStyle=outline?color:'#101411';c.lineWidth=outline?2:3;c.stroke();
     if(!outline){c.beginPath();c.moveTo(p.x-17,p.y);c.lineTo(p.x+17,p.y);c.moveTo(p.x,p.y-17);c.lineTo(p.x,p.y+17);c.strokeStyle=color;c.lineWidth=1.5;c.stroke();}
     this.label(label,p.x+19,p.y-15,color);
   }
