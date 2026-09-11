@@ -2074,9 +2074,9 @@
       "sourceSha256": "2f58e26d45cc6dae3ab3a301adb6a2e6e3daea39ecb8de33c796c14e2b3f2841"
     }
   },
+  "upstreamEvidenceLabel": "VERIFIED",
   "sampleStrideQuads": 2,
   "sourceRevision": "b1463dab45fb7871a893f14d17f0064ef48e3724",
   "gameBuild": "Not recorded by source; current game validation pending",
-  "accuracy": "Community collision terrain; absolute datum unverified",
-  "upstreamEvidenceLabel": "VERIFIED"
+  "accuracy": "Community collision terrain; absolute datum unverified"
 }
