@@ -8,7 +8,7 @@ body{--rail-width:64px}
 .app-rail .rail-game{padding-left:2px;padding-right:2px;gap:10px}
 .app-rail .rail-game>img{display:block!important;flex:none;width:26px;height:26px;margin-left:8px}
 .app-rail .rail-link .icon{flex:none}.app-rail .rail-link>span[aria-hidden=true]{opacity:1!important;pointer-events:none}
-.app-rail .rail-brand>span,.app-rail .rail-link>span,.app-rail .rail-section-label,.app-rail .rail-footer{opacity:0;pointer-events:none;transition:opacity 100ms ease;transform:translateX(-4px)}
+.app-rail .rail-brand>span,.app-rail .rail-link>span,.app-rail .rail-section-label,.app-rail .rail-footer{opacity:0;pointer-events:none;transition:opacity 180ms ease 120ms;transform:translateX(0)}
 .app-rail:hover .rail-brand>span,.app-rail:has(:focus-visible) .rail-brand>span,.app-rail:hover .rail-link>span,.app-rail:has(:focus-visible) .rail-link>span,.app-rail:hover .rail-section-label,.app-rail:has(:focus-visible) .rail-section-label,.app-rail:hover .rail-footer,.app-rail:has(:focus-visible) .rail-footer{opacity:1;pointer-events:auto;transform:translateX(0);transition:opacity 140ms ease 90ms,transform 180ms ease 60ms}
 .app-rail .rail-section-label{min-height:43px;white-space:nowrap}
 .app-rail .rail-footer{white-space:nowrap;min-width:168px}

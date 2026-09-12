@@ -1,3 +1,10 @@
+# Dropzone 2.2.2
+
+- Keep sidebar labels visible until the navigation pane begins closing, with no workspace resize.
+- Compact WARDOGS Damage Lab into a settings sidebar and comparison area, with weapon-type filters and collapsible advanced comparisons.
+- Rework the WARDOGS unlock planner with weapon cards, type filters, and a compact budget and weapon-details panel.
+- Preserve existing reference calculations and explicitly unavailable equipment data. No new in-game accuracy claims.
+
 # Dropzone 2.2.1
 
 - Remove Game tools, local-only feedback, connection-status panel, and second-screen hosting.
