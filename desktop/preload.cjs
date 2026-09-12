@@ -3,12 +3,16 @@ const {contextBridge,ipcRenderer}=require('electron');
 let startupRevealed=false;const startupCallbacks=new Set();
 ipcRenderer.once('startup-reveal',()=>{startupRevealed=true;for(const callback of startupCallbacks)callback();startupCallbacks.clear();});
 contextBridge.exposeInMainWorld('rift',Object.freeze({
+  quickPanel:input=>ipcRenderer.invoke('quick-panel',input),
+  onQuickPanel:callback=>{const listener=(_event,value)=>callback(value);ipcRenderer.on('quick-panel-status',listener);return ()=>ipcRenderer.removeListener('quick-panel-status',listener);},
   metaforgePanel:input=>ipcRenderer.invoke('metaforge-panel',input),
   onMetaForgeStatus:callback=>{if(typeof callback!=='function')return ()=>{};const listener=(_event,value)=>callback(value);ipcRenderer.on('metaforge-status',listener);return ()=>ipcRenderer.removeListener('metaforge-status',listener);},
   games:()=>ipcRenderer.invoke('games'),
   loadouts:options=>ipcRenderer.invoke('loadouts',options),
   media:options=>ipcRenderer.invoke('media',options),
   patches:options=>ipcRenderer.invoke('patches',options),
+  personalIntel:input=>ipcRenderer.invoke('personal-intel',input),
+  squad:input=>ipcRenderer.invoke('squad',input),
   siege:options=>ipcRenderer.invoke('siege',options),
   wardogs:options=>ipcRenderer.invoke('wardogs',options),
   wardogsTerrain:resource=>ipcRenderer.invoke('wardogs-terrain',resource),

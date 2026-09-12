@@ -900,8 +900,25 @@
       "velocity": 950,
       "effectiveRange": 400,
       "caliber": "5.56x45mm",
-      "falloff": null,
-      "zones": {},
+      "falloff": {
+        "start": 400,
+        "end": 1200,
+        "floor": 0.2
+      },
+      "zones": {
+        "Head": 2.35,
+        "Neck": 1.7625,
+        "Upper torso": 1.1,
+        "Middle torso": 1,
+        "Lower torso": 0.95,
+        "Pelvis": 0.9,
+        "Upper arm": 0.54,
+        "Upper leg": 0.54,
+        "Lower arm": 0.45,
+        "Lower leg": 0.45,
+        "Hand": 0.27,
+        "Foot": 0.27
+      },
       "source": "https://metaforge.app/wardogs/database/weapons/galil",
       "checkedAt": "2026-09-11"
     }

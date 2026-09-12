@@ -19,6 +19,8 @@ http.createServer(async(req,res)=>{
       if(u.pathname==='/api/games')data=games.list();
       else if(u.pathname==='/api/loadouts')data=await games.builds(Object.fromEntries(u.searchParams));
       else if(u.pathname==='/api/media')data=await services.media.list(Object.fromEntries(u.searchParams));
+      else if(u.pathname==='/api/squad'&&req.method==='POST'){let raw='';for await(const chunk of req){raw+=chunk;if(raw.length>16000)throw Error('Request too large.');}const input=JSON.parse(raw);data=process.env.DROPZONE_SQUAD_LOCAL==='1'?await fetch('http://127.0.0.1:4195/api/squad',{method:'POST',headers:{'Content-Type':'application/json'},body:raw}).then(r=>r.json()):await require('../core/squad-client.cjs').squadRequest(input);}
+      else if(u.pathname==='/api/personal-intel'&&req.method==='POST'){let raw='';for await(const chunk of req){raw+=chunk;if(raw.length>16000)throw Error('Request too large.');}data=await services.personalIntel(JSON.parse(raw));}
       else if(u.pathname==='/api/patches')data=await services.patches.list(Object.fromEntries(u.searchParams));
       else if(u.pathname==='/api/siege')data=await services.siege.get(Object.fromEntries(u.searchParams));
       else if(u.pathname==='/api/wardogs')data=await services.wardogs.get(Object.fromEntries(u.searchParams));

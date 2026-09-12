@@ -36,6 +36,6 @@ function createServices({cacheDir,bundleDir,leagueCacheDir=path.join(cacheDir,'l
     ]),
     ...CHANNELS.map(c=>({id:c.id,name:c.name+' · YouTube',scope:'Official channel uploads',sourceUrl:c.url,run:()=>media.feeds.get(c.id).get(true),detail:()=> 'Recent public uploads from the verified official channel. Some uploads are highlights, Shorts, or game announcements.'}))
   ]);
-  return {provider,cod,finals,media,games,updates,patches,wardogs,siege,modes:MODES};
+  return {provider,cod,finals,media,games,updates,patches,wardogs,siege,personalIntel:require('./personal-intel.cjs').createPersonalIntel(patches),modes:MODES};
 }
 module.exports={createServices};

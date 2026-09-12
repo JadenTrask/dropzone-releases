@@ -1,4 +1,4 @@
-const {app,BrowserWindow,WebContentsView,ipcMain,dialog,shell,clipboard,session,powerMonitor}=require('electron');
+const {app,BrowserWindow,WebContentsView,ipcMain,dialog,shell,clipboard,session,powerMonitor,globalShortcut,screen}=require('electron');
 const path=require('node:path');
 const fs=require('node:fs/promises');
 const {createServices}=require('../core/services.cjs');
@@ -11,7 +11,7 @@ const profileNames=['Dropzone','dropzone',"Truck's Build Builder",'trucks-build-
 for(const old of profileNames){const dir=path.join(app.getPath('appData'),old);if(fsSync.existsSync(dir)){app.setPath('userData',dir);break;}}
 // Development QA can run beside the installed app without touching its saves.
 if(!app.isPackaged&&process.argv.includes('--isolated-preview')){
-  const previewProfile=path.join(require('node:os').tmpdir(),'dropzone-native-205');
+  const previewProfile=path.join(require('node:os').tmpdir(),'dropzone-native-210');
   fsSync.mkdirSync(previewProfile,{recursive:true});
   app.setPath('userData',previewProfile);app.setPath('sessionData',previewProfile);
 }
@@ -21,11 +21,12 @@ let window,provider,games,services,appUpdates;
 const allowed=new Set(['lolalytics.com','mobalytics.gg','www.metasrc.com','www.leagueoflegends.com','developer.riotgames.com','codmunity.gg','www.callofduty.com','thefinalsloadout.com','www.reachthefinals.com','www.youtube.com','lolesports.com','www.callofdutyleague.com','callofduty.worldseriesofwarzone.com','support.activision.com','wardogs-artillery.com','wardogs.tools','metaforge.app','github.com','store.steampowered.com','steamcommunity.com','steamstore-a.akamaihd.net','gzw-data.dev','gray-zone-warfare.fandom.com','gzwtacmap.com','www.grayzonewarfare.com','www.ubisoft.com','dropzonecompanion.com','sonsoftheforest.wiki.gg']);
 function safeSource(value){try{const u=new URL(value);return u.protocol==='https:'&&allowed.has(u.hostname)&&!u.username&&!u.password;}catch{return false;}}
 if(!app.requestSingleInstanceLock())app.quit();
-app.on('second-instance',()=>{services?.updates.check();appUpdates?.check();const visible=window;if(visible&&!visible.isDestroyed()){if(visible.isMinimized())visible.restore();visible.focus();}});
+app.on('second-instance',()=>{services?.updates.check();appUpdates?.check();const visible=window;if(visible&&!visible.isDestroyed()){if(visible.isMinimized())visible.restore();visible.show();visible.focus();}});
 app.whenReady().then(()=>{
   services=createServices({cacheDir:path.join(app.getPath('userData'),'feeds'),leagueCacheDir:path.join(app.getPath('userData'),'cache'),codCacheDir:path.join(app.getPath('userData'),'cod-cache'),bundleDir:path.join(__dirname,'../app/data')});
   ({provider,games}=services);
   window=new BrowserWindow({width:1480,height:980,minWidth:1000,minHeight:720,show:false,frame:false,backgroundColor:'#0b0c10',title:'Dropzone',icon:path.join(__dirname,'../app/assets/icon.png'),webPreferences:{preload:path.join(__dirname,'preload.cjs'),contextIsolation:true,nodeIntegration:false,sandbox:true,webSecurity:true}});
+  if(!app.isPackaged&&process.argv.includes('--isolated-preview'))window.on('page-title-updated',event=>{event.preventDefault();window.setTitle('Dropzone 2.1.0 QA');});
   coordinateStartup({main:window});
   appUpdates=new AppUpdateService({version:app.getVersion(),feed:require('../release-feed.json').feed,packaged:app.isPackaged,installed:fsSync.existsSync(path.join(process.resourcesPath,'dropzone-installed')),createUpdater:()=>new (require('electron-updater').NsisUpdater)()});
   appUpdates.on('status',state=>{if(!window.isDestroyed()&&!window.webContents.isDestroyed())window.webContents.send('app-update-status',state);});
@@ -41,12 +42,17 @@ app.whenReady().then(()=>{
   window.webContents.on('will-navigate',(e)=>e.preventDefault());
   const trusted=e=>e.sender===window.webContents&&e.senderFrame===window.webContents.mainFrame;
   const handle=(name,fn)=>ipcMain.handle(name,(e,...args)=>{if(!trusted(e))throw new Error('Untrusted caller.');return fn(...args);});
+  const quickPanel=require('./quick-panel.cjs').createQuickPanel({window,globalShortcut,screen});
+  handle('quick-panel',input=>quickPanel.command(input));
+  window.on('closed',()=>quickPanel.destroy());
   const metaforgePanel=require('./metaforge-panel.cjs').createMetaForgePanel({main:window,WebContentsView,BrowserWindow,session});
   handle('metaforge-panel',input=>metaforgePanel.command(input));
   handle('games',()=>games.list());
   handle('loadouts',options=>games.builds(options));
   handle('media',options=>services.media.list(options));
   handle('patches',options=>services.patches.list(options));
+  handle('personal-intel',input=>services.personalIntel(input));
+  handle('squad',input=>require('../core/squad-client.cjs').squadRequest(input));
   handle('siege',options=>services.siege.get(options));
   handle('wardogs',options=>services.wardogs.get(options));
   handle('wardogs-terrain',resource=>require('../core/wardogs-terrain-files.cjs').readTerrainFile(resource));

@@ -77,7 +77,9 @@
     "videos": false,
     "pages": [
       "progression",
-      "damage"
+      "damage",
+      "planner",
+      "squad"
     ]
   },
   {
