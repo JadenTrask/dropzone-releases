@@ -3,8 +3,6 @@ const {contextBridge,ipcRenderer}=require('electron');
 let startupRevealed=false;const startupCallbacks=new Set();
 ipcRenderer.once('startup-reveal',()=>{startupRevealed=true;for(const callback of startupCallbacks)callback();startupCallbacks.clear();});
 contextBridge.exposeInMainWorld('rift',Object.freeze({
-  workspace:input=>ipcRenderer.invoke('workspace-sync',input),
-  command:input=>ipcRenderer.invoke('command-center',input),
   quickPanel:input=>ipcRenderer.invoke('quick-panel',input),
   onQuickPanel:callback=>{const listener=(_event,value)=>callback(value);ipcRenderer.on('quick-panel-status',listener);return ()=>ipcRenderer.removeListener('quick-panel-status',listener);},
   metaforgePanel:input=>ipcRenderer.invoke('metaforge-panel',input),

@@ -1,3 +1,10 @@
+# Dropzone 2.2.1
+
+- Remove Game tools, local-only feedback, connection-status panel, and second-screen hosting.
+- Keep saved builds inside League; remove separate saved-loadout navigation and other games’ save controls.
+- Move Accessibility and startup destination selection into Settings. Existing local records are preserved.
+- Smooth sidebar expansion over the workspace without resizing the map or page. Support keyboard focus and reduced motion.
+
 ## 2.2.0 — Game tools
 
 - Remove the Tonight dashboard, VALORANT and Marvel Rivals at the owner's request.

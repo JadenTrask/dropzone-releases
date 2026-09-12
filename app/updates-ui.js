@@ -33,7 +33,7 @@ function badge(){
   const b=$('#updates-button');if(!b||!data)return;
   const issues=data.rows.filter(attention).length;
   b.dataset.status=data.running?'checking':issues?'warning':'checked';
-  b.textContent=issues?`Sources · ${issues}`:'Sources';
+  (b.querySelector('span')||b.appendChild(document.createElement('span'))).textContent=issues?`Sources · ${issues}`:'Sources';
   b.title=data.running?'Checking game sources':issues?`${issues} source${issues===1?'':'s'} need attention`:'Game sources and review preferences';
 }
 
@@ -126,7 +126,7 @@ async function poll(refresh=false){
     if(next.finishedAt&&next.finishedAt!==lastFinished){lastFinished=next.finishedAt;window.dispatchEvent(new CustomEvent('tbb-sources-updated',{detail:next}));}
   }catch(error){
     if(refresh||active)toast(error.message);
-    const b=$('#updates-button');if(b){b.textContent='Sources unavailable';b.dataset.status='warning';}
+    const b=$('#updates-button');if(b){(b.querySelector('span')||b.appendChild(document.createElement('span'))).textContent='Sources unavailable';b.dataset.status='warning';}
   }finally{
     polling=false;
     const button=$('#check-all-sources');if(button)button.disabled=!!data?.running;
@@ -148,3 +148,4 @@ document.addEventListener('click',event=>{
   try{saveMutedReviews(localStorage,next);muted=next;badge();render();}catch{toast('Could not save this preference.');}
 });
 export function startUpdatePolling(){poll();setInterval(()=>poll(),3000);document.addEventListener('visibilitychange',()=>{if(!document.hidden)poll();});}
+

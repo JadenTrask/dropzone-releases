@@ -31,9 +31,9 @@ app.whenReady().then(()=>{
   appUpdates=new AppUpdateService({version:app.getVersion(),feed:require('../release-feed.json').feed,packaged:app.isPackaged,installed:fsSync.existsSync(path.join(process.resourcesPath,'dropzone-installed')),createUpdater:()=>new (require('electron-updater').NsisUpdater)()});
   appUpdates.on('status',state=>{if(!window.isDestroyed()&&!window.webContents.isDestroyed())window.webContents.send('app-update-status',state);});
   window.removeMenu();
-  let commandService;
-  session.defaultSession.setPermissionCheckHandler((wc,permission,origin,details)=>Boolean(wc===window.webContents&&details.isMainFrame&&permission==='media'&&details.mediaType!=='video'&&commandService?.microphoneAllowed()));
-  session.defaultSession.setPermissionRequestHandler((wc,permission,callback,details)=>callback(Boolean(wc===window.webContents&&details.isMainFrame&&permission==='media'&&commandService?.microphoneAllowed()&&!(details.mediaTypes||[]).includes('video'))));
+
+  session.defaultSession.setPermissionCheckHandler(()=>false);
+  session.defaultSession.setPermissionRequestHandler((wc,permission,callback)=>callback(false));
   // YouTube requires desktop WebViews to identify the embedding application.
   // Only the YouTube embed navigation gets our own Windows application ID;
   // this does not claim a public website, API partnership, or a user identity.
@@ -44,10 +44,6 @@ app.whenReady().then(()=>{
   window.webContents.on('will-navigate',(e)=>e.preventDefault());
   const trusted=e=>e.sender===window.webContents&&e.senderFrame===window.webContents.mainFrame;
   const handle=(name,fn)=>ipcMain.handle(name,(e,...args)=>{if(!trusted(e))throw new Error('Untrusted caller.');return fn(...args);});
-  commandService=require('./command-service.cjs').createCommandService({window,app,dialog,shell});
-  handle('command-center',input=>commandService.command(input));
-  handle('workspace-sync',input=>require('../core/workspace-client.cjs').workspaceRequest(input));
-  window.on('closed',()=>commandService.stop());
   const quickPanel=require('./quick-panel.cjs').createQuickPanel({window,globalShortcut,screen});
   handle('quick-panel',input=>quickPanel.command(input));
   window.on('closed',()=>quickPanel.destroy());
