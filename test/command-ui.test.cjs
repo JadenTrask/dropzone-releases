@@ -1,0 +1,10 @@
+const {test}=require('node:test'),assert=require('node:assert/strict');
+test('Session UI saves a note, finds it, records goal progress and restores navigation without launching apps',async()=>{
+ const {JSDOM}=await import('jsdom');const dom=new JSDOM('<body><nav class="rail-main"></nav><div class="global-tools"></div><div id="hub-app"></div><div id="toast"></div></body>',{url:'http://localhost/'});
+ const w=dom.window;for(const key of ['window','document','localStorage','sessionStorage','FormData','Event','CustomEvent'])global[key]=key==='window'?w:w[key];w.HTMLDialogElement.prototype.showModal=function(){this.open=true;};w.HTMLDialogElement.prototype.close=function(){this.open=false;};
+ const routes=[];const ui=await import('../app/command-center.js');ui.initCommandCenter(require('../core/games.json'),(...args)=>routes.push(args));ui.mountCommandCenter('finals','build');assert.match(document.querySelector('#hub-app').textContent,/THE FINALS/);assert.doesNotMatch(document.querySelector('#hub-app').textContent,/Tonight|VALORANT|Marvel Rivals/);
+ const click=selector=>document.querySelector(selector).click(),flush=()=>new Promise(r=>setTimeout(r,25));
+ click('[data-tab="note"]');click('[data-cc="new"]');let f=document.querySelector('#cc-editor');f.elements.title.value='Ascent practice';f.elements.body.value='Clear the angle before using utility.';f.dispatchEvent(new w.Event('submit',{bubbles:true,cancelable:true}));await flush();assert.match(document.querySelector('#cc-content').textContent,/Ascent practice/);
+ click('[data-tab="goal"]');click('[data-cc="new"]');f=document.querySelector('#cc-editor');f.elements.title.value='Clean attempts';f.elements.total.value='10';f.dispatchEvent(new w.Event('submit',{bubbles:true,cancelable:true}));await flush();click('[data-cc="open"]');click('[data-cc="progress"]');f=document.querySelector('#cc-progress-form');f.elements.current.value='5';f.dispatchEvent(new w.Event('submit',{bubbles:true,cancelable:true}));await flush();assert.match(document.querySelector('#cc-content').textContent,/5 \/ 10/);assert.equal(routes.length,0);
+ ui.leaveCommandCenter();w.dispatchEvent(new w.Event('beforeunload'));
+});

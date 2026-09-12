@@ -1,13 +1,16 @@
 # Dropzone
 
-Version 2.0.4 · Windows x64
+Version 2.2.0 · Windows x64 · local, unpublished build
 
-A Windows companion for League of Legends, Call of Duty, THE FINALS, WARDOGS, Rainbow Six Siege, and Sons of the Forest. Gray Zone Warfare is under construction.
+A desktop companion for League, COD, THE FINALS, WARDOGS and Siege. Existing Sons of the Forest support is preserved without new game-specific features.
 
-## New in 2.0.4
+## New in 2.2.0
 
-- Live MetaForge progression, profile and career pages inside an isolated desktop browser panel.
-- Reload and an external-browser fallback; MetaForge sign-in remains separate from Dropzone.
+Game-first workspaces, linked builds and notes, tactics boards, squad drafts and LAN phone pairing, practice timers, goals, calendar, clip tools, settings backups, performance imports and portable content packs. The Tonight dashboard, VALORANT and Marvel Rivals have been removed at the owner's request; optional session tracking lives under Game tools → More tools → History. The WARDOGS invite code is visible and its room layout is aligned. Height correction is removed; heights are reference only.
+
+See [the feature and verification handoff](docs/SESSION-CENTER-2.2.0.md) for run instructions, data sources and explicit integration limits. Encrypted workspace sync is implemented and tested locally but is not published. Automatic game-account progression sync is not available.
+
+## Earlier releases
 
 ### Included from 2.0.3
 
@@ -17,7 +20,7 @@ A Windows companion for League of Legends, Call of Duty, THE FINALS, WARDOGS, Ra
 ### Included from 2.0.2
 
 - WARDOGS: Zestafona, offline community terrain estimates, manual heights and structure offsets.
-- Prominent sight distance with an optional experimental SPH-2 height correction. Mortar correction remains unavailable without calibration.
+- Prominent horizontal sight distance and original flat-ground firing tables for mortar and SPH-2. Heights are informational only.
 - Clear gun/target placement, automatic gun lock, drag-to-pan, undo, fit shot and per-map state.
 - A Blender-rendered 3D opening ident that transitions into the ready app.
 

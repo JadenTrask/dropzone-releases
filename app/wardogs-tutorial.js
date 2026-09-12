@@ -7,7 +7,7 @@ export const TOUR_STEPS=[
  ['[data-wd-tool="target"]','Pick a target','Click a target on the map. Click another location for the next shot; your gun stays locked.'],
  ['#wd-map-canvas','Move around the map','Drag to pan and scroll to zoom. A drag does not place a marker. Cursor coordinates appear beside your pointer.'],
  ['#wd-result','Read your firing settings','Sight distance is the distance to dial into the weapon when a supported solution is available. Ground range is horizontal distance. Barrel elevation is an angle in MIL, not terrain height. Read the accuracy or unavailable message before firing.'],
- ['#wd-height-summary','Check the height difference','Positive means the target is above your gun; negative means below. Under Shot, choose community terrain, enter manual heights, or explicitly assume flat ground. SPH-2 height correction is experimental; mortar correction needs calibration.'],
+ ['#wd-height-summary','Check the height difference','Positive means the target is above your gun; negative means below. Under Shot, choose community terrain, enter manual heights, or explicitly assume flat ground. Heights are for reference only. Firing settings always use flat-ground tables.'],
  ['.wd-view-tools','Adjust or start another shot','Fit gun and target brings both into view. Clear target keeps your gun. Undo restores your last placement.'],
  ['[data-wd-action="tutorial"]','Ready when you are','This Tutorial button replays the guide whenever you need it. Your positions, map view and firing settings have not been changed.']
 ];

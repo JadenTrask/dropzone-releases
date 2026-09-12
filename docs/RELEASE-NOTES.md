@@ -1,3 +1,20 @@
+## 2.2.0 — Game tools
+
+- Remove the Tonight dashboard, VALORANT and Marvel Rivals at the owner's request.
+- Shared session planning, builds, playbooks, notes, goals, drills, clips, calendar and performance tools.
+- Reviewed content packs, recoverable backups and local-network squad/phone pairing.
+- Opt-in encrypted workspace sync with conflict-preserving merges.
+- Visible WARDOGS invite code and aligned squad controls. Height correction stays removed.
+- See SESSION-CENTER-2.2.0.md for exact capabilities and verification boundaries.
+
+# Dropzone 2.1.2
+
+- Remove experimental height correction, its switch, candidate solver and bundled correction payloads.
+- Mortar and SPH-2 always show horizontal distance and the original flat-ground barrel settings, regardless of terrain or manual heights.
+- Keep terrain height context clearly labeled as reference only.
+
+Earlier release notes below describe historical behavior.
+
 # Dropzone 2.1.1
 
 Includes the complete 2.1.0 gameplay update below, plus a verified correction for personal patch alerts when Steam supplies a CDN announcement URL. Dropzone now matches the announcement in the official public Steam news feed and reads its full contents. Invalid range-breakpoint input also exits safely.
@@ -55,3 +72,4 @@ Saved builds, locations and preferences retain the existing profile.
 - Advance the app version to 2.0.1 so existing 2.0.0 installations can detect the update.
 
 Saved locations and map preferences are preserved.
+

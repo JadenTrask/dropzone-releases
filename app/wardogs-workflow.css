@@ -45,12 +45,6 @@
 .wd-result .wd-sight>strong{font-size:36px;color:var(--hub-accent,#bbd9a0);line-height:1.05}
 .wd-result .wd-sight>span{font-size:10px;letter-spacing:.06em}
 .wd-result .wd-sight p,.wd-result .wd-sight>small{font-size:11px;line-height:1.35;margin:5px 0 0}
-.wd-result .wd-sight[data-state=experimental]{border-color:#d2bb63;background:#d2bb630d}
-.wd-result .wd-sight[data-state=experimental]>strong{color:#e9ce83}
-.wd-experimental{display:flex!important;align-items:center;gap:8px;font-size:12px!important}
-.wd-experimental input{width:auto!important;accent-color:#e9ce83}
-#wd-experimental-wrap{padding-bottom:10px}
-#wd-experimental-wrap>small{display:block;color:#afb6b0;font-size:11px;line-height:1.4;margin:4px 0}
 .wd-result .wd-elevation>strong{font-size:24px}
 .wd-result .wd-elevation{padding-top:4px}
 #hub-app .wd-fixed .wd-result #wd-sight{display:block;flex:1 0 100%}

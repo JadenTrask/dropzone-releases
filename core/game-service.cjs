@@ -10,7 +10,7 @@ class GameService {
     const ids = new Set();
     for (const game of this.games) {
       if (!/^[a-z0-9-]+$/.test(game.id) || ids.has(game.id)) throw new Error('Invalid or duplicate game ID.');
-      if (!['collection','league','loadouts','finals','calculator','tacmap','siege','forest'].includes(game.kind)) throw new Error('Unknown game renderer.');
+      if (!['collection','league','loadouts','finals','calculator','tacmap','siege','forest','arena'].includes(game.kind)) throw new Error('Unknown game renderer.');
       ids.add(game.id);
       const modes=new Set();
       for(const mode of game.modes||[]) {
@@ -33,7 +33,7 @@ class GameService {
     const mode=game.modes?.find(m=>m.id===options.mode);
     if(!mode || !['loadouts','finals'].includes(game.kind))throw new Error('This game mode is not supported by the loadout provider.');
     const provider=this.providers.get(game.provider);
-    if(!provider)throw new Error('This game’s build provider is not installed.');
+    if(!provider)throw new Error('This gameâ€™s build provider is not installed.');
     const result=await provider.getBuilds({feed:mode.feed,refresh:options.refresh===true||options.refresh==='true'});
     return {...result,game:game.id,mode:mode.id};
   }

@@ -26,6 +26,7 @@ function applyTextSize(value,save=true){
  syncSelects();
  if(save)persist('rf-text-size',value);
 }
+window.addEventListener('dropzone-text-size',ev=>applyTextSize(ev.detail.value,ev.detail.save===true));
 function stepTextSize(direction){applyTextSize(textSizes[Math.max(0,Math.min(textSizes.length-1,textSizes.indexOf(textSize)+direction))]);}
 const prefs=stored('rf-preferences',{});
 const state={catalog:null,modes:[],view:'lab',champion:prefs.champion||'Ahri',mode:prefs.mode||'ranked',role:'default',tier:prefs.tier||'emerald_plus',region:prefs.region||'all',strategy:'popular',build:null,loading:true,request:0,vs:null,threats:[],favorites:stored('rf-favorites',[]),saved:stored('rf-saved',[]),pickerType:'champion',pickerFilter:'All',rosterFilter:'All',rosterSearch:'',snapshot:false,overrides:[],lastError:null};

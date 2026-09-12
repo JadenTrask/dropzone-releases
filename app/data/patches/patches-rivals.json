@@ -1,0 +1,73 @@
+{
+  "game": "rivals",
+  "source": "NetEase Games",
+  "sourceUrl": "https://www.marvelrivals.com/news/",
+  "sourceUpdatedAt": "2026-09-10T07:33:37.000Z",
+  "articles": [
+    {
+      "title": "Marvel Rivals Version 20260911 Patch Notes - Season 10 Arrives",
+      "publishedAt": "2026-09-10T07:33:37.000Z",
+      "dateLabel": "Published",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1843481262691410",
+      "excerpt": "Greetings, Rivals! After assassinating two deities back-to-back, the mysterious God Butcher has finally revealed his true face. This update beginsâ€¦",
+      "kind": "Patch notes"
+    },
+    {
+      "title": "Season 10: Butcher's Blasphemy // Dev Vision Vol. 21 | Marvel Rivals",
+      "publishedAt": "2026-09-10T07:33:23.000Z",
+      "dateLabel": "Published",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1843481262691409",
+      "excerpt": "Guangguang and Zhiyong are back again and ready to dive into Dev Vision Vol. 21! 📺 Tune in now toâ€¦",
+      "kind": "Announcement"
+    },
+    {
+      "title": "Marvel Rivals Version 20260911 Balance Post",
+      "publishedAt": "2026-09-10T07:33:06.000Z",
+      "dateLabel": "Published",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1843481262691408",
+      "excerpt": "ADJUSTMENTS A new wave of adjustments is on the way. Scarlet Witch is weaving a completely new curse, Black Catâ€¦",
+      "kind": "Announcement"
+    },
+    {
+      "title": "Marvel Rivals Version 20260903 Patch Notes",
+      "publishedAt": "2026-09-03T06:26:19.000Z",
+      "dateLabel": "Published",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1842846814442388",
+      "excerpt": "Greetings, Rivals! We're thrilled to announce the upcoming patch drops on September 3rd, 2026, at 09 : 00 : 00â€¦",
+      "kind": "Patch notes"
+    },
+    {
+      "title": "Marvel Rivals Version 20260827 Patch Notes",
+      "publishedAt": "2026-08-27T07:07:07.000Z",
+      "dateLabel": "Published",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1842212951299116",
+      "excerpt": "Greetings, Rivals! We're thrilled to announce the upcoming patch drops on August 27th, 2026, at 09 : 00 : 00â€¦",
+      "kind": "Patch notes"
+    },
+    {
+      "title": "Marvel Rivals Version 20260820 Patch Notes",
+      "publishedAt": "2026-08-20T06:43:51.000Z",
+      "dateLabel": "Published",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1841579228664552",
+      "excerpt": "Greetings, Rivals! We're thrilled to announce the upcoming patch drops on August 20th, 2026, at 09 : 00 : 00â€¦",
+      "kind": "Patch notes"
+    },
+    {
+      "title": "Marvel Rivals Version 20260813 Patch Notes",
+      "publishedAt": "2026-08-13T06:11:22.000Z",
+      "dateLabel": "Published",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1840944183775879",
+      "excerpt": "Greetings, Rivals! We're thrilled to announce the upcoming patch drops on August 13th, 2026, at 09 : 00 : 00â€¦",
+      "kind": "Patch notes"
+    },
+    {
+      "title": "Marvel Rivals Version 20260807 Patch Notes - Season 9.5 Arrives",
+      "publishedAt": "2026-08-07T06:32:34.000Z",
+      "dateLabel": "Published",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1840310314343974",
+      "excerpt": "Greetings, Rivals! Welcome to Season 9.5 of Marvel Rivals! Desire is the prologue to power, and the precipice of corruption.â€¦",
+      "kind": "Patch notes"
+    }
+  ],
+  "fetchedAt": "2026-09-12T06:20:07.872Z"
+}

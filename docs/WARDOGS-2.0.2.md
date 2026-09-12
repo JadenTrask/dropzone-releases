@@ -1,3 +1,5 @@
+> Historical 2.0.2 documentation: experimental height correction and its bundled candidate data were removed in 2.1.2. Current firing settings use flat-ground tables only; heights are informational.
+
 # WARDOGS calculator 2.0.2
 
 ## Source and scope

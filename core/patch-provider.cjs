@@ -13,7 +13,7 @@ const SOURCES = {
 function excerpt(s) {
   const clean=text(decode(s).replace(/\[\/?[^\]]+\]/g,' ').replace(/https?:\/\/\S+/g,' '));
   const words=clean.split(/\s+/);
-  return words.slice(0,20).join(' ')+(words.length>20?'…':'');
+  return words.slice(0,20).join(' ')+(words.length>20?'â€¦':'');
 }
 function officialUrl(value,origin,prefix) {
   const u=new URL(value,origin);
@@ -29,7 +29,7 @@ function envelope(game,articles) {
 }
 function normalizeLeague(html) {
   const json=html.match(/<script\b[^>]*id="__NEXT_DATA__"[^>]*>([\s\S]*?)<\/script>/)?.[1];
-  if(!json) throw new Error('Riot’s patch index changed format.');
+  if(!json) throw new Error('Riotâ€™s patch index changed format.');
   const entries=[];
   function walk(value) {
     if(!value||typeof value!=='object') return;
@@ -43,6 +43,23 @@ function normalizeLeague(html) {
   }
   walk(JSON.parse(json));
   return envelope('lol',entries);
+}
+function normalizeValorant(html) {
+  const json=html.match(/<script\b[^>]*id="__NEXT_DATA__"[^>]*>([\s\S]*?)<\/script>/)?.[1];
+  if(!json) throw new Error('Riotâ€™s patch index changed format.');
+  const entries=[];
+  function walk(value) {
+    if(!value||typeof value!=='object') return;
+    if(value.title&&value.publishedAt&&/\bpatch\b.*\bnotes\b/i.test(value.title)) {
+      const url=value.action?.payload?.url;
+      if(typeof url==='string'&&!/^https?:\/\/(?!playvalorant\.com)/i.test(url)&&!/teamfight|tft/i.test(value.title+url)) {
+        entries.push({title:text(value.title),publishedAt:iso(value.publishedAt),dateLabel:'Published',url:officialUrl(url,'https://playvalorant.com','/en-us/news/'),excerpt:excerpt(value.description?.body||''),kind:'Patch notes'});
+      }
+    }
+    for(const child of Object.values(value)) if(child&&typeof child==='object') walk(child);
+  }
+  walk(JSON.parse(json));
+  return envelope('valorant',entries);
 }
 function normalizeCod(html,game) {
   const tagName=game==='warzone'?'warzone':game;
@@ -88,7 +105,7 @@ class PatchProvider {
     };
     for(const [game,source] of Object.entries(SOURCES)) {
       if(options.disabledGames?.includes(game))continue;
-      const normalizer=game==='lol'?normalizeLeague:game==='finals'?normalizeFinals:game==='wardogs'?normalizeWardogsNews:game==='siege'?json=>normalizeWardogsNews(json,'siege',359550):game==='gray-zone'?json=>normalizeWardogsNews(json,'gray-zone',2479810):html=>normalizeCod(html,game);
+      const normalizer=game==='valorant'?normalizeValorant:game==='rivals'?json=>normalizeWardogsNews(json,'rivals',2767030):game==='lol'?normalizeLeague:game==='finals'?normalizeFinals:game==='wardogs'?normalizeWardogsNews:game==='siege'?json=>normalizeWardogsNews(json,'siege',359550):game==='gray-zone'?json=>normalizeWardogsNews(json,'gray-zone',2479810):html=>normalizeCod(html,game);
       this.feeds.set(game,new SourceCache({...options,id:'patches-'+game,url:source.feed||source.url,requestFn:['bo7','warzone','mw4'].includes(game)?codRequest:request,
         normalize:normalizer,validate:d=>d.game===game&&Array.isArray(d.articles)&&d.articles.length>0&&d.articles.every(a=>typeof a.title==='string'&&typeof a.url==='string'&&Number.isFinite(Date.parse(a.publishedAt)))}));
     }
@@ -98,4 +115,4 @@ class PatchProvider {
     return this.feeds.get(options.game).get(options.refresh===true||options.refresh==='true');
   }
 }
-module.exports={PatchProvider,SOURCES,normalizeLeague,normalizeCod,normalizeFinals,normalizeWardogsNews};
+module.exports={PatchProvider,SOURCES,normalizeLeague,normalizeCod,normalizeFinals,normalizeWardogsNews,normalizeValorant};

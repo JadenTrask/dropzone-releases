@@ -1,0 +1,21 @@
+const str=(v,n=1000)=>typeof v==='string'?v.trim().slice(0,n):'';
+const ids=v=>Array.isArray(v)?[...new Set(v.filter(x=>typeof x==='string'&&/^[a-zA-Z0-9_-]{1,80}$/.test(x)))].slice(0,200):[];
+export function workflowData(data){
+ const out={};
+ if(data.boards!==undefined){if(!Array.isArray(data.boards)||data.boards.length>12)throw Error('Use up to 12 map floors.');out.boards=data.boards.map(b=>({floor:str(b.floor,60),imageId:ids([b.imageId])[0]||''}));}
+
+ for(const key of ['map','floor','side','objective','matchup','lanePlan','itemAlternatives','winCondition','reinforcements','utilityPlan','rotationPlan','weapon','challengeAction','sessionTool','permission','author','category','conditions','patchScope'])if(data[key]!==undefined)out[key]=str(data[key],8000);
+ for(const key of ['sessionIds','collectedIds','preferredIds'])if(data[key]!==undefined)out[key]=ids(data[key]);
+ if(data.checklist!==undefined){if(!Array.isArray(data.checklist)||data.checklist.length>60)throw Error('Use up to 60 checklist items.');out.checklist=data.checklist.map(x=>({id:str(x.id,80)||crypto.randomUUID(),text:str(x.text,300),done:x.done===true})).filter(x=>x.text);}
+ if(data.attachments!==undefined){if(!Array.isArray(data.attachments)||data.attachments.length>12)throw Error('Use up to 12 attachments per entry.');out.attachments=data.attachments.map(x=>{if(!['image/png','image/jpeg','image/webp'].includes(x.type)||!ids([x.id]).length)throw Error('Invalid image attachment.');return {id:x.id,type:x.type,name:str(x.name,120)};});}
+ if(data.moments!==undefined){if(!Array.isArray(data.moments)||data.moments.length>100)throw Error('Use up to 100 clip notes.');out.moments=data.moments.map(x=>{if(!Number.isFinite(x.time)||x.time<0)throw Error('Invalid clip timestamp.');return {time:x.time,text:str(x.text,1000)};});}
+ if(data.location!==undefined){const p=data.location;if(!p||!Number.isFinite(p.x)||!Number.isFinite(p.y)||!['world','image'].includes(p.units))throw Error('Invalid linked location.');out.location={x:p.x,y:p.y,units:p.units,map:str(p.map,120),label:str(p.label,160)};}
+ if(data.goalBaseline!==undefined){out.goalBaseline={};for(const [id,n]of Object.entries(data.goalBaseline).slice(0,200))if(ids([id]).length&&Number.isFinite(n)&&n>=0)out.goalBaseline[id]=n;}
+ return out;
+}
+export function sessionEntries(state,session){return state.records.filter(r=>r.id!==session.id&&(session.links.includes(r.id)||(r.data.sessionIds||[]).includes(session.id)||(session.data.collectedIds||[]).includes(r.id)));}
+export function goalChanges(state,session){return state.records.filter(r=>r.kind==='goal'&&r.game===session.game&&r.id in (session.data.goalBaseline||{})).map(r=>({id:r.id,title:r.title,before:session.data.goalBaseline[r.id],after:r.data.current||0})).filter(r=>r.after!==r.before);}
+export function compatibleGoals(a,b){return a.game===b.game&&['mode','map','weapon'].every(key=>!a.data[key]||!b.data[key]||a.data[key].toLowerCase()===b.data[key].toLowerCase());}
+export function challengeGroups(records){const groups=[];for(const r of records.filter(r=>r.kind==='goal'&&(r.data.current||0)<(r.data.total||1))){const group=groups.find(g=>g.every(other=>compatibleGoals(r,other)));if(group)group.push(r);else groups.push([r]);}return groups;}
+export function validatePrerequisites(record,records){if(record.kind!=='goal')return;const all=new Map([...records,record].map(r=>[r.id,r]));const visit=(id,path)=>{if(path.has(id))throw Error('Goal prerequisites cannot form a loop.');const r=all.get(id);if(r?.kind!=='goal')return;for(const next of r.links||[])visit(next,new Set([...path,id]));};visit(record.id,new Set());}
+export function searchWorkspace(records,query){const tokens=query.toLowerCase().split(/\s+/).filter(Boolean);return records.map(r=>({record:r,score:tokens.reduce((score,t)=>score+(r.title.toLowerCase().includes(t)?4:0)+([r.body,r.tags,r.patch,r.data.map,r.data.objective,r.data.matchup,r.data.pick,r.data.conditions].join(' ').toLowerCase().includes(t)?1:0),0)})).filter(x=>!tokens.length||tokens.every(t=>[x.record.title,x.record.body,x.record.tags,x.record.patch,x.record.data.map,x.record.data.objective,x.record.data.matchup,x.record.data.pick,x.record.data.conditions].join(' ').toLowerCase().includes(t))).sort((a,b)=>b.score-a.score).map(x=>x.record);}

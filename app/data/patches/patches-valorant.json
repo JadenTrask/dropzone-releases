@@ -1,0 +1,73 @@
+{
+  "game": "valorant",
+  "source": "Riot Games",
+  "sourceUrl": "https://playvalorant.com/en-us/news/game-updates/",
+  "sourceUpdatedAt": "2026-09-01T13:00:00.000Z",
+  "articles": [
+    {
+      "title": "VALORANT Patch Notes 13.05",
+      "publishedAt": "2026-09-01T13:00:00.000Z",
+      "dateLabel": "Published",
+      "url": "https://playvalorant.com/en-us/news/game-updates/valorant-patch-notes-13-05",
+      "excerpt": "Pick’Ems for Champs soon, penalties for stream sniping and instalock tools, and future changes to the Agent Gear system.",
+      "kind": "Patch notes"
+    },
+    {
+      "title": "VALORANT Patch Notes 13.04",
+      "publishedAt": "2026-08-18T13:00:00.000Z",
+      "dateLabel": "Published",
+      "url": "https://playvalorant.com/en-us/news/game-updates/valorant-patch-notes-13-04",
+      "excerpt": "New map rotation and bug fixes for Agents and melee skins",
+      "kind": "Patch notes"
+    },
+    {
+      "title": "VALORANT Patch Notes 13.02",
+      "publishedAt": "2026-07-28T13:00:00.000Z",
+      "dateLabel": "Published",
+      "url": "https://playvalorant.com/en-us/news/game-updates/valorant-patch-notes-13-02",
+      "excerpt": "Phoenix ult change, new maps added to Retakes, and loads of bug fixes.",
+      "kind": "Patch notes"
+    },
+    {
+      "title": "VALORANT Patch Notes 13.01",
+      "publishedAt": "2026-07-14T13:00:00.000Z",
+      "dateLabel": "Published",
+      "url": "https://playvalorant.com/en-us/news/game-updates/valorant-patch-notes-13-01",
+      "excerpt": "Adjustments to Iso, Yoru, and Outlaw, and punishing rank manipulators.",
+      "kind": "Patch notes"
+    },
+    {
+      "title": "VALORANT Patch Notes 13.00",
+      "publishedAt": "2026-06-23T13:00:00.000Z",
+      "dateLabel": "Published",
+      "url": "https://playvalorant.com/en-us/news/game-updates/valorant-patch-notes-13-00",
+      "excerpt": "Act 4 starts now.",
+      "kind": "Patch notes"
+    },
+    {
+      "title": "VALORANT Patch Notes 12.11",
+      "publishedAt": "2026-06-09T13:00:00.000Z",
+      "dateLabel": "Published",
+      "url": "https://playvalorant.com/en-us/news/game-updates/valorant-patch-notes-12-11",
+      "excerpt": "A light little patch to end Act 3.",
+      "kind": "Patch notes"
+    },
+    {
+      "title": "VALORANT Patch Notes 12.10",
+      "publishedAt": "2026-05-27T13:00:00.000Z",
+      "dateLabel": "Published",
+      "url": "https://playvalorant.com/en-us/news/game-updates/valorant-patch-notes-12-10",
+      "excerpt": "New Skirmish maps and Masters London Pick’Ems!",
+      "kind": "Patch notes"
+    },
+    {
+      "title": "VALORANT Patch Notes 12.09",
+      "publishedAt": "2026-05-12T13:00:00.000Z",
+      "dateLabel": "Published",
+      "url": "https://playvalorant.com/en-us/news/game-updates/valorant-patch-notes-12-09",
+      "excerpt": "Neon and shotgun nerfs are here!",
+      "kind": "Patch notes"
+    }
+  ],
+  "fetchedAt": "2026-09-12T06:20:07.367Z"
+}
