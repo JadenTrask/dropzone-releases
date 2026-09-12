@@ -18,7 +18,7 @@ function createMetaForgePanel({main,WebContentsView,BrowserWindow,session}){
   isolated.on('will-download',event=>event.preventDefault());
   return preferences={session:isolated,sandbox:true,contextIsolation:true,nodeIntegration:false,webSecurity:true};
  }
- let view=null,popup=null,token=null,page='progression',timer=null;
+ let view=null,popup=null,token=null,page='progression',timer=null,failed=false;
  const emit=(status,message)=>{if(!main.isDestroyed()&&!main.webContents.isDestroyed())main.webContents.send('metaforge-status',{token,status,message});};
  const closePopup=()=>{if(popup&&!popup.isDestroyed())popup.destroy();popup=null;};
  const protect=wc=>{
@@ -37,23 +37,25 @@ function createMetaForgePanel({main,WebContentsView,BrowserWindow,session}){
   });
  };
  function close(){clearTimeout(timer);closePopup();if(view){const old=view;view=null;if(!main.isDestroyed())main.contentView.removeChildView(old);if(!old.webContents.isDestroyed())old.webContents.close({waitForBeforeUnload:false});}token=null;}
- function layout(bounds){if(!view)return;const rect=panelBounds(bounds,main.getContentSize(),main.webContents.getZoomFactor());view.setVisible(!!rect);if(rect)view.setBounds(rect);}
+ function layout(bounds){if(!view)return;const rect=panelBounds(bounds,main.getContentSize(),main.webContents.getZoomFactor());view.setVisible(!!rect&&!failed);if(rect)view.setBounds(rect);}
+ function fail(message){clearTimeout(timer);failed=true;view?.setVisible(false);emit('error',message);}
  function navigate(){
-  if(!view)return;clearTimeout(timer);emit('loading','Loading MetaForge…');
+  if(!view)return;failed=false;clearTimeout(timer);emit('loading','Loading MetaForge…');
   const wc=view.webContents;
   timer=setTimeout(()=>{if(view?.webContents===wc)emit('slow','MetaForge is taking longer than expected. Complete any verification shown below, or open it in your browser.');},15000);
-  wc.loadURL(PAGES[page]).catch(error=>{if(view?.webContents===wc&&error.code!=='ERR_ABORTED')emit('error','MetaForge could not load. Retry or open it in your browser.');});
+  wc.loadURL(PAGES[page]).catch(error=>{if(view?.webContents===wc&&error.code!=='ERR_ABORTED')fail('MetaForge could not load. Select Reload to retry, or Open in browser.');});
  }
  function command(input){
   if(!input||!Number.isSafeInteger(input.token)||input.token<1)throw new Error('Invalid panel request.');
   if(input.action==='show'){
-   close();token=input.token;page=Object.hasOwn(PAGES,input.page)?input.page:'progression';
+   close();failed=false;token=input.token;page=Object.hasOwn(PAGES,input.page)?input.page:'progression';
    view=new WebContentsView({webPreferences:remotePreferences()});main.contentView.addChildView(view);protect(view.webContents);
    const wc=view.webContents;
-   wc.on('did-start-loading',()=>{if(view?.webContents===wc)emit('loading','Loading MetaForge…');});
-   wc.on('did-finish-load',()=>{if(view?.webContents!==wc)return;clearTimeout(timer);emit('ready','Live MetaForge website · sign-in and data stay with MetaForge.');});
-   wc.on('did-fail-load',(_event,code,_description,_url,isMainFrame)=>{if(view?.webContents===wc&&isMainFrame&&code!==-3){clearTimeout(timer);emit('error','MetaForge could not load. Retry or open it in your browser.');}});
-   wc.on('render-process-gone',()=>emit('error','The MetaForge panel stopped responding. Select Reload.'));
+   // Ads and subframes may keep loading indefinitely after the main page is usable.
+   wc.on('dom-ready',()=>{if(view?.webContents!==wc||failed)return;clearTimeout(timer);emit('ready','MetaForge page opened · use its own sign-in controls if needed.');});
+   wc.on('did-finish-load',()=>{if(view?.webContents!==wc||failed)return;clearTimeout(timer);emit('ready','MetaForge page loaded · use its own sign-in controls if needed.');});
+   wc.on('did-fail-load',(_event,code,_description,_url,isMainFrame)=>{if(view?.webContents===wc&&isMainFrame&&code!==-3)fail('MetaForge could not load. Select Reload to retry, or Open in browser.');});
+   wc.on('render-process-gone',()=>{if(view?.webContents===wc)fail('The MetaForge panel stopped responding. Select Reload.');});
    layout(input.bounds);navigate();return {available:true};
   }
   if(input.token!==token)return {ignored:true};

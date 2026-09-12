@@ -1,0 +1,26 @@
+/* Reserve only an icon rail until hover or keyboard focus needs the labels. */
+html:root{--rail-width:64px}
+body{--rail-width:64px}
+body:has(.app-rail:hover),body:has(.app-rail :focus-visible){--rail-width:208px}
+.app-rail{position:relative;z-index:60;width:100%;padding-left:8px;padding-right:8px;overflow-x:hidden}
+.app-rail .rail-brand{min-width:190px;padding-left:8px;gap:11px}
+.app-rail .rail-link{min-height:42px;padding-left:10px;padding-right:10px;white-space:nowrap}
+.app-rail .rail-game{padding-left:2px;padding-right:2px;gap:10px}
+.app-rail .rail-game>img{display:block!important;flex:none;width:26px;height:26px;margin-left:8px}
+.app-rail .rail-link .icon{flex:none}
+.app-rail .rail-brand>span,.app-rail .rail-link>span,.app-rail .rail-section-label,.app-rail .rail-footer{opacity:0;pointer-events:none;transition:opacity .12s ease}
+.app-rail:hover .rail-brand>span,.app-rail:has(:focus-visible) .rail-brand>span,.app-rail:hover .rail-link>span,.app-rail:has(:focus-visible) .rail-link>span,.app-rail:hover .rail-section-label,.app-rail:has(:focus-visible) .rail-section-label,.app-rail:hover .rail-footer,.app-rail:has(:focus-visible) .rail-footer{opacity:1;pointer-events:auto}
+.app-rail .rail-section-label{min-height:43px;white-space:nowrap}
+.app-rail .rail-footer{white-space:nowrap;min-width:168px}
+.app-rail .update-badge{font-size:0;min-height:42px;padding-left:10px;white-space:nowrap}
+.app-rail:hover .update-badge,.app-rail:has(:focus-visible) .update-badge{font-size:.8125rem}
+.app-rail .update-badge:before{flex:none;width:9px;height:9px;margin:0 4px}
+@media(prefers-reduced-motion:reduce){.app-rail,.app-rail *{transition:none!important}}
+
+/* Auto horizontal margins from .hub-main collapsed the empty native slot. */
+.hub-main.mf-page{height:100%;min-height:0;align-items:stretch;overflow:auto}
+.hub-main.mf-page>*{width:100%;max-width:none;margin-left:0;margin-right:0;box-sizing:border-box}
+.mf-page .mf-slot{min-width:0;min-height:220px;width:100%;flex:1 1 220px}
+.mf-page .mf-heading{flex-wrap:wrap}.mf-page .mf-tabs{flex-wrap:wrap}
+.mf-page .mf-placeholder{max-width:none;margin:0}
+.mf-page .mf-footer{line-height:1.5}

@@ -10,7 +10,11 @@ app.setName('Dropzone');
 const profileNames=['Dropzone','dropzone',"Truck's Build Builder",'trucks-build-builder','rift-forge','Rift Forge'];
 for(const old of profileNames){const dir=path.join(app.getPath('appData'),old);if(fsSync.existsSync(dir)){app.setPath('userData',dir);break;}}
 // Development QA can run beside the installed app without touching its saves.
-if(!app.isPackaged&&process.argv.includes('--isolated-preview'))app.setPath('userData',path.join(__dirname,'../.validation-cache/native-profile'));
+if(!app.isPackaged&&process.argv.includes('--isolated-preview')){
+  const previewProfile=path.join(require('node:os').tmpdir(),'dropzone-native-205');
+  fsSync.mkdirSync(previewProfile,{recursive:true});
+  app.setPath('userData',previewProfile);app.setPath('sessionData',previewProfile);
+}
 const applicationId='com.dropzone.desktop';
 if(process.platform==='win32')app.setAppUserModelId(applicationId);
 let window,provider,games,services,appUpdates;
@@ -59,7 +63,7 @@ app.whenReady().then(()=>{
   handle('open-source',async url=>{if(!safeSource(url))throw new Error('Invalid source link.');await shell.openExternal(url);return true;});
   handle('export-file',async({name,data})=>{
     if(typeof name!=='string'||!/^[a-zA-Z0-9_.-]+\.json$/.test(name)||!data||JSON.stringify(data).length>200000)throw new Error('Invalid export.');
-    const label=data.game==='gzw'?'Gray Zone Warfare map backup':data.game==='wardogs'?'WARDOGS targets':'League item set';
+    const label=data.roles?'WARDOGS progression snapshot':data.game==='gzw'?'Gray Zone Warfare map backup':data.game==='wardogs'?'WARDOGS targets':'League item set';
     const {canceled,filePath}=await dialog.showSaveDialog(window,{title:'Export '+label,defaultPath:path.join(app.getPath('downloads'),name),filters:[{name:label,extensions:['json']}]});
     if(canceled)return {canceled:true};
     await fs.writeFile(filePath,JSON.stringify(data,null,2),'utf8');return {saved:true};

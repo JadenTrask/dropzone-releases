@@ -69,14 +69,15 @@
     "name": "WARDOGS",
     "shortName": "WARDOGS",
     "eyebrow": "ARTILLERY & TACTICAL MAPS",
-    "description": "Personal artillery maps and progression links.",
+    "description": "Artillery maps, local progression snapshots and weapon damage reference.",
     "theme": "wardogs",
     "accent": "#efcf69",
     "cover": "assets/games/wardogs.svg",
     "status": "active",
     "videos": false,
     "pages": [
-      "progression"
+      "progression",
+      "damage"
     ]
   },
   {
