@@ -34,6 +34,7 @@ export function rangeBreakpoints(weapon,settings={},limit=8){
  const result=[];
  for(let hits=current.hits;result.length<limit;hits++){
   const at=curve.start+(1-settings.health/(hits*zero.damage))*(curve.end-curve.start)/(1-curve.floor);
+  if(!Number.isFinite(at))break;
   if(at>=curve.end-1e-7)break;
   if(at>=(settings.range||0)-1e-7)result.push({after:Math.max(curve.start,at),hits:hits+1});
  }

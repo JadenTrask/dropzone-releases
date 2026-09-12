@@ -25,3 +25,8 @@ test('quick access restores the original window and unregisters its shortcut',()
  const panel=createQuickPanel({window,globalShortcut:{register:(_,cb)=>{shortcut=cb;return true;},unregister:()=>{unregistered=true;}},screen:{getDisplayMatching:()=>({workArea:{x:0,y:0,width:1920,height:1040}})}});
  shortcut();assert.equal(bounds.width,540);assert.equal(top,true);shortcut();assert.equal(visible,false);shortcut();assert.equal(visible,true);panel.command('full');assert.deepEqual(bounds,{x:25,y:30,width:1400,height:900});assert.equal(top,false);panel.destroy();assert.equal(unregistered,true);
 });
+test('Steam CDN announcement links resolve through the matching public news feed',async()=>{
+ const {createPersonalIntel}=require('../core/personal-intel.cjs'),url='https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/123';
+ const checker=createPersonalIntel({list:async()=>({articles:[{kind:'Patch notes',title:'Test patch',url}]})},async requested=>{assert.ok(requested.startsWith('https://api.steampowered.com/ISteamNews/GetNewsForApp/'));return JSON.stringify({appnews:{appid:1867240,newsitems:[{appid:1867240,feedname:'steam_community_announcements',url,contents:'[list][*]M4 recoil adjusted.[/list]'}]}});});
+ assert.deepEqual((await checker({game:'wardogs',names:['M4','M400']})).names,['M4']);
+});
