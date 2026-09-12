@@ -7,6 +7,7 @@ on:
       - package.json
       - app/version.js
       - app/games-v2.css
+      - test/renderer-lifecycle.test.cjs
       - .github/workflows/release.yml
   workflow_dispatch:
 
@@ -205,3 +206,4 @@ jobs:
         if: failure() && steps.version.outputs.publish == 'true'
         run: |
           'The release did not pass every gate. If a draft or tag was created, it was intentionally left in place for inspection. This workflow never overwrites existing release assets; resolve an interrupted draft explicitly before a new publication attempt.' | Add-Content -LiteralPath $env:GITHUB_STEP_SUMMARY
+

@@ -35,7 +35,7 @@ test('changed source polling preserves scroll, open details and focused controls
   let resolveUpdates,html='',renderCount=0,page=null,focusedOptions;
   const listeners=new Map();
   const root={set innerHTML(value){html=value;renderCount++;page={scrollTop:0};}};
-  const badge={dataset:{}};
+  const badgeLabel={textContent:''};const badge={dataset:{},querySelector:selector=>selector==='span'?badgeLabel:null};
   const focusTarget={focus(options){focusedOptions=options;}};
   const opened='source-refresh-guide';
   global.document={
@@ -70,3 +70,4 @@ test('changed source polling preserves scroll, open details and focused controls
   assert.doesNotMatch(html,/id="update-detail-league"/,'The game filter excludes unrelated sources');
   leaveSources();
 });
+
