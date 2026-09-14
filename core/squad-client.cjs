@@ -1,4 +1,4 @@
-const URL='https://dropzone-app.truck0331.chatgpt.site/api/squad';
+const URL='https://dropzonecompanion.com/api/squad';
 async function squadRequest(input){
  if(!input||!['create','get','put','remove','close'].includes(input.action))throw Error('Unsupported squad action.');
  const body=JSON.stringify(input);if(body.length>16000)throw Error('Squad request too large.');

@@ -24,6 +24,8 @@ http.createServer(async(req,res)=>{
       else if(u.pathname==='/api/personal-intel'&&req.method==='POST'){let raw='';for await(const chunk of req){raw+=chunk;if(raw.length>16000)throw Error('Request too large.');}data=await services.personalIntel(JSON.parse(raw));}
       else if(u.pathname==='/api/patches')data=await services.patches.list(Object.fromEntries(u.searchParams));
       else if(u.pathname==='/api/siege')data=await services.siege.get(Object.fromEntries(u.searchParams));
+      else if(u.pathname==='/api/wardogs-status')data=await services.serverStatus.get(Object.fromEntries(u.searchParams));
+      else if(u.pathname==='/api/wardogs-market')data=await services.market.get();
       else if(u.pathname==='/api/wardogs')data=await services.wardogs.get(Object.fromEntries(u.searchParams));
       else if(u.pathname==='/api/updates')data=req.method==='POST'?services.updates.check():services.updates.status();
       else if(u.pathname==='/api/catalog')data=await provider.getCatalog(u.searchParams.get('refresh')==='true');

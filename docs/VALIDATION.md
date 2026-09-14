@@ -102,3 +102,6 @@ THE FINALS has 15 community loadouts for Season 11, source review September 1 fo
 Automatic source downloads cannot guarantee current meta recommendations or release-build firing accuracy. Code updates, new games, and changed map assets require a new app release. A configured installer can receive those releases through the updater.
 
 The user confirmed the Beta 2 to 1.0.0 automatic upgrade worked. Version 1.0.1 separates App updates and Sources and adds per-source review-warning preferences. Three additional tests cover persisted mute/unmute, source isolation, refresh-failure visibility, and corrupt preference handling. New navigation has been inspected in source, not visually rendered here.
+
+## 2.2.3 release preparation
+Squad Room entry points, saved shortcuts and artillery integration removed. Twelve focused tests passed before packaging. Windows installer built successfully. Live server filters and browser interactions were checked in the preceding implementation turn. No native installation or in-game accuracy testing is claimed. GitHub publication requires authentication in this environment.

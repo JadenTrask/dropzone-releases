@@ -19,6 +19,8 @@ function createServices({cacheDir,bundleDir,leagueCacheDir=path.join(cacheDir,'l
   const release=releaseProvider({cacheDir:path.join(cacheDir,'releases'),bundleDir:path.join(bundleDir,'releases')});
   const patches=new PatchProvider({cacheDir:path.join(cacheDir,'patches'),bundleDir:path.join(bundleDir,'patches'),disabledGames:games.list().filter(g=>g.status==='under-construction').map(g=>g.id)});
   const wardogs=new WardogsProvider({cacheDir:path.join(cacheDir,'wardogs'),bundleDir:path.join(bundleDir,'wardogs')});
+  const serverStatus=new (require('./wardogs-servers.cjs').ServersProvider)({cacheDir:path.join(cacheDir,'wardogs-status')});
+  const market=new (require('./wardogs-market.cjs').MarketProvider)({cacheDir:path.join(cacheDir,'market'),bundleDir:path.join(bundleDir,'wardogs')});
   const siege=new SiegeProvider({cacheDir:path.join(cacheDir,'siege'),bundleDir:path.join(bundleDir,'siege')});
   const updates=new UpdateService([
     {id:'siege-data',name:'Rainbow Six Siege · official ranked data',scope:'Ubisoft catalog and published ranked charts',sourceUrl:'https://www.ubisoft.com/en-us/game/rainbow-six/siege/news-updates',run:()=>siege.feed.get(true),detail:d=>`${d.operators.length} operators and ${d.maps.length} maps listed as ranked. ${d.analysis.title}. Charts describe their printed data patch, not live match statistics.`},
@@ -36,6 +38,6 @@ function createServices({cacheDir,bundleDir,leagueCacheDir=path.join(cacheDir,'l
     ]),
     ...CHANNELS.map(c=>({id:c.id,name:c.name+' · YouTube',scope:'Official channel uploads',sourceUrl:c.url,run:()=>media.feeds.get(c.id).get(true),detail:()=> 'Recent public uploads from the verified official channel. Some uploads are highlights, Shorts, or game announcements.'}))
   ]);
-  return {provider,cod,finals,media,games,updates,patches,wardogs,siege,personalIntel:require('./personal-intel.cjs').createPersonalIntel(patches),modes:MODES};
+  return {provider,cod,finals,media,games,updates,patches,wardogs,market,serverStatus,siege,personalIntel:require('./personal-intel.cjs').createPersonalIntel(patches),modes:MODES};
 }
 module.exports={createServices};

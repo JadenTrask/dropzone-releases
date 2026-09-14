@@ -69,17 +69,16 @@
     "name": "WARDOGS",
     "shortName": "WARDOGS",
     "eyebrow": "ARTILLERY & TACTICAL MAPS",
-    "description": "Artillery maps, local progression snapshots and weapon damage reference.",
+    "description": "Artillery maps, weapon damage, live servers and gold market.",
     "theme": "wardogs",
     "accent": "#efcf69",
     "cover": "assets/games/wardogs.svg",
     "status": "active",
     "videos": false,
     "pages": [
-      "progression",
       "damage",
-      "planner",
-      "squad"
+      "market",
+      "server-status"
     ]
   },
   {

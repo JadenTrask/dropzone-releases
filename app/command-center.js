@@ -9,7 +9,7 @@ import {getState,saveState,saveRecord,removeRecord,mediaPut,mediaGet,mediaRemove
 import {toolsView,toolsAction,disposeTools,startBackgroundTools,applyAccess} from './command-tools.js';
 import {openBoard,disposeBoard} from './command-board.js';
 
-const labels={build:'Builds',strategy:'Playbooks',team:'Squad',note:'Notebook',goal:'Goals',routine:'Practice',clip:'Clips',settings:'Settings',event:'Calendar',performance:'Performance',tools:'Calculators',data:'Backup & packs',feedback:'Feedback',session:'History'};
+const labels={build:'Builds',strategy:'Playbooks',team:'Squad',note:'Notebook',goal:'Goals',routine:'Practice',clip:'Clips',settings:'Settings',event:'Calendar',performance:'Performance',data:'Backup & packs',feedback:'Feedback',session:'History'};
 let pairingCards=null,pairingTimer,editorDraft;
 const navButton=([id,label])=>`<button data-tab="${id}" aria-current="${id===tab?'page':'false'}">${label}</button>`;
 function sessionNav(){const items=Object.entries(labels);const primary=['build','strategy','team','note','goal','roster'];return items.filter(([k])=>primary.includes(k)).map(navButton).join('')+`<details><summary>More tools</summary><div>${items.filter(([k])=>!primary.includes(k)).map(navButton).join('')}</div></details>`;}

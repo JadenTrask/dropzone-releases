@@ -18,7 +18,7 @@ if(!app.isPackaged&&process.argv.includes('--isolated-preview')){
 const applicationId='com.dropzone.desktop';
 if(process.platform==='win32')app.setAppUserModelId(applicationId);
 let window,provider,games,services,appUpdates;
-const allowed=new Set(['lolalytics.com','mobalytics.gg','www.metasrc.com','www.leagueoflegends.com','developer.riotgames.com','codmunity.gg','www.callofduty.com','thefinalsloadout.com','www.reachthefinals.com','www.youtube.com','lolesports.com','www.callofdutyleague.com','callofduty.worldseriesofwarzone.com','support.activision.com','wardogs-artillery.com','wardogs.tools','metaforge.app','github.com','store.steampowered.com','steamcommunity.com','steamstore-a.akamaihd.net','gzw-data.dev','gray-zone-warfare.fandom.com','gzwtacmap.com','www.grayzonewarfare.com','www.ubisoft.com','dropzonecompanion.com','sonsoftheforest.wiki.gg','playvalorant.com','www.marvelrivals.com','www.marvelrivalsesports.com','valorantesports.com','valorant-api.com']);
+const allowed=new Set(['wardogservers.com','wardogshub.gg','aimlabs.com','sensconverter.app','lolalytics.com','mobalytics.gg','www.metasrc.com','www.leagueoflegends.com','developer.riotgames.com','codmunity.gg','www.callofduty.com','thefinalsloadout.com','www.reachthefinals.com','www.youtube.com','lolesports.com','www.callofdutyleague.com','callofduty.worldseriesofwarzone.com','support.activision.com','wardogs-artillery.com','wardogs.tools','metaforge.app','github.com','store.steampowered.com','steamcommunity.com','steamstore-a.akamaihd.net','gzw-data.dev','gray-zone-warfare.fandom.com','gzwtacmap.com','www.grayzonewarfare.com','www.ubisoft.com','dropzonecompanion.com','sonsoftheforest.wiki.gg','playvalorant.com','www.marvelrivals.com','www.marvelrivalsesports.com','valorantesports.com','valorant-api.com']);
 function safeSource(value){try{const u=new URL(value);return u.protocol==='https:'&&allowed.has(u.hostname)&&!u.username&&!u.password;}catch{return false;}}
 if(!app.requestSingleInstanceLock())app.quit();
 app.on('second-instance',()=>{services?.updates.check();appUpdates?.check();const visible=window;if(visible&&!visible.isDestroyed()){if(visible.isMinimized())visible.restore();visible.show();visible.focus();}});
@@ -56,6 +56,8 @@ app.whenReady().then(()=>{
   handle('personal-intel',input=>services.personalIntel(input));
   handle('squad',input=>require('../core/squad-client.cjs').squadRequest(input));
   handle('siege',options=>services.siege.get(options));
+  handle('wardogs-status',options=>services.serverStatus.get(options));
+  handle('wardogs-market',()=>services.market.get());
   handle('wardogs',options=>services.wardogs.get(options));
   handle('wardogs-terrain',resource=>require('../core/wardogs-terrain-files.cjs').readTerrainFile(resource));
   handle('updates',refresh=>refresh===true?services.updates.check():services.updates.status());

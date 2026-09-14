@@ -11,10 +11,17 @@ function open(c){
     const b=document.createElement('button');b.type='button';b.setAttribute('role','option');b.setAttribute('aria-selected',String(option.selected));b.textContent=option.textContent;b.disabled=option.disabled;b.dataset.value=option.value;
     b.addEventListener('click',()=>{c.select.value=option.value;sync(c);close(c,true);c.select.dispatchEvent(new Event('change',{bubbles:true}));});c.panel.append(b);
   }
+  let search;
+  if(c.select.dataset.searchable==='true'){
+    search=document.createElement('input');search.type='search';search.placeholder='Find a game…';search.setAttribute('aria-label','Find a game');search.className='select-filter';
+    const empty=document.createElement('p');empty.textContent='No matching games.';empty.hidden=true;empty.className='select-empty';
+    search.oninput=()=>{let count=0;for(const b of c.panel.querySelectorAll('button')){b.hidden=!b.textContent.toLowerCase().includes(search.value.trim().toLowerCase());if(!b.hidden)count++;}empty.hidden=count>0;};
+    c.panel.prepend(search);c.panel.append(empty);
+  }
   const rect=c.button.getBoundingClientRect();const width=Math.min(Math.max(rect.width,210),innerWidth-24);const spaceBelow=innerHeight-rect.bottom-14;const above=spaceBelow<180&&rect.top>spaceBelow;
   c.panel.style.width=width+'px';c.panel.style.left=Math.max(12,Math.min(rect.left,innerWidth-width-12))+'px';c.panel.style.maxHeight=Math.max(80,Math.min(360,above?rect.top-20:spaceBelow))+'px';c.panel.style.top=above?'auto':rect.bottom+7+'px';c.panel.style.bottom=above?innerHeight-rect.top+7+'px':'auto';
   c.panel.showPopover();c.button.setAttribute('aria-expanded','true');openControl=c;
-  const selected=c.panel.querySelector('[aria-selected="true"]')||c.panel.querySelector('button:not(:disabled)');selected?.focus();
+  const selected=search||c.panel.querySelector('[aria-selected="true"]')||c.panel.querySelector('button:not(:disabled)');selected?.focus();
 }
 function enhance(select){
   if(controls.has(select)||select.multiple)return;
@@ -27,7 +34,8 @@ function enhance(select){
   button.addEventListener('keydown',e=>{if(['ArrowDown','ArrowUp','Home','End'].includes(e.key)){e.preventDefault();open(c);if(e.key==='End')panel.lastElementChild?.focus();}});
   let typed='',typedAt=0;
   panel.addEventListener('keydown',e=>{
-    const options=[...panel.querySelectorAll('button:not(:disabled)')];let index=options.indexOf(document.activeElement);
+    const options=[...panel.querySelectorAll('button:not(:disabled):not([hidden])')];let index=options.indexOf(document.activeElement);
+    if(e.target.classList.contains('select-filter')&&!['ArrowDown','Escape','Tab'].includes(e.key))return;
     if(['ArrowDown','ArrowUp','Home','End','Escape','Tab'].includes(e.key)){
       if(e.key==='Tab'){close(c,true);return;}
       e.preventDefault();if(e.key==='Escape')return close(c,true);

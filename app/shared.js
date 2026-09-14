@@ -9,6 +9,8 @@ export const api=window.rift||{
   media:options=>fetch('/api/media?'+new URLSearchParams(options||{})).then(r=>r.json()),
   patches:options=>fetch('/api/patches?'+new URLSearchParams(options||{})).then(r=>r.json()),
   siege:options=>fetch('/api/siege?'+new URLSearchParams(options||{})).then(r=>r.json()),
+  serverStatus:options=>fetch('/api/wardogs-status?'+new URLSearchParams(options||{})).then(r=>r.json()),
+  market:()=>fetch('/api/wardogs-market').then(r=>r.json()),
   wardogs:options=>fetch('/api/wardogs?'+new URLSearchParams(options||{})).then(r=>r.json()),
   updates:refresh=>fetch('/api/updates',{method:refresh?'POST':'GET'}).then(r=>r.json()),
   copy:text=>navigator.clipboard.writeText(text),

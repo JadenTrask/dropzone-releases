@@ -1,6 +1,6 @@
 {
   "name": "dropzone",
-  "version": "2.2.2",
+  "version": "2.2.3",
   "description": "Loadouts, tactical maps, artillery calculations, patch notes, and competitive videos",
   "author": "Jaden Trask",
   "license": "MIT",
@@ -27,6 +27,7 @@
   "type": "module",
   "productName": "Dropzone",
   "dependencies": {
-    "electron-updater": "6.8.9"
+    "electron-updater": "6.8.9",
+    "json5": "^2.2.3"
   }
 }

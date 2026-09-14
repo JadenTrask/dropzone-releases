@@ -2,12 +2,11 @@ import {$} from './shared.js';
 export const TOUR_KEY='dropzone-wardogs-tutorial-v1';
 export const TOUR_STEPS=[
  ['#wd-map-control','Choose your map','Start with the map you are playing. Each map keeps its own gun and target positions.'],
- ['#wd-weapon-control','Choose your weapon','Pick Mortar or SPH-2. Their supported ranges and firing settings differ.'],
+ ['#wd-weapon-control','Choose your weapon','Pick Mortar or SPH-2. The supported distance range updates for your weapon.'],
  ['[data-wd-tool="origin"]','Place your gun','Click Place gun, then click your position on the map. The calculator switches to target placement automatically. Use Move gun when you relocate.'],
  ['[data-wd-tool="target"]','Pick a target','Click a target on the map. Click another location for the next shot; your gun stays locked.'],
  ['#wd-map-canvas','Move around the map','Drag to pan and scroll to zoom. A drag does not place a marker. Cursor coordinates appear beside your pointer.'],
- ['#wd-result','Read your firing settings','Sight distance is the distance to dial into the weapon when a supported solution is available. Ground range is horizontal distance. Barrel elevation is an angle in MIL, not terrain height. Read the accuracy or unavailable message before firing.'],
- ['#wd-height-summary','Check the height difference','Positive means the target is above your gun; negative means below. Under Shot, choose community terrain, enter manual heights, or explicitly assume flat ground. Heights are for reference only. Firing settings always use flat-ground tables.'],
+ ['#wd-result','Read distance and azimuth','Distance is the horizontal range to your target in meters. Azimuth is the compass bearing: 0° is north. Stay within the weapon range shown underneath. Copy distance & bearing sends these two numbers to your clipboard.'],
  ['.wd-view-tools','Adjust or start another shot','Fit gun and target brings both into view. Clear target keeps your gun. Undo restores your last placement.'],
  ['[data-wd-action="tutorial"]','Ready when you are','This Tutorial button replays the guide whenever you need it. Your positions, map view and firing settings have not been changed.']
 ];

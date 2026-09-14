@@ -14,6 +14,8 @@ contextBridge.exposeInMainWorld('rift',Object.freeze({
   personalIntel:input=>ipcRenderer.invoke('personal-intel',input),
   squad:input=>ipcRenderer.invoke('squad',input),
   siege:options=>ipcRenderer.invoke('siege',options),
+  serverStatus:options=>ipcRenderer.invoke('wardogs-status',options),
+  market:()=>ipcRenderer.invoke('wardogs-market'),
   wardogs:options=>ipcRenderer.invoke('wardogs',options),
   wardogsTerrain:resource=>ipcRenderer.invoke('wardogs-terrain',resource),
   onStartupReveal:callback=>{if(typeof callback!=='function')return;if(startupRevealed)callback();else startupCallbacks.add(callback);},
