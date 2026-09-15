@@ -17,7 +17,7 @@ export class WardogsMap {
     canvas.addEventListener('keydown',e=>this.key(e),{signal});
     this.observer=new ResizeObserver(()=>this.resize());this.observer.observe(canvas);this.resize();
   }
-  destroy(){this.dead=true;this.events.abort();this.observer.disconnect();cancelAnimationFrame(this.pending);this.images.clear();}
+  destroy(){this.dead=true;this.events.abort();this.observer.disconnect();cancelAnimationFrame(this.pending);for(const r of this.images.values()){r.image.onload=null;r.image.onerror=null;r.image.src="";}this.images.clear();}
   resize(){
     const rect=this.canvas.getBoundingClientRect();if(!rect.width||!rect.height)return;
     this.stopZoom();this.width=rect.width;this.height=rect.height;this.dpr=Math.min(window.devicePixelRatio||1,3);
@@ -173,6 +173,6 @@ export class WardogsMap {
     this.label('N ↑',this.width-20,31,'#f1d57e','right');
     this.canvas.dataset.tool=s.tool;
     this.updateCursor();
-    if(this.images.size>300){const removable=[...this.images].filter(([key,r])=>!key.startsWith('0/')&&r.used<performance.now()-1500).sort((a,b)=>a[1].used-b[1].used);for(const [key] of removable.slice(0,this.images.size-260))this.images.delete(key);}
+    if(this.images.size>300){const removable=[...this.images].filter(([key,r])=>!key.startsWith('0/')&&r.used<performance.now()-1500).sort((a,b)=>a[1].used-b[1].used);for(const [key,r] of removable.slice(0,this.images.size-260)){r.image.onload=null;r.image.onerror=null;this.images.delete(key);}}
   }
 }

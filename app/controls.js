@@ -51,7 +51,11 @@ function scan(){
   for(const [s,c]of controls)if(!s.isConnected){close(c);c.panel.remove();controls.delete(s);}
   document.querySelectorAll('select[id]').forEach(enhance);
 }
-new MutationObserver(scan).observe(document.body,{childList:true,subtree:true});
+// Text/results change frequently. Only rescan when select elements enter or leave.
+new MutationObserver(records=>{
+ const hasSelect=node=>node.nodeType===1&&(node.matches('select[id]')||node.querySelector('select[id]'));
+ if(records.some(r=>[...r.addedNodes,...r.removedNodes].some(hasSelect)))scan();
+}).observe(document.body,{childList:true,subtree:true});
 window.addEventListener('resize',()=>close(openControl));
 document.addEventListener('scroll',e=>{if(openControl&&!openControl.panel.contains(e.target))close(openControl);},true);
 scan();

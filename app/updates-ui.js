@@ -1,7 +1,8 @@
 import {readMutedReviews,saveMutedReviews,isOldSource,needsSourceAttention} from './source-alerts.js';
 import {$,api,e,date,dateTime,toast} from './shared.js';
 
-let active=false,data=null,polling=false,lastFinished=null,lastSignature='';
+let active=false,data=null,polling=false,lastFinished=null,lastSignature='',pollTimer,pollStarted=false;
+function schedulePoll(){clearTimeout(pollTimer);if(pollStarted&&!document.hidden)pollTimer=setTimeout(()=>poll(),active||data?.running?3000:60000);}
 let muted=readMutedReviews(localStorage),gameFilter='all',statusFilter='all';
 const attention=row=>needsSourceAttention(row,muted);
 const gameGroups=[['league','League of Legends'],['cod','Call of Duty'],['siege','Rainbow Six Siege'],['finals','THE FINALS'],['wardogs','WARDOGS'],['gray-zone','Gray Zone Warfare'],['other','Other sources']];
@@ -116,6 +117,7 @@ function render(){
 }
 
 async function poll(refresh=false){
+  if(document.hidden&&!refresh){schedulePoll();return;}
   if(polling)return;polling=true;
   if(refresh)render();
   try{
@@ -128,7 +130,7 @@ async function poll(refresh=false){
     if(refresh||active)toast(error.message);
     const b=$('#updates-button');if(b){(b.querySelector('span')||b.appendChild(document.createElement('span'))).textContent='Sources unavailable';b.dataset.status='warning';}
   }finally{
-    polling=false;
+    polling=false;schedulePoll();
     const button=$('#check-all-sources');if(button)button.disabled=!!data?.running;
   }
 }
@@ -147,5 +149,5 @@ document.addEventListener('click',event=>{
   const next=new Set(muted);if(next.has(id))next.delete(id);else next.add(id);
   try{saveMutedReviews(localStorage,next);muted=next;badge();render();}catch{toast('Could not save this preference.');}
 });
-export function startUpdatePolling(){poll();setInterval(()=>poll(),3000);document.addEventListener('visibilitychange',()=>{if(!document.hidden)poll();});}
+export function startUpdatePolling(){if(pollStarted)return;pollStarted=true;if(!document.hidden)poll();document.addEventListener('visibilitychange',()=>{clearTimeout(pollTimer);if(!document.hidden)poll();});}
 

@@ -3,3 +3,8 @@ release/
 .preview-cache/
 .validation-cache/
 .DS_Store
+
+# Local Blender geometry build dependencies
+.art-tools/
+*.blend1
+art/body-source/projected-faces.json

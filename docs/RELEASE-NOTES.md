@@ -1,11 +1,12 @@
-# Dropzone 2.2.3
+# Dropzone 2.2.4
 
-- Removed Squad Room, its saved shortcuts and calculator connection.
-- Simplified artillery controls and updated the tutorial.
-- Added a sensitivity converter with 56 game presets, searchable game selection and manual calibration.
-- Redesigned Damage Lab with weapon filters and optional comparison.
-- Added a daily gold market chart with hover inspection and history ranges.
-- Added a live official/community server browser with search, filters, pagination and favorites.
-- Removed WARDOGS Progression and Loadout Planner entry points; existing saved data is preserved.
+- Faster workspace loading, lighter weapon thumbnails, and less unnecessary rendering.
+- Reduced idle/background polling and bounded concurrent source refreshes.
+- Improved League caching, map hover performance, tile cleanup, and gold-chart interaction.
+- Dark, Light, and System appearance options in Settings; Dark remains the default.
+- Corrected WARDOGS server map labels while preserving provider filter identifiers.
+- Replaced the Damage Lab mannequin with a Blender-rendered human model and darker material for clearer body-region selection.
+- Improved Call of Duty weapon-image contrast and preserved full-resolution detail views.
+- Fixed the Settings icon.
 
-Market prices come from WARDOGS Hub. Server listings come from wardogservers.com and depend on its availability. Match start times and level requirements are not supplied. Sensitivity profiles and damage references are not a claim of in-game testing.
+Validation: 156 automated tests passed, plus browser checks for navigation, calculations, filters, chart interaction, image fallbacks, and background polling. Damage calculations are unchanged.

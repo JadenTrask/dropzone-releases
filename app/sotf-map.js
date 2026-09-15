@@ -29,7 +29,7 @@ export class ForestMap{
   fit(){this.camera={x:0,y:0,scale:this.minScale};this.draw();}
   focus(p){this.selected=p.id;this.camera={x:p.x,y:p.y,scale:Math.max(.7,this.camera.scale)};this.draw();}
   image(key){if(this.images.has(key))return this.images.get(key);const img=new Image();img.onload=()=>this.draw();img.onerror=()=>{this.onStatus('Some map tiles could not load. Reinstall Dropzone to repair the bundled map.');};img.src='assets/sotf/map/'+key+'.webp';this.images.set(key,img);return img;}
-  hit(point){return this.getLocations().map(p=>({p,s:this.screen(p)})).filter(({p,s})=>Math.hypot(s.x-point.x,s.y-point.y)<(p.id===this.selected?18:15)).sort((a,b)=>Math.hypot(a.s.x-point.x,a.s.y-point.y)-Math.hypot(b.s.x-point.x,b.s.y-point.y))[0]?.p;}
+  hit(point){let nearest,best=Infinity;for(const p of this.getLocations()){const s=this.screen(p),dx=s.x-point.x,dy=s.y-point.y,d=dx*dx+dy*dy,r=p.id===this.selected?18:15;if(d<r*r&&d<best){nearest=p;best=d;}}return nearest;}
   draw(){if(this.dead||this.frame)return;this.frame=requestAnimationFrame(()=>{this.frame=0;this.render();});}
   render(){if(!this.camera)return;const ctx=this.ctx;ctx.setTransform(this.dpr,0,0,this.dpr,0,0);ctx.fillStyle='#101c20';ctx.fillRect(0,0,this.width,this.height);
     const origin=this.screen({x:-2000,y:2000}),size=4000*this.camera.scale;const overview=this.image('0-0-0');if(overview.complete&&overview.naturalWidth)ctx.drawImage(overview,0,0,250,250,origin.x,origin.y,size,size);

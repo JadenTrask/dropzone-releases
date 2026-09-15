@@ -128,7 +128,7 @@ function normalizeCatalog(champions,items,runes,spells,version) {
 }
 
 class Provider {
-  constructor({cacheDir,bundleDir,requestFn=request}) {this.cacheDir=cacheDir;this.bundleDir=bundleDir;this.request=requestFn;this.catalog=null;this.pending=new Map();this.sessionChecked=new Map();this.buildFailures=new Map();this.catalogPending=null;this.catalogAttemptedAt=0;this.lastFetch=0;this.queue=Promise.resolve();}
+  constructor({cacheDir,bundleDir,requestFn=request}) {this.cacheDir=cacheDir;this.bundleDir=bundleDir;this.request=requestFn;this.catalog=null;this.pending=new Map();this.sessionChecked=new Map();this.buildFailures=new Map();this.buildMemory=new Map();this.catalogPending=null;this.catalogAttemptedAt=0;this.lastFetch=0;this.queue=Promise.resolve();}
   async json(file) {try{return JSON.parse(await fs.readFile(file,'utf8'));}catch{return null;}}
   async write(file,data) {await fs.mkdir(path.dirname(file),{recursive:true});const temp=file+'.tmp';await fs.writeFile(temp,JSON.stringify(data));await fs.rename(temp,file);}
   async getCatalog(refresh=false) {
@@ -166,7 +166,12 @@ class Provider {
     const elapsed=Date.now()-(this.sessionChecked.get(key)||0);
     if(!forced&&failure&&elapsed<60_000)return structuredClone(failure);
     const refresh=forced||elapsed>(failure?60_000:15*60_000);
-    const job=this.loadBuild(options,key,refresh).then(result=>{this.sessionChecked.set(key,Date.now());if(result.error)this.buildFailures.set(key,structuredClone(result));else this.buildFailures.delete(key);return result;});
+    const memory=this.buildMemory.get(key);
+    if(!refresh&&memory&&!memory.error&&memory.patch&&catalog.version&&patchKey(memory.patch)===patchKey(catalog.version)){
+      this.buildMemory.delete(key);this.buildMemory.set(key,memory);
+      return structuredClone({...memory,cacheState:'cached'});
+    }
+    const job=this.loadBuild(options,key,refresh).then(result=>{this.sessionChecked.set(key,Date.now());this.buildMemory.set(key,structuredClone(result));if(this.buildMemory.size>64)this.buildMemory.delete(this.buildMemory.keys().next().value);if(result.error)this.buildFailures.set(key,structuredClone(result));else this.buildFailures.delete(key);return result;});
     this.pending.set(key,job);
     try{return await job;}finally{this.pending.delete(key);}
   }
@@ -193,6 +198,6 @@ class Provider {
     }
   }
   async status() {const c=await this.getCatalog();let n=0;try{n=(await fs.readdir(path.join(this.cacheDir,'builds'))).filter(x=>x.endsWith('.json')).length;}catch{}return {version:c.version,champions:c.champions.length,cachedBuilds:n,updatedAt:c.updatedAt};}
-  async clearCache(){await fs.rm(path.join(this.cacheDir,'builds'),{recursive:true,force:true});this.sessionChecked.clear();this.buildFailures.clear();return true;}
+  async clearCache(){await fs.rm(path.join(this.cacheDir,'builds'),{recursive:true,force:true});this.sessionChecked.clear();this.buildFailures.clear();this.buildMemory.clear();return true;}
 }
 module.exports={Provider,MODES,TIERS,ROLES,REGIONS,decodeQwik,normalizeQwik,normalizeCatalog,validateOptions,patchKey,clean,slug,request};

@@ -1,10 +1,10 @@
 import {mountSettings,applyAccessibility} from './app-settings.js';
 const preferredGames=()=>[];
 import {startWorkspaceTools,rememberWorkspace,restoreWorkspace} from './workspace-tools.js';
-import {mountForest,leaveForest} from './sotf-ui.js';
-import {mountServerStatus,leaveServerStatus} from './wardogs-status-ui.js';
-import {mountMarket,leaveMarket} from './wardogs-market-ui.js';
-import {mountSensitivity} from './sensitivity-ui.js';
+
+
+
+
 import {mountIntel,leaveIntel,startPersonalAlerts} from './personal-intel.js';
 import {APP_VERSION} from './version.js';
 import {startAppUpdates,mountAppUpdates} from './app-updates-ui.js';
@@ -13,14 +13,14 @@ import {escapeHtml as e} from './engine.js';
 import {api} from './shared.js';
 import {eligibleSavedBuild} from './ranked-policy.js';
 import weaponImages from './data/cod/weapon-images.json' with {type:'json'};
-import {mountFinals,leaveFinals} from './finals-ui.js';
-import {mountWatch,leaveWatch} from './watch-ui.js';
-import {mountSources,leaveSources,startUpdatePolling} from './updates-ui.js';
-import {mountPatches,leavePatches} from './patches-ui.js';
-import {mountWardogs,leaveWardogs} from './wardogs-ui.js';
-import {mountSiege,leaveSiege} from './siege-ui.js';
 
-import {mountWardogsDamage} from './wardogs-damage-ui.js';
+
+import {mountSources,leaveSources,startUpdatePolling} from './updates-ui.js';
+
+
+
+
+
 
 const $=s=>document.querySelector(s);
 const paths={arrow:'M4 12h16m-6-6 6 6-6 6',back:'M20 12H4m6-6-6 6 6 6',search:'m21 21-5-5M10 3a7 7 0 1 0 0 14 7 7 0 0 0 0-14',bookmark:'M6 3h12v19l-6-4-6 4Z',copy:'M8 8h13v13H8ZM3 16H2V2h14v2',external:'M5 19 19 5M5 5h14v14',refresh:'M20 7a9 9 0 0 0-15-2L2 8m0-6v6h6m-4 9a9 9 0 0 0 15 2l3-3m0 6v-6h-6',shield:'m12 2 9 4v6c0 5-5 8-9 10-4-2-9-5-9-10V6Z',check:'m5 12 4 4L20 5',clock:'M12 2a10 10 0 1 0 0 20 10 10 0 0 0 0-20m0 4v6l4 2',target:'M12 2v4m0 12v4M2 12h4m12 0h4M12 5a7 7 0 1 0 0 14 7 7 0 0 0 0-14Z',x:'m6 6 12 12M6 18 18 6',grid:'M3 3h7v7H3Zm11 0h7v7h-7ZM3 14h7v7H3Zm11 0h7v7h-7Z'};
@@ -32,6 +32,26 @@ function toast(message){$('#toast').textContent=message;$('#toast').classList.ad
 const initialSaved=stored('tbb-saved-loadouts',[]);
 const state={games:[],route:'home',watchGame:null,mode:'public',data:null,selected:null,query:'',category:'all',playstyle:'all',tier:'top',request:0,loading:false,error:null,snapshot:false,saved:Array.isArray(initialSaved)?initialSaved.filter(s=>s?.build?.id&&Array.isArray(s.build.attachments)&&eligibleSavedBuild(s)):[]};
 let navigationRevision=0;
+const loadedFeatures=new Map(),featureLoads=new Map();
+const styleLoads=new Map();
+function featureStyle(module){
+ const file={'siege-ui':'siege.css','sotf-ui':'sotf.css'}[module];if(!file)return Promise.resolve();
+ if(!styleLoads.has(file))styleLoads.set(file,new Promise((resolve,reject)=>{
+  const link=document.querySelector(`[data-feature-style="${file}"]`);
+  link.onload=resolve;link.onerror=()=>{styleLoads.delete(file);reject(new Error('Could not load workspace styles. Try again.'));};link.href=link.dataset.href;
+ }));return styleLoads.get(file);
+}
+
+async function mountFeature(module,method,...args){
+ const revision=navigationRevision;
+ if(!loadedFeatures.has(module))$('#hub-app').innerHTML='<main class="hub-main"><p role="status">Opening workspace…</p></main>';
+ if(!featureLoads.has(module))featureLoads.set(module,import('./'+module+'.js').then(value=>{loadedFeatures.set(module,value);return value;}).catch(error=>{featureLoads.delete(module);throw error;}));
+ const [feature]=await Promise.all([featureLoads.get(module),featureStyle(module)]);
+ // A slow module load must not replace a newer navigation destination.
+ if(revision!==navigationRevision)return;
+ return feature[method](...args);
+}
+
 const game=()=>state.games.find(g=>g.id===state.route);
 const date=value=>{const d=new Date(value);return value&&Number.isFinite(d.getTime())?d.toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric',timeZone:'UTC'}):'Not supplied';};
 const releaseDate=g=>date(g.releaseDate+'T12:00:00Z');
@@ -62,7 +82,7 @@ function renderComingSoon(g){
 async function route(id,watchGame=null,initialView=null){
   if(['progression','planner','squad'].includes(id)){id='wardogs';watchGame=null;}if(id==='command')id='home';if(id==='saved'){id='lol';initialView='saved';}
   const navigation=++navigationRevision;
-  leaveServerStatus();leaveMarket();leaveIntel();leaveFinals();leaveWatch();leaveSources();leavePatches();leaveWardogs();leaveSiege();leaveForest();
+  loadedFeatures.get('wardogs-status-ui')?.leaveServerStatus?.();loadedFeatures.get('wardogs-market-ui')?.leaveMarket?.();leaveIntel();loadedFeatures.get('finals-ui')?.leaveFinals?.();loadedFeatures.get('watch-ui')?.leaveWatch?.();leaveSources();loadedFeatures.get('patches-ui')?.leavePatches?.();loadedFeatures.get('wardogs-ui')?.leaveWardogs?.();loadedFeatures.get('siege-ui')?.leaveSiege?.();loadedFeatures.get('sotf-ui')?.leaveForest?.();
   if(['progression','server-status','market','damage','planner','squad'].includes(id)){const target=state.games.find(g=>g.id===(watchGame||state.watchGame));if(!target?.pages?.includes(id))return;state.watchGame=target.id;}
   if(id==='watch'||id==='patches'){state.watchGame=watchGame||game()?.id||state.watchGame;if(!(id==='watch'?['lol','bo7','warzone','finals','mw4','siege']:['lol','bo7','warzone','finals','mw4','wardogs','siege']).includes(state.watchGame))return;}
   rememberWorkspace(id,['command','progression','server-status','market','damage','planner','squad','watch','patches'].includes(id)?(id==='command'?watchGame:state.watchGame):null);
@@ -74,9 +94,9 @@ async function route(id,watchGame=null,initialView=null){
   document.querySelectorAll('.global-tools [data-route]').forEach(b=>b.setAttribute('aria-current',b.dataset.route===id?'page':'false'));
   $('.font-menu').open=false;
   if(id==='lol'){await startLeague(initialView);return;}
-  if(id==='sensitivity'){gameTabs(null);location(null,'Sensitivity converter');mountSensitivity();return;}
+  if(id==='sensitivity'){gameTabs(null);location(null,'Sensitivity converter');await mountFeature('sensitivity-ui','mountSensitivity');return;}
   if(id==='settings'){gameTabs(null);location(null,'Settings');mountSettings(state.games);return;}
-  if(id==='home')renderHome();else if(id==='watch')await mountWatch(state.watchGame);else if(id==='patches')await mountPatches(g);else if(id==='server-status')mountServerStatus();else if(id==='market')mountMarket();else if(id==='damage')mountWardogsDamage();else if(id==='intel')mountIntel();else if(id==='updates')mountAppUpdates();else if(id==='sources')mountSources();else if(id==='saved')renderSaved();else if(!g){state.route='home';renderHome();}else if(g.status==='under-construction')renderUnderConstruction(g);else if(g.status!=='active')renderComingSoon(g);else if(g.kind==='collection')renderCollection(g);else if(g.kind==='finals')await mountFinals(initialView);else if(g.kind==='calculator')await mountWardogs();else if(g.kind==='siege')await mountSiege();else if(g.kind==='forest')mountForest();else{
+  if(id==='home')renderHome();else if(id==='watch')await mountFeature('watch-ui','mountWatch',state.watchGame);else if(id==='patches')await mountFeature('patches-ui','mountPatches',g);else if(id==='server-status')await mountFeature('wardogs-status-ui','mountServerStatus');else if(id==='market')await mountFeature('wardogs-market-ui','mountMarket');else if(id==='damage')await mountFeature('wardogs-damage-ui','mountWardogsDamage');else if(id==='intel')mountIntel();else if(id==='updates')mountAppUpdates();else if(id==='sources')mountSources();else if(id==='saved')renderSaved();else if(!g){state.route='home';renderHome();}else if(g.status==='under-construction')renderUnderConstruction(g);else if(g.status!=='active')renderComingSoon(g);else if(g.kind==='collection')renderCollection(g);else if(g.kind==='finals')await mountFeature('finals-ui','mountFinals',initialView);else if(g.kind==='calculator')await mountFeature('wardogs-ui','mountWardogs');else if(g.kind==='siege')await mountFeature('siege-ui','mountSiege');else if(g.kind==='forest')await mountFeature('sotf-ui','mountForest');else{
     state.mode=stored('tbb-mode-'+g.id,g.modes[0]?.id);if(!g.modes.some(m=>m.id===state.mode))state.mode=g.modes[0]?.id;
     resetFilters();await loadBuilds();
   }
@@ -94,9 +114,9 @@ async function loadBuilds(refresh=false){
   }catch(error){if(request!==state.request)return;state.error=error.message;}
   if(request!==state.request)return;state.loading=false;renderArsenal();
 }
-function filtered(){return (state.data?.builds||[]).filter(b=>(state.tier==='all'||(state.tier==='top'?b.tierRank<=1:String(b.tierRank)===state.tier))&&(state.category==='all'||b.category===state.category)&&(state.playstyle==='all'||b.playstyle===state.playstyle)&&(`${b.weapon} ${b.category} ${b.playstyle}`.toLowerCase().includes(state.query.toLowerCase())));}
+function filtered(){const query=state.query.toLowerCase();return (state.data?.builds||[]).filter(b=>(state.tier==='all'||(state.tier==='top'?b.tierRank<=1:String(b.tierRank)===state.tier))&&(state.category==='all'||b.category===state.category)&&(state.playstyle==='all'||b.playstyle===state.playstyle)&&(`${b.weapon} ${b.category} ${b.playstyle}`.toLowerCase().includes(query)));}
 function grouped(list){const groups=new Map();for(const b of list){const key=b.weapon+'|'+b.playstyle;if(!groups.has(key))groups.set(key,[]);groups.get(key).push(b);}return [...groups.values()];}
-function weaponImage(b,cls=''){return b.image?`<img class="${cls}" src="assets/weapons/${e(b.asset)}.webp" data-remote="${e(b.image)}" data-fallback="${e(weaponImages[(b.weaponGame||'')+'|'+b.weapon]||'')}" alt="${e(b.weapon)}" loading="lazy">`:`<div class="weapon-placeholder ${cls}">${icon('target')}</div>`;}
+function weaponImage(b,cls=''){return b.image?`<img class="${cls}" src="assets/weapons/${cls?'':'thumbs/'}${e(b.asset)}.webp" ${cls?'':`data-local-full="assets/weapons/${e(b.asset)}.webp"`} decoding="async" data-remote="${e(b.image)}" data-fallback="${e(weaponImages[(b.weaponGame||'')+'|'+b.weapon]||'')}" alt="${e(b.weapon)}" loading="lazy">`:`<div class="weapon-placeholder ${cls}">${icon('target')}</div>`;}
 function results(){
   const groups=grouped(filtered());const selected=state.data?.builds.find(b=>b.id===state.selected);
   return groups.map(group=>{const b=group[0];const active=selected?.weapon===b.weapon&&selected?.playstyle===b.playstyle;return `<button class="weapon-row ${active?'selected':''}" data-cod-build="${e(b.id)}"><span class="weapon-row-top"><span class="tier-tag tier-${b.tierRank}">${e(b.tier)}</span><span>${group.length>1?group.length+' variants':b.attachmentCount+' attachments'}</span></span>${weaponImage(b)}<span class="weapon-row-title"><strong>${e(b.weapon)}</strong>${icon('arrow')}</span><span class="weapon-row-meta">${e(b.category)} · ${e(b.playstyle)}</span></button>`;}).join('')||`<div class="cod-empty"><h2>No matching builds.</h2><p>Try another weapon or clear your filters.</p><button class="hub-button secondary" data-hub-action="reset-filters">Clear filters</button></div>`;
@@ -123,8 +143,8 @@ function detail(){
   return `<article class="weapon-build"><div class="weapon-hero"><div class="weapon-title-row"><span class="tier-tag tier-${b.tierRank}">${e(b.tier)}</span></div><div class="weapon-title"><span>${e(b.category)} <i>/</i> ${e(b.playstyle)}</span><h2>${e(b.weapon)}</h2></div>${weaponImage(b,'detail-weapon-image')}<div class="weapon-hero-bottom"><span>${b.attachmentCount} attachments</span><span>${b.proFavorite?'CODMunity pro favorite':e(game().modes.find(m=>m.id===state.mode).name)}</span></div></div><div class="weapon-body">${variants.length>1?`<div class="variant-picker"><span>BUILD VARIANT</span><div>${variants.map((v,i)=>`<button data-cod-build="${e(v.id)}" class="${v.id===b.id?'active':''}" aria-pressed="${v.id===b.id}">${v.attachmentCount} attachments${variants.filter(x=>x.attachmentCount===v.attachmentCount).length>1?' · '+(i+1):''}</button>`).join('')}</div></div>`:''}<div class="attachments-heading"><h3>Attachments</h3><span>Exact source attachments</span></div><div class="attachment-grid">${b.attachments.map((a,i)=>`<div class="attachment"><span class="attachment-number">${String(i+1).padStart(2,'0')}</span><div><span>${e(a.slot)}</span><strong>${e(a.name)}</strong>${a.unlock?`<small>${e(a.unlock)}${a.unlockWeapon&&a.unlockWeapon!==b.weapon?' · '+e(a.unlockWeapon):''}</small>`:''}</div></div>`).join('')}</div>${b.attachmentCount>5?'<p class="attachment-note">This is the extended attachment variant. Make sure your in-game class supports this many attachments.</p>':''}<div class="loadout-code"><div><span>IN-GAME LOADOUT CODE</span><code>${e(b.code||'No code supplied')}</code></div><button class="hub-button" data-hub-action="copy-code" ${b.code?'':'disabled'}>${icon('copy')}Copy code</button></div><div class="hub-action-row"><button class="hub-button secondary" data-hub-action="copy-build">${icon('copy')}Copy full build</button><button class="source-link" data-hub-source="${e(b.sourceUrl)}">View source ${icon('external')}</button></div>${stats.length?`<div class="weapon-stats">${stats.map(([label,value,unit])=>`<div><strong>${Math.round(value)}<small>${unit}</small></strong><span>${label}</span></div>`).join('')}</div><p class="stats-note">Source estimates for this attachment set. In-game values may change with balance updates.</p>`:''}<div class="loadout-footnote">${icon('clock')}<span>Build last edited ${date(b.updatedAt)} · Source feed changed ${date(state.data.sourceUpdatedAt)}. Perks and equipment are not included in this attachment feed.</span></div></div></article>`;
 }
 function updateFiltered(){
-  const list=filtered();if(!list.some(b=>b.id===state.selected))state.selected=list[0]?.id||null;
-  $('#loadout-results').innerHTML=results();$('#result-count').textContent=grouped(list).length+' setups';$('#loadout-detail').innerHTML=detail();
+  const previous=state.selected,list=filtered();if(!list.some(b=>b.id===state.selected))state.selected=list[0]?.id||null;
+  $('#loadout-results').innerHTML=results();$('#result-count').textContent=grouped(list).length+' setups';if(previous!==state.selected)$('#loadout-detail').innerHTML=detail();
 }
 function renderSaved(){
   $('#hub-app').innerHTML=`<main class="hub-main"><div class="library-intro"><div><span class="hub-eyebrow">SAVED LOADOUTS</span><h1>Saved builds</h1><p>Saved weapon builds keep the original attachments and source dates. League saves are in the League workspace; THE FINALS has its own class and team playbook.</p></div></div><div class="hub-action-row saved-game-links"><button class="hub-button secondary" data-saved-workspace="lol">League saved builds</button><button class="hub-button secondary" data-saved-workspace="finals">THE FINALS saved loadouts</button></div><div class="saved-loadouts">${state.saved.map(s=>{const g=state.games.find(g=>g.id===s.game);return `<article class="saved-loadout"><span class="hub-eyebrow">${e(g?.name||s.game)} / ${e(g?.modes?.find(m=>m.id===s.mode)?.name||s.mode)}</span>${weaponImage(s.build)}<h2>${e(s.build.weapon)}</h2><p>${e(s.build.playstyle)} · ${s.build.attachmentCount} attachments</p><small>Saved ${date(s.savedAt)}</small><div class="hub-action-row"><button class="hub-button" data-hub-saved="${e(s.key)}">Open build ${icon('arrow')}</button><button class="source-link" data-hub-delete="${e(s.key)}" aria-label="Remove saved ${e(s.build.weapon)}">Remove</button></div></article>`;}).join('')||'<div class="cod-empty"><h2>No saved weapon builds</h2><p>Choose a Call of Duty loadout and click Save.</p><button class="hub-button" data-route="cod">Find a loadout</button></div>'}</div>${footer()}</main>`;
@@ -153,12 +173,18 @@ document.addEventListener('click',async event=>{
     if(b.dataset.savedWorkspace)return await route(b.dataset.savedWorkspace,null,'saved');
     if(b.dataset.route)return await route(b.dataset.route);
     if(b.dataset.codMode){state.mode=b.dataset.codMode;save('tbb-mode-'+game().id,state.mode);resetFilters();state.data=null;await loadBuilds();return;}
-    if(b.dataset.codBuild){state.selected=b.dataset.codBuild;$('#loadout-results').innerHTML=results();$('#loadout-detail').innerHTML=detail();return;}
+    if(b.dataset.codBuild){
+      if(state.selected===b.dataset.codBuild)return;
+      const selected=state.data?.builds.find(x=>x.id===b.dataset.codBuild);if(!selected)return;
+      state.selected=selected.id;const byId=new Map(state.data.builds.map(x=>[x.id,x]));
+      document.querySelectorAll('.weapon-row[data-cod-build]').forEach(row=>{const item=byId.get(row.dataset.codBuild);row.classList.toggle('selected',item?.weapon===selected.weapon&&item?.playstyle===selected.playstyle);});
+      $('#loadout-detail').innerHTML=detail();return;
+    }
     if(b.dataset.hubSource){await api.openSource(b.dataset.hubSource);return;}
     if(b.dataset.hubAction)return await action(b.dataset.hubAction);
     if(b.dataset.hubDelete){const next=state.saved.filter(s=>s.key!==b.dataset.hubDelete);if(save('tbb-saved-loadouts',next)){state.saved=next;renderSaved();}return;}
     if(b.dataset.hubSaved){
-      const s=state.saved.find(s=>s.key===b.dataset.hubSaved);if(!s||!eligibleSavedBuild(s))return;++navigationRevision;leaveIntel();leaveFinals();leaveWatch();leaveSources();leavePatches();leaveWardogs();leaveSiege();leaveForest();++state.request;state.route=s.game;state.mode=s.mode;setTheme(game());resetFilters();state.tier='all';state.data={builds:[s.build],source:s.source,sourceUrl:s.sourceUrl,sourceUpdatedAt:s.sourceUpdatedAt,fetchedAt:s.fetchedAt,cacheState:'snapshot',methodology:'Saved source attachment set.'};state.selected=s.build.id;state.loading=false;state.error=null;state.snapshot=true;location(game(),game().name+' / Saved loadout');gameTabs(game());renderArsenal();
+      const s=state.saved.find(s=>s.key===b.dataset.hubSaved);if(!s||!eligibleSavedBuild(s))return;++navigationRevision;leaveIntel();loadedFeatures.get('finals-ui')?.leaveFinals?.();loadedFeatures.get('watch-ui')?.leaveWatch?.();leaveSources();loadedFeatures.get('patches-ui')?.leavePatches?.();loadedFeatures.get('wardogs-ui')?.leaveWardogs?.();loadedFeatures.get('siege-ui')?.leaveSiege?.();loadedFeatures.get('sotf-ui')?.leaveForest?.();++state.request;state.route=s.game;state.mode=s.mode;setTheme(game());resetFilters();state.tier='all';state.data={builds:[s.build],source:s.source,sourceUrl:s.sourceUrl,sourceUpdatedAt:s.sourceUpdatedAt,fetchedAt:s.fetchedAt,cacheState:'snapshot',methodology:'Saved source attachment set.'};state.selected=s.build.id;state.loading=false;state.error=null;state.snapshot=true;location(game(),game().name+' / Saved loadout');gameTabs(game());renderArsenal();
     }
   }catch(error){toast(error.message||'Something went wrong. Please try again.');}
 });

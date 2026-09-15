@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width,initial-scale=1">
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' blob: data: https://ddragon.leagueoflegends.com https://assets.codmunity.gg https://i.ytimg.com https://raw.githubusercontent.com https://assets.wardogs-artillery.com https://cdn.gzwtacmap.com https://staticctf.ubisoft.com https://clan.akamai.steamstatic.com; connect-src 'self'; media-src 'self' blob:; font-src 'self'; object-src 'none'; base-uri 'none'; frame-src https://www.youtube-nocookie.com">
+  <script src="appearance.js" type="module"></script>
   <title>Dropzone</title>
   <link rel="icon" href="assets/brand.svg" type="image/svg+xml">
   <link rel="stylesheet" href="styles.css">
@@ -11,8 +12,8 @@
   <link rel="stylesheet" href="expansion.css">
   <link rel="stylesheet" href="wardogs.css">
   <link rel="stylesheet" href="app-updates.css">
-  <link rel="stylesheet" href="siege.css">
-  <link rel="stylesheet" href="sotf.css">
+  <link rel="stylesheet" data-feature-style="siege.css" data-href="siege.css">
+  <link rel="stylesheet" data-feature-style="sotf.css" data-href="sotf.css">
   <link rel="stylesheet" href="design-v2.css">
   <link rel="stylesheet" href="league-v2.css">
   <link rel="stylesheet" href="sources-v2.css">
@@ -25,9 +26,10 @@
   <link rel="stylesheet" href="app-settings.css">
   <link rel="stylesheet" href="wardogs-compact.css">
   <link rel="stylesheet" href="tools-223.css">
+  <link rel="stylesheet" href="light-theme.css">
 </head>
 <body>
-  <div class="titlebar"><div class="titlebrand"><img src="assets/brand.svg" alt="">DROPZONE<span data-app-version>2.2.3</span></div><button id="app-update-ready" class="app-update-ready" data-route="updates" hidden>Update ready</button><div class="window-controls"><button data-window="minimize" aria-label="Minimize">−</button><button data-window="maximize" aria-label="Maximize">□</button><button data-window="close" aria-label="Close">×</button></div></div>
+  <div class="titlebar"><div class="titlebrand"><img src="assets/brand.svg" alt="">DROPZONE<span data-app-version>2.2.4</span></div><button id="app-update-ready" class="app-update-ready" data-route="updates" hidden>Update ready</button><div class="window-controls"><button data-window="minimize" aria-label="Minimize">−</button><button data-window="maximize" aria-label="Maximize">□</button><button data-window="close" aria-label="Close">×</button></div></div>
   <aside class="app-rail" aria-label="Dropzone navigation">
     <div class="rail-brand"><img src="assets/brand.svg" alt=""><span>Dropzone<small>Your game companion</small></span></div>
     <nav class="rail-main" aria-label="Workspace"><button class="rail-link" data-route="home" aria-label="Game library" title="Game library"><i data-icon="grid"></i><span>Game library</span></button></nav>
@@ -51,7 +53,7 @@
     <main class="main">
 
       <div id="content" class="content"><div class="boot-state"><img src="assets/brand.svg" alt=""><h1>Loading League of Legends</h1><p>Loading the champion catalog…</p></div></div>
-      <footer class="footer"><span>DROPZONE <b data-app-version>2.2.3</b></span><span>Independent League companion · <button data-view="settings">Sources & methodology</button></span></footer>
+      <footer class="footer"><span>DROPZONE <b data-app-version>2.2.4</b></span><span>Independent League companion · <button data-view="settings">Sources & methodology</button></span></footer>
     </main>
   </div>
   </div>
