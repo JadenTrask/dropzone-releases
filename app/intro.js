@@ -2,8 +2,8 @@
 const native=window.rift?.desktop,preview=new URLSearchParams(location.search).has('intro');
 if(native||preview){
   const overlay=document.createElement('div');overlay.className='dz-intro';overlay.setAttribute('aria-hidden','true');
-  const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches;
-  overlay.innerHTML='<div class="dz-intro-content"><img class="dz-intro-image" src="assets/intro/dropzone-still.webp" alt=""></div>';
+  const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches||document.body.classList.contains('app-reduced-motion');
+  overlay.innerHTML='<div class="dz-intro-content"><svg class="dz-intro-image" viewBox="0 0 350 350" aria-hidden="true"><g fill="#EE6038" transform="translate(16 13)"><path class="dz-bracket-first" d="M0 0H231V41L198 74H77V179L0 248Z"/><path class="dz-bracket-second" d="M318 79V324H85V283L117 251H239V146L312 79Z"/></g></svg><span>DROPZONE</span></div>';
   document.body.append(overlay);
   let started=false,elapsed=false,ready=false,finished=false;
   const reveal=()=>{
@@ -13,9 +13,8 @@ if(native||preview){
   };
   const start=()=>{
     if(started)return;started=true;
-    if(!reduced)overlay.querySelector('img').src='assets/intro/dropzone-intro.webp';
     overlay.classList.add('dz-intro-playing');
-    setTimeout(()=>{elapsed=true;reveal();},reduced?0:2050);
+    setTimeout(()=>{elapsed=true;reveal();},reduced?0:750);
   };
   window.addEventListener('dropzone-page-ready',()=>{ready=true;overlay.classList.add('dz-intro-ready');reveal();},{once:true});
   if(native)window.rift.onStartupReveal(start);else start();

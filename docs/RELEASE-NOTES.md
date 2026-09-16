@@ -1,3 +1,10 @@
+# Dropzone 2.3.0
+
+- New Waypoint logo, Windows application and installer icons, and updated navigation branding.
+- Lightweight vector startup animation over the real destination, with no video decoding or intermediate splash screen.
+- Dark, Light and System settings are preserved, including reduced-motion preferences.
+- Calculator behavior, game data, saved builds and user settings are unchanged.
+
 # Dropzone 2.2.4
 
 - Faster workspace loading, lighter weapon thumbnails, and less unnecessary rendering.

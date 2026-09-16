@@ -1,0 +1,11 @@
+/* Waypoint brand chrome. Game data and tactical highlight colors stay semantic. */
+.titlebrand img{opacity:1;width:19px;height:19px}.rail-brand>img{width:32px;height:32px;object-fit:contain}
+.rail-brand{font-weight:750;letter-spacing:-.5px}
+.rail-link[aria-current=page],.app-rail .update-badge[aria-current=page]{background:#ee603817;border-color:#ee60384a;color:#ffb699}
+.rail-link[aria-current=page] .icon{color:#ff956e}
+.titlebar{border-bottom-color:#ee603821}.titlebrand{color:#f0eee9}
+.app-update-ready{border-color:#ee60385c;color:#ffb699;background:#ee603815}
+.boot-state img{width:64px;height:64px}
+html[data-appearance=light] .rail-link[aria-current=page],html[data-appearance=light] .app-rail .update-badge[aria-current=page]{background:#fff0e9!important;border-color:#edb59f!important;color:#9d3516!important}
+html[data-appearance=light] .rail-link[aria-current=page] .icon{color:#b94019!important}
+html[data-appearance=light] .titlebrand{color:#17202c}

@@ -1,3 +1,12 @@
+# Version 2.3.0 validation — September 16, 2026
+
+- 156 automated app tests pass, including startup readiness and reduced-motion handling for the new vector intro.
+- Real browser previews of WARDOGS, sensitivity conversion and Call of Duty were captured with the approved Waypoint branding. WARDOGS marker placement produced a 486 m / 45 degree solution.
+- The Windows x64 installer builds with the new icon and wordmark. Native installation, upgrading an installed copy and live game accuracy were not tested for this release.
+- The website retains SEO metadata and feature URLs, with six scroll-driven chapters and a Blender-rendered Waypoint sequence. Forward/reverse scrolling, rapid scroll jumps, anchor links, game switching, reduced motion, mobile overflow and no-JavaScript content were checked. Eleven existing website tests pass.
+
+## Historical validation
+
 # Version 2.0.0 validation — September 8, 2026
 
 - All 101 automated tests pass on Windows with Node 24.13.0, including source parsing, saved snapshot models, app updater behavior, release artifact verification, map keyboard handling, and renderer lifecycle regressions.
