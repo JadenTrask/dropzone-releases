@@ -22,9 +22,12 @@ const allowed=new Set(['wardogservers.com','wardogshub.gg','aimlabs.com','sensco
 function safeSource(value){try{const u=new URL(value);return u.protocol==='https:'&&allowed.has(u.hostname)&&!u.username&&!u.password;}catch{return false;}}
 if(!app.requestSingleInstanceLock())app.quit();
 app.on('second-instance',()=>{services?.updates.check();appUpdates?.check();const visible=window;if(visible&&!visible.isDestroyed()){if(visible.isMinimized())visible.restore();visible.show();visible.focus();}});
-app.whenReady().then(()=>{
+app.whenReady().then(async()=>{
+  const visuals=new (require('../core/visual-updates.cjs').VisualUpdates)({directory:path.join(app.getPath('userData'),'visual-updates'),config:require('../core/visual-feed.json')});
+  await visuals.start();void visuals.check();
   services=createServices({cacheDir:path.join(app.getPath('userData'),'feeds'),leagueCacheDir:path.join(app.getPath('userData'),'cache'),codCacheDir:path.join(app.getPath('userData'),'cod-cache'),bundleDir:path.join(__dirname,'../app/data')});
   ({provider,games}=services);
+  void services.serverStatus.get();
   window=new BrowserWindow({width:1480,height:980,minWidth:1000,minHeight:720,show:false,frame:false,backgroundColor:'#0b0c10',title:'Dropzone',icon:path.join(__dirname,'../app/assets/icon.png'),webPreferences:{preload:path.join(__dirname,'preload.cjs'),contextIsolation:true,nodeIntegration:false,sandbox:true,webSecurity:true}});
   if(!app.isPackaged&&process.argv.includes('--isolated-preview'))window.on('page-title-updated',event=>{event.preventDefault();window.setTitle('Dropzone 2.1.0 QA');});
   coordinateStartup({main:window});
@@ -49,6 +52,11 @@ app.whenReady().then(()=>{
   window.on('closed',()=>quickPanel.destroy());
   const metaforgePanel=require('./metaforge-panel.cjs').createMetaForgePanel({main:window,WebContentsView,BrowserWindow,session});
   handle('metaforge-panel',input=>metaforgePanel.command(input));
+  handle('visual-updates',()=>visuals.status());
+  const adminAccess=new (require('../core/admin-access.cjs').AdminAccess)();let adminUnlocked=false;
+  handle('app-context',()=>({admin:adminUnlocked}));
+  handle('admin-unlock',async password=>{const result=await adminAccess.verify(password);if(result.ok)adminUnlocked=true;return result;});
+  handle('admin-lock',()=>{adminUnlocked=false;return {ok:true};});
   handle('games',()=>games.list());
   handle('loadouts',options=>games.builds(options));
   handle('media',options=>services.media.list(options));

@@ -4,6 +4,10 @@ export const $=s=>document.querySelector(s);
 export const date=v=>{const d=new Date(v);return v&&Number.isFinite(d.getTime())?d.toLocaleDateString('en-US',{month:'short',day:'numeric',year:'numeric',timeZone:'UTC'}):'Not supplied';};
 export const dateTime=v=>{const d=new Date(v);return v&&Number.isFinite(d.getTime())?d.toLocaleString(): 'Not checked this session';};
 export const api=window.rift||{
+  visualUpdates:()=>fetch('/api/visual-updates').then(r=>r.json()),
+  unlockAdmin:password=>fetch('/api/admin-unlock',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({password})}).then(r=>r.json()),
+  lockAdmin:()=>fetch('/api/admin-lock',{method:'POST'}).then(r=>r.json()),
+  appContext:()=>fetch('/api/app-context').then(r=>r.json()),
   games:()=>fetch('/api/games').then(r=>r.json()),
   loadouts:options=>fetch('/api/loadouts?'+new URLSearchParams(options)).then(r=>r.json()),
   media:options=>fetch('/api/media?'+new URLSearchParams(options||{})).then(r=>r.json()),

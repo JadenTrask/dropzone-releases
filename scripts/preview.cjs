@@ -5,6 +5,8 @@ const {createServices}=require('../core/services.cjs');
 const root=path.resolve(__dirname,'../app');
 const services=createServices({cacheDir:path.resolve(__dirname,'../.preview-cache/feeds'),leagueCacheDir:path.resolve(__dirname,'../.preview-cache'),bundleDir:path.join(root,'data')});
 const {provider,games}=services;
+const adminAccess=new (require('../core/admin-access.cjs').AdminAccess)(),adminSessions=new Set();
+const adminToken=req=>req.headers.cookie?.match(/(?:^|;\s*)dropzone_admin=([a-f0-9]{64})(?:;|$)/)?.[1];
 const types={'.html':'text/html','.js':'text/javascript','.css':'text/css','.json':'application/json','.webp':'image/webp','.jpg':'image/jpeg','.png':'image/png','.svg':'image/svg+xml','.woff2':'font/woff2'};
 const port=Number(process.env.RIFT_PORT)||4173;
 const clients=new Set();let reloadTimer;
@@ -16,7 +18,14 @@ http.createServer(async(req,res)=>{
     if(u.pathname==='/__preview_reload.js'){res.writeHead(200,{'Content-Type':'text/javascript','Cache-Control':'no-store'});return res.end(await fs.readFile(path.join(__dirname,'preview-reload.js')));}
     if(u.pathname.startsWith('/api/')){
       let data;
-      if(u.pathname==='/api/games')data=games.list();
+      if(u.pathname==='/api/visual-updates'){data={active:require('../core/visual-updates.cjs').verify(JSON.parse(await fs.readFile(path.join(__dirname,'../visual-updates/stable.json'),'utf8')),require('../core/visual-feed.json').publicKey)};}
+      else if(u.pathname==='/api/app-context')data={admin:adminSessions.has(adminToken(req))};
+      else if(['/api/admin-unlock','/api/admin-lock'].includes(u.pathname)){
+        if(req.method!=='POST'||req.headers.origin!==`http://${req.headers.host}`){res.writeHead(403);return res.end();}
+        if(u.pathname==='/api/admin-lock'){adminSessions.delete(adminToken(req));res.setHeader('Set-Cookie','dropzone_admin=; HttpOnly; SameSite=Strict; Path=/; Max-Age=0');data={ok:true};}
+        else{let raw='';for await(const chunk of req){raw+=chunk;if(raw.length>2048)throw Error('Request too large.');}data=await adminAccess.verify(JSON.parse(raw).password);if(data.ok){adminSessions.delete(adminToken(req));const token=require('node:crypto').randomBytes(32).toString('hex');if(adminSessions.size>=20)adminSessions.delete(adminSessions.values().next().value);adminSessions.add(token);res.setHeader('Set-Cookie',`dropzone_admin=${token}; HttpOnly; SameSite=Strict; Path=/`);}}
+      }
+      else if(u.pathname==='/api/games')data=games.list();
       else if(u.pathname==='/api/workspace'&&req.method==='POST'){let raw='';for await(const chunk of req){raw+=chunk;if(raw.length>750000)throw Error('Workspace too large.');}const input=JSON.parse(raw);data=await require('../core/workspace-client.cjs').workspaceRequest(input,process.env.DROPZONE_WORKSPACE_LOCAL==='1'?{endpoint:'http://127.0.0.1:4195/api/workspace'}:{});}
       else if(u.pathname==='/api/loadouts')data=await games.builds(Object.fromEntries(u.searchParams));
       else if(u.pathname==='/api/media')data=await services.media.list(Object.fromEntries(u.searchParams));
@@ -40,5 +49,5 @@ http.createServer(async(req,res)=>{
     if(!file.startsWith(root+path.sep)){res.writeHead(403);return res.end();}
     let content=await fs.readFile(file);if(path.extname(file)==='.html')content=content.toString().replace('</body>','<script src="/__preview_reload.js"></script></body>');res.writeHead(200,{'Content-Type':types[path.extname(file)]||'application/octet-stream','Cache-Control':'no-store'});res.end(content);
   }catch(e){res.writeHead(e.code==='ENOENT'?404:500,{'Content-Type':'application/json'});res.end(JSON.stringify({error:e.message}));}
-}).listen(port,'0.0.0.0',()=>{console.log(`Dropzone preview: http://localhost:${port}`);services.updates.check();});
+}).listen(port,'0.0.0.0',()=>{console.log(`Dropzone preview: http://localhost:${port}`);services.updates.check();void services.serverStatus.get();});
 setInterval(()=>services.updates.check(),15*60_000).unref();

@@ -8,7 +8,7 @@ async function load(refresh=false){
   try {
     const next=await api.patches({game:selectedGame,refresh});
     if(token!==request||!active)return;
-    if(next.game!==selectedGame||!Array.isArray(next.articles)) throw new Error(next.error||'Patch notes could not be loaded.');
+    if(next.game!==selectedGame||!Array.isArray(next.articles)) throw new Error(next.error||'News could not be loaded.');
     data=next;
   } catch(err) {if(token!==request||!active)return;error=err.message;}
   if(token!==request||!active)return;loading=false;render();
@@ -17,7 +17,7 @@ function render(){
   if(!active)return;
   const entries=data?.articles||[],patches=entries.filter(a=>/patch/i.test(a.kind));
   const {featured,rest,heading,action}=patchPresentation(entries);
-  $('#hub-app').innerHTML=`<main class="hub-main patches-page"><div class="library-intro"><div><span class="hub-eyebrow">${e(gameName.toUpperCase())}</span><h1>Patch notes</h1><p>Official updates. Checked on launch and every 15 minutes.</p></div><button class="hub-button secondary" id="refresh-patches" ${loading?'disabled':''}>${loading?'Checking…':'Refresh notes'}</button></div>
+  $('#hub-app').innerHTML=`<main class="hub-main patches-page"><div class="library-intro"><div><span class="hub-eyebrow">${e(gameName.toUpperCase())}</span><h1>News</h1><p>Official updates. Checked on launch and every 15 minutes.</p></div><button class="hub-button secondary" id="refresh-patches" ${loading?'disabled':''}>${loading?'Checking…':'Refresh news'}</button></div>
     ${data?`<div class="patch-check ${data.error?'warning':''}" role="status"><span>${data.error?'Refresh failed · showing saved posts':data.cacheState==='bundled'?'Bundled posts':'Official feed checked'}</span><span>Last successful fetch: ${e(dateTime(data.fetchedAt))}</span></div>`:''}
     ${error?`<p class="patch-error" role="alert">${e(error)}</p>`:''}
     ${data?.error?`<p class="patch-error">${e(data.error)}</p>`:''}

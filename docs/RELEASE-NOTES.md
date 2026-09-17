@@ -1,30 +1,15 @@
-# Dropzone 2.3.2
+# Dropzone 2.3.3
 
-- Correct light-mode panels, labels, controls and artwork-banner contrast across game workspaces.
-- Forest and WARDOGS map backgrounds and the Forest compass now follow appearance changes immediately.
-- Restore the centered original-logo startup with a blurred app background that sharpens as the logo zooms in.
+- Added password-protected Admin access in Settings. Sources stays hidden until unlocked; admin can be locked again without restarting. Password verification uses a salted scrypt hash, and repeated guesses are rate limited.
+- Added signed visual micro-updates for supported startup animation settings, logo PNGs and layout spacing. Downloaded changes apply on the next launch; offline use retains cached visuals.
+- Cleaned up Settings spacing and aligned WARDOGS calculator, server browser, market, damage and News headings.
+- Preload WARDOGS servers on startup and make manual Refresh bypass the request cache. Show the successful check time separately from the source snapshot time.
+- Rename game Patch notes tabs to News.
+- Preserve public loadout freshness labels while moving detailed source diagnostics behind Admin access.
+- Stop flagging unchanged ranked data solely because its publication date is old.
+- Repair the official Rainbow Six Esports playlist and broadcast feed URLs.
+- Preserve the orange logo, white startup wordmark and transparent blur over the app.
 
-# Dropzone 2.3.1
+This release installs visual-update support; previous versions need this regular update first. Admin access hides diagnostic UI, not a privileged online service.
 
-- App-wide orange theme based on the Waypoint logo, including light mode, dark mode, controls and tool highlights.
-- Startup now uses the approved full horizontal Dropzone logo on cream, fading into the ready destination. Reduced-motion preferences are retained.
-
-# Dropzone 2.3.0
-
-- New Waypoint logo, Windows application and installer icons, and updated navigation branding.
-- Lightweight vector startup animation over the real destination, with no video decoding or intermediate splash screen.
-- Dark, Light and System settings are preserved, including reduced-motion preferences.
-- Calculator behavior, game data, saved builds and user settings are unchanged.
-
-# Dropzone 2.2.4
-
-- Faster workspace loading, lighter weapon thumbnails, and less unnecessary rendering.
-- Reduced idle/background polling and bounded concurrent source refreshes.
-- Improved League caching, map hover performance, tile cleanup, and gold-chart interaction.
-- Dark, Light, and System appearance options in Settings; Dark remains the default.
-- Corrected WARDOGS server map labels while preserving provider filter identifiers.
-- Replaced the Damage Lab mannequin with a Blender-rendered human model and darker material for clearer body-region selection.
-- Improved Call of Duty weapon-image contrast and preserved full-resolution detail views.
-- Fixed the Settings icon.
-
-Validation: 156 automated tests passed, plus browser checks for navigation, calculations, filters, chart interaction, image fallbacks, and background polling. Damage calculations are unchanged.
+Validation: 161 automated tests passed locally. Browser checks covered wrong/correct passwords, separate browser sessions, locking again, Settings in both themes, WARDOGS alignment, live server refresh and Siege archives.

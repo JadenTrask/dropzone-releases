@@ -1,0 +1,13 @@
+{
+  "schema": 1,
+  "revision": 1,
+  "compatibility": "visual-v1",
+  "tokens": {
+    "introBlur": 24,
+    "introZoom": 1.75,
+    "pageGutter": 32,
+    "settingsGap": 20,
+    "panelPadding": 24
+  },
+  "assets": {}
+}

@@ -231,3 +231,5 @@ See [the integration guide](docs/ADDING-GAMES.md) for adding games and [the vali
 Dropzone is independent and is not endorsed by Riot Games, Activision, Embark Studios, BULKHEAD, Team17, YouTube, or CODMunity. Game names, artwork, and source data belong to their owners. Source links appear in the app; weapon-image provenance is recorded in `app/assets/weapons/sources.json`. App code is MIT licensed. The MIT license does not transfer ownership of third-party artwork or data.
 
 WARDOGS reference code/calibration credits and the MIT notice are in `third-party/`. Map imagery remains the game rights holders’ property; the source repository’s MIT license does not license the game artwork. Map asset hashes and source revision are recorded in `app/data/wardogs/assets.json`.
+
+Visual micro-updates and the shared admin mode: [setup and publishing guide](docs/visual-updates.md).
