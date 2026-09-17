@@ -1,3 +1,8 @@
+# Dropzone 2.3.1
+
+- App-wide orange theme based on the Waypoint logo, including light mode, dark mode, controls and tool highlights.
+- Startup now uses the approved full horizontal Dropzone logo on cream, fading into the ready destination. Reduced-motion preferences are retained.
+
 # Dropzone 2.3.0
 
 - New Waypoint logo, Windows application and installer icons, and updated navigation branding.

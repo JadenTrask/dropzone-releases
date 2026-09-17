@@ -71,7 +71,7 @@ option{background:#191921}
 .search-button svg{width:14px;height:14px}
 .search-button kbd{margin-left:20px;font-size:0.8125rem}
 .patch-pill{display:flex;align-items:center;gap:7px;font-size:0.875rem;white-space:nowrap;color:#a9a4b8}
-.status-dot{height:5px;width:5px;display:inline-block;background:#93cdb9;border-radius:50%;box-shadow:0 0 7px #73c9a522}
+.status-dot{height:5px;width:5px;display:inline-block;background:#cda293;border-radius:50%;box-shadow:0 0 7px #c9897322}
 .status-dot.amber{background:#dbad6e}
 .icon-button{padding:6px;border:1px solid transparent;border-radius:5px;color:#8d879d;display:inline-flex;align-items:center;justify-content:center}
 .icon-button:hover{background:#25212f;border-color:#3a3149}
@@ -127,7 +127,7 @@ option{background:#191921}
 .segmented button{padding:7px 10px;border-radius:3px;font-size:0.8125rem;color:#8e8994;display:flex;align-items:center;gap:5px;white-space:nowrap}
 .segmented .icon{width:11px;height:11px}
 .segmented button.active{background:#292035;color:#cdb0ff;box-shadow:0 0 0 1px #4c385d}
-.confidence{display:flex;gap:5px;align-items:center;font-size:0.8125rem;color:#98ae9f;white-space:nowrap}
+.confidence{display:flex;gap:5px;align-items:center;font-size:0.8125rem;color:#ae9d98;white-space:nowrap}
 .confidence svg{width:12px;height:12px}
 .build-caption{display:flex;align-items:center;justify-content:space-between;font-size:0.8125rem;letter-spacing:1px;color:#90879a;margin-bottom:12px}
 .build-caption>span:last-child{font-size:0.8125rem;letter-spacing:0;color:#8d8794}
@@ -146,7 +146,7 @@ option{background:#191921}
 .core-dot{position:absolute;right:6px;top:6px;width:4px;height:4px;border-radius:50%;background:#e6c4ff;box-shadow:0 0 8px #ac85fb;z-index:1}
 .item-card strong{display:block;font-size:0.8125rem;color:#c7bcd2;line-height:1.45;margin-top:8px;font-weight:500;min-height:27px;overflow-wrap:anywhere}
 .item-card small{font-size:0.8125rem;color:#968691;display:block;margin-top:4px;letter-spacing:.4px}
-.item-card.edited .item-art{border-color:#81caae}
+.item-card.edited .item-art{border-color:#ca9381}
 .mini-dot{width:4px;height:4px;border-radius:50%;background:#b296d8;display:inline-block;margin-right:4px}
 .core-result{display:flex;align-items:center;justify-content:space-between;margin-top:23px;border:1px solid #403444;background:linear-gradient(90deg,#2d22384d,#211c2540);border-radius:7px;padding:13px 14px;gap:10px}
 .core-result>div{display:flex;gap:11px;align-items:center}
@@ -212,8 +212,8 @@ option{background:#191921}
 .rune.keystone>span{color:#e2b7d2;font-size:0.9375rem;font-weight:550;align-self:flex-start;margin-top:5px}
 .rune.keystone small{position:absolute;font-size:0.8125rem;letter-spacing:1px;bottom:12px;left:56px;color:#a47f99}
 .secondary-tree{border-top:1px solid #322338;margin-top:19px;padding-top:17px}
-.secondary-dot{background:#b3b17e}
-.secondary-tree .rune-tree-title{color:#a5a685}
+.secondary-dot{background:#b38b7e}
+.secondary-tree .rune-tree-title{color:#a68d85}
 .shards{display:flex;gap:6px;justify-content:space-between;border-top:1px solid #322338;margin-top:17px;padding-top:13px}
 .shards .rune{display:flex;align-items:center;flex-direction:column;gap:5px;flex:1;font-size:0.8125rem;line-height:1.4;text-align:center;margin:0}
 .shard-icon{height:24px;width:24px;border-radius:50%;background:#291e35;border:1px solid #68516e;display:grid;place-items:center;color:#bca4ce}

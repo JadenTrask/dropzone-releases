@@ -3,7 +3,7 @@ const native=window.rift?.desktop,preview=new URLSearchParams(location.search).h
 if(native||preview){
   const overlay=document.createElement('div');overlay.className='dz-intro';overlay.setAttribute('aria-hidden','true');
   const reduced=matchMedia('(prefers-reduced-motion: reduce)').matches||document.body.classList.contains('app-reduced-motion');
-  overlay.innerHTML='<div class="dz-intro-content"><svg class="dz-intro-image" viewBox="0 0 350 350" aria-hidden="true"><g fill="#EE6038" transform="translate(16 13)"><path class="dz-bracket-first" d="M0 0H231V41L198 74H77V179L0 248Z"/><path class="dz-bracket-second" d="M318 79V324H85V283L117 251H239V146L312 79Z"/></g></svg><span>DROPZONE</span></div>';
+  overlay.innerHTML='<div class="dz-intro-content"><img class="dz-intro-lockup" src="assets/startup-lockup.png" width="1113" height="340" alt="" fetchpriority="high" draggable="false"></div>';
   document.body.append(overlay);
   let started=false,elapsed=false,ready=false,finished=false;
   const reveal=()=>{

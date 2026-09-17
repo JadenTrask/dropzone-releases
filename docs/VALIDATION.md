@@ -1,3 +1,9 @@
+# Version 2.3.1 validation
+
+- 156 app tests passed, including destination readiness, native startup sequencing and reduced motion.
+- Browser screenshots inspected the supplied startup lockup, dark WARDOGS, sensitivity and damage tools, plus light Settings and WARDOGS. No renderer errors were reported.
+- Native installation and an installed-version upgrade have not been exercised for this patch.
+
 # Version 2.3.0 validation — September 16, 2026
 
 - 156 automated app tests pass, including startup readiness and reduced-motion handling for the new vector intro.

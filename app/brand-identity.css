@@ -1,4 +1,20 @@
-/* Waypoint brand chrome. Game data and tactical highlight colors stay semantic. */
+/* App-wide Waypoint palette. Brand controls use orange on neutral surfaces. */
+:root{--accent:#ee6038!important;--canvas:#121416;--surface:#1d2023;--line:#383a3d;--copy:#f3f0eb;--muted:#b8b3ad;--brand-strong:#ff9d79;accent-color:#ee6038}
+body{--accent:#ee6038!important}
+::selection{background:#ee603855}
+:focus-visible{outline-color:#ee6038!important}
+.hub-button:not(.secondary),.button:not(.secondary){background:#ee6038;border-color:#ee6038;color:#171b20}
+.hub-button:not(.secondary):hover,.button:not(.secondary):hover{background:#ff815a;color:#171b20}
+.game-page-tabs button.active{color:#ffb699;border-bottom-color:#ee6038}
+.damage-zone-picker button[aria-pressed=true],.weapon-type-tabs button[aria-pressed=true],.damage-types button[aria-pressed=true]{background:#ee6038!important;border-color:#ee6038!important;color:#171b20!important}
+.sens-output strong,.damage-main-result strong,#hub-app .wd-fixed .wd-result>div>strong{color:#ff9d79}
+input[type=range],input[type=checkbox],input[type=radio]{accent-color:#ee6038}
+#hub-app .wd-fixed .wd-tools button.active,.wd-panel-tabs button.active{background:#ee6038;border-color:#ee6038;color:#171b20}
+html:not([data-appearance=light]) :is(input,select,textarea,.select-control,.hub-button.secondary){background-color:#202326;color:#f3f0eb;border-color:#49413c}
+.damage-redesign .blender-body [data-zone][aria-pressed=true]{fill:#ee60388c!important}
+html[data-appearance=light]{--canvas:#f7f4ed;--surface:#fffdfa;--line:#d7cec5;--copy:#17202c;--muted:#695e55;--accent:#ee6038!important}
+html[data-appearance=light] :is(.hub-button:not(.secondary),.select-options [aria-selected=true],.market-ranges [aria-pressed=true],.game-page-tabs button.active){background:#ee6038!important;color:#17202c!important;border-color:#be4524!important}
+html[data-appearance=light] :is(.wd-result strong,.damage-readout strong,.sens-output strong){color:#ac3717!important}
 .titlebrand img{opacity:1;width:19px;height:19px}.rail-brand>img{width:32px;height:32px;object-fit:contain}
 .rail-brand{font-weight:750;letter-spacing:-.5px}
 .rail-link[aria-current=page],.app-rail .update-badge[aria-current=page]{background:#ee603817;border-color:#ee60384a;color:#ffb699}

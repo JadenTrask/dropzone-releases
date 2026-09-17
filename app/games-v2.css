@@ -1,124 +1,124 @@
 /* Shared presentation for loadouts, operator guides, official posts and videos. */
-#hub-app :is(.finals-page,.r6-page,.patches-page,.watch-page){--accent:#aac9bb;--game-panel:#181e22;--game-raised:#20282c;--game-line:#343e42;--game-copy:#e4ece9;--game-muted:#a6b3b6;background:var(--canvas,#101315);color:var(--game-copy)}
+#hub-app :is(.finals-page,.r6-page,.patches-page,.watch-page){--accent:#c9b2aa;--game-panel:#181e22;--game-raised:#20282c;--game-line:#343e42;--game-copy:#ece9e4;--game-muted:#a6b3b6;background:var(--canvas,#101315);color:var(--game-copy)}
 #hub-app :is(.finals-page,.r6-page,.patches-page,.watch-page) :is(h1,h2,h3,h4){color:var(--game-copy)}
-#hub-app :is(.finals-page,.patches-page,.watch-page) .hub-eyebrow{color:#a2b9ae;font-size:.6875rem;letter-spacing:.075em;font-weight:550}
-#hub-app :is(.finals-page,.patches-page,.watch-page) .hub-button{background:var(--accent);border-color:transparent;color:#15251d;font-size:.8125rem;padding:9px 13px;min-height:38px;box-shadow:none}
-#hub-app :is(.finals-page,.patches-page,.watch-page) .hub-button:hover:not(:disabled){background:#c2ddd0;color:#14291e;transform:none}
-#hub-app :is(.finals-page,.patches-page,.watch-page) .hub-button.secondary{background:var(--game-raised);border-color:#46534f;color:#d0dcd5}
-#hub-app :is(.finals-page,.patches-page,.watch-page) .hub-button.secondary:hover:not(:disabled){background:#2b3933;color:#e8f2eb}
-#hub-app :is(.finals-page,.patches-page,.watch-page) .source-link{color:#b3cebe;font-size:.8125rem;line-height:1.6}
-#hub-app :is(.finals-page,.r6-page,.watch-page) .select-control{background:#1b2427;border-color:#3b4b49;color:#d3dfd9;font-size:.8125rem;min-height:38px}
+#hub-app :is(.finals-page,.patches-page,.watch-page) .hub-eyebrow{color:#b9a8a2;font-size:.6875rem;letter-spacing:.075em;font-weight:550}
+#hub-app :is(.finals-page,.patches-page,.watch-page) .hub-button{background:var(--accent);border-color:transparent;color:#201c1a;font-size:.8125rem;padding:9px 13px;min-height:38px;box-shadow:none}
+#hub-app :is(.finals-page,.patches-page,.watch-page) .hub-button:hover:not(:disabled){background:#ddc9c2;color:#221d1b;transform:none}
+#hub-app :is(.finals-page,.patches-page,.watch-page) .hub-button.secondary{background:var(--game-raised);border-color:#564843;color:#dcd3d0}
+#hub-app :is(.finals-page,.patches-page,.watch-page) .hub-button.secondary:hover:not(:disabled){background:#37302d;color:#f2eee8}
+#hub-app :is(.finals-page,.patches-page,.watch-page) .source-link{color:#cebab3;font-size:.8125rem;line-height:1.6}
+#hub-app :is(.finals-page,.r6-page,.watch-page) .select-control{background:#1b2427;border-color:#4b3f3b;color:#dfd6d3;font-size:.8125rem;min-height:38px}
 #hub-app :is(.finals-page,.r6-page,.patches-page,.watch-page) :is(button,input,select,summary):focus-visible{outline:2px solid var(--accent);outline-offset:3px}
-#hub-app :is(.finals-page,.patches-page,.watch-page) .source-disclosure{background:#161e21;border-color:#35413e;padding:18px 20px}
-#hub-app :is(.finals-page,.patches-page,.watch-page) .source-disclosure summary{color:#cbded3;font-size:.8125rem;line-height:1.6}
-#hub-app :is(.finals-page,.patches-page,.watch-page) .source-disclosure p{color:#a8bab0;font-size:.8125rem;line-height:1.7}
+#hub-app :is(.finals-page,.patches-page,.watch-page) .source-disclosure{background:#161e21;border-color:#413935;padding:18px 20px}
+#hub-app :is(.finals-page,.patches-page,.watch-page) .source-disclosure summary{color:#ded0cb;font-size:.8125rem;line-height:1.6}
+#hub-app :is(.finals-page,.patches-page,.watch-page) .source-disclosure p{color:#baaca8;font-size:.8125rem;line-height:1.7}
 
 /* THE FINALS retains its tournament artwork and class identities. */
 #hub-app .finals-hero{min-height:225px;padding:28px 30px;border-color:var(--game-line);border-radius:11px;background:#1c2427}
 #hub-app .finals-hero>img{object-position:center 43%;opacity:.67}
-#hub-app .finals-hero:after{background:linear-gradient(90deg,#12191cf2 0%,#151c1fc2 38%,#17202328 82%),linear-gradient(0deg,#11191a80,transparent 70%)}
+#hub-app .finals-hero:after{background:linear-gradient(90deg,#12191cf2 0%,#151c1fc2 38%,#17202328 82%),linear-gradient(0deg,#18151380,transparent 70%)}
 #hub-app .finals-hero h1{font-size:clamp(2.1rem,3.2vw,3rem);font-weight:750;letter-spacing:-.04em;margin:11px 0 12px;line-height:1.1}
-#hub-app .finals-hero p{font-size:.9375rem;color:#c1cfca;line-height:1.6;margin-bottom:20px}
+#hub-app .finals-hero p{font-size:.9375rem;color:#cfc4c1;line-height:1.6;margin-bottom:20px}
 /* These are the only legacy tab declarations that require an important override. */
-#hub-app .finals-section-tabs{background:#181f23!important;border-color:#35413f!important;margin:20px auto 16px;padding:4px;border-radius:8px;gap:5px}
-#hub-app .finals-section-tabs button.active{background:#2b3e33!important;color:#d4e7dc!important}
-#hub-app .finals-section-tabs button{padding:9px 13px;font-size:.8125rem;border-radius:5px;color:#aab9b1}
-#hub-app .finals-section-tabs button:hover{background:#24302a}
-#hub-app .finals-freshness{padding:12px 16px;margin:16px auto 22px;gap:12px;background:#1d2a2380;border-color:#40594a;color:#bed2c4;font-size:.8125rem;line-height:1.65;flex-wrap:wrap}
-#hub-app .finals-freshness button{color:#c4dece;font-size:.75rem}
+#hub-app .finals-section-tabs{background:#181f23!important;border-color:#413935!important;margin:20px auto 16px;padding:4px;border-radius:8px;gap:5px}
+#hub-app .finals-section-tabs button.active{background:#3a332f!important;color:#e7d9d4!important}
+#hub-app .finals-section-tabs button{padding:9px 13px;font-size:.8125rem;border-radius:5px;color:#bbada8}
+#hub-app .finals-section-tabs button:hover{background:#2e2926}
+#hub-app .finals-freshness{padding:12px 16px;margin:16px auto 22px;gap:12px;background:#27222080;border-color:#594640;color:#d2c3be;font-size:.8125rem;line-height:1.65;flex-wrap:wrap}
+#hub-app .finals-freshness button{color:#decac4;font-size:.75rem}
 #hub-app .finals-freshness.warning{background:#30291d80;border-color:#7a654446;color:#decaa7}
 #hub-app .finals-class-tabs{gap:10px;margin-bottom:18px}
 #hub-app .class-tab{padding:13px 16px;gap:12px;background:var(--game-panel);border-color:var(--game-line);border-radius:8px}
-#hub-app .class-tab>b{height:34px;width:34px;font-size:1.1rem;background:#28332d;color:#bdd3c5;transform:none;border-radius:5px}
-#hub-app .class-tab strong{font-size:1rem;font-weight:600;color:#dce7e1}
-#hub-app .class-tab small{font-size:.75rem;color:#9db2a5}
+#hub-app .class-tab>b{height:34px;width:34px;font-size:1.1rem;background:#322c29;color:#d3c2bd;transform:none;border-radius:5px}
+#hub-app .class-tab strong{font-size:1rem;font-weight:600;color:#e7dfdc}
+#hub-app .class-tab small{font-size:.75rem;color:#b2a29d}
 #hub-app .class-tab span{gap:10px}
-#hub-app .class-tab.active{background:#23322b;border-color:#779b85;box-shadow:none}
-#hub-app .class-tab.active>b{background:#adcbb9;color:#1d3023}
+#hub-app .class-tab.active{background:#2f2926;border-color:#9b8077;box-shadow:none}
+#hub-app .class-tab.active>b{background:#cbb4ad;color:#2a2523}
 #hub-app .finals-layout{grid-template-columns:minmax(245px,.85fr) minmax(0,1.65fr);gap:18px}
 #hub-app :is(.finals-class-panel,.finals-build-detail){background:var(--game-panel);border-color:var(--game-line);border-radius:10px}
-#hub-app .class-art{height:190px;background:radial-gradient(ellipse at 70% 50%,#56756033,transparent 70%),#1d2728}
-#hub-app .class-art>img{height:250px;filter:drop-shadow(-8px 6px 12px #07151080)}
+#hub-app .class-art{height:190px;background:radial-gradient(ellipse at 70% 50%,#755e5633,transparent 70%),#26211f}
+#hub-app .class-art>img{height:250px;filter:drop-shadow(-8px 6px 12px #0f0e0d80)}
 #hub-app .class-art>div{padding:20px;background:linear-gradient(0deg,#181e22 6%,#181e2200)}
 #hub-app .class-art h2{font-size:1.7rem;letter-spacing:-.03em;margin:6px 0 9px}
-#hub-app .class-art p{color:#b7c8bd;font-size:.8125rem;line-height:1.6}
+#hub-app .class-art p{color:#c8bbb7;font-size:.8125rem;line-height:1.6}
 #hub-app .finals-build-list{padding:12px;gap:7px}
-#hub-app .finals-build-list button{padding:12px;gap:11px;background:#20292b;border-color:#344341}
-#hub-app .finals-build-list button.active{background:#2a3a30;border-color:#789984}
-#hub-app .finals-build-list strong{font-size:.875rem;color:#dbe8df;font-weight:550}
-#hub-app .finals-build-list small{font-size:.75rem;color:#aabfb0}
-#hub-app .finals-build-list button>span:last-child{color:#a4c4b0}
-#hub-app .finals-tier{width:27px;height:28px;font-size:.8125rem;background:#2c3d32;border-color:#5c8068;color:#c1e1cc}
+#hub-app .finals-build-list button{padding:12px;gap:11px;background:#20292b;border-color:#413a36}
+#hub-app .finals-build-list button.active{background:#37302d;border-color:#998078}
+#hub-app .finals-build-list strong{font-size:.875rem;color:#e8dedb;font-weight:550}
+#hub-app .finals-build-list small{font-size:.75rem;color:#bfafaa}
+#hub-app .finals-build-list button>span:last-child{color:#c4aca4}
+#hub-app .finals-tier{width:27px;height:28px;font-size:.8125rem;background:#3a332f;border-color:#80655c;color:#e1c9c1}
 #hub-app .finals-build-detail{padding:23px}
 #hub-app .finals-detail-heading{gap:15px;margin-bottom:12px}
 #hub-app .finals-detail-heading h2{font-size:1.5rem;letter-spacing:-.03em;font-weight:650;margin-top:7px}
 #hub-app .finals-build-detail>.muted{color:var(--game-muted);font-size:.875rem}
 #hub-app .finals-weapon-picker{margin-top:18px}
-#hub-app :is(.finals-weapon-picker>span,.team-player label>span){color:#abc2b3;font-size:.75rem;letter-spacing:.03em}
+#hub-app :is(.finals-weapon-picker>span,.team-player label>span){color:#c2b1ab;font-size:.75rem;letter-spacing:.03em}
 #hub-app .finals-gear{margin:20px 0;gap:8px}
-#hub-app .finals-gear>div{padding:12px 15px;gap:12px;background:#1e2926;border-color:#354b3e;border-radius:6px}
-#hub-app .finals-gear dt{font-size:.6875rem;letter-spacing:.045em;color:#9fb7a7}
-#hub-app .finals-gear dd{color:#d7e8dc;font-size:.9375rem;font-weight:550;line-height:1.5;margin:0}
-#hub-app .finals-gear .primary-gear{padding:15px;background:#25362b;border-color:#698973}
-#hub-app .finals-gear .primary-gear dd{color:#e5f2e9;font-size:1.15rem}
+#hub-app .finals-gear>div{padding:12px 15px;gap:12px;background:#272220;border-color:#4b3a35;border-radius:6px}
+#hub-app .finals-gear dt{font-size:.6875rem;letter-spacing:.045em;color:#b7a59f}
+#hub-app .finals-gear dd{color:#e8dbd7;font-size:.9375rem;font-weight:550;line-height:1.5;margin:0}
+#hub-app .finals-gear .primary-gear{padding:15px;background:#322c29;border-color:#897169}
+#hub-app .finals-gear .primary-gear dd{color:#f1ede6;font-size:1.15rem}
 #hub-app .finals-alternatives{border-color:var(--game-line);padding:17px 0 20px}
-#hub-app .finals-alternatives strong{color:#c3dacb;font-size:.875rem}
-#hub-app .finals-alternatives p{color:#afc6b7;font-size:.8125rem;line-height:1.7}
-#hub-app .finals-alternatives small{color:#9ab1a2;font-size:.75rem}
-#hub-app .freshness-dates{gap:16px 25px;color:#a4baad;font-size:.75rem}
-#hub-app .freshness-dates strong{color:#cedfd4;font-size:.8125rem;margin-top:5px}
+#hub-app .finals-alternatives strong{color:#dac9c3;font-size:.875rem}
+#hub-app .finals-alternatives p{color:#c6b5af;font-size:.8125rem;line-height:1.7}
+#hub-app .finals-alternatives small{color:#b1a09a;font-size:.75rem}
+#hub-app .freshness-dates{gap:16px 25px;color:#baaaa4;font-size:.75rem}
+#hub-app .freshness-dates strong{color:#dfd2ce;font-size:.8125rem;margin-top:5px}
 #hub-app .finals-source{margin-top:23px}
 #hub-app .team-intro{margin:22px auto}
 #hub-app .team-intro h2{font-size:1.5rem;letter-spacing:-.025em;font-weight:650}
-#hub-app .team-intro p{color:#a8bcb1;font-size:.875rem;line-height:1.7}
+#hub-app .team-intro p{color:#bcada8;font-size:.875rem;line-height:1.7}
 #hub-app .team-preset-tabs{gap:9px;margin:18px auto}
-#hub-app .team-preset-tabs button{background:#1c2727;border-color:#3d5148;padding:13px 15px}
-#hub-app .team-preset-tabs strong{color:#c8dfd0;font-size:1.15rem;letter-spacing:.025em;font-weight:600}
-#hub-app .team-preset-tabs small{color:#a1b9aa;font-size:.6875rem;letter-spacing:.02em}
-#hub-app .team-preset-tabs button.active{background:#2c4033;border-color:#82a78d}
-#hub-app .team-preset-tabs button.active strong{color:#e0f1e6}
-#hub-app .team-preset-tabs button.active small{color:#bed5c6}
-#hub-app .team-strategy{padding:21px;background:#1c2925;border-color:#425b4b;gap:18px}
+#hub-app .team-preset-tabs button{background:#25201e;border-color:#51423d;padding:13px 15px}
+#hub-app .team-preset-tabs strong{color:#dfcec8;font-size:1.15rem;letter-spacing:.025em;font-weight:600}
+#hub-app .team-preset-tabs small{color:#b9a7a1;font-size:.6875rem;letter-spacing:.02em}
+#hub-app .team-preset-tabs button.active{background:#3b3431;border-color:#a78b82}
+#hub-app .team-preset-tabs button.active strong{color:#efeae2}
+#hub-app .team-preset-tabs button.active small{color:#d5c4be}
+#hub-app .team-strategy{padding:21px;background:#26211f;border-color:#5b4842;gap:18px}
 #hub-app .team-strategy h2{font-size:1.35rem;font-weight:650}
-#hub-app .team-strategy p{color:#b7cdbf;font-size:.8125rem;line-height:1.7}
+#hub-app .team-strategy p{color:#cdbcb7;font-size:.8125rem;line-height:1.7}
 #hub-app .team-player-grid{gap:15px;grid-template-columns:repeat(auto-fit,minmax(min(100%,18rem),1fr))}
-#hub-app .team-player{background:var(--game-panel);border-color:#3b5044}
-#hub-app .team-player-head{padding:18px;min-height:96px;background:linear-gradient(130deg,#2b3b31,#202b2b);gap:12px}
-#hub-app .player-number{height:34px;width:32px;border-radius:4px;background:#364e3f;border-color:#6f947a;color:#d9efe0;font-size:.875rem}
+#hub-app .team-player{background:var(--game-panel);border-color:#50403b}
+#hub-app .team-player-head{padding:18px;min-height:96px;background:linear-gradient(130deg,#38312e,#292422);gap:12px}
+#hub-app .player-number{height:34px;width:32px;border-radius:4px;background:#4e3c36;border-color:#94786f;color:#ece6dc;font-size:.875rem}
 #hub-app .team-player-head h3{font-size:1rem;line-height:1.5}
 #hub-app .team-player-body{padding:18px}
-#hub-app .team-player-body>p{font-size:.8125rem;color:#abc3b2;line-height:1.7}
+#hub-app .team-player-body>p{font-size:.8125rem;color:#c3b1ab;line-height:1.7}
 #hub-app .team-player .finals-gear>div{min-height:4.5rem;padding:12px}
 #hub-app .team-player .finals-gear .primary-gear dd{font-size:1.05rem}
-#hub-app .team-methodology{color:#a6bdad;font-size:.8125rem}
-#hub-app .finals-saved{background:var(--game-panel);border-color:#3e5547;padding:21px}
+#hub-app .team-methodology{color:#bdaca6;font-size:.8125rem}
+#hub-app .finals-saved{background:var(--game-panel);border-color:#55443e;padding:21px}
 #hub-app .finals-saved h3{font-size:1.2rem;margin:13px 0}
-#hub-app .finals-saved>p{color:#a4bead;font-size:.8125rem;line-height:1.7}
-#hub-app .finals-saved details{color:#bcd6c6;margin:16px 0}
+#hub-app .finals-saved>p{color:#beaaa4;font-size:.8125rem;line-height:1.7}
+#hub-app .finals-saved details{color:#d6c3bc;margin:16px 0}
 #hub-app .finals-saved summary{font-size:.875rem}
 #hub-app .finals-saved h4{font-size:1rem}
 
 /* Siege guides emphasize map context and readable, fully available statistics. */
-#hub-app .r6-hero{min-height:205px;padding:26px 30px;background:linear-gradient(110deg,#1d2a2e,#1b2529 65%,#141d22);border-color:#3a4847;border-radius:10px}
+#hub-app .r6-hero{min-height:205px;padding:26px 30px;background:linear-gradient(110deg,#1d2a2e,#1b2529 65%,#141d22);border-color:#493d39;border-radius:10px}
 #hub-app .r6-hero:before{background:none}
 #hub-app .r6-hero h1{font-size:clamp(2rem,3vw,2.85rem);font-weight:700;margin:10px 0 14px;line-height:1.07}
-#hub-app .r6-hero em{color:#c0d8c9}
-#hub-app .r6-hero p{font-size:.875rem;line-height:1.6;color:#b6c8c0;max-width:34rem}
+#hub-app .r6-hero em{color:#d8c6c0}
+#hub-app .r6-hero p{font-size:.875rem;line-height:1.6;color:#c8bbb6;max-width:34rem}
 #hub-app .r6-hero>img{opacity:.65;right:2%;bottom:-45%;height:150%;max-width:44%}
 #hub-app .r6-hero>div{max-width:75%}
-#hub-app .r6-label{color:#abc7b7;font-size:.6875rem;font-weight:600;letter-spacing:.065em;line-height:1.6}
-#hub-app .r6-page button{background:#1e292b;border-color:#3d5048;color:#c9dbd1;font-size:.8125rem;line-height:1.5;padding:8px 12px;min-height:38px;white-space:normal;overflow-wrap:anywhere}
-#hub-app .r6-page button:hover{background:#293a31}
-#hub-app .r6-page button[aria-pressed=true]{background:#2c4134;border-color:#799d84;color:#d1e7d9}
+#hub-app .r6-label{color:#c7b2ab;font-size:.6875rem;font-weight:600;letter-spacing:.065em;line-height:1.6}
+#hub-app .r6-page button{background:#282321;border-color:#50423d;color:#dbcec9;font-size:.8125rem;line-height:1.5;padding:8px 12px;min-height:38px;white-space:normal;overflow-wrap:anywhere}
+#hub-app .r6-page button:hover{background:#36302d}
+#hub-app .r6-page button[aria-pressed=true]{background:#3c3531;border-color:#9d8279;color:#e7d6d1}
 #hub-app .r6-page button:focus-visible{outline-color:var(--accent)}
-#hub-app .r6-page label{min-width:0;color:#a9c1b3;font-size:.75rem;line-height:1.6;gap:6px}
-#hub-app .r6-page :is(input,select){background:#172422;border-color:#3a5446;color:#d9eae0;min-height:38px;font-size:.8125rem}
+#hub-app .r6-page label{min-width:0;color:#c1afa9;font-size:.75rem;line-height:1.6;gap:6px}
+#hub-app .r6-page :is(input,select){background:#201d1b;border-color:#54403a;color:#eaddd9;min-height:38px;font-size:.8125rem}
 #hub-app .r6-page .select-control{padding:8px 10px;min-width:0;max-width:100%;width:100%}
 #hub-app .r6-toolbar{gap:15px;margin:19px auto 13px;align-items:end}
 #hub-app .r6-toolbar nav{gap:6px;min-width:0}
 #hub-app .r6-filter-row{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;width:22rem;max-width:100%;flex:0 1 22rem}
 #hub-app .r6-filter-row>label{min-width:0}
-#hub-app .r6-source-status{background:#18242166;border-color:#354e40;color:#aec6b6;font-size:.75rem;line-height:1.65;flex-wrap:wrap;gap:10px 20px;margin-bottom:20px}
+#hub-app .r6-source-status{background:#211d1b66;border-color:#4e3b35;color:#c6b4ae;font-size:.75rem;line-height:1.65;flex-wrap:wrap;gap:10px 20px;margin-bottom:20px}
 #hub-app .r6-source-status>span{min-width:0;overflow-wrap:anywhere;flex:1 1 16rem}
 #hub-app .r6-source-status button{font-size:.75rem}
 #hub-app .r6-map-layout{grid-template-columns:210px minmax(0,1fr);gap:18px}
@@ -126,102 +126,102 @@
 #hub-app .r6-map-list button{font-size:.75rem;gap:8px;padding:7px;min-width:0}
 #hub-app .r6-map-list button img{width:38px;height:30px}
 #hub-app .r6-map-list button span{min-width:0;overflow-wrap:anywhere;text-align:left}
-#hub-app .r6-map-banner{height:178px;background:#1b2a28}
-#hub-app .r6-map-banner>div{padding:19px;background:linear-gradient(90deg,#14231bcc,transparent)}
+#hub-app .r6-map-banner{height:178px;background:#26211f}
+#hub-app .r6-map-banner>div{padding:19px;background:linear-gradient(90deg,#1e1b19cc,transparent)}
 #hub-app .r6-map-banner h2{font-size:1.6rem;margin:9px 0}
 #hub-app .r6-map-banner button{font-size:.75rem;min-height:31px;padding:5px 9px}
-#hub-app .r6-plan{padding:18px 0;color:#c0d7c9;font-size:.875rem;line-height:1.7}
-#hub-app .r6-plan strong{font-size:1rem;color:#deede3}
-#hub-app :is(.r6-plan small,.r6-fine){color:#a8c1b0;font-size:.75rem;line-height:1.7}
-#hub-app .r6-ban-choices{background:#202f27;border-color:#415c4a;padding:16px;gap:12px 20px}
-#hub-app .r6-ban-choices p{font-size:.9375rem;color:#d5e8db;line-height:1.6}
-#hub-app .r6-ban-choices small{font-size:.75rem;color:#abc4b2;line-height:1.65}
+#hub-app .r6-plan{padding:18px 0;color:#d7c6c0;font-size:.875rem;line-height:1.7}
+#hub-app .r6-plan strong{font-size:1rem;color:#ede7de}
+#hub-app :is(.r6-plan small,.r6-fine){color:#c1aea8;font-size:.75rem;line-height:1.7}
+#hub-app .r6-ban-choices{background:#2b2624;border-color:#5c4841;padding:16px;gap:12px 20px}
+#hub-app .r6-ban-choices p{font-size:.9375rem;color:#e8dad5;line-height:1.6}
+#hub-app .r6-ban-choices small{font-size:.75rem;color:#c4b1ab;line-height:1.65}
 #hub-app .r6-picks{grid-template-columns:repeat(auto-fit,minmax(min(100%,16rem),1fr));gap:12px}
 #hub-app .r6-operators{grid-template-columns:repeat(auto-fit,minmax(min(100%,17rem),1fr));gap:13px}
-#hub-app .r6-pick{background:var(--game-panel);border-color:#344d3f;padding:18px}
+#hub-app .r6-pick{background:var(--game-panel);border-color:#4d3a34;padding:18px}
 #hub-app .r6-pick-heading{align-items:flex-start;gap:12px}
 #hub-app .r6-pick-heading>div{min-width:0}
 #hub-app .r6-pick h3{font-size:1.05rem;line-height:1.4;overflow-wrap:anywhere}
-#hub-app .r6-pick-heading span{font-size:.75rem;color:#a1bdab;line-height:1.6;overflow-wrap:anywhere}
-#hub-app .r6-pick>p{font-size:.8125rem;line-height:1.7;color:#b6d0be;margin:15px 0}
-#hub-app .r6-pick-foot{border-color:#354b3d;gap:10px}
-#hub-app .r6-pick-foot>span{font-size:.75rem;color:#a7c2b1;line-height:1.65;overflow-wrap:anywhere}
+#hub-app .r6-pick-heading span{font-size:.75rem;color:#bda8a1;line-height:1.6;overflow-wrap:anywhere}
+#hub-app .r6-pick>p{font-size:.8125rem;line-height:1.7;color:#d0bcb6;margin:15px 0}
+#hub-app .r6-pick-foot{border-color:#4b3a35;gap:10px}
+#hub-app .r6-pick-foot>span{font-size:.75rem;color:#c2aea7;line-height:1.65;overflow-wrap:anywhere}
 #hub-app .r6-pick-foot button{font-size:.75rem;min-height:32px}
-#hub-app .r6-method{background:#18241e55;border-color:#354e3e;color:#abc5b2;font-size:.8125rem;padding:18px;overflow-wrap:anywhere}
-#hub-app .r6-method summary{color:#c9e2d2}
+#hub-app .r6-method{background:#211d1b55;border-color:#4e3b35;color:#c5b2ab;font-size:.8125rem;padding:18px;overflow-wrap:anywhere}
+#hub-app .r6-method summary{color:#e2cfc9}
 #hub-app .r6-method p{margin:12px 0 0}
 #hub-app .r6-stats-heading{margin:22px 0;flex-wrap:wrap;gap:14px;align-items:flex-start}
 #hub-app .r6-stats-heading>div{min-width:0;flex:1 1 20rem}
 #hub-app .r6-stats-heading h2{font-size:1.5rem;line-height:1.4;overflow-wrap:anywhere}
-#hub-app .r6-stats-heading p{font-size:.8125rem;line-height:1.7;color:#a5bfb0}
+#hub-app .r6-stats-heading p{font-size:.8125rem;line-height:1.7;color:#bfaba5}
 #hub-app .r6-stats-heading button{flex-shrink:0;max-width:100%}
 #hub-app .r6-stats-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
-#hub-app .r6-panel{background:var(--game-panel);border-color:#374d41;padding:20px}
+#hub-app .r6-panel{background:var(--game-panel);border-color:#4d3c37;padding:20px}
 #hub-app .r6-panel h3{font-size:1.1rem;line-height:1.5}
-#hub-app .r6-panel>p{color:#abc4b3;font-size:.8125rem;line-height:1.7}
+#hub-app .r6-panel>p{color:#c4b1ab;font-size:.8125rem;line-height:1.7}
 #hub-app .r6-ban-table{font-size:.8125rem;table-layout:auto}
-#hub-app .r6-ban-table th{color:#9db8a7;font-size:.75rem;line-height:1.5;padding:10px 0}
-#hub-app .r6-ban-table td{border-color:#354a3d;color:#c8dfd0;padding:10px 0;line-height:1.5;vertical-align:middle;overflow-wrap:anywhere}
+#hub-app .r6-ban-table th{color:#b8a49d;font-size:.75rem;line-height:1.5;padding:10px 0}
+#hub-app .r6-ban-table td{border-color:#4a3a35;color:#dfcec8;padding:10px 0;line-height:1.5;vertical-align:middle;overflow-wrap:anywhere}
 #hub-app .r6-ban-table td:first-child{display:table-cell;padding-right:12px}
 #hub-app .r6-ban-table td img{width:28px;height:28px;margin-right:9px;vertical-align:middle}
 #hub-app .r6-ban-table td:last-child{min-width:5em;width:30%;font-variant-numeric:tabular-nums}
-#hub-app .r6-rate-track{background:#293f31;height:3px}
-#hub-app .r6-rate-track span{background:#aac9bb}
+#hub-app .r6-rate-track{background:#39322f;height:3px}
+#hub-app .r6-rate-track span{background:#c9b2aa}
 #hub-app .r6-catalog-controls{gap:14px;margin:18px 0}
 #hub-app .r6-catalog-controls>label{max-width:100%}
 #hub-app .r6-catalog-controls>label:first-child{min-width:min(100%,12rem)}
-#hub-app .r6-catalog-controls>span{color:#a7c1b0;font-size:.75rem}
-#hub-app .r6-chart-dialog{background:#17211d;border-color:#526e5c;color:#daeee1}
+#hub-app .r6-catalog-controls>span{color:#c1ada7;font-size:.75rem}
+#hub-app .r6-chart-dialog{background:#1f1b19;border-color:#6e5952;color:#ece6dc}
 
 /* Official posts and video collections use the same reading rhythm. */
-#hub-app .patches-page{--patch-line:#34423e}
-#hub-app .patch-check{background:#192420;border-color:#3b5043;color:#b8cfc0;font-size:.75rem;line-height:1.7;padding:12px 16px;margin-bottom:20px}
+#hub-app .patches-page{--patch-line:#413935}
+#hub-app .patch-check{background:#221d1b;border-color:#50403b;color:#cfbeb8;font-size:.75rem;line-height:1.7;padding:12px 16px;margin-bottom:20px}
 #hub-app .patch-check.warning{border-color:#8b714a;color:#e2cda7}
-#hub-app .patch-feature{background:var(--game-panel);border-color:var(--game-line);border-left:2px solid #849f8f;padding:25px;margin-bottom:25px}
-#hub-app .patch-kind{font-size:.6875rem;color:#b3cdbd;border-color:#4a6552;background:#24332a;padding:4px 7px}
-#hub-app .patch-publisher{font-size:.75rem;color:#9fb9a9;margin:17px 0 9px;line-height:1.6}
+#hub-app .patch-feature{background:var(--game-panel);border-color:var(--game-line);border-left:2px solid #9f8b84;padding:25px;margin-bottom:25px}
+#hub-app .patch-kind{font-size:.6875rem;color:#cdbab3;border-color:#65514a;background:#302a27;padding:4px 7px}
+#hub-app .patch-publisher{font-size:.75rem;color:#b9a69f;margin:17px 0 9px;line-height:1.6}
 #hub-app .patch-feature h2{font-size:clamp(1.5rem,2.1vw,2rem);letter-spacing:-.025em;line-height:1.35;margin:9px 0 18px;font-weight:650}
-#hub-app .patch-excerpt{font-size:.875rem;line-height:1.8;color:#c0d5c8;margin-bottom:20px}
+#hub-app .patch-excerpt{font-size:.875rem;line-height:1.8;color:#d5c5c0;margin-bottom:20px}
 #hub-app .patch-list-heading{margin:22px auto 15px;flex-wrap:wrap}
 #hub-app .patch-list-heading h2{font-size:1.15rem}
-#hub-app .patch-list-heading>span{font-size:.75rem;color:#9bb5a5}
+#hub-app .patch-list-heading>span{font-size:.75rem;color:#b5a29b}
 #hub-app .patch-row{background:var(--game-panel);border-color:var(--game-line);padding:19px;gap:18px;flex-wrap:wrap}
 #hub-app .patch-row>div{flex:1 1 22rem}
 #hub-app .patch-row h3{font-size:1rem;line-height:1.55}
-#hub-app .patch-row p{font-size:.8125rem;line-height:1.75;color:#aec7b8}
-#hub-app .patch-meta{font-size:.75rem;color:#9bb4a4;line-height:1.6}
+#hub-app .patch-row p{font-size:.8125rem;line-height:1.75;color:#c7b4ae}
+#hub-app .patch-meta{font-size:.75rem;color:#b4a19b;line-height:1.6}
 #hub-app :is(.patch-context,.patch-error){background:#312c1f;border-color:#b29a61;color:#e2d3ae;font-size:.8125rem;line-height:1.7}
-#hub-app .patch-footer{color:#9fb9a8;font-size:.75rem;padding:23px 0}
-#hub-app .watch-page .playlist-tabs{background:#192322;border-color:#354b3e}
-#hub-app .watch-page .playlist-tabs button{color:#a8c1b1;font-size:.8125rem}
-#hub-app .watch-page .playlist-tabs button.active{background:#314839;color:#d7ece0}
+#hub-app .patch-footer{color:#b9a69f;font-size:.75rem;padding:23px 0}
+#hub-app .watch-page .playlist-tabs{background:#211d1b;border-color:#4b3a35}
+#hub-app .watch-page .playlist-tabs button{color:#c1aea8;font-size:.8125rem}
+#hub-app .watch-page .playlist-tabs button.active{background:#433a36;color:#ecdcd7}
 #hub-app .watch-filter{background:var(--game-panel);border-color:var(--game-line);gap:18px;padding:18px;margin-bottom:21px;border-radius:8px}
-#hub-app .watch-filter>label>span{font-size:.75rem;color:#acc7b5;letter-spacing:.02em;line-height:1.6}
+#hub-app .watch-filter>label>span{font-size:.75rem;color:#c7b3ac;letter-spacing:.02em;line-height:1.6}
 #hub-app .watch-filter>label{flex:1 1 12rem}
-#hub-app .watch-filter>span{font-size:.75rem;color:#a0bba9}
+#hub-app .watch-filter>span{font-size:.75rem;color:#bba7a0}
 #hub-app .watch-filter>.hub-button{min-height:40px}
-#hub-app .watch-search input{background:#142019;border-color:#3c5744;color:#d7eadd;font-size:.8125rem;padding:10px 12px;min-height:40px}
-#hub-app .watch-shorts{font-size:.8125rem;color:#bbd5c5}
-#hub-app .watch-player-section{padding:21px;background:var(--game-panel);border-color:#3c5545;margin-bottom:28px;border-radius:10px}
+#hub-app .watch-search input{background:#1d1917;border-color:#57433c;color:#eadcd7;font-size:.8125rem;padding:10px 12px;min-height:40px}
+#hub-app .watch-shorts{font-size:.8125rem;color:#d5c2bb}
+#hub-app .watch-player-section{padding:21px;background:var(--game-panel);border-color:#55423c;margin-bottom:28px;border-radius:10px}
 #hub-app .watch-player-heading{gap:18px;margin-bottom:18px}
 #hub-app .watch-player-heading h2{font-size:1.2rem;line-height:1.55}
-#hub-app .watch-player-heading p{font-size:.8125rem;color:#a7c1af}
+#hub-app .watch-player-heading p{font-size:.8125rem;color:#c1ada7}
 #hub-app .watch-player{min-height:0;width:min(100%,1060px);aspect-ratio:16/9}
 #hub-app .watch-player-footer{gap:16px;margin-top:17px}
-#hub-app .watch-player-footer>span{font-size:.75rem;color:#aec8b7;line-height:1.7}
-#hub-app .watch-page .channel-section{border-color:#344e3d;padding-top:25px;margin:27px auto 30px}
+#hub-app .watch-player-footer>span{font-size:.75rem;color:#c8b4ae;line-height:1.7}
+#hub-app .watch-page .channel-section{border-color:#4e3a34;padding-top:25px;margin:27px auto 30px}
 #hub-app .watch-page .channel-heading{margin-bottom:20px;gap:18px}
 #hub-app .watch-page .channel-heading h2{font-size:1.25rem}
-#hub-app .watch-page .channel-heading p{font-size:.8125rem;color:#a5c0ad;line-height:1.7}
-#hub-app .watch-page .official-channel{background:#1c2c2280;border-color:#526f5a;color:#b9d9c3;font-size:.6875rem}
+#hub-app .watch-page .channel-heading p{font-size:.8125rem;color:#c0aca5;line-height:1.7}
+#hub-app .watch-page .official-channel{background:#28232080;border-color:#6f5952;color:#d9c1b9;font-size:.6875rem}
 #hub-app .video-grid{grid-template-columns:repeat(auto-fill,minmax(min(100%,18rem),1fr));gap:17px}
 #hub-app .watch-page .video-card{background:var(--game-panel);border-color:var(--game-line);padding-bottom:15px;border-radius:8px}
-#hub-app .watch-page .video-card:hover,#hub-app .watch-page .video-card.selected{background:#23352a;border-color:#789d82}
-#hub-app .watch-page .video-card>strong{font-size:.875rem;line-height:1.55;color:#dceee2;padding:15px 16px 10px}
-#hub-app .watch-page .video-card>small{font-size:.75rem;line-height:1.6;color:#9fbaa8;padding:0 16px}
+#hub-app .watch-page .video-card:hover,#hub-app .watch-page .video-card.selected{background:#302b28;border-color:#9d8178}
+#hub-app .watch-page .video-card>strong{font-size:.875rem;line-height:1.55;color:#ece7de;padding:15px 16px 10px}
+#hub-app .watch-page .video-card>small{font-size:.75rem;line-height:1.6;color:#baa69f;padding:0 16px}
 #hub-app .video-duration{font-size:.75rem;padding:3px 6px}
-#hub-app :is(.channel-fetch,.watch-disclosure){color:#a6bfb0;font-size:.75rem;line-height:1.8}
-#hub-app .watch-disclosure summary{font-size:.8125rem;color:#c5dfcf}
+#hub-app :is(.channel-fetch,.watch-disclosure){color:#bfaca6;font-size:.75rem;line-height:1.8}
+#hub-app .watch-disclosure summary{font-size:.8125rem;color:#dfcbc5}
 
 @media(max-width:1200px){
  #hub-app .finals-layout{grid-template-columns:1fr}
