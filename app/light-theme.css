@@ -1,4 +1,6 @@
 /* Light appearance. Images, maps, video and canvas pixels retain their original colors. */
+/* Light surfaces and their foregrounds must travel together. Artwork banners
+   opt into an inverse foreground below; never recolor their image pixels. */
 html[data-appearance=light]{color-scheme:light;--canvas:#f5f4f1;--surface:#fff;--line:#d2c8c4;--copy:#25201e;--muted:#64524c;--accent:#643728!important}
 html[data-appearance=light] body{background:#f5f4f1;color:#25201e}
 html[data-appearance=light] :is(.titlebar,.app-rail,.global-toolbar,.game-tabs-shell){background:#eeebe5!important;border-color:#cfc0bb!important;color:#342d2a}
@@ -20,3 +22,65 @@ html[data-appearance=light] .app-high-contrast :focus-visible{outline-color:#2c2
 html[data-appearance=light] :is(.damage-model,.damage-decisions,.damage-main-result,.damage-secondary,.damage-method,.wd-distance,.wd-bearing,.wd-shot-status,.wd-shot-range,.wd-bottom-actions,.wd-compact-actions,.damage-zone-picker){background:#fff!important;color:#342d2a!important;border-color:#cec1bd!important}html[data-appearance=light] .damage-zone-picker button{color:#3d3632!important;background:#f5f2ed!important}html[data-appearance=light] .damage-zone-picker button[aria-pressed=true]{background:#d8bdb4!important}html[data-appearance=light] :is(.wd-result strong,.damage-readout strong,.sens-output strong){color:#5d3223!important}
 
 html[data-appearance=light] :is(.damage-config,.weapon-body,.weapon-build,.attachment,.source-disclosure,.playlist-tabs,.cod-search,.damage-extras details){background:#fff!important;color:#342d2a!important;border-color:#cec1bd!important}html[data-appearance=light] :is(.global-toolbar button,.damage-model-heading,.source-link){color:#583428!important;background-color:#eeebe5!important}html[data-appearance=light] .weapon-hero{background:radial-gradient(ellipse at 50% 62%,#fff,#e1d8d5)!important}html[data-appearance=light] .weapon-row.selected{background:#ebe6dc!important}html[data-appearance=light] .weapon-hero:after{display:none}
+
+/* Game workspaces share light tokens, including styles loaded after this file. */
+html[data-appearance=light] :is(#hub-app,#league-app){
+  --light-ink:#302b28;--light-muted:#675c55;--light-panel:#fffdfa;--light-raised:#eee8e1;--light-border:#cfc3b9;
+  --game-panel:var(--light-panel);--game-raised:var(--light-raised);--game-line:var(--light-border);--game-copy:var(--light-ink);--game-muted:var(--light-muted);
+  --league-surface:var(--light-panel);--league-raised:var(--light-raised);--league-border:var(--light-border);--league-text:var(--light-ink);--league-muted:var(--light-muted);--league-accent:#ae3b1a;
+}
+html[data-appearance=light] #hub-app :is(.finals-page,.r6-page,.patches-page,.watch-page){
+  --game-panel:var(--light-panel);--game-raised:var(--light-raised);--game-line:var(--light-border);--game-copy:var(--light-ink);--game-muted:var(--light-muted);
+}
+/* Text inside these workspaces follows its surface rather than a dark-mode literal. */
+html[data-appearance=light] :is(#hub-app,#league-app) :is(h1,h2,h3,h4,p,label,small,summary,th,td,strong,b,span,legend,dt,dd,em,code,kbd,button,a,.muted,.eyebrow){color:var(--light-ink)!important}
+html[data-appearance=light] :is(#hub-app,#league-app) :is(small,.muted,.footnote,.method-note,.panel-subtitle,.weapon-list-title,.weapon-row-meta,.weapon-hero-bottom,.rune,.rune-tree-title,.build-caption,.confidence,.freshness-dates){color:var(--light-muted)!important}
+
+/* Forest: light controls alongside the unchanged map and marker artwork. */
+html[data-appearance=light] #hub-app :is(.sotf-sidebar,.sotf-sidebar footer,.sotf-detail,.sotf-map-caption){background:var(--light-panel)!important;color:var(--light-ink);border-color:var(--light-border)}
+html[data-appearance=light] #hub-app :is(.sotf-presets button,.sotf-map-tools button,.sotf-close,#sotf-results button){background:var(--light-panel)!important;color:var(--light-ink)!important;border-color:var(--light-border)}
+html[data-appearance=light] #hub-app :is(#sotf-layers label:hover,#sotf-results button.selected){background:var(--light-raised)!important}
+
+/* Siege panels and controls. Image-backed banners deliberately stay dark. */
+html[data-appearance=light] #hub-app :is(.r6-map-list,.r6-ban-choices,.r6-pick,.r6-panel,.r6-method,.r6-source-status){background:var(--light-panel)!important;border-color:var(--light-border)!important}
+html[data-appearance=light] #hub-app .r6-page button{background:var(--light-panel);border-color:var(--light-border)}
+html[data-appearance=light] #hub-app .r6-page button[aria-pressed=true]{background:#f8ddcf;border-color:#bc5433}
+html[data-appearance=light] #hub-app .r6-rate-track{background:#e5ded7}
+
+/* League navigation, build cards, rune labels, saved builds and picker. */
+html[data-appearance=light] #league-app :is(.sidebar,.mode-tabs,.segmented,.starter-item,.item-card,.item-art,.core-result,.result-badge,.threat-pills button,.skill-priority b,.skill-cell,.rune.keystone,.shard-icon,.summoners kbd,.matchup-select,.notice,.loading-banner,.quiet-tag,.picker-search,.filter-pills button,.roster-card,.empty-state,.guide-state){background:var(--light-raised)!important;border-color:var(--light-border)!important}
+html[data-appearance=light] #league-app :is(.button.secondary,.nav-link,.icon-button){color:var(--light-ink)!important}
+html[data-appearance=light] #league-app .button.secondary{background:var(--light-raised)!important;border-color:var(--light-border)}
+html[data-appearance=light] #league-app :is(.mode-tabs button.active,.segmented button.active,.threat-pills button.active,.filter-pills button.active,.nav-link.active,.skill-cell.chosen){background:#f8ddcf!important;border-color:#bc5433!important;color:#823116!important}
+html[data-appearance=light] #league-app .skill-cell.chosen.ultimate{background:#f2e4b5!important;color:#544312!important}
+html[data-appearance=light] #league-app .skeleton{background:linear-gradient(110deg,#eee8e1 25%,#fffdfa 45%,#eee8e1 65%);background-size:250% 100%;border-color:var(--light-border)}
+
+/* COD: readable tiers, feed status, attachment labels and playlist controls. */
+html[data-appearance=light] #hub-app :is(.tier-tag,.variant-picker button,.loadout-code,.playlist-tabs button,.save-loadout){background:var(--light-raised)!important;border-color:var(--light-border)!important;color:var(--light-ink)!important}
+html[data-appearance=light] #hub-app :is(.tier-0,.variant-picker button.active,.playlist-tabs button.active){background:#f8ddcf!important;border-color:#bc5433!important;color:#823116!important}
+html[data-appearance=light] #hub-app :is(.weapon-list-title,.weapon-hero-bottom,.weapon-row-top,.source-state,.arsenal-source){color:var(--light-muted)!important}
+
+/* The Finals, official news and videos use the same light surface hierarchy. */
+html[data-appearance=light] #hub-app :is(.finals-section-tabs,.finals-freshness,.class-tab,.finals-build-list button,.finals-tier,.finals-gear>div,.team-preset-tabs button,.team-strategy,.team-player-head,.player-number,.finals-saved,.patch-check,.patch-feature,.patch-kind,.patch-row,.patch-context,.patch-error,.watch-filter,.watch-player-section,.official-channel,.video-card){background:var(--light-panel)!important;border-color:var(--light-border)!important}
+html[data-appearance=light] #hub-app :is(.finals-section-tabs button.active,.class-tab.active,.finals-build-list button.active,.team-preset-tabs button.active,.finals-gear .primary-gear){background:#f8ddcf!important;color:#823116!important;border-color:#bc5433!important}
+html[data-appearance=light] #hub-app .class-tab>b{background:var(--light-raised);color:var(--light-ink)}
+
+/* Dark artwork needs its own foreground, even when the surrounding UI is light.
+   Buttons reset the tokens because their surface is light. */
+html[data-appearance=light] #hub-app :is(.r6-hero,.r6-map-banner,.finals-hero,.class-art,.sotf-map-error),
+html[data-appearance=light] #league-app .league-hero{--light-ink:#fff8f1;--light-muted:#e2d8d0;--game-copy:#fff8f1;--league-text:#fff8f1;color:var(--light-ink)!important}
+html[data-appearance=light] :is(#hub-app,#league-app) :is(.r6-hero,.r6-map-banner,.finals-hero,.class-art,.league-hero) :is(button,.hub-button,.button){--light-ink:#302b28;--light-muted:#675c55;background:#fffdfa!important;color:#302b28!important;border-color:#cfc3b9!important}
+html[data-appearance=light] #league-app .league-hero .hero-bottom{color:#fff8f1}
+
+/* Auxiliary controls, status messages and table headers also own surfaces. */
+html[data-appearance=light] :is(#hub-app,#league-app){--light-ink:#25201e}
+html[data-appearance=light] #hub-app :is(.wd-map-toolbar,.wd-map-footer,.wd-source-status,.wd-range-legend,.damage-comparison th,.cod-notice){background:var(--light-raised)!important;border-color:var(--light-border)!important;color:var(--light-ink)!important}
+html[data-appearance=light] #hub-app :is(.wd-map-toolbar button,.weapon-type-tabs button,.damage-types button){background:var(--light-panel)!important;color:var(--light-ink)!important;border-color:var(--light-border)!important}
+html[data-appearance=light] #hub-app :is(.wd-map-toolbar button.active,.weapon-type-tabs button[aria-pressed=true],.damage-types button[aria-pressed=true]){background:#f8ddcf!important;color:#823116!important;border-color:#bc5433!important}
+html[data-appearance=light] #hub-app .feed-label{color:var(--light-muted)!important}
+html[data-appearance=light] #league-app .nav-count{background:var(--light-raised);color:var(--light-ink)}
+html[data-appearance=light] #league-app :is(.loading-banner,.summoner-heading){color:var(--light-ink)}
+html[data-appearance=light] #league-app .button:not(.secondary){background:#ee6038!important;color:#25201e!important}
+html[data-appearance=light] #league-app .league-hero .change-champion{--light-ink:#fff8f1;background:transparent!important;color:#fff8f1!important;border-color:transparent!important}
+html[data-appearance=light] #league-app :is(.roster-total,.methodology ol,.methodology li){color:var(--light-ink)!important}
+html[data-appearance=light] #league-app :is(.roster-card svg,.picker-search svg),html[data-appearance=light] #hub-app .weapon-row-title .icon{color:var(--light-muted)!important}

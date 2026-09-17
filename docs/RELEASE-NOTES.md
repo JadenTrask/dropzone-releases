@@ -1,3 +1,9 @@
+# Dropzone 2.3.2
+
+- Correct light-mode panels, labels, controls and artwork-banner contrast across game workspaces.
+- Forest and WARDOGS map backgrounds and the Forest compass now follow appearance changes immediately.
+- Restore the centered original-logo startup with a blurred app background that sharpens as the logo zooms in.
+
 # Dropzone 2.3.1
 
 - App-wide orange theme based on the Waypoint logo, including light mode, dark mode, controls and tool highlights.

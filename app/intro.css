@@ -1,12 +1,12 @@
-.dz-intro{position:fixed;inset:0;z-index:99999;display:grid;place-items:center;background:#f7f4ed;backdrop-filter:blur(10px);transition:opacity .45s ease,backdrop-filter .55s ease;user-select:none;pointer-events:none}
-.dz-intro-content{width:min(82vw,960px);opacity:0;transform:translateY(12px) scale(.97);filter:blur(16px)}
-.dz-intro-lockup{display:block;width:100%;height:auto}
-.dz-intro-playing .dz-intro-content{animation:waypoint-lockup .65s cubic-bezier(.2,.8,.2,1) both}
-.dz-intro.dz-intro-leave{opacity:0;backdrop-filter:blur(0)}
-.dz-intro-playing.dz-intro-leave .dz-intro-content{animation:waypoint-lockup-out .45s ease both}
-@keyframes waypoint-lockup{from{opacity:0;transform:translateY(12px) scale(.97);filter:blur(16px)}to{opacity:1;transform:translateY(0) scale(1);filter:blur(0)}}
-@keyframes waypoint-lockup-out{from{filter:blur(0);transform:scale(1)}to{filter:blur(14px);transform:scale(1.025)}}
-@media(prefers-reduced-motion:reduce){.dz-intro,.dz-intro *{animation:none!important;transition:none!important}.dz-intro{backdrop-filter:none}.dz-intro-content{opacity:1;transform:none;filter:none}}
+/* The original approved artwork sits over the real, blurred destination. */
+.dz-intro{position:fixed;inset:0;z-index:99999;display:grid;place-items:center;background:rgba(247,244,237,.78);backdrop-filter:blur(20px);transition:opacity .6s ease,backdrop-filter .6s ease,background-color .6s ease;user-select:none;pointer-events:none;overflow:hidden}
+.dz-intro-content{position:relative;width:min(76vw,860px);aspect-ratio:900/210;overflow:hidden;opacity:1;transform:scale(1);transform-origin:center;will-change:transform,opacity}
+/* Clip the horizontal lockup directly from the original concept board. */
+.dz-intro-lockup{position:absolute;display:block;max-width:none;width:170.666667%;height:auto;left:-65.555556%;top:-135.714286%}
+.dz-intro.dz-intro-leave{opacity:0;backdrop-filter:blur(0);background-color:rgba(247,244,237,0)}
+.dz-intro-playing.dz-intro-leave .dz-intro-content{animation:waypoint-zoom-through .6s cubic-bezier(.3,0,.2,1) both}
+@keyframes waypoint-zoom-through{from{opacity:1;transform:scale(1)}to{opacity:0;transform:scale(1.75)}}
+@media(prefers-reduced-motion:reduce){.dz-intro,.dz-intro *{animation:none!important;transition:none!important}.dz-intro{backdrop-filter:none}.dz-intro-content{transform:none}}
 .app-reduced-motion .dz-intro,.app-reduced-motion .dz-intro *{animation:none!important;transition:none!important}
 .app-reduced-motion .dz-intro{backdrop-filter:none}
-.app-reduced-motion .dz-intro-content{opacity:1;transform:none;filter:none}
+.app-reduced-motion .dz-intro-content{transform:none}

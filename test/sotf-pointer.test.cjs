@@ -12,7 +12,8 @@ test('Map icons can be selected within their visible marker size',async()=>{
 
 test('Clicking opens details with dragging cleared; lost capture and released buttons stop panning',async()=>{
   const {ForestMap}=await import('../app/sotf-map.js');
-  const originals={ResizeObserver:global.ResizeObserver,devicePixelRatio:global.devicePixelRatio,requestAnimationFrame:global.requestAnimationFrame,cancelAnimationFrame:global.cancelAnimationFrame};
+  const originals={MutationObserver:global.MutationObserver,document:global.document,ResizeObserver:global.ResizeObserver,devicePixelRatio:global.devicePixelRatio,requestAnimationFrame:global.requestAnimationFrame,cancelAnimationFrame:global.cancelAnimationFrame};
+  global.document={documentElement:{dataset:{appearance:"dark"}}};global.MutationObserver=class{observe(){}disconnect(){}};
   global.ResizeObserver=class{observe(){} disconnect(){}};global.devicePixelRatio=1;global.requestAnimationFrame=()=>1;global.cancelAnimationFrame=()=>{};
   class Canvas extends EventTarget{style={};captured=false;getContext(){return {}}getBoundingClientRect(){return {left:0,top:0,width:200,height:200}}focus(){}setPointerCapture(){this.captured=true}hasPointerCapture(){return this.captured}releasePointerCapture(){this.captured=false}}
   const canvas=new Canvas(),point={id:1,x:0,y:0};let selected;

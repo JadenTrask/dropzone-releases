@@ -1,7 +1,8 @@
 const {test}=require('node:test'),assert=require('node:assert/strict');
 test('Placement clicks commit once, gun lock holds, every drag pans and lost release never sticks',async()=>{
   const {WardogsMap}=await import('../app/wardogs-map.js'),definition=require('../app/data/wardogs/maps.json').maps[0];
-  const originals={ResizeObserver:global.ResizeObserver,window:global.window,requestAnimationFrame:global.requestAnimationFrame,cancelAnimationFrame:global.cancelAnimationFrame};
+  const originals={MutationObserver:global.MutationObserver,document:global.document,ResizeObserver:global.ResizeObserver,window:global.window,requestAnimationFrame:global.requestAnimationFrame,cancelAnimationFrame:global.cancelAnimationFrame};
+  global.document={documentElement:{dataset:{appearance:"dark"}}};global.MutationObserver=class{observe(){}disconnect(){}};
   global.ResizeObserver=class{observe(){}disconnect(){}};global.window={devicePixelRatio:1,matchMedia:()=>({matches:true})};global.requestAnimationFrame=()=>1;global.cancelAnimationFrame=()=>{};
   class Canvas extends EventTarget{dataset={};captured=false;getContext(){return {}}getBoundingClientRect(){return {left:0,top:0,width:800,height:600}}focus(){}setPointerCapture(){this.captured=true}hasPointerCapture(){return this.captured}releasePointerCapture(){this.captured=false}}
   const canvas=new Canvas(),state={tool:'origin',lockOrigin:false},placements=[];

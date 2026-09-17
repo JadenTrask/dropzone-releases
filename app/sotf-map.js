@@ -11,6 +11,7 @@ export class ForestMap{
     canvas.addEventListener('lostpointercapture',()=>this.endDrag(),{signal});
     canvas.addEventListener('blur',()=>this.endDrag(),{signal});
     canvas.addEventListener('keydown',e=>this.key(e),{signal});
+    this.appearanceObserver=new MutationObserver(()=>this.draw());this.appearanceObserver.observe(document.documentElement,{attributes:true,attributeFilter:['data-appearance']});
     this.observer=new ResizeObserver(()=>this.resize());this.observer.observe(canvas);this.resize();
   }
   endDrag(){const pointerId=this.drag?.pointerId;this.drag=null;if(pointerId!==undefined&&this.canvas.hasPointerCapture(pointerId))this.canvas.releasePointerCapture(pointerId);this.canvas.style.cursor='grab';}
@@ -31,7 +32,7 @@ export class ForestMap{
   image(key){if(this.images.has(key))return this.images.get(key);const img=new Image();img.onload=()=>this.draw();img.onerror=()=>{this.onStatus('Some map tiles could not load. Reinstall Dropzone to repair the bundled map.');};img.src='assets/sotf/map/'+key+'.webp';this.images.set(key,img);return img;}
   hit(point){let nearest,best=Infinity;for(const p of this.getLocations()){const s=this.screen(p),dx=s.x-point.x,dy=s.y-point.y,d=dx*dx+dy*dy,r=p.id===this.selected?18:15;if(d<r*r&&d<best){nearest=p;best=d;}}return nearest;}
   draw(){if(this.dead||this.frame)return;this.frame=requestAnimationFrame(()=>{this.frame=0;this.render();});}
-  render(){if(!this.camera)return;const ctx=this.ctx;ctx.setTransform(this.dpr,0,0,this.dpr,0,0);ctx.fillStyle='#101c20';ctx.fillRect(0,0,this.width,this.height);
+  render(){if(!this.camera)return;const ctx=this.ctx;ctx.setTransform(this.dpr,0,0,this.dpr,0,0);ctx.fillStyle=document.documentElement.dataset.appearance==='light'?'#f5f4f1':'#101c20';ctx.fillRect(0,0,this.width,this.height);
     const origin=this.screen({x:-2000,y:2000}),size=4000*this.camera.scale;const overview=this.image('0-0-0');if(overview.complete&&overview.naturalWidth)ctx.drawImage(overview,0,0,250,250,origin.x,origin.y,size,size);
     // Upstream uses 250-pixel tiles; the outer 6 pixels of each 256-pixel image are padding.
     // Native tiles divide the 4000-unit world into a 16×16 grid. y increases south in tile filenames.
@@ -52,7 +53,7 @@ export class ForestMap{
       if(icon.complete&&icon.naturalWidth){const size=selected?26:22,scale=size/Math.max(icon.naturalWidth,icon.naturalHeight),w=icon.naturalWidth*scale,h=icon.naturalHeight*scale;ctx.drawImage(icon,s.x-w/2,s.y-h/2,w,h);}
       if(done.has(p.id)){ctx.globalAlpha=1;ctx.beginPath();ctx.arc(s.x+10,s.y+10,6,0,Math.PI*2);ctx.fillStyle='#aac9bb';ctx.fill();ctx.fillStyle='#10191f';ctx.font='bold 10px sans-serif';ctx.textAlign='center';ctx.fillText('✓',s.x+10,s.y+14);}
     }
-    ctx.globalAlpha=1;ctx.fillStyle='#e8f3f2';ctx.font='bold 13px sans-serif';ctx.textAlign='left';ctx.fillText('N ↑',18,25);
+    ctx.globalAlpha=1;ctx.fillStyle=document.documentElement.dataset.appearance==='light'?'#25201e':'#e8f3f2';ctx.font='bold 13px sans-serif';ctx.textAlign='left';ctx.fillText('N ↑',18,25);
   }
-  destroy(){this.dead=true;this.events.abort();this.observer.disconnect();cancelAnimationFrame(this.frame);this.images.forEach(i=>{i.onload=null;i.onerror=null;});this.images.clear();}
+  destroy(){this.dead=true;this.events.abort();this.observer.disconnect();this.appearanceObserver.disconnect();cancelAnimationFrame(this.frame);this.images.forEach(i=>{i.onload=null;i.onerror=null;});this.images.clear();}
 }

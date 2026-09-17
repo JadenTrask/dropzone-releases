@@ -15,9 +15,10 @@ export class WardogsMap {
     canvas.addEventListener('lostpointercapture',()=>{this.drag=null;delete this.canvas.dataset.dragging;this.draw();},{signal});
     canvas.addEventListener('contextmenu',e=>e.preventDefault(),{signal});
     canvas.addEventListener('keydown',e=>this.key(e),{signal});
+    this.appearanceObserver=new MutationObserver(()=>this.draw());this.appearanceObserver.observe(document.documentElement,{attributes:true,attributeFilter:['data-appearance']});
     this.observer=new ResizeObserver(()=>this.resize());this.observer.observe(canvas);this.resize();
   }
-  destroy(){this.dead=true;this.events.abort();this.observer.disconnect();cancelAnimationFrame(this.pending);for(const r of this.images.values()){r.image.onload=null;r.image.onerror=null;r.image.src="";}this.images.clear();}
+  destroy(){this.dead=true;this.events.abort();this.observer.disconnect();this.appearanceObserver.disconnect();cancelAnimationFrame(this.pending);for(const r of this.images.values()){r.image.onload=null;r.image.onerror=null;r.image.src="";}this.images.clear();}
   resize(){
     const rect=this.canvas.getBoundingClientRect();if(!rect.width||!rect.height)return;
     this.stopZoom();this.width=rect.width;this.height=rect.height;this.dpr=Math.min(window.devicePixelRatio||1,3);
@@ -128,7 +129,7 @@ export class WardogsMap {
     if(!this.camera)return;
     const c=this.ctx,s=this.getState(),b=this.map.bounds,t=this.map.tileBounds;
     this.fontScale=clamp(parseFloat(getComputedStyle(document.documentElement).fontSize)/16,1,2);
-    c.setTransform(this.dpr,0,0,this.dpr,0,0);c.clearRect(0,0,this.width,this.height);c.fillStyle='#0d1312';c.fillRect(0,0,this.width,this.height);
+    c.setTransform(this.dpr,0,0,this.dpr,0,0);c.clearRect(0,0,this.width,this.height);c.fillStyle=document.documentElement.dataset.appearance==='light'?'#f5f4f1':'#0d1312';c.fillRect(0,0,this.width,this.height);
     const nw=this.screen({x:b.minX,y:b.maxY}),se=this.screen({x:b.maxX,y:b.minY});
     c.save();c.beginPath();c.rect(nw.x,nw.y,se.x-nw.x,se.y-nw.y);c.clip();
     const topLeft=this.world({x:0,y:0}),bottomRight=this.world({x:this.width,y:this.height});

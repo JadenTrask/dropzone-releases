@@ -1,3 +1,11 @@
+# Version 2.3.2 validation
+
+- All 156 automated tests passed.
+- Browser checks covered 11 light-mode screens, League and Siege subviews, theme persistence and System appearance changes. Dark COD presentation was visually checked.
+- Canvas pixel checks verified Forest and WARDOGS light backgrounds after pan, zoom and live theme switching.
+- Original-logo startup was visually inspected; readiness, reduced motion and bounded recovery tests passed.
+- Native installation and installed-version upgrade were not exercised. Remote data refresh was unavailable in some previews; bundled data was used.
+
 # Version 2.3.1 validation
 
 - 156 app tests passed, including destination readiness, native startup sequencing and reduced motion.
