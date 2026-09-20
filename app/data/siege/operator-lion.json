@@ -1,0 +1,85 @@
+{
+  "id": "lion",
+  "name": "Lion",
+  "side": "attack",
+  "roles": [
+    "intel",
+    "map-control"
+  ],
+  "unit": "GIGN",
+  "squad": [
+    "wolfguard"
+  ],
+  "health": 2,
+  "speed": 2,
+  "difficulty": 1,
+  "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/O1pBwXRND1RV2WN5OrEr7/787e4d31e1b74ae9700ffac675205de3/R6-operator-lion.png",
+  "icon": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/3gfdjXFezusaerCakMpfQ2/4565b28edd241b7fd3b0eba9c97d54f2/Y3S1_BADGE_Lion_L.png",
+  "biography": {
+    "realName": "Olivier Flament",
+    "dateOfBirth": "August 29th (Age 31)",
+    "placeOfBirth": "Toulouse, France"
+  },
+  "loadout": [
+    {
+      "name": "417",
+      "category": "primary",
+      "type": "Marksman Rifle",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/5djkS4YtAtOF0vBmg0T60x/ea2b1ff7e5367e66c99bc7ad7e95bfe3/417.png"
+    },
+    {
+      "name": "SG-CQB",
+      "category": "primary",
+      "type": "SHOTGUN",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/5JoL3b36Fsztt9Q2XYmrbJ/dacec96948d3f8fe92914a69b9aac593/SG-CQB.png"
+    },
+    {
+      "name": "V308",
+      "category": "primary",
+      "type": "ASSAULT RIFLE",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/5YBZe76NUDO32eF66wW90g/488c315743d59230962a4d67618223d6/V308.png"
+    },
+    {
+      "name": "LFP586",
+      "category": "secondary",
+      "type": "HANDGUN",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/1zc7UtdBfCZakwbiYqBvSz/1fd3f1584de38ca7c9315d498f094276/LFP586.png"
+    },
+    {
+      "name": "P9",
+      "category": "secondary",
+      "type": "HANDGUN",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/6Fd1cl17KA0CtgodEiiY6v/d0f145ea72f2aacbd04260ba7d8f1c74/P9.png"
+    },
+    {
+      "name": "Claymore",
+      "category": "gadget",
+      "type": "",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/4T4H5EJgUxorucGVtU2pkm/74fef324b89c220ce6426e8097f915b9/Claymore.png"
+    },
+    {
+      "name": "Frag Grenade",
+      "category": "gadget",
+      "type": "",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/4GZsPHbm9H0k5EWz7TMkwO/33b9007bc6ee03dab15cfa15eb69e096/Frag_Grenade.png"
+    },
+    {
+      "name": "Stun Grenade",
+      "category": "gadget",
+      "type": "",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/3XnK8s1iQJQu5cfr6UyQfK/429480b96d6d6d6b830c32c75d2608f5/Stun_Grenade.png"
+    },
+    {
+      "name": "EE-ONE-D",
+      "category": "unique-ability",
+      "type": "",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/7fRknnWl2K2qjKle1t79j/0506d25798aeb0691c8a576665050f7d/EE-ONE-D.png"
+    }
+  ],
+  "source": "Ubisoft",
+  "sourceUrl": "https://www.ubisoft.com/en-us/game/rainbow-six/siege/game-info/operators/lion",
+  "thumbnail": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/4wYSIOO4AKq0nw1GbulGns/fcd32bda72facd7062a25ad3764f21e9/r6-operators-list-lion.png",
+  "schema": 1,
+  "feed": "operator-lion",
+  "fetchedAt": "2026-09-20T02:52:11.622Z"
+}

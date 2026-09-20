@@ -1,0 +1,73 @@
+{
+  "id": "echo",
+  "name": "Echo",
+  "side": "defense",
+  "roles": [
+    "intel",
+    "crowd-control"
+  ],
+  "unit": "S.A.T.",
+  "squad": [
+    "viperstrike"
+  ],
+  "health": 2,
+  "speed": 2,
+  "difficulty": 3,
+  "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/2dZawp2HB63pTV3Zwgro6L/8278d19b2e9ae6b1f4ef45784a217c89/R6-operator-echo.png",
+  "icon": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/3MRqAdUybJ7GR9gX4wPAI4/992938a70a4e53b91478358634e77ca7/Y1S4_BADGE_Echo_L.png",
+  "biography": {
+    "realName": "Masaru Enatsu",
+    "dateOfBirth": "October 31st (Age 36)",
+    "placeOfBirth": "Tokyo, Japan (Suginami-ku)"
+  },
+  "loadout": [
+    {
+      "name": "MP5SD",
+      "category": "primary",
+      "type": "SUBMACHINE GUN",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/5HaMldwFltBwiiyDDfkPpD/6de3aa9aaa17458e7f6186ba59b8deff/MP5SD.png"
+    },
+    {
+      "name": "SuperNova",
+      "category": "primary",
+      "type": "SHOTGUN",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/2tpjCRFLcc3hogjJGbKDsi/5ad0ab63b7245022aca5c1c1fb42d473/SuperNova.png"
+    },
+    {
+      "name": "Bearing 9",
+      "category": "secondary",
+      "type": "Machine Pistol",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/4mdftEOh5Vu9KhhpgKLKrT/abedcc75868774018295ec2a08a7b3de/Bearing_9.png"
+    },
+    {
+      "name": "P229",
+      "category": "secondary",
+      "type": "HANDGUN",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/76ja0RxqzHW9PpvWgpG7Sk/cb753b50b20fe67deaef54d8b2a46b54/P229.png"
+    },
+    {
+      "name": "Impact Grenade",
+      "category": "gadget",
+      "type": "",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/7iJK9B1Vr3PDO3rGftU00l/3a02e940b440c30929edf22c49870f65/impact-grenade__1_.png"
+    },
+    {
+      "name": "Deployable Shield",
+      "category": "gadget",
+      "type": "",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/W0WE0X2VQlxwWIAFCJ6Jm/523650a39de5a23dd9520d7299c9e25a/Deployable_Shield.png"
+    },
+    {
+      "name": "Yokai",
+      "category": "unique-ability",
+      "type": "",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/TdDZyrKpjt9EQo8tHpIJk/d987db4da22046a0663be8be82dcda88/Yokai.png"
+    }
+  ],
+  "source": "Ubisoft",
+  "sourceUrl": "https://www.ubisoft.com/en-us/game/rainbow-six/siege/game-info/operators/echo",
+  "thumbnail": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/7MdVMpafww11MfSVMEzyTK/4d4c5d92585c7cf11a28cbf9456e3d9e/r6-operators-list-echo.png",
+  "schema": 1,
+  "feed": "operator-echo",
+  "fetchedAt": "2026-09-20T02:52:11.635Z"
+}

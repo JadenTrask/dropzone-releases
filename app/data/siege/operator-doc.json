@@ -1,0 +1,84 @@
+{
+  "id": "doc",
+  "name": "Doc",
+  "side": "defense",
+  "roles": [
+    "support"
+  ],
+  "unit": "GIGN",
+  "squad": [
+    "wolfguard"
+  ],
+  "health": 3,
+  "speed": 1,
+  "difficulty": 1,
+  "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/7cZ1TDHehPRrgv6uJ2GIoy/d6feddd3fc1a0769a8ad56afa658e572/R6-operator-doc.png",
+  "icon": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/71Nl3v0LqHyo9eXV6xTFQd/1ba4f057b6acad3ec700ca9e60b53d6c/Y0R6_BADGE_Doc_L.png",
+  "biography": {
+    "realName": "Gustave Kateb",
+    "dateOfBirth": "September 16th (Age 39)",
+    "placeOfBirth": "Paris, France"
+  },
+  "loadout": [
+    {
+      "name": "MP5",
+      "category": "primary",
+      "type": "SUBMACHINE GUN",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/60YbOvSBQt6ZUlu8YDXoZm/51ef3857b2986de700262432e8433714/MP5.png"
+    },
+    {
+      "name": "P90",
+      "category": "primary",
+      "type": "SUBMACHINE GUN",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/4nGrNspOvII2oS3lEMkg5x/2398a493c298bc654f97c58767aa40f3/P90.png"
+    },
+    {
+      "name": "SG-CQB",
+      "category": "primary",
+      "type": "SHOTGUN",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/5JoL3b36Fsztt9Q2XYmrbJ/dacec96948d3f8fe92914a69b9aac593/SG-CQB.png"
+    },
+    {
+      "name": "P9",
+      "category": "secondary",
+      "type": "HANDGUN",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/6Fd1cl17KA0CtgodEiiY6v/d0f145ea72f2aacbd04260ba7d8f1c74/P9.png"
+    },
+    {
+      "name": "LFP586",
+      "category": "secondary",
+      "type": "HANDGUN",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/1zc7UtdBfCZakwbiYqBvSz/1fd3f1584de38ca7c9315d498f094276/LFP586.png"
+    },
+    {
+      "name": "Bulletproof camera",
+      "category": "gadget",
+      "type": "",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/gZuOXvuTu2i8hQX0B6auy/259f379a6283bae618443d722a896f1a/Bulletproof_camera.png"
+    },
+    {
+      "name": "Barbed Wire",
+      "category": "gadget",
+      "type": "",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/7igaibxuCcSpWDkZensEJS/6d30514b70a4c8b535bb1c113f9cfce0/barbed-wire__1_.png"
+    },
+    {
+      "name": "Stim Pistol",
+      "category": "unique-ability",
+      "type": "",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/7njaeUjJj27iYH27HnH6jn/c5533d2d7191b879c313013f278f5f59/Stim-Pistol.png"
+    },
+    {
+      "name": "Bailiff 410",
+      "category": "secondary",
+      "type": "HANDGUN",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/N8FLbo4fsNyBe8msKgRhT/8f403dc0b58087bcafab786dd95ba33f/Bailiff_410.png"
+    }
+  ],
+  "source": "Ubisoft",
+  "sourceUrl": "https://www.ubisoft.com/en-us/game/rainbow-six/siege/game-info/operators/doc",
+  "thumbnail": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/2sCxLIpS9I19PKRz44Phj9/4f96411a556cc41597b8b3e83260cd21/r6-operators-list-doc.png",
+  "schema": 1,
+  "feed": "operator-doc",
+  "fetchedAt": "2026-09-20T02:52:11.657Z"
+}

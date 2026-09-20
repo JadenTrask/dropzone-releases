@@ -1,0 +1,79 @@
+{
+  "id": "thatcher",
+  "name": "Thatcher",
+  "side": "attack",
+  "roles": [
+    "anti-gadget",
+    "support"
+  ],
+  "unit": "SAS",
+  "squad": [
+    "viperstrike"
+  ],
+  "health": 3,
+  "speed": 1,
+  "difficulty": 2,
+  "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/4yGZXsXNG7gxH0YIwnii6F/aea81ff691fae0422a87987c30f829f9/r6s-operator-thatcher.png",
+  "icon": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/5NbqTdEPmYy9qOZmN9StVT/38b3b2a70cfb4ffbfe6e8a6bd8654d1d/r6s-operators-badge-thatcher.png",
+  "biography": {
+    "realName": "Mike Baker",
+    "dateOfBirth": "June 22nd (Age 56)",
+    "placeOfBirth": "Bideford, England"
+  },
+  "loadout": [
+    {
+      "name": "AR33",
+      "category": "primary",
+      "type": "ASSAULT RIFLE",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/16U6xEvX8I5xQd9duveBLN/45d22960872cfa3fb6be9eb47fa0be4e/AR33.png"
+    },
+    {
+      "name": "L85A2",
+      "category": "primary",
+      "type": "ASSAULT RIFLE",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/5vYQpoyk36foDzDq49jBd0/1479a2d7189e545555ceccecf6bd7cc3/L85A2.png"
+    },
+    {
+      "name": "M590A1",
+      "category": "primary",
+      "type": "SHOTGUN",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/2zRHmgqENNiZqXQxC9Rsbj/e6542407c642f9b7c5a4546afb6db30a/M590A1.png"
+    },
+    {
+      "name": "PMR90A2",
+      "category": "primary",
+      "type": "",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/g1CRNF5Bg8mYPXY8qxsTt/a3fd65c5715d31c8afeb9fad9c478be5/PMR90A2.png"
+    },
+    {
+      "name": "P226 Mk 25",
+      "category": "secondary",
+      "type": "HANDGUN",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/RTQvPQcywlRwUS1FjIKCX/6fc72fee2191c2e723276bc10ae4114e/P226_Mk_25.png"
+    },
+    {
+      "name": "Breach Charge",
+      "category": "gadget",
+      "type": "",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/1OgTMhyF1FBsSAo4njk26m/99b7a971f81b9195b3c3536b51d52893/R6S_Breach_charge.png"
+    },
+    {
+      "name": "Claymore",
+      "category": "gadget",
+      "type": "",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/4T4H5EJgUxorucGVtU2pkm/74fef324b89c220ce6426e8097f915b9/Claymore.png"
+    },
+    {
+      "name": "E.G.S. Disruptor (Electronic Gear Scanner Disruptor)",
+      "category": "unique-ability",
+      "type": "",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/F9Db64AbhCe2l2ijtJQpC/13cd53a46d0d868452772ae8a854cca7/r6s-operator-ability-thatcher.png"
+    }
+  ],
+  "source": "Ubisoft",
+  "sourceUrl": "https://www.ubisoft.com/en-us/game/rainbow-six/siege/game-info/operators/thatcher",
+  "thumbnail": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/5QGPM6l25ybaINnaIaLgvm/338e2b5213ae32fc62f3befcd8526ccc/r6s-operators-list-thatcher.png",
+  "schema": 1,
+  "feed": "operator-thatcher",
+  "fetchedAt": "2026-09-20T02:52:11.647Z"
+}

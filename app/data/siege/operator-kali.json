@@ -1,0 +1,79 @@
+{
+  "id": "kali",
+  "name": "Kali",
+  "side": "attack",
+  "roles": [
+    "anti-gadget",
+    "support"
+  ],
+  "unit": "NIGHTHAVEN",
+  "squad": [
+    "nighthaven"
+  ],
+  "health": 2,
+  "speed": 2,
+  "difficulty": 2,
+  "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/4xh8dBfzXNSwQIOaw660Xb/6df56a74ea8534be1d15f61e49aa1e24/r6-operator-kali_358315.png",
+  "icon": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/6r1hk1EunQirF1IcY4TG8T/0d3fbb7508a7747fd51249b1b8ea9779/Y4S4_BADGE_Kali_L.png",
+  "biography": {
+    "realName": "Jaimini Kalimohan Shah",
+    "dateOfBirth": "August 21st (34)",
+    "placeOfBirth": "Amreli, India"
+  },
+  "loadout": [
+    {
+      "name": "CSRX 300",
+      "category": "primary",
+      "type": "Marksman Rifle",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/7tUB9ZNXJhdN6ejAkCEeFQ/99691bcc19f641cf872925905d08a539/CSRX_300.png"
+    },
+    {
+      "name": "SPSMG9",
+      "category": "secondary",
+      "type": "Machine Pistol",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/5EtwSgylXckBNg4n6gDR9J/bc6fc6c5c12ae11da59aee95828ebd76/SPSMG9.png"
+    },
+    {
+      "name": "C75 Auto",
+      "category": "secondary",
+      "type": "Machine Pistol",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/3wUuefwPjU705mZkTdJ9UH/8ccb11884cfa34c176ac5500af139177/C75_Auto.png"
+    },
+    {
+      "name": "P226 Mk 25",
+      "category": "secondary",
+      "type": "HANDGUN",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/RTQvPQcywlRwUS1FjIKCX/6fc72fee2191c2e723276bc10ae4114e/P226_Mk_25.png"
+    },
+    {
+      "name": "Breach Charge",
+      "category": "gadget",
+      "type": "",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/1OgTMhyF1FBsSAo4njk26m/99b7a971f81b9195b3c3536b51d52893/R6S_Breach_charge.png"
+    },
+    {
+      "name": "Claymore",
+      "category": "gadget",
+      "type": "",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/4T4H5EJgUxorucGVtU2pkm/74fef324b89c220ce6426e8097f915b9/Claymore.png"
+    },
+    {
+      "name": "Smoke Grenade",
+      "category": "gadget",
+      "type": "",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/3LaxoSLC49T5vgKnUAlTLT/c47c4636845a04478432c48be8c29aee/Smoke_Grenade.png"
+    },
+    {
+      "name": "LV Explosive Lance",
+      "category": "unique-ability",
+      "type": "",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/75eebt48ELO4eGGdIMVMpY/9533c7dc8f36651f5b5ad50c8ccb6c5a/LV_Explosive_Lance.png"
+    }
+  ],
+  "source": "Ubisoft",
+  "sourceUrl": "https://www.ubisoft.com/en-us/game/rainbow-six/siege/game-info/operators/kali",
+  "thumbnail": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/41NACeIbkdnIWgnwq0HzD4/9713f8e58b9a8c253b7507b59169bb3c/r6-operators-list-kali_358317.png",
+  "schema": 1,
+  "feed": "operator-kali",
+  "fetchedAt": "2026-09-20T02:52:11.606Z"
+}

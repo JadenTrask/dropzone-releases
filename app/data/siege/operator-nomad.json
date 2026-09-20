@@ -1,0 +1,73 @@
+{
+  "id": "nomad",
+  "name": "Nomad",
+  "side": "attack",
+  "roles": [
+    "front-line",
+    "map-control"
+  ],
+  "unit": "GIGR",
+  "squad": [
+    "wolfguard"
+  ],
+  "health": 2,
+  "speed": 2,
+  "difficulty": 3,
+  "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/1Fue2SumRQEs8Geb2CpWsX/913fbcda744ab9dc719a1440047e4585/R6-operator-nomad.png",
+  "icon": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/UxfU1gJDoZGDrzT3iBsIp/b1aa522cc08e4631b9a857b52afa4f99/Y3S4_BADGE_Nomad_L.png",
+  "biography": {
+    "realName": "Sanaa El Maktoub",
+    "dateOfBirth": "July 27th (Age 39)",
+    "placeOfBirth": "Marrakesh, Morocco"
+  },
+  "loadout": [
+    {
+      "name": "AK-74M",
+      "category": "primary",
+      "type": "ASSAULT RIFLE",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/1j5HiQP8aFphTe65fqDdg0/23eecb5c603c5ba9f59fc6cbc5e4a531/AK-74M.png"
+    },
+    {
+      "name": "ARX200",
+      "category": "primary",
+      "type": "ASSAULT RIFLE",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/6VgkPBsr1WApI3rWc9kcM0/b18b8e25f3e951e8e722213f2ee59eb0/ARX200.png"
+    },
+    {
+      "name": "PRB92",
+      "category": "secondary",
+      "type": "HANDGUN",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/dl28J1HsE7mzhj66pmd5D/b8d8fc48d2dde13154047de94abbd8ca/PRB92.png"
+    },
+    {
+      "name": ".44 MAG SEMI-AUTO",
+      "category": "secondary",
+      "type": "HANDGUN",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/6W3Jz0YcQzbZ6BOPr7VVel/4c67f342964132a652f7d5821e887050/.44_Mag_Semi-Auto.png"
+    },
+    {
+      "name": "Breach Charge",
+      "category": "gadget",
+      "type": "",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/1OgTMhyF1FBsSAo4njk26m/99b7a971f81b9195b3c3536b51d52893/R6S_Breach_charge.png"
+    },
+    {
+      "name": "Stun Grenade",
+      "category": "gadget",
+      "type": "",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/3XnK8s1iQJQu5cfr6UyQfK/429480b96d6d6d6b830c32c75d2608f5/Stun_Grenade.png"
+    },
+    {
+      "name": "Airjab Launcher",
+      "category": "unique-ability",
+      "type": "",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/6d0LN1QWzviEkcYu3mTn6v/e49511a479756f71224f14225ad9cbd8/Airjab-Launcher.png"
+    }
+  ],
+  "source": "Ubisoft",
+  "sourceUrl": "https://www.ubisoft.com/en-us/game/rainbow-six/siege/game-info/operators/nomad",
+  "thumbnail": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/3VHhiyMOUkBOW1u1Zh5eGH/9e603d3e6926fc26ebee494b3040eba7/r6-operators-list-nomad.png",
+  "schema": 1,
+  "feed": "operator-nomad",
+  "fetchedAt": "2026-09-20T02:52:11.614Z"
+}

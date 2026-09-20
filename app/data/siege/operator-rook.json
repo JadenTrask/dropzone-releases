@@ -1,0 +1,90 @@
+{
+  "id": "rook",
+  "name": "Rook",
+  "side": "defense",
+  "roles": [
+    "support"
+  ],
+  "unit": "GIGN",
+  "squad": [
+    "viperstrike"
+  ],
+  "health": 3,
+  "speed": 1,
+  "difficulty": 1,
+  "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/17CNRjTOFVKS1Q8Zou4ZVD/663dae86e2902f210bf2b1504904dbd0/R6-operator-rook.png",
+  "icon": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/3Yk1noMd9re0RLlrXJSWtR/7a55e80593c487827293a114835dba63/Y0R6_BADGE_Rook_L.png",
+  "biography": {
+    "realName": "Julien Nizan",
+    "dateOfBirth": "January 6th (Age 27)",
+    "placeOfBirth": "Tours, France"
+  },
+  "loadout": [
+    {
+      "name": "MP5",
+      "category": "primary",
+      "type": "SUBMACHINE GUN",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/60YbOvSBQt6ZUlu8YDXoZm/51ef3857b2986de700262432e8433714/MP5.png"
+    },
+    {
+      "name": "P90",
+      "category": "primary",
+      "type": "SUBMACHINE GUN",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/4nGrNspOvII2oS3lEMkg5x/2398a493c298bc654f97c58767aa40f3/P90.png"
+    },
+    {
+      "name": "Reaper MK2",
+      "category": "secondary",
+      "type": "",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/5RC060K72yG2OXMq43lgrv/83df616f6d4a2dde6293cc97449159eb/reaper-mk2.png"
+    },
+    {
+      "name": "SG-CQB",
+      "category": "primary",
+      "type": "SHOTGUN",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/5JoL3b36Fsztt9Q2XYmrbJ/dacec96948d3f8fe92914a69b9aac593/SG-CQB.png"
+    },
+    {
+      "name": "P9",
+      "category": "secondary",
+      "type": "HANDGUN",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/6Fd1cl17KA0CtgodEiiY6v/d0f145ea72f2aacbd04260ba7d8f1c74/P9.png"
+    },
+    {
+      "name": "LFP586",
+      "category": "secondary",
+      "type": "HANDGUN",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/1zc7UtdBfCZakwbiYqBvSz/1fd3f1584de38ca7c9315d498f094276/LFP586.png"
+    },
+    {
+      "name": "PROXIMITY ALARM",
+      "category": "gadget",
+      "type": "",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/2TsFLmb2O6LRZpbxzkZDck/c9146913388a9567500b704c95600621/Proximity_alarm.png"
+    },
+    {
+      "name": "Impact Grenade",
+      "category": "gadget",
+      "type": "",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/7iJK9B1Vr3PDO3rGftU00l/3a02e940b440c30929edf22c49870f65/impact-grenade__1_.png"
+    },
+    {
+      "name": "Nitro Cell",
+      "category": "gadget",
+      "type": "",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/4pBSTw9U6l9GRnT12G6Xln/e0991bc03b48d217f510af8b611c8828/Nitro_Cell.png"
+    },
+    {
+      "name": "Armor Pack",
+      "category": "unique-ability",
+      "type": "",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/MeoKw7iPY6EFYvjS07CRg/b2d7eba623f3c63d6b7097a8f2253954/Armor-Pack.png"
+    }
+  ],
+  "source": "Ubisoft",
+  "sourceUrl": "https://www.ubisoft.com/en-us/game/rainbow-six/siege/game-info/operators/rook",
+  "thumbnail": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/1aFTx0BJYAKAnS1vyNA7w6/b4fc6421d382c677aa0197f84131eaa5/r6-operators-list-rook.png",
+  "schema": 1,
+  "feed": "operator-rook",
+  "fetchedAt": "2026-09-20T02:52:11.655Z"
+}

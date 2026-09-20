@@ -1,7 +1,7 @@
 import {$,api,e,stored,persist,toast} from './shared.js';
 let navigate,current,games=[];
 const key='dropzone-pins-v1';
-const names={settings:'Settings',home:'Game library',saved:'Saved loadouts',sources:'Source status',updates:'App updates',sensitivity:'Sensitivity converter','server-status':'Server status',market:'Gold market',damage:'Damage lab',intel:'My patch alerts',wardogs:'Artillery calculator',patches:'News',watch:'Videos'};
+const names={operators:'Operators',settings:'Settings',home:'Game library',saved:'Saved loadouts',sources:'Source status',updates:'App updates',sensitivity:'Sensitivity converter','server-status':'Server status',market:'Gold market',damage:'Damage lab',intel:'My patch alerts',wardogs:'Artillery calculator',patches:'News',watch:'Videos'};
 const pins=()=>{const p=stored(key,[]);return Array.isArray(p)?p.filter(x=>x&&(x.id!=='sources'||document.documentElement.dataset.admin==='true')&&!['command','saved','progression','planner','squad'].includes(x.id)&&!x.recordId&&typeof x.id==='string'&&typeof x.label==='string').slice(0,12):[];};
 export function workspaceLabel(id,game){return (game?(games.find(g=>g.id===game)?.shortName||game)+' / ':'')+(names[id]||games.find(g=>g.id===id)?.name||id);}
 export function rememberWorkspace(id,game){current={id,game};try{persist('dropzone-last-workspace',current);}catch{}paintPins();}

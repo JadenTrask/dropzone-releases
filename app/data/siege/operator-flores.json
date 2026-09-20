@@ -1,0 +1,73 @@
+{
+  "id": "flores",
+  "name": "Flores",
+  "side": "attack",
+  "roles": [
+    "anti-gadget",
+    "intel"
+  ],
+  "unit": "Unaffiliated",
+  "squad": [
+    "ghosteyes"
+  ],
+  "health": 2,
+  "speed": 2,
+  "difficulty": 2,
+  "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/4lZEmYIYYUloCcSarIJfiK/f8cbc4701200b414e6efe0d599ac8106/r6s-operator-flores.png",
+  "icon": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/75vqJXXKCM2EDO0iiNqRDe/d6289dc9a4fed72ef72b9c1e11738456/Y6S1_BADGE_Flores_L.png",
+  "biography": {
+    "realName": "Santiago Miguel Lucero",
+    "dateOfBirth": "October 2nd (Age 38)",
+    "placeOfBirth": "Buenos Aires, Argentina"
+  },
+  "loadout": [
+    {
+      "name": "AR33",
+      "category": "primary",
+      "type": "ASSAULT RIFLE",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/16U6xEvX8I5xQd9duveBLN/45d22960872cfa3fb6be9eb47fa0be4e/AR33.png"
+    },
+    {
+      "name": "SR-25",
+      "category": "primary",
+      "type": "Marksman Rifle",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/3H3sICdj6BK8LhtQPRd2aJ/26826ebba73e0e5fd503256d069f3256/SR-25.png"
+    },
+    {
+      "name": "T-95 LSW",
+      "category": "primary",
+      "type": "Light Machine Gun",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/23HCxaNTRUHBlFAvCTMZQm/fe319cc164fac034a29e9b114ae7d5cb/T-95_LSW.png"
+    },
+    {
+      "name": "GSh-18",
+      "category": "secondary",
+      "type": "HANDGUN",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/5s5Q33j3MNcXf9lwfxfd7m/4eb3a6af1d431481b6ddcec44fbc7602/GSh-18.png"
+    },
+    {
+      "name": "Stun Grenade",
+      "category": "gadget",
+      "type": "",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/3XnK8s1iQJQu5cfr6UyQfK/429480b96d6d6d6b830c32c75d2608f5/Stun_Grenade.png"
+    },
+    {
+      "name": "Claymore",
+      "category": "gadget",
+      "type": "",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/4T4H5EJgUxorucGVtU2pkm/74fef324b89c220ce6426e8097f915b9/Claymore.png"
+    },
+    {
+      "name": "RCE-RATERO CHARGE",
+      "category": "unique-ability",
+      "type": "",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/1z7eSI5D8IRIOHi0PJu4yq/3c4a273098a840957a248583f73fa8ff/r6s-operator-ability-flores.png"
+    }
+  ],
+  "source": "Ubisoft",
+  "sourceUrl": "https://www.ubisoft.com/en-us/game/rainbow-six/siege/game-info/operators/flores",
+  "thumbnail": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/3hXRjYHsrlFOocJjyxyYZY/29eb8f1ad9eab150518a053b775c336f/r6s-operators-list-flores.png",
+  "schema": 1,
+  "feed": "operator-flores",
+  "fetchedAt": "2026-09-20T02:52:11.597Z"
+}

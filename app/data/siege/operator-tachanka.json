@@ -1,0 +1,85 @@
+{
+  "id": "tachanka",
+  "name": "Tachanka",
+  "side": "defense",
+  "roles": [
+    "anti-entry",
+    "crowd-control"
+  ],
+  "unit": "SPETSNAZ",
+  "squad": [
+    "redhammer"
+  ],
+  "health": 3,
+  "speed": 1,
+  "difficulty": 1,
+  "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/3anG5CUIzp0MWB9T6tIpy9/bd81ae97ecd984afe84813384eb027d8/r6s-operator-tachanka.png",
+  "icon": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/7hpI2mcmvyjC2vG6ieltLo/f217b1dc449c0514b55e471193a38c91/Y0R6_BADGE_Tachanka_L.png",
+  "biography": {
+    "realName": "Alexsandr Senaviev",
+    "dateOfBirth": "November 3rd (Age 48)",
+    "placeOfBirth": "Saint Petersburg, Russia"
+  },
+  "loadout": [
+    {
+      "name": "DP27",
+      "category": "primary",
+      "type": "Light Machine Gun",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/7LoT7yAe0LK7bDOeq6MZZM/33995bc704667674af1b73fe962d4c7c/Primary_gun_DP27.png"
+    },
+    {
+      "name": "9x19VSN",
+      "category": "primary",
+      "type": "SUBMACHINE GUN",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/42gH96xTTYaTZsfXI3c0wL/a7edbf11af97091ee884b68e59fe6a4f/9x19VSN.png"
+    },
+    {
+      "name": "PMM",
+      "category": "secondary",
+      "type": "HANDGUN",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/3y4LIwwm8YNQHAv8oOkWCK/a2375901cee34e68fa39c976d85de8aa/PMM.png"
+    },
+    {
+      "name": "GSh-18",
+      "category": "secondary",
+      "type": "HANDGUN",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/5s5Q33j3MNcXf9lwfxfd7m/4eb3a6af1d431481b6ddcec44fbc7602/GSh-18.png"
+    },
+    {
+      "name": "Barbed Wire",
+      "category": "gadget",
+      "type": "",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/7igaibxuCcSpWDkZensEJS/6d30514b70a4c8b535bb1c113f9cfce0/barbed-wire__1_.png"
+    },
+    {
+      "name": "PROXIMITY ALARM",
+      "category": "gadget",
+      "type": "",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/2TsFLmb2O6LRZpbxzkZDck/c9146913388a9567500b704c95600621/Proximity_alarm.png"
+    },
+    {
+      "name": "SHUMIKHA LAUNCHER",
+      "category": "unique-ability",
+      "type": "",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/37wX75QnY7XA6KbjM4aF5n/0ab116d398cf71463e11d43913818ec1/Shumikha-Launcher.png"
+    },
+    {
+      "name": "Bearing 9",
+      "category": "secondary",
+      "type": "Machine Pistol",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/4mdftEOh5Vu9KhhpgKLKrT/abedcc75868774018295ec2a08a7b3de/Bearing_9.png"
+    },
+    {
+      "name": "Deployable Shield",
+      "category": "gadget",
+      "type": "",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/W0WE0X2VQlxwWIAFCJ6Jm/523650a39de5a23dd9520d7299c9e25a/Deployable_Shield.png"
+    }
+  ],
+  "source": "Ubisoft",
+  "sourceUrl": "https://www.ubisoft.com/en-us/game/rainbow-six/siege/game-info/operators/tachanka",
+  "thumbnail": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/5P9kGyOrnsu7lRyr9xC71t/53981da03fa36adf99adf61bc098bd4a/r6s-operators-list-tachanka.png",
+  "schema": 1,
+  "feed": "operator-tachanka",
+  "fetchedAt": "2026-09-20T02:52:11.665Z"
+}

@@ -1,0 +1,13 @@
+.page-header-actions{display:flex;align-items:center;justify-content:flex-end;gap:10px;flex-wrap:wrap;max-width:100%;min-width:0}
+.source-status{position:relative;max-width:100%;margin:0;font-size:.8rem;line-height:1.45;color:var(--muted);z-index:5}
+.source-status>summary{display:flex;align-items:center;gap:8px;list-style:none;cursor:pointer;min-height:38px;padding:8px 12px;border:1px solid var(--line);border-radius:6px;background:var(--canvas);box-sizing:border-box}
+.source-status>summary::-webkit-details-marker{display:none}
+.source-status>summary:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.source-status-label{max-width:230px;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.source-status-dot{width:6px;height:6px;flex:none;border-radius:50%;background:var(--accent)}
+.source-status[data-tone=warning] .source-status-dot{background:#e7b354}
+.source-status[data-tone=warning]>summary{border-color:#97733b;color:#edc781}
+.source-status-detail{position:absolute;right:0;top:calc(100% + 8px);width:min(360px,calc(100vw - 60px));padding:16px;box-sizing:border-box;background:var(--surface);border:1px solid var(--line);box-shadow:0 12px 30px #0004;border-radius:8px;white-space:pre-line;overflow-wrap:anywhere;color:var(--text);max-height:50vh;overflow:auto}
+html[data-appearance=light] .source-status[data-tone=warning]>summary{color:#805116;border-color:#b39a72}
+.game-simple-heading,.arsenal-heading,.market-page>header,.servers-page>header,.watch-page>.library-intro,.patches-page>.library-intro{flex-wrap:wrap}
+@media(max-width:800px){.page-header-actions{justify-content:flex-start}.source-status-detail{left:0;right:auto}}

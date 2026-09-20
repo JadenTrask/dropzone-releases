@@ -1,0 +1,67 @@
+{
+  "id": "tubarao",
+  "name": "Tubarão",
+  "side": "defense",
+  "roles": [
+    "crowd-control",
+    "anti-gadget"
+  ],
+  "unit": "",
+  "squad": [
+    "wolfguard"
+  ],
+  "health": 2,
+  "speed": 2,
+  "difficulty": 2,
+  "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/6RHlZJniCer89285ocTyPY/103b3da47a3978f5b6fbbd77a02b53c9/r6s-operator-tubarao.png",
+  "icon": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/43VtYmfmTtLwwKDGhalSCO/9673bb50e981ba2684cd649534f00de7/r6s-operators-badge-tubarao.png",
+  "biography": {
+    "realName": "Isaac Nunes Oliveira",
+    "dateOfBirth": "November 24th (Age 35)",
+    "placeOfBirth": "Ponta Delgada, Portugal"
+  },
+  "loadout": [
+    {
+      "name": "MPX",
+      "category": "primary",
+      "type": "SUBMACHINE GUN",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/5HFewpAJ8npDDCKFnEadhL/d398bb477d6b56fe41bfdb5862ed31c0/MPX.png"
+    },
+    {
+      "name": "AR-15.50",
+      "category": "primary",
+      "type": "ASSAULT RIFLE",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/4lGGEGZLkbldz114Wl5hCo/78a04c46654f80fae03e730bd79f3563/AR-15.50.png"
+    },
+    {
+      "name": "P226 Mk 25",
+      "category": "secondary",
+      "type": "HANDGUN",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/RTQvPQcywlRwUS1FjIKCX/6fc72fee2191c2e723276bc10ae4114e/P226_Mk_25.png"
+    },
+    {
+      "name": "Nitro Cell",
+      "category": "gadget",
+      "type": "",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/4pBSTw9U6l9GRnT12G6Xln/e0991bc03b48d217f510af8b611c8828/Nitro_Cell.png"
+    },
+    {
+      "name": "PROXIMITY ALARM",
+      "category": "gadget",
+      "type": "",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/2TsFLmb2O6LRZpbxzkZDck/c9146913388a9567500b704c95600621/Proximity_alarm.png"
+    },
+    {
+      "name": "Zoto Canister",
+      "category": "unique-ability",
+      "type": "",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/2HBwr95RPJmDlx29Sg5noC/0d0f7d6f78f0a88b684899f1177773d8/r6s-operator-ability-tubarao-v1.png"
+    }
+  ],
+  "source": "Ubisoft",
+  "sourceUrl": "https://www.ubisoft.com/en-us/game/rainbow-six/siege/game-info/operators/tubarao",
+  "thumbnail": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/1ceva9aObGqSk9C9UNehdK/8541f4312f3b363c0692b7ce19e40725/r6s-operators-list-tubarao.png",
+  "schema": 1,
+  "feed": "operator-tubarao",
+  "fetchedAt": "2026-09-20T02:52:11.582Z"
+}

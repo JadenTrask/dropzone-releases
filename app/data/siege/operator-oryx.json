@@ -1,0 +1,78 @@
+{
+  "id": "oryx",
+  "name": "Oryx",
+  "side": "defense",
+  "roles": [
+    "support"
+  ],
+  "unit": "Unaffiliated",
+  "squad": [
+    "redhammer"
+  ],
+  "health": 2,
+  "speed": 2,
+  "difficulty": 2,
+  "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/3Ha2aY7zJrudEskszfFA3K/2f5d898ca145d4dd73d8ec4ece53b195/r6s-operator-oryx.png",
+  "icon": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/7mLA8GY9ZKlUfDXrfo9Nek/e3dfd0759414f36866a8c80b61a67722/Y5S1_BADGE_Oryx_L.png",
+  "biography": {
+    "realName": "Saif Al Hadid",
+    "dateOfBirth": "July 3rd (Age 45)",
+    "placeOfBirth": "Azraq, Jordan"
+  },
+  "loadout": [
+    {
+      "name": "SPAS-12",
+      "category": "primary",
+      "type": "SHOTGUN",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/7Hp6Fbss6uI59OT4nZNB6e/a4d09954803cb2580353cfa03e8c778b/SPAS-12.png"
+    },
+    {
+      "name": "T-5 SMG",
+      "category": "primary",
+      "type": "SUBMACHINE GUN",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/1Ne8bvX8BdCALevWKMllQN/4baa3e79d323de134dd182e0272b9c3b/T-5_SMG.png"
+    },
+    {
+      "name": "Bailiff 410",
+      "category": "secondary",
+      "type": "HANDGUN",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/N8FLbo4fsNyBe8msKgRhT/8f403dc0b58087bcafab786dd95ba33f/Bailiff_410.png"
+    },
+    {
+      "name": "Reaper MK2",
+      "category": "secondary",
+      "type": "",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/5RC060K72yG2OXMq43lgrv/83df616f6d4a2dde6293cc97449159eb/reaper-mk2.png"
+    },
+    {
+      "name": "USP40",
+      "category": "secondary",
+      "type": "HANDGUN",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/7FxemzWRtlpAhK9MyKp1Gp/817cc25b6b7c3575dc1ba53a6a8170a9/USP40.png"
+    },
+    {
+      "name": "Barbed Wire",
+      "category": "gadget",
+      "type": "",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/7igaibxuCcSpWDkZensEJS/6d30514b70a4c8b535bb1c113f9cfce0/barbed-wire__1_.png"
+    },
+    {
+      "name": "PROXIMITY ALARM",
+      "category": "gadget",
+      "type": "",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/2TsFLmb2O6LRZpbxzkZDck/c9146913388a9567500b704c95600621/Proximity_alarm.png"
+    },
+    {
+      "name": "REMAH DASH",
+      "category": "unique-ability",
+      "type": "",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/3dM2B3qCdU0woydIbiy2xn/55aa99443002ad794d3f78dada26d035/r6s-operator-ability-oryx.png"
+    }
+  ],
+  "source": "Ubisoft",
+  "sourceUrl": "https://www.ubisoft.com/en-us/game/rainbow-six/siege/game-info/operators/oryx",
+  "thumbnail": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/3JBOp3MXgGeuEwyoYrkuMi/b7aa3c4a3fa6f165135954aa30252838/r6s-operator-list-oryx.png",
+  "schema": 1,
+  "feed": "operator-oryx",
+  "fetchedAt": "2026-09-20T02:52:11.604Z"
+}

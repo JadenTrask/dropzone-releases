@@ -1,0 +1,80 @@
+{
+  "id": "sledge",
+  "name": "Sledge",
+  "side": "attack",
+  "roles": [
+    "breach",
+    "anti-gadget",
+    "starter-operators"
+  ],
+  "unit": "SAS",
+  "squad": [
+    "redhammer"
+  ],
+  "health": 2,
+  "speed": 2,
+  "difficulty": 1,
+  "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/2p5MyJkqbsfL8kCRNJVhcz/90aa196a11f2ea49ea107aab69789053/R6-operator-sledge.png",
+  "icon": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/4lgK1mOTVAoBhoj5qjYuyd/83c83d56e977f96ac0e9621c0d1c07d2/Y0R6_BADGE_Sledge_L.png",
+  "biography": {
+    "realName": "Seamus Cowden",
+    "dateOfBirth": "April 2nd (Age 35)",
+    "placeOfBirth": "John O’Groats, Scotland"
+  },
+  "loadout": [
+    {
+      "name": "L85A2",
+      "category": "primary",
+      "type": "ASSAULT RIFLE",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/5vYQpoyk36foDzDq49jBd0/1479a2d7189e545555ceccecf6bd7cc3/L85A2.png"
+    },
+    {
+      "name": "M590A1",
+      "category": "primary",
+      "type": "SHOTGUN",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/2zRHmgqENNiZqXQxC9Rsbj/e6542407c642f9b7c5a4546afb6db30a/M590A1.png"
+    },
+    {
+      "name": "P226 Mk 25",
+      "category": "secondary",
+      "type": "HANDGUN",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/RTQvPQcywlRwUS1FjIKCX/6fc72fee2191c2e723276bc10ae4114e/P226_Mk_25.png"
+    },
+    {
+      "name": "Reaper MK2",
+      "category": "secondary",
+      "type": "",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/5RC060K72yG2OXMq43lgrv/83df616f6d4a2dde6293cc97449159eb/reaper-mk2.png"
+    },
+    {
+      "name": "Frag Grenade",
+      "category": "gadget",
+      "type": "",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/4GZsPHbm9H0k5EWz7TMkwO/33b9007bc6ee03dab15cfa15eb69e096/Frag_Grenade.png"
+    },
+    {
+      "name": "Stun Grenade",
+      "category": "gadget",
+      "type": "",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/3XnK8s1iQJQu5cfr6UyQfK/429480b96d6d6d6b830c32c75d2608f5/Stun_Grenade.png"
+    },
+    {
+      "name": "Impact EMP Grenade",
+      "category": "gadget",
+      "type": "",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/7izurbA5jDmnsmdeBdgKZO/29bca81243dda4084a92521ac0c03592/R6S-EMP-Impact-grenade.png"
+    },
+    {
+      "name": "BREACHING HAMMER",
+      "category": "unique-ability",
+      "type": "",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/2Vyo9CrQ1J7IZe43XpT4pV/4bc02e829d1b1745b9a527ff34f8fafb/Tactical-Breaching-Hammer.png"
+    }
+  ],
+  "source": "Ubisoft",
+  "sourceUrl": "https://www.ubisoft.com/en-us/game/rainbow-six/siege/game-info/operators/sledge",
+  "thumbnail": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/6eIdbZWLBIdtCygNAu9uue/8856e29f0e9ebc3b6ed996223586ebce/r6-operators-list-sledge.png",
+  "schema": 1,
+  "feed": "operator-sledge",
+  "fetchedAt": "2026-09-20T02:52:11.645Z"
+}

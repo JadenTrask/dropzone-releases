@@ -1,0 +1,85 @@
+{
+  "id": "hibana",
+  "name": "Hibana",
+  "side": "attack",
+  "roles": [
+    "breach",
+    "front-line"
+  ],
+  "unit": "S.A.T.",
+  "squad": [
+    "viperstrike"
+  ],
+  "health": 1,
+  "speed": 3,
+  "difficulty": 1,
+  "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/4a3bXHSd7wz9vRZzRC8Kzq/98dac79c29394be7f5ff4d363fce5140/R6-operator-hibana.png",
+  "icon": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/1TSA4pMR58vgfrEai69REl/f82b1eba6694b4aa77259d3d0fe8cc08/Y1S4_BADGE_Hibana_L.png",
+  "biography": {
+    "realName": "Yumiko Imagawa",
+    "dateOfBirth": "July 12th (Age 34)",
+    "placeOfBirth": "Nagoya, Japan"
+  },
+  "loadout": [
+    {
+      "name": "SuperNova",
+      "category": "primary",
+      "type": "SHOTGUN",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/2tpjCRFLcc3hogjJGbKDsi/5ad0ab63b7245022aca5c1c1fb42d473/SuperNova.png"
+    },
+    {
+      "name": "Type-89",
+      "category": "primary",
+      "type": "ASSAULT RIFLE",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/7wLf325q9amF8bnVP1QGr0/2faff1a197f90dcded4472852a317d6b/Type-89.png"
+    },
+    {
+      "name": "PMR90A2",
+      "category": "primary",
+      "type": "",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/g1CRNF5Bg8mYPXY8qxsTt/a3fd65c5715d31c8afeb9fad9c478be5/PMR90A2.png"
+    },
+    {
+      "name": "Bearing 9",
+      "category": "secondary",
+      "type": "Machine Pistol",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/4mdftEOh5Vu9KhhpgKLKrT/abedcc75868774018295ec2a08a7b3de/Bearing_9.png"
+    },
+    {
+      "name": "P229",
+      "category": "secondary",
+      "type": "HANDGUN",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/76ja0RxqzHW9PpvWgpG7Sk/cb753b50b20fe67deaef54d8b2a46b54/P229.png"
+    },
+    {
+      "name": "Breach Charge",
+      "category": "gadget",
+      "type": "",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/1OgTMhyF1FBsSAo4njk26m/99b7a971f81b9195b3c3536b51d52893/R6S_Breach_charge.png"
+    },
+    {
+      "name": "Stun Grenade",
+      "category": "gadget",
+      "type": "",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/3XnK8s1iQJQu5cfr6UyQfK/429480b96d6d6d6b830c32c75d2608f5/Stun_Grenade.png"
+    },
+    {
+      "name": "Claymore",
+      "category": "gadget",
+      "type": "",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/4T4H5EJgUxorucGVtU2pkm/74fef324b89c220ce6426e8097f915b9/Claymore.png"
+    },
+    {
+      "name": "X-Kairos",
+      "category": "unique-ability",
+      "type": "",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/1QSzVxpGhswXix3vn8XGKj/c4f64fa0895bdaf164448e3ae49950a0/X-Kairos.png"
+    }
+  ],
+  "source": "Ubisoft",
+  "sourceUrl": "https://www.ubisoft.com/en-us/game/rainbow-six/siege/game-info/operators/hibana",
+  "thumbnail": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/7mAs4mz2zA4wjPZsNg6tys/e4fbdbfe20406c2655b56ba420b839aa/r6-operators-list-hibana.png",
+  "schema": 1,
+  "feed": "operator-hibana",
+  "fetchedAt": "2026-09-20T02:52:11.634Z"
+}

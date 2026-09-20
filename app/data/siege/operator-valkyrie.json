@@ -1,0 +1,67 @@
+{
+  "id": "valkyrie",
+  "name": "Valkyrie",
+  "side": "defense",
+  "roles": [
+    "intel",
+    "support"
+  ],
+  "unit": "NAVY SEAL",
+  "squad": [
+    "ghosteyes"
+  ],
+  "health": 2,
+  "speed": 2,
+  "difficulty": 2,
+  "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/5q1yIrIxoddG5pds2Nq3mz/7dc46a59bbfb6959296d01469916f44c/R6-operator-valkyrie.png",
+  "icon": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/44qXJmZmAwaD4w44JnPuOx/c54c8b9d3a6813ab8ce3e3f1dd4ef408/Y1S2_BADGE_Valkyrie_L.png",
+  "biography": {
+    "realName": "Meghan J. Castellano",
+    "dateOfBirth": "July 21st (Age 31)",
+    "placeOfBirth": "Oceanside, California"
+  },
+  "loadout": [
+    {
+      "name": "MPX",
+      "category": "primary",
+      "type": "SUBMACHINE GUN",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/5HFewpAJ8npDDCKFnEadhL/d398bb477d6b56fe41bfdb5862ed31c0/MPX.png"
+    },
+    {
+      "name": "SPAS-12",
+      "category": "primary",
+      "type": "SHOTGUN",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/7Hp6Fbss6uI59OT4nZNB6e/a4d09954803cb2580353cfa03e8c778b/SPAS-12.png"
+    },
+    {
+      "name": "D-50",
+      "category": "secondary",
+      "type": "HANDGUN",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/6mMQRDsrComRFa7bC6cNkG/8cd17e545e3d28dcc11a040d000cfa16/D-50.png"
+    },
+    {
+      "name": "Impact Grenade",
+      "category": "gadget",
+      "type": "",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/7iJK9B1Vr3PDO3rGftU00l/3a02e940b440c30929edf22c49870f65/impact-grenade__1_.png"
+    },
+    {
+      "name": "Nitro Cell",
+      "category": "gadget",
+      "type": "",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/4pBSTw9U6l9GRnT12G6Xln/e0991bc03b48d217f510af8b611c8828/Nitro_Cell.png"
+    },
+    {
+      "name": "Black Eye",
+      "category": "unique-ability",
+      "type": "",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/1EPfd4xeuMpt5nItOYm2Eb/b59223248a508d205264ece3c3553d36/Black-Eye.png"
+    }
+  ],
+  "source": "Ubisoft",
+  "sourceUrl": "https://www.ubisoft.com/en-us/game/rainbow-six/siege/game-info/operators/valkyrie",
+  "thumbnail": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/7xN3HJXPLVEmWA9PDnQzTV/613b19a897503161f2cf6fe7bbe3408e/r6-operators-list-valkyrie.png",
+  "schema": 1,
+  "feed": "operator-valkyrie",
+  "fetchedAt": "2026-09-20T02:52:11.639Z"
+}

@@ -1,0 +1,79 @@
+{
+  "id": "warden",
+  "name": "Warden",
+  "side": "defense",
+  "roles": [
+    "anti-gadget",
+    "intel"
+  ],
+  "unit": "SECRET SERVICE",
+  "squad": [
+    "ghosteyes"
+  ],
+  "health": 3,
+  "speed": 1,
+  "difficulty": 2,
+  "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/6IeUn3ejRrjAngxPvqqsZh/234847c2a25cbdd2cf783ef15caf9738/R6-operator-warden.png",
+  "icon": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/hx1Ljf1qIWbjpgCNmfJbu/2217283b569ef316dc12b93e86649f8f/Y4S2_BADGE_Warden_L.png",
+  "biography": {
+    "realName": "Collinn McKinley",
+    "dateOfBirth": "March 18th (Age 48)",
+    "placeOfBirth": "Louisville, Kentucky"
+  },
+  "loadout": [
+    {
+      "name": "M590A1",
+      "category": "primary",
+      "type": "SHOTGUN",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/2zRHmgqENNiZqXQxC9Rsbj/e6542407c642f9b7c5a4546afb6db30a/M590A1.png"
+    },
+    {
+      "name": "MPX",
+      "category": "primary",
+      "type": "SUBMACHINE GUN",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/5HFewpAJ8npDDCKFnEadhL/d398bb477d6b56fe41bfdb5862ed31c0/MPX.png"
+    },
+    {
+      "name": "P-10C",
+      "category": "secondary",
+      "type": "HANDGUN",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/2l4qwB50zSFhFZVYRLNwqg/20df8114f69f96f2adc54779ccc5bbaa/P-10C.png"
+    },
+    {
+      "name": "SMG-12",
+      "category": "secondary",
+      "type": "Machine Pistol",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/EwJgB7KdgOb6dDm7ro33u/b73f0890f992c1a365210f08efcc6db5/SMG-12.png"
+    },
+    {
+      "name": "Deployable Shield",
+      "category": "gadget",
+      "type": "",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/W0WE0X2VQlxwWIAFCJ6Jm/523650a39de5a23dd9520d7299c9e25a/Deployable_Shield.png"
+    },
+    {
+      "name": "Nitro Cell",
+      "category": "gadget",
+      "type": "",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/4pBSTw9U6l9GRnT12G6Xln/e0991bc03b48d217f510af8b611c8828/Nitro_Cell.png"
+    },
+    {
+      "name": "Observation Blocker",
+      "category": "gadget",
+      "type": "",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/5toUEasFf4nw1vID6N8fpC/20926248ceedc72dfa2118f68f96c771/observation-blocker.png"
+    },
+    {
+      "name": "Glance Smart Glasses",
+      "category": "unique-ability",
+      "type": "",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/40RkJUEmmBCf7bmfTL8ao1/1d973adfe4d002c94655d9818776fb41/Glance-Smart-Glasses.png"
+    }
+  ],
+  "source": "Ubisoft",
+  "sourceUrl": "https://www.ubisoft.com/en-us/game/rainbow-six/siege/game-info/operators/warden",
+  "thumbnail": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/72pEJEYxwPGoW221XvdmAJ/ea79dbd58064cbc99a1514e1b1641586/r6-operators-list-warden.png",
+  "schema": 1,
+  "feed": "operator-warden",
+  "fetchedAt": "2026-09-20T02:52:11.611Z"
+}

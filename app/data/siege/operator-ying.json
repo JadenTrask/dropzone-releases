@@ -1,0 +1,73 @@
+{
+  "id": "ying",
+  "name": "Ying",
+  "side": "attack",
+  "roles": [
+    "front-line",
+    "map-control"
+  ],
+  "unit": "S.D.U",
+  "squad": [
+    "wolfguard"
+  ],
+  "health": 2,
+  "speed": 2,
+  "difficulty": 2,
+  "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/4Oyf6w5rI0u9j4zMcWBSGz/ef22bcaca06cba29fdfa41e5ec921f7d/R6-operator-ying.png",
+  "icon": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/6ZVB1OJxNgs0pR0Fd7Kzt0/74721fe9fd743167508f98dc280a17a3/Y2S2_BADGE_Ying_L.png",
+  "biography": {
+    "realName": "Siu Mei Lin",
+    "dateOfBirth": "May 12th (Age 33)",
+    "placeOfBirth": "Central District, Hong Kong, China"
+  },
+  "loadout": [
+    {
+      "name": "T-95 LSW",
+      "category": "primary",
+      "type": "Light Machine Gun",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/23HCxaNTRUHBlFAvCTMZQm/fe319cc164fac034a29e9b114ae7d5cb/T-95_LSW.png"
+    },
+    {
+      "name": "SIX12",
+      "category": "primary",
+      "type": "SHOTGUN",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/2v6MwsHwjOZ5Muid53lyfN/e5f1c4997db93abfe3ac356fce23376c/SIX12.png"
+    },
+    {
+      "name": "Q-929",
+      "category": "secondary",
+      "type": "HANDGUN",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/2fRVszR5yGDHbV0AL8muso/0838dac90b66aa810daa49d36382fb64/Q-929.png"
+    },
+    {
+      "name": "Reaper MK2",
+      "category": "secondary",
+      "type": "",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/5RC060K72yG2OXMq43lgrv/83df616f6d4a2dde6293cc97449159eb/reaper-mk2.png"
+    },
+    {
+      "name": "HARD BREACH CHARGE",
+      "category": "gadget",
+      "type": "",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/3OvnVPWY1UyrDE913kU0a1/eae4b2a1584234ea2ff4ad6481239f3b/SecondaryBreacher.png"
+    },
+    {
+      "name": "Smoke Grenade",
+      "category": "gadget",
+      "type": "",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/3LaxoSLC49T5vgKnUAlTLT/c47c4636845a04478432c48be8c29aee/Smoke_Grenade.png"
+    },
+    {
+      "name": "Candela",
+      "category": "unique-ability",
+      "type": "",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/4vpN9vu5wD9dyb2knMosTy/430796de3c0c2a5c2eb2ac6f4217eba0/Candela.png"
+    }
+  ],
+  "source": "Ubisoft",
+  "sourceUrl": "https://www.ubisoft.com/en-us/game/rainbow-six/siege/game-info/operators/ying",
+  "thumbnail": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/36BxtuVTQFrNh2OPyJ2px3/6db32fa8151b9a925acdd65d289bcf0f/r6-operators-list-ying.png",
+  "schema": 1,
+  "feed": "operator-ying",
+  "fetchedAt": "2026-09-20T02:52:11.629Z"
+}

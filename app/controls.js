@@ -13,8 +13,8 @@ function open(c){
   }
   let search;
   if(c.select.dataset.searchable==='true'){
-    search=document.createElement('input');search.type='search';search.placeholder='Find a game…';search.setAttribute('aria-label','Find a game');search.className='select-filter';
-    const empty=document.createElement('p');empty.textContent='No matching games.';empty.hidden=true;empty.className='select-empty';
+    search=document.createElement('input');search.type='search';search.placeholder=(c.select.dataset.searchLabel||'Find a game')+'…';search.setAttribute('aria-label',c.select.dataset.searchLabel||'Find a game');search.className='select-filter';
+    const empty=document.createElement('p');empty.textContent=c.select.dataset.emptyMessage||'No matching games.';empty.hidden=true;empty.className='select-empty';
     search.oninput=()=>{let count=0;for(const b of c.panel.querySelectorAll('button')){b.hidden=!b.textContent.toLowerCase().includes(search.value.trim().toLowerCase());if(!b.hidden)count++;}empty.hidden=count>0;};
     c.panel.prepend(search);c.panel.append(empty);
   }

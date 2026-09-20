@@ -1,0 +1,79 @@
+{
+  "id": "grim",
+  "name": "Grim",
+  "side": "attack",
+  "roles": [
+    "map-control",
+    "front-line"
+  ],
+  "unit": "Singapore Armed Forces",
+  "squad": [
+    "nighthaven"
+  ],
+  "health": 1,
+  "speed": 3,
+  "difficulty": 1,
+  "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/2Mh6QhvaGrU16dvqAlDq6M/65d751edc5d985badc95db15b0784f54/r6s-operator-grim.png",
+  "icon": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/5VoAYPvRZXIwjcwTD3PWaZ/b9748f007c0c116ca1bcd77b0f91e766/r6s-operators-badge-grim.png",
+  "biography": {
+    "realName": "Charlie Tho Keng Boon",
+    "dateOfBirth": "April 5th (Age 39)",
+    "placeOfBirth": "Jurong, Singapore"
+  },
+  "loadout": [
+    {
+      "name": "552 Commando",
+      "category": "primary",
+      "type": "ASSAULT RIFLE",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/1LT0N89YaOHvRwn3Pphr8K/02d4a3da9cda132d8201fd134f24fede/552_Commando.png"
+    },
+    {
+      "name": "SG-CQB",
+      "category": "primary",
+      "type": "SHOTGUN",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/5JoL3b36Fsztt9Q2XYmrbJ/dacec96948d3f8fe92914a69b9aac593/SG-CQB.png"
+    },
+    {
+      "name": "Bailiff 410",
+      "category": "secondary",
+      "type": "HANDGUN",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/N8FLbo4fsNyBe8msKgRhT/8f403dc0b58087bcafab786dd95ba33f/Bailiff_410.png"
+    },
+    {
+      "name": "P229",
+      "category": "secondary",
+      "type": "HANDGUN",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/76ja0RxqzHW9PpvWgpG7Sk/cb753b50b20fe67deaef54d8b2a46b54/P229.png"
+    },
+    {
+      "name": "Claymore",
+      "category": "gadget",
+      "type": "",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/4T4H5EJgUxorucGVtU2pkm/74fef324b89c220ce6426e8097f915b9/Claymore.png"
+    },
+    {
+      "name": "HARD BREACH CHARGE",
+      "category": "gadget",
+      "type": "",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/3OvnVPWY1UyrDE913kU0a1/eae4b2a1584234ea2ff4ad6481239f3b/SecondaryBreacher.png"
+    },
+    {
+      "name": "Impact EMP Grenade",
+      "category": "gadget",
+      "type": "",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/7izurbA5jDmnsmdeBdgKZO/29bca81243dda4084a92521ac0c03592/R6S-EMP-Impact-grenade.png"
+    },
+    {
+      "name": "Kawan Hive Launcher",
+      "category": "unique-ability",
+      "type": "",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/2Ws6ae13XPN5rcsw0WVt3d/dfacf2c29837553c667d77ca83ee3d0d/r6s-operator-ability-grim.png"
+    }
+  ],
+  "source": "Ubisoft",
+  "sourceUrl": "https://www.ubisoft.com/en-us/game/rainbow-six/siege/game-info/operators/grim",
+  "thumbnail": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/7fwxcTrdNLQbXkfBJglLaN/38d901042d7debc709c266a46f856d7e/r6s-operators-list-grim.png",
+  "schema": 1,
+  "feed": "operator-grim",
+  "fetchedAt": "2026-09-20T02:52:11.589Z"
+}

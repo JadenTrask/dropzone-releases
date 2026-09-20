@@ -1,0 +1,67 @@
+{
+  "id": "fenrir",
+  "name": "Fenrir",
+  "side": "defense",
+  "roles": [
+    "trapper",
+    "crowd-control"
+  ],
+  "unit": "",
+  "squad": [
+    "redhammer"
+  ],
+  "health": 2,
+  "speed": 2,
+  "difficulty": 3,
+  "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/1rWrOkHjxowW37i5UJKcqt/a60e59c16a9b8a9583b9578853a6b15b/r6s-operator-fenrir.png",
+  "icon": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/4vtvBhY56S2slW3y0eKsMp/6a0f41807549ad1aa503112d4ad05a52/r6s-operators-badge-fenrir.png",
+  "biography": {
+    "realName": "Emil Svensson",
+    "dateOfBirth": "December 3rd (Age 34)",
+    "placeOfBirth": "Uppsala, Sweden"
+  },
+  "loadout": [
+    {
+      "name": "MP7",
+      "category": "primary",
+      "type": "SUBMACHINE GUN",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/3a4dgTWGdiJqALhtRp4pKy/f2568d3de3cfe7e4b53179e8653cd2a2/MP7.png"
+    },
+    {
+      "name": "SASG-12",
+      "category": "primary",
+      "type": "SHOTGUN",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/2Q6mL4CbifmIgifV2yV3Hi/2bb2b323f055b03a2c1ba516c262c24e/SASG-12.png"
+    },
+    {
+      "name": "5.7 USG",
+      "category": "secondary",
+      "type": "HANDGUN",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/tkYcSAJSe5yGkeUhzZqBO/e81feb86df4a7eb6951052bec26b6ed7/5.7_USG.png"
+    },
+    {
+      "name": "Bulletproof camera",
+      "category": "gadget",
+      "type": "",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/gZuOXvuTu2i8hQX0B6auy/259f379a6283bae618443d722a896f1a/Bulletproof_camera.png"
+    },
+    {
+      "name": "Observation Blocker",
+      "category": "gadget",
+      "type": "",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/5toUEasFf4nw1vID6N8fpC/20926248ceedc72dfa2118f68f96c771/observation-blocker.png"
+    },
+    {
+      "name": "F-Natt Dread Mine",
+      "category": "unique-ability",
+      "type": "",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/5JTPi6uZt58wD0GVQJJf2c/a2c782c562393081faf5501f4a41b3cc/r6s-operator-ability-fenrir-v1.png"
+    }
+  ],
+  "source": "Ubisoft",
+  "sourceUrl": "https://www.ubisoft.com/en-us/game/rainbow-six/siege/game-info/operators/fenrir",
+  "thumbnail": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/336St2UBdDDhJnI1Nbcqo9/845b0822369af2bb64e2ff7f2e7292f9/r6s-operators-list-fenrir.png",
+  "schema": 1,
+  "feed": "operator-fenrir",
+  "fetchedAt": "2026-09-20T02:52:11.584Z"
+}

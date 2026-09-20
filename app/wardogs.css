@@ -47,7 +47,7 @@ html[data-workspace="map"]{--map-gutter:12px}
 html[data-workspace="map"] .global-toolbar{padding-left:var(--map-gutter);padding-right:var(--map-gutter)}
 html[data-workspace="map"] .game-tabs-shell{padding-left:var(--map-gutter);padding-right:var(--map-gutter)}
 html[data-workspace="map"] .global-toolbar-inner,html[data-workspace="map"] .game-tabs-inner{max-width:none;width:100%;margin:0}
-.wardogs-page{background:radial-gradient(ellipse at 80% 0,#39322e30,transparent 55%),#151211;padding-top:25px}
+.wardogs-page{background:radial-gradient(ellipse at 80% 0,#39322e30,transparent 55%),#151211;}
 .wd-heading{display:flex;align-items:center;justify-content:space-between;gap:20px 30px;flex-wrap:wrap;margin-bottom:20px}
 .wd-heading h1{font-size:clamp(1.85rem,3vw,2.65rem);line-height:1.25;letter-spacing:-.8px;margin:7px 0;color:#f1ede7}
 .wd-heading p{color:#c9bcb7;font-size:1rem;margin:6px 0 0}
@@ -137,7 +137,7 @@ html[data-workspace="map"] .global-toolbar-inner,html[data-workspace="map"] .gam
 @media(max-width:1150px){.wd-workspace{grid-template-columns:minmax(0,1fr)}.wd-controls{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}.wd-controls>form:first-child,.wd-control-block{border-right:1px solid #403935}.wd-map-frame{height:580px}.wd-focus .wd-controls{display:none}}
 @media(max-width:750px){.root-games{grid-template-columns:minmax(0,1fr)}.wd-result{grid-template-columns:minmax(0,1fr)}.wd-result>div{border-right:0;border-bottom:1px solid #433a36}.wd-controls{grid-template-columns:minmax(0,1fr)}.wd-map-frame{height:480px}.patch-row{align-items:flex-start;flex-direction:column}.wd-coordinate-form{min-width:0}}
 /* The calculator owns the remaining viewport; only secondary panels can scroll. */
-.hub-main.wardogs-page.wd-fixed{padding:12px var(--map-gutter,12px);display:flex;min-width:0;min-height:0;overflow:hidden}
+.hub-main.wardogs-page.wd-fixed{display:flex;min-width:0;min-height:0;overflow:hidden}
 .wd-fixed>.wd-workspace{width:100%;max-width:none;margin:0;min-height:0;height:100%;grid-template-columns:clamp(290px,25vw,390px) minmax(0,1fr);gap:12px;align-items:stretch}
 .wd-fixed .wd-map-card{display:flex;flex-direction:column;min-height:0;height:100%}
 .wd-fixed .wd-map-frame{height:auto;min-height:0;flex:1;overflow:hidden}

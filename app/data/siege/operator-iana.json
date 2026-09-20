@@ -1,0 +1,73 @@
+{
+  "id": "iana",
+  "name": "Iana",
+  "side": "attack",
+  "roles": [
+    "front-line",
+    "intel"
+  ],
+  "unit": "REU",
+  "squad": [
+    "ghosteyes"
+  ],
+  "health": 2,
+  "speed": 2,
+  "difficulty": 1,
+  "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/6Fiy7YExswMn1Cf13GUU9t/7bb697bf32c0d79c2852b354e3045fff/r6s-operator-iana.png",
+  "icon": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/6deSi1vse5iJTkErFksrGq/75bf1038e9698b6b2be75aa0493b092d/Y5S1_BADGE_Iana_L.png",
+  "biography": {
+    "realName": "Nienke Meijer",
+    "dateOfBirth": "August 27th (Age 35)",
+    "placeOfBirth": "Katwijk, the Netherlands"
+  },
+  "loadout": [
+    {
+      "name": "ARX200",
+      "category": "primary",
+      "type": "ASSAULT RIFLE",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/6VgkPBsr1WApI3rWc9kcM0/b18b8e25f3e951e8e722213f2ee59eb0/ARX200.png"
+    },
+    {
+      "name": "G36C",
+      "category": "primary",
+      "type": "ASSAULT RIFLE",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/2SZoqSXKoNPvZFIJsFsDE5/cb109885bf19c8697abf832f10cfd9a6/G36C.png"
+    },
+    {
+      "name": "Gonne-6",
+      "category": "secondary",
+      "type": "Hand Cannon",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/23AlSVw8MwI1y3ZakEfqgW/c4561ae6e8da8db2627a146b8b55ee6c/GONNE-6_HUD_Icon__1_.png"
+    },
+    {
+      "name": "Mk1 9mm",
+      "category": "secondary",
+      "type": "HANDGUN",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/3tWoNeF3jQYs3w4EOydQYs/434409c96693df1fd3e969d778e70795/Mk1_9mm_BI.png"
+    },
+    {
+      "name": "Impact EMP Grenade",
+      "category": "gadget",
+      "type": "",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/7izurbA5jDmnsmdeBdgKZO/29bca81243dda4084a92521ac0c03592/R6S-EMP-Impact-grenade.png"
+    },
+    {
+      "name": "Smoke Grenade",
+      "category": "gadget",
+      "type": "",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/3LaxoSLC49T5vgKnUAlTLT/c47c4636845a04478432c48be8c29aee/Smoke_Grenade.png"
+    },
+    {
+      "name": "GEMINI REPLICATOR",
+      "category": "unique-ability",
+      "type": "",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/K8E4EHWbD8wTjVqro6wVl/62339b2fbe1d3a2319dcd320f7a0b070/r6s-operator-ability-iana.png"
+    }
+  ],
+  "source": "Ubisoft",
+  "sourceUrl": "https://www.ubisoft.com/en-us/game/rainbow-six/siege/game-info/operators/iana",
+  "thumbnail": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/6vES8lEllMwW9OaBYRT7YX/39b5fe90684d7ce637a7d025cdd1ec96/r6s-operator-list-iana.png",
+  "schema": 1,
+  "feed": "operator-iana",
+  "fetchedAt": "2026-09-20T02:52:11.603Z"
+}

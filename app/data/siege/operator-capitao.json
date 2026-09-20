@@ -1,0 +1,85 @@
+{
+  "id": "capitao",
+  "name": "CAPITÃO",
+  "side": "attack",
+  "roles": [
+    "front-line",
+    "map-control"
+  ],
+  "unit": "BOPE",
+  "squad": [
+    "viperstrike"
+  ],
+  "health": 1,
+  "speed": 3,
+  "difficulty": 2,
+  "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/5OxEmlChYi0U3d4URLaC4C/e348f7b3b77d2d8dec65ec6afbe171f9/R6-operator-capitao.png",
+  "icon": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/73R4IrWJyn0xdkJ0fjOODA/fc70d200a7530dccae2847ab7962e394/Y1S3_BADGE_Capitao_L.png",
+  "biography": {
+    "realName": "Vicente Souza",
+    "dateOfBirth": "November 17th (Age 49)",
+    "placeOfBirth": "Rio de Janeiro, Brazil (Nova Iguaçu)"
+  },
+  "loadout": [
+    {
+      "name": "M249",
+      "category": "primary",
+      "type": "Light Machine Gun",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/7z8UpVPS3P14OC1oL9dDIn/39c0c657f154218003fd4b2a9250b92f/M249.png"
+    },
+    {
+      "name": "PARA-308",
+      "category": "primary",
+      "type": "ASSAULT RIFLE",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/6ub8y2Cs5EYhVPfDWuVVkW/82ca131a41ee4ba2e0b75f2dc52ed9e3/PARA-308.png"
+    },
+    {
+      "name": "PMR90A2",
+      "category": "primary",
+      "type": "",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/g1CRNF5Bg8mYPXY8qxsTt/a3fd65c5715d31c8afeb9fad9c478be5/PMR90A2.png"
+    },
+    {
+      "name": "Gonne-6",
+      "category": "secondary",
+      "type": "Hand Cannon",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/23AlSVw8MwI1y3ZakEfqgW/c4561ae6e8da8db2627a146b8b55ee6c/GONNE-6_HUD_Icon__1_.png"
+    },
+    {
+      "name": "PRB92",
+      "category": "secondary",
+      "type": "HANDGUN",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/dl28J1HsE7mzhj66pmd5D/b8d8fc48d2dde13154047de94abbd8ca/PRB92.png"
+    },
+    {
+      "name": "Claymore",
+      "category": "gadget",
+      "type": "",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/4T4H5EJgUxorucGVtU2pkm/74fef324b89c220ce6426e8097f915b9/Claymore.png"
+    },
+    {
+      "name": "HARD BREACH CHARGE",
+      "category": "gadget",
+      "type": "",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/3OvnVPWY1UyrDE913kU0a1/eae4b2a1584234ea2ff4ad6481239f3b/SecondaryBreacher.png"
+    },
+    {
+      "name": "Impact EMP Grenade",
+      "category": "gadget",
+      "type": "",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/7izurbA5jDmnsmdeBdgKZO/29bca81243dda4084a92521ac0c03592/R6S-EMP-Impact-grenade.png"
+    },
+    {
+      "name": "Tactical Crossbow",
+      "category": "unique-ability",
+      "type": "",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/5ur3NZUGos3i2HR8f0HIzj/46cf23c97453ebfedeaa42a1088ff32f/Tactical-Crossbow.png"
+    }
+  ],
+  "source": "Ubisoft",
+  "sourceUrl": "https://www.ubisoft.com/en-us/game/rainbow-six/siege/game-info/operators/capitao",
+  "thumbnail": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/3AZlhNFA21aKL2MdAIEwa8/abfce9018a7a08c120d707fbc28ae709/r6-operators-list-capitao.png",
+  "schema": 1,
+  "feed": "operator-capitao",
+  "fetchedAt": "2026-09-20T02:52:11.636Z"
+}

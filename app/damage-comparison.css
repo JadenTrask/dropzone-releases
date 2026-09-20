@@ -1,0 +1,38 @@
+.gun-comparison { margin-block:24px; padding:24px; border:1px solid var(--line); border-radius:12px; background:var(--surface); }
+.gun-comparison-heading { display:flex; align-items:start; justify-content:space-between; gap:16px; }
+.gun-comparison-heading h2 { margin:8px 0; font-size:1.5rem; }
+.gun-comparison-heading p { margin:0; color:var(--muted); line-height:1.5; }
+#gun-comparison-count { white-space:nowrap; color:var(--muted); font-size:.8rem; }
+.gun-comparison-controls { display:flex; flex-wrap:wrap; align-items:end; gap:12px; margin-block:20px 12px; }
+.gun-comparison-controls label { display:grid; gap:8px; width:min(100%,360px); font-size:.85rem; }
+.gun-comparison-controls .select-control { width:100%; display:flex; justify-content:space-between; gap:10px; min-height:42px; }
+.gun-comparison-conditions { margin-block:16px; padding:12px 0; border-block:1px solid var(--line); color:var(--muted); font-size:.85rem; line-height:1.7; }
+.gun-comparison-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:12px; }
+.gun-comparison-card { display:flex; flex-direction:column; min-width:0; padding:18px; border:1px solid var(--line); border-radius:8px; background:var(--canvas); }
+.gun-comparison-card.is-baseline { border-color:var(--accent); }
+.gun-comparison-card header { display:flex; justify-content:space-between; align-items:start; gap:10px; }
+.gun-comparison-card h3 { font-size:1.15rem; margin:0 0 5px; }
+.gun-comparison-card small { font-size:.8rem; color:var(--muted); }
+.gun-remove { flex:none; width:32px; height:32px; border:0; border-radius:4px; color:var(--muted); background:transparent; font-size:1.4rem; cursor:pointer; }
+.gun-remove:hover { background:var(--surface); color:var(--text); }
+.gun-ttk { margin-top:20px; min-height:95px; }
+.gun-ttk>span { display:block; font-size:.8rem; color:var(--muted); }
+.gun-ttk>strong { display:block; margin-block:6px; font-size:1.8rem; font-variant-numeric:tabular-nums; }
+.gun-ttk .gun-fastest { color:var(--accent); font-size:.75rem; }
+.gun-time-track { height:5px; border-radius:4px; background:var(--line); }
+.gun-time-track>span { display:block; height:100%; background:var(--accent); border-radius:inherit; }
+.gun-delta { min-height:2.8em; margin-block:12px; font-size:.85rem; line-height:1.4; font-weight:600; }
+.gun-comparison-card dl { margin:0 0 16px; display:grid; gap:9px; }
+.gun-comparison-card dl>div { display:flex; gap:10px; justify-content:space-between; font-size:.8rem; }
+.gun-comparison-card dt { color:var(--muted); }
+.gun-comparison-card dd { margin:0; font-variant-numeric:tabular-nums; }
+.gun-unavailable,.gun-comparison-note { color:var(--muted); font-size:.8rem; line-height:1.6; }
+.gun-comparison-note { margin:16px 0 0; }
+.gun-baseline { margin-top:auto; width:100%; }
+.gun-baseline[aria-pressed=true] { color:var(--accent); }
+.gun-comparison-empty { grid-column:1/-1; }
+@media(max-width:1100px) { .gun-comparison-grid { grid-template-columns:repeat(2,minmax(0,1fr)); } }
+@media(max-width:650px) { .gun-comparison { padding:16px; } .gun-comparison-grid { grid-template-columns:1fr; } }
+html:is([data-text-size="175"],[data-text-size="200"]) .gun-comparison-grid { grid-template-columns:1fr; }
+
+#gun-comparison-status { position:absolute; width:1px; height:1px; overflow:hidden; clip-path:inset(50%); white-space:nowrap; }

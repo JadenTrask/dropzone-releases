@@ -1,3 +1,4 @@
+import {releaseNotesSection} from './whats-new.js';
 import {$,api,e,dateTime,toast} from './shared.js';
 import {APP_VERSION} from './version.js';
 let state={version:APP_VERSION,status:'disabled',reason:'development',enabled:false},started=false;
@@ -26,4 +27,4 @@ export function startAppUpdates(){
   });
 }
 
-export function mountAppUpdates(){$('#hub-app').innerHTML=`<main class="hub-main app-updates-page"><div class="app-updates-layout"><header class="app-updates-intro"><h1>App updates</h1><p>Manage your installed version of Dropzone.</p></header>${appUpdateCard()}</div></main>`;}
+export function mountAppUpdates(){$('#hub-app').innerHTML=`<main class="hub-main app-updates-page"><div class="app-updates-layout"><header class="app-updates-intro"><h1>App updates</h1><p>Manage your installed version of Dropzone.</p></header>${appUpdateCard()}${releaseNotesSection()}</div></main>`;}

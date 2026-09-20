@@ -19,7 +19,7 @@
 #hub-app .sotf-detail{right:12px;top:80px;width:min(310px,calc(100% - 24px));max-height:calc(100% - 170px);overflow:auto;overflow-wrap:anywhere}
 #hub-app .sotf-map-error{max-width:calc(100% - 36px);overflow-wrap:anywhere}
 
-#hub-app .hub-main.wardogs-page.wd-fixed{padding:12px;min-height:0;overflow:hidden}
+#hub-app .hub-main.wardogs-page.wd-fixed{min-height:0;overflow:hidden}
 #hub-app .wd-fixed>.wd-workspace{grid-template-columns:320px minmax(340px,1fr);gap:12px}
 /* Let the full control column scroll when headings or results grow. */
 #hub-app .wd-fixed .wd-controls{overflow-y:auto;overflow-x:hidden;overscroll-behavior:contain;scrollbar-gutter:stable}
@@ -73,7 +73,7 @@ html:is([data-text-size="175"],[data-text-size="200"]) #hub-app .wd-fixed .wd-ra
 }
 
 @media(max-width:440px){
- #hub-app .hub-main.wardogs-page.wd-fixed{padding:8px}
+
  #hub-app .wd-fixed .wd-selectors{grid-template-columns:minmax(0,1fr)}
  #hub-app .wd-fixed .wd-result{grid-template-columns:minmax(0,1fr)}
  #hub-app .wd-fixed .wd-result>div{border-right:0}

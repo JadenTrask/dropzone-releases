@@ -1,0 +1,61 @@
+{
+  "id": "skopos",
+  "name": "Skopós",
+  "side": "defense",
+  "roles": [
+    "intel",
+    "support"
+  ],
+  "unit": "",
+  "squad": [
+    "wolfguard"
+  ],
+  "health": 1,
+  "speed": 3,
+  "difficulty": 2,
+  "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/24aepg0uhygjIpm0de121o/721cf782e6c9f7434fb970ab8da9f859/r6s-operator-skopos__1_.png",
+  "icon": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/k0AOat3ISkt7WMR6X4dJg/aa4596095d3861f7de24e007730e3f89/r6s-operators-badge-skopos.png",
+  "biography": {
+    "realName": "Kure Galanos",
+    "dateOfBirth": "July 25th (Age 42)",
+    "placeOfBirth": "Nicosia, Cyprus"
+  },
+  "loadout": [
+    {
+      "name": "PCX-33",
+      "category": "primary",
+      "type": "ASSAULT RIFLE",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/jKFNRujDQyioHLu0PULiR/a3dce57946beba1378566c386cfa0270/pcx-33.png"
+    },
+    {
+      "name": "P229",
+      "category": "secondary",
+      "type": "HANDGUN",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/76ja0RxqzHW9PpvWgpG7Sk/cb753b50b20fe67deaef54d8b2a46b54/P229.png"
+    },
+    {
+      "name": "Impact Grenade",
+      "category": "gadget",
+      "type": "",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/7iJK9B1Vr3PDO3rGftU00l/3a02e940b440c30929edf22c49870f65/impact-grenade__1_.png"
+    },
+    {
+      "name": "PROXIMITY ALARM",
+      "category": "gadget",
+      "type": "",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/2TsFLmb2O6LRZpbxzkZDck/c9146913388a9567500b704c95600621/Proximity_alarm.png"
+    },
+    {
+      "name": "V10 Pantheon Shells",
+      "category": "unique-ability",
+      "type": "",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/56v8dxuabTfIHtPSmQX7AJ/9079454089effc91c685d7e759728797/r6s-operator-ability-skopos.png"
+    }
+  ],
+  "source": "Ubisoft",
+  "sourceUrl": "https://www.ubisoft.com/en-us/game/rainbow-six/siege/game-info/operators/skopos",
+  "thumbnail": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/3lK6qZnfGtclnA6uhyGovV/63e2969f276794c8c240c207c34e41a6/r6s-operators-list-skopos.png",
+  "schema": 1,
+  "feed": "operator-skopos",
+  "fetchedAt": "2026-09-20T02:52:11.577Z"
+}

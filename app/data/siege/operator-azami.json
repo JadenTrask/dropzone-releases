@@ -1,0 +1,67 @@
+{
+  "id": "azami",
+  "name": "Azami",
+  "side": "defense",
+  "roles": [
+    "anti-entry",
+    "support"
+  ],
+  "unit": "Unaffiliated",
+  "squad": [
+    "viperstrike"
+  ],
+  "health": 2,
+  "speed": 2,
+  "difficulty": 3,
+  "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/6vzacvORn7fh5sWFqy4glF/daadcbb2e0515129bf0cb610eccb3393/r6s-operator-azami.png",
+  "icon": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/7KWTXHTk8rxLS5qtyX4Xu4/b51f8691b932fd2b83260ef3fbcd1154/r6s-operators-badge-azami.png",
+  "biography": {
+    "realName": "Kana Fujiwara",
+    "dateOfBirth": "September 6th (Age 28)",
+    "placeOfBirth": "Kyoto, Japan"
+  },
+  "loadout": [
+    {
+      "name": "9X19SVN",
+      "category": "primary",
+      "type": "",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/akx58K4vXn1v2Q4C3sgrB/03425922f23cc8887b6e73c4d06ad387/9X19SVN.png"
+    },
+    {
+      "name": "ACS12",
+      "category": "primary",
+      "type": "SHOTGUN",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/13z63kT1NLzn1U99o7WC4T/8655d3200f24b87246c36f2622603457/ACS12_PB.png"
+    },
+    {
+      "name": "D-50",
+      "category": "secondary",
+      "type": "HANDGUN",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/6mMQRDsrComRFa7bC6cNkG/8cd17e545e3d28dcc11a040d000cfa16/D-50.png"
+    },
+    {
+      "name": "Impact Grenade",
+      "category": "gadget",
+      "type": "",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/7iJK9B1Vr3PDO3rGftU00l/3a02e940b440c30929edf22c49870f65/impact-grenade__1_.png"
+    },
+    {
+      "name": "Barbed Wire",
+      "category": "gadget",
+      "type": "",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/7igaibxuCcSpWDkZensEJS/6d30514b70a4c8b535bb1c113f9cfce0/barbed-wire__1_.png"
+    },
+    {
+      "name": "KIBA BARRIER",
+      "category": "unique-ability",
+      "type": "",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/1UDhKrAXnm0thdHhsTTAyo/b7771794aea3f00da46c21670af5f5d5/r6s-operator-ability-azami.png"
+    }
+  ],
+  "source": "Ubisoft",
+  "sourceUrl": "https://www.ubisoft.com/en-us/game/rainbow-six/siege/game-info/operators/azami",
+  "thumbnail": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/5M7OGhXfAf5Q0Cdo1YJkRE/2e4c141357cf97d54c6840ee38f6bf76/r6s-operators-list-azami.png",
+  "schema": 1,
+  "feed": "operator-azami",
+  "fetchedAt": "2026-09-20T02:52:11.592Z"
+}

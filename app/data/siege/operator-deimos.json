@@ -1,0 +1,65 @@
+{
+  "id": "deimos",
+  "name": "Deimos",
+  "side": "attack",
+  "roles": [
+    "intel",
+    "map-control"
+  ],
+  "unit": "KERES LEGION",
+  "squad": [],
+  "health": 2,
+  "speed": 2,
+  "difficulty": 2,
+  "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/30I7qa77OwH9EWPvcHYBbH/45c27a7d2d3df007b0138f2c6ab2b94a/r6s-operator-deimos.png",
+  "icon": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/18uYWtYnEjmMQBTTdkIfWF/ba8c07729ff3c6de5872ffbcdc7956fb/r6s-operators-badge-deimos.png",
+  "biography": {
+    "realName": "Gerald Morris",
+    "dateOfBirth": "December 24th (Age 51)",
+    "placeOfBirth": "Birmingham, Alabama"
+  },
+  "loadout": [
+    {
+      "name": "AK-74M",
+      "category": "primary",
+      "type": "ASSAULT RIFLE",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/1j5HiQP8aFphTe65fqDdg0/23eecb5c603c5ba9f59fc6cbc5e4a531/AK-74M.png"
+    },
+    {
+      "name": "M590A1",
+      "category": "primary",
+      "type": "SHOTGUN",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/2zRHmgqENNiZqXQxC9Rsbj/e6542407c642f9b7c5a4546afb6db30a/M590A1.png"
+    },
+    {
+      "name": ".44 VENDETTA",
+      "category": "secondary",
+      "type": "HANDGUN",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/2kx8YFXaz4l9A3iJctZ33h/30f25aff1e25daf0dff88d258423adcf/44VENDETTA.png"
+    },
+    {
+      "name": "Frag Grenade",
+      "category": "gadget",
+      "type": "",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/4GZsPHbm9H0k5EWz7TMkwO/33b9007bc6ee03dab15cfa15eb69e096/Frag_Grenade.png"
+    },
+    {
+      "name": "HARD BREACH CHARGE",
+      "category": "gadget",
+      "type": "",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/3OvnVPWY1UyrDE913kU0a1/eae4b2a1584234ea2ff4ad6481239f3b/SecondaryBreacher.png"
+    },
+    {
+      "name": "DEATHMARK TRACKER",
+      "category": "unique-ability",
+      "type": "",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/vfUd3exyKBnSVj7Uj0rD3/c109abe7787520f3e0a3150a343cc4d6/r6s-operator-ability-deimos.png"
+    }
+  ],
+  "source": "Ubisoft",
+  "sourceUrl": "https://www.ubisoft.com/en-us/game/rainbow-six/siege/game-info/operators/deimos",
+  "thumbnail": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/2TV52rbjzuWtMGezWio1ox/2ec949f545995fc79fb3dc393a650992/r6s-operators-list-deimos.png",
+  "schema": 1,
+  "feed": "operator-deimos",
+  "fetchedAt": "2026-09-20T02:52:11.580Z"
+}

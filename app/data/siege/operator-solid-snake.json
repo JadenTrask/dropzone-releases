@@ -1,0 +1,83 @@
+{
+  "id": "solid-snake",
+  "name": "Solid Snake",
+  "side": "attack",
+  "roles": [
+    "intel",
+    "front-line"
+  ],
+  "unit": "",
+  "squad": [],
+  "health": 1,
+  "speed": 3,
+  "difficulty": 2,
+  "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/14s4oSyeat1seTsWpQ5g86/c252e34b3aa0e15358cad9aa907d4f8f/r6s-operator-solidsnake.png",
+  "icon": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/7l8uzV1767cot7GpTcnK7t/9be16729f34b76e97dbcbbd0a81bd74c/r6s-operators-badge-solidsnake.png",
+  "biography": {
+    "realName": "[REDACTED]",
+    "dateOfBirth": "[REDACTED]",
+    "placeOfBirth": "[REDACTED]"
+  },
+  "loadout": [
+    {
+      "name": "F2",
+      "category": "primary",
+      "type": "ASSAULT RIFLE",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/5HTvw1cJInVAGxOLXR0war/2f142437f5c0944fdcfcce8a03c37676/F2.png"
+    },
+    {
+      "name": "TACIT .45",
+      "category": "secondary",
+      "type": "",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/6IMvC7a7IdpJWoMXjjloTE/be8a688d5c64478a254514d48b7bbf47/TACIT_45.png"
+    },
+    {
+      "name": "PMR90A2",
+      "category": "primary",
+      "type": "",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/g1CRNF5Bg8mYPXY8qxsTt/a3fd65c5715d31c8afeb9fad9c478be5/PMR90A2.png"
+    },
+    {
+      "name": "Frag Grenade",
+      "category": "gadget",
+      "type": "",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/4GZsPHbm9H0k5EWz7TMkwO/33b9007bc6ee03dab15cfa15eb69e096/Frag_Grenade.png"
+    },
+    {
+      "name": "Stun Grenade",
+      "category": "gadget",
+      "type": "",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/3XnK8s1iQJQu5cfr6UyQfK/429480b96d6d6d6b830c32c75d2608f5/Stun_Grenade.png"
+    },
+    {
+      "name": "Impact EMP Grenade",
+      "category": "gadget",
+      "type": "",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/7izurbA5jDmnsmdeBdgKZO/29bca81243dda4084a92521ac0c03592/R6S-EMP-Impact-grenade.png"
+    },
+    {
+      "name": "Smoke Grenade",
+      "category": "gadget",
+      "type": "",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/3LaxoSLC49T5vgKnUAlTLT/c47c4636845a04478432c48be8c29aee/Smoke_Grenade.png"
+    },
+    {
+      "name": "Breach Charge",
+      "category": "gadget",
+      "type": "",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/1OgTMhyF1FBsSAo4njk26m/99b7a971f81b9195b3c3536b51d52893/R6S_Breach_charge.png"
+    },
+    {
+      "name": "SOLITON RADAR MK III",
+      "category": "unique-ability",
+      "type": "",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/6Dut9dv8W04uBNgd4oxtw8/ebd70ddec63fd5477385d23431a74add/r6s-operator-ability-solidsnake.png"
+    }
+  ],
+  "source": "Ubisoft",
+  "sourceUrl": "https://www.ubisoft.com/en-us/game/rainbow-six/siege/game-info/operators/solid-snake",
+  "thumbnail": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/7vApDDlVt8oDbshANnYbGC/2ba6d3cbd2649979ebbbf9c2ebdb4d7d/r6s-operators-list-solidsnake.png",
+  "schema": 1,
+  "feed": "operator-solid-snake",
+  "fetchedAt": "2026-09-20T02:52:11.575Z"
+}

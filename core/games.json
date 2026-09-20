@@ -38,7 +38,10 @@
     "cover": "assets/games/siege.jpg",
     "status": "active",
     "modes": [],
-    "videos": true
+    "videos": true,
+    "pages": [
+      "operators"
+    ]
   },
   {
     "id": "finals",
@@ -181,6 +184,24 @@
     "accent": "#bbdf8b",
     "cover": "assets/games/sotf.webp",
     "status": "active",
+    "videos": false,
+    "patches": false
+  },
+  {
+    "id": "gta6",
+    "parent": null,
+    "kind": "loadouts",
+    "name": "Grand Theft Auto VI",
+    "shortName": "GTA 6",
+    "eyebrow": "COMING SOON",
+    "description": "GTA 6 support is coming to Dropzone.",
+    "comingSoonDescription": "GTA 6 support is coming to Dropzone. Tools and features will be announced later.",
+    "theme": "gta6",
+    "accent": "#ed91ba",
+    "cover": "assets/games/gta6.png",
+    "coverAlt": "Grand Theft Auto VI artwork",
+    "status": "coming-soon",
+    "modes": [],
     "videos": false,
     "patches": false
   }

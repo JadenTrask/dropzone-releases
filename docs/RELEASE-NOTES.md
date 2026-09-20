@@ -1,15 +1,20 @@
-# Dropzone 2.3.3
+# Dropzone 2.3.4
 
-- Added password-protected Admin access in Settings. Sources stays hidden until unlocked; admin can be locked again without restarting. Password verification uses a salted scrypt hash, and repeated guesses are rate limited.
-- Added signed visual micro-updates for supported startup animation settings, logo PNGs and layout spacing. Downloaded changes apply on the next launch; offline use retains cached visuals.
-- Cleaned up Settings spacing and aligned WARDOGS calculator, server browser, market, damage and News headings.
-- Preload WARDOGS servers on startup and make manual Refresh bypass the request cache. Show the successful check time separately from the source snapshot time.
-- Rename game Patch notes tabs to News.
-- Preserve public loadout freshness labels while moving detailed source diagnostics behind Admin access.
-- Stop flagging unchanged ranked data solely because its publication date is old.
-- Repair the official Rainbow Six Esports playlist and broadcast feed URLs.
-- Preserve the orange logo, white startup wordmark and transparent blur over the app.
+- Refined the app identity with full-color game artwork, separate upcoming titles, compact weapon browsing and cleaner FINALS/Siege equipment and team sheets. Orange selections are consistent across these views. Missing weapon artwork keeps a compact labeled space while the loadout stays usable.
 
-This release installs visual-update support; previous versions need this regular update first. Admin access hides diagnostic UI, not a privileged online service.
+- Added GTA 6 as a coming-soon game with the supplied artwork.
+- Simplified THE FINALS into class selection, build selection and a compact equipment list. Team setups remain available separately.
+- Reworked Siege into a map picker, team plan and readable operator job rows. Ban options are expandable; official stats remain in their own tab.
+- Removed Custom coefficient from the sensitivity UI. Existing custom setups migrate to a verified preset or require measured calibration.
+- Added release highlights to App updates and a once-per-version welcome popup after startup. Dismissal persists; keyboard Escape also dismisses it.
 
-Validation: 161 automated tests passed locally. Browser checks covered wrong/correct passwords, separate browser sessions, locking again, Settings in both themes, WARDOGS alignment, live server refresh and Siege archives.
+- Fixed the shared layout: one content boundary owns page gutters and widths, replacing conflicting per-section centering.
+- Tutorial arrows now meet the midpoint of the highlighted edge.
+- Added a persistent comparison of up to six Damage Lab weapons, a selectable baseline, estimated TTK bars, time differences, damage, hits and fire rates. Target settings apply to every gun; unsupported results stay unavailable.
+
+- Added a dedicated Siege Operators tab with official portraits, hover animations, loadouts, ratings, identity details and biography summaries for all 78 operators.
+- Moved source checks into compact expandable header badges across ranked, loadouts, market, servers, news and videos.
+- Enlarged ranked charts now fit the window and offer an actual-size view.
+- Kept Coming soon badges inside the game navigation.
+
+- Fixed damaged VMP artwork with a bundled complete reference image, available offline in both build variants.

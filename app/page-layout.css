@@ -1,0 +1,24 @@
+/* One owner for workspace width and gutters.
+   Keep the scroll surface full width. Center its content with padding, never
+   independent max-width/auto-margin rules on each header, section or footer.
+   Full-bleed maps (SOTF/GZW) use their own layout, not .hub-main. */
+.hub-main {
+  --page-content-width: 1320px;
+  --page-gutter: var(--visual-page-gutter, 32px);
+  width: 100%;
+  max-width: none;
+  min-width: 0;
+  margin: 0;
+  padding-block: 28px;
+  padding-inline: max(var(--page-gutter), calc((100% - var(--page-content-width)) / 2));
+  scrollbar-gutter: stable both-edges;
+}
+.hub-main.library-page { --page-content-width: 1120px; }
+.hub-main:is(.app-settings, .app-updates-page) { --page-content-width: 1040px; }
+.hub-main.sources-page { --page-content-width: 1200px; }
+.hub-main > * { min-width: 0; }
+
+@media (max-width: 800px) {
+  .hub-main { --page-gutter: 16px; padding-block: 20px; }
+}
+.quick-panel .hub-main { --page-gutter: 12px; padding-block: 12px; }

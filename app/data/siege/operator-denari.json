@@ -1,0 +1,73 @@
+{
+  "id": "denari",
+  "name": "Denari",
+  "side": "defense",
+  "roles": [
+    "anti-entry",
+    "crowd-control"
+  ],
+  "unit": "",
+  "squad": [
+    "nighthaven"
+  ],
+  "health": 1,
+  "speed": 3,
+  "difficulty": 3,
+  "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/2tXE8ZM09IZLZNqb3xWzeC/4c96e9e2c07fe43811c6c5dcfd8256d4/r6s-operator-denari__3_.png",
+  "icon": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/17XNHqqrkLQ7lYFqciEwmP/21d50fb6c296d26a47f8dd84dd19298b/r6s-operators-badge-denari.png",
+  "biography": {
+    "realName": "Leon Winzenried",
+    "dateOfBirth": "November 30th (Age 38)",
+    "placeOfBirth": "Lugano, Switzerland"
+  },
+  "loadout": [
+    {
+      "name": "Scorpion EVO 3 A1",
+      "category": "primary",
+      "type": "SUBMACHINE GUN",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/6OdwaLWxcnFvhlVwWbP2Du/4f7e94bdb6d34d5c0aa7b7b147b4092e/Scorpion_EVO_3_A1.png"
+    },
+    {
+      "name": "FMG-9",
+      "category": "primary",
+      "type": "SUBMACHINE GUN",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/0oneJNsBR06QjuowxwtHG/bd3b391c6eec2bd615f2ed83197a13ac/FMG-9.png"
+    },
+    {
+      "name": "Glaive-12",
+      "category": "secondary",
+      "type": "",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/1vhycVQvB7uCsUpVE2jAw1/ed60286111e0049a3f312a81e828476f/glaive-12.png"
+    },
+    {
+      "name": "P226 Mk 25",
+      "category": "secondary",
+      "type": "HANDGUN",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/RTQvPQcywlRwUS1FjIKCX/6fc72fee2191c2e723276bc10ae4114e/P226_Mk_25.png"
+    },
+    {
+      "name": "Observation Blocker",
+      "category": "gadget",
+      "type": "",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/5toUEasFf4nw1vID6N8fpC/20926248ceedc72dfa2118f68f96c771/observation-blocker.png"
+    },
+    {
+      "name": "Deployable Shield",
+      "category": "gadget",
+      "type": "",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/W0WE0X2VQlxwWIAFCJ6Jm/523650a39de5a23dd9520d7299c9e25a/Deployable_Shield.png"
+    },
+    {
+      "name": "T.R.I.P. Connector",
+      "category": "unique-ability",
+      "type": "",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/3vsaJrxndhmGGbRTzuEdaE/cbaa155ed784189c81b538bb787fe0f4/r6s-operator-ability-denari.png"
+    }
+  ],
+  "source": "Ubisoft",
+  "sourceUrl": "https://www.ubisoft.com/en-us/game/rainbow-six/siege/game-info/operators/denari",
+  "thumbnail": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/2wBnvKJ86B3QLgkDvGU9Xo/899f89a04b25fd6a7a88b99e53f606fa/r6s-operators-list-denari__2_.png",
+  "schema": 1,
+  "feed": "operator-denari",
+  "fetchedAt": "2026-09-20T02:52:11.572Z"
+}

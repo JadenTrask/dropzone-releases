@@ -1,5 +1,5 @@
 /* Sources: a quiet overview with detail available on demand. */
-.hub-main.sources-page{max-width:1200px;margin-inline:auto;width:100%;--sources-surface:#171c1e;--sources-border:#30383b;--sources-muted:#b5a5a0;--sources-accent:#ceafa5;padding-bottom:40px}
+.hub-main.sources-page{--sources-surface:#171c1e;--sources-border:#30383b;--sources-muted:#b5a5a0;--sources-accent:#ceafa5;padding-bottom:40px}
 .sources-page .sources-intro{align-items:center;margin-bottom:26px;gap:24px}
 .sources-page .sources-intro .hub-eyebrow{color:var(--sources-muted);font-size:.8125rem;letter-spacing:.1em}
 .sources-page .sources-intro h1{font-size:2.25rem;line-height:1.2;letter-spacing:-.035em;margin:8px 0}

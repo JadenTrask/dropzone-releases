@@ -1,3 +1,4 @@
+import {sourceStatus} from './source-status.js';
 import {$,api,e,date,dateTime,toast} from './shared.js';
 import {patchPresentation} from './patch-model.js';
 let active=false,selectedGame=null,request=0,data=null,loading=false,error=null,gameName='';
@@ -17,8 +18,7 @@ function render(){
   if(!active)return;
   const entries=data?.articles||[],patches=entries.filter(a=>/patch/i.test(a.kind));
   const {featured,rest,heading,action}=patchPresentation(entries);
-  $('#hub-app').innerHTML=`<main class="hub-main patches-page"><div class="library-intro"><div><span class="hub-eyebrow">${e(gameName.toUpperCase())}</span><h1>News</h1><p>Official updates. Checked on launch and every 15 minutes.</p></div><button class="hub-button secondary" id="refresh-patches" ${loading?'disabled':''}>${loading?'Checking…':'Refresh news'}</button></div>
-    ${data?`<div class="patch-check ${data.error?'warning':''}" role="status"><span>${data.error?'Refresh failed · showing saved posts':data.cacheState==='bundled'?'Bundled posts':'Official feed checked'}</span><span>Last successful fetch: ${e(dateTime(data.fetchedAt))}</span></div>`:''}
+  $('#hub-app').innerHTML=`<main class="hub-main patches-page"><div class="library-intro"><div><span class="hub-eyebrow">${e(gameName.toUpperCase())}</span><h1>News</h1><p>Official updates. Checked on launch and every 15 minutes.</p></div><div class="page-header-actions">${sourceStatus({label:loading?'Checking news…':error||data?.error?'Refresh failed · saved posts':data?.cacheState==='bundled'?'Bundled posts':'Official feed · '+date(data?.fetchedAt),tone:error||data?.error?'warning':'neutral',detail:[error,data?.error,'Last successful fetch: '+dateTime(data?.fetchedAt)].filter(Boolean).join('\n')})}<button class="hub-button secondary" id="refresh-patches" ${loading?'disabled':''}>${loading?'Checking…':'Refresh news'}</button></div></div>
     ${error?`<p class="patch-error" role="alert">${e(error)}</p>`:''}
     ${data?.error?`<p class="patch-error">${e(data.error)}</p>`:''}
     ${selectedGame==='wardogs'&&!patches.length&&data?'<p class="patch-context">No patch-note post was found in the latest 30 developer announcements. Recent news is shown below.</p>':''}

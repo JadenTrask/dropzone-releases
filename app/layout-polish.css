@@ -1,5 +1,5 @@
 html:not([data-admin="true"]) [data-route="sources"]{display:none!important}
-.app-settings{width:100%;max-width:1100px;padding:28px var(--visual-page-gutter,32px);box-sizing:border-box}
+
 .app-settings>header{margin:0 0 24px}.app-settings>header h1{margin:8px 0 0}
 .app-settings .panel{padding:var(--visual-panel-padding,24px);margin:0 0 var(--visual-settings-gap,20px)}
 .app-settings .panel h2{margin:0 0 18px}.app-settings .panel p{margin:12px 0 0;line-height:1.5}
@@ -7,16 +7,16 @@ html:not([data-admin="true"]) [data-route="sources"]{display:none!important}
 .app-settings .panel .select-control{display:flex;width:min(100%,360px);min-height:44px;margin-top:8px;justify-content:space-between}
 .app-settings .panel label:has(input[type="checkbox"]){display:flex;gap:10px;align-items:center;margin:16px 0 0}
 .app-settings .panel input[type="checkbox"]{width:16px;height:16px;margin:0}
-#hub-app>.servers-page,#hub-app>.market-page,#hub-app>.damage-page,#hub-app>.patches-page{width:100%;max-width:1500px;margin:0 auto;padding:28px var(--visual-page-gutter,32px)!important;box-sizing:border-box}
+
 #hub-app>.servers-page>header,#hub-app>.market-page>header,#hub-app>.damage-page>header,#hub-app>.patches-page>.library-intro{margin:0 0 24px;padding:0;min-height:0}
 #hub-app>.servers-page h1,#hub-app>.market-page h1,#hub-app>.damage-page h1,#hub-app>.patches-page h1{margin:8px 0 12px;font-size:32px;line-height:1.15}
-@media(max-width:800px){.app-settings,#hub-app>.servers-page,#hub-app>.market-page,#hub-app>.damage-page,#hub-app>.patches-page{padding:20px 16px!important}}
 
-#hub-app>.hub-main.wardogs-page.wd-fixed{width:100%;max-width:1500px;margin:0 auto;box-sizing:border-box;padding:28px var(--visual-page-gutter,32px);flex-direction:column}
+
+#hub-app>.hub-main.wardogs-page.wd-fixed{flex-direction:column}
 #hub-app>.wardogs-page>.workspace-heading{flex:none;margin:0 0 24px;padding:0}
 #hub-app>.wardogs-page>.workspace-heading h1{margin:8px 0 12px;font-size:32px;line-height:1.15}
 #hub-app>.hub-main.wardogs-page.wd-fixed>.wd-workspace{flex:1;height:auto;min-height:0}
 .wd-sidebar-heading h2{font-size:18px;margin:0}
-@media(max-width:800px){#hub-app>.hub-main.wardogs-page.wd-fixed{padding:20px 16px}}
+
 
 #admin-unlock-form{margin-top:18px}#admin-password{display:block;width:min(100%,360px);min-height:44px;padding:10px;box-sizing:border-box;border:1px solid #7c6862;border-radius:6px;margin-bottom:12px;font:inherit}

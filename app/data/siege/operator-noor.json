@@ -1,0 +1,71 @@
+{
+  "id": "noor",
+  "name": "Noor",
+  "side": "defense",
+  "roles": [
+    "anti-entry",
+    "crowd-control"
+  ],
+  "unit": "",
+  "squad": [],
+  "health": 2,
+  "speed": 2,
+  "difficulty": 2,
+  "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/1STehR7C0Oqrcg3Vq4kCHK/4b3f6af650dad93057129de3866a73ac/r6s-operator-noor.png",
+  "icon": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/6DHgKOCoB9bcrQJiOjvQad/8b60ed79e3ce1dd3a352a0d1018cc604/r6s-operators-badge-noor.png",
+  "biography": {
+    "realName": "Ahmed Murad",
+    "dateOfBirth": "April 3rd (Age 28)",
+    "placeOfBirth": "Beni Suef, Egypt"
+  },
+  "loadout": [
+    {
+      "name": "Commando 9",
+      "category": "primary",
+      "type": "ASSAULT RIFLE",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/4P9dpUph5w3MSsLNnW6be/04baba24990fcb75a9c0bcfd01b7d190/Commando_9.png"
+    },
+    {
+      "name": "ALDA 5.56",
+      "category": "primary",
+      "type": "Light Machine Gun",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/39yB6TFl9ph6Rb4bDV4lqK/7f9b3abf8dff19bacc026a7212849ca4/ALDA_5.56.png"
+    },
+    {
+      "name": "1911 TACOPS",
+      "category": "secondary",
+      "type": "HANDGUN",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/189UukZ6fVnvQR6LJtLYry/6eec29603d5b7b0ca8cab6ac0ef083ac/1911_TACOPS.png"
+    },
+    {
+      "name": "Bailiff 410",
+      "category": "secondary",
+      "type": "HANDGUN",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/N8FLbo4fsNyBe8msKgRhT/8f403dc0b58087bcafab786dd95ba33f/Bailiff_410.png"
+    },
+    {
+      "name": "Deployable Shield",
+      "category": "gadget",
+      "type": "",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/W0WE0X2VQlxwWIAFCJ6Jm/523650a39de5a23dd9520d7299c9e25a/Deployable_Shield.png"
+    },
+    {
+      "name": "Barbed Wire",
+      "category": "gadget",
+      "type": "",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/7igaibxuCcSpWDkZensEJS/6d30514b70a4c8b535bb1c113f9cfce0/barbed-wire__1_.png"
+    },
+    {
+      "name": "Horus Lance Launcher",
+      "category": "unique-ability",
+      "type": "",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/21hoh2eaTzyLTinbMPi3MY/8a567039b4858d0c88f0227785282eef/r6s-operator-ability-noor.png"
+    }
+  ],
+  "source": "Ubisoft",
+  "sourceUrl": "https://www.ubisoft.com/en-us/game/rainbow-six/siege/game-info/operators/noor",
+  "thumbnail": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/3QXpYkYvMc9gSSvkaWnuS6/3fdda05d14894afe7f039d7c067131d4/r6s-operators-list-noor.png",
+  "schema": 1,
+  "feed": "operator-noor",
+  "fetchedAt": "2026-09-20T02:52:11.574Z"
+}

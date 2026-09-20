@@ -62,12 +62,12 @@ html[data-appearance=light] #hub-app :is(.weapon-list-title,.weapon-hero-bottom,
 
 /* The Finals, official news and videos use the same light surface hierarchy. */
 html[data-appearance=light] #hub-app :is(.finals-section-tabs,.finals-freshness,.class-tab,.finals-build-list button,.finals-tier,.finals-gear>div,.team-preset-tabs button,.team-strategy,.team-player-head,.player-number,.finals-saved,.patch-check,.patch-feature,.patch-kind,.patch-row,.patch-context,.patch-error,.watch-filter,.watch-player-section,.official-channel,.video-card){background:var(--light-panel)!important;border-color:var(--light-border)!important}
-html[data-appearance=light] #hub-app :is(.finals-section-tabs button.active,.class-tab.active,.finals-build-list button.active,.team-preset-tabs button.active,.finals-gear .primary-gear){background:#f8ddcf!important;color:#823116!important;border-color:#bc5433!important}
+html[data-appearance=light] #hub-app :is(.finals-section-tabs button.active,.class-tab.active,.finals-build-list button.active,.team-preset-tabs button.active){background:#f8ddcf!important;color:#823116!important;border-color:#bc5433!important}
 html[data-appearance=light] #hub-app .class-tab>b{background:var(--light-raised);color:var(--light-ink)}
 
 /* Dark artwork needs its own foreground, even when the surrounding UI is light.
    Buttons reset the tokens because their surface is light. */
-html[data-appearance=light] #hub-app :is(.r6-hero,.r6-map-banner,.finals-hero,.class-art,.sotf-map-error),
+html[data-appearance=light] #hub-app :is(.r6-hero,.r6-map-banner,.finals-hero,.class-art,.sotf-map-error,.operator-hero,.operator-card),
 html[data-appearance=light] #league-app .league-hero{--light-ink:#fff8f1;--light-muted:#e2d8d0;--game-copy:#fff8f1;--league-text:#fff8f1;color:var(--light-ink)!important}
 html[data-appearance=light] :is(#hub-app,#league-app) :is(.r6-hero,.r6-map-banner,.finals-hero,.class-art,.league-hero) :is(button,.hub-button,.button){--light-ink:#302b28;--light-muted:#675c55;background:#fffdfa!important;color:#302b28!important;border-color:#cfc3b9!important}
 html[data-appearance=light] #league-app .league-hero .hero-bottom{color:#fff8f1}

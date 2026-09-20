@@ -1,0 +1,61 @@
+{
+  "id": "blackbeard",
+  "name": "Blackbeard",
+  "side": "attack",
+  "roles": [
+    "breach",
+    "front-line"
+  ],
+  "unit": "NAVY SEAL",
+  "squad": [
+    "redhammer"
+  ],
+  "health": 3,
+  "speed": 1,
+  "difficulty": 2,
+  "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/1FtCiVm4q4DsQNsLoT5nV0/4d8db4491539e77f4905fa3242147ba5/r6s-operators-blackbeard__1_.png",
+  "icon": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/4BTbmcs1EtoUbnpk5Am22Y/b7bd4d0708245c78b98455505c0d51a8/Y1S2_BADGE_Blackbeard_L.png",
+  "biography": {
+    "realName": "Craig Jenson",
+    "dateOfBirth": "March 12th (Age 32)",
+    "placeOfBirth": "Bellevue, Washington"
+  },
+  "loadout": [
+    {
+      "name": "Mk17 CQB",
+      "category": "primary",
+      "type": "ASSAULT RIFLE",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/4LytczDQmu0M63gO2WtCCm/331ef3b1938352ae71d7c0bd23de3596/Mk17_CQB.png"
+    },
+    {
+      "name": "SR-25",
+      "category": "primary",
+      "type": "Marksman Rifle",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/3H3sICdj6BK8LhtQPRd2aJ/26826ebba73e0e5fd503256d069f3256/SR-25.png"
+    },
+    {
+      "name": "Claymore",
+      "category": "gadget",
+      "type": "",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/4T4H5EJgUxorucGVtU2pkm/74fef324b89c220ce6426e8097f915b9/Claymore.png"
+    },
+    {
+      "name": "Frag Grenade",
+      "category": "gadget",
+      "type": "",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/4GZsPHbm9H0k5EWz7TMkwO/33b9007bc6ee03dab15cfa15eb69e096/Frag_Grenade.png"
+    },
+    {
+      "name": "H.U.L.L. ADAPTABLE SHIELD",
+      "category": "unique-ability",
+      "type": "",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/7hk4QZge2W9nWQzzGorbu8/914085068bf97e6b1d0b83a40a354b9a/r6s-operator-ability-blackbeard__1_.png"
+    }
+  ],
+  "source": "Ubisoft",
+  "sourceUrl": "https://www.ubisoft.com/en-us/game/rainbow-six/siege/game-info/operators/blackbeard",
+  "thumbnail": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/5u6Ak7dkTb4yOjaP1hlGuT/cf52b8e0ac096bf55d764fc8b4fe7f9b/r6s-operators-list-blackbeard.png",
+  "schema": 1,
+  "feed": "operator-blackbeard",
+  "fetchedAt": "2026-09-20T02:52:11.638Z"
+}

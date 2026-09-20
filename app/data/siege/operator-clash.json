@@ -1,0 +1,73 @@
+{
+  "id": "clash",
+  "name": "Clash",
+  "side": "defense",
+  "roles": [
+    "intel",
+    "crowd-control"
+  ],
+  "unit": "MPS",
+  "squad": [
+    "wolfguard"
+  ],
+  "health": 3,
+  "speed": 1,
+  "difficulty": 3,
+  "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/snhm8UctuxdKTEcvnWi2K/0fb6214a5de9e3903209c329699fcfd9/r6s-operator-clash.png",
+  "icon": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/7G4lGl5HPLFTTUdcZW8UOK/3901b44cf2a9423486ffd78531e42f87/Y3S3_BADGE_Clash_L.png",
+  "biography": {
+    "realName": "Morowa Evans",
+    "dateOfBirth": "June 7th (Age 35 )",
+    "placeOfBirth": "London, England"
+  },
+  "loadout": [
+    {
+      "name": "CCE SHIELD MK2",
+      "category": "primary",
+      "type": "",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/31W7L9jDgiPp267Ejt3zYf/ebd5d0fed00a7a1df4fb8d5ebe8ea27c/CCE_Shield.avif"
+    },
+    {
+      "name": "P-10C",
+      "category": "secondary",
+      "type": "HANDGUN",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/2l4qwB50zSFhFZVYRLNwqg/20df8114f69f96f2adc54779ccc5bbaa/P-10C.png"
+    },
+    {
+      "name": "SPSMG9",
+      "category": "secondary",
+      "type": "Machine Pistol",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/5EtwSgylXckBNg4n6gDR9J/bc6fc6c5c12ae11da59aee95828ebd76/SPSMG9.png"
+    },
+    {
+      "name": "Super Shorty",
+      "category": "secondary",
+      "type": "SHOTGUN",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/7Dq8LDmIxAveRqXM17orUW/8169927dba6976cee92cc53c7b0960aa/r6-operator-weapon-sa-supershorty.png"
+    },
+    {
+      "name": "Barbed Wire",
+      "category": "gadget",
+      "type": "",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/7igaibxuCcSpWDkZensEJS/6d30514b70a4c8b535bb1c113f9cfce0/barbed-wire__1_.png"
+    },
+    {
+      "name": "Impact Grenade",
+      "category": "gadget",
+      "type": "",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/7iJK9B1Vr3PDO3rGftU00l/3a02e940b440c30929edf22c49870f65/impact-grenade__1_.png"
+    },
+    {
+      "name": "CCE SHIELD MK2",
+      "category": "unique-ability",
+      "type": "",
+      "image": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/5KSWTzQrMUrG3jMEO1zX9f/e103cb858cbb3b66f29340e2baa48fb5/CCE-Shield.png"
+    }
+  ],
+  "source": "Ubisoft",
+  "sourceUrl": "https://www.ubisoft.com/en-us/game/rainbow-six/siege/game-info/operators/clash",
+  "thumbnail": "https://staticctf.ubisoft.com/J3yJr34U2pZ2Ieem48Dwy9uqj5PNUQTn/3tTgRbA9GdeLTmI1mPObsp/449b741eaa4f6dd810b8914145de75bb/r6s-operators-list-clash.png",
+  "schema": 1,
+  "feed": "operator-clash",
+  "fetchedAt": "2026-09-20T02:52:11.618Z"
+}

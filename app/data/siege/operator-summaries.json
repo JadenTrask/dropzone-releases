@@ -1,0 +1,314 @@
+{
+  "ace": {
+    "ability": "Throw hydraulic breaching charges to open reinforced walls and create entry routes.",
+    "biography": "A Norwegian paramedic who chose field work over medical school, Haugland developed his rescue skills through military service."
+  },
+  "alibi": {
+    "ability": "Deploy lookalike holograms that reveal opponents who interact with them.",
+    "biography": "De Luca moved from Libya to Italy as a child. Her family's firearms business and competitive shooting success helped launch her security career."
+  },
+  "amaru": {
+    "ability": "Use a grappling hook to reach windows, ledges, and open hatches quickly.",
+    "biography": "Quispe began as an anthropologist protecting Peru's cultural heritage, later combining police experience with archaeological field work."
+  },
+  "aruni": {
+    "ability": "Place laser gates across entryways to punish intruders.",
+    "biography": "A former private detective, Aruni joined Thailand's police after uncovering a Bangkok bombing plot. Her investigations also targeted human trafficking."
+  },
+  "ash": {
+    "ability": "Fire breaching rounds from a distance to break soft surfaces and open new angles.",
+    "biography": "Cohen studied structural engineering before serving in Israel's military. Her training combined technical expertise with demanding ground and airborne operations."
+  },
+  "azami": {
+    "ability": "Throw kunai that expand into solid cover, sealing exposed angles.",
+    "biography": "Raised in Kyoto, Azami pursued martial arts and languages before entering Tokyo's police academy. Her discipline shaped a career in personal protection."
+  },
+  "bandit": {
+    "ability": "Electrify defensive surfaces to interfere with enemy breaches.",
+    "biography": "Brunsmeier followed his father into policing. Crisis response, aviation, and undercover work became central to his career."
+  },
+  "blackbeard": {
+    "ability": "Carry an adaptable shield alongside a primary weapon and breach soft walls with its pneumatic system.",
+    "biography": "Jenson chose naval service over his family's medical tradition. Early cadet experience helped set him on the path to the Navy SEALs."
+  },
+  "blitz": {
+    "ability": "Combine ballistic protection with a shield-mounted flash to pressure close opponents.",
+    "biography": "Kötz excelled in both languages and athletics. His academic background complements a career built around demanding close-quarters operations."
+  },
+  "brava": {
+    "ability": "Send a hacking drone to take over enemy devices, or disable those it cannot control.",
+    "biography": "After losing a cousin to violent crime, Cardoso studied law. Frustration with prosecution led her to Brazil's federal police."
+  },
+  "buck": {
+    "ability": "Switch between a rifle and its attached shotgun to open soft surfaces.",
+    "biography": "Côté served in Canada's reserves while studying criminology, then developed expertise in military policing, rescue, and special operations."
+  },
+  "capitao": {
+    "ability": "Use crossbow bolts to deliver fire and control an area.",
+    "biography": "Souza entered policing after his brother's murder. He survived captivity during a cartel operation, including the injury that cost him an eye."
+  },
+  "castle": {
+    "ability": "Reinforce entryways with tactical barricades to shape the attackers' routes.",
+    "biography": "Campbell moved from criminal-justice studies into the LAPD and SWAT. Team protection and careful control of entry points defined his work."
+  },
+  "caveira": {
+    "ability": "Quietly incapacitate opponents and interrogate them for information.",
+    "biography": "Pereira became a police informant after an early arrest. Undercover assignments developed her surveillance and interrogation expertise."
+  },
+  "clash": {
+    "ability": "Use an electrical shield to slow opponents; anchor it and operate the taser remotely.",
+    "biography": "Evans began as a protest organizer. A mentor's death led her to seek change from within London's police service."
+  },
+  "deimos": {
+    "ability": "Track a chosen enemy with a flying probe while exposing your own position; fight with the Vendetta during tracking.",
+    "biography": "Morris developed his field skills with Special Forces and the ATF. His record also includes advanced chemistry studies and an early connection to Rainbow."
+  },
+  "denari": {
+    "ability": "Link deployed devices into laser traps that injure and slow enemies.",
+    "biography": "Winzenried grew up in a politically prominent household. Games of chance became an outlet and helped shape his talent for deception and analysis."
+  },
+  "doc": {
+    "ability": "Use a medical pistol to support teammates with emergency treatment.",
+    "biography": "Kateb trained in medicine in Paris and volunteered on humanitarian missions. He chose military healthcare over private practice."
+  },
+  "dokkaebi": {
+    "ability": "Upload malware that disrupts observation tools and turns targeted enemy phones into explosive hazards.",
+    "biography": "Nam's talent for computing brought academic recognition and an early intelligence assignment. Her hacking expertise grew alongside military service."
+  },
+  "echo": {
+    "ability": "Pilot a camera drone that can disorient enemies with ultrasonic bursts.",
+    "biography": "Enatsu began building robots and drones as a child. Engineering studies led him into Japanese police research and counter-terrorism work."
+  },
+  "ela": {
+    "ability": "Hide proximity-triggered concussion mines to disrupt approaching opponents.",
+    "biography": "Bosak grew up under demanding military training alongside her sister Zofia. She later explored fine art in Berlin before returning to security work."
+  },
+  "fenrir": {
+    "ability": "Place remotely activated mines to disrupt enemies around protected areas.",
+    "biography": "Svensson's interest in biology shifted during military service toward the emotional effects of combat and tactical organization."
+  },
+  "finka": {
+    "ability": "Trigger a team-wide boost that supports injured allies and can help them recover from a downed state.",
+    "biography": ""
+  },
+  "flores": {
+    "ability": "Drive an explosive drone into position, then lock it down and detonate it against defensive equipment.",
+    "biography": "Lucero turned to burglary while supporting his ill mother. He became known for targeting powerful criminals and helping poorer communities."
+  },
+  "frost": {
+    "ability": "Set concealed mechanical traps to catch opponents moving through an entryway.",
+    "biography": "Tsang joined Canada's air force at eighteen, excelled at military college, and later served in coastal search and rescue."
+  },
+  "fuze": {
+    "ability": "Send explosive clusters through soft surfaces to clear defensive positions.",
+    "biography": ""
+  },
+  "glaz": {
+    "ability": "Provide ranged covering fire using a specialized rifle sight.",
+    "biography": ""
+  },
+  "goyo": {
+    "ability": "Use incendiary equipment to block an area with fire.",
+    "biography": "Hernández lost his father and sister in a bombing. His mother and Amaru helped guide him toward a naval education and military service."
+  },
+  "gridlock": {
+    "ability": "Spread clusters of spikes that slow and injure enemies crossing the covered ground.",
+    "biography": "Fairous developed leadership and engineering skills early. Work with engines and robotics led her into Australia's army reserves and military service."
+  },
+  "grim": {
+    "ability": "Launch a swarm of tracking bots to reveal opponents who enter its area.",
+    "biography": "Keng Boon learned wilderness survival from his father before joining Singapore's naval special forces and training as a combat diver."
+  },
+  "hibana": {
+    "ability": "Launch remotely detonated pellets to open reinforced surfaces and create sightlines.",
+    "biography": "Imagawa developed precise control through archery and international counter-terrorism training. Her specialty is leading teams through dangerous entries."
+  },
+  "iana": {
+    "ability": "Scout using a controllable holographic double that mimics movement but cannot attack.",
+    "biography": "Meijer pursued aerospace engineering before shifting toward systems engineering. She developed advanced contact lenses after her eyesight prevented a piloting career."
+  },
+  "iq": {
+    "ability": "Locate electronics using a wrist-mounted detector.",
+    "biography": "Weiss grew up in an academically driven family and pursued electrical engineering at MIT. Her work focused on microelectronics and advanced technology."
+  },
+  "jackal": {
+    "ability": "Scan footprints to identify and track enemy movement.",
+    "biography": "Al-Hassar's unsettled childhood was followed by his brother's unsolved murder. Support from a police officer inspired his own policing career."
+  },
+  "jager": {
+    "ability": "Protect a position by intercepting incoming projectiles.",
+    "biography": "Streicher grew up around aviation machinery through his mechanic uncle. His interest in complex systems eventually shaped his defensive technology."
+  },
+  "kaid": {
+    "ability": "Throw electrical devices that protect nearby reinforced surfaces and other metal defenses.",
+    "biography": "El Fassi grew up fascinated by the Fortress training facility in Morocco's Atlas Mountains and its renowned commanders."
+  },
+  "kali": {
+    "ability": "Pair a powerful sniper rifle with explosive lances for removing defensive gadgets.",
+    "biography": "Shah's ambition to serve in combat met institutional barriers. She left military service and pursued her own private military enterprise."
+  },
+  "kapkan": {
+    "ability": "Place explosive traps on door and window frames to punish careless entry.",
+    "biography": ""
+  },
+  "lesion": {
+    "ability": "Scatter toxin-injecting mines to injure and slow approaching enemies.",
+    "biography": "Liu worked in shipbreaking alongside his father. Exposure to industrial hazards and later mine-clearance work shaped his understanding of dangerous materials."
+  },
+  "lion": {
+    "ability": "Use an aerial sensor to detect enemy movement during timed scans.",
+    "biography": "Flament enlisted after a difficult period in his youth. Military structure helped him develop expertise in chemical, biological, radiological, and nuclear threats."
+  },
+  "maestro": {
+    "ability": "Watch an area through a remote turret and expose its laser to attack targets.",
+    "biography": "Martello trained at Italy's military academy and served as a paratrooper before qualifying for specialist counter-terrorism operations."
+  },
+  "maverick": {
+    "ability": "Cut precise openings through reinforced surfaces with a close-range blowtorch.",
+    "biography": "Thorn grew up speaking multiple languages and later served as an intelligence officer in Kabul. His career combined local knowledge with unconventional operations."
+  },
+  "melusi": {
+    "ability": "Deploy sound-based devices that slow enemies entering their reach.",
+    "biography": "Ndlovu grew up near a South African wildlife reserve. Concern for threatened animals and the danger of poaching shaped her drive to protect others."
+  },
+  "mira": {
+    "ability": "Install a one-way observation window and choose when to open it into a firing angle.",
+    "biography": "Álvarez learned mechanical skills in her father's repair shop. Engineering studies and police service gave her a route into developing protective equipment."
+  },
+  "montagne": {
+    "ability": "Extend a ballistic shield to provide broad frontal protection.",
+    "biography": "Touré developed his career in French policing, from a visible street presence to crowd control and counter-terrorism training with GIGN."
+  },
+  "mozzie": {
+    "ability": "Launch small robots that hijack enemy drones for defensive reconnaissance.",
+    "biography": "Goose trained in Australia's defense forces and became skilled in reconnaissance using dirt bikes and all-terrain vehicles."
+  },
+  "mute": {
+    "ability": "Deploy signal jammers to interfere with nearby enemy electronics.",
+    "biography": "Chandar entered Cambridge unusually young and studied electronics and computing. Security research and code-breaking brought him to GCHQ's attention."
+  },
+  "nokk": {
+    "ability": "Use concealment technology to avoid enemy observation tools during an approach.",
+    "biography": "Much of Nøkk's personal history remains classified. The published record describes Danish military education and extensive covert-operations training."
+  },
+  "nomad": {
+    "ability": "Attach repulsion devices to surfaces to knock back enemies who approach.",
+    "biography": "El Maktoub's early travels encouraged a love of remote places. She later trained at Morocco's Fortress and served in mountain operations."
+  },
+  "noor": {
+    "ability": "Fire piercing projectiles that ignite after passing through shields or destructible surfaces.",
+    "biography": "Murad grew up on military bases while his father served with Rainbow. After trying academic life, he joined Egypt's military and later earned his own place in Rainbow."
+  },
+  "oryx": {
+    "ability": "Dash through soft walls and reach open hatches to change floors quickly.",
+    "biography": "Al Hadid vanished from public records for many years. His later travels included training in wrestling, striking, driving, and marksmanship."
+  },
+  "osa": {
+    "ability": "Carry or place transparent ballistic cover to hold an attacking angle.",
+    "biography": "Janković grew up in a family of toy makers and merchants. Settling with her aunt in Croatia gave her space to develop technical interests and a passion for science fiction."
+  },
+  "pulse": {
+    "ability": "Track nearby heartbeats through surfaces to gather defensive intelligence.",
+    "biography": "Estrada grew up on military bases and showed an early aptitude for science. Forensics and biochemistry led him into the FBI's biometrics program."
+  },
+  "ram": {
+    "ability": "Send a motorized breacher along a route to destroy soft surfaces and equipment.",
+    "biography": "Choi grew up in orphanages in South Korea. Her early caregivers described someone observant and resourceful, with lasting interests in music and drawing."
+  },
+  "rauora": {
+    "ability": "Deploy remotely placed door panels and use their triggers to control passage.",
+    "biography": "Iwini followed her parents into public service, becoming a military captain before qualifying for New Zealand's SAS. Māori community and tradition remain central to her life."
+  },
+  "rook": {
+    "ability": "Supply armor plates that improve the team's protection.",
+    "biography": "Nizan combined academic ability with a love of sports. After cycling across France, he entered the Gendarmerie and developed his policing skills."
+  },
+  "sens": {
+    "ability": "Roll out projectors that create a visual screen across several angles.",
+    "biography": "Ngoma grew up exploring psychology, physics, music, and practical mechanics. That varied education became the foundation for their later work."
+  },
+  "sentry": {
+    "ability": "Choose from the defensive secondary-gadget pool to adapt your equipment to the team.",
+    "biography": "Sentries are Rainbow's defense recruits. Their training emphasizes adaptability and gives future specialists a place to build experience."
+  },
+  "skopos": {
+    "ability": "Switch between two robotic shells, leaving the inactive unit as a protected observation point.",
+    "biography": "Galanos fled unrest in Cyprus as a child. Police and military experience led to a long Rainbow career and later a shift toward remote operations."
+  },
+  "sledge": {
+    "ability": "Break soft surfaces with a hammer to create entrances and vertical angles.",
+    "biography": "Cowden grew up in Scotland and captained a youth rugby team. He followed his family's military tradition into armored engineering and infantry service."
+  },
+  "smoke": {
+    "ability": "Position remotely triggered gas devices to deny routes and delay a push.",
+    "biography": "Porter's unconventional education encouraged his talent for chemistry and biology. He later entered the British Army in search of practical challenges."
+  },
+  "solid-snake": {
+    "ability": "Scan for nearby threats with a handheld radar and recover gadgets from fallen operators.",
+    "biography": "Solid Snake's record is heavily classified. Ubisoft's dossier describes a veteran whose history is partly corroborated through Samuel Fisher."
+  },
+  "solis": {
+    "ability": "Detect and mark enemy electronics using a wearable sensor.",
+    "biography": "Díaz joined Colombia's police out of a desire to protect others. Computing and investigative skills helped her uncover corruption and enter special operations."
+  },
+  "striker": {
+    "ability": "Build a flexible attacking kit using the full attacker secondary-gadget pool.",
+    "biography": "Strikers are Rainbow's attack recruits. They support operations while developing the experience needed for future specialist roles."
+  },
+  "tachanka": {
+    "ability": "Bounce incendiary grenades into difficult angles to deny enemy movement.",
+    "biography": ""
+  },
+  "thatcher": {
+    "ability": "Detect electronics through cover and disable them with a targeted EMP device.",
+    "biography": "Baker chose military service over his family's dockworking trade. Observation, decisive action, and close-quarters expertise became hallmarks of his career."
+  },
+  "thermite": {
+    "ability": "Coordinate with the team to open reinforced defenses using breaching charges.",
+    "biography": "Trace served in the Marines and trained in explosive-ordnance disposal. A chemistry degree later supported his work with FBI hazardous-material and SWAT teams."
+  },
+  "thorn": {
+    "ability": "Stick proximity-triggered explosive devices to surfaces to threaten nearby enemies.",
+    "biography": "Thorn grew up around horses and a large family on an Irish farm. She chose a career with Ireland's police service."
+  },
+  "thunderbird": {
+    "ability": "Place automated medical stations that help nearby injured or downed operators.",
+    "biography": "Thunderbird grew up in Saskatchewan's Nakoda territories, learning community values and helicopter mechanics from her parents before military training."
+  },
+  "tubarao": {
+    "ability": "Throw freezing devices to slow enemies, pause equipment, and reveal movement across affected surfaces.",
+    "biography": "Nunes grew up in the Azores, where natural disasters taught him the value of mutual aid. Time at sea with his father encouraged his maritime interests."
+  },
+  "twitch": {
+    "ability": "Pilot a shock drone to gather information and remotely disable equipment.",
+    "biography": "Pichon grew up in an academic family and joined army cadets at sixteen. Programming and robotics skills led her toward engineering for field operations."
+  },
+  "valkyrie": {
+    "ability": "Place small cameras to give the team additional live viewing angles.",
+    "biography": "Castellano was a promising swimmer before an injury ended that path. She shifted toward the Navy and university study."
+  },
+  "vigil": {
+    "ability": "Conceal your image from nearby camera systems using electronic countermeasures.",
+    "biography": "Hwa endured family loss before being adopted in South Korea. An interest in electronics later helped guide him into naval service."
+  },
+  "wamai": {
+    "ability": "Use magnetic devices to pull incoming projectiles away from their intended destination.",
+    "biography": "Furaha grew up in a Kenyan fishing community and showed remarkable diving ability. Naval service gave him a way to put those skills to use."
+  },
+  "warden": {
+    "ability": "Activate specialized glasses to resist flashes and improve vision through smoke.",
+    "biography": "McKinley moved from the Marines to the Secret Service. His response to an attack on a diplomatic visit helped earn him a presidential protection assignment."
+  },
+  "ying": {
+    "ability": "Deploy clusters of flash charges to disrupt defenders before an entry.",
+    "biography": "Siu began in close protection after school. Training abroad expanded her combat skills before she joined Hong Kong's police and Special Duties Unit."
+  },
+  "zero": {
+    "ability": "Fire cameras into surfaces to observe both sides and use their laser against equipment.",
+    "biography": "Fisher attended military school and the US Naval Academy before SEAL training. Much of his later intelligence career remains classified."
+  },
+  "zofia": {
+    "ability": "Switch between impact and concussion rounds in a dual-purpose launcher.",
+    "biography": "Bosak grew up under rigorous training from her father, a former GROM commander. She later excelled in special-forces selection and survival skills."
+  }
+}

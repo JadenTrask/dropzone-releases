@@ -1,3 +1,4 @@
+import {sourceStatus,updateSourceStatus} from './source-status.js';
 import {nearestTimestamp} from './market-search.js';
 import {api,e,$,stored,persist} from './shared.js';
 let generation=0,timer;
@@ -5,7 +6,7 @@ export function leaveMarket(){generation++;clearInterval(timer);}
 export function mountMarket(){
  leaveMarket();const current=generation;let refreshing=false,priceSignature='',data,range=stored('dropzone-market-range','90'),selected=0;
  if(!['7','30','90','all'].includes(range))range='90';
- $('#hub-app').innerHTML=`<main class="hub-main market-page"><header><div><span class="hub-eyebrow">WARDOGS / DAILY MARKET</span><h1>Gold bar market</h1><p>In-game cash per gold bar.</p></div><button class="hub-button secondary" id="market-refresh">Refresh</button></header><p id="market-status" role="status">Loading daily prices…</p><div id="market-content"></div><p><button class="hub-button secondary" id="market-source">Source: WARDOGS Hub ↗</button></p><small>Daily reference prices, not a live trading feed. Checked once per UTC day while you use the app. The source may revise historical prices; this chart uses its latest published history.</small></main>`;
+ $('#hub-app').innerHTML=`<main class="hub-main market-page"><header><div><span class="hub-eyebrow">WARDOGS / DAILY MARKET</span><h1>Gold bar market</h1><p>In-game cash per gold bar.</p></div><div class="page-header-actions">${sourceStatus({id:'market-status',label:'Checking daily prices…',detail:'Loading the latest daily reference.'})}<button class="hub-button secondary" id="market-refresh">Refresh</button></div></header><div id="market-content"></div><p><button class="hub-button secondary" id="market-source">Source: WARDOGS Hub ↗</button></p><small>Daily reference prices, not a live trading feed. Checked once per UTC day while you use the app. The source may revise historical prices; this chart uses its latest published history.</small></main>`;
  const content=$('#market-content');
  function paint(){
  if(!data?.points?.length){content.innerHTML='<p>No price history available. Try refreshing later.</p>';return;}
@@ -25,6 +26,6 @@ export function mountMarket(){
  graph.onkeydown=event=>{const moves={ArrowLeft:selected-1,ArrowRight:selected+1,Home:0,End:points.length-1};if(event.key in moves){event.preventDefault();inspect(moves[event.key]);}};
  content.querySelectorAll('[data-range]').forEach(b=>b.onclick=()=>{range=b.dataset.range;persist('dropzone-market-range',range);paint();});
  }
- async function refresh(){if(refreshing)return;refreshing=true;const button=$('#market-refresh');button.disabled=true;try{const result=await api.market();if(current!==generation)return;data=result;$('#market-status').textContent=[data.stale?'Older daily data':'Latest daily data',data.points?.at(-1)?.date||'',data.checkedAt?'Checked '+new Date(data.checkedAt).toLocaleString():'',data.error||''].filter(Boolean).join(' · ');const signature=JSON.stringify(data.points);if(signature!==priceSignature){priceSignature=signature;paint();}}catch{if(current===generation)$('#market-status').textContent='Unable to check prices. Try again later.';}finally{refreshing=false;if(current===generation)button.disabled=false;}}
+ async function refresh(){if(refreshing)return;refreshing=true;const button=$('#market-refresh');button.disabled=true;try{const result=await api.market();if(current!==generation)return;data=result;updateSourceStatus('market-status',{label:data.stale?'Older daily data':('Daily data · '+(data.points?.at(-1)?.date||'Unknown date')),tone:data.stale||data.error?'warning':'neutral',detail:[data.stale?'Older daily data':'Latest daily data',data.points?.at(-1)?.date||'',data.checkedAt?'Checked '+new Date(data.checkedAt).toLocaleString():'',data.error||''].filter(Boolean).join(' · ')});const signature=JSON.stringify(data.points);if(signature!==priceSignature){priceSignature=signature;paint();}}catch{if(current===generation)updateSourceStatus('market-status',{label:'Refresh failed',tone:'warning',detail:'Unable to check prices. Try again later.'});}finally{refreshing=false;if(current===generation)button.disabled=false;}}
  $('#market-refresh').onclick=refresh;$('#market-source').onclick=()=>api.openSource('https://wardogshub.gg/gold-market/');refresh();timer=setInterval(()=>{if(!document.hidden)refresh();},60000);
 }

@@ -1,6 +1,6 @@
 {
   "name": "dropzone",
-  "version": "2.3.3",
+  "version": "2.3.4",
   "description": "Loadouts, tactical maps, artillery calculations, patch notes, and competitive videos",
   "author": "Jaden Trask",
   "license": "MIT",
@@ -15,7 +15,8 @@
     "install:runtime": "install-electron",
     "version:set": "node scripts/set-version.cjs",
     "configure:updates": "node scripts/configure-updates.cjs",
-    "package:installer": "node scripts/set-version.cjs && electron-builder --config electron-builder.cjs --win nsis --x64 --publish never"
+    "package:installer": "node scripts/set-version.cjs && electron-builder --config electron-builder.cjs --win nsis --x64 --publish never",
+    "test:layout": "electron scripts/check-layout.cjs"
   },
   "devDependencies": {
     "@electron/packager": "19.0.1",

@@ -1,9 +1,9 @@
 /* Shared presentation for loadouts, operator guides, official posts and videos. */
-#hub-app :is(.finals-page,.r6-page,.patches-page,.watch-page){--accent:#c9b2aa;--game-panel:#181e22;--game-raised:#20282c;--game-line:#343e42;--game-copy:#ece9e4;--game-muted:#a6b3b6;background:var(--canvas,#101315);color:var(--game-copy)}
+#hub-app :is(.finals-page,.r6-page,.patches-page,.watch-page){--game-panel:#181e22;--game-raised:#20282c;--game-line:#343e42;--game-copy:#ece9e4;--game-muted:#a6b3b6;background:var(--canvas,#101315);color:var(--game-copy)}
 #hub-app :is(.finals-page,.r6-page,.patches-page,.watch-page) :is(h1,h2,h3,h4){color:var(--game-copy)}
 #hub-app :is(.finals-page,.patches-page,.watch-page) .hub-eyebrow{color:#b9a8a2;font-size:.6875rem;letter-spacing:.075em;font-weight:550}
 #hub-app :is(.finals-page,.patches-page,.watch-page) .hub-button{background:var(--accent);border-color:transparent;color:#201c1a;font-size:.8125rem;padding:9px 13px;min-height:38px;box-shadow:none}
-#hub-app :is(.finals-page,.patches-page,.watch-page) .hub-button:hover:not(:disabled){background:#ddc9c2;color:#221d1b;transform:none}
+#hub-app :is(.finals-page,.patches-page,.watch-page) .hub-button:hover:not(:disabled){background:#ff815a;color:#221d1b;transform:none}
 #hub-app :is(.finals-page,.patches-page,.watch-page) .hub-button.secondary{background:var(--game-raised);border-color:#564843;color:#dcd3d0}
 #hub-app :is(.finals-page,.patches-page,.watch-page) .hub-button.secondary:hover:not(:disabled){background:#37302d;color:#f2eee8}
 #hub-app :is(.finals-page,.patches-page,.watch-page) .source-link{color:#cebab3;font-size:.8125rem;line-height:1.6}
@@ -21,7 +21,7 @@
 #hub-app .finals-hero p{font-size:.9375rem;color:#cfc4c1;line-height:1.6;margin-bottom:20px}
 /* These are the only legacy tab declarations that require an important override. */
 #hub-app .finals-section-tabs{background:#181f23!important;border-color:#413935!important;margin:20px auto 16px;padding:4px;border-radius:8px;gap:5px}
-#hub-app .finals-section-tabs button.active{background:#3a332f!important;color:#e7d9d4!important}
+#hub-app .finals-section-tabs button.active{background:var(--game-raised)!important;color:#ffb699!important}
 #hub-app .finals-section-tabs button{padding:9px 13px;font-size:.8125rem;border-radius:5px;color:#bbada8}
 #hub-app .finals-section-tabs button:hover{background:#2e2926}
 #hub-app .finals-freshness{padding:12px 16px;margin:16px auto 22px;gap:12px;background:#27222080;border-color:#594640;color:#d2c3be;font-size:.8125rem;line-height:1.65;flex-wrap:wrap}
@@ -33,7 +33,7 @@
 #hub-app .class-tab strong{font-size:1rem;font-weight:600;color:#e7dfdc}
 #hub-app .class-tab small{font-size:.75rem;color:#b2a29d}
 #hub-app .class-tab span{gap:10px}
-#hub-app .class-tab.active{background:#2f2926;border-color:#9b8077;box-shadow:none}
+#hub-app .class-tab.active{background:#ee603814;border-color:#ee6038;box-shadow:none}
 #hub-app .class-tab.active>b{background:#cbb4ad;color:#2a2523}
 #hub-app .finals-layout{grid-template-columns:minmax(245px,.85fr) minmax(0,1.65fr);gap:18px}
 #hub-app :is(.finals-class-panel,.finals-build-detail){background:var(--game-panel);border-color:var(--game-line);border-radius:10px}
@@ -44,7 +44,7 @@
 #hub-app .class-art p{color:#c8bbb7;font-size:.8125rem;line-height:1.6}
 #hub-app .finals-build-list{padding:12px;gap:7px}
 #hub-app .finals-build-list button{padding:12px;gap:11px;background:#20292b;border-color:#413a36}
-#hub-app .finals-build-list button.active{background:#37302d;border-color:#998078}
+#hub-app .finals-build-list button.active{background:#ee603814;border-color:#ee6038}
 #hub-app .finals-build-list strong{font-size:.875rem;color:#e8dedb;font-weight:550}
 #hub-app .finals-build-list small{font-size:.75rem;color:#bfafaa}
 #hub-app .finals-build-list button>span:last-child{color:#c4aca4}
@@ -56,10 +56,10 @@
 #hub-app .finals-weapon-picker{margin-top:18px}
 #hub-app :is(.finals-weapon-picker>span,.team-player label>span){color:#c2b1ab;font-size:.75rem;letter-spacing:.03em}
 #hub-app .finals-gear{margin:20px 0;gap:8px}
-#hub-app .finals-gear>div{padding:12px 15px;gap:12px;background:#272220;border-color:#4b3a35;border-radius:6px}
+#hub-app .finals-gear>div{padding:12px 15px;gap:12px;background:transparent;border-color:var(--game-line);border-radius:6px}
 #hub-app .finals-gear dt{font-size:.6875rem;letter-spacing:.045em;color:#b7a59f}
 #hub-app .finals-gear dd{color:#e8dbd7;font-size:.9375rem;font-weight:550;line-height:1.5;margin:0}
-#hub-app .finals-gear .primary-gear{padding:15px;background:#322c29;border-color:#897169}
+#hub-app .finals-gear .primary-gear{padding:15px;background:transparent;border-color:var(--game-line)}
 #hub-app .finals-gear .primary-gear dd{color:#f1ede6;font-size:1.15rem}
 #hub-app .finals-alternatives{border-color:var(--game-line);padding:17px 0 20px}
 #hub-app .finals-alternatives strong{color:#dac9c3;font-size:.875rem}
@@ -72,10 +72,10 @@
 #hub-app .team-intro h2{font-size:1.5rem;letter-spacing:-.025em;font-weight:650}
 #hub-app .team-intro p{color:#bcada8;font-size:.875rem;line-height:1.7}
 #hub-app .team-preset-tabs{gap:9px;margin:18px auto}
-#hub-app .team-preset-tabs button{background:#25201e;border-color:#51423d;padding:13px 15px}
+#hub-app .team-preset-tabs button{background:var(--game-raised);border-color:var(--game-line);padding:13px 15px}
 #hub-app .team-preset-tabs strong{color:#dfcec8;font-size:1.15rem;letter-spacing:.025em;font-weight:600}
 #hub-app .team-preset-tabs small{color:#b9a7a1;font-size:.6875rem;letter-spacing:.02em}
-#hub-app .team-preset-tabs button.active{background:#3b3431;border-color:#a78b82}
+#hub-app .team-preset-tabs button.active{background:#ee603814;border-color:#ee6038}
 #hub-app .team-preset-tabs button.active strong{color:#efeae2}
 #hub-app .team-preset-tabs button.active small{color:#d5c4be}
 #hub-app .team-strategy{padding:21px;background:#26211f;border-color:#5b4842;gap:18px}
@@ -107,9 +107,9 @@
 #hub-app .r6-hero>img{opacity:.65;right:2%;bottom:-45%;height:150%;max-width:44%}
 #hub-app .r6-hero>div{max-width:75%}
 #hub-app .r6-label{color:#c7b2ab;font-size:.6875rem;font-weight:600;letter-spacing:.065em;line-height:1.6}
-#hub-app .r6-page button{background:#282321;border-color:#50423d;color:#dbcec9;font-size:.8125rem;line-height:1.5;padding:8px 12px;min-height:38px;white-space:normal;overflow-wrap:anywhere}
+#hub-app .r6-page button{background:var(--game-raised);border-color:var(--game-line);color:#dbcec9;font-size:.8125rem;line-height:1.5;padding:8px 12px;min-height:38px;white-space:normal;overflow-wrap:anywhere}
 #hub-app .r6-page button:hover{background:#36302d}
-#hub-app .r6-page button[aria-pressed=true]{background:#3c3531;border-color:#9d8279;color:#e7d6d1}
+#hub-app .r6-page button[aria-pressed=true]{background:#ee603814;border-color:#ee6038;color:#ffb699}
 #hub-app .r6-page button:focus-visible{outline-color:var(--accent)}
 #hub-app .r6-page label{min-width:0;color:#c1afa9;font-size:.75rem;line-height:1.6;gap:6px}
 #hub-app .r6-page :is(input,select){background:#201d1b;border-color:#54403a;color:#eaddd9;min-height:38px;font-size:.8125rem}
@@ -117,7 +117,7 @@
 #hub-app .r6-toolbar{gap:15px;margin:19px auto 13px;align-items:end}
 #hub-app .r6-toolbar nav{gap:6px;min-width:0}
 #hub-app .r6-filter-row{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;width:22rem;max-width:100%;flex:0 1 22rem}
-#hub-app .r6-filter-row>label{min-width:0}
+#hub-app .r6-filter-row>label{min-width:0}#hub-app .r6-filter-row:has(>label:only-child){width:11rem;flex-basis:11rem;grid-template-columns:minmax(0,1fr)}
 #hub-app .r6-source-status{background:#211d1b66;border-color:#4e3b35;color:#c6b4ae;font-size:.75rem;line-height:1.65;flex-wrap:wrap;gap:10px 20px;margin-bottom:20px}
 #hub-app .r6-source-status>span{min-width:0;overflow-wrap:anywhere;flex:1 1 16rem}
 #hub-app .r6-source-status button{font-size:.75rem}
@@ -166,7 +166,7 @@
 #hub-app .r6-ban-table td img{width:28px;height:28px;margin-right:9px;vertical-align:middle}
 #hub-app .r6-ban-table td:last-child{min-width:5em;width:30%;font-variant-numeric:tabular-nums}
 #hub-app .r6-rate-track{background:#39322f;height:3px}
-#hub-app .r6-rate-track span{background:#c9b2aa}
+#hub-app .r6-rate-track span{background:var(--accent)}
 #hub-app .r6-catalog-controls{gap:14px;margin:18px 0}
 #hub-app .r6-catalog-controls>label{max-width:100%}
 #hub-app .r6-catalog-controls>label:first-child{min-width:min(100%,12rem)}
