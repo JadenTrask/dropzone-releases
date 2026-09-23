@@ -12,6 +12,9 @@ export function solveDamage(weapon,{zone='Upper torso',body=0,helmet=0,range=0,h
  if(!weapon||!Number.isFinite(weapon.baseDamage)||!Number.isFinite(weapon.zones?.[zone]))return invalid('A verified hit-location profile is not available for this weapon.');
  if(!['FMJ','AP','HP'].includes(ammo))return invalid('Choose a supported ammunition type.');
  if(ammo!=='FMJ'&&weapon.caliber!=='5.56x45mm')return invalid('AP / HP coefficients are only verified for 5.56x45mm in this reference. Select FMJ for this weapon.');
+ // First-hit HP examples do not establish repeated-hit damage as armor degrades.
+ // Do not extrapolate those coefficients into a kill estimate against armor.
+ if(ammo==='HP'&&cover.covered)return invalid('HP against armor needs a verified armor-durability and penetration model. Damage, hits to kill and TTK are unavailable for this setup; the previous constant-armor estimate was misleading.');
  let falloff=1,interpolated=false;
  if(range>0){
   const curve=weapon.falloff;

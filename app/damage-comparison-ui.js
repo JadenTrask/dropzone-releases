@@ -1,10 +1,10 @@
 import {e} from './shared.js';
 import {ARMOR} from './wardogs-damage-engine.js';
-import {compareDamage, MAX_COMPARE_WEAPONS} from './damage-comparison.js';
+import {compareDamage, supportedAmmo, MAX_COMPARE_WEAPONS} from './damage-comparison.js';
 
 export function comparisonPanel() {
   return `<section class="gun-comparison" aria-labelledby="gun-comparison-title">
-    <header class="gun-comparison-heading"><div><span class="hub-eyebrow">SIDE BY SIDE</span><h2 id="gun-comparison-title">Compare your guns</h2><p>Pick up to ${MAX_COMPARE_WEAPONS} weapons. Change the target setup above to compare the same shot.</p></div><span id="gun-comparison-count"></span></header>
+    <header class="gun-comparison-heading"><div><span class="hub-eyebrow">SIDE BY SIDE</span><h2 id="gun-comparison-title">Compare your guns</h2><p>Pick up to ${MAX_COMPARE_WEAPONS} weapons. Use the shared target setup to compare the same shot.</p></div><span id="gun-comparison-count"></span></header>
     <div class="gun-comparison-controls"><label for="gun-comparison-add">Add a weapon<select id="gun-comparison-add" aria-label="Add a weapon to comparison" data-searchable="true" data-search-label="Find a weapon" data-empty-message="No matching weapons."></select></label><button class="hub-button secondary" id="gun-comparison-current">Add current weapon</button></div>
     <p class="gun-comparison-conditions" id="gun-comparison-conditions"></p>
     <div class="gun-comparison-grid" id="gun-comparison-grid"></div>
@@ -23,6 +23,7 @@ export function comparisonCards(weapons, settings, baselineId) {
     const unavailable = !r.valid ? r.message : r.unit === 'pellet' ? 'Pellet damage cannot establish shot TTK without a verified spread model.' : 'A verified fire rate is not available for this weapon.';
     return `<article class="gun-comparison-card ${baseline ? 'is-baseline' : ''}" data-comparison-id="${e(w.id)}">
       <header><div><h3>${e(w.name)}</h3><small>${e(w.caliber || 'Special weapon')}</small></div><button class="gun-remove" data-gun-remove="${e(w.id)}" aria-label="Remove ${e(w.name)} from comparison">×</button></header>
+      <label class="gun-ammo">Ammunition<select data-gun-ammo="${e(w.id)}" aria-label="Ammunition for ${e(w.name)}" ${supportedAmmo(w).length===1?'disabled':''}>${supportedAmmo(w).map(ammo=>`<option value="${ammo}" ${ammo===(settings.compareAmmo?.[w.id]||'FMJ')?'selected':''}>${w.unit==='pellet'?'Standard buckshot':ammo}</option>`).join('')}</select></label>
       <div class="gun-ttk"><span>Estimated TTK</span><strong>${knownTime ? n(r.ttk, 3) + '<small> s</small>' : 'Unavailable'}</strong>${fastest ? '<span class="gun-fastest">Fastest in this comparison</span>' : ''}</div>
       <div class="gun-time-track" aria-hidden="true"><span style="width:${bar}%"></span></div>
       <p class="gun-delta" data-delta="${delta ?? ''}">${e(difference)}</p>
@@ -34,5 +35,5 @@ export function comparisonCards(weapons, settings, baselineId) {
 }
 
 export function comparisonConditions(s) {
-  return `${s.zone} · ${Number.isFinite(s.range) ? s.range + ' m' : 'Set range'} · ${Number.isFinite(s.health) ? s.health + ' HP' : 'Set health'} · Body: ${ARMOR[s.body].name} · Helmet: ${ARMOR[s.helmet].name} · ${s.ammo}`;
+  return `${s.zone} · ${Number.isFinite(s.range) ? s.range + ' m' : 'Set range'} · ${Number.isFinite(s.health) ? s.health + ' HP' : 'Set health'} · Body: ${ARMOR[s.body].name} · Helmet: ${ARMOR[s.helmet].name} · Ammunition set per weapon`;
 }

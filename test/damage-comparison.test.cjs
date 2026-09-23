@@ -32,3 +32,16 @@ test('saved comparisons deduplicate known weapons, cap six and preserve an inten
   assert.deepEqual(comparisonIds([],data.weapons),[]);
   assert.deepEqual(comparisonIds(null,data.weapons),[]);
 });
+
+test('per-weapon ammunition changes baseline deltas independently and safely migrates saved rounds', async()=>{
+ const {compareDamage,comparisonAmmo}=await import('../app/damage-comparison.js');
+ const guns=[get('m4'),get('fal')];
+ assert.deepEqual(comparisonAmmo(guns,null,'AP'),{m4:'AP',fal:'FMJ'});
+ assert.deepEqual(comparisonAmmo(guns,{m4:'invalid',fal:'HP',unknown:'AP'}),{m4:'FMJ',fal:'FMJ'});
+ const target={body:4,helmet:4,zone:'Upper torso',range:100,health:100};
+ const fmj=compareDamage(guns,{...target,compareAmmo:{m4:'FMJ',fal:'FMJ'}},'m4');
+ const mixed=compareDamage(guns,{...target,ammo:'HP',compareAmmo:{m4:'AP',fal:'FMJ'}},'m4');
+ assert.equal(mixed[0].result.ammo,'AP');assert.equal(mixed[1].result.ammo,'FMJ');
+ assert.deepEqual(mixed[1].result,fmj[1].result);assert.notEqual(mixed[0].result.damage,fmj[0].result.damage);
+ assert.equal(mixed[1].delta,mixed[1].result.ttk-mixed[0].result.ttk);
+});

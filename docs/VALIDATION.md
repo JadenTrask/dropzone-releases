@@ -1,3 +1,10 @@
+# Version 2.3.5 validation
+
+- All 175 automated tests passed on Node 24.13.0.
+- Native Chromium layout checks passed 117 workspace cases plus Damage Lab, FINALS and Siege sub-tabs, including light mode and enlarged text.
+- Local browser reviews covered calculator controls and markers, gunner sight, live server totals, Server Status and Gold Market.
+- Native installation and installed-version upgrade were not exercised locally. Release packaging and uploaded asset integrity are verified by the Windows release workflow.
+
 # Version 2.3.2 validation
 
 - All 156 automated tests passed.

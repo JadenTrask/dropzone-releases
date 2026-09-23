@@ -1,17 +1,15 @@
 export const RELEASE_NOTES={
- version:'2.3.4',
- title:'Less searching. More playing.',
+ version:'2.3.5',
+ title:'A sharper WARDOGS workspace.',
  items:[
-  {title:'A clearer Dropzone',body:'Full-color game artwork, compact weapon lists, and cleaner equipment sheets. Orange highlights show your selections while the tools keep the focus on your next decision.'},
-  {title:'GTA 6 is on the horizon',body:'A new coming-soon entry in the library, with GTA VI artwork. Companion tools will follow later.'},
-  {title:'A simpler THE FINALS',body:'Choose your class and build, see the full equipment list, and copy it. Team setups have their own tab.'},
-  {title:'Siege picks with a purpose',body:'Choose a map and side to see the suggested team and each operator’s job. Ban options are tucked away until you need them.'},
-  {title:'A cleaner sensitivity converter',body:'Use a game preset or measure cm/360. The custom coefficient option has been removed.'},
-  {title:'Compare your guns',body:'Compare up to six weapons against the same target. See estimated TTK, damage, hits needed and time differences from your chosen baseline.'},
-  {title:'Consistent page alignment',body:'Headers, controls and content share the same boundaries across workspaces. Tutorial arrows now point to the center of the highlighted edge.'},
-  {title:'Meet the Siege operators',body:'A dedicated Operators tab with official portraits, animated cards, equipment, ratings and biographies. Browse all 78 operators and filter by side or specialty.'},
-  {title:'More room for what matters',body:'Source checks sit beside page headers, with full details a click away. Enlarged ranked charts fit the window, and sidebar Coming soon badges stay inside the navigation.'},
-  {title:'Know what changed',body:'Release highlights now live on App updates. A welcome popup appears once for each new version.'}
+  {title:'A cleaner calculator',body:'More room for the map, generated gun and target markers, direct gun dragging, colored range fills and an orange lock toggle. Ruler distances are shown on the line.'},
+  {title:'Gunner sight, within reach',body:'Open a compact orange sight from the right edge, slide it closed, or expand it for a larger readout.'},
+  {title:'Refreshed servers and gold market',body:'Cleaner tables and charts, brighter text and fewer boxes. Server Status reuses the latest session snapshot while checking for fresh data.'},
+  {title:'Live player totals and smoother navigation',body:'A player total beside News covers the provider’s listed servers. Orange hover highlights, animated tab underlines and page crossfades add motion, with reduced-motion support.'},
+  {title:'Adjust from impact',body:'Mark where a WARDOGS shot landed to get a corrected distance and bearing. Keep your target fixed and refine the correction after each shot.'},
+  {title:'Damage Lab, two focused views',body:'Shot setup keeps the body diagram and single-weapon results together. Compare weapons has its own tab for side-by-side TTK, damage and armor comparisons.'},
+  {title:'Ammo for each weapon',body:'Choose supported ammunition separately on each comparison card. TTK differences and armor comparisons use each weapon’s selected round.'},
+  {title:'One shared target',body:'Adjust hit location, armor, range and health directly in Compare. Your target settings, selected weapons and baseline stay with you when switching tabs.'}
  ]
 };
 export const shouldShowRelease=(seen,version)=>seen!==version;

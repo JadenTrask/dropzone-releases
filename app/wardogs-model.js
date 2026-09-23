@@ -86,3 +86,18 @@ export function easeZoom(camera,targetScale,anchor,width,height,elapsedMs,minSca
   const scale=Math.abs(gap)<.0003?target:camera.scale*Math.exp(gap*(1-Math.exp(-Math.max(0,elapsedMs)/65)));
   return zoomCamera(camera,scale/camera.scale,anchor,width,height,minScale,maxScale);
 }
+
+// Empirical correction for the WARDOGS map: preserve the intended target.
+export function impactCorrection(origin,target,aim,impact,map,weapon) {
+  if (![origin,target,aim,impact].every(p=>validPoint(p,map))) return null;
+  const previous=firingSolution(origin,aim,map,weapon);
+  if (!previous || previous.range!=='in') return null;
+  const corrected={x:aim.x+target.x-impact.x,y:aim.y+target.y-impact.y};
+  if (!validPoint(corrected,map)) return {valid:false,message:'Correction falls outside the map. Move the gun or check the impact location.'};
+  const next=firingSolution(origin,corrected,map,weapon);
+  if (!next || next.range!=='in') return {valid:false,message:'Corrected aim is outside this weapon’s supported range.'};
+  return {valid:true,aim:corrected,impact:{...impact},distance:next.distance,azimuth:next.azimuth,
+    distanceDelta:next.distance-previous.distance,
+    bearingDelta:((next.azimuth-previous.azimuth+540)%360)-180,
+    miss:geometry(impact,target,map).distance};
+}

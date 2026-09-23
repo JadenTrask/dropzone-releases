@@ -1,3 +1,21 @@
+# Dropzone 2.3.5
+
+- Expanded the WARDOGS calculator map, simplified its controls and added generated gun/target markers, direct gun dragging, red/yellow range fills and an orange lock toggle.
+- Added iterative impact correction and visible ruler distances with a clear action.
+- Added a compact sliding orange gunner sight with an expanded view.
+- Modernized Server Status and Gold Market with open summaries, clearer typography, aligned controls and cleaner tables/charts.
+- Server Status shares session snapshots with the navigation player counter for faster reopening; refreshes continue in the background.
+- Added a provider-wide player total beside News with a freshness-aware status light.
+- Added orange tab hover highlights, center-out selection underlines, page crossfades and smooth range changes, respecting reduced motion.
+- Replaced the WARDOGS background with a subtle fabric texture.
+
+- Damage Lab now separates Shot setup and Compare weapons into focused tabs.
+- Compare up to six weapons and armor tiers with editable shared target conditions.
+- Choose supported ammunition independently per weapon; TTK and armor comparisons use those rounds.
+- Tab choice, target settings, selected comparison weapons and baseline are retained.
+
+---
+
 # Dropzone 2.3.4
 
 - Refined the app identity with full-color game artwork, separate upcoming titles, compact weapon browsing and cleaner FINALS/Siege equipment and team sheets. Orange selections are consistent across these views. Missing weapon artwork keeps a compact labeled space while the loadout stays usable.

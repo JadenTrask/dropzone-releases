@@ -71,3 +71,15 @@
   .wd-height-pair b{display:inline;margin-left:4px}
   #hub-app .wd-fixed .wd-panel-body{flex:0 0 auto;overflow:visible}
 }
+#hub-app .wd-fixed .wd-controls:has(.wd-impact-controls){overflow-y:auto}
+.wd-impact-controls{margin:0 12px 12px;padding:12px 0;border-top:1px solid var(--border,#493e3a);flex-shrink:0}
+.wd-impact-controls h3{font-size:.95rem;margin:0 0 8px}
+.wd-impact-controls p{font-size:.8rem;line-height:1.5;margin:8px 0}
+.wd-impact-controls summary{font-size:.8rem;cursor:pointer;padding:10px 0}
+.wd-impact-controls .wd-coordinate-form{padding:0}
+#hub-app .wd-more-controls{border:0;border-radius:0;overflow:visible;flex-shrink:0}
+#hub-app .wd-more-controls .wd-panel-body{overflow:visible}
+/* Keep the two primary readings centered in equal-width columns. */
+#hub-app .wd-fixed .wd-result{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}
+#hub-app .wd-fixed .wd-result>.wd-distance,
+#hub-app .wd-fixed .wd-result>.wd-bearing{text-align:center}

@@ -3,6 +3,7 @@ import {clamp,clampPoint,validPoint,project,unproject,fitCamera,zoomCamera,easeZ
 export class WardogsMap {
   constructor(canvas,{map,revision,getState,onPoint,onTool,onCursor,onImageStatus}) {
     Object.assign(this,{canvas,map,revision,getState,onPoint,onTool,onCursor,onImageStatus});
+    this.markerArt=new Image();this.markerArt.onload=()=>this.draw();this.markerArt.src='./assets/wardogs-markers-generated.png';
     this.ctx=canvas.getContext('2d');this.images=new Map();this.camera=null;this.pending=0;this.dead=false;this.ruler=[];this.drag=null;this.zoomTarget=null;this.zoomTime=null;this.reducedMotion=window.matchMedia('(prefers-reduced-motion: reduce)');
     this.events=new AbortController();const signal=this.events.signal;
     canvas.addEventListener('wheel',e=>{e.preventDefault();if(this.drag)return;this.cursor=this.mouse(e);const delta=e.deltaY*(e.deltaMode===1?16:e.deltaMode===2?this.height:1);this.zoom(Math.exp(-clamp(delta,-240,240)*.0025),this.cursor);},{passive:false,signal});
@@ -18,7 +19,7 @@ export class WardogsMap {
     this.appearanceObserver=new MutationObserver(()=>this.draw());this.appearanceObserver.observe(document.documentElement,{attributes:true,attributeFilter:['data-appearance']});
     this.observer=new ResizeObserver(()=>this.resize());this.observer.observe(canvas);this.resize();
   }
-  destroy(){this.dead=true;this.events.abort();this.observer.disconnect();this.appearanceObserver.disconnect();cancelAnimationFrame(this.pending);for(const r of this.images.values()){r.image.onload=null;r.image.onerror=null;r.image.src="";}this.images.clear();}
+  destroy(){this.dead=true;this.markerArt.onload=null;this.events.abort();this.observer.disconnect();this.appearanceObserver.disconnect();cancelAnimationFrame(this.pending);for(const r of this.images.values()){r.image.onload=null;r.image.onerror=null;r.image.src="";}this.images.clear();}
   resize(){
     const rect=this.canvas.getBoundingClientRect();if(!rect.width||!rect.height)return;
     this.stopZoom();this.width=rect.width;this.height=rect.height;this.dpr=Math.min(window.devicePixelRatio||1,3);
@@ -61,8 +62,9 @@ export class WardogsMap {
     if(this.drag||![0,1,2].includes(e.button))return;
     this.stopZoom();e.preventDefault();this.canvas.focus({preventScroll:true});this.canvas.setPointerCapture(e.pointerId);
     const p=this.mouse(e);
-    // Every drag pans. Relocation is an explicit tool followed by a click.
-    const mode='pan';
+    // An intentional drag on the gun relocates it; dragging elsewhere pans.
+    const gun=this.getState().origin,q=gun?this.screen(gun):null;
+    const mode=e.button===0&&q&&Math.hypot(q.x-p.x,q.y-p.y)<24&&this.getState().tool!=='ruler'?'origin':'pan';
     this.drag={id:e.pointerId,start:p,last:p,mode,moved:false,button:e.button};
     this.canvas.dataset.dragging='true';
   }
@@ -73,7 +75,7 @@ export class WardogsMap {
     if(Math.hypot(p.x-d.start.x,p.y-d.start.y)>4)d.moved=true;
     if(d.moved){
       if(d.mode==='pan'){this.camera.x-=(p.x-d.last.x)/this.camera.scale;this.camera.y+=(p.y-d.last.y)/this.camera.scale;this.constrain();}
-      else this.onPoint(d.mode,clampPoint(w,this.map),false);
+      else d.preview=clampPoint(w,this.map);
       this.draw();
     }
     d.last=p;this.updateCursor();
@@ -87,7 +89,7 @@ export class WardogsMap {
     if(d.moved&&d.mode!=='pan')this.onPoint(d.mode,clampPoint(point,this.map),true);
     if(!d.moved&&d.button===0&&validPoint(point,this.map)){
       if(s.tool==='ruler'){if(this.ruler.length===2)this.ruler=[];this.ruler.push(point);}
-      else if(['origin','target'].includes(s.tool)&&!(s.tool==='origin'&&s.lockOrigin))this.onPoint(s.tool,point,true);
+      else if(['origin','target','impact'].includes(s.tool)&&!(s.tool==='origin'&&s.lockOrigin))this.onPoint(s.tool,point,true);
     }
     this.draw();
   }
@@ -121,13 +123,36 @@ export class WardogsMap {
   pin(point,label,color,outline=false){
     if(!point)return;const p=this.screen(point),c=this.ctx;
     if(p.x<-80||p.x>this.width+80||p.y<-80||p.y>this.height+80)return;
-    c.beginPath();if(!outline&&label.startsWith('GUN')){c.rect(p.x-10,p.y-10,20,20);}else if(!outline&&label==='TARGET'){c.moveTo(p.x,p.y-13);c.lineTo(p.x+13,p.y);c.lineTo(p.x,p.y+13);c.lineTo(p.x-13,p.y);c.closePath();}else c.arc(p.x,p.y,outline?6:11,0,Math.PI*2);c.fillStyle=outline?'#141a18':color;c.fill();c.strokeStyle=outline?color:'#101411';c.lineWidth=outline?2:3;c.stroke();
-    if(!outline){c.beginPath();c.moveTo(p.x-17,p.y);c.lineTo(p.x+17,p.y);c.moveTo(p.x,p.y-17);c.lineTo(p.x,p.y+17);c.strokeStyle=color;c.lineWidth=1.5;c.stroke();}
-    this.label(label,p.x+19,p.y-15,color);
+    const gun=!outline&&label.startsWith('GUN'),target=!outline&&label==='TARGET';
+    if((gun||target)&&this.markerArt.complete&&this.markerArt.naturalWidth){
+      const image=this.markerArt,cell=image.naturalWidth/2;
+      c.drawImage(image,target?cell:0,0,cell,image.naturalHeight,p.x-25,p.y-25,50,50);
+    }else if(gun||target){
+      c.save();c.translate(p.x,p.y);c.lineCap='round';c.lineJoin='round';
+      c.shadowColor='#0009';c.shadowBlur=6;c.shadowOffsetY=2;
+      c.beginPath();c.arc(0,0,17,0,Math.PI*2);c.fillStyle='#14191ef2';c.fill();
+      c.shadowBlur=0;c.shadowOffsetY=0;c.strokeStyle=color;c.lineWidth=1.8;c.stroke();
+      c.beginPath();
+      if(gun){
+        // Artillery silhouette: angled barrel, cradle and two stabilizing legs.
+        c.moveTo(-5,3);c.lineTo(5,-9);c.lineTo(9,-6);c.lineTo(-1,6);c.closePath();
+        c.fillStyle=color;c.fill();
+        c.beginPath();c.moveTo(-8,9);c.lineTo(0,3);c.lineTo(8,9);c.moveTo(-8,9);c.lineTo(8,9);c.stroke();
+      }else{
+        c.arc(0,0,8,0,Math.PI*2);c.stroke();
+        c.beginPath();for(const [x,y] of [[1,0],[-1,0],[0,1],[0,-1]]){c.moveTo(x*11,y*11);c.lineTo(x*14,y*14);}c.stroke();
+        c.beginPath();c.arc(0,0,2,0,Math.PI*2);c.fillStyle=color;c.fill();
+      }
+      c.restore();
+    }else{
+      c.beginPath();c.arc(p.x,p.y,outline?6:11,0,Math.PI*2);c.fillStyle=outline?'#141a18':color;c.fill();c.strokeStyle=outline?color:'#101411';c.lineWidth=outline?2:3;c.stroke();
+    }
+    this.label(label,p.x+25,p.y-24,color);
   }
   paint(){
     if(!this.camera)return;
-    const c=this.ctx,s=this.getState(),b=this.map.bounds,t=this.map.tileBounds;
+    const c=this.ctx,s={...this.getState()},b=this.map.bounds,t=this.map.tileBounds;
+    if(this.drag?.preview)s[this.drag.mode]=this.drag.preview;
     this.fontScale=clamp(parseFloat(getComputedStyle(document.documentElement).fontSize)/16,1,2);
     c.setTransform(this.dpr,0,0,this.dpr,0,0);c.clearRect(0,0,this.width,this.height);c.fillStyle=document.documentElement.dataset.appearance==='light'?'#f5f4f1':'#0d1312';c.fillRect(0,0,this.width,this.height);
     const nw=this.screen({x:b.minX,y:b.maxY}),se=this.screen({x:b.maxX,y:b.minY});
@@ -156,12 +181,24 @@ export class WardogsMap {
     }
     if(s.ranges&&s.origin&&s.weapon){
       const p=this.screen(s.origin);
-      for(const [distance,color] of [[s.weapon.maxRange,'#f2d471aa'],[s.weapon.minRange,'#fb937da0']]){c.beginPath();c.arc(p.x,p.y,distance/this.map.coordinateMetersPerUnit*this.camera.scale,0,Math.PI*2);c.strokeStyle=color;c.setLineDash([8,7]);c.lineWidth=2;c.stroke();c.setLineDash([]);}
+      const now=performance.now(),desired=[s.weapon.minRange,s.weapon.maxRange];
+      if(!this.rangeMotion)this.rangeMotion={from:desired,to:desired,start:now};
+      const rm=this.rangeMotion;
+      if(rm.to[0]!==desired[0]||rm.to[1]!==desired[1]){rm.from=this.displayRanges||rm.to;rm.to=desired;rm.start=now;}
+      const t=this.reducedMotion.matches?1:Math.min(1,(now-rm.start)/240),ease=1-(1-t)**3;
+      this.displayRanges=rm.to.map((v,i)=>rm.from[i]+(v-rm.from[i])*ease);
+      if(t<1)this.draw();
+      const maximum=this.displayRanges[1]/this.map.coordinateMetersPerUnit*this.camera.scale,minimum=this.displayRanges[0]/this.map.coordinateMetersPerUnit*this.camera.scale;
+      c.beginPath();c.arc(p.x,p.y,maximum,0,Math.PI*2);c.arc(p.x,p.y,minimum,0,Math.PI*2,true);c.fillStyle='rgba(242,199,64,.12)';c.fill('evenodd');
+      c.beginPath();c.arc(p.x,p.y,minimum,0,Math.PI*2);c.fillStyle='rgba(240,79,67,.15)';c.fill();
+      for(const [radius,color] of [[maximum,'#f2d471bb'],[minimum,'#fb937dbb']]){c.beginPath();c.arc(p.x,p.y,radius,0,Math.PI*2);c.strokeStyle=color;c.setLineDash([8,7]);c.lineWidth=2;c.stroke();c.setLineDash([]);}
     }
     if(s.landmarks)for(const p of this.map.markers||[])this.pin(p,p.name,'#d2d5cb',true);
     for(const record of s.saved||[])if(record.map===this.map.id)this.pin(record.target,record.name,'#b0bdcc',true);
     if(s.origin&&s.target)this.line([s.origin,s.target],'#f4d276',[8,5],2);
-    if(this.ruler.length){for(let i=0;i<this.ruler.length;i++)this.pin(this.ruler[i],i?'B':'A','#79d5e6');if(this.ruler.length===2){this.line(this.ruler,'#79d5e6',[3,5]);const g=geometry(...this.ruler,this.map);if(g)this.label(`Ruler: ${Math.round(g.distance)} m · ${bearingText(g.azimuth)}`,24,this.height-70,'#a2e9f7');}}
+    if(this.ruler.length){for(let i=0;i<this.ruler.length;i++)this.pin(this.ruler[i],i?'B':'A','#79d5e6');if(this.ruler.length===2){this.line(this.ruler,'#79d5e6',[3,5]);const g=geometry(...this.ruler,this.map);if(g){const a=this.screen(this.ruler[0]),b=this.screen(this.ruler[1]),text=`${Math.round(g.distance).toLocaleString()} m`,size=18*this.fontScale;c.save();c.font=`700 ${size}px system-ui,sans-serif`;const w=c.measureText(text).width+24,h=size+20,x=clamp((a.x+b.x)/2,w/2+8,this.width-w/2-8),y=clamp((a.y+b.y)/2,h/2+8,this.height-h/2-8);c.fillStyle='#102126';c.strokeStyle='#79d5e6';c.lineWidth=2;c.beginPath();c.roundRect(x-w/2,y-h/2,w,h,8);c.fill();c.stroke();c.fillStyle='#d5f7ff';c.textAlign='center';c.textBaseline='middle';c.fillText(text,x,y);c.restore();}}}
+    if(s.impact)this.pin(s.impact,'IMPACT','#79d5e6');
+    if(s.adjustedAim){this.line([s.origin,s.adjustedAim],'#79d5e6',[4,4],2);this.pin(s.adjustedAim,'ADJUSTED AIM','#79d5e6',true);}
     this.pin(s.origin,s.lockOrigin?'GUN · LOCKED':'GUN','#a2e9bd');this.pin(s.target,'TARGET','#ff947e');
     c.restore();
     c.strokeStyle='#6c735a';c.lineWidth=1;c.strokeRect(nw.x,nw.y,se.x-nw.x,se.y-nw.y);
@@ -171,7 +208,6 @@ export class WardogsMap {
     c.fillStyle='#111714db';c.fillRect(13,this.height-56,Math.max(length+28,120),45);
     c.strokeStyle='#edf0d8';c.lineWidth=2;c.beginPath();c.moveTo(24,this.height-22);c.lineTo(24+length,this.height-22);c.stroke();
     this.label(scaleMetres>=1000?`${scaleMetres/1000} km`:`${Math.round(scaleMetres)} m`,24,this.height-33);
-    this.label('N ↑',this.width-20,31,'#f1d57e','right');
     this.canvas.dataset.tool=s.tool;
     this.updateCursor();
     if(this.images.size>300){const removable=[...this.images].filter(([key,r])=>!key.startsWith('0/')&&r.used<performance.now()-1500).sort((a,b)=>a[1].used-b[1].used);for(const [key,r] of removable.slice(0,this.images.size-260)){r.image.onload=null;r.image.onerror=null;this.images.delete(key);}}

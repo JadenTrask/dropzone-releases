@@ -36,3 +36,35 @@
 html:is([data-text-size="175"],[data-text-size="200"]) .gun-comparison-grid { grid-template-columns:1fr; }
 
 #gun-comparison-status { position:absolute; width:1px; height:1px; overflow:hidden; clip-path:inset(50%); white-space:nowrap; }
+
+/* Damage Lab owns one content boundary; tabs never add an inner page gutter. */
+.damage-tabs{display:flex;gap:24px;border-bottom:1px solid var(--line);margin-bottom:24px}
+.damage-tabs [role=tab]{padding:12px 0;border:0;border-bottom:3px solid transparent;background:transparent;color:var(--muted);font:inherit;font-weight:600;cursor:pointer}
+.damage-tabs [role=tab][aria-selected=true]{color:var(--accent);border-bottom-color:var(--accent)}
+.damage-tabs [role=tab]:focus-visible{outline:2px solid var(--accent);outline-offset:4px}
+.damage-tab-panel{min-width:0}
+.damage-tab-panel[hidden]{display:none!important}
+.damage-redesign #damage-panel-shot>.damage-decisions{margin-top:20px}
+.damage-compare-target{padding-block:0 20px;border-bottom:1px solid var(--line)}
+.damage-compare-target h2{margin:0 0 6px;font-size:1.1rem}
+.damage-compare-target p{color:var(--muted);font-size:.8rem;line-height:1.5}
+.damage-target-fields{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px 16px;margin-top:16px}
+.damage-target-fields label{display:grid;gap:8px;min-width:0;font-size:.85rem}
+.damage-target-fields input,.damage-target-fields select,.damage-target-fields .select-control{width:100%;min-width:0;min-height:42px;font:inherit}
+.damage-target-fields input{border:1px solid var(--line);border-radius:6px;background:var(--surface);color:var(--text);padding:9px 12px}
+.damage-target-note{margin-bottom:0}
+@media(max-width:800px){.damage-target-fields{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:480px){.damage-target-fields{grid-template-columns:1fr}.damage-tabs{gap:18px}}
+html:is([data-text-size="175"],[data-text-size="200"]) .damage-target-fields{grid-template-columns:repeat(2,minmax(0,1fr))}
+@media(max-width:800px){html:is([data-text-size="175"],[data-text-size="200"]) .damage-target-fields{grid-template-columns:1fr}}
+
+.gun-ammo{display:grid;gap:7px;margin-top:16px;font-size:.8rem}
+.gun-ammo select,.damage-target-fields select{padding:9px 12px;border:1px solid var(--line);border-radius:6px;background:var(--surface);color:var(--text);font:inherit;min-width:0;max-width:100%}
+.gun-ammo select:disabled{opacity:1;color:var(--muted)}
+
+.damage-tabs [role=tab]{transition:none}
+#hub-app .gun-ammo select,#hub-app .damage-target-fields select{padding-right:32px;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' fill='none' stroke='%23f26338' stroke-width='1.7'%3E%3Cpath d='m3 5 4 4 4-4'/%3E%3C/svg%3E")!important;background-position:right 10px center!important;background-size:14px!important;background-repeat:no-repeat!important}
+#hub-app .gun-ammo select:disabled{background-image:none!important}
+
+html[data-appearance=light] #hub-app .damage-comparison tr.selected :is(th,td){background:#f8e3d8!important;color:#342d2a!important}
+html[data-appearance=light] #hub-app .damage-comparison th button:is(:hover,:focus-visible){background:#f1d3c2!important;color:#342d2a!important}

@@ -1,0 +1,214 @@
+#hub-app .hub-main.wardogs-page.wd-fixed{padding:0;margin:0;max-width:none;width:100%;height:100%;scrollbar-gutter:auto;display:flex;flex-direction:column}
+#hub-app .wd-fixed>.wd-workspace{flex:1;min-height:0;height:100%;width:100%;gap:0;grid-template-columns:300px minmax(0,1fr)}
+#hub-app .wd-fixed .wd-controls{border-radius:0;border-width:0 1px 0 0;overflow-y:auto}
+#hub-app .wd-fixed .wd-map-card{border:0;border-radius:0;min-height:0;height:100%;overflow:hidden;display:flex;flex-direction:column}
+#hub-app .wd-fixed .wd-map-frame{flex:1 1 0;min-height:0;height:auto}
+#hub-app .wd-fixed .wd-map-toolbar{flex-shrink:0;flex-wrap:wrap}
+.wd-gunner{position:absolute;right:16px;bottom:16px;width:min(340px,calc(100% - 32px));z-index:5;border:1px solid #496250;border-radius:10px;background:#101714;color:#deeee3;box-shadow:0 12px 40px #0008}
+.wd-gunner[hidden]{display:none}
+.wd-gunner header{display:flex;align-items:center;gap:10px;padding:10px 12px;font-size:12px}.wd-gunner header strong{margin-right:auto}.wd-gunner header button{background:transparent;color:inherit;border:0;font-size:20px;cursor:pointer}
+[data-sight-display] svg{display:block;width:100%;height:auto}.wd-gunner-note{color:#a8bbad!important;font-size:11px!important;text-align:center;margin:6px 10px 10px!important}
+.wd-gunner-dialog{width:min(1000px,94vw);max-width:94vw;max-height:94dvh;padding:12px;border:1px solid #496250;border-radius:12px;background:#101714;color:#deeee3}.wd-gunner-dialog::backdrop{background:#000a;backdrop-filter:blur(6px)}.wd-gunner-dialog form{display:flex;justify-content:flex-end;margin-bottom:8px}.wd-gunner-dialog svg{max-height:76dvh}
+@media(max-width:760px){#hub-app .hub-main.wardogs-page.wd-fixed{overflow:auto}#hub-app .wd-fixed>.wd-workspace{display:flex;flex-direction:column;height:auto}#hub-app .wd-fixed .wd-map-card{order:0;height:60dvh;min-height:360px;flex-shrink:0}#hub-app .wd-fixed .wd-controls{order:1;height:auto;overflow:visible}.wd-gunner{width:240px}}
+/* Floating map controls leave the entire canvas available underneath. */
+#hub-app .wd-fixed .wd-map-card{position:relative}
+#hub-app .wd-fixed .wd-map-toolbar{position:absolute;inset:12px 12px auto;z-index:8;border:0;background:transparent!important;padding:0;display:flex;justify-content:space-between;gap:12px;pointer-events:none;box-shadow:none}
+#hub-app .wd-fixed .wd-map-toolbar :is(.wd-tools,.wd-view-tools){display:flex;gap:5px;flex-wrap:wrap;margin:0;pointer-events:none}
+#hub-app .wd-fixed .wd-map-toolbar .wd-view-tools{justify-content:flex-end}
+#hub-app .wd-fixed .wd-map-toolbar button{pointer-events:auto;display:grid;place-items:center;width:40px;height:40px;min-height:40px;padding:9px;border:1px solid #ffffff29;border-radius:10px;background:#111817eb!important;color:#e8eeeb!important;box-shadow:0 3px 12px #0004;backdrop-filter:blur(12px);transition:background .15s,transform .15s}
+#hub-app .wd-fixed .wd-map-toolbar button svg{width:21px;height:21px;pointer-events:none}
+#hub-app .wd-fixed .wd-map-toolbar button:hover{background:#34413a!important;transform:translateY(-1px)}
+#hub-app .wd-fixed .wd-map-toolbar button[aria-pressed=true]{background:#ee6038!important;color:#171310!important;border-color:#ff9878}
+#hub-app .wd-fixed .wd-map-toolbar button:disabled{opacity:.4;transform:none;cursor:default}
+#hub-app .wd-fixed .wd-map-toolbar button:focus-visible{outline:2px solid #ffb79f;outline-offset:3px}
+#hub-app .wd-fixed #wd-tool-hint{top:64px}
+@media(max-width:1000px){#hub-app .wd-fixed .wd-map-toolbar .wd-view-tools{max-width:230px}#hub-app .wd-fixed #wd-tool-hint{top:110px}}
+@media(prefers-reduced-motion:reduce){#hub-app .wd-fixed .wd-map-toolbar button{transition:none;transform:none}}
+
+/* Readable map actions and a dedicated right-side sight drawer. */
+#hub-app .wd-fixed .wd-map-toolbar{justify-content:flex-start;gap:6px;right:12px}
+#hub-app .wd-fixed .wd-map-toolbar :is(.wd-tools,.wd-view-tools){gap:6px;max-width:none;justify-content:flex-start}
+#hub-app .wd-fixed .wd-map-toolbar button{display:inline-flex;align-items:center;justify-content:flex-start;gap:7px;width:auto;height:auto;min-height:38px;padding:8px 10px;font-size:12px;white-space:nowrap}
+#hub-app .wd-fixed .wd-map-toolbar button svg{flex:0 0 20px;width:20px;height:20px}
+
+#hub-app .wd-fixed .wd-map-card{--sight-width:min(360px,calc(100% - 140px));box-sizing:border-box}
+#hub-app .wd-fixed .wd-gunner{position:absolute;inset:50% 0 auto auto;transform:translateY(-50%);width:var(--sight-width);height:auto;max-height:calc(100% - 120px);overflow:auto;border:1px solid #496250;border-right:0;border-radius:10px 0 0 10px;background:#07100b;z-index:10;box-shadow:-5px 5px 24px #0006;animation:wd-sight-enter .26s cubic-bezier(.22,1,.36,1)}
+#hub-app .wd-fixed .wd-gunner [data-sight-display]{padding:24px 4px 2px}
+#hub-app .wd-fixed .wd-gunner .wd-gunner-note{display:none}
+.wd-sight-tab{position:absolute;right:0;top:50%;transform:translateY(-50%);z-index:11;display:flex;align-items:center;gap:6px;padding:12px 9px;border:1px solid #496250;border-right:0;border-radius:8px 0 0 8px;background:#102019;color:#d8eedf;cursor:pointer;font-size:12px;font-weight:600}
+.wd-sight-tab span{font-size:24px;line-height:1}
+.sight-open .wd-sight-tab{right:var(--sight-width)}
+.wd-sight-expand{position:absolute;right:8px;top:5px;z-index:1;background:transparent;color:#cce9d5;border:0;padding:4px;font-size:12px;cursor:pointer}
+.wd-sight-tab:focus-visible,.wd-sight-expand:focus-visible{outline:2px solid #ffb79f;outline-offset:2px}
+#hub-app .wd-fixed #wd-tool-hint{display:none}
+@keyframes wd-sight-enter{from{transform:translate(24px,-50%)}to{transform:translate(0,-50%)}}
+@media(prefers-reduced-motion:reduce){#hub-app .wd-fixed .wd-gunner{animation:none}}
+
+/* A drawn chevron stays centered regardless of font metrics. */
+#hub-app .wd-sight-tab{line-height:20px;align-items:center}
+#hub-app .wd-sight-tab>span{display:block;flex:0 0 8px;width:8px;height:8px;margin:0 4px;border-left:2px solid currentColor;border-bottom:2px solid currentColor;transform:rotate(45deg)}
+#hub-app .sight-open .wd-sight-tab>span{transform:rotate(225deg)}
+.wardogs-player-count{display:inline-flex;align-items:center;gap:8px;padding:0 12px;font-size:12px;color:#a8b7ae;white-space:nowrap}
+.wardogs-player-count[hidden]{display:none}
+.wardogs-player-count i{width:7px;height:7px;border-radius:50%;background:#a99166}
+.wardogs-player-count[data-fresh=true] i{background:#73d49a;animation:dz-live 1.5s ease-in-out infinite}
+@keyframes dz-live{0%,100%{opacity:1}50%{opacity:.72}}
+.game-page-tabs button,.rail-game{transition:background-color .18s,color .18s,box-shadow .18s}
+
+
+
+
+@media(prefers-reduced-motion:reduce){.wardogs-player-count i,.game-page-tabs button.active,#hub-app>main{animation:none}.game-page-tabs button,.rail-game{transition:none}}
+#hub-app .wd-sight-tab{background:#ef612f;color:#18110d;border-color:#ff8b57;box-shadow:0 3px 14px #0004;transition:background-color .18s,box-shadow .18s}
+#hub-app .wd-sight-tab:hover{background:#ff7843;box-shadow:0 3px 18px #f5653038}
+@media(prefers-reduced-motion:reduce){#hub-app .wd-sight-tab{transition:none}}
+
+#hub-app .sight-open .wd-sight-tab{animation:wd-sight-enter .26s cubic-bezier(.22,1,.36,1)}
+@media(prefers-reduced-motion:reduce){#hub-app .sight-open .wd-sight-tab{animation:none}}
+/* Fade completed page snapshots, never individual loading/render passes. */
+:root{view-transition-name:none}
+#hub-app{view-transition-name:workspace-page}
+::view-transition-old(workspace-page),::view-transition-new(workspace-page){animation-duration:300ms;animation-timing-function:cubic-bezier(.4,0,.2,1)}
+@media(prefers-reduced-motion:reduce){::view-transition-group(*),::view-transition-old(*),::view-transition-new(*){animation:none!important}}
+
+/* Move the tab and sight on one composited surface; no display toggle or layout jump. */
+#hub-app .wd-fixed .wd-sight-dock{position:absolute;right:0;top:50%;width:var(--sight-width);z-index:11;transform:translate(100%,-50%);transition:transform 300ms cubic-bezier(.22,1,.36,1);will-change:transform}
+#hub-app .wd-fixed .sight-open .wd-sight-dock{transform:translate(0,-50%)}
+#hub-app .wd-fixed .wd-sight-dock .wd-gunner{position:relative;inset:auto;width:100%;max-height:calc(100dvh - 240px);transform:none;animation:none;box-sizing:border-box}
+#hub-app .wd-fixed .wd-sight-dock .wd-sight-tab{left:0;right:auto;top:50%;transform:translate(-100%,-50%);animation:none;white-space:nowrap}
+@media(prefers-reduced-motion:reduce){#hub-app .wd-fixed .wd-sight-dock{transition:none;will-change:auto}}
+
+#hub-app .wd-fixed .wd-sight-dock .wd-gunner,.wd-gunner-dialog{background:#160e09;border-color:#9b512e}
+.wd-sight-expand{color:#ffb178}
+
+#hub-app .wd-lock{position:relative;display:inline-flex;align-items:center;gap:8px;cursor:pointer;font-size:12px;color:#b9aaa2;white-space:nowrap;padding:5px 0}
+#hub-app .wd-lock input{position:absolute;opacity:0;width:1px;height:1px;margin:0}
+#hub-app .wd-lock-track{display:inline-flex;align-items:center;flex:0 0 30px;width:30px;height:18px;border-radius:20px;background:#36302c;border:1px solid #695348;padding:2px;box-sizing:border-box;transition:background-color .18s,border-color .18s}
+#hub-app .wd-lock-track>span{width:12px;height:12px;border-radius:50%;background:#beafa5;transform:translateX(0);transition:transform .18s ease,background-color .18s;box-shadow:0 1px 2px #0005}
+#hub-app .wd-lock input:checked+.wd-lock-track{background:#ef612f;border-color:#ff8b57}
+#hub-app .wd-lock input:checked+.wd-lock-track>span{transform:translateX(12px);background:#fff0e6}
+#hub-app .wd-lock input:checked~span:last-child{color:#ffb18b}
+#hub-app .wd-lock input:focus-visible+.wd-lock-track{outline:2px solid #ffb18b;outline-offset:3px}
+@media(prefers-reduced-motion:reduce){#hub-app .wd-lock-track,#hub-app .wd-lock-track>span{transition:none}}
+
+/* Keep the existing underline geometry; reveal it outwards from its center. */
+.game-page-tabs button{position:relative;isolation:isolate;transition:color .18s,background-color .18s,box-shadow .18s}
+.game-page-tabs button:hover{color:#ffb38d;background:#ef612f12;box-shadow:inset 0 0 18px #ef612f12,0 0 12px #ef612f0d}
+.game-page-tabs button.active{border-bottom-color:transparent!important}
+.game-page-tabs button::after{content:'';position:absolute;left:0;right:0;bottom:-1px;height:3px;background:#ef612f;transform:scaleX(0);transform-origin:center;transition:transform 260ms cubic-bezier(.22,1,.36,1);pointer-events:none}
+.game-page-tabs button.active::after{transform:scaleX(1)}
+/* Open server directory: one data surface instead of nested cards. */
+#hub-app .servers-page #server-summary{display:flex;flex-wrap:wrap;gap:24px 40px;margin:8px 0 26px;padding:18px 0 24px;border-bottom:1px solid #ffffff18}
+#hub-app .servers-page #server-summary section{flex:1;min-width:150px;background:transparent!important;border:0!important;border-radius:0;padding:0;box-shadow:none}
+#hub-app .servers-page #server-summary small{font-size:12px;color:#b1aaa6}
+#hub-app .servers-page #server-summary strong{margin-top:8px;font-size:30px;letter-spacing:-1px;font-variant-numeric:tabular-nums}
+#hub-app .servers-page>.market-chart{background:transparent!important;border:0!important;border-radius:0;padding:0;box-shadow:none}
+#hub-app .servers-page .server-filters{gap:8px;padding-bottom:18px;margin-bottom:0;border-bottom:1px solid #ffffff18}
+#hub-app .servers-page .server-filters :is(input,.select-control){background:#13171999;border-color:#ffffff16;border-radius:5px}
+#hub-app .servers-page .server-filters :is(input,.select-control):hover{border-color:#ef612f80}
+#hub-app .servers-page .server-table th{font-size:11px;text-transform:uppercase;letter-spacing:.7px;font-weight:500;padding-top:20px;padding-bottom:14px}
+#hub-app .servers-page .server-table td{padding-top:17px;padding-bottom:17px;border-bottom-color:#ffffff0d}
+#hub-app .servers-page .server-table tbody tr{transition:background-color .15s}
+#hub-app .servers-page .server-table tbody tr:hover{background:#ef612f09}
+#hub-app .servers-page .server-table td:nth-child(2)>strong{font-weight:600}
+#hub-app .servers-page .server-table td small{font-size:11px;opacity:.8}
+#hub-app .servers-page .server-pagination{font-size:12px;padding-top:22px}
+#hub-app .servers-page>p{font-size:12px;color:#aaa19b;line-height:1.6}
+html[data-appearance=light] #hub-app .servers-page :is(#server-summary,.server-filters,.server-table td){border-color:#34251d20}
+html[data-appearance=light] #hub-app .servers-page .server-filters :is(input,.select-control){background:#ffffff90;border-color:#34251d30;color:#302721}
+@media(prefers-reduced-motion:reduce){.game-page-tabs button::after,.game-page-tabs button,#hub-app .servers-page .server-table tbody tr{transition:none}}
+
+/* Shared edges and stable columns keep headings, filters and rows aligned. */
+#hub-app .servers-page>header{align-items:center;gap:20px;flex-wrap:wrap}
+#hub-app .servers-page .page-header-actions{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+#hub-app .servers-page #server-summary{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px}
+#hub-app .servers-page #server-summary section{min-width:0}
+#hub-app .servers-page #server-summary small,#hub-app .servers-page .server-table th{color:#ccc5c1}
+#hub-app .servers-page .server-table td{color:#ece8e4;vertical-align:middle}
+#hub-app .servers-page .server-table td small{color:#bbb5b0;opacity:1}
+#hub-app .servers-page .server-filters{display:grid;grid-template-columns:minmax(210px,2fr) repeat(6,minmax(125px,1fr));gap:8px}
+#hub-app .servers-page .server-filters>*,#hub-app .servers-page .server-filters .select-control{width:100%;min-width:0;max-width:none;box-sizing:border-box}
+#hub-app .servers-page .server-table{table-layout:fixed;min-width:1050px}
+#hub-app .servers-page .server-table th:nth-child(1){width:42px}
+#hub-app .servers-page .server-table th:nth-child(2){width:27%}
+#hub-app .servers-page .server-table th:nth-child(3){width:10%}
+#hub-app .servers-page .server-table th:nth-child(4){width:20%}
+#hub-app .servers-page .server-table th:nth-child(5){width:11%}
+#hub-app .servers-page .server-table th:nth-child(6){width:100px}
+#hub-app .servers-page .server-table th:nth-child(7){width:80px}
+#hub-app .servers-page .server-table th:nth-child(8){width:85px}
+#hub-app .servers-page .server-table :is(th,td):first-child{padding-left:0}
+#hub-app .servers-page .server-table :is(th,td):last-child{padding-right:0}
+#hub-app .servers-page #server-sort{padding:0;font:inherit;text-align:left}
+#hub-app .servers-page .server-table td{overflow-wrap:anywhere}
+#hub-app .servers-page .server-table details,#hub-app .servers-page .server-table details[open]{min-width:0}
+#hub-app .servers-page .server-table details p{font-size:12px}
+html[data-appearance=light] #hub-app .servers-page :is(#server-summary small,.server-table th,.server-table td,.server-table td small){color:#403832}
+@media(max-width:1200px){#hub-app .servers-page .server-filters{grid-template-columns:repeat(3,minmax(0,1fr))}#hub-app .servers-page .server-filters>input{grid-column:1/-1}}
+@media(max-width:700px){#hub-app .servers-page #server-summary{grid-template-columns:repeat(2,minmax(0,1fr))}#hub-app .servers-page .server-filters{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+/* Gold market shares the directory's open layout and consistent content edges. */
+#hub-app .market-page>header{align-items:center;flex-wrap:wrap;gap:20px}
+#hub-app .market-page .page-header-actions{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+#hub-app .market-page .market-stats{display:grid;grid-template-columns:1.5fr repeat(3,1fr);gap:24px;padding:18px 0 28px;margin:0 0 28px;border-bottom:1px solid #ffffff18;align-items:end}
+#hub-app .market-page .market-stats section{background:transparent!important;border:0!important;border-radius:0;padding:0;min-width:0;box-shadow:none}
+#hub-app .market-page .market-stats small{color:#c4bcb6;font-size:12px}
+#hub-app .market-page .market-stats strong{font-size:28px;margin-top:10px;letter-spacing:-.7px;font-variant-numeric:tabular-nums}
+#hub-app .market-page .market-stats .market-current strong{font-size:clamp(30px,3vw,44px);color:#efce7b}
+#hub-app .market-page [data-direction=up]{color:#9ad7b0}
+#hub-app .market-page [data-direction=down]{color:#ffab93}
+#hub-app .market-page .market-chart{background:transparent!important;border:0!important;padding:0;border-radius:0;box-shadow:none}
+#hub-app .market-page .market-chart h2{font-size:19px;margin:0 0 7px}
+#hub-app .market-page .market-chart header p{font-size:12px;color:#c4bcb6;margin:0}
+#hub-app .market-page .market-ranges{gap:3px;padding:3px;border-bottom:1px solid #ffffff20}
+#hub-app .market-page .market-ranges button{min-height:34px;padding:7px 13px;border:0;border-radius:4px;background:transparent;color:#c4bcb6;font-size:12px}
+#hub-app .market-page .market-ranges button:hover{background:#ef612f18;color:#ffb18b}
+#hub-app .market-page .market-ranges [aria-pressed=true]{background:#ef612f;color:#1d110b}
+#hub-app .market-page #market-graph{margin-top:18px;color:#b8b5ae}
+#hub-app .market-page #market-graph:focus-visible{outline:2px solid #ef612f;outline-offset:4px;border-radius:4px}
+#hub-app .market-page .market-readout{margin:14px 0 22px;padding:16px 0;border-top:1px solid #ffffff18;font-size:12px;color:#bfb8b2;align-items:center}
+#hub-app .market-page .market-readout output{font-size:14px}
+#hub-app .market-page #market-source{background:transparent;border:0;padding:0;min-height:30px;font-size:12px;color:#d6c5b5}
+#hub-app .market-page>small{font-size:12px;line-height:1.7;color:#b8b0aa;margin:0;max-width:900px}
+html[data-appearance=light] #hub-app .market-page :is(.market-stats small,.market-chart header p,.market-readout,#market-source){color:#51483f}
+html[data-appearance=light] #hub-app .market-page .market-current strong{color:#805900}
+html[data-appearance=light] #hub-app .market-page [data-direction=up]{color:#24733c}
+html[data-appearance=light] #hub-app .market-page [data-direction=down]{color:#a53e24}
+@media(max-width:700px){#hub-app .market-page .market-stats{grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}#hub-app .market-page .market-chart header{gap:18px}}
+#hub-app .market-page .market-stats{align-items:start}
+#hub-app .market-page .market-stats strong{min-height:53px;display:flex;align-items:baseline;line-height:53px}
+/* Calculator: one continuous control surface, with the firing result as the focus. */
+#hub-app .wd-fixed .wd-controls{background:#121618f5!important;border-color:#ffffff14!important;padding:0;color:#ede9e5}
+#hub-app .wd-fixed .wd-sidebar-heading{padding:22px 18px 16px;gap:10px;align-items:center}
+#hub-app .wd-fixed .wd-sidebar-heading h2{font-size:16px;letter-spacing:-.3px;margin:0;font-weight:650}
+#hub-app .wd-fixed .wd-tutorial-button{background:transparent;border:0;color:#bdb5ae;font-size:11px;padding:6px 0}
+#hub-app .wd-fixed .wd-tutorial-button:hover{color:#ffab85}
+#hub-app .wd-fixed .wd-selectors{padding:0 18px 20px;margin:0;gap:10px}
+#hub-app .wd-fixed .wd-selectors label{font-size:11px;color:#bfb7af;gap:7px}
+#hub-app .wd-fixed .wd-selectors .select-control{border:1px solid #ffffff18;background:#ffffff04;border-radius:6px;min-height:42px;font-size:12px}
+#hub-app .wd-fixed .wd-result{margin:0 18px 20px;padding:20px 0 16px;background:transparent!important;border:0;border-top:1px solid #ffffff16;border-bottom:1px solid #ffffff16;border-radius:0;box-shadow:none;gap:0}
+#hub-app .wd-fixed .wd-result>div{padding:0 5px 14px;text-align:center;min-width:0}
+#hub-app .wd-fixed .wd-result>div>span{font-size:10px;letter-spacing:1.1px;color:#bfb7af}
+#hub-app .wd-fixed .wd-result>div>strong{font-size:27px;letter-spacing:-.7px;font-variant-numeric:tabular-nums;color:#ffac82}
+#hub-app .wd-fixed .wd-result>p,#hub-app .wd-fixed .wd-result>small{padding:0;margin:5px 0;font-size:11px;line-height:1.6;text-align:center;width:100%}
+#hub-app .wd-fixed .wd-impact-controls{margin:0 18px;padding:0 0 20px;border:0;border-bottom:1px solid #ffffff16;background:transparent}
+#hub-app .wd-fixed .wd-impact-controls h3,#hub-app .wd-fixed .wd-control-heading h3{font-size:12px;font-weight:600;margin:0;color:#e2dbd5}
+#hub-app .wd-fixed .wd-impact-controls .hub-action-row{margin-top:12px;gap:10px;align-items:center}
+#hub-app .wd-fixed .wd-impact-controls .hub-button{border:1px solid #ef612f60;background:#ef612f12;color:#ffb38b;font-size:12px;min-height:36px;padding:7px 12px;border-radius:5px}
+#hub-app .wd-fixed .wd-impact-controls .hub-button[aria-pressed=true]{background:#ef612f;color:#1d110b}
+#hub-app .wd-fixed .wd-impact-controls :is(summary,.source-link){font-size:11px}
+#hub-app .wd-fixed .wd-more-controls{margin:0;padding:0;border:0;background:transparent}
+#hub-app .wd-fixed .wd-panel-body{padding:0 18px}
+#hub-app .wd-fixed .wd-coordinate-form{margin:0;padding:20px 0;border:0;border-bottom:1px solid #ffffff12}
+#hub-app .wd-fixed .wd-control-heading{display:flex;align-items:center;justify-content:space-between;gap:8px;margin:0 0 12px}
+#hub-app .wd-fixed .wd-coordinate-fields{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr) auto;gap:8px;align-items:end}
+#hub-app .wd-fixed .wd-coordinate-fields label{font-size:10px;color:#bfb7af;min-width:0}
+#hub-app .wd-fixed .wd-coordinate-fields input{width:100%;min-width:0;background:#ffffff04;border:1px solid #ffffff18;border-radius:5px;height:38px;padding:8px;font-size:12px;font-variant-numeric:tabular-nums;box-sizing:border-box;color:#ede9e5}
+#hub-app .wd-fixed .wd-coordinate-fields>button{grid-column:auto;min-height:38px;height:38px;padding:7px 10px;border:1px solid #ffffff20;background:#ffffff08;border-radius:5px;font-size:11px}
+#hub-app .wd-fixed .wd-sidebar-footer{margin-top:auto;padding:16px 18px;border:0;background:transparent}
+#hub-app .wd-fixed .wd-sidebar-footer button{font-size:11px;color:#bfb7af}
+#hub-app .wd-fixed .wd-map-toolbar button{border-radius:6px;box-shadow:0 2px 8px #0003;font-weight:500}
+#hub-app .wd-fixed .wd-map-toolbar button:hover{background:#39251d!important;border-color:#ef612f80;transform:none}
+html[data-appearance=light] #hub-app .wd-fixed .wd-controls{background:#f4f2ef!important;color:#322820}
+html[data-appearance=light] #hub-app .wd-fixed :is(.wd-control-heading h3,.wd-impact-controls h3,.wd-coordinate-fields input,.wd-selectors label,.wd-coordinate-fields label){color:#51443a}
+@media(max-width:760px){#hub-app .wd-fixed .wd-panel-body{padding:0 18px}}

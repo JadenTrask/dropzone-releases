@@ -3,8 +3,12 @@ test('5.56 ammo matches published first-hit examples and rejects unsupported cal
  const {solveDamage,rangeBreakpoints}=await import('../app/wardogs-damage-engine.js'),data=require('../app/data/wardogs/damage-reference.json'),m4=data.weapons.find(w=>w.id==='m4');
  const rounded=(ammo,body,zone='Upper torso')=>Math.round(solveDamage(m4,{ammo,body,helmet:body,zone,range:50}).damage);
  assert.deepEqual([0,1,2,3,4].map(t=>rounded('AP',t)),[25,20,19,17,15]);
- assert.deepEqual([0,1,2,3,4].map(t=>rounded('HP',t)),[62,9,7,3,0]);
- assert.deepEqual([0,1,2,3,4].map(t=>rounded('HP',t,'Head')),[132,13,9,4,1]);
+ assert.equal(rounded('HP',0),62);
+ for(const body of [1,2,3,4])assert.equal(solveDamage(m4,{ammo:'HP',body}).valid,false);
+ assert.equal(rounded('HP',0,'Head'),132);
+ for(const helmet of [1,2,3,4])assert.equal(solveDamage(m4,{ammo:'HP',helmet,zone:'Head'}).valid,false);
+ assert.equal(solveDamage(m4,{ammo:'HP',body:4,zone:'Foot'}).valid,true);
+ assert.deepEqual(rangeBreakpoints(m4,{ammo:'HP',body:4}),[]);
  assert.equal(solveDamage(data.weapons.find(w=>w.id==='fal'),{ammo:'HP'}).valid,false);
  const settings={range:0,health:100,body:2},points=rangeBreakpoints(m4,settings);
  assert.ok(points.length>0);for(const p of points){assert.equal(solveDamage(m4,{...settings,range:p.after+.0001}).hits,p.hits);assert.equal(solveDamage(m4,{...settings,range:p.after-.0001}).hits,p.hits-1);}

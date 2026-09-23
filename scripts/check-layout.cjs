@@ -13,8 +13,8 @@ const views = {
   siege: ['.game-simple-heading', '.r6-toolbar', '.r6-map-detail', '.r6-method'],
   market: ['.market-page>header', '#market-content', '.market-stats', '.market-chart'],
   'server-status': ['.servers-page>header', '#server-summary', '.servers-page>.market-chart'],
-  damage: ['.damage-heading', '.damage-workspace', '.gun-comparison', '.damage-extras'],
-  wardogs: ['.workspace-heading', '.wd-workspace'],
+  damage: ['.damage-heading', '.damage-tabs', '.damage-workspace', '.damage-extras'],
+  wardogs: ['.wardogs-page', '.wd-workspace'],
   patches: ['.library-intro', '.patch-list-heading', '.patch-list'],
   sensitivity: ['.sensitivity-page>header', '.sens-panels', '.sens-output', '.sens-help'],
   bo7: ['.arsenal-heading', '.playlist-bar', '.arsenal-filters', '.arsenal-layout', '.source-disclosure'],
@@ -79,9 +79,14 @@ app.whenReady().then(async () => {
         const label=`${game} ${config.width}px ${config.theme} ${config.text}%`;
         await win.loadURL(origin+'/?game='+game+'&context='+(game==='operators'?'siege':'wardogs'));
         const bounds=await verify(label,selectors);
-        if (['market','server-status','damage','wardogs','patches'].includes(game)) {
+        if (['market','server-status','damage','patches'].includes(game)) {
           if (wardogsBounds) for (const edge of ['left','right','top']) assert.ok(Math.abs(bounds[edge]-wardogsBounds[edge])<=1,`${label}: WARDOGS ${edge} shifted`);
           wardogsBounds=bounds;
+        }
+        if (game==='damage') {
+          await run(()=>document.querySelector('[data-damage-tab="compare"]').click());
+          await verify(label+' compare',['.damage-heading','.damage-tabs','.damage-compare-target','.gun-comparison','.damage-comparison','.damage-extras']);
+          await run(()=>document.querySelector('[data-damage-tab="shot"]').click());
         }
         if (game==='finals') {
           await run(()=>document.querySelector('[data-finals-tab="teams"]').click());
@@ -117,7 +122,7 @@ app.whenReady().then(async () => {
       }
       console.log(`Aligned: ${config.width}px / ${config.theme} / ${config.text}% text`);
     }
-    console.log(`PASS: ${count} workspace cases, plus FINALS and Siege sub-tabs.`);
+    console.log(`PASS: ${count} workspace cases, plus Damage Lab, FINALS and Siege sub-tabs.`);
     app.exit(0);
   } catch(error) { console.error(error.stack); app.exit(1); }
 });
