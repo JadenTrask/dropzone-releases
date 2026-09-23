@@ -22,3 +22,7 @@
   .hub-main { --page-gutter: 16px; padding-block: 20px; }
 }
 .quick-panel .hub-main { --page-gutter: 12px; padding-block: 12px; }
+
+/* The game tabs and sidebar provide navigation without a duplicate breadcrumb row. */
+body{grid-template-rows:36px 0 auto minmax(0,1fr)}
+#workspace-full{position:fixed;right:12px;top:44px;z-index:100}

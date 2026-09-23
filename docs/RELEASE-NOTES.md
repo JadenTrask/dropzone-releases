@@ -1,5 +1,7 @@
 # Dropzone 2.3.6
 
+- Removed the redundant breadcrumb header and Tools, Pin and Quick panel buttons. Moved text size to Settings > Accessibility.
+
 - Calibrated SPH-2 calculator and gunner sight from 139 in-game optic marks; corrected 59 range labels.
 - Positioned aiming between 10-mil stadia and fixed compass labels to multiples of 15 degrees.
 - Added SPH-2 elevation and low/high arc selection to the calculator solution.

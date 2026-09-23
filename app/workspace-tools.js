@@ -19,10 +19,10 @@ function palette(){
 }
 export function startWorkspaceTools(list,route){
  games=list;navigate=route;
- $('.global-tools').insertAdjacentHTML('afterbegin','<button id="workspace-open" class="workspace-control" title="Find tools (Ctrl K)">Tools <kbd>Ctrl K</kbd></button><button id="workspace-pin" class="workspace-control">Pin ☆</button><button id="workspace-quick" class="workspace-control">Quick panel</button><button id="workspace-full" class="workspace-control" hidden>Full app ↗</button>');
+ document.body.insertAdjacentHTML('beforeend','<button id="workspace-full" class="workspace-control" hidden>Full app ↗</button>');
  document.body.insertAdjacentHTML('beforeend','<dialog id="workspace-dialog" class="workspace-dialog"></dialog>');
- $('#workspace-open').onclick=palette;$('#workspace-pin').onclick=()=>{if(!current)return;const p=pins(),exists=p.some(x=>x.id===current.id&&x.game===current.game);if(exists){palette();return;}if(p.length>=12){toast('You have 12 pins. Remove one in Tools first.');return;}persist(key,[...p,{...current,label:workspaceLabel(current.id,current.game),...(current.id==='damage'?{damage:stored('dropzone-damage-v1',{})}:{})}]);paintPins();toast('Pinned. Find it in Tools with Ctrl K.');};
- const apply=s=>{document.body.classList.toggle('quick-panel',!!s.quick);$('#workspace-full').hidden=!s.quick;$('#workspace-quick').hidden=!!s.quick;};
- $('#workspace-quick').onclick=()=>api.quickPanel?api.quickPanel('toggle').then(apply):toast('Open the Windows app to use the floating panel.');$('#workspace-full').onclick=()=>api.quickPanel('full').then(apply);api.onQuickPanel?.(apply);if(api.quickPanel){const saved=stored('dropzone-quick-shortcut',null);api.quickPanel(saved?{shortcut:saved}:'status').then(apply).catch(()=>{});}
+
+ const apply=s=>{document.body.classList.toggle('quick-panel',!!s.quick);$('#workspace-full').hidden=!s.quick;};
+ $('#workspace-full').onclick=()=>api.quickPanel('full').then(apply);api.onQuickPanel?.(apply);if(api.quickPanel){const saved=stored('dropzone-quick-shortcut',null);api.quickPanel(saved?{shortcut:saved}:'status').then(apply).catch(()=>{});}
  document.addEventListener('keydown',ev=>{if((ev.ctrlKey||ev.metaKey)&&!ev.altKey&&ev.key.toLowerCase()==='k'){ev.preventDefault();ev.stopImmediatePropagation();if($('#workspace-dialog').open)$('#workspace-dialog').close();else palette();}if(ev.key==='Escape'&&document.body.classList.contains('quick-panel')&&!document.querySelector('dialog[open]'))api.quickPanel?.('hide');},true);
 }
