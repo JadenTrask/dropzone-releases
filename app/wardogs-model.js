@@ -1,3 +1,4 @@
+import {SPH2_OPTIC_MARKS} from './wardogs-optic-data.js';
 // WARDOGS game coordinates and community game firing tables only.
 // Table interpolation follows Apollyon's MIT-licensed calculator; see third-party notices.
 export const clamp = (v,min,max) => Math.min(max,Math.max(min,v));
@@ -33,12 +34,20 @@ export function interpolate(table,distance,minElevation=-Infinity,maxElevation=I
   const mil=lm+(distance-left.distance)/(right.distance-left.distance)*(rm-lm);
   return {min:mil,max:mil,interpolated:true};
 }
+// Pin observed optic labels independently of refreshable community feeds.
+export function calibratedBallistics(weapon) {
+  if(weapon.id==='spg')return {
+    low:SPH2_OPTIC_MARKS.filter(([mil])=>mil<=600).map(([mil,range])=>[range,mil]),
+    high:SPH2_OPTIC_MARKS.filter(([mil])=>mil>=610).map(([mil,range])=>[range,mil])
+  };
+  return weapon.ballistics;
+}
 export function firingSolution(origin,target,map,weapon) {
   const g=geometry(origin,target,map);
   if(!g||!weapon) return null;
   const range=g.distance<1e-6?'coincident':g.distance+1e-6<weapon.minRange?'short':g.distance>weapon.maxRange+1e-6?'long':'in';
   const solutions={};
-  if(range==='in') for(const [arc,table] of Object.entries(weapon.ballistics)) solutions[arc]=interpolate(table,g.distance,weapon.minElevationMil,weapon.maxElevationMil);
+  if(range==='in') for(const [arc,table] of Object.entries(calibratedBallistics(weapon))) solutions[arc]=interpolate(table,g.distance,weapon.minElevationMil,weapon.maxElevationMil);
   return {...g,range,solutions};
 }
 export function milText(value) {

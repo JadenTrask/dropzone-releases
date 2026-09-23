@@ -212,3 +212,38 @@ html[data-appearance=light] #hub-app .market-page [data-direction=down]{color:#a
 html[data-appearance=light] #hub-app .wd-fixed .wd-controls{background:#f4f2ef!important;color:#322820}
 html[data-appearance=light] #hub-app .wd-fixed :is(.wd-control-heading h3,.wd-impact-controls h3,.wd-coordinate-fields input,.wd-selectors label,.wd-coordinate-fields label){color:#51443a}
 @media(max-width:760px){#hub-app .wd-fixed .wd-panel-body{padding:0 18px}}
+
+#hub-app .wd-fixed .wd-sight-elevation{grid-column:1/-1;width:100%;text-align:center;padding:4px 0 12px}
+#hub-app .wd-fixed .wd-sight-elevation>span{display:block;font-size:10px;letter-spacing:1.1px;color:#bfb7af}
+#hub-app .wd-fixed .wd-sight-elevation>strong{display:block;color:#ffac82;font-size:28px;font-variant-numeric:tabular-nums;margin:5px 0 10px}
+#hub-app .wd-fixed .wd-sight-elevation small{font-size:13px;font-weight:400}
+#hub-app .wd-fixed .wd-arc-options{display:flex;justify-content:center;gap:6px}
+#hub-app .wd-fixed .wd-arc-options button{padding:6px 14px;border:1px solid #ffffff24;border-radius:5px;background:transparent;color:#c9bfb8;font-size:12px}
+#hub-app .wd-fixed .wd-arc-options button[aria-pressed="true"]{background:#ff64251c;border-color:#ff804b;color:#ffad82}
+#hub-app .wd-fixed .wd-arc-options button:disabled{opacity:.35}
+
+/* Impact correction: one primary action, with results only after a marked miss. */
+#hub-app .wd-fixed .wd-impact-heading{display:flex;align-items:center;justify-content:space-between;min-height:28px;margin-bottom:9px}
+#hub-app .wd-fixed .wd-impact-reset{display:grid;place-items:center;width:28px;height:28px;padding:5px;border:0;border-radius:5px;background:transparent;color:#c8b6a9;cursor:pointer}
+#hub-app .wd-fixed .wd-impact-reset[hidden]{display:none}
+#hub-app .wd-fixed .wd-impact-reset:hover{color:#ffab7e;background:#ff70251a}
+#hub-app .wd-fixed .wd-impact-reset svg{width:16px;height:16px}
+#hub-app .wd-fixed .wd-impact-mark{display:flex;align-items:center;gap:10px;width:100%;padding:12px;border:1px solid #f37b454d;border-radius:7px;background:#f3732510;color:#ffb18a;font-size:12px;font-weight:600;text-align:left;cursor:pointer;transition:background .18s,border-color .18s}
+#hub-app .wd-fixed .wd-impact-mark svg{width:19px;height:19px;flex-shrink:0}
+#hub-app .wd-fixed .wd-impact-mark .wd-impact-arrow{margin-left:auto;font-size:17px}
+#hub-app .wd-fixed .wd-impact-mark:hover:not(:disabled){background:#f3732525;border-color:#ff955f}
+#hub-app .wd-fixed .wd-impact-mark[aria-pressed=true]{background:#f66b2b;color:#17100b;border-color:#ff9769}
+#hub-app .wd-fixed .wd-impact-mark:disabled{opacity:.4;cursor:default}
+#hub-app .wd-fixed .wd-impact-controls details{margin-top:10px;border:0;background:transparent;padding:0}
+#hub-app .wd-fixed .wd-impact-controls summary{color:#c7bcb4;padding:5px 0;cursor:pointer}
+#hub-app .wd-fixed .wd-impact-controls details .wd-coordinate-form{padding:10px 0 0;border:0}
+#hub-app .wd-fixed .wd-impact-controls details .wd-control-heading{display:none}
+#hub-app .wd-fixed .wd-impact-deltas{display:grid;grid-template-columns:1fr 1fr;gap:16px;padding:16px 0 10px}
+#hub-app .wd-fixed .wd-impact-deltas>div+div{border-left:1px solid #ffffff18;padding-left:16px}
+#hub-app .wd-fixed .wd-impact-deltas span{display:block;font-size:9px;letter-spacing:1px;color:#c2b2a7}
+#hub-app .wd-fixed .wd-impact-deltas strong{display:block;margin-top:4px;font-size:22px;font-variant-numeric:tabular-nums;color:#ffad80}
+#hub-app .wd-fixed .wd-impact-deltas small{font-size:12px;font-weight:400}
+#hub-app .wd-fixed .wd-impact-miss{display:flex;justify-content:space-between;margin:0;padding:7px 0;font-size:11px;color:#bfb6ae}
+#hub-app .wd-fixed .wd-impact-miss strong{color:inherit;font-weight:500}
+html[data-appearance=light] #hub-app .wd-fixed .wd-impact-controls :is(summary,.wd-impact-miss,.wd-impact-deltas span){color:#665449}
+html[data-appearance=light] #hub-app .wd-fixed .wd-impact-controls :is(.wd-impact-mark,.wd-impact-deltas strong){color:#a33e13}

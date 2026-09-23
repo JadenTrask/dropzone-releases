@@ -1,3 +1,7 @@
+## 2.3.6 — 23 September 2026
+
+181 automated tests passed. SPH-2 optic transcription covers 139 marks; shared calculation/display, interpolation, peak and compass regression checks pass. Calculator and sight visually reviewed in local preview. Native installation and upgrade not tested locally.
+
 # Version 2.3.5 validation
 
 - All 175 automated tests passed on Node 24.13.0.
