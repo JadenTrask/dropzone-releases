@@ -247,3 +247,18 @@ html[data-appearance=light] #hub-app .wd-fixed :is(.wd-control-heading h3,.wd-im
 #hub-app .wd-fixed .wd-impact-miss strong{color:inherit;font-weight:500}
 html[data-appearance=light] #hub-app .wd-fixed .wd-impact-controls :is(summary,.wd-impact-miss,.wd-impact-deltas span){color:#665449}
 html[data-appearance=light] #hub-app .wd-fixed .wd-impact-controls :is(.wd-impact-mark,.wd-impact-deltas strong){color:#a33e13}
+
+/* Compact impact workflow: action beside heading, optional inputs beneath. */
+#hub-app .wd-fixed .wd-impact-controls{padding-bottom:14px}
+#hub-app .wd-fixed .wd-impact-heading{gap:10px;margin-bottom:4px}
+#hub-app .wd-fixed .wd-impact-heading h3{font-size:12px;line-height:1.4}
+#hub-app .wd-fixed .wd-impact-mark{width:auto;flex-shrink:0;min-height:34px;padding:7px 10px;gap:7px;font-size:11px;border-radius:6px}
+#hub-app .wd-fixed .wd-impact-mark svg{width:16px;height:16px}
+#hub-app .wd-fixed .wd-impact-secondary{display:flex;align-items:flex-start;gap:8px;justify-content:space-between}
+#hub-app .wd-fixed .wd-impact-secondary details{flex:1;min-width:0;margin:4px 0 0}
+#hub-app .wd-fixed .wd-impact-secondary summary{font-size:11px;color:#adaba7;padding:6px 0}
+#hub-app .wd-fixed .wd-impact-reset{display:flex;gap:5px;width:auto;height:30px;margin-top:4px;font-size:11px}
+#hub-app .wd-fixed .wd-impact-secondary:has(details[open]){flex-wrap:wrap}
+#hub-app .wd-fixed .wd-impact-secondary details[open]{flex-basis:100%}
+#hub-app .wd-fixed .wd-impact-secondary .wd-coordinate-form{padding:7px 0 0}
+html:is([data-text-size="175"],[data-text-size="200"]) #hub-app .wd-fixed .wd-impact-heading{flex-wrap:wrap}
