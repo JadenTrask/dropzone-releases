@@ -1,10 +1,9 @@
-# Dropzone 2.3.6
+# Dropzone 2.3.7
 
-- Removed the redundant breadcrumb header and Tools, Pin and Quick panel buttons. Moved text size to Settings > Accessibility.
+A small WARDOGS impact-correction hotfix.
 
-- Calibrated SPH-2 calculator and gunner sight from 139 in-game optic marks; corrected 59 range labels.
-- Positioned aiming between 10-mil stadia and fixed compass labels to multiples of 15 degrees.
-- Added SPH-2 elevation and low/high arc selection to the calculator solution.
-- Refined impact correction controls and results; removed redundant text below the solution.
+- Mark impact now shows a crosshair over the map.
+- Compact impact controls with a clear Cancel action.
+- Coordinate entry stays collapsed; Reset appears when a correction exists.
 
-Optic labels are transcribed from a user recording, not measured impact tests. Existing supported elevation limits remain unchanged.
+Existing calculator calibration and saved settings are unchanged.

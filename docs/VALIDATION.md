@@ -1,3 +1,7 @@
+## 2.3.7 - 24 September 2026
+
+All 181 automated tests passed. JavaScript syntax and diff whitespace checks passed. Native installation and installed-version upgrade were not tested locally; the release workflow verifies packaging and uploaded assets.
+
 ## 2.3.6 — 23 September 2026
 
 181 automated tests passed. SPH-2 optic transcription covers 139 marks; shared calculation/display, interpolation, peak and compass regression checks pass. Calculator and sight visually reviewed in local preview. Native installation and upgrade not tested locally.
