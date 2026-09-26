@@ -10,7 +10,7 @@ class GameService {
     const ids = new Set();
     for (const game of this.games) {
       if (!/^[a-z0-9-]+$/.test(game.id) || ids.has(game.id)) throw new Error('Invalid or duplicate game ID.');
-      if (!['collection','league','loadouts','finals','calculator','tacmap','siege','forest','arena'].includes(game.kind)) throw new Error('Unknown game renderer.');
+      if (!['collection','league','loadouts','finals','calculator','tacmap','siege','forest','arena','rocket-league'].includes(game.kind)) throw new Error('Unknown game renderer.');
       ids.add(game.id);
       const modes=new Set();
       for(const mode of game.modes||[]) {

@@ -204,5 +204,20 @@
     "modes": [],
     "videos": false,
     "patches": false
+  },
+  {
+    "id": "rocket-league",
+    "parent": null,
+    "kind": "rocket-league",
+    "name": "Rocket League",
+    "shortName": "Rocket League",
+    "eyebrow": "ROCKET LEAGUE",
+    "description": "Live matches, tracked career and performance.",
+    "theme": "rocket-league",
+    "accent": "#72baff",
+    "cover": "assets/games/rocket-league-official.jpg",
+    "status": "active",
+    "patches": false,
+    "videos": false
   }
 ]

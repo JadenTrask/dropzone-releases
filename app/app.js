@@ -113,7 +113,7 @@ document.addEventListener('click',async event=>{
   if(b.hasAttribute('data-text-reset'))return applyTextSize(100);
   if(b.dataset.window)return bridge.window(b.dataset.window);
   if(b.dataset.view){state.view=b.dataset.view;render();$('.main').scrollTo({top:0,behavior:'smooth'});return;}
-  if(b.dataset.mode){state.mode=b.dataset.mode;state.role='default';state.vs=null;state.threats=[];state.view='lab';document.querySelectorAll('dialog[open]').forEach(d=>d.close());await loadBuild();return;}
+  if(b.dataset.mode&&!b.dataset.account){state.mode=b.dataset.mode;state.role='default';state.vs=null;state.threats=[];state.view='lab';document.querySelectorAll('dialog[open]').forEach(d=>d.close());await loadBuild();return;}
   if(b.dataset.champion||b.dataset.pick){const id=b.dataset.champion||b.dataset.pick;if(state.pickerType==='enemy'&&b.dataset.pick){state.vs=id;}else{state.champion=id;state.role='default';state.vs=null;state.threats=[];}state.view='lab';$('#picker-dialog').close();await loadBuild();return;}
   if(b.dataset.favorite){const id=b.dataset.favorite;state.favorites=state.favorites.includes(id)?state.favorites.filter(x=>x!==id):[...state.favorites,id];persist('rf-favorites',state.favorites);render();return;}
   if(b.dataset.strategy){state.strategy=b.dataset.strategy;state.overrides=[];render();return;}

@@ -1,3 +1,12 @@
+## Unreleased Rocket League integration - 26 September 2026
+
+- All 189 automated tests passed, including eight Rocket League model, socket/storage and UI checks. Targeted checks passed again after final query and display refinements.
+- Real loopback WebSocket fixture verified match persistence, restart, replay exclusion and zero hidden UI snapshots. Crash recovery and corrupt-database isolation passed.
+- Electron 44 runtime exposes WebSocket and node:sqlite. An ASAR-packaged tracker worker started successfully and reported its SQLite database ready.
+- Browser review covered Rocket League navigation, waiting state and setup. Populated scoreboard, analytics/chart stability, history detail and subscription disposal were verified with DOM fixtures.
+- Synthetic ingestion: 100,000 six-player JSON UpdateState messages in 581 ms; six players retained. This is not an in-game performance guarantee.
+- Actual Rocket League live capture, replay command acceptance, installed upgrade and resource impact during a real match remain unverified. No release was published.
+
 ## 2.3.7 - 24 September 2026
 
 All 181 automated tests passed. JavaScript syntax and diff whitespace checks passed. Native installation and installed-version upgrade were not tested locally; the release workflow verifies packaging and uploaded assets.
@@ -143,3 +152,19 @@ The user confirmed the Beta 2 to 1.0.0 automatic upgrade worked. Version 1.0.1 s
 
 ## 2.2.3 release preparation
 Squad Room entry points, saved shortcuts and artillery integration removed. Twelve focused tests passed before packaging. Windows installer built successfully. Live server filters and browser interactions were checked in the preceding implementation turn. No native installation or in-game accuracy testing is claimed. GitHub publication requires authentication in this environment.
+
+Rocket League setup assistant: full suite 191/191 passed. Browser walkthrough steps reviewed in the live preview. Automatic installation discovery was checked against the local Steam installation (already configured); no production game files were modified. Backup and config-edit behavior was tested against temporary UTF-16 fixtures. Real-game capture remains to be verified.
+
+## Rocket League account test deployment — September 26, 2026
+
+Supabase email confirmation and recovery were tested against the configured Resend SMTP service using an explicitly authorized temporary account. Both messages were delivered. Signup verification, personal match upload/readback, password recovery, sign-in with the changed password, and account deletion passed. The temporary account was deleted and the auth users view confirmed no remaining users. The unused SMTP credential was revoked; the active credential has sending-only access restricted to auth.dropzonecompanion.com. No credentials are recorded here.
+
+This was a real backend/auth flow, not a complete installed-app GUI account walkthrough. Earlier database isolation checks passed for private, pending-friend, sharing-disabled, accepted-sharing, and removed-friend cases. The daily cleanup retains a rolling 365 days of cloud matches. Local history is not annually wiped. The desktop build remains local test 4; no public desktop release was published.
+
+## Local test 5 — signup and retention fixes
+
+196 automated app tests passed. Regression checks cover uppercase username acceptance and normalization, password confirmation rejection, populated SQLite player lookup (qualified GROUP BY), and rolling 30/365-day retention including direct detail access. Signup navigation no longer collides with the League game-mode handler. Password visibility controls were exercised in the rendered DOM without sending test signup emails. Test 5 installer built locally; no desktop release published.
+
+## 2.4.0 release validation
+
+201 app tests passed on September 26. History rendering passed wide and narrow layout checks. A WebSocket/SQLite integration check confirmed regular and online Free Play write no match records. Known existing Free Play records are excluded from history, aggregation, and cloud upload. The sidebar toggle was checked in the UI regression fixture. Test 11 packaged successfully. CI will independently build and verify the public installer and source archive. A native upgrade of the final 2.4.0 installer has not been tested.

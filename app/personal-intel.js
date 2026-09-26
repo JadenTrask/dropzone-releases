@@ -4,7 +4,8 @@ const list=key=>{const value=stored(key,[]);return Array.isArray(value)?value:[]
 const check=input=>api.personalIntel?api.personalIntel(input):fetch('/api/personal-intel',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(input)}).then(r=>r.json());
 let checking=false;
 export function startPersonalAlerts(){
- const run=async()=>{if(checking||stored('dropzone-intel-enabled',true)===false)return;checking=true;
+ if(startPersonalAlerts.started)return;startPersonalAlerts.started=true;
+ const run=async()=>{if(document.hidden||checking||stored('dropzone-intel-enabled',true)===false)return;checking=true;
  try{const prefs=stored('dropzone-intel-preferences',{}),results=stored('dropzone-intel-results',{});for(const game of ['wardogs','bo7','warzone','lol','finals','siege']){
  const names=[...savedNames(game),...(prefs.game===game?String(prefs.extra||'').split('\n').filter(Boolean):[])];if(!names.length)continue;
  try{const result=await check({game,names});if(result.error)continue;const old=results[game],fresh=result.article?.url+'|'+result.article?.publishedAt;
