@@ -1,7 +1,7 @@
 {
   "name": "dropzone",
   "version": "2.4.0",
-  "description": "Loadouts, tactical maps, artillery calculations, patch notes, and competitive videos",
+  "description": "Game companion with Rocket League live stats, player profiles, friends, loadouts, and tactical maps",
   "author": "Jaden Trask",
   "license": "MIT",
   "private": true,
