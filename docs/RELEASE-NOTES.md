@@ -1,4 +1,8 @@
-# Dropzone 2.4.2
+# Dropzone 2.4.3
+
+Fixes a layout regression that prevented mouse-wheel scrolling in the Rocket League tracker. Profiles, match history, settings and long scoreboards now scroll within the app window. The player sidebar also remains accessible in shorter windows. Existing data and functionality are preserved.
+
+## Included from 2.4.2
 
 Rocket League and THE FINALS have a new look, with clearer layouts, richer visuals, and controls designed for a desktop companion.
 

@@ -17,7 +17,7 @@ html.rl-workspace-active .rl-page{width:100%;max-width:none;min-width:0;margin:0
 html.rl-workspace-active .rl-page .hub-eyebrow{font-size:10px;font-weight:650;letter-spacing:.16em;color:#8fa8c3}
 html.rl-workspace-active .rl-page h1,html.rl-workspace-active .rl-page h2,html.rl-workspace-active .rl-page h3{font-family:inherit;text-transform:none}
 html.rl-workspace-active .rl-page small{color:var(--rl-muted)}
-.rl-commandbar{position:relative;z-index:8;background:#102033ae;backdrop-filter:blur(16px);border-bottom:1px solid var(--rl-border);box-shadow:0 6px 24px #0000000d}
+.rl-commandbar{position:relative;flex:none;z-index:8;background:#102033ae;backdrop-filter:blur(16px);border-bottom:1px solid var(--rl-border);box-shadow:0 6px 24px #0000000d}
 html.rl-workspace-active .rl-heading{display:flex;align-items:center;flex-direction:row;justify-content:space-between;gap:20px;padding:16px 28px 10px;background:none;border:0}
 .rl-brand{display:flex;gap:12px;align-items:center;flex:none}
 .rl-brand>img{width:40px;height:40px;object-fit:cover;border-radius:11px;border:1px solid #97d1ff26}
@@ -52,8 +52,9 @@ html.rl-workspace-active .select-options button:hover{background:#a2cef214!impor
 html.rl-workspace-active .select-control svg{color:#8fcafa!important;stroke:currentColor!important}
 @keyframes rl-menu-in{from{opacity:0;transform:translateY(-3px) scale(.98)}to{opacity:1;transform:none}}
 /* Each page gets a readable width; the optional sidebar cannot squeeze the content. */
-html.rl-workspace-active .rl-workspace{position:relative;display:grid;grid-template-columns:220px minmax(0,1fr);width:100%;align-items:start;min-width:0}
-html.rl-workspace-active .rl-main-panel{background:transparent;padding:32px clamp(20px,3vw,48px) 56px;min-width:0;width:100%}
+/* Keep the grid row inside the window so its panels, not a clipped parent, scroll. */
+html.rl-workspace-active .rl-workspace{position:relative;display:grid;grid-template-columns:220px minmax(0,1fr);grid-template-rows:minmax(0,1fr);width:100%;align-items:stretch;min-width:0;min-height:0}
+html.rl-workspace-active .rl-main-panel{background:transparent;padding:32px clamp(20px,3vw,48px) 56px;min-width:0;min-height:0;overflow:auto;width:100%}
 html.rl-workspace-active #rl-content{max-width:1440px;margin:0 auto;width:100%;min-width:0;container-type:inline-size}
 html.rl-workspace-active .rl-workspace[data-page=history] #rl-content{max-width:1160px}
 html.rl-workspace-active .rl-workspace:is([data-page=personal],[data-page=player]) #rl-content{max-width:1280px}
@@ -62,7 +63,7 @@ html.rl-workspace-active .rl-workspace:is([data-page=settings],[data-page=accoun
 html.rl-workspace-active .rl-profile-collapsed,html.rl-workspace-active .rl-social-workspace{grid-template-columns:minmax(0,1fr)}
 html.rl-workspace-active .rl-profile-collapsed>#rl-profile,html.rl-workspace-active .rl-social-workspace>#rl-profile{display:none}
 /* One continuous material lets the stadium dissolve into the player statistics. */
-html.rl-workspace-active #rl-profile{position:relative;isolation:isolate;overflow:hidden;width:220px;min-width:0;padding:0 18px 20px;border:0;border-right:1px solid #b2d8ff0d;border-radius:0 0 20px 0;background:linear-gradient(160deg,#162a40ee,#101d2ce8 52%,#0d1826d9);box-shadow:inset 0 1px #c1dfff0b,4px 12px 28px #0000000b}
+html.rl-workspace-active #rl-profile{position:relative;isolation:isolate;align-self:start;max-height:100%;overflow:auto;width:220px;min-width:0;padding:0 18px 20px;border:0;border-right:1px solid #b2d8ff0d;border-radius:0 0 20px 0;background:linear-gradient(160deg,#162a40ee,#101d2ce8 52%,#0d1826d9);box-shadow:inset 0 1px #c1dfff0b,4px 12px 28px #0000000b}
 html.rl-workspace-active #rl-profile:before{content:'';position:absolute;z-index:-1;pointer-events:none;inset:0 0 auto;height:260px;background:linear-gradient(120deg,#091a3080,#0b192d45),url('./assets/rocket-league-welcome.png') center top/cover;mask-image:linear-gradient(#000b 0%,#0009 32%,#0003 70%,transparent 100%)}
 html.rl-workspace-active #rl-profile .rl-sidebar-identity{padding:22px 0 0}
 html.rl-workspace-active #rl-profile .rl-sidebar-identity>.hub-eyebrow{display:block;padding-right:24px;font-size:9px;letter-spacing:.15em;color:#a6c5e0}

@@ -205,3 +205,9 @@ The later app-wide control, map and player-sidebar follow-ups are verified from 
 ### Final 2.4.2 release candidate
 
 The user subsequently authorized publication before the website refresh. The final source was rebuilt into a Windows x64 installer on September 27, and the full suite passed again: **238 tests, zero failures**. This build includes the final shared controls, player sidebar, map controls and dialog fixes. Publication uses the existing `main` release workflow and its exact-commit packaging, full source archive, updater checksum and uploaded-asset verification gates. A successful local build does not imply a native installed upgrade or FPS benchmark.
+
+## 2.4.3 scrolling hotfix
+
+Native mouse-wheel input reproduced a missed 2.4.2 regression: the Rocket League workspace grid allowed its main panel to grow to content height while the parent clipped overflow. Programmatically moving the hidden parent during screenshot checks did not prove usable scrolling. The grid now bounds its single row to the available window height, stretches the main scroll panel, and permits the shorter player sidebar to scroll when needed. The command bar keeps its height.
+
+The full application suite passed again (238/238), and 20 native wheel scenarios passed across normal, narrow and short windows. The dedicated `npm run test:rl-scroll` Electron regression passed six viewport/sidebar cases locally and failed against the previous stylesheet as expected. The existing release workflow is unchanged. Source evidence: `.validation-cache/rl-redesign/scroll-before-report.json` and `scroll-report.json`. Real in-game performance and native installed upgrades are not inferred from these tests.
