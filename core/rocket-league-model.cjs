@@ -38,7 +38,7 @@ class MatchTracker {
    if(!this.match&&d.Game.bReplay)return false;
    if(!this.match){if(this.recent.has(guid))return false;this.match=this.create(guid,false);}
    const m=this.match;if(guid&&!m.guid){m.guid=guid;m.id=guid;}
-   const players=d.Players.slice(0,16).map(player).filter(Boolean);
+   const players=d.Players.slice(0,16).map(player).filter(Boolean);this.presentPlayers=players;
    // Retain the last known final totals of players who leave the server.
    for(const p of players){const i=m.players.findIndex(q=>p.PrimaryId?q.PrimaryId===p.PrimaryId:q.Name===p.Name&&q.Shortcut===p.Shortcut);if(i<0)m.players.push(p);else {for(const k of ['EpicSaves','CrossbarHits','TimesDemolished'])p[k]=m.players[i][k]??null;m.players[i]=p;}}
    m.players=m.players.slice(-32);const g=d.Game;

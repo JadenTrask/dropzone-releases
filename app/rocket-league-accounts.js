@@ -11,12 +11,13 @@ export async function loadAccounts(call){const next=await call({action:'account-
 let personalData=null,personalTab='overview',personalDays=365,personalOffset=0,personalKind='all',personalOwner='',cloudCache=null,cloudLoadedAt=0;
 export async function loadPersonalProfile(call,state,name){
  const owner=snapshot.user?.id||'';if(owner!==personalOwner){personalOwner=owner;cloudCache=null;cloudLoadedAt=0;personalData=null;personalOffset=0;}
- const local=await call({action:'cloud-records'});let warning='';
+ const local=await call({action:'cloud-records'});const playtime=await call({action:'playtime'}).catch(()=>null);let warning='';
  if(owner&&Date.now()-cloudLoadedAt>60000){try{cloudCache=await call({action:'account-stats',id:owner});cloudLoadedAt=Date.now();}catch{warning='Cloud history is unavailable right now. Showing matches saved on this PC.';cloudCache=null;}}
  const records=new Map((cloudCache?.records||[]).map(r=>[r.match_id,r]));
  for(const r of Array.isArray(local)?local:[]){const old=records.get(r.match_id);records.set(r.match_id,{...old,...r,stats:{...old?.stats,...r.stats}});}
  const maxDays=owner?365:30;personalDays=Math.min(personalDays,maxDays);
- personalData={profile:{...snapshot.profile,display_name:snapshot.profile?.display_name||name||snapshot.profile?.handle||'Your profile',avatar:state?.settings?.avatar||snapshot.profile?.avatar},records:[...records.values()].filter(r=>Date.parse(r.played_at)>=Date.now()-maxDays*86400000).sort((a,b)=>Date.parse(a.played_at)-Date.parse(b.played_at)),maxDays,warning};
+ const timeRows=new Map((cloudCache?.playtime||[]).map(r=>[JSON.stringify([r.source,r.day,r.kind]),r]));for(const r of Array.isArray(playtime)?playtime:[]){const key=JSON.stringify([r.source,r.day,r.kind]);timeRows.set(key,{...r,seconds:Math.max(r.seconds,timeRows.get(key)?.seconds||0)});}
+ personalData={playtime:Array.isArray(playtime)||Array.isArray(cloudCache?.playtime)?[...timeRows.values()]:null,playtimeLocalOnly:!owner||!Array.isArray(cloudCache?.playtime),profile:{...snapshot.profile,display_name:snapshot.profile?.display_name||name||snapshot.profile?.handle||'Your profile',avatar:state?.settings?.avatar||snapshot.profile?.avatar},records:[...records.values()].filter(r=>Date.parse(r.played_at)>=Date.now()-maxDays*86400000).sort((a,b)=>Date.parse(a.played_at)-Date.parse(b.played_at)),maxDays,warning};
 }
 export function personalProfileUI(){if(!personalData)return '<p class="rl-notice">Loading your profile…</p>';return playerProfileUI(personalData,{tab:personalTab,days:personalDays,offset:personalOffset,kind:personalKind,personal:true,maxDays:personalData.maxDays}).replaceAll('data-account="profile-','data-personal="true" data-account="profile-');}
 export function accountNav(){return `<button class="rl-account-nav" data-rl-view="account"><img src="${e(snapshot.profile?.avatar||'./assets/icon.png')}" alt=""><span>${e(snapshot.profile?.display_name||snapshot.profile?.handle||'Account')}</span></button>`;}

@@ -16,6 +16,9 @@ const {execFile}=require('node:child_process');
 
 const {MatchTracker,aggregate,isRecordableMatch}=require('./rocket-league-model.cjs');
 
+const {PlaytimeTracker}=require('./rocket-league-playtime.cjs');
+const playtime=new PlaytimeTracker({save:items=>storage(()=>{db.exec('BEGIN');try{const insert=db.prepare('INSERT INTO playtime VALUES(?,?,?,?) ON CONFLICT(identity,day,kind) DO UPDATE SET seconds=seconds+excluded.seconds');for(const r of items)insert.run(r.identity,r.day,r.kind,r.seconds);db.exec('COMMIT');writes++;return true;}catch(e){db.exec('ROLLBACK');throw e;}})===true});
+
 const defaults={tracking:true,record:true,autoSession:true,eventFeed:true,keepHistory:true,mode:'auto',identity:'',port:49124,diagnostics:false};
 
 const playlists=require('../app/rocket-league-playlists.json');
@@ -31,7 +34,7 @@ function storage(fn){try{return fn();}catch(e){error='Local storage unavailable:
 
 function put(key,value){return storage(()=>{db.prepare('INSERT OR REPLACE INTO config VALUES (?,?)').run(key,JSON.stringify(value));writes++;return true;});}
 
-function open(){mkdirSync(workerData.directory,{recursive:true});db=new DatabaseSync(path.join(workerData.directory,'history.sqlite'));db.function('recordable_match',{deterministic:true},data=>{try{return isRecordableMatch(JSON.parse(data))?1:0;}catch{return 0;}});db.exec('PRAGMA journal_mode=WAL; PRAGMA synchronous=NORMAL; PRAGMA busy_timeout=2000; CREATE TABLE IF NOT EXISTS config(key TEXT PRIMARY KEY,value TEXT NOT NULL); CREATE TABLE IF NOT EXISTS matches(id TEXT PRIMARY KEY,started INTEGER NOT NULL,status TEXT NOT NULL,session TEXT,data TEXT NOT NULL); CREATE INDEX IF NOT EXISTS matches_started ON matches(started DESC); CREATE INDEX IF NOT EXISTS matches_session ON matches(session,started); CREATE TABLE IF NOT EXISTS sessions(id TEXT PRIMARY KEY,started INTEGER,ended INTEGER); CREATE TABLE IF NOT EXISTS match_groups(id TEXT PRIMARY KEY,name TEXT NOT NULL,created INTEGER NOT NULL); CREATE TABLE IF NOT EXISTS group_matches(group_id TEXT NOT NULL,match_id TEXT NOT NULL,PRIMARY KEY(group_id,match_id));');
+function open(){mkdirSync(workerData.directory,{recursive:true});db=new DatabaseSync(path.join(workerData.directory,'history.sqlite'));db.function('recordable_match',{deterministic:true},data=>{try{return isRecordableMatch(JSON.parse(data))?1:0;}catch{return 0;}});db.exec('PRAGMA journal_mode=WAL; PRAGMA synchronous=NORMAL; PRAGMA busy_timeout=2000; CREATE TABLE IF NOT EXISTS playtime(identity TEXT NOT NULL,day INTEGER NOT NULL,kind TEXT NOT NULL,seconds REAL NOT NULL,PRIMARY KEY(identity,day,kind)); CREATE TABLE IF NOT EXISTS config(key TEXT PRIMARY KEY,value TEXT NOT NULL); CREATE TABLE IF NOT EXISTS matches(id TEXT PRIMARY KEY,started INTEGER NOT NULL,status TEXT NOT NULL,session TEXT,data TEXT NOT NULL); CREATE INDEX IF NOT EXISTS matches_started ON matches(started DESC); CREATE INDEX IF NOT EXISTS matches_session ON matches(session,started); CREATE TABLE IF NOT EXISTS sessions(id TEXT PRIMARY KEY,started INTEGER,ended INTEGER); CREATE TABLE IF NOT EXISTS match_groups(id TEXT PRIMARY KEY,name TEXT NOT NULL,created INTEGER NOT NULL); CREATE TABLE IF NOT EXISTS group_matches(group_id TEXT NOT NULL,match_id TEXT NOT NULL,PRIMARY KEY(group_id,match_id));');
 
  const get=k=>{const row=db.prepare('SELECT value FROM config WHERE key=?').get(k);return row?JSON.parse(row.value):null;};settings={...defaults,...get('settings')};session=get('session');
 
@@ -69,7 +72,7 @@ function state(){return {historyDays,feed:{receivedAt:lastMessage,acceptedAt:las
 
 function emit(force=false){const lifecycle=!settings.tracking?'inactive':tracker.match&&!tracker.match.ended&&connected?'active':connected?'game-detected':'idle';if(lifecycle!==lastLifecycle){lastLifecycle=lifecycle;parentPort.postMessage({event:'lifecycle',value:lifecycle});}if(!visible)return;const wait=settings.mode==='low'?1000:settings.mode==='normal'?100:200,delay=Math.max(0,lastUI+wait-Date.now());if(force||!delay){clearTimeout(flush);flush=null;lastUI=Date.now();parentPort.postMessage({event:'state',value:state()});}else if(!flush)flush=setTimeout(()=>{flush=null;emit();},delay);}
 
-function closeSocket(){clearTimeout(timeout);const old=socket;socket=null;if(old){old.onclose=old.onerror=old.onmessage=old.onopen=null;try{old.close();}catch{}}connected=false;}
+function closeSocket(){playtime.reset();clearTimeout(timeout);const old=socket;socket=null;if(old){old.onclose=old.onerror=old.onmessage=old.onopen=null;try{old.close();}catch{}}connected=false;}
 
 function schedule(){if(stopped||!settings.tracking)return;clearTimeout(retry);const delays=[2000,5000,15000,30000,60000];retry=setTimeout(connect,delays[Math.min(attempt++,4)]);retry.unref();}
 
@@ -83,7 +86,7 @@ function connect(){if(stopped||!settings.tracking||socket)return;if(attempt===0|
 
  socket.onmessage=event=>{if(typeof event.data!=='string'||event.data.length>262144){tracker.malformed++;return;}try{const msg=JSON.parse(event.data);lastMessage=Date.now();if(msg.Event==='UpdateState'){clearTimeout(disconnectTimer);disconnectTimer=null;}rateCount++;if(lastMessage-rateStart>=1000){rate=rateCount*1000/(lastMessage-rateStart);rateStart=lastMessage;rateCount=0;}
 
- const accepted=tracker.ingest(msg);lastEvent=typeof msg.Event==='string'?msg.Event:'';if(accepted){lastAccepted=lastMessage;if(localIdentity&&settings.identity!==localIdentity&&tracker.match?.players.some(p=>p.PrimaryId===localIdentity))linkLocalIdentity();if(tracker.match&&isRecordableMatch(tracker.match)&&!session&&settings.autoSession&&settings.record&&settings.keepHistory&&tracker.match.id!==suppressedSessionMatch)startSession();if(tracker.match?.ended&&!endTimer)endTimer=setTimeout(()=>{endTimer=null;if(tracker.match?.ended)tracker.finish('Match ended');emit();},1500);
+ const accepted=tracker.ingest(msg);lastEvent=typeof msg.Event==='string'?msg.Event:'';if(accepted){lastAccepted=lastMessage;if(msg.Event==='UpdateState')playtime.sample(tracker,settings.identity,settings.record&&settings.keepHistory);else if(['ReplayCreated','MatchDestroyed','PodiumStart','MatchEnded','MatchPaused','MatchUnpaused','GoalReplayStart','GoalReplayEnd','MatchCreated','MatchInitialized'].includes(msg.Event))playtime.reset();if(localIdentity&&settings.identity!==localIdentity&&tracker.match?.players.some(p=>p.PrimaryId===localIdentity))linkLocalIdentity();if(tracker.match&&isRecordableMatch(tracker.match)&&!session&&settings.autoSession&&settings.record&&settings.keepHistory&&tracker.match.id!==suppressedSessionMatch)startSession();if(tracker.match?.ended&&!endTimer)endTimer=setTimeout(()=>{endTimer=null;if(tracker.match?.ended)tracker.finish('Match ended');emit();},1500);
 
  if(tracker.match&&Date.now()-checkpointAt>30000){checkpointAt=Date.now();if(settings.record&&settings.keepHistory&&isRecordableMatch(tracker.match))put('pending',tracker.match);}
 
@@ -94,7 +97,7 @@ function connect(){if(stopped||!settings.tracking||socket)return;if(attempt===0|
  }catch{lost();}}
 
 function sinceDays(days){return Date.now()-Math.min(historyDays,[7,14,30,90,180,365].includes(days)?days:historyDays)*86400000;}
-function pruneHistory(){const cutoff=sinceDays(historyDays);storage(()=>db.prepare('DELETE FROM matches WHERE started<?').run(cutoff));if(lastMatch?.startedAt<cutoff)lastMatch=null;}
+function pruneHistory(){const cutoff=sinceDays(historyDays);storage(()=>db.prepare('DELETE FROM playtime WHERE day<?').run(Math.floor(cutoff/86400000)*86400000));storage(()=>db.prepare('DELETE FROM matches WHERE started<?').run(cutoff));if(lastMatch?.startedAt<cutoff)lastMatch=null;}
 
 function rows(limit,sessionId,since=0,all=false){since=Math.max(since,sinceDays(historyDays));const where=" WHERE "+matchOnly+(all?'':" AND json_extract(data,'$.game.PlaylistId') IN ("+[...playlists.casual,...playlists.ranked].join(',')+")")+" AND status='complete' AND EXISTS (SELECT 1 FROM json_each(matches.data,'$.players') WHERE json_extract(value,'$.PrimaryId')=?)"+(sessionId?' AND session=?':'')+' AND started>=?';return db.prepare(`SELECT data FROM (SELECT json_object('id',id,'startedAt',started,'status',status,'winner',json_extract(data,'$.winner'),'overtime',json_extract(data,'$.overtime'),'game',json(json_extract(data,'$.game')),'players',json(json_extract(data,'$.players'))) AS data,started FROM matches${where} ORDER BY started DESC LIMIT ?) ORDER BY started`).iterate(settings.identity,...(sessionId?[sessionId,since,limit]:[since,limit]));}
 
@@ -104,10 +107,12 @@ function command(input){if(!input||typeof input!=='object')throw Error('Invalid 
 
  case 'history-policy':historyDays=input.days===365?365:30;pruneHistory();dataRevision++;emit(true);return state();
  case 'state':return state();
+ case 'playtime':playtime.flush();return storage(()=>{const key='playtime-source:'+settings.identity;let source=JSON.parse(db.prepare('SELECT value FROM config WHERE key=?').get(key)?.value||'null');if(!source){source=randomUUID();if(!put(key,source))throw Error('Could not save playtime source.');}return db.prepare('SELECT day,kind,seconds FROM playtime WHERE identity=? AND day>=? ORDER BY day').all(settings.identity,Math.floor(sinceDays(historyDays)/86400000)*86400000).map(row=>({...row,source}));})||[];
+ case 'flush-playtime':playtime.reset();return {ok:true};
 
  case 'visible':visible=input.value===true;if(!visible){clearTimeout(flush);flush=null;}else emit(true);return {ok:true};
 
- case 'settings':{
+ case 'settings':{playtime.reset();
 
   const v=input.value||{},next={...settings};for(const k of ['tracking','record','autoSession','eventFeed','keepHistory','diagnostics'])if(typeof v[k]==='boolean')next[k]=v[k];if(['auto','normal','low'].includes(v.mode))next.mode=v.mode;
 

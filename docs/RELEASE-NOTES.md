@@ -1,5 +1,10 @@
-# Dropzone 2.4.4
+# Dropzone 2.4.5
 
+Adds separate casual/ranked match, private-match and Freeplay timers to personal and friend profiles. Playtime begins with this update; historical durations are not estimated. Menus, pauses, replays and telemetry disconnection gaps are excluded.
+
+Signed-in playtime syncs using daily per-device snapshots, without double-counting repeat uploads. Friend visibility follows existing stats-sharing and accepted-friend settings. Match-type and date filters apply to the displayed time; Freeplay stays separate from performance statistics.
+
+## Included from 2.4.4
 Adds All / Ranked / Casual filters to personal and friend profiles. Filters apply consistently to overview statistics, performance charts, records, averages and profile match history, alongside the selected date range. Private and freeplay sessions remain excluded.
 
 ## Included from 2.4.3
