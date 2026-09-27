@@ -23,3 +23,10 @@ test('win streak and overtime statistics follow chronological complete matches',
 test('actual game JSON-string Data payloads render live stats and reject invalid inner JSON',()=>{
  const t=new MatchTracker();assert.equal(t.ingest({Event:'UpdateState',Data:JSON.stringify({MatchGuid:'actual',Players:[{Name:'Player',PrimaryId:'p',TeamNum:0,Score:10}],Game:{Teams:[{TeamNum:0,Score:1}],TimeSeconds:250,PlaylistId:9}})}),true);assert.equal(t.match.players[0].Score,10);assert.equal(t.match.game.TimeSeconds,250);assert.equal(t.ingest({Event:'UpdateState',Data:'broken'}),false);assert.equal(t.malformed,1);
 });
+
+
+test('private practice waits for an opponent and keeps evidence when opponents leave',()=>{
+ const {isRecordableMatch}=require('../core/rocket-league-model.cjs');const t=new MatchTracker();t.ingest(event('MatchCreated'));t.ingest(packet('a',{PlaylistId:6}));assert.equal(isRecordableMatch(t.match),false);
+ const next=packet('a',{PlaylistId:6});next.Data.Players.push({...player,PrimaryId:'opponent',TeamNum:1});t.ingest(next);assert.equal(isRecordableMatch(t.match),true);
+ t.ingest(packet('a',{PlaylistId:6}));assert.equal(isRecordableMatch(t.match),true,'Leaving opponents remain part of the match roster');
+});

@@ -168,3 +168,7 @@ This was a real backend/auth flow, not a complete installed-app GUI account walk
 ## 2.4.0 release validation
 
 201 app tests passed on September 26. History rendering passed wide and narrow layout checks. A WebSocket/SQLite integration check confirmed regular and online Free Play write no match records. Known existing Free Play records are excluded from history, aggregation, and cloud upload. The sidebar toggle was checked in the UI regression fixture. Test 11 packaged successfully. CI will independently build and verify the public installer and source archive. A native upgrade of the final 2.4.0 installer has not been tested.
+
+## 2.4.1 practice recording fix
+
+Read-only validation against the installed database excluded four one-sided private sessions while preserving all 15 completed private matches. Regression coverage includes private practice intake, existing history/detail/analytics filtering, pending crash recovery, cloud upload exclusion, and opponents leaving after being observed. Existing user database files were not modified.

@@ -4,6 +4,9 @@ const STATS=['Score','Goals','Assists','Saves','Shots','Touches','CarTouches','D
 const text=(v,max=160)=>typeof v==='string'?v.slice(0,max):'';
 const number=v=>Number.isFinite(v)&&v>=0?v:null;
 const isFreePlay=m=>[9,73].includes(m?.game?.PlaylistId);
+// Online practice can report the private-match playlist. Wait for opposition
+// before saving private sessions; retained players preserve matches after exits.
+const isRecordableMatch=m=>!isFreePlay(m)&&Array.isArray(m?.players)&&m.players.length>0&&(m.game?.PlaylistId!==6||[0,1].every(team=>m.players.some(p=>p.TeamNum===team)));
 function player(p){if(!p||typeof p!=='object')return null;return {Name:text(p.Name),PrimaryId:text(p.PrimaryId),Shortcut:number(p.Shortcut),TeamNum:[0,1].includes(p.TeamNum)?p.TeamNum:null,...Object.fromEntries(STATS.map(k=>[k,number(p[k])]))};}
 class MatchTracker {
  constructor({save=()=>{},now=Date.now,checkpoint=()=>{}}={}){this.save=save;this.now=now;this.checkpoint=checkpoint;this.match=null;this.replay=null;this.replaying=false;this.recent=new Set();this.revision=0;this.eventsRevision=0;this.messages=0;this.malformed=0;}
@@ -61,7 +64,7 @@ class MatchTracker {
 }
 function aggregate(rows,identity){
  const result={matches:0,wins:0,losses:0,overtime:0,overtimeWins:0,currentStreak:0,bestStreak:0,totals:{},samples:{},records:{},recent:[],trend:[]};let streak=0,pairedGoals=0,pairedShots=0;
- for(const row of rows){const m=typeof row.data==='string'?JSON.parse(row.data):row,p=m.players.find(p=>p.PrimaryId===identity);if(isFreePlay(m)||m.status!=='complete'||!p||![0,1].includes(p.TeamNum)||![0,1].includes(m.winner))continue;
+ for(const row of rows){const m=typeof row.data==='string'?JSON.parse(row.data):row,p=m.players.find(p=>p.PrimaryId===identity);if(!isRecordableMatch(m)||m.status!=='complete'||!p||![0,1].includes(p.TeamNum)||![0,1].includes(m.winner))continue;
   const win=p.TeamNum===m.winner;result.matches++;result[win?'wins':'losses']++;streak=win?streak+1:0;result.bestStreak=Math.max(result.bestStreak,streak);result.currentStreak=streak;
   if(m.overtime){result.overtime++;if(win)result.overtimeWins++;}
   for(const k of STATS)if(Number.isFinite(p[k])){result.totals[k]=(result.totals[k]||0)+p[k];result.samples[k]=(result.samples[k]||0)+1;if(!result.records[k]||p[k]>result.records[k].value)result.records[k]={value:p[k],match:m.id};}
@@ -72,4 +75,4 @@ function aggregate(rows,identity){
  result.winRate=result.matches?100*result.wins/result.matches:null;result.averages=Object.fromEntries(STATS.map(k=>[k,result.samples[k]?result.totals[k]/result.samples[k]:null]));
  result.shooting=pairedShots>0?100*pairedGoals/pairedShots:null;return result;
 }
-module.exports={MatchTracker,aggregate,STATS,player,isFreePlay};
+module.exports={MatchTracker,aggregate,STATS,player,isFreePlay,isRecordableMatch};

@@ -14,11 +14,11 @@ const {randomUUID}=require('node:crypto');
 
 const {execFile}=require('node:child_process');
 
-const {MatchTracker,aggregate,isFreePlay}=require('./rocket-league-model.cjs');
+const {MatchTracker,aggregate,isRecordableMatch}=require('./rocket-league-model.cjs');
 
 const defaults={tracking:true,record:true,autoSession:true,eventFeed:true,keepHistory:true,mode:'auto',identity:'',port:49124,diagnostics:false};
 
-const matchOnly="COALESCE(json_extract(data,'$.game.PlaylistId'),-1) NOT IN (9,73)";
+const matchOnly="recordable_match(data)=1";
 let historyDays=365;
 let lastAccepted=0,lastEvent='',lastMatch=null,localIdentity='';
 
@@ -30,11 +30,11 @@ function storage(fn){try{return fn();}catch(e){error='Local storage unavailable:
 
 function put(key,value){return storage(()=>{db.prepare('INSERT OR REPLACE INTO config VALUES (?,?)').run(key,JSON.stringify(value));writes++;return true;});}
 
-function open(){mkdirSync(workerData.directory,{recursive:true});db=new DatabaseSync(path.join(workerData.directory,'history.sqlite'));db.exec('PRAGMA journal_mode=WAL; PRAGMA synchronous=NORMAL; PRAGMA busy_timeout=2000; CREATE TABLE IF NOT EXISTS config(key TEXT PRIMARY KEY,value TEXT NOT NULL); CREATE TABLE IF NOT EXISTS matches(id TEXT PRIMARY KEY,started INTEGER NOT NULL,status TEXT NOT NULL,session TEXT,data TEXT NOT NULL); CREATE INDEX IF NOT EXISTS matches_started ON matches(started DESC); CREATE INDEX IF NOT EXISTS matches_session ON matches(session,started); CREATE TABLE IF NOT EXISTS sessions(id TEXT PRIMARY KEY,started INTEGER,ended INTEGER);');
+function open(){mkdirSync(workerData.directory,{recursive:true});db=new DatabaseSync(path.join(workerData.directory,'history.sqlite'));db.function('recordable_match',{deterministic:true},data=>{try{return isRecordableMatch(JSON.parse(data))?1:0;}catch{return 0;}});db.exec('PRAGMA journal_mode=WAL; PRAGMA synchronous=NORMAL; PRAGMA busy_timeout=2000; CREATE TABLE IF NOT EXISTS config(key TEXT PRIMARY KEY,value TEXT NOT NULL); CREATE TABLE IF NOT EXISTS matches(id TEXT PRIMARY KEY,started INTEGER NOT NULL,status TEXT NOT NULL,session TEXT,data TEXT NOT NULL); CREATE INDEX IF NOT EXISTS matches_started ON matches(started DESC); CREATE INDEX IF NOT EXISTS matches_session ON matches(session,started); CREATE TABLE IF NOT EXISTS sessions(id TEXT PRIMARY KEY,started INTEGER,ended INTEGER);');
 
  const get=k=>{const row=db.prepare('SELECT value FROM config WHERE key=?').get(k);return row?JSON.parse(row.value):null;};settings={...defaults,...get('settings')};session=get('session');
 
- const previous=db.prepare("SELECT data FROM matches WHERE status IN ('complete','partial') AND COALESCE(json_extract(data,'$.game.PlaylistId'),-1) NOT IN (9,73) ORDER BY started DESC LIMIT 1").get();if(previous)lastMatch=JSON.parse(previous.data);
+ const previous=db.prepare("SELECT data FROM matches WHERE status IN ('complete','partial') AND recordable_match(data)=1 ORDER BY started DESC LIMIT 1").get();if(previous)lastMatch=JSON.parse(previous.data);
 
  const pending=get('pending');if(pending){pending.interrupted=true;pending.completeStart=false;pending.ended=false;saveMatch(pending);put('pending',null);}
 
@@ -46,7 +46,7 @@ function startSession(){if(session)endSession();session={id:randomUUID(),started
 
 function endSession(){if(session)storage(()=>db.prepare('UPDATE sessions SET ended=? WHERE id=?').run(Date.now(),session.id));session=null;put('session',null);dataRevision++;}
 
-function saveMatch(m){if(isFreePlay(m)){put('pending',null);return;}pruneHistory();if(m.ended)lastMatch=structuredClone(m);if(!settings.record||!settings.keepHistory)return;const saved=storage(()=>{
+function saveMatch(m){if(!isRecordableMatch(m)){put('pending',null);return;}pruneHistory();if(m.ended)lastMatch=structuredClone(m);if(!settings.record||!settings.keepHistory)return;const saved=storage(()=>{
 
  m.status=m.ended?(m.completeStart&&!m.interrupted?'complete':'partial'):'incomplete';
 
@@ -58,7 +58,7 @@ function saveMatch(m){if(isFreePlay(m)){put('pending',null);return;}pruneHistory
 
  });if(saved){failedSaves.delete(m.id);if(!failedSaves.size)error='';}else{if(failedSaves.size<8||failedSaves.has(m.id))failedSaves.set(m.id,m);else error='Storage unavailable; recovery queue is full. Free disk space and restart Dropzone.';if(!saveRetry)saveRetry=setTimeout(()=>{saveRetry=null;for(const item of [...failedSaves.values()])saveMatch(item);emit();},30000);}}
 
-const tracker=new MatchTracker({save:saveMatch,checkpoint:m=>{if(settings.record&&settings.keepHistory&&!isFreePlay(m)&&m.players.length)put('pending',m);}});
+const tracker=new MatchTracker({save:saveMatch,checkpoint:m=>{if(settings.record&&settings.keepHistory&&isRecordableMatch(m))put('pending',m);}});
 
 storage(open);
 
@@ -82,9 +82,9 @@ function connect(){if(stopped||!settings.tracking||socket)return;if(attempt===0|
 
  socket.onmessage=event=>{if(typeof event.data!=='string'||event.data.length>262144){tracker.malformed++;return;}try{const msg=JSON.parse(event.data);lastMessage=Date.now();if(msg.Event==='UpdateState'){clearTimeout(disconnectTimer);disconnectTimer=null;}rateCount++;if(lastMessage-rateStart>=1000){rate=rateCount*1000/(lastMessage-rateStart);rateStart=lastMessage;rateCount=0;}
 
- const accepted=tracker.ingest(msg);lastEvent=typeof msg.Event==='string'?msg.Event:'';if(accepted){lastAccepted=lastMessage;if(localIdentity&&settings.identity!==localIdentity&&tracker.match?.players.some(p=>p.PrimaryId===localIdentity))linkLocalIdentity();if(tracker.match&&!isFreePlay(tracker.match)&&tracker.match.players.length&&!session&&settings.autoSession&&settings.record&&settings.keepHistory&&tracker.match.id!==suppressedSessionMatch)startSession();if(tracker.match?.ended&&!endTimer)endTimer=setTimeout(()=>{endTimer=null;if(tracker.match?.ended)tracker.finish('Match ended');emit();},1500);
+ const accepted=tracker.ingest(msg);lastEvent=typeof msg.Event==='string'?msg.Event:'';if(accepted){lastAccepted=lastMessage;if(localIdentity&&settings.identity!==localIdentity&&tracker.match?.players.some(p=>p.PrimaryId===localIdentity))linkLocalIdentity();if(tracker.match&&isRecordableMatch(tracker.match)&&!session&&settings.autoSession&&settings.record&&settings.keepHistory&&tracker.match.id!==suppressedSessionMatch)startSession();if(tracker.match?.ended&&!endTimer)endTimer=setTimeout(()=>{endTimer=null;if(tracker.match?.ended)tracker.finish('Match ended');emit();},1500);
 
- if(tracker.match&&Date.now()-checkpointAt>30000){checkpointAt=Date.now();if(settings.record&&settings.keepHistory&&!isFreePlay(tracker.match)&&tracker.match.players.length)put('pending',tracker.match);}
+ if(tracker.match&&Date.now()-checkpointAt>30000){checkpointAt=Date.now();if(settings.record&&settings.keepHistory&&isRecordableMatch(tracker.match))put('pending',tracker.match);}
 
  emit();}else emit();}catch{tracker.malformed++;emit();}};
 

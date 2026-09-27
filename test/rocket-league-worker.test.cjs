@@ -22,7 +22,7 @@ test('real local WebSocket intake records to SQLite without hidden UI traffic, s
  const a=await tracker.request({action:'analytics',limit:10});assert.equal(a.career.wins,1);assert.equal(a.career.shooting,50);assert.equal(a.career.samples.Saves,undefined,'Missing saves were not treated as zero');
  await tracker.request({action:'visible',value:true});await until(()=>pushes>0);await tracker.request({action:'visible',value:false});
  send('ReplayCreated',{MatchGuid:'m1',FileName:'SavedReplay',Date:'2026-09-26'});update('m1');send('MatchEnded',{MatchGuid:'m1',WinnerTeamNum:0});send('MatchDestroyed',{MatchGuid:'m1'});await pause(50);assert.equal((await tracker.request({action:'history'})).total,1);
- for(const playlist of [9,73]){const id='practice-'+playlist;send('MatchCreated',{MatchGuid:id});send('UpdateState',{MatchGuid:id,Players:[{PrimaryId:'Epic|1|0',Name:'Truck',TeamNum:0}],Game:{PlaylistId:playlist,Teams:[]}});send('MatchEnded',{MatchGuid:id,WinnerTeamNum:0});send('PodiumStart',{MatchGuid:id});}await pause(80);assert.equal((await tracker.request({action:'history'})).total,1);const {DatabaseSync}=require('node:sqlite');const check=new DatabaseSync(path.join(directory,'history.sqlite'));assert.equal(check.prepare('SELECT count(*) n FROM matches').get().n,1,'Free Play must not be written to SQLite');check.close();
+ for(const playlist of [9,73,6]){const id='practice-'+playlist;send('MatchCreated',{MatchGuid:id});send('UpdateState',{MatchGuid:id,Players:[{PrimaryId:'Epic|1|0',Name:'Truck',TeamNum:0}],Game:{PlaylistId:playlist,Teams:[]}});send('MatchEnded',{MatchGuid:id,WinnerTeamNum:0});send('PodiumStart',{MatchGuid:id});}await pause(80);assert.equal((await tracker.request({action:'history'})).total,1);const {DatabaseSync}=require('node:sqlite');const check=new DatabaseSync(path.join(directory,'history.sqlite'));assert.equal(check.prepare('SELECT count(*) n FROM matches').get().n,1,'Free Play must not be written to SQLite');check.close();
  await assert.rejects(tracker.request({action:'replay',command:'SeekReplay',time:4}),/Open a replay/);
  await assert.rejects(tracker.request({action:'replay',command:'LoadReplay',file:'../bad'}),/filename/);
  await tracker.w.terminate();tracker=launch(directory);assert.equal((await tracker.request({action:'analytics'})).career.matches,1);assert.equal((await tracker.request({action:'state'})).lastMatch.id,'m1');
@@ -37,7 +37,7 @@ test('crash checkpoint is recovered as incomplete and a corrupt database fails i
  try{
   tracker=launch(directory);await tracker.request({action:'settings',value:{tracking:false}});await tracker.w.terminate();
   const db=new DatabaseSync(path.join(directory,'history.sqlite'));
-  db.prepare('INSERT OR REPLACE INTO config VALUES (?,?)').run('pending',JSON.stringify({id:'crashed',startedAt:Date.now(),completeStart:true,ended:false,players:[],game:{},events:[]}));db.close();
+  db.prepare('INSERT OR REPLACE INTO config VALUES (?,?)').run('pending',JSON.stringify({id:'crashed',startedAt:Date.now(),completeStart:true,ended:false,players:[{PrimaryId:'me',TeamNum:0}],game:{PlaylistId:11},events:[]}));db.close();
   tracker=launch(directory);const h=await tracker.request({action:'history'});assert.equal(h.total,1);assert.equal(h.matches[0].status,'incomplete');assert.equal((await tracker.request({action:'analytics'})).career.matches,0);await tracker.w.terminate();
   await writeFile(path.join(directory,'history.sqlite'),'not a sqlite database');tracker=launch(directory);const s=await tracker.request({action:'state'});assert.match(s.error,/storage unavailable/i);assert.deepEqual((await tracker.request({action:'history'})).matches,[]);
  }finally{await tracker?.w.terminate();await rm(directory,{recursive:true,force:true});}
@@ -55,4 +55,19 @@ test('player lookup and rolling history policy work with populated SQLite record
  await tracker.request({action:'history-policy',days:30});assert.equal((await tracker.request({action:'history',days:365})).total,1);assert.equal((await tracker.request({action:'analytics'})).career.matches,1);assert.equal(await tracker.request({action:'detail',id:'age-40'}),null);
  db=new DatabaseSync(path.join(directory,'history.sqlite'));assert.equal(db.prepare('SELECT count(*) n FROM matches').get().n,1);
  }finally{db?.close();await tracker.w.terminate();await rm(directory,{recursive:true,force:true});}
+});
+
+
+test('existing private practice and empty lifecycle rows stay out of history, recovery and cloud uploads',async()=>{
+ const {DatabaseSync}=require('node:sqlite');const directory=await mkdtemp(path.join(tmpdir(),'dropzone-rl-practice-'));let tracker=launch(directory);
+ try{
+  await tracker.request({action:'settings',value:{tracking:false,identity:'me'}});await tracker.w.terminate();
+  const db=new DatabaseSync(path.join(directory,'history.sqlite'));
+  const privateMatch={id:'real-private',startedAt:Date.now()-1000,status:'complete',ended:true,winner:0,players:[{PrimaryId:'me',TeamNum:0,Goals:1},{PrimaryId:'opponent',TeamNum:1,Goals:0}],game:{PlaylistId:6,Teams:[{TeamNum:0,Score:1},{TeamNum:1,Score:0}]},events:[]};
+  const practice={...privateMatch,id:'same-team-practice',startedAt:Date.now(),players:[{PrimaryId:'me',TeamNum:0},{PrimaryId:'friend',TeamNum:0}]};
+  for(const m of [privateMatch,practice,{...practice,id:'empty',players:[]}])db.prepare('INSERT INTO matches VALUES (?,?,?,?,?)').run(m.id,m.startedAt,m.status,null,JSON.stringify(m));
+  db.prepare('INSERT OR REPLACE INTO config VALUES (?,?)').run('pending',JSON.stringify({...practice,id:'practice-checkpoint'}));db.close();
+  tracker=launch(directory);const history=await tracker.request({action:'history'});assert.equal(history.total,1);assert.equal(history.matches[0].id,'real-private');assert.equal(await tracker.request({action:'detail',id:practice.id}),null);assert.equal((await tracker.request({action:'analytics'})).career.matches,1);assert.equal((await tracker.request({action:'state'})).lastMatch.id,'real-private');assert.deepEqual((await tracker.request({action:'cloud-records'})).map(m=>m.match_id),['real-private']);
+  const check=new DatabaseSync(path.join(directory,'history.sqlite'));assert.equal(check.prepare('SELECT count(*) n FROM matches').get().n,3,'Practice checkpoint must not be recovered as a saved match; existing rows are not deleted');check.close();
+ }finally{await tracker.w.terminate();await rm(directory,{recursive:true,force:true});}
 });
