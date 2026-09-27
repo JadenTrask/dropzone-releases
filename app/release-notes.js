@@ -1,7 +1,8 @@
 export const RELEASE_NOTES={
- version:'2.4.3',
- title:'Rocket League scrolling restored.',
+ version:'2.4.4',
+ title:'Focus on your ranked performance.',
  items:[
+  {title:'Ranked-only player stats',body:'Use All, Ranked or Casual in My profile and friend profiles. The selection updates every chart, total, personal record and match list, together with your chosen time period. Private games remain excluded.'},
   {title:'Scroll through the whole tracker',body:'Fixed a layout issue that prevented mouse-wheel scrolling through profiles, match history, settings and long scoreboards. The player sidebar also scrolls in shorter windows.'},
   {title:'Rocket League, redesigned',body:'A tighter workspace, cinematic scorelines, clearer match history and new player profiles. Your team comes first, and charts animate into view once.'},
   {title:'Build your Finals loadout',body:'Visual class selection, a new build browser and equipment layout, redesigned team setups, plus a fresh look for News and Videos. Source dates and patch-review status stay visible.'},

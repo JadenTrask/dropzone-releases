@@ -1,4 +1,8 @@
-# Dropzone 2.4.3
+# Dropzone 2.4.4
+
+Adds All / Ranked / Casual filters to personal and friend profiles. Filters apply consistently to overview statistics, performance charts, records, averages and profile match history, alongside the selected date range. Private and freeplay sessions remain excluded.
+
+## Included from 2.4.3
 
 Fixes a layout regression that prevented mouse-wheel scrolling in the Rocket League tracker. Profiles, match history, settings and long scoreboards now scroll within the app window. The player sidebar also remains accessible in shorter windows. Existing data and functionality are preserved.
 
