@@ -8,3 +8,20 @@
 .squad-invite-label{display:block;color:#daccc7;font-size:14px;margin-bottom:8px}
 .squad-visible-code{display:block;width:100%;box-sizing:border-box;resize:none;overflow-wrap:anywhere;white-space:pre-wrap;border:1px solid #6c5953;border-radius:8px;background:#1a1715;color:#f3d0c4;font:15px/1.6 monospace;padding:14px;user-select:all}
 .squad-page #squad-invite-help{font-size:13px;margin:8px 0 16px}
+
+/* Patch Watch is a focused setup flow, with room for readable results below. */
+#hub-app .intel-page{width:100%;max-width:960px;margin:0 auto;padding:40px 32px 64px;box-sizing:border-box}
+.intel-page .library-intro{margin-bottom:28px}
+.intel-page .library-intro h1{font-size:clamp(25px,2.4vw,34px);line-height:1.2;letter-spacing:-.8px}
+.intel-page .intel-controls{display:grid;grid-template-columns:minmax(160px,200px) minmax(0,1fr);align-items:start;gap:24px;margin:0;padding:24px;border:1px solid var(--dz-control-edge);border-radius:16px;background:var(--dz-control-well);box-shadow:var(--dz-control-highlight)}
+.intel-page .intel-controls label{min-width:0;font-size:13px;color:var(--dz-control-ink);gap:10px}
+.intel-page .intel-controls small{color:var(--dz-control-muted);font-size:12px}
+.intel-page .intel-controls :is(select,textarea){width:100%;min-width:0;box-sizing:border-box;border-color:var(--dz-control-edge);border-radius:10px;background:var(--dz-control-well);color:var(--dz-control-ink)}
+.intel-page .intel-controls textarea{min-height:110px;resize:vertical;line-height:1.6}
+.intel-page #intel-check{grid-column:2;justify-self:end}
+.intel-page .squad-share{display:flex;align-items:flex-start;gap:10px;padding:20px 4px;font-size:13px;line-height:1.6;color:var(--dz-control-muted)}
+.intel-page .squad-share input{flex:none;margin-top:4px;accent-color:var(--accent)}
+.intel-page #intel-results{margin-top:12px;line-height:1.6;color:var(--dz-control-ink)}
+.intel-page .intel-note{max-width:76ch;font-size:12px;color:var(--dz-control-muted);margin-top:12px}
+.intel-page .intel-card{background:var(--dz-control-well);border-color:var(--dz-control-edge);color:var(--dz-control-ink)}
+@media(max-width:700px){#hub-app .intel-page{padding:28px 20px 48px}.intel-page .intel-controls{grid-template-columns:minmax(0,1fr);padding:20px;gap:20px}.intel-page #intel-check{grid-column:1}}

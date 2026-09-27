@@ -1,0 +1,95 @@
+/* THE FINALS: shared materials and shell. Page modules own their composition. */
+html[data-game=finals]{
+ --fn-bg:#101113;--fn-surface:#1d2023b8;--fn-surface-2:#292b2f;--fn-text:#f4f1ec;--fn-muted:#a7a8ad;--fn-accent:#ff8657;--fn-border:#ffffff12;
+ --fn-space-1:4px;--fn-space-2:8px;--fn-space-3:12px;--fn-space-4:16px;--fn-space-6:24px;--fn-space-8:32px;--fn-space-12:48px;
+ --fn-radius:18px;--fn-ease:cubic-bezier(.22,1,.36,1);
+ --fn-control:linear-gradient(145deg,#c3cbd225,#7d879612);--fn-control-active:linear-gradient(145deg,#d7cdbd38,#9a9ca923);--fn-control-edge:#ecdfd62e;
+ --fn-control-shadow:inset 0 1px #ffffff19,inset 0 -1px #00000012,0 3px 8px #0000001f;color-scheme:dark;
+}
+html[data-game=finals] body,html[data-game=finals] #hub-app{background:var(--fn-bg);color:var(--fn-text)}
+html[data-game=finals] :is(.titlebar,.app-rail){background:#121315;border-color:#ffffff0a;color:#d8d7d4}
+html[data-game=finals] .titlebar{background:#0d0e10}
+html[data-game=finals] .app-rail .rail-link{color:#a4a7ac}
+html[data-game=finals] .app-rail .rail-link:hover{background:#ffffff07;color:#f5efe9}
+html[data-game=finals] .app-rail .rail-link[aria-current=page]{background:linear-gradient(115deg,#df6e3526,#ffac5510);border-color:#f9ac6d26;color:#ffd1b1;box-shadow:inset 2px 0 #f39157}
+html[data-game=finals] .rail-section-label{color:#74777c}
+html[data-game=finals] .game-tabs-shell{padding:8px clamp(20px,3vw,48px);background:linear-gradient(110deg,#242a30b8,#232426a8 60%,#372b224a);backdrop-filter:blur(14px);border:0;box-shadow:inset 0 1px #ffffff05,0 1px #ffffff08;z-index:12}
+html[data-game=finals] .game-tabs-inner{min-height:42px;max-width:1560px;margin:auto;width:100%}
+html[data-game=finals] .game-page-tabs{gap:6px;flex-wrap:nowrap;align-items:center;min-width:0}
+html[data-game=finals] #game-tabs-name{display:inline-flex;align-items:center;color:#f3eee8;font-size:12px;letter-spacing:.07em;font-weight:800;margin-right:24px;white-space:nowrap}
+html[data-game=finals] #game-tabs-name:before{content:'';display:block;width:3px;height:18px;background:var(--fn-accent);transform:skew(-15deg);margin-right:10px;border-radius:1px}
+html[data-game=finals] .game-page-tabs button{min-height:38px;padding:9px 15px;border:0;border-bottom:0!important;border-radius:10px;font-size:12px;font-weight:550;background:transparent;color:#a7adb7;box-shadow:none;transform:none;transition:background-color 180ms,color 180ms,box-shadow 180ms}
+html[data-game=finals] .game-page-tabs button::after{display:none;content:none}
+html[data-game=finals] .game-page-tabs button.active{color:#fff4e9;background:var(--fn-control-active);box-shadow:inset 0 1px #ffffff19,0 3px 8px #0002}
+html[data-game=finals] .game-page-tabs button:hover{color:#fff4e9;transform:none}
+html[data-game=finals] .game-page-tabs button:hover:not(.active){background:#c5d2df0b;box-shadow:none}
+html[data-game=finals] #hub-app .hub-main{--page-content-width:1560px;--page-gutter:clamp(20px,3vw,48px);padding-block:32px 48px;background:radial-gradient(ellipse 1050px 650px at 78% 0,#966b3510,transparent 80%),radial-gradient(ellipse 800px 700px at 0 80%,#5c575509,transparent 75%),var(--fn-bg);color:var(--fn-text);font-family:Inter,'Segoe UI',sans-serif;line-height:1.5}
+html[data-game=finals] #hub-app .hub-main.fn-media-page{--page-content-width:1400px}
+html[data-game=finals] #hub-app :is(h1,h2,h3,h4){font-family:inherit;text-transform:none}
+html[data-game=finals] #hub-app .hub-eyebrow{font:650 10px/1.4 Inter,'Segoe UI',sans-serif;color:#b79d87;letter-spacing:.13em}
+html[data-game=finals] #hub-app :is(.hub-button,.fn-button,button.select-control){display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:40px;padding:10px 16px;border:1px solid #ffc09d40;border-radius:10px;background:linear-gradient(160deg,#ffac75,#f57e4c);color:#24170f;font:650 12px/1.3 Inter,'Segoe UI',sans-serif;box-shadow:inset 0 1px #fff2;cursor:pointer;transition:transform 160ms,background-color 160ms,border-color 160ms,box-shadow 160ms}
+html[data-game=finals] #hub-app :is(.hub-button.secondary,.fn-button.secondary,button.select-control){background:#f6eee807;border-color:#fff1;color:#d5d5d6;box-shadow:inset 0 1px #ffffff04}
+html[data-game=finals] #hub-app :is(.hub-button,.fn-button,button.select-control):hover{border-color:#ffbf8c5c;box-shadow:0 4px 14px #0002;transform:translateY(-1px)}
+html[data-game=finals] #hub-app button:active:not(:disabled){transform:translateY(1px)}
+html[data-game=finals] #hub-app button:disabled{opacity:.45;cursor:default;transform:none}
+html[data-game=finals] #hub-app :is(input,select,textarea){background:#0f101388;border:1px solid #ffffff20;color:#f4f1ec;border-radius:10px;font:inherit;font-size:13px;padding:10px 12px;min-width:0;max-width:100%;accent-color:var(--fn-accent)}
+html[data-game=finals] #hub-app input::placeholder{color:#919297}
+html[data-game=finals] :is(button,a,input,select,summary):focus-visible{outline:2px solid #ffac75!important;outline-offset:3px}
+html[data-game=finals] #hub-app .source-link{color:#c5b9ac;font-size:12px}
+html[data-game=finals] #hub-app .source-link:hover{color:#ffbd90}
+html[data-game=finals] .source-status{font:500 11px/1.5 Inter,'Segoe UI',sans-serif;color:#beb9b1}
+html[data-game=finals] .source-status>summary{min-height:38px;padding:8px 12px;border-radius:99px;border-color:#ffc27922;background:#eaaa3b08;color:#d5bc8e}
+html[data-game=finals] .source-status-label{max-width:240px}
+html[data-game=finals] .source-status-detail{left:auto;right:0;border:1px solid #ffc38b20;border-radius:14px;padding:18px;background:#242326f5;backdrop-filter:blur(12px);box-shadow:0 12px 36px #0006;color:#d7d3ce;font-size:12px;line-height:1.7;animation:fn-pop-in 150ms var(--fn-ease)}
+html[data-game=finals] .select-options{padding:6px;background:#252628f5!important;backdrop-filter:blur(12px);border:1px solid #ffc29a24!important;border-radius:12px;box-shadow:0 16px 32px #0006;animation:fn-pop-in 150ms var(--fn-ease)}
+html[data-game=finals] .select-options button{border-radius:7px;color:#dedbd7!important;background:transparent!important}
+html[data-game=finals] .select-options button[aria-selected=true]{background:#ed90542a!important;color:#ffdcc0!important}
+html[data-game=finals] .select-options button:hover{background:#ffffff08!important}
+html[data-game=finals] .select-control svg{color:#d8aa84!important;stroke:currentColor!important}
+html[data-game=finals] .hub-main [hidden]{display:none!important}
+/* Match Rocket League's frosted controls, with a restrained warm tint.
+   Blur belongs to the shared toolbar and small action controls, never each card. */
+html[data-game=finals] #hub-app :is(.hub-button,.fn-button,button.select-control,.fn-icon-button){background:var(--fn-control);color:#f2eeea;border:1px solid var(--fn-control-edge);border-radius:10px;box-shadow:var(--fn-control-shadow);backdrop-filter:blur(8px)}
+html[data-game=finals] #hub-app :is(.hub-button.secondary,.fn-button.secondary,button.select-control,.fn-icon-button){background:linear-gradient(145deg,#bdc7d21c,#9babb80a);color:#d9dee3;border-color:#d9e3ec22}
+html[data-game=finals] #hub-app :is(.hub-button:not(.secondary),.fn-primary-button){background:linear-gradient(145deg,#b9805666,#68504648);color:#ffe6cc;border-color:#ffc89942;box-shadow:inset 0 1px #ffe8ce29,inset 0 -1px #00000018,0 4px 12px #0002}
+html[data-game=finals] #hub-app :is(.hub-button,.fn-button,button.select-control,.fn-icon-button):hover:not(:disabled){background-color:#d2dde317;border-color:#f0d4b85e;color:#fff8f1;box-shadow:inset 0 1px #ffffff26,0 4px 12px #0002}
+html[data-game=finals] #hub-app :is(.fn-workspace-switch,.fn-media-segments,.fn-team-selector){background:linear-gradient(150deg,#303a413b,#12151b54);border-color:#d8e4f01a;box-shadow:inset 0 1px #ffffff05}
+html[data-game=finals] #hub-app :is(.fn-workspace-switch,.fn-media-segments)>button{border:1px solid transparent;color:#aeb5be;border-radius:9px}
+html[data-game=finals] #hub-app :is(.fn-workspace-switch,.fn-media-segments)>button:is(.active,[aria-pressed=true]){background:var(--fn-control-active);border-color:var(--fn-control-edge);box-shadow:var(--fn-control-shadow);color:#fff3e7}
+html[data-game=finals] #hub-app :is(.fn-class-choice,.fn-build-option,.fn-composition-choice){background:linear-gradient(130deg,#abb6c215,#899aaa05);border-color:#dce5ee1a;box-shadow:inset 0 1px #ffffff08}
+html[data-game=finals] #hub-app :is(.fn-class-choice,.fn-build-option,.fn-composition-choice).active{background:linear-gradient(130deg,#b7ac9630,#85919f14);border-color:#e6c09b50;box-shadow:inset 0 1px #ffffff19,inset 2px 0 #efb080,0 4px 12px #00000017}
+html[data-game=finals] #hub-app :is(.fn-class-choice,.fn-build-option,.fn-composition-choice):hover{background-color:#c1cbd208;border-color:#eddbca50}
+html[data-game=finals] #hub-app .fn-build-actions>.source-link{padding:10px 14px;min-height:38px;border:1px solid #e5e9ee16;border-radius:10px;background:linear-gradient(145deg,#c3cbd212,#7d879609);color:#bcc6d0;box-shadow:inset 0 1px #ffffff08}
+html[data-game=finals] #hub-app :is(.fn-primary-button,[data-finals-copy-saved]).is-copied{color:#d2f4df;background:linear-gradient(145deg,#568c7466,#355c4844);border-color:#9ae3b94d;opacity:1}
+@keyframes fn-pop-in{from{opacity:0;transform:translateY(-3px) scale(.98)}to{opacity:1;transform:none}}
+@media(min-width:2400px){
+ html[data-game=finals] #hub-app .hub-main{--page-content-width:2048px;padding-top:40px}
+ html[data-game=finals] #hub-app .hub-main.fn-media-page{--page-content-width:1920px}
+ html[data-game=finals] .game-tabs-inner{max-width:2048px}
+ html[data-game=finals] #hub-app .fn-loadouts-container{max-width:none}
+ html[data-game=finals] #hub-app .fn-loadout-workspace{grid-template-columns:320px minmax(0,1fr);gap:32px}
+ html[data-game=finals] #hub-app .fn-class-choice{min-height:116px}
+ html[data-game=finals] #hub-app .fn-build-intro{min-height:162px}
+ html[data-game=finals] #hub-app .fn-weapon-stage{min-height:250px}
+ html[data-game=finals] #hub-app .fn-equipment{padding:24px}
+ html[data-game=finals] #hub-app .fn-equipment strong{font-size:17px}
+ html[data-game=finals] #hub-app .fn-build-option-copy strong{font-size:15px}
+ html[data-game=finals] #hub-app .fn-build-option-copy :is(span,small){font-size:12px}
+}
+@media(min-width:3200px){
+ html[data-game=finals] #hub-app .hub-main{--page-content-width:2320px}
+ html[data-game=finals] #hub-app .hub-main.fn-media-page{--page-content-width:2160px}
+ html[data-game=finals] .game-tabs-inner{max-width:2320px}
+ html[data-game=finals] #hub-app .fn-page-intro h1{font-size:48px}
+ html[data-game=finals] #hub-app .fn-loadout-workspace{grid-template-columns:340px minmax(0,1fr)}
+ html[data-game=finals] #hub-app .fn-class-selector{margin-bottom:32px}
+ html[data-game=finals] #hub-app .fn-build-intro{min-height:176px}
+ html[data-game=finals] #hub-app .fn-weapon-stage{min-height:280px}
+ html[data-game=finals] #hub-app .fn-build-actions{padding-block:28px}
+}
+@media(max-width:900px){html[data-game=finals] #hub-app .hub-main{padding-block:24px 36px}html[data-game=finals] .game-tabs-shell{padding:8px 20px}html[data-game=finals] #game-tabs-name{margin-right:10px}}
+@container(max-width:760px){html[data-game=finals] #hub-app .finals-page .source-status-detail{left:0;right:auto}}
+@media(max-width:700px){html[data-game=finals] #hub-app .fn-media-page .source-status-detail{left:0;right:auto}}
+@media(max-width:580px){html[data-game=finals] #game-tabs-name{display:none}html[data-game=finals] .game-page-tabs{width:100%;justify-content:space-between}html[data-game=finals] .game-page-tabs button{padding-inline:12px}html[data-game=finals] #hub-app .hub-main{--page-gutter:16px}html[data-game=finals] .source-status-label{max-width:190px}}
+@media(prefers-reduced-motion:reduce){html[data-game=finals] *,html[data-game=finals] *:before,html[data-game=finals] *:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+html.cc-reduced-motion[data-game=finals] *,html.cc-reduced-motion[data-game=finals] *:before,html.cc-reduced-motion[data-game=finals] *:after{animation:none!important;transition:none!important}

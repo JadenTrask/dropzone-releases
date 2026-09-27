@@ -1,27 +1,33 @@
 /* Fixed-size artwork and rows: expanding the rail never reflows its contents. */
 html:root,body{--rail-width:72px}
-.app-rail{position:relative;z-index:60;width:72px;box-sizing:border-box;align-self:stretch;padding:18px 8px 12px;overflow-x:hidden;transition:none;will-change:auto;scrollbar-width:none}
-.app-rail:hover,.app-rail:has(:focus-visible){width:256px;box-shadow:14px 0 32px #0005}
+.app-rail{position:relative;z-index:60;width:72px;box-sizing:border-box;align-self:stretch;padding:18px 8px 12px;overflow-x:hidden;transition:width 240ms cubic-bezier(.22,1,.36,1),background-color 350ms ease,box-shadow 240ms ease;will-change:auto;scrollbar-width:none}
+.app-rail:not(.rail-hover-locked):hover,.app-rail:has(:focus-visible){width:256px;box-shadow:14px 0 32px #0005}
 .app-rail .rail-brand{width:232px;min-width:232px;padding-left:10px;gap:14px;box-sizing:border-box}
 .app-rail .rail-main,.app-rail .rail-games,.app-rail .rail-utilities{width:240px;gap:4px}
-.app-rail .rail-link{box-sizing:border-box;position:relative;width:56px;min-height:48px;gap:12px;padding:7px;white-space:nowrap;justify-content:flex-start;flex-shrink:0;transition:background-color 120ms ease,color 120ms ease;border-radius:9px}
-.app-rail:hover .rail-link,.app-rail:has(:focus-visible) .rail-link{width:240px}
+.app-rail .rail-link{box-sizing:border-box;position:relative;width:56px;min-height:48px;gap:12px;padding:7px;white-space:nowrap;justify-content:flex-start;flex-shrink:0;transition:width 240ms cubic-bezier(.22,1,.36,1),background-color 180ms ease,border-color 180ms ease,color 180ms ease,box-shadow 180ms ease;border-radius:11px}
+.app-rail:not(.rail-hover-locked):hover .rail-link,.app-rail:has(:focus-visible) .rail-link{width:240px}
 .app-rail .rail-link .icon{flex:none;margin-left:9px}
-.app-rail .rail-game{height:52px;color:#d9e0e7}
-.app-rail .rail-game>img{display:block!important;flex:none;width:40px;height:40px;object-fit:cover;object-position:center;border-radius:7px;margin:0;border:1px solid #ffffff20;opacity:1;filter:none;box-sizing:border-box;transition:none}
-.app-rail .rail-game>span:first-of-type{flex:none;width:128px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-size:12px;line-height:1.4;font-weight:600}
+.app-rail .rail-game{height:56px;color:#c6cdd6;border:1px solid transparent;background:transparent}
+.app-rail .rail-game>img{display:block!important;flex:none;width:40px;height:40px;object-fit:cover;object-position:center;border-radius:8px;margin:0;border:1px solid #ffffff26;opacity:1;filter:none;box-sizing:border-box;box-shadow:0 2px 5px #0003;transition:none}
+.app-rail .rail-game[data-route=sotf]>img{object-position:68% center}
+.app-rail .rail-game>span:first-of-type{flex:none;width:128px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-size:12px;line-height:1.4;font-weight:600;letter-spacing:.05px}
 .app-rail .rail-game-upcoming>span:first-of-type{width:104px}
-.app-rail .rail-soon{flex:none;font-size:9px;margin:0;padding:2px 4px}
-.app-rail .rail-brand>span,.app-rail .rail-link>span,.app-rail .rail-section-label,.app-rail .rail-footer{opacity:0;pointer-events:none;transition:opacity 110ms ease;transform:none}
-.app-rail:hover .rail-brand>span,.app-rail:has(:focus-visible) .rail-brand>span,.app-rail:hover .rail-link>span,.app-rail:has(:focus-visible) .rail-link>span,.app-rail:hover .rail-section-label,.app-rail:has(:focus-visible) .rail-section-label,.app-rail:hover .rail-footer,.app-rail:has(:focus-visible) .rail-footer{opacity:1;pointer-events:auto}
+.app-rail .rail-soon{flex:none;font-size:9px;font-weight:500;margin:0;padding:3px 5px;border-radius:5px;border-color:#ffffff12;color:#a7b1bd;background:#ffffff05;line-height:1.2}
+.app-rail .rail-brand>span,.app-rail .rail-link>span,.app-rail .rail-section-label,.app-rail .rail-footer{opacity:0;pointer-events:none;transition:opacity 180ms ease;transform:none}
+.app-rail:not(.rail-hover-locked):hover .rail-brand>span,.app-rail:has(:focus-visible) .rail-brand>span,.app-rail:not(.rail-hover-locked):hover .rail-link>span,.app-rail:has(:focus-visible) .rail-link>span,.app-rail:not(.rail-hover-locked):hover .rail-section-label,.app-rail:has(:focus-visible) .rail-section-label,.app-rail:not(.rail-hover-locked):hover .rail-footer,.app-rail:has(:focus-visible) .rail-footer{opacity:1;pointer-events:auto}
 .app-rail .rail-link>span[aria-hidden=true]{opacity:1!important;pointer-events:none}
 .app-rail .rail-section-label{width:232px;box-sizing:border-box;min-height:36px;padding:16px 8px 8px;white-space:nowrap}
 .app-rail .rail-footer{width:220px;white-space:nowrap}
 .app-rail .update-badge{font-size:12px;min-height:44px;padding-left:16px;white-space:nowrap}
 .app-rail .update-badge:before{flex:none;width:8px;height:8px;margin:0 4px}
-.app-rail .rail-link:hover{background:#ffffff09}
-.app-rail .rail-link[aria-current=page]{background:#ee603815;border-color:#ee603840;color:#ffab87}
-@media(max-width:740px){.app-rail:hover .rail-link>span,.app-rail:has(:focus-visible) .rail-link>span,.app-rail:hover .rail-brand>span,.app-rail:has(:focus-visible) .rail-brand>span{display:block}.app-rail .rail-games{margin-top:8px}}
+.app-rail .rail-link:hover{background:linear-gradient(130deg,#ffffff0c,#ffffff05);border-color:#ffffff12;color:#edf2f8}
+/* Match the restrained team-specific surfaces, without changing either approved theme. */
+html:not(.rl-workspace-active):not([data-game=finals]) .app-rail .rail-link[aria-current=page]{background:linear-gradient(125deg,color-mix(in srgb,var(--game-accent,#a7c7dd) 13%,#212931 87%),#1b242cc2);border-color:color-mix(in srgb,var(--game-accent,#a7c7dd) 28%,transparent);color:#f0f4f8;box-shadow:inset 2px 0 color-mix(in srgb,var(--game-accent,#a7c7dd) 80%,#d2e3f3),inset 0 1px #ffffff06,0 2px 6px #0002}
+html:not(.rl-workspace-active):not([data-game=finals]) .app-rail .rail-link[aria-current=page] .icon{color:#d9e5ef}
+html[data-appearance=light]:not(.rl-workspace-active):not([data-game=finals]) .app-rail .rail-link[aria-current=page]{background:linear-gradient(125deg,#f7fbffed,#e1eaf3d4)!important;border-color:#7e98b85c!important;color:#203246!important;box-shadow:inset 2px 0 #7393b5,inset 0 1px #fff,0 2px 6px #2032460c}
+html[data-appearance=light]:not(.rl-workspace-active):not([data-game=finals]) .app-rail .rail-link[aria-current=page] .icon{color:#385573!important}
+html[data-appearance=light] .app-rail .rail-soon{color:#576679;border-color:#53688024;background:#ffffff40}
+@media(max-width:740px){.app-rail:not(.rail-hover-locked):hover .rail-link>span,.app-rail:has(:focus-visible) .rail-link>span,.app-rail:not(.rail-hover-locked):hover .rail-brand>span,.app-rail:has(:focus-visible) .rail-brand>span{display:block}.app-rail .rail-games{margin-top:8px}}
 @media(prefers-reduced-motion:reduce){.app-rail,.app-rail *{transition:none!important}}
 
 /* Auto horizontal margins from .hub-main collapsed the empty native slot. */
@@ -31,3 +37,8 @@ html:root,body{--rail-width:72px}
 .mf-page .mf-heading{flex-wrap:wrap}.mf-page .mf-tabs{flex-wrap:wrap}
 .mf-page .mf-placeholder{max-width:none;margin:0}
 .mf-page .mf-footer{line-height:1.5}
+
+/* Override legacy hover rules while navigation is settling. */
+.app-rail.rail-hover-locked{width:72px;box-shadow:none}
+.app-rail.rail-hover-locked .rail-link{width:56px}
+.app-rail.rail-hover-locked .rail-brand>span,.app-rail.rail-hover-locked .rail-link>span,.app-rail.rail-hover-locked .rail-section-label,.app-rail.rail-hover-locked .rail-footer{opacity:0;pointer-events:none}

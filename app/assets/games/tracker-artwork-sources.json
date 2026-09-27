@@ -2,5 +2,37 @@
   {
     "game": "rocket-league",
     "source": "https://shared.akamai.steamstatic.com/store_item_assets/steam/apps/252950/header.jpg"
+  },
+  {
+    "game": "lol",
+    "use": "navigation",
+    "file": "lol-official.jpg",
+    "source": "https://cmsassets.rgpub.io/sanity/images/dsfx7636/news/565197caf987af4e4da307df6e2b235a28714736-837x469.jpg?accountingTag=LoL",
+    "officialPage": "https://www.leagueoflegends.com/en-us/",
+    "owner": "Riot Games"
+  },
+  {
+    "game": "siege",
+    "use": "navigation",
+    "file": "siege-icon-official.jpg",
+    "source": "https://shared.akamai.steamstatic.com/community_assets/images/apps/359550/624745d333ac54aedb1ee911013e2edb7722550e.jpg",
+    "officialPage": "https://store.steampowered.com/app/359550/Tom_Clancys_Rainbow_Six_Siege/",
+    "owner": "Ubisoft"
+  },
+  {
+    "game": "sotf",
+    "use": "navigation",
+    "file": "sotf-official.jpg",
+    "source": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1326470/header.jpg?t=1708624856",
+    "officialPage": "https://store.steampowered.com/app/1326470/Sons_Of_The_Forest/",
+    "owner": "Endnight Games / Newnight"
+  },
+  {
+    "game": "wardogs",
+    "use": "navigation",
+    "file": "wardogs-official.jpg",
+    "source": "https://shared.fastly.steamstatic.com/store_item_assets/steam/apps/1867240/59d4daf753bd5d982e6675f7eee363bc817c574e/header.jpg?t=1789503126",
+    "officialPage": "https://store.steampowered.com/app/1867240/WARDOGS/",
+    "owner": "BULKHEAD / Team17"
   }
 ]

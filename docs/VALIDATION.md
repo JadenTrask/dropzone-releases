@@ -172,3 +172,36 @@ This was a real backend/auth flow, not a complete installed-app GUI account walk
 ## 2.4.1 practice recording fix
 
 Read-only validation against the installed database excluded four one-sided private sessions while preserving all 15 completed private matches. Regression coverage includes private practice intake, existing history/detail/analytics filtering, pending crash recovery, cloud upload exclusion, and opponents leaving after being observed. Existing user database files were not modified.
+
+## 2.4.2 local preview
+
+No publication authorized. Added arbitrary named local match groups with create/rename/delete, membership and queue filters. Private and unknown queues are excluded from local aggregates and both profile views; raw private cloud records remain available. Group persistence and deletion isolation are covered by SQLite integration tests. Rendered live, history, profile and settings at 1560px; profile also checked at 760px. No horizontal document overflow. Verified dropdown blue, app rail blue in tracker and original dark on exit, and 240ms width transitions. Render checks used isolated sample data, not user records.
+
+## Local 2.4.2 follow-up: open tracker layouts and coaching
+
+Profiles and charts now use open sections and a shared stats strip; live and match-detail views use separate team tables with a larger scoreline. Friends and requests have separate tabs. App-wide request polling deduplicates bottom-right toasts, which slide away after five seconds. Active tracking has a green pulsing navigation control with reduced-motion support.
+
+The new coaching feature is described in COACHING-OVERLAY.md. Source-only Electron visual checks cover the redesigned pages, drawing controls and PNG composition. The real Rocket League display/input/performance matrix remains unverified because the game was not running. No further installer build, push or publication was performed.
+
+
+### Local tracker polish and focus restoration (2026-09-27)
+- 218 tests passed, including local-team score/roster order, retained coaching lifecycle across focus loss, legacy shortcut migration, and rail hover lock.
+- Source Electron overlay tested against the running Rocket League client at 3840×2160 physical / 150% scaling. A separate foreground test window suspended drawing; explicitly returning Rocket League to foreground restored the same overlay. Escape hid it and released input.
+- Fresh wide and 760px preview captures: no document overflow. Orange-team score labels aligned with score centers; donut animation reached 360 degrees. Shared profile styling applies to personal and friend profiles.
+- No FPS/frametime benchmark performed. No installer built or release published for this change set.
+
+## 2.4.2 release preparation — September 27, 2026
+
+The user requested the Rocket League and THE FINALS redesigns, followed by frosted controls and consistent game navigation throughout Dropzone. Publication was initially authorized, then explicitly paused again on September 27 before any push or release. The current update remains local for review.
+
+The application suite passes **238/238 tests**, including coaching lifecycle and drawing history, private/practice match exclusion, match groups, profile aggregation, friend notifications, rail hover behavior and official artwork routing, Finals loadout selection/copy, and News/Video lifecycle behavior. The archive-to-Latest uploads regression clears the stale event heading and player. News preview regressions cover removal of Steam media payloads, readable truncation, and repairing saved/offline excerpts without changing source timestamps or stored data.
+
+Rocket League source visual QA covers 40 normal/narrow/large/4K states and eight additional motion captures. THE FINALS covers 52 rendered states plus targeted status-menu, wide-layout and archive-switching follow-ups. See `rl-redesign-qa.md` and `finals-redesign-qa.md` for exact coverage, evidence locations and limitations. These are rendered source checks with isolated data, not a claim of live game performance or an installed upgrade.
+
+Version metadata and in-app release notes target stable 2.4.2. Release packaging must pass the existing exact-commit archive comparison, Windows x64 check, source ZIP completeness, and updater size/SHA512 verification. The publishing workflow also downloads and verifies all four uploaded assets before making the release latest stable. No FPS/frametime benchmark or complete multi-monitor/controller test matrix is claimed.
+
+The later app-wide control, map and player-sidebar follow-ups are verified from source. See [Shared controls and full application visual QA](shared-controls-qa.md) for the inspected page families, corrected findings, screenshot evidence and limits. The earlier local installer predates these final changes and must be rebuilt before distribution. No push, publication or new download was supplied during this final review.
+
+### Final 2.4.2 release candidate
+
+The user subsequently authorized publication before the website refresh. The final source was rebuilt into a Windows x64 installer on September 27, and the full suite passed again: **238 tests, zero failures**. This build includes the final shared controls, player sidebar, map controls and dialog fixes. Publication uses the existing `main` release workflow and its exact-commit packaging, full source archive, updater checksum and uploaded-asset verification gates. A successful local build does not imply a native installed upgrade or FPS benchmark.

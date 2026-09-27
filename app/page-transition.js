@@ -1,7 +1,9 @@
 let current;
 export async function transitionPage(render){
  current?.skipTransition();
- if(!document.startViewTransition||matchMedia('(prefers-reduced-motion: reduce)').matches||document.documentElement.classList.contains('cc-reduced-motion'))return render();
+ // View-transition snapshots paint above the splash, even with its high z-index.
+ // Render behind it until its exit finishes; later navigation keeps the crossfade.
+ if(document.querySelector('.dz-intro')||!document.startViewTransition||matchMedia('(prefers-reduced-motion: reduce)').matches||document.documentElement.classList.contains('cc-reduced-motion'))return render();
  // Browser snapshots preserve canvas pixels, scrolling, and the existing layout.
  // Await the destination's initial render before starting a single crossfade.
  const transition=document.startViewTransition(async()=>{await render();});current=transition;

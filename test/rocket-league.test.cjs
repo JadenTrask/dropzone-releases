@@ -17,7 +17,7 @@ test('unknown and malformed data stay bounded and absent stats remain unknown',(
  const t=new MatchTracker();assert.equal(t.ingest(null),false);assert.equal(t.ingest({Event:'UpdateState',Data:{Players:[]}}),false);t.ingest(event('MatchCreated'));const p=packet();delete p.Data.Players[0].Touches;t.ingest(p);assert.equal(t.match.players[0].Touches,null);for(let i=0;i<1000;i++)t.ingest(event('StatfeedEvent','a',{EventName:'Save',MainTarget:player}));assert.equal(t.match.events.length,256);assert.equal(t.ingest(event('Unknown')),false);
 });
 test('win streak and overtime statistics follow chronological complete matches',()=>{
- const matches=[0,0,1,0].map((winner,i)=>({id:String(i),startedAt:i,status:'complete',winner,overtime:i<2,players:[player]}));const a=aggregate(matches,player.PrimaryId);assert.equal(a.bestStreak,2);assert.equal(a.currentStreak,1);assert.equal(a.overtimeWins,2);assert.equal(a.winRate,75);
+ const matches=[0,0,1,0].map((winner,i)=>({id:String(i),startedAt:i,status:'complete',game:{PlaylistId:11},winner,overtime:i<2,players:[player]}));const a=aggregate(matches,player.PrimaryId);assert.equal(a.bestStreak,2);assert.equal(a.currentStreak,1);assert.equal(a.overtimeWins,2);assert.equal(a.winRate,75);
 });
 
 test('actual game JSON-string Data payloads render live stats and reject invalid inner JSON',()=>{
@@ -30,3 +30,5 @@ test('private practice waits for an opponent and keeps evidence when opponents l
  const next=packet('a',{PlaylistId:6});next.Data.Players.push({...player,PrimaryId:'opponent',TeamNum:1});t.ingest(next);assert.equal(isRecordableMatch(t.match),true);
  t.ingest(packet('a',{PlaylistId:6}));assert.equal(isRecordableMatch(t.match),true,'Leaving opponents remain part of the match roster');
 });
+
+test('career stats include casual and ranked only',()=>{const rows=[2,11,6,9,73,null,34].map((PlaylistId,i)=>({id:String(i),status:'complete',winner:0,game:{PlaylistId},players:[player,{...player,PrimaryId:'other',TeamNum:1}]}));assert.equal(aggregate(rows,player.PrimaryId).matches,2);});

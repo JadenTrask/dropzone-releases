@@ -1,4 +1,4 @@
-const {app,BrowserWindow,WebContentsView,ipcMain,dialog,shell,clipboard,session,powerMonitor,globalShortcut,screen}=require('electron');
+const {app,BrowserWindow,WebContentsView,ipcMain,dialog,shell,clipboard,session,powerMonitor,globalShortcut,screen,desktopCapturer,nativeImage}=require('electron');
 const path=require('node:path');
 const fs=require('node:fs/promises');
 const {createServices}=require('../core/services.cjs');
@@ -48,8 +48,12 @@ app.whenReady().then(async()=>{
   const handle=(name,fn)=>ipcMain.handle(name,(e,...args)=>{if(!trusted(e))throw new Error('Untrusted caller.');return fn(...args);});
   const rocketLeague=require('./rocket-league.cjs').createRocketLeague({directory:path.join(app.getPath('userData'),'rocket-league'),window,app});
   handle('rocket-league',input=>rocketLeague.command(input));
+  const coaching=require('./coaching-overlay.cjs').createCoachingOverlay({BrowserWindow,globalShortcut,screen,ipcMain,desktopCapturer,nativeImage,shell,directory:path.join(app.getPath('userData'),'rocket-league'),main:window,getReplay:async()=>{const state=await rocketLeague.command({action:'state'});return state.status==='replay';},onError:message=>{void dialog.showMessageBox({type:'info',title:'Coaching overlay',message});}});
+  handle('coaching',input=>coaching.command(input));
+  app.on('before-quit',()=>coaching.destroy());
+  window.on('closed',()=>coaching.destroy());
   window.on('closed',()=>rocketLeague.destroy());
-  const quickPanel=require('./quick-panel.cjs').createQuickPanel({window,globalShortcut,screen});
+  const quickPanel=require('./quick-panel.cjs').createQuickPanel({window,globalShortcut,screen,desktopCapturer,nativeImage});
   handle('quick-panel',input=>quickPanel.command(input));
   window.on('closed',()=>quickPanel.destroy());
   const metaforgePanel=require('./metaforge-panel.cjs').createMetaForgePanel({main:window,WebContentsView,BrowserWindow,session});

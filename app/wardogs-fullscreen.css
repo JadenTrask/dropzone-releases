@@ -15,7 +15,7 @@
 #hub-app .wd-fixed .wd-map-toolbar{position:absolute;inset:12px 12px auto;z-index:8;border:0;background:transparent!important;padding:0;display:flex;justify-content:space-between;gap:12px;pointer-events:none;box-shadow:none}
 #hub-app .wd-fixed .wd-map-toolbar :is(.wd-tools,.wd-view-tools){display:flex;gap:5px;flex-wrap:wrap;margin:0;pointer-events:none}
 #hub-app .wd-fixed .wd-map-toolbar .wd-view-tools{justify-content:flex-end}
-#hub-app .wd-fixed .wd-map-toolbar button{pointer-events:auto;display:grid;place-items:center;width:40px;height:40px;min-height:40px;padding:9px;border:1px solid #ffffff29;border-radius:10px;background:#111817eb!important;color:#e8eeeb!important;box-shadow:0 3px 12px #0004;backdrop-filter:blur(12px);transition:background .15s,transform .15s}
+#hub-app .wd-fixed .wd-map-toolbar button{pointer-events:auto;display:grid;place-items:center;width:40px;height:40px;min-height:40px;padding:9px;border:1px solid #ffffff29;border-radius:10px;background:#111817eb!important;color:#e8eeeb!important;box-shadow:0 3px 12px #0004;backdrop-filter:none;transition:background .15s,transform .15s}
 #hub-app .wd-fixed .wd-map-toolbar button svg{width:21px;height:21px;pointer-events:none}
 #hub-app .wd-fixed .wd-map-toolbar button:hover{background:#34413a!important;transform:translateY(-1px)}
 #hub-app .wd-fixed .wd-map-toolbar button[aria-pressed=true]{background:#ee6038!important;color:#171310!important;border-color:#ff9878}
@@ -76,6 +76,25 @@
 #hub-app .wd-fixed .sight-open .wd-sight-dock{transform:translate(0,-50%)}
 #hub-app .wd-fixed .wd-sight-dock .wd-gunner{position:relative;inset:auto;width:100%;max-height:calc(100dvh - 240px);transform:none;animation:none;box-sizing:border-box}
 #hub-app .wd-fixed .wd-sight-dock .wd-sight-tab{left:0;right:auto;top:50%;transform:translate(-100%,-50%);animation:none;white-space:nowrap}
+/* This transform positions the tab outside its moving dock. Generic button
+   hover/press transforms must not replace it or the hover target oscillates. */
+html[data-game=wardogs] #hub-app .wardogs-page.wd-fixed .wd-sight-dock .wd-sight-tab,
+html[data-game=wardogs] #hub-app .wardogs-page.wd-fixed .wd-sight-dock .wd-sight-tab:is(:hover,:active,:focus-visible){transform:translate(-100%,-50%)}
+html[data-game=wardogs] #hub-app .wardogs-page.wd-fixed .wd-sight-dock .wd-sight-tab{
+  --dz-control-surface:linear-gradient(140deg,#25323ff2,#14202bf5);
+  --dz-control-color:#edf4fa;--dz-control-border:#ccdfef47;
+  background:var(--dz-control-surface)!important;color:var(--dz-control-color)!important;
+  border-color:var(--dz-control-border)!important;border-right:0;border-radius:10px 0 0 10px;
+  box-shadow:inset 0 1px #e9f4ff16,-3px 3px 12px #0003;backdrop-filter:none;
+}
+html[data-game=wardogs] #hub-app .wardogs-page.wd-fixed .wd-sight-dock .wd-sight-tab:hover:not(:disabled){
+  --dz-control-surface:linear-gradient(140deg,#344455f5,#233243f7);
+  --dz-control-color:#fff;--dz-control-border:#d8e7f56b;
+}
+html[data-game=wardogs] #hub-app .wardogs-page.wd-fixed .wd-sight-dock .wd-sight-tab[aria-expanded=true]{
+  --dz-control-surface:linear-gradient(140deg,#584738f2,#302b28f5);
+  --dz-control-color:#ffe7cf;--dz-control-border:#f0b37d6b;
+}
 @media(prefers-reduced-motion:reduce){#hub-app .wd-fixed .wd-sight-dock{transition:none;will-change:auto}}
 
 #hub-app .wd-fixed .wd-sight-dock .wd-gunner,.wd-gunner-dialog{background:#160e09;border-color:#9b512e}
@@ -139,7 +158,7 @@ html[data-appearance=light] #hub-app .servers-page .server-filters :is(input,.se
 #hub-app .servers-page .server-table th:nth-child(8){width:85px}
 #hub-app .servers-page .server-table :is(th,td):first-child{padding-left:0}
 #hub-app .servers-page .server-table :is(th,td):last-child{padding-right:0}
-#hub-app .servers-page #server-sort{padding:0;font:inherit;text-align:left}
+#hub-app .servers-page #server-sort{display:inline-flex;align-items:center;justify-content:center;gap:4px;width:auto;min-height:30px;padding:6px 9px;font:inherit;line-height:1.2;text-align:left;white-space:nowrap}
 #hub-app .servers-page .server-table td{overflow-wrap:anywhere}
 #hub-app .servers-page .server-table details,#hub-app .servers-page .server-table details[open]{min-width:0}
 #hub-app .servers-page .server-table details p{font-size:12px}
@@ -168,7 +187,7 @@ html[data-appearance=light] #hub-app .servers-page :is(#server-summary small,.se
 #hub-app .market-page #market-graph:focus-visible{outline:2px solid #ef612f;outline-offset:4px;border-radius:4px}
 #hub-app .market-page .market-readout{margin:14px 0 22px;padding:16px 0;border-top:1px solid #ffffff18;font-size:12px;color:#bfb8b2;align-items:center}
 #hub-app .market-page .market-readout output{font-size:14px}
-#hub-app .market-page #market-source{background:transparent;border:0;padding:0;min-height:30px;font-size:12px;color:#d6c5b5}
+#hub-app .market-page #market-source{display:inline-flex;align-items:center;justify-content:center;width:auto;background:transparent;border:0;padding:8px 12px;min-height:34px;font-size:12px;line-height:1.4;color:#d6c5b5}
 #hub-app .market-page>small{font-size:12px;line-height:1.7;color:#b8b0aa;margin:0;max-width:900px}
 html[data-appearance=light] #hub-app .market-page :is(.market-stats small,.market-chart header p,.market-readout,#market-source){color:#51483f}
 html[data-appearance=light] #hub-app .market-page .market-current strong{color:#805900}
@@ -181,7 +200,7 @@ html[data-appearance=light] #hub-app .market-page [data-direction=down]{color:#a
 #hub-app .wd-fixed .wd-controls{background:#121618f5!important;border-color:#ffffff14!important;padding:0;color:#ede9e5}
 #hub-app .wd-fixed .wd-sidebar-heading{padding:22px 18px 16px;gap:10px;align-items:center}
 #hub-app .wd-fixed .wd-sidebar-heading h2{font-size:16px;letter-spacing:-.3px;margin:0;font-weight:650}
-#hub-app .wd-fixed .wd-tutorial-button{background:transparent;border:0;color:#bdb5ae;font-size:11px;padding:6px 0}
+#hub-app .wd-fixed .wd-tutorial-button{background:transparent;border:0;color:#bdb5ae;font-size:11px;padding:7px 11px;min-height:32px;display:inline-flex;align-items:center;justify-content:center;flex:none;white-space:nowrap;line-height:1.4;box-sizing:border-box}
 #hub-app .wd-fixed .wd-tutorial-button:hover{color:#ffab85}
 #hub-app .wd-fixed .wd-selectors{padding:0 18px 20px;margin:0;gap:10px}
 #hub-app .wd-fixed .wd-selectors label{font-size:11px;color:#bfb7af;gap:7px}
@@ -209,6 +228,45 @@ html[data-appearance=light] #hub-app .market-page [data-direction=down]{color:#a
 #hub-app .wd-fixed .wd-sidebar-footer button{font-size:11px;color:#bfb7af}
 #hub-app .wd-fixed .wd-map-toolbar button{border-radius:6px;box-shadow:0 2px 8px #0003;font-weight:500}
 #hub-app .wd-fixed .wd-map-toolbar button:hover{background:#39251d!important;border-color:#ef612f80;transform:none}
+
+/* A single dark material keeps tools readable over bright terrain in either
+   app appearance. Blur belongs to this small backing, never every button. */
+html[data-game=wardogs] #hub-app .wd-fixed .wd-map-toolbar{
+  right:auto;width:fit-content;max-width:calc(100% - 24px);box-sizing:border-box;
+  padding:7px;gap:6px;border:1px solid #b9cede2e;border-radius:15px;
+  background:linear-gradient(140deg,#202b36e8,#111b26ee)!important;color:#ecf2f8;
+  box-shadow:inset 0 1px #e9f2ff0f,0 6px 20px #00000030;backdrop-filter:blur(10px);
+}
+html[data-game=wardogs] #hub-app .wd-fixed .wd-map-toolbar button{
+  --dz-control-surface:linear-gradient(145deg,#c3d4e015,#8092a20a);
+  --dz-control-color:#e8f0f7;--dz-control-border:#c4d7e524;
+  background:var(--dz-control-surface)!important;color:var(--dz-control-color)!important;
+  border-color:var(--dz-control-border)!important;border-radius:9px;
+  box-shadow:inset 0 1px #eff6ff0a;backdrop-filter:none!important;opacity:1;
+}
+html[data-game=wardogs] #hub-app .wd-fixed .wd-map-toolbar button:hover:not(:disabled):not([aria-disabled=true]){
+  --dz-control-surface:linear-gradient(145deg,#c3d4e027,#8092a21c);
+  --dz-control-color:#fff;--dz-control-border:#d5e5f145;
+}
+html[data-game=wardogs] #hub-app .wd-fixed .wd-map-toolbar button:is(.active,[aria-pressed=true]){
+  --dz-control-surface:linear-gradient(140deg,#bd804c94,#73533ebd);
+  --dz-control-color:#ffe6ce;--dz-control-border:#f0b37d6b;
+  box-shadow:inset 0 1px #ffe1c12b,0 2px 5px #0002;
+}
+html[data-game=wardogs] #hub-app .wd-fixed .wd-map-toolbar button:is(.active,[aria-pressed=true]):hover:not(:disabled):not([aria-disabled=true]){
+  --dz-control-surface:linear-gradient(140deg,#c58d5aaa,#886346cf);
+  --dz-control-color:#fff0e0;--dz-control-border:#f7c4988c;
+}
+html[data-game=wardogs] #hub-app .wd-fixed .wd-map-toolbar button:is(:disabled,[aria-disabled=true]){
+  --dz-control-surface:#ffffff04;--dz-control-color:#9eacba;--dz-control-border:#b9ccdd12;
+  opacity:1;box-shadow:none;
+}
+html[data-game=wardogs] .app-high-contrast #hub-app .wd-fixed .wd-map-toolbar{
+  background:#111b26!important;border-color:#9bafc1;backdrop-filter:none;
+}
+@media(prefers-reduced-transparency:reduce){
+  html[data-game=wardogs] #hub-app .wd-fixed .wd-map-toolbar{background:#17222e!important;backdrop-filter:none}
+}
 html[data-appearance=light] #hub-app .wd-fixed .wd-controls{background:#f4f2ef!important;color:#322820}
 html[data-appearance=light] #hub-app .wd-fixed :is(.wd-control-heading h3,.wd-impact-controls h3,.wd-coordinate-fields input,.wd-selectors label,.wd-coordinate-fields label){color:#51443a}
 @media(max-width:760px){#hub-app .wd-fixed .wd-panel-body{padding:0 18px}}

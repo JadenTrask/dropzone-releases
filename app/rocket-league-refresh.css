@@ -1,0 +1,200 @@
+/* Rocket League material system. This file replaces the old stacked redesign overrides. */
+html.rl-workspace-active{
+ --rl-bg:#080e19;--rl-surface:#132236b3;--rl-surface-2:#1b3047b3;--rl-text:#edf5ff;--rl-muted:#94a9bf;
+ --rl-blue:#73caff;--rl-orange:#ffb16b;--rl-border:#b2d8ff18;--rl-radius:18px;--rl-gap:24px;
+ --accent:#73caff;--muted:#94a9bf;--bg:#080e19;--panel:#132236;--border:#283a50;color-scheme:dark;
+}
+body,.titlebar,.global-toolbar,.game-tabs-shell,.app-rail{transition:background-color 300ms ease,border-color 300ms ease,color 300ms ease}
+html.rl-workspace-active body,html.rl-workspace-active #hub-app{background:var(--rl-bg)!important;color:var(--rl-text)}
+html.rl-workspace-active :is(.titlebar,.global-toolbar,.game-tabs-shell,.app-rail){background:#0b1422!important;border-color:#a5c7ec13!important;color:#d4e5f7!important}
+html.rl-workspace-active .rail-link{color:#9dafc4!important}
+html.rl-workspace-active .rail-link[aria-current=page]{background:linear-gradient(130deg,#406d943d,#2c4e6920)!important;border-color:#8acbff48!important;color:#d7efff!important;box-shadow:inset 2px 0 #7ccfff}
+html.rl-workspace-active .rail-link:hover{background:#89caff0e!important}
+html.rl-workspace-active :is(.rail-section-label,.rail-footer,.titlebrand){color:#a9c4df!important}
+.app-rail{transition:width 280ms cubic-bezier(.22,1,.36,1),background-color 300ms,border-color 300ms,color 300ms,box-shadow 240ms}
+html.rl-workspace-active .rl-page{width:100%;max-width:none;min-width:0;margin:0;padding:0;border:0;border-radius:0;min-height:100%;overflow:visible;background:radial-gradient(ellipse 1000px 600px at 45% -10%,#234c7536,transparent),radial-gradient(ellipse 700px 600px at 100% 25%,#ad603009,transparent),var(--rl-bg);color:var(--rl-text);font-family:Inter,'Segoe UI',sans-serif;font-size:14px;line-height:1.5}
+.rl-page *{box-sizing:border-box}
+html.rl-workspace-active .rl-page .hub-eyebrow{font-size:10px;font-weight:650;letter-spacing:.16em;color:#8fa8c3}
+html.rl-workspace-active .rl-page h1,html.rl-workspace-active .rl-page h2,html.rl-workspace-active .rl-page h3{font-family:inherit;text-transform:none}
+html.rl-workspace-active .rl-page small{color:var(--rl-muted)}
+.rl-commandbar{position:relative;z-index:8;background:#102033ae;backdrop-filter:blur(16px);border-bottom:1px solid var(--rl-border);box-shadow:0 6px 24px #0000000d}
+html.rl-workspace-active .rl-heading{display:flex;align-items:center;flex-direction:row;justify-content:space-between;gap:20px;padding:16px 28px 10px;background:none;border:0}
+.rl-brand{display:flex;gap:12px;align-items:center;flex:none}
+.rl-brand>img{width:40px;height:40px;object-fit:cover;border-radius:11px;border:1px solid #97d1ff26}
+html.rl-workspace-active .rl-heading h1{font-size:19px;font-weight:650;letter-spacing:-.5px;line-height:1.2;margin:0}
+.rl-brand>div>span{font-size:9px;color:#8aaccb;letter-spacing:.17em;display:block;margin-top:4px}
+.rl-header-tools{display:flex;align-items:center;gap:12px;min-width:0}
+html.rl-workspace-active .rl-heading #rl-status{display:flex;align-items:center;white-space:nowrap;font-size:11px;background:#08111c55;padding:7px 11px;border-radius:99px;color:#b0c2d5;border:1px solid #b8d5ed0e}
+html.rl-workspace-active .rl-heading #rl-status:before{width:6px;height:6px;background:#778a9f;border:0;margin-right:7px;box-shadow:none}
+html.rl-workspace-active .rl-heading #rl-status[data-connected=true]:before{background:#78d9b8}
+html.rl-workspace-active .rl-heading #rl-status[data-live=true]{color:#a0e4ce}
+html.rl-workspace-active .rl-tabs{display:flex;align-items:center;flex-wrap:nowrap;gap:4px;margin:0;padding:0 24px 12px;background:none;border:0;overflow-x:auto;scrollbar-width:none}
+html.rl-workspace-active .rl-tabs>button{white-space:nowrap;position:relative;padding:9px 15px;border:0;border-radius:10px;font-size:12px;font-weight:550;background:transparent;color:#98abc2;cursor:pointer;transition:background-color 180ms,color 180ms,box-shadow 180ms}
+html.rl-workspace-active .rl-tabs>button:hover{color:#e9f5ff;background:#84b7e00b}
+html.rl-workspace-active .rl-tabs>button[aria-pressed=true]{background:linear-gradient(135deg,#35577699,#29415c66);color:#eef9ff;box-shadow:inset 0 1px #b7dcff22,0 3px 8px #0002}
+html.rl-workspace-active #rl-account-nav{margin:0;padding:0;display:flex;min-width:0}
+html.rl-workspace-active #rl-account-nav button{display:flex;align-items:center;gap:8px;border:0;background:none;color:#c2d3e4;font-size:12px;padding:4px;white-space:nowrap}
+html.rl-workspace-active #rl-account-nav img{width:30px;height:30px;border-radius:50%;object-fit:cover}
+html.rl-workspace-active .rl-page :is(.hub-button,button.select-control),html.rl-workspace-active .rl-group-dialog button{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:38px;padding:9px 14px;background:linear-gradient(160deg,#274966bd,#1b334bbd);border:1px solid #a6d6ff25;border-radius:10px;color:#e6f4ff;font:600 12px/1.3 Inter,'Segoe UI',sans-serif;box-shadow:inset 0 1px #e2f0ff08;cursor:pointer;transition:transform 150ms,background-color 150ms,border-color 150ms,box-shadow 150ms}
+html.rl-workspace-active .rl-page .hub-button.secondary{background:#91c5f00b;color:#c5d8eb;border-color:#b9d8f21c}
+html.rl-workspace-active .rl-page :is(.hub-button,button.select-control):hover{border-color:#8ecaff60;background-color:#487fac24;box-shadow:0 4px 12px #0002}
+html.rl-workspace-active .rl-page button:active:not(:disabled){transform:translateY(1px)}
+html.rl-workspace-active .rl-page .rl-password-toggle:active:not(:disabled){transform:translateY(-50%)}
+html.rl-workspace-active .rl-page button:disabled{opacity:.4;cursor:default}
+html.rl-workspace-active .rl-page .rl-coach-launch{background:linear-gradient(135deg,#2a648c80,#24374990);border-color:#83c6f54a;box-shadow:inset 0 1px #c7e9ff12;color:#d7efff}
+html.rl-workspace-active .rl-page .rl-coach-launch.is-active{color:#9eeacc;border-color:#73d5af66;background:#214b444d}
+html.rl-workspace-active .rl-page input,html.rl-workspace-active .rl-page select{font:inherit;font-size:13px;color:var(--rl-text);background:#07121f88;border:1px solid #a8c9e929;border-radius:10px;padding:10px 12px;min-width:0;max-width:100%;accent-color:var(--rl-blue)}
+html.rl-workspace-active :is(.rl-page,.rl-group-dialog) :is(button,input,select,summary):focus-visible{outline:2px solid #80cfff;outline-offset:3px}
+html.rl-workspace-active .select-options{background:#152536ed!important;color:#e5f3ff!important;border:1px solid #a6cef533!important;border-radius:12px;box-shadow:0 16px 40px #0006;backdrop-filter:blur(14px);padding:6px;animation:rl-menu-in 140ms ease-out}
+html.rl-workspace-active .select-options button{color:#cbddf0!important;background:transparent!important;border-radius:7px}
+html.rl-workspace-active .select-options button[aria-selected=true]{background:#5488b03d!important;color:#fff!important}
+html.rl-workspace-active .select-options button:hover{background:#a2cef214!important}
+html.rl-workspace-active .select-control svg{color:#8fcafa!important;stroke:currentColor!important}
+@keyframes rl-menu-in{from{opacity:0;transform:translateY(-3px) scale(.98)}to{opacity:1;transform:none}}
+/* Each page gets a readable width; the optional sidebar cannot squeeze the content. */
+html.rl-workspace-active .rl-workspace{position:relative;display:grid;grid-template-columns:220px minmax(0,1fr);width:100%;align-items:start;min-width:0}
+html.rl-workspace-active .rl-main-panel{background:transparent;padding:32px clamp(20px,3vw,48px) 56px;min-width:0;width:100%}
+html.rl-workspace-active #rl-content{max-width:1440px;margin:0 auto;width:100%;min-width:0;container-type:inline-size}
+html.rl-workspace-active .rl-workspace[data-page=history] #rl-content{max-width:1160px}
+html.rl-workspace-active .rl-workspace:is([data-page=personal],[data-page=player]) #rl-content{max-width:1280px}
+html.rl-workspace-active .rl-workspace[data-page=friends] #rl-content{max-width:1100px}
+html.rl-workspace-active .rl-workspace:is([data-page=settings],[data-page=account]) #rl-content{max-width:900px}
+html.rl-workspace-active .rl-profile-collapsed,html.rl-workspace-active .rl-social-workspace{grid-template-columns:minmax(0,1fr)}
+html.rl-workspace-active .rl-profile-collapsed>#rl-profile,html.rl-workspace-active .rl-social-workspace>#rl-profile{display:none}
+/* One continuous material lets the stadium dissolve into the player statistics. */
+html.rl-workspace-active #rl-profile{position:relative;isolation:isolate;overflow:hidden;width:220px;min-width:0;padding:0 18px 20px;border:0;border-right:1px solid #b2d8ff0d;border-radius:0 0 20px 0;background:linear-gradient(160deg,#162a40ee,#101d2ce8 52%,#0d1826d9);box-shadow:inset 0 1px #c1dfff0b,4px 12px 28px #0000000b}
+html.rl-workspace-active #rl-profile:before{content:'';position:absolute;z-index:-1;pointer-events:none;inset:0 0 auto;height:260px;background:linear-gradient(120deg,#091a3080,#0b192d45),url('./assets/rocket-league-welcome.png') center top/cover;mask-image:linear-gradient(#000b 0%,#0009 32%,#0003 70%,transparent 100%)}
+html.rl-workspace-active #rl-profile .rl-sidebar-identity{padding:22px 0 0}
+html.rl-workspace-active #rl-profile .rl-sidebar-identity>.hub-eyebrow{display:block;padding-right:24px;font-size:9px;letter-spacing:.15em;color:#a6c5e0}
+html.rl-workspace-active #rl-profile .rl-sidebar-player{display:flex;align-items:center;gap:11px;margin-top:17px;min-width:0}
+html.rl-workspace-active #rl-profile .rl-sidebar-player>div{min-width:0;flex:1}
+html.rl-workspace-active #rl-profile .rl-avatar-button{position:relative;display:block;flex:none;width:52px;height:52px;overflow:hidden;margin:0;padding:0;border:1px solid #a0d7fa59;border-radius:50%;background:#101e30;box-shadow:0 0 0 4px #9ed2f209;cursor:pointer}
+html.rl-workspace-active #rl-profile .rl-profile-mark{display:block;width:100%;height:100%;margin:0;border:0;border-radius:50%;object-fit:cover}
+html.rl-workspace-active #rl-profile .rl-avatar-button>span{position:absolute;inset:auto 0 0;padding:5px 0;background:#071429dc;color:#eef6ff;font-size:8px;line-height:1.2;text-align:center;opacity:0;transition:opacity 150ms}
+html.rl-workspace-active #rl-profile .rl-avatar-button:is(:hover,:focus-visible)>span{opacity:1}
+html.rl-workspace-active #rl-profile .rl-sidebar-player h2{margin:0;color:var(--rl-text);font-size:19px;font-weight:620;letter-spacing:-.55px;line-height:1.2;overflow-wrap:anywhere}
+html.rl-workspace-active #rl-profile .rl-profile-name-link{display:inline;padding:0;margin:0;border:0;background:none;color:inherit;font:inherit;text-align:left;cursor:pointer;line-height:inherit}
+html.rl-workspace-active #rl-profile .rl-profile-name-link:hover{color:#9ddaff}
+html.rl-workspace-active #rl-profile .rl-sidebar-player p{font-size:10px;line-height:1.5;color:#a1b9d0;margin:5px 0 0}
+html.rl-workspace-active #rl-profile .rl-sidebar-section{margin:24px 0 0;padding:0;border:0;background:none}
+html.rl-workspace-active #rl-profile .rl-sidebar-section h3{font-size:9px;line-height:1.4;font-weight:650;letter-spacing:.13em;text-transform:uppercase;color:#9ab3cb;margin:0 0 12px}
+html.rl-workspace-active #rl-profile .rl-sidebar-form{display:flex;flex-wrap:wrap;gap:6px;align-items:center}
+html.rl-workspace-active #rl-profile .rl-sidebar-result{display:grid;place-items:center;flex:none;width:30px;height:28px;border:1px solid #9acefa13;border-radius:7px;font-size:10px;line-height:1;font-weight:650;background:#518ab127;color:#9cddff}
+html.rl-workspace-active #rl-profile .rl-sidebar-result.is-loss{background:#bb845117;border-color:#ffc28c17;color:#e4b18b}
+html.rl-workspace-active #rl-profile .rl-sidebar-form p{margin:0;color:#91a8bd;font-size:11px;line-height:1.65}
+html.rl-workspace-active #rl-profile .rl-sidebar-stats{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px 12px;margin:0}
+html.rl-workspace-active #rl-profile .rl-sidebar-stats>div{min-width:0}
+html.rl-workspace-active #rl-profile .rl-sidebar-stats dt{font-size:10px;line-height:1.4;color:#a0b4c9;margin-bottom:6px}
+html.rl-workspace-active #rl-profile .rl-sidebar-stats dd{margin:0;color:#edf6ff;font-size:25px;font-weight:580;line-height:1.2;letter-spacing:-.8px;font-variant-numeric:tabular-nums;overflow-wrap:anywhere}
+html.rl-workspace-active #rl-profile .rl-sidebar-stats dd small{font-size:13px;letter-spacing:0;color:#94acc3;margin-left:2px}
+html.rl-workspace-active #rl-profile .rl-sidebar-stats dd>span{font-size:16px;color:#647f9a;font-weight:400}
+html.rl-workspace-active #rl-profile .rl-sidebar-streak{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-top:16px;padding:9px 10px;background:linear-gradient(105deg,#79b4dc0c,#79b4dc03);border-radius:8px;font-size:10px;color:#a2b6ca}
+html.rl-workspace-active #rl-profile .rl-sidebar-streak strong{color:#c2e6ff;font-size:12px;font-weight:600;font-variant-numeric:tabular-nums}
+html.rl-workspace-active #rl-profile .rl-sidebar-session .rl-sidebar-stats dd{font-size:20px;letter-spacing:-.35px}
+html.rl-workspace-active #rl-profile .rl-sidebar-footer{display:grid;gap:12px;margin-top:28px}
+html.rl-workspace-active #rl-profile .rl-sidebar-retention{display:flex;align-items:center;gap:7px;color:#829db6;font-size:10px;line-height:1.4}
+html.rl-workspace-active #rl-profile .rl-sidebar-retention svg{flex:none;color:#7494b0}
+html.rl-workspace-active #rl-profile .rl-sidebar-footer p{font-size:10px;line-height:1.6;color:#93abc1;margin:-4px 0 0}
+html.rl-workspace-active #rl-profile .rl-sidebar-footer .hub-button{width:100%;min-height:36px;padding:8px 12px;border:1px solid #b5dcff20;border-radius:10px;background:linear-gradient(155deg,#b2d8ff13,#87b7e506);color:#d0e4f5;font-size:11px;font-weight:550;box-shadow:inset 0 1px #def0ff08}
+html.rl-workspace-active #rl-profile .rl-sidebar-footer .hub-button:hover{background-color:#73baf013;border-color:#a0d7ff4a}
+html.rl-workspace-active #rl-profile .rl-sidebar-footer .rl-sidebar-account{background:linear-gradient(150deg,#356b9399,#24476488);color:#e4f4ff}
+html.rl-workspace-active .rl-panel-toggle{position:absolute;left:182px;top:14px;z-index:4;width:28px;height:28px;display:grid;place-items:center;padding:0;border:1px solid #acd7f412;border-radius:8px;background:#101e2e8c;color:#9cbcd8;cursor:pointer;transition:background-color 150ms,color 150ms}
+html.rl-workspace-active .rl-panel-toggle:hover{background:#2a47629c;color:#e2f3ff}
+html.rl-workspace-active .rl-profile-collapsed>.rl-panel-toggle{left:8px;top:8px}
+.rl-panel-toggle[hidden]{display:none!important}
+html.rl-workspace-active .rl-page .rl-section{padding:0;margin:0;border:0}
+html.rl-workspace-active .rl-page .rl-section-heading{margin:0 0 24px;align-items:center;gap:16px;flex-wrap:wrap}
+html.rl-workspace-active .rl-page .rl-section-heading h2{font-size:26px;font-weight:650;letter-spacing:-.7px;margin:0}
+html.rl-workspace-active .rl-page .rl-section-heading h2 small{font-size:12px;color:#89a0b9;letter-spacing:0;margin-left:10px}
+html.rl-workspace-active .rl-page .rl-actions{margin-top:20px;gap:8px}
+html.rl-workspace-active .rl-page .rl-form span{width:28px;height:28px;border:0;border-radius:7px;background:#a4cffa0a;font-size:11px;font-weight:650}
+#rl-live-indicator[hidden]{display:none!important}
+html.rl-workspace-active .rl-tabs #rl-live-indicator{padding:5px 8px;margin-left:-5px;color:#90e8c3;font-size:9px;background:#55d59b12;border:1px solid #64dba833;display:flex;align-items:center;gap:5px}
+#rl-live-indicator i{width:5px;height:5px;background:#6ee7b3;border-radius:50%}
+/* Match stage */
+.rl-match-stage{position:relative;isolation:isolate;border-radius:24px;overflow:hidden;background:radial-gradient(ellipse at 12% 55%,#267bbb1e,transparent 62%),radial-gradient(ellipse at 90% 50%,#c8752710,transparent 58%),linear-gradient(145deg,#172a3dba,#101b29b0);box-shadow:inset 0 1px #c6e5ff16,0 16px 45px #00000014}
+.rl-match-stage[data-winner=orange]{background:radial-gradient(ellipse at 20% 45%,#cb7c3126,transparent 65%),radial-gradient(ellipse at 90% 50%,#285c8818,transparent 60%),linear-gradient(145deg,#172536d0,#0f1b2ab0)}
+html.rl-workspace-active .rl-post-heading{display:flex;flex-direction:column;align-items:center;text-align:center;gap:3px;padding:30px 24px 0;margin:0;border:0}
+html.rl-workspace-active .rl-post-heading h2{font-size:clamp(34px,4vw,52px);font-weight:650;line-height:1.1;letter-spacing:-1.6px;margin:6px 0 8px;color:#f4f8ff}
+html.rl-workspace-active .rl-post-heading p{margin:0;color:#8ba1b8;font-size:11px}
+html.rl-workspace-active .rl-page .rl-scoreboard{display:grid;grid-template-columns:minmax(0,1fr) 150px minmax(0,1fr);align-items:center;gap:24px;max-width:850px;width:100%;margin:0 auto;padding:28px 32px 32px;border:0;border-radius:0;background:none;box-shadow:none;text-align:center}
+html.rl-workspace-active .rl-page .rl-score-side,html.rl-workspace-active .rl-page .rl-score-side.rl-orange{display:flex;flex-direction:column;align-items:center;gap:5px;justify-content:center;min-width:0}
+html.rl-workspace-active .rl-page .rl-score-side>span{display:block;font-size:10px;font-weight:650;letter-spacing:.16em;white-space:nowrap}
+html.rl-workspace-active .rl-page .rl-score-side>span:before,html.rl-workspace-active .rl-page .rl-score-side>span:after{display:none}
+html.rl-workspace-active .rl-page .rl-score-side>strong{margin:0;font-size:clamp(68px,7vw,96px);line-height:1.08;font-weight:620;letter-spacing:-.06em;font-variant-numeric:tabular-nums;color:inherit}
+html.rl-workspace-active .rl-page .rl-score-side>small{font-size:9px;letter-spacing:.1em;margin-top:3px;color:#8c9eb4}
+html.rl-workspace-active .rl-page .rl-clock{display:flex;flex-direction:column;gap:7px;border:0;min-width:0}
+html.rl-workspace-active .rl-page .rl-clock>span{font-size:9px;color:#87a1ba;letter-spacing:.15em}
+html.rl-workspace-active .rl-page .rl-clock>strong{font-size:29px;font-weight:550;letter-spacing:-1px;line-height:1.2;margin:0}
+html.rl-workspace-active .rl-page .rl-clock>small{font-size:11px;color:#9ab1c8;line-height:1.5;max-width:140px;margin:auto}
+html.rl-workspace-active .rl-page .rl-post-stats{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:0;width:100%;max-width:none;margin:0;padding:19px 24px;background:#07101e38;border:0}
+html.rl-workspace-active .rl-page .rl-post-stats>div{display:flex;flex-direction:column;align-items:center;gap:5px;padding:0 8px;background:none;border:0;border-radius:0}
+html.rl-workspace-active .rl-page .rl-post-stats>div>span{font-size:10px;color:#90a8c0}
+html.rl-workspace-active .rl-page .rl-post-stats>div>strong{font-size:25px;font-weight:600;letter-spacing:-.5px;line-height:1.3;margin:0;font-variant-numeric:tabular-nums}
+.rl-live-stage-heading{display:flex;align-items:center;justify-content:space-between;padding:20px 28px 0}.rl-live-stage-heading .rl-stream-state{margin:0;font-size:10px;color:#72bba1}
+.rl-roster-heading{display:flex;align-items:center;justify-content:space-between;gap:20px;margin:28px 0 14px}.rl-roster-heading h2{font-size:17px;font-weight:600;margin:0}.rl-next-match{font-size:11px;color:#7d96b0}
+.rl-live-rosters{margin-top:28px!important}.rl-live-rosters .rl-section-heading{margin-bottom:14px!important}.rl-live-rosters .rl-section-heading h2{font-size:17px!important}
+.rl-rosters{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px}
+html.rl-workspace-active .rl-page .rl-team-panel{--team:#73caff;background:none;border:0;margin:0;padding:0;border-radius:0;min-width:0}
+html.rl-workspace-active .rl-page .rl-team-panel-1{--team:#ffb16b}
+html.rl-workspace-active .rl-page .rl-team-panel h3{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:0 4px 12px;margin:0;background:none;border:0;color:var(--team);font-size:10px;letter-spacing:.1em;font-weight:650}
+html.rl-workspace-active .rl-page .rl-team-panel h3>span:last-child{font-size:10px;font-weight:400;letter-spacing:0;color:#6e89a3}
+.rl-team-title{display:flex;align-items:center;gap:8px}.rl-team-title:before{content:'';width:5px;height:5px;border-radius:50%;background:var(--team)}.rl-team-title>small{font-size:9px!important;font-weight:400;letter-spacing:0;color:#7b95ae!important}
+.rl-roster-list{display:grid;gap:8px}
+.rl-player-row{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:16px 12px;align-items:center;padding:16px 18px;background:linear-gradient(140deg,#1c2b3e9c,#13203380);border:1px solid #a5c9ec0c;border-radius:14px;min-width:0}
+.rl-player-row.rl-local-player{background:linear-gradient(130deg,color-mix(in srgb,var(--team),transparent 87%),#1121338a);border-color:color-mix(in srgb,var(--team),transparent 76%)}
+.rl-player-identity{display:flex;align-items:center;gap:10px;min-width:0}.rl-player-identity>div{display:flex;gap:6px;align-items:center;min-width:0;flex-wrap:wrap}.rl-player-identity strong{font-size:13px;color:#dce9f7;font-weight:600;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;max-width:100%}
+.rl-roster-avatar,.rl-roster-initial{width:32px;height:32px;border-radius:10px;flex:none;object-fit:cover}.rl-roster-initial{display:grid;place-items:center;color:var(--team);background:color-mix(in srgb,var(--team),transparent 90%);font-size:13px;font-weight:650}
+.rl-player-row .rl-you{font-size:8px;color:var(--team);letter-spacing:.06em;background:color-mix(in srgb,var(--team),transparent 92%);border-radius:4px;padding:2px 4px}
+.rl-roster-score{text-align:right}.rl-roster-score strong{display:block;font-size:23px;line-height:1.2;color:var(--team);font-weight:620;letter-spacing:-.5px}.rl-roster-score small{font-size:8px;letter-spacing:.1em;color:#6f89a3}
+.rl-roster-stats{grid-column:1/-1;display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:8px;margin:0;padding:0}.rl-roster-stats>div{display:flex;flex-direction:column;gap:3px;text-align:center}.rl-roster-stats dt{font-size:9px;color:#7d96af}.rl-roster-stats dd{margin:0;font-size:13px;font-weight:550;color:#cbd9e8;font-variant-numeric:tabular-nums}
+html.rl-workspace-active .rl-page .rl-match-detail{max-width:none}.rl-detail-heading{display:flex;align-items:center;gap:24px;margin:0 0 24px}.rl-detail-heading h2{margin:4px 0!important;font-size:24px!important}.rl-detail-heading p{margin:0;font-size:11px!important}.rl-detail-back{flex:none}.rl-match-detail>.rl-scoreboard{border-radius:20px!important;background:linear-gradient(130deg,#1b354b88,#15203399)!important;margin:0 auto 24px!important}
+/* Cohesive match rows, with stats kept together instead of distributed across the page. */
+.rl-history-filters,.rl-group-toolbar,.rl-group-selection{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+.rl-group-toolbar{margin-bottom:20px}.rl-group-toolbar>small{margin-left:auto;font-size:10px;color:#778fa7}.rl-group-selection{margin:0 0 16px;padding:12px 16px;border-radius:12px;background:#284c6b6b;color:#c3e5ff}.rl-group-selection[hidden]{display:none}
+.rl-selectable-match{display:grid;grid-template-columns:18px minmax(0,1fr);align-items:center;gap:10px;margin:10px 0}.rl-selectable-match>input{width:15px;height:15px;padding:0!important;cursor:pointer}
+html.rl-workspace-active .rl-page .rl-history-row{--result:#9bc7eb;display:grid;grid-template-columns:64px 84px minmax(190px,1fr) 310px 20px;align-items:center;gap:20px;min-width:0;width:100%;margin:0;padding:20px 22px;text-align:left;font:inherit;color:var(--rl-text);background:linear-gradient(110deg,#1b3046a3,#1420339c);border:1px solid #a6c9ec12;border-radius:16px;box-shadow:0 4px 14px #00000009;cursor:pointer;transition:transform 160ms,border-color 160ms,box-shadow 160ms,background-color 160ms}
+html.rl-workspace-active .rl-page .rl-history-row[data-result=victory]{--result:#82dbc5}
+html.rl-workspace-active .rl-page .rl-history-row[data-result=defeat]{--result:#e8a681}
+html.rl-workspace-active .rl-page .rl-history-row:hover{transform:translateY(-2px);border-color:#9cceff39;background-color:#1b334e;box-shadow:0 8px 24px #0002}
+.rl-history-result{display:flex;flex-direction:column;align-items:flex-start;gap:6px;min-width:0}.rl-history-result>strong{font-size:11px;color:var(--result);font-weight:650;background:color-mix(in srgb,var(--result),transparent 90%);border-radius:6px;padding:5px 8px}.rl-history-result>small{display:none}
+.rl-history-score{display:flex;flex-direction:column;gap:5px}.rl-history-score>b{font-size:23px;font-weight:600;letter-spacing:-.6px;white-space:nowrap}.rl-history-score i{color:#6886a3;font-style:normal;padding:0 3px}.rl-history-score>small{font-size:8px!important;color:#7089a3!important;white-space:nowrap}
+.rl-history-mode{display:flex;flex-direction:column;gap:6px;min-width:0}.rl-history-mode>strong{font-size:12px;font-weight:550;color:#d2e4f5}.rl-history-mode>small{font-size:10px!important;color:#849cb4!important}
+.rl-history-stats{display:flex;align-items:center;justify-content:flex-end;gap:24px;border:0!important;padding:0!important}.rl-history-stats>span{display:flex;flex-direction:column-reverse;text-align:center;gap:5px;min-width:32px}.rl-history-stats small{font-size:9px!important;color:#7d95af!important}.rl-history-stats b{font-size:17px;font-weight:550;color:#c6dbee}.rl-history-stats>span:last-child{padding-left:8px;min-width:50px}.rl-history-stats>span:last-child b{font-size:23px;color:#e2effc;font-weight:650}
+.rl-history-open{font-size:18px;color:#92bedf;opacity:.35;transition:opacity 160ms,transform 160ms}.rl-history-row:hover .rl-history-open{opacity:1;transform:translateX(2px)}
+.rl-group-dialog{width:min(440px,calc(100vw - 32px));padding:28px;border:1px solid #9bc7ea35;border-radius:20px;background:#142437;color:#e8f3ff;box-shadow:0 20px 70px #0006}.rl-group-dialog::backdrop{background:#02060cad;backdrop-filter:blur(5px)}.rl-group-dialog h2{font-size:24px;margin:0 0 20px}.rl-group-dialog label{display:grid;gap:8px}.rl-group-dialog input{padding:12px;border-radius:9px;background:#09192b;border:1px solid #759dc455;color:#edf7ff}.rl-group-dialog .rl-actions{justify-content:flex-end}
+/* Idle state gives the artwork a role without turning it into wallpaper. */
+html.rl-workspace-active .rl-page .rl-standby{position:relative;min-height:340px;display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:32px;padding:40px;border:0;border-radius:24px;overflow:hidden;background:linear-gradient(120deg,#15283d,#0f1b2a);isolation:isolate}
+.rl-standby-art{position:absolute;z-index:-1;inset:0;background:linear-gradient(90deg,#122338 0%,#122338df 25%,#12233822 80%),linear-gradient(0deg,#102031,transparent 60%),url('./assets/rocket-league-welcome.png') center right/cover;opacity:.7}
+html.rl-workspace-active .rl-page .rl-standby>div:last-child{grid-column:1/-1;max-width:460px}
+html.rl-workspace-active .rl-page .rl-standby h2{font-size:34px;line-height:1.15;letter-spacing:-1px;margin:14px 0}
+html.rl-workspace-active .rl-page .rl-standby p{font-size:13px;line-height:1.7;color:#a0b8d1}.rl-page .rl-standby+.rl-section{margin-top:32px!important}
+html.rl-workspace-active .rl-setup{background:#142538;border-color:#52708d55;color:#e5f1ff}.rl-setup .rl-setup-progress .done{background:#73caff}.rl-setup .hub-button{background:#79c7f2;color:#0c1c2e}
+/* Adapt to content width, including a rail/sidebar taking space at desktop widths. */
+@container (max-width:1050px){.rl-history-row{grid-template-columns:60px 76px minmax(140px,1fr) auto 16px!important;gap:12px!important;padding:18px!important}.rl-history-stats{gap:14px}.rl-rosters{grid-template-columns:1fr}.rl-player-row{grid-template-columns:minmax(130px,1fr) auto minmax(270px,1.5fr);gap:20px}.rl-roster-stats{grid-column:auto}.rl-roster-score{order:2}.rl-roster-stats{order:1}}
+@container (max-width:740px){.rl-history-row{grid-template-columns:58px 76px minmax(0,1fr) 16px!important;gap:12px!important}.rl-history-stats{grid-column:2/4;grid-row:2;justify-content:flex-start;gap:24px;margin-top:2px}.rl-history-open{grid-column:4;grid-row:1/3}.rl-roster-stats{grid-column:1/-1;order:initial}.rl-roster-score{order:initial}.rl-player-row{grid-template-columns:minmax(0,1fr) auto}.rl-detail-heading{align-items:flex-start;flex-direction:column;gap:18px}}
+@media(max-width:1150px){html.rl-workspace-active .rl-workspace{grid-template-columns:minmax(0,1fr)}html.rl-workspace-active #rl-profile{display:none}html.rl-workspace-active .rl-panel-toggle{display:none}html.rl-workspace-active .rl-main-panel{padding:24px 28px 40px}.rl-header-tools{gap:8px}}
+@media(max-width:800px){html.rl-workspace-active .rl-heading{padding:14px 20px 10px}.rl-brand>img{width:32px;height:32px}.rl-brand{gap:8px}html.rl-workspace-active .rl-heading h1{font-size:16px}.rl-brand>div>span{font-size:8px}.rl-header-tools{gap:6px}html.rl-workspace-active .rl-heading #rl-status{font-size:10px;padding:6px 8px}html.rl-workspace-active #rl-account-nav button>span{display:none}html.rl-workspace-active .rl-tabs{padding:0 16px 10px}html.rl-workspace-active .rl-tabs>button{padding:8px 10px;font-size:11px}html.rl-workspace-active .rl-page .rl-coach-launch{font-size:11px;min-height:34px;padding:7px 10px}html.rl-workspace-active .rl-main-panel{padding:24px 20px 40px}.rl-next-match{max-width:160px;text-align:right}html.rl-workspace-active .rl-page .rl-standby{padding:32px;min-height:300px}}
+@media(max-width:600px){html.rl-workspace-active .rl-heading{flex-wrap:wrap;gap:12px}.rl-header-tools{flex:1;justify-content:flex-end}html.rl-workspace-active .rl-heading #rl-status{display:none}html.rl-workspace-active .rl-main-panel{padding:20px 14px 36px}html.rl-workspace-active .rl-page .rl-scoreboard{grid-template-columns:minmax(0,1fr) 105px minmax(0,1fr);gap:8px;padding:24px 12px}html.rl-workspace-active .rl-page .rl-score-side>strong{font-size:64px}html.rl-workspace-active .rl-page .rl-score-side>span{font-size:9px}html.rl-workspace-active .rl-page .rl-post-stats{padding:16px 8px}html.rl-workspace-active .rl-page .rl-post-stats>div>strong{font-size:21px}.rl-selectable-match{gap:6px;grid-template-columns:16px minmax(0,1fr)}.rl-history-stats{gap:14px}.rl-group-toolbar>small{width:100%;margin:0}.rl-history-filters{width:100%}.rl-page .rl-standby h2{font-size:28px!important}.rl-page .rl-standby{padding:28px 24px!important}}
+@media(prefers-reduced-motion:reduce){html.rl-workspace-active *,html.rl-workspace-active *:before,html.rl-workspace-active *:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+html.rl-workspace-active.cc-reduced-motion *,html.rl-workspace-active.cc-reduced-motion *:before,html.rl-workspace-active.cc-reduced-motion *:after{animation:none!important;transition:none!important}
+@media(min-width:1440px){.rl-commandbar{display:flex;align-items:center;gap:20px;padding:14px 28px}html.rl-workspace-active .rl-commandbar .rl-heading{display:contents}.rl-commandbar .rl-brand{order:0}html.rl-workspace-active .rl-commandbar .rl-tabs{order:1;padding:0;flex:1;justify-content:center}.rl-commandbar .rl-header-tools{order:2}html.rl-workspace-active .rl-commandbar .rl-tabs>button{padding:9px 12px}}
+html.rl-workspace-active::view-transition-new(root){animation:rl-page-enter 200ms cubic-bezier(.2,.7,.2,1) both}
+@keyframes rl-page-enter{from{opacity:0;transform:translateY(5px)}to{opacity:1;transform:none}}
+
+html.rl-workspace-active .rl-page .rl-history-result>small{display:none}
+html.rl-workspace-active .rl-page .rl-history-row small{margin-top:0}
+html.rl-workspace-active .rl-page .rl-history-mode>strong{font-size:13px}
+html.rl-workspace-active .rl-page .rl-history-mode>small{font-size:11px!important}
+html.rl-workspace-active .rl-page .rl-history-score>small{font-size:9px!important}
+html.rl-workspace-active .rl-page .rl-history-stats small{font-size:10px!important;margin:0}
+html.rl-workspace-active .rl-page .rl-score-side>small{font-size:10px}
+html.rl-workspace-active .rl-page .rl-post-stats>div>span{font-size:12px}
+.rl-roster-stats dt{font-size:11px}.rl-roster-stats dd{font-size:14px}
+html.rl-workspace-active .rl-page .rl-team-panel h3{font-size:12px}.rl-team-title>small{font-size:10px!important}
+.rl-player-row .rl-you{font-size:9px}.rl-roster-score small{font-size:10px}
+.rl-live-rosters+.rl-section{margin-top:28px!important}
+html.rl-workspace-active .rl-tabs #rl-live-indicator{border-bottom:1px solid #64dba833!important;box-shadow:none;animation:none}
+html.rl-workspace-active .rl-page .rl-standby+.rl-section{padding:0 24px}
+@container (min-width:741px){.rl-history-stats,.rl-history-open,.rl-history-mode{grid-row:auto;grid-column:auto}}
+@container (max-width:740px){html.rl-workspace-active .rl-page .rl-history-score>small{display:none}.rl-page .rl-history-mode{grid-row:1;grid-column:3}.rl-page .rl-history-score{text-align:left}.rl-page .rl-history-stats{grid-column:2/4;grid-row:2}.rl-page .rl-history-open{display:block;grid-column:4;grid-row:1/3}}

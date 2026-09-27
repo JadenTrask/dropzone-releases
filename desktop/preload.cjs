@@ -3,6 +3,8 @@ const {contextBridge,ipcRenderer}=require('electron');
 let startupRevealed=false;const startupCallbacks=new Set();
 ipcRenderer.once('startup-reveal',()=>{startupRevealed=true;for(const callback of startupCallbacks)callback();startupCallbacks.clear();});
 contextBridge.exposeInMainWorld('rift',Object.freeze({
+  coaching:input=>ipcRenderer.invoke('coaching',input),
+  onCoaching:callback=>{const listener=(_event,value)=>callback(value);ipcRenderer.on('coaching-status',listener);return ()=>ipcRenderer.removeListener('coaching-status',listener);},
   rocketLeague:input=>ipcRenderer.invoke('rocket-league',input),
   onRocketLeague:callback=>{if(typeof callback!=='function')return ()=>{};const listener=(_event,value)=>callback(value);ipcRenderer.on('rocket-league-state',listener);return ()=>ipcRenderer.removeListener('rocket-league-state',listener);},
   quickPanel:input=>ipcRenderer.invoke('quick-panel',input),

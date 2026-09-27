@@ -1,0 +1,581 @@
+/* Shared Dropzone controls. Rocket League and THE FINALS retain their approved
+   module materials. Artwork cards, map markers, game rows, and window controls
+   are deliberately outside this opt-in set. Frost comes from a static gradient
+   and highlight; only a shared nav surface or open menu has backdrop blur. */
+:root {
+  --dz-control-base: linear-gradient(145deg, #68708030, #343d4a54);
+  --dz-control-hover: linear-gradient(145deg, #7b83933f, #46505f66);
+  --dz-control-active: linear-gradient(135deg, #65708085, #414a5b80);
+  --dz-control-primary: linear-gradient(145deg, #986e4c75, #6550418f);
+  --dz-control-primary-hover: linear-gradient(145deg, #ac805989, #765c4c9c);
+  --dz-control-danger: linear-gradient(145deg, #aa555244, #633b405e);
+  --dz-control-danger-hover: linear-gradient(145deg, #bc68675e, #76434973);
+  --dz-control-ink: #e8edf3;
+  --dz-control-muted: #b9c2cc;
+  --dz-control-primary-ink: #ffe7cd;
+  --dz-control-danger-ink: #ffcfce;
+  --dz-control-edge: #cad8eb25;
+  --dz-control-edge-hover: #d8e7fa45;
+  --dz-control-edge-active: #c4d4ec38;
+  --dz-control-primary-edge: #f2bb8252;
+  --dz-control-danger-edge: #ef9d9a50;
+  --dz-control-highlight: inset 0 1px #e7efff16, inset 0 -1px #050a1418;
+  --dz-control-shadow: var(--dz-control-highlight), 0 3px 8px #0000001a;
+  --dz-control-focus: #e2b68e;
+  --dz-control-menu: #242b36f0;
+  --dz-control-well: linear-gradient(145deg, #1b222c8c, #141a2247);
+  --dz-control-radius: 10px;
+  --dz-control-ease: cubic-bezier(.22, 1, .36, 1);
+}
+html[data-appearance="light"] {
+  --dz-control-base: linear-gradient(145deg, #ffffffc7, #e2e5ed91);
+  --dz-control-hover: linear-gradient(145deg, #ffffffed, #d9deeaac);
+  --dz-control-active: linear-gradient(135deg, #d3dcebdc, #bdc9dcc4);
+  --dz-control-primary: linear-gradient(145deg, #f5dfc5dd, #dfc5acb8);
+  --dz-control-primary-hover: linear-gradient(145deg, #ffe9d2, #d6b697db);
+  --dz-control-danger: linear-gradient(145deg, #f9ddddd6, #efd0d2ad);
+  --dz-control-danger-hover: linear-gradient(145deg, #f9d3d3, #eac0c4dc);
+  --dz-control-ink: #273447;
+  --dz-control-muted: #485569;
+  --dz-control-primary-ink: #583d28;
+  --dz-control-danger-ink: #853b45;
+  --dz-control-edge: #67799033;
+  --dz-control-edge-hover: #52698370;
+  --dz-control-edge-active: #667e9b69;
+  --dz-control-primary-edge: #96735165;
+  --dz-control-danger-edge: #b06b7480;
+  --dz-control-highlight: inset 0 1px #ffffffdf, inset 0 -1px #6573860a;
+  --dz-control-shadow: var(--dz-control-highlight), 0 3px 8px #273a5310;
+  --dz-control-focus: #856142;
+  --dz-control-menu: #f2f4f9f5;
+  --dz-control-well: linear-gradient(145deg, #e2e6eeae, #eceef366);
+}
+html:not(.rl-workspace-active):not([data-game="finals"]) :is(body, #hub-app, #league-app) :where(
+.hub-button, .button, .utility-button, .search-button, .icon-button,
+  .home-control, .location-parent, .font-menu summary, .app-update-ready,
+  .source-status>summary,
+  .workspace-control, .workspace-result, .change-champion, #league-app .mode-link,
+  .text-size-controls button, button.source-link, .text-button, .favorite-button,
+  .select-control, .game-page-tabs button, .global-nav-link,
+  #league-app .nav-link, .mode-tabs button, .segmented button,
+  .playlist-tabs button, .variant-picker button, .filter-pills button,
+  .threat-pills button, .matchup-select, .notice button, .cod-notice button,
+  .source-disclosure button, .settings-links button, .footer button,
+  .sources-status-filter button, .damage-tabs [role="tab"],
+  .damage-zone-picker button, .weapon-type-tabs button, .damage-types button,
+  .market-ranges button, .server-filters button, .server-table button,
+  .damage-page th button, .planner-summary button,
+  .r6-toolbar nav button, .r6-page [data-r6-refresh], .r6-chart-actions button,
+  .operator-side button, .operator-profile-nav button, [data-op-refresh],
+  .cc-actions button, .cc-nav button, .cc-nav summary,
+  .cc-dialog button:not(.cc-board):not(.cc-card),
+  .cc-page [data-cc]:not(.cc-card), .cc-page form button,
+  .mf-tabs button, .whats-new-top button, .patch-row button, .gun-remove,
+  .wd-map-toolbar button, .wd-panel-tabs button, .wd-arcs>button,
+  .wd-coordinate-fields button, .wd-position-summary button,
+  .wd-control-buttons button, .wd-sidebar-footer button, .wd-tour button,
+  .wd-tutorial-button, .wd-impact-mark, .wd-impact-reset,
+  .wd-sight-tab, .wd-sight-expand, .wd-arc-options button, .wd-shot-actions button,
+  .sotf-presets button, .sotf-map-tools button, .sotf-sidebar footer button, .sotf-close,
+  .gz-page button:not(.gz-result):not(.gz-nearby), .gz-dialog button
+) {
+  --dz-control-surface: var(--dz-control-base);
+  --dz-control-color: var(--dz-control-ink);
+  --dz-control-border: var(--dz-control-edge);
+  /* Older game skins use !important on material colors. Normalize those three
+     properties here while leaving each control's layout and content intact. */
+  background: var(--dz-control-surface) !important;
+  color: var(--dz-control-color) !important;
+  border: 1px solid var(--dz-control-border);
+  border-color: var(--dz-control-border) !important;
+  border-radius: var(--dz-control-radius);
+  box-shadow: var(--dz-control-shadow);
+  backdrop-filter: none;
+  text-shadow: none;
+  font-weight: 600;
+  line-height: 1.4;
+  cursor: pointer;
+  transition: color 160ms, border-color 160ms, box-shadow 160ms,
+    transform 160ms var(--dz-control-ease), background-color 160ms;
+}
+html:not(.rl-workspace-active):not([data-game="finals"]) :is(body, #hub-app, #league-app) :where(
+.hub-button, .button, .utility-button, .search-button, .icon-button,
+  .home-control, .location-parent, .font-menu summary, .app-update-ready,
+  .source-status>summary,
+  .workspace-control, .workspace-result, .change-champion, #league-app .mode-link,
+  .text-size-controls button, button.source-link, .text-button, .favorite-button,
+  .select-control, .game-page-tabs button, .global-nav-link,
+  #league-app .nav-link, .mode-tabs button, .segmented button,
+  .playlist-tabs button, .variant-picker button, .filter-pills button,
+  .threat-pills button, .matchup-select, .notice button, .cod-notice button,
+  .source-disclosure button, .settings-links button, .footer button,
+  .sources-status-filter button, .damage-tabs [role="tab"],
+  .damage-zone-picker button, .weapon-type-tabs button, .damage-types button,
+  .market-ranges button, .server-filters button, .server-table button,
+  .damage-page th button, .planner-summary button,
+  .r6-toolbar nav button, .r6-page [data-r6-refresh], .r6-chart-actions button,
+  .operator-side button, .operator-profile-nav button, [data-op-refresh],
+  .cc-actions button, .cc-nav button, .cc-nav summary,
+  .cc-dialog button:not(.cc-board):not(.cc-card),
+  .cc-page [data-cc]:not(.cc-card), .cc-page form button,
+  .mf-tabs button, .whats-new-top button, .patch-row button, .gun-remove,
+  .wd-map-toolbar button, .wd-panel-tabs button, .wd-arcs>button,
+  .wd-coordinate-fields button, .wd-position-summary button,
+  .wd-control-buttons button, .wd-sidebar-footer button, .wd-tour button,
+  .wd-tutorial-button, .wd-impact-mark, .wd-impact-reset,
+  .wd-sight-tab, .wd-sight-expand, .wd-arc-options button, .wd-shot-actions button,
+  .sotf-presets button, .sotf-map-tools button, .sotf-sidebar footer button, .sotf-close,
+  .gz-page button:not(.gz-result):not(.gz-nearby), .gz-dialog button
+):is(.active, .selected, [aria-pressed="true"], [aria-selected="true"], [aria-current="page"], [aria-expanded="true"]) {
+  --dz-control-surface: var(--dz-control-active);
+  --dz-control-border: var(--dz-control-edge-active);
+  color: var(--dz-control-ink) !important;
+  box-shadow: var(--dz-control-highlight), 0 3px 8px #0000001f;
+}
+html:not(.rl-workspace-active):not([data-game="finals"]) :is(body, #hub-app, #league-app) :is(
+  .hub-button:not(.secondary), .button:not(.secondary),
+  .cc-head [data-cc="new"], .cc-dialog button[type="submit"], .gz-primary, .app-update-ready
+) {
+  --dz-control-surface: var(--dz-control-primary);
+  --dz-control-color: var(--dz-control-primary-ink);
+  --dz-control-border: var(--dz-control-primary-edge);
+}
+html:not(.rl-workspace-active):not([data-game="finals"]) :is(body, #hub-app, #league-app) :where(
+.hub-button, .button, .utility-button, .search-button, .icon-button,
+  .home-control, .location-parent, .font-menu summary, .app-update-ready,
+  .source-status>summary,
+  .workspace-control, .workspace-result, .change-champion, #league-app .mode-link,
+  .text-size-controls button, button.source-link, .text-button, .favorite-button,
+  .select-control, .game-page-tabs button, .global-nav-link,
+  #league-app .nav-link, .mode-tabs button, .segmented button,
+  .playlist-tabs button, .variant-picker button, .filter-pills button,
+  .threat-pills button, .matchup-select, .notice button, .cod-notice button,
+  .source-disclosure button, .settings-links button, .footer button,
+  .sources-status-filter button, .damage-tabs [role="tab"],
+  .damage-zone-picker button, .weapon-type-tabs button, .damage-types button,
+  .market-ranges button, .server-filters button, .server-table button,
+  .damage-page th button, .planner-summary button,
+  .r6-toolbar nav button, .r6-page [data-r6-refresh], .r6-chart-actions button,
+  .operator-side button, .operator-profile-nav button, [data-op-refresh],
+  .cc-actions button, .cc-nav button, .cc-nav summary,
+  .cc-dialog button:not(.cc-board):not(.cc-card),
+  .cc-page [data-cc]:not(.cc-card), .cc-page form button,
+  .mf-tabs button, .whats-new-top button, .patch-row button, .gun-remove,
+  .wd-map-toolbar button, .wd-panel-tabs button, .wd-arcs>button,
+  .wd-coordinate-fields button, .wd-position-summary button,
+  .wd-control-buttons button, .wd-sidebar-footer button, .wd-tour button,
+  .wd-tutorial-button, .wd-impact-mark, .wd-impact-reset,
+  .wd-sight-tab, .wd-sight-expand, .wd-arc-options button, .wd-shot-actions button,
+  .sotf-presets button, .sotf-map-tools button, .sotf-sidebar footer button, .sotf-close,
+  .gz-page button:not(.gz-result):not(.gz-nearby), .gz-dialog button
+):hover:not(:disabled):not([aria-disabled="true"]) {
+  --dz-control-surface: var(--dz-control-hover);
+  --dz-control-border: var(--dz-control-edge-hover);
+  box-shadow: var(--dz-control-highlight), 0 4px 10px #00000024;
+  transform: translateY(-1px);
+}
+html:not(.rl-workspace-active):not([data-game="finals"]) :is(body, #hub-app, #league-app) :is(
+  .hub-button:not(.secondary), .button:not(.secondary),
+  .cc-head [data-cc="new"], .cc-dialog button[type="submit"], .gz-primary, .app-update-ready
+):hover:not(:disabled) { --dz-control-surface: var(--dz-control-primary-hover); }
+html:not(.rl-workspace-active):not([data-game="finals"]) :is(body, #hub-app, #league-app) :is(
+  .hub-button.danger, .button.danger, [data-cc="delete"],
+  [data-cc="confirm-delete"], button[data-hub-delete], [data-action="delete"],
+  .gz-danger, button[data-wd-delete]
+) {
+  --dz-control-surface: var(--dz-control-danger);
+  --dz-control-color: var(--dz-control-danger-ink);
+  --dz-control-border: var(--dz-control-danger-edge);
+}
+html:not(.rl-workspace-active):not([data-game="finals"]) :is(body, #hub-app, #league-app) :is(
+  .hub-button.danger, .button.danger, [data-cc="delete"],
+  [data-cc="confirm-delete"], button[data-hub-delete], [data-action="delete"],
+  .gz-danger, button[data-wd-delete]
+):hover:not(:disabled) { --dz-control-surface: var(--dz-control-danger-hover); }
+html:not(.rl-workspace-active):not([data-game="finals"]) :is(body, #hub-app, #league-app) :where(
+.hub-button, .button, .utility-button, .search-button, .icon-button,
+  .home-control, .location-parent, .font-menu summary, .app-update-ready,
+  .source-status>summary,
+  .workspace-control, .workspace-result, .change-champion, #league-app .mode-link,
+  .text-size-controls button, button.source-link, .text-button, .favorite-button,
+  .select-control, .game-page-tabs button, .global-nav-link,
+  #league-app .nav-link, .mode-tabs button, .segmented button,
+  .playlist-tabs button, .variant-picker button, .filter-pills button,
+  .threat-pills button, .matchup-select, .notice button, .cod-notice button,
+  .source-disclosure button, .settings-links button, .footer button,
+  .sources-status-filter button, .damage-tabs [role="tab"],
+  .damage-zone-picker button, .weapon-type-tabs button, .damage-types button,
+  .market-ranges button, .server-filters button, .server-table button,
+  .damage-page th button, .planner-summary button,
+  .r6-toolbar nav button, .r6-page [data-r6-refresh], .r6-chart-actions button,
+  .operator-side button, .operator-profile-nav button, [data-op-refresh],
+  .cc-actions button, .cc-nav button, .cc-nav summary,
+  .cc-dialog button:not(.cc-board):not(.cc-card),
+  .cc-page [data-cc]:not(.cc-card), .cc-page form button,
+  .mf-tabs button, .whats-new-top button, .patch-row button, .gun-remove,
+  .wd-map-toolbar button, .wd-panel-tabs button, .wd-arcs>button,
+  .wd-coordinate-fields button, .wd-position-summary button,
+  .wd-control-buttons button, .wd-sidebar-footer button, .wd-tour button,
+  .wd-tutorial-button, .wd-impact-mark, .wd-impact-reset,
+  .wd-sight-tab, .wd-sight-expand, .wd-arc-options button, .wd-shot-actions button,
+  .sotf-presets button, .sotf-map-tools button, .sotf-sidebar footer button, .sotf-close,
+  .gz-page button:not(.gz-result):not(.gz-nearby), .gz-dialog button
+):active:not(:disabled):not([aria-disabled="true"]) {
+  transform: translateY(1px);
+  box-shadow: var(--dz-control-highlight);
+}
+html:not(.rl-workspace-active):not([data-game="finals"]) :is(body, #hub-app, #league-app) :where(
+.hub-button, .button, .utility-button, .search-button, .icon-button,
+  .home-control, .location-parent, .font-menu summary, .app-update-ready,
+  .source-status>summary,
+  .workspace-control, .workspace-result, .change-champion, #league-app .mode-link,
+  .text-size-controls button, button.source-link, .text-button, .favorite-button,
+  .select-control, .game-page-tabs button, .global-nav-link,
+  #league-app .nav-link, .mode-tabs button, .segmented button,
+  .playlist-tabs button, .variant-picker button, .filter-pills button,
+  .threat-pills button, .matchup-select, .notice button, .cod-notice button,
+  .source-disclosure button, .settings-links button, .footer button,
+  .sources-status-filter button, .damage-tabs [role="tab"],
+  .damage-zone-picker button, .weapon-type-tabs button, .damage-types button,
+  .market-ranges button, .server-filters button, .server-table button,
+  .damage-page th button, .planner-summary button,
+  .r6-toolbar nav button, .r6-page [data-r6-refresh], .r6-chart-actions button,
+  .operator-side button, .operator-profile-nav button, [data-op-refresh],
+  .cc-actions button, .cc-nav button, .cc-nav summary,
+  .cc-dialog button:not(.cc-board):not(.cc-card),
+  .cc-page [data-cc]:not(.cc-card), .cc-page form button,
+  .mf-tabs button, .whats-new-top button, .patch-row button, .gun-remove,
+  .wd-map-toolbar button, .wd-panel-tabs button, .wd-arcs>button,
+  .wd-coordinate-fields button, .wd-position-summary button,
+  .wd-control-buttons button, .wd-sidebar-footer button, .wd-tour button,
+  .wd-tutorial-button, .wd-impact-mark, .wd-impact-reset,
+  .wd-sight-tab, .wd-sight-expand, .wd-arc-options button, .wd-shot-actions button,
+  .sotf-presets button, .sotf-map-tools button, .sotf-sidebar footer button, .sotf-close,
+  .gz-page button:not(.gz-result):not(.gz-nearby), .gz-dialog button
+):focus-visible {
+  outline: 2px solid var(--dz-control-focus) !important;
+  outline-offset: 3px;
+}
+html:not(.rl-workspace-active):not([data-game="finals"]) :is(body, #hub-app, #league-app) :where(
+.hub-button, .button, .utility-button, .search-button, .icon-button,
+  .home-control, .location-parent, .font-menu summary, .app-update-ready,
+  .source-status>summary,
+  .workspace-control, .workspace-result, .change-champion, #league-app .mode-link,
+  .text-size-controls button, button.source-link, .text-button, .favorite-button,
+  .select-control, .game-page-tabs button, .global-nav-link,
+  #league-app .nav-link, .mode-tabs button, .segmented button,
+  .playlist-tabs button, .variant-picker button, .filter-pills button,
+  .threat-pills button, .matchup-select, .notice button, .cod-notice button,
+  .source-disclosure button, .settings-links button, .footer button,
+  .sources-status-filter button, .damage-tabs [role="tab"],
+  .damage-zone-picker button, .weapon-type-tabs button, .damage-types button,
+  .market-ranges button, .server-filters button, .server-table button,
+  .damage-page th button, .planner-summary button,
+  .r6-toolbar nav button, .r6-page [data-r6-refresh], .r6-chart-actions button,
+  .operator-side button, .operator-profile-nav button, [data-op-refresh],
+  .cc-actions button, .cc-nav button, .cc-nav summary,
+  .cc-dialog button:not(.cc-board):not(.cc-card),
+  .cc-page [data-cc]:not(.cc-card), .cc-page form button,
+  .mf-tabs button, .whats-new-top button, .patch-row button, .gun-remove,
+  .wd-map-toolbar button, .wd-panel-tabs button, .wd-arcs>button,
+  .wd-coordinate-fields button, .wd-position-summary button,
+  .wd-control-buttons button, .wd-sidebar-footer button, .wd-tour button,
+  .wd-tutorial-button, .wd-impact-mark, .wd-impact-reset,
+  .wd-sight-tab, .wd-sight-expand, .wd-arc-options button, .wd-shot-actions button,
+  .sotf-presets button, .sotf-map-tools button, .sotf-sidebar footer button, .sotf-close,
+  .gz-page button:not(.gz-result):not(.gz-nearby), .gz-dialog button
+):is(:disabled, [aria-disabled="true"]) {
+  opacity: .45;
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: var(--dz-control-highlight);
+}
+
+/* Keep compact tools compact. Text actions receive a quiet, tangible hit area. */
+html:not(.rl-workspace-active):not([data-game="finals"]) :is(body, #hub-app, #league-app) :is(
+  button.source-link, .text-button, .settings-links button, .footer button,
+  .notice button, .cod-notice button, .source-disclosure button, .sotf-sidebar footer button,
+  .home-control, .location-parent, .workspace-control, .change-champion, .patch-row button
+) { padding: 7px 11px; min-height: 32px; text-decoration: none; }
+html:not(.rl-workspace-active):not([data-game="finals"]) :is(body, #hub-app) .sotf-sidebar footer button {
+  max-width: 100%; box-sizing: border-box; white-space: normal;
+  overflow-wrap: anywhere; text-align: left;
+}
+html:not(.rl-workspace-active):not([data-game="finals"]) :is(body, #hub-app, #league-app) :is(
+  .icon-button, .utility-button, .favorite-button, .text-size-controls button, .gun-remove
+) { display: inline-flex; align-items: center; justify-content: center; }
+html:not(.rl-workspace-active):not([data-game="finals"]) :is(body, #hub-app, #league-app) .select-control {
+  min-height: 38px; padding: 9px 12px; text-align: left;
+}
+html:not(.rl-workspace-active):not([data-game="finals"]) .select-control svg { color: var(--dz-control-muted) !important; stroke: currentColor !important; }
+html:not(.rl-workspace-active):not([data-game="finals"]) :is(body, #hub-app, #league-app) :is(
+  .game-page-tabs button, #league-app .nav-link, .mode-tabs button,
+  .playlist-tabs button, .segmented button, .cc-nav button,
+  .operator-side button, .r6-toolbar nav button, .damage-tabs [role="tab"]
+) { min-height: 36px; padding: 8px 13px; }
+html:not(.rl-workspace-active):not([data-game="finals"]) .game-page-tabs { gap: 6px; align-items: center; }
+html:not(.rl-workspace-active):not([data-game="finals"]) .game-tabs-inner { min-height: 50px; }
+html:not(.rl-workspace-active):not([data-game="finals"]) :is(body, #hub-app, #league-app) .game-page-tabs button {
+  min-height: 38px; margin-block: 6px; border-bottom-width: 1px !important;
+}
+html:not(.rl-workspace-active):not([data-game="finals"]) .game-page-tabs button::after,
+html:not(.rl-workspace-active):not([data-game="finals"]) #league-app .nav-link.active::before { content: none !important; display: none !important; }
+html:not(.rl-workspace-active):not([data-game="finals"]) .game-tabs-shell {
+  background: var(--dz-control-well) !important; border-bottom-color: var(--dz-control-edge);
+  backdrop-filter: blur(10px); box-shadow: inset 0 1px #ffffff04;
+}
+html:not(.rl-workspace-active):not([data-game="finals"]) :is(body, #hub-app, #league-app) :is(
+  .mode-tabs, .playlist-tabs, .segmented, .operator-side, .damage-tabs
+) {
+  background: var(--dz-control-well) !important; border-color: var(--dz-control-edge);
+  border-radius: 13px; padding: 4px; gap: 5px;
+}
+
+/* All enhanced selects are portalled to body. One inexpensive blur per open
+   popover; options themselves remain ordinary static gradient surfaces. */
+html:not(.rl-workspace-active):not([data-game="finals"]) .select-options {
+  background: var(--dz-control-menu) !important; color: var(--dz-control-ink) !important;
+  border: 1px solid var(--dz-control-edge-hover) !important; border-radius: 12px;
+  padding: 6px; box-shadow: inset 0 1px #ffffff0d, 0 14px 32px #00000040;
+  backdrop-filter: blur(12px); animation: dz-control-menu-in 140ms var(--dz-control-ease);
+}
+html:not(.rl-workspace-active):not([data-game="finals"]) .select-options button {
+  background: transparent !important; color: var(--dz-control-ink) !important;
+  border: 1px solid transparent; border-radius: 8px; box-shadow: none;
+  padding: 10px 12px; font-weight: 500; line-height: 1.4; min-height: 38px;
+  transition: background-color 140ms, color 140ms; transform: none;
+}
+html:not(.rl-workspace-active):not([data-game="finals"]) .select-options button:is([aria-selected="true"], :hover, :focus-visible) {
+  background: var(--dz-control-active) !important; color: var(--dz-control-ink) !important;
+  border-color: var(--dz-control-edge-active); box-shadow: var(--dz-control-highlight);
+}
+html:not(.rl-workspace-active):not([data-game="finals"]) .select-options button:focus-visible { outline: 2px solid var(--dz-control-focus); outline-offset: -2px; }
+html:not(.rl-workspace-active):not([data-game="finals"]) .select-options button:disabled { opacity: .45; background: transparent !important; }
+html:not(.rl-workspace-active):not([data-game="finals"]) .select-options input {
+  background: var(--dz-control-well) !important; color: var(--dz-control-ink) !important;
+  border-color: var(--dz-control-edge) !important; border-radius: 8px;
+}
+html:not(.rl-workspace-active):not([data-game="finals"]) .cc-nav details[open]>div {
+  background: var(--dz-control-menu) !important; border-color: var(--dz-control-edge-hover) !important;
+  border-radius: 12px; padding: 6px; box-shadow: 0 14px 32px #0004; backdrop-filter: blur(12px);
+}
+html:not(.rl-workspace-active):not([data-game="finals"]) .cc-nav details:has([aria-current="page"]) summary {
+  --dz-control-surface: var(--dz-control-active); --dz-control-border: var(--dz-control-edge-active);
+}
+@keyframes dz-control-menu-in { from { opacity: 0; transform: translateY(-3px) scale(.985); } to { opacity: 1; transform: none; } }
+
+/* Accessibility preferences retain the same hierarchy without translucency. */
+html:not(.rl-workspace-active):not([data-game="finals"]) .app-high-contrast {
+  --dz-control-base: #242b35; --dz-control-hover: #384352;
+  --dz-control-active: #45556d; --dz-control-edge: #aab8c9;
+  --dz-control-edge-active: #e1eafa; --dz-control-edge-hover: #fff;
+  --dz-control-ink: #fff; --dz-control-muted: #e4eaf2; --dz-control-shadow: none;
+  --dz-control-primary: #634530; --dz-control-primary-hover: #805b3d;
+  --dz-control-danger: #653237; --dz-control-danger-hover: #88434b;
+  --dz-control-menu: #202832;
+}
+html[data-appearance="light"]:not(.rl-workspace-active):not([data-game="finals"]) .app-high-contrast {
+  --dz-control-base: #fff; --dz-control-hover: #e4ebf5;
+  --dz-control-active: #c7d7ec; --dz-control-edge: #34465e;
+  --dz-control-edge-active: #142b4a; --dz-control-edge-hover: #142b4a;
+  --dz-control-ink: #15263d; --dz-control-muted: #26364d;
+  --dz-control-primary: #edd2b7; --dz-control-primary-hover: #e2bd98;
+  --dz-control-danger: #f3d5d5; --dz-control-danger-hover: #e9b8bf;
+  --dz-control-menu: #fff;
+}
+@media (prefers-reduced-transparency: reduce) {
+  html:not(.rl-workspace-active):not([data-game="finals"]) :is(.game-tabs-shell, .select-options, .font-popover, .source-status-detail, .cc-nav details[open]>div) { backdrop-filter: none !important; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html:not(.rl-workspace-active):not([data-game="finals"]) :is(button, .select-options, .cc-nav summary, .source-status>summary, .source-status-detail) { transition: none !important; animation: none !important; }
+}
+html:not(.rl-workspace-active):not([data-game="finals"]) :is(.app-reduced-motion, .cc-reduced-motion) :is(button, .select-options, .cc-nav summary, .source-status>summary, .source-status-detail),
+html.cc-reduced-motion:not(.rl-workspace-active):not([data-game="finals"]) :is(button, .select-options, .cc-nav summary, .source-status>summary, .source-status-detail) {
+  transition: none !important; animation: none !important;
+}
+
+html:not(.rl-workspace-active):not([data-game="finals"]) .font-menu[open]>summary {
+  --dz-control-surface: var(--dz-control-active); --dz-control-border: var(--dz-control-edge-active);
+}
+html:not(.rl-workspace-active):not([data-game="finals"]) .font-popover {
+  background: var(--dz-control-menu) !important; border-color: var(--dz-control-edge-hover) !important;
+  border-radius: 12px; box-shadow: 0 14px 32px #0004; backdrop-filter: blur(12px);
+}
+html:not(.rl-workspace-active):not([data-game="finals"]) :is(.damage-page th button, .server-table button) {
+  padding: 5px 8px; border-radius: 7px;
+}
+
+/* Source freshness uses the same disclosure material as adjacent actions.
+   Warning copy and its amber dot remain meaningful, including in light mode. */
+html:not(.rl-workspace-active):not([data-game="finals"]) :is(body, #hub-app, #league-app) .source-status[open]>summary {
+  --dz-control-surface: var(--dz-control-active);
+  --dz-control-border: var(--dz-control-edge-active);
+}
+html:not(.rl-workspace-active):not([data-game="finals"]) :is(body, #hub-app, #league-app) .source-status[data-tone="warning"]>summary {
+  --dz-control-color: #edc781;
+  --dz-control-border: #d5aa584a;
+}
+html[data-appearance="light"]:not(.rl-workspace-active):not([data-game="finals"]) :is(body, #hub-app, #league-app) .source-status[data-tone="warning"]>summary {
+  --dz-control-color: #805116;
+  --dz-control-border: #99713c66;
+}
+html:not(.rl-workspace-active):not([data-game="finals"]) :is(body, #hub-app, #league-app) .source-status>summary>span:not(.source-status-dot) {
+  color: inherit !important;
+}
+html:not(.rl-workspace-active):not([data-game="finals"]) .source-status-detail {
+  background: var(--dz-control-menu) !important;
+  color: var(--dz-control-ink) !important;
+  border: 1px solid var(--dz-control-edge-hover);
+  border-radius: 12px;
+  box-shadow: var(--dz-control-highlight), 0 14px 32px #00000040;
+}
+html:not(.rl-workspace-active):not([data-game="finals"]) .source-status[open]>.source-status-detail {
+  backdrop-filter: blur(12px);
+  animation: dz-control-menu-in 140ms var(--dz-control-ease);
+}
+
+/* Primary navigation follows Rocket League's active-only material: quiet text
+   at rest, a faint hover wash, and one frosted selected surface. Actions and
+   filter/segmented controls above keep their separate button hierarchy. */
+html:not(.rl-workspace-active):not([data-game="finals"]) :is(body, #hub-app, #league-app) :is(.game-page-tabs button, #league-app .sidebar .nav-link, .cc-nav>button, .cc-nav>details>summary, .r6-toolbar nav button, .operator-profile-nav nav button, .mf-tabs button, .damage-tabs [role="tab"]) {
+  background: transparent !important;
+  color: var(--dz-control-muted) !important;
+  border: 0 !important;
+  border-radius: 10px;
+  box-shadow: none;
+  backdrop-filter: none;
+  min-height: 36px;
+  padding: 9px 15px;
+  font-size: 12px;
+  font-weight: 550;
+  line-height: 1.4;
+  transform: none;
+  transition: background-color 180ms, color 180ms, box-shadow 180ms;
+}
+html:not(.rl-workspace-active):not([data-game="finals"]) :is(body, #hub-app, #league-app) :is(.game-page-tabs button, #league-app .sidebar .nav-link, .cc-nav>button, .cc-nav>details>summary, .r6-toolbar nav button, .operator-profile-nav nav button, .mf-tabs button, .damage-tabs [role="tab"]):hover:not(:disabled):not([aria-disabled="true"]) {
+  background: #b3c7e10b !important;
+  color: var(--dz-control-ink) !important;
+  box-shadow: none;
+  transform: none;
+}
+html:not(.rl-workspace-active):not([data-game="finals"]) :is(body, #hub-app, #league-app) :is(.game-page-tabs button, #league-app .sidebar .nav-link, .cc-nav>button, .cc-nav>details>summary, .r6-toolbar nav button, .operator-profile-nav nav button, .mf-tabs button, .damage-tabs [role="tab"]):is(.active, [aria-current="page"], [aria-selected="true"], [aria-pressed="true"]) {
+  background: var(--dz-control-active) !important;
+  color: var(--dz-control-ink) !important;
+  box-shadow: inset 0 1px #d7e4f322, 0 3px 8px #00000022;
+  transform: none;
+}
+html:not(.rl-workspace-active):not([data-game="finals"]) :is(body, #hub-app, #league-app) .cc-nav details:has([aria-current="page"])>summary {
+  background: var(--dz-control-active) !important;
+  color: var(--dz-control-ink) !important;
+  box-shadow: inset 0 1px #d7e4f322, 0 3px 8px #00000022;
+}
+html[data-appearance="light"]:not(.rl-workspace-active):not([data-game="finals"]) :is(body, #hub-app, #league-app) :is(.game-page-tabs button, #league-app .sidebar .nav-link, .cc-nav>button, .cc-nav>details>summary, .r6-toolbar nav button, .operator-profile-nav nav button, .mf-tabs button, .damage-tabs [role="tab"]):hover:not(:disabled):not([aria-disabled="true"]):not(.active):not([aria-current="page"]):not([aria-selected="true"]):not([aria-pressed="true"]) {
+  background: #536a8510 !important;
+}
+
+/* Retain League's card layout while bringing its modal controls into the same
+   palette. The roster's empty state is a page state, not one champion tile. */
+#league-app .roster-grid>.empty-state {
+  grid-column: 1 / -1; min-height: 240px; padding: 32px 24px;
+}
+#league-app .picker-search input {
+  background: transparent !important; border: 0; box-shadow: none;
+}
+#modes-dialog { color: var(--dz-control-ink); }
+#modes-dialog :is(.muted, .eyebrow) { color: var(--dz-control-muted); }
+#modes-dialog .mode-card {
+  background: var(--dz-control-well) !important;
+  border-color: var(--dz-control-edge) !important;
+  box-shadow: var(--dz-control-highlight);
+  color: var(--dz-control-ink);
+  transition: background-color 160ms, border-color 160ms, box-shadow 160ms;
+}
+#modes-dialog .mode-card>strong { color: var(--dz-control-ink); }
+#modes-dialog .mode-card>small,
+#modes-dialog .mode-card>svg { color: var(--dz-control-muted); }
+#modes-dialog .mode-card:hover {
+  background: var(--dz-control-hover) !important;
+  border-color: var(--dz-control-edge-hover) !important;
+}
+#modes-dialog .mode-card.selected {
+  background: var(--dz-control-active) !important;
+  border-color: var(--dz-control-edge-active) !important;
+  box-shadow: var(--dz-control-shadow);
+}
+#modes-dialog .mode-card-badge {
+  background: var(--dz-control-well); color: var(--dz-control-muted);
+  border-color: var(--dz-control-edge);
+}
+
+/* These Damage Lab fields intentionally use native selects. Keep native input
+   behavior and their arrow while matching the enhanced select's surface. */
+html[data-game="wardogs"] #hub-app :is(.damage-target-fields select, .gun-ammo select) {
+  --dz-native-arrow: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' fill='none' stroke='%23b9c2cc' stroke-width='1.7'%3E%3Cpath d='m3 5 4 4 4-4'/%3E%3C/svg%3E");
+  appearance: none; min-height: 42px; padding: 9px 36px 9px 12px;
+  border: 1px solid var(--dz-control-edge) !important;
+  border-radius: var(--dz-control-radius);
+  background-image: var(--dz-native-arrow), var(--dz-control-base) !important;
+  background-position: right 12px center, 0 0 !important;
+  background-size: 14px 14px, auto !important;
+  background-repeat: no-repeat, no-repeat !important;
+  color: var(--dz-control-ink) !important;
+  box-shadow: var(--dz-control-shadow); font-weight: 600; line-height: 1.4;
+  cursor: pointer; color-scheme: dark;
+}
+html[data-game="wardogs"] #hub-app :is(.damage-target-fields select, .gun-ammo select):hover:not(:disabled) {
+  background-image: var(--dz-native-arrow), var(--dz-control-hover) !important;
+  border-color: var(--dz-control-edge-hover) !important;
+}
+html[data-game="wardogs"] #hub-app :is(.damage-target-fields select, .gun-ammo select):focus-visible {
+  outline: 2px solid var(--dz-control-focus); outline-offset: 3px;
+}
+html[data-game="wardogs"] #hub-app :is(.damage-target-fields select, .gun-ammo select):disabled {
+  --dz-native-arrow: none; opacity: .55; cursor: not-allowed;
+}
+html[data-game="wardogs"] #hub-app :is(.damage-target-fields select, .gun-ammo select) option {
+  background: #242b36; color: #e8edf3;
+}
+html[data-appearance="light"][data-game="wardogs"] #hub-app :is(.damage-target-fields select, .gun-ammo select) {
+  --dz-native-arrow: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='14' height='14' fill='none' stroke='%23485569' stroke-width='1.7'%3E%3Cpath d='m3 5 4 4 4-4'/%3E%3C/svg%3E");
+  color-scheme: light;
+}
+html[data-appearance="light"][data-game="wardogs"] #hub-app :is(.damage-target-fields select, .gun-ammo select):disabled { --dz-native-arrow: none; }
+html[data-appearance="light"][data-game="wardogs"] #hub-app :is(.damage-target-fields select, .gun-ammo select) option {
+  background: #f2f4f9; color: #273447;
+}
+
+/* Saved equipment uses small source thumbnails; never stretch those assets to
+   fill an entire desktop row. A lone saved build keeps a deliberate card size. */
+#league-app .saved-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 380px), 1fr));
+  gap: 20px;
+  align-items: start;
+}
+#league-app .saved-card {
+  width: 100%; max-width: 520px; min-width: 0; box-sizing: border-box;
+  padding: 22px;
+}
+#league-app .saved-card-top { flex-wrap: nowrap; gap: 12px; }
+#league-app .saved-card-top>img { flex: 0 0 47px; }
+#league-app .saved-card-top>div { min-width: 0; }
+#league-app .saved-card-top>button { flex: none; }
+#league-app .saved-card-top h2 { font-size: 20px; line-height: 1.25; }
+#league-app .saved-card-top p { font-size: 13px; line-height: 1.45; overflow-wrap: anywhere; }
+#league-app .saved-items { display: flex; flex-wrap: wrap; gap: 8px; margin: 22px 0 18px; }
+#league-app .saved-items img {
+  width: 48px; height: 48px; flex: 0 0 48px; object-fit: contain;
+  box-sizing: border-box; border-radius: 7px;
+}
+#league-app .saved-meta { gap: 12px; flex-wrap: wrap; font-size: 12px; line-height: 1.5; }
+
+/* Actual-size charts center when smaller than the viewport. Auto margins
+   resolve to zero for oversized images, preserving access to both scroll edges. */
+#hub-app .r6-chart-dialog #r6-chart-full.is-zoomed img { margin-inline: auto; }
+
+/* Adjacent frosted actions need breathing room rather than touching outlines. */
+#workspace-results { display: grid; gap: 7px; margin-top: 10px; }
+#workspace-results>div { gap: 8px; border-bottom: 0; align-items: center; }
+#workspace-results>div:hover { background: transparent; }
+#workspace-results .workspace-result { min-width: 0; }
+#hub-app .sens-help>.source-link { margin: 6px 8px 0 0; max-width: 100%; white-space: normal; text-align: left; }

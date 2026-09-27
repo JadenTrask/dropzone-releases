@@ -4,3 +4,33 @@
 
 /* Use the same bundled item artwork in the map key and location results. */
 .sotf-marker-icon{width:28px;height:28px;display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;border:2px solid;border-radius:50%;background:#10191f;box-sizing:border-box}.sotf-marker-icon img{display:block;width:22px;height:22px;object-fit:contain}
+
+/* Snow and bright terrain need a stable dark backing. Keep the buttons at
+   their existing map coordinates and apply blur only to the shared surface. */
+html[data-game=sotf] #hub-app .sotf-workspace .sotf-map-tools{
+  top:12px;right:12px;padding:6px;max-width:calc(100% - 24px);box-sizing:border-box;
+  border:1px solid #b9cede2e;border-radius:14px;
+  background:linear-gradient(140deg,#202b36ed,#111b26f2);color:#edf4fa;
+  box-shadow:inset 0 1px #e9f2ff0f,0 5px 16px #0003;backdrop-filter:blur(10px);
+}
+html[data-game=sotf] #hub-app .sotf-workspace .sotf-map-tools button{
+  --dz-control-surface:linear-gradient(145deg,#c3d4e015,#8092a20a);
+  --dz-control-color:#edf4fa;--dz-control-border:#c4d7e52c;
+  background:var(--dz-control-surface)!important;color:var(--dz-control-color)!important;
+  border-color:var(--dz-control-border)!important;border-radius:9px;
+  box-shadow:inset 0 1px #eff6ff0a;backdrop-filter:none!important;opacity:1;
+}
+html[data-game=sotf] #hub-app .sotf-workspace .sotf-map-tools button:hover:not(:disabled):not([aria-disabled=true]){
+  --dz-control-surface:linear-gradient(145deg,#c3d4e02d,#8092a223);
+  --dz-control-color:#fff;--dz-control-border:#d5e5f159;
+}
+html[data-game=sotf] #hub-app .sotf-workspace .sotf-map-tools button:is(:disabled,[aria-disabled=true]){
+  --dz-control-surface:#ffffff04;--dz-control-color:#9eacba;--dz-control-border:#b9ccdd12;
+  opacity:1;box-shadow:none;
+}
+html[data-game=sotf] .app-high-contrast #hub-app .sotf-workspace .sotf-map-tools{
+  background:#111b26;border-color:#9bafc1;backdrop-filter:none;
+}
+@media(prefers-reduced-transparency:reduce){
+  html[data-game=sotf] #hub-app .sotf-workspace .sotf-map-tools{background:#17222e;backdrop-filter:none}
+}

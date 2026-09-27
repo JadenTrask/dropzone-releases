@@ -11,9 +11,13 @@ const SOURCES = {
   wardogs:{name:'BULKHEAD / Team17',url:'https://store.steampowered.com/news/app/1867240',feed:'https://api.steampowered.com/ISteamNews/GetNewsForApp/v2/?appid=1867240&count=30&maxlength=0&feeds=steam_community_announcements'}
 };
 function excerpt(s) {
-  const clean=text(decode(s).replace(/\[\/?[^\]]+\]/g,' ').replace(/https?:\/\/\S+/g,' '));
+  const clean=text(decode(s)
+    .replace(/\[(img|previewyoutube|youtube|video)(?:=[^\]]*)?\][\s\S]*?\[\/\1\]/gi,' ')
+    .replace(/\{STEAM_CLAN_IMAGE\}[^\s<>\[\]]*/gi,' ')
+    .replace(/\[\/?[^\]]+\]/g,' ').replace(/https?:\/\/\S+/g,' ')
+    .replace(/â€¦/g,'\u2026'));
   const words=clean.split(/\s+/);
-  return words.slice(0,20).join(' ')+(words.length>20?'â€¦':'');
+  return words.slice(0,20).join(' ')+(words.length>20?'\u2026':'');
 }
 function officialUrl(value,origin,prefix) {
   const u=new URL(value,origin);
@@ -29,7 +33,7 @@ function envelope(game,articles) {
 }
 function normalizeLeague(html) {
   const json=html.match(/<script\b[^>]*id="__NEXT_DATA__"[^>]*>([\s\S]*?)<\/script>/)?.[1];
-  if(!json) throw new Error('Riotâ€™s patch index changed format.');
+  if(!json) throw new Error("Riot's patch index changed format.");
   const entries=[];
   function walk(value) {
     if(!value||typeof value!=='object') return;
@@ -46,7 +50,7 @@ function normalizeLeague(html) {
 }
 function normalizeValorant(html) {
   const json=html.match(/<script\b[^>]*id="__NEXT_DATA__"[^>]*>([\s\S]*?)<\/script>/)?.[1];
-  if(!json) throw new Error('Riotâ€™s patch index changed format.');
+  if(!json) throw new Error("Riot's patch index changed format.");
   const entries=[];
   function walk(value) {
     if(!value||typeof value!=='object') return;
@@ -112,7 +116,9 @@ class PatchProvider {
   }
   async list(options={}) {
     if(!options||typeof options!=='object'||Array.isArray(options)||!this.feeds.has(options.game)) throw new Error('Choose a game to see its patch notes.');
-    return this.feeds.get(options.game).get(options.refresh===true||options.refresh==='true');
+    const result=await this.feeds.get(options.game).get(options.refresh===true||options.refresh==='true');
+    // Older saved feeds need the same readable previews as freshly fetched posts.
+    return {...result,articles:result.articles.map(article=>({...article,excerpt:excerpt(article.excerpt)}))};
   }
 }
 module.exports={PatchProvider,SOURCES,normalizeLeague,normalizeCod,normalizeFinals,normalizeWardogsNews,normalizeValorant};
