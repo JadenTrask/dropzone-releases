@@ -19,7 +19,7 @@ test('personal and friend profile filters update every view and reset match pagi
       await act('profile-tab',{tab});render();
       assert.equal(document.querySelector('.rl-summary-volume strong').textContent,'27');
       assert.equal(document.querySelector('[data-kind="ranked"]').getAttribute('aria-pressed'),'true');
-      assert.match(document.querySelector('.rl-profile-scope').textContent,/Ranked only/);
+      assert.equal(document.querySelector('[data-kind="ranked"]').textContent,'Ranked');
       if(tab!=='matches'){
         const goals=[...document.querySelectorAll('.rl-profile-totals>div')].find(el=>el.querySelector('dt').textContent==='Goals');
         assert.equal(Number(goals.querySelector('dd').textContent),tab==='overview'?54:2);
