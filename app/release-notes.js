@@ -1,7 +1,9 @@
 export const RELEASE_NOTES={
- version:'2.4.6',
- title:'A clearer view of your time.',
+ version:'2.4.7',
+ title:'Cleaner profiles, clearer results.',
  items:[
+  {title:'Clearer wins and losses',body:'Profile records now use green for wins and red for losses, with a matching proportional record bar.'},
+  {title:'Less clutter',body:'Removed redundant profile text and restored the space above Time Played.'},
   {title:'Time played, polished',body:'Personal and friend profiles now share a compact glass panel with grouped playtime, a period total, a subtle distribution bar and short entrance animations. Existing filters and tracking stay intact.'},
   {title:'Your friends',body:'Friend-list headings and search now consistently say Friends.'},
   {title:'Match and Freeplay time',body:'Track casual, ranked, private-match and Freeplay time separately in My profile. Time starts with this update; menus, pauses and replays are excluded.'},

@@ -1,5 +1,8 @@
-# Dropzone 2.4.6
+# Dropzone 2.4.7
 
+Includes user-edited Rocket League profile polish: green wins, red losses, a matching proportional record bar, less redundant text, and restored spacing above Time Played.
+
+## Included from 2.4.6
 A targeted polish pass for Time Played on personal and friend profiles: a compact layered panel, three grouped categories, a filtered period total, a segmented distribution bar, and short one-time animations. Empty and unavailable states remain distinct from tracked zero time. Existing profile design, filters, tracking and statistics are preserved. Friend-list labels now consistently use Friends.
 
 ## Included from 2.4.5
