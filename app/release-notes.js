@@ -1,7 +1,9 @@
 export const RELEASE_NOTES={
- version:'2.4.5',
- title:'See where your Rocket League time goes.',
+ version:'2.4.6',
+ title:'A clearer view of your time.',
  items:[
+  {title:'Time played, polished',body:'Personal and friend profiles now share a compact glass panel with grouped playtime, a period total, a subtle distribution bar and short entrance animations. Existing filters and tracking stay intact.'},
+  {title:'Your friends',body:'Friend-list headings and search now consistently say Friends.'},
   {title:'Match and Freeplay time',body:'Track casual, ranked, private-match and Freeplay time separately in My profile. Time starts with this update; menus, pauses and replays are excluded.'},
   {title:'Playtime on friend profiles',body:'Playtime syncs with your account and appears on friend profiles when stats sharing is enabled. Ranked and Casual filters also filter match time. Repeated syncs do not double-count time.'},
   {title:'Ranked-only player stats',body:'Use All, Ranked or Casual in My profile and friend profiles. The selection updates every chart, total, personal record and match list, together with your chosen time period. Private games remain excluded.'},

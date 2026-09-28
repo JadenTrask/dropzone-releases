@@ -11,9 +11,9 @@ test('personal playtime follows match filters while Freeplay stays separate and 
  const {JSDOM}=require('jsdom');const dom=new JSDOM('',{url:'http://localhost'});global.window=dom.window;global.document=dom.window.document;global.localStorage=dom.window.localStorage;
  const {playerProfileUI}=await import('../app/rocket-league-player-profile.js');
  const data={profile:{handle:'me'},records:[],playtime:[{day:Date.now(),kind:'ranked',seconds:3600},{day:Date.now(),kind:'casual',seconds:600},{day:Date.now(),kind:'freeplay',seconds:120},{day:Date.now()-100*86400000,kind:'freeplay',seconds:9000}]};
- const ranked=playerProfileUI(data,{personal:true,kind:'ranked',days:30});assert.match(ranked,/Ranked match time<\/dt><dd>1h 0m/);assert.match(ranked,/Freeplay time<\/dt><dd>2m 0s/);assert.match(ranked,/Your next match starts the story/);
- assert.match(playerProfileUI(data,{personal:true,days:30}),/Casual & ranked match time<\/dt><dd>1h 10m/);
- assert.match(playerProfileUI(data,{personal:false}),/aria-label="Time played"/);assert.match(playerProfileUI(data,{personal:false,kind:'casual',days:30}),/Casual match time<\/dt><dd>10m 0s/);
+ const ranked=playerProfileUI(data,{personal:true,kind:'ranked',days:30});assert.match(ranked,/data-count="3600"/);assert.match(ranked,/data-count="120"/);assert.match(ranked,/data-count="3720"/);
+ assert.match(playerProfileUI(data,{personal:true,days:30}),/data-count="4320"/);
+ assert.match(playerProfileUI(data,{personal:false}),/aria-label="Time played"/);assert.match(playerProfileUI(data,{personal:false,kind:'casual',days:30}),/data-count="600"/);
 });
 
 test('retained scoreboard players do not accumulate time after leaving the live roster',()=>{const s=setup();s.tick();s.tick();s.tracker.presentPlayers=[];s.tick();s.tick();assert.equal(s.total(),1);});

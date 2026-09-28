@@ -1,5 +1,8 @@
-# Dropzone 2.4.5
+# Dropzone 2.4.6
 
+A targeted polish pass for Time Played on personal and friend profiles: a compact layered panel, three grouped categories, a filtered period total, a segmented distribution bar, and short one-time animations. Empty and unavailable states remain distinct from tracked zero time. Existing profile design, filters, tracking and statistics are preserved. Friend-list labels now consistently use Friends.
+
+## Included from 2.4.5
 Adds separate casual/ranked match, private-match and Freeplay timers to personal and friend profiles. Playtime begins with this update; historical durations are not estimated. Menus, pauses, replays and telemetry disconnection gaps are excluded.
 
 Signed-in playtime syncs using daily per-device snapshots, without double-counting repeat uploads. Friend visibility follows existing stats-sharing and accepted-friend settings. Match-type and date filters apply to the displayed time; Freeplay stays separate from performance statistics.

@@ -11,7 +11,7 @@ export function mountProfileMotion(root){
   const query=win.matchMedia?.('(prefers-reduced-motion: reduce)'),sections=[...page.querySelectorAll('[data-motion-section]')],running=new Map(),timers=new Set();
   let disposed=false,frame=0,observer=null,tooltipPoint=null;
   const reduced=()=>query?.matches||doc.documentElement.classList.contains('cc-reduced-motion');
-  const format=(target,value)=>value.toLocaleString(undefined,{maximumFractionDigits:Number(target.dataset.digits)||0})+(target.dataset.suffix||'');
+  const format=(target,value)=>{if(target.dataset.format==='duration'){const s=Math.floor(value);return s>=3600?Math.floor(s/3600)+'h '+Math.floor(s%3600/60)+'m':s>=60?Math.floor(s/60)+'m '+s%60+'s':s+'s';}return value.toLocaleString(undefined,{maximumFractionDigits:Number(target.dataset.digits)||0})+(target.dataset.suffix||'');};
   const finish=section=>{
     for(const target of section.querySelectorAll('[data-count]'))target.textContent=format(target,Number(target.dataset.count));
     section.classList.add('is-entered','rl-motion-complete');running.delete(section);
@@ -21,7 +21,7 @@ export function mountProfileMotion(root){
     for(const [section,job] of running){
       if(!section.isConnected||doc.hidden||reduced()){finish(section);continue;}
       if(job.start===null)job.start=now;
-      const progress=Math.min(1,(now-job.start)/780),eased=1-Math.pow(1-progress,3);
+      const progress=Math.min(1,(now-job.start)/(Number(section.dataset.motionDuration)||780)),eased=1-Math.pow(1-progress,3);
       for(const target of job.targets)target.textContent=format(target,Number(target.dataset.count)*eased);
       if(progress===1)running.delete(section);
     }
