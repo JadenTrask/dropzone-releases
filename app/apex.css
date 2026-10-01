@@ -60,4 +60,29 @@ html[data-game="apex"] #hub-app .apex-player-form>button:disabled{--dz-control-s
 
 .apex-search-help .source-link{display:inline-flex;padding:0;margin-left:8px;min-height:0;vertical-align:baseline;font-size:inherit}
 
+/* Player identity and returned stats form one overview, with artwork at its edge. */
+.apex-profile-overview{border:1px solid var(--dz-edge);border-radius:16px;background:linear-gradient(120deg,#171a2459,#171a242e);box-shadow:var(--atmos-shadow);overflow:hidden;backdrop-filter:blur(22px) saturate(.45)}
+.apex-profile-overview .apex-profile-banner{min-height:184px;padding:26px 28px;border-radius:0;background:transparent;align-items:center;justify-content:start}
+.apex-profile-overview .apex-profile-banner:after{display:none}
+.apex-profile-overview .apex-profile-art{width:42%;height:100%;object-fit:cover;object-position:50% 22%;z-index:-1;opacity:.85;mask-image:linear-gradient(90deg,transparent,#000 38%)}
+.apex-profile-overview .apex-profile-identity{position:relative;max-width:75%;text-shadow:0 1px 8px #0008}
+.apex-profile-overview .apex-profile-identity h2{font-size:34px;margin:7px 0 10px;overflow-wrap:anywhere}
+.apex-profile-overview .apex-favorite{margin-top:15px;min-height:32px;padding:5px 10px;font-size:13px;background:var(--dz-control-base);border-radius:9px}
+.apex-profile-overview .apex-profile-body{padding:20px 28px 24px;border-top:1px solid var(--dz-edge)}
+.apex-profile-overview .apex-summary{grid-template-columns:minmax(0,1fr) auto;gap:28px;padding:0;margin:0;border:0}
+.apex-profile-overview .apex-rank{padding:6px 0;border:0;background:transparent;box-shadow:none;gap:18px}
+.apex-profile-overview .apex-rank-emblem{width:86px;height:86px}
+.apex-profile-overview .apex-career-metrics{gap:28px}
+.apex-profile-overview .apex-career-metrics dd{font-size:27px}
+.apex-tracker-section{margin-top:28px}
+.apex-profile-legends{align-items:start}
+.apex-profile-legend{padding:16px;border:1px solid var(--dz-edge);border-radius:12px;background:var(--atmos-panel);box-shadow:var(--atmos-shadow);gap:14px}
+.apex-profile-legend>img{height:104px}
+.apex-profile-legend dl{grid-template-columns:repeat(2,minmax(0,1fr));gap:16px 12px}
+.apex-service-state{display:flex;align-items:center;justify-content:space-between;gap:24px;padding:18px 20px;background:var(--atmos-panel);border:1px solid var(--dz-edge);border-radius:12px;box-shadow:var(--atmos-shadow);margin-bottom:24px}
+.apex-service-state p{margin:5px 0 0;line-height:1.5}
+.apex-service-state>button{flex-shrink:0}
+@media(max-width:1250px){.apex-profile-overview .apex-summary{grid-template-columns:1fr;gap:18px}.apex-profile-overview .apex-career-metrics{padding-top:18px;border-top:1px solid var(--dz-edge)}}
+@media(max-width:750px){.apex-profile-overview .apex-profile-banner{padding:20px}.apex-profile-overview .apex-profile-body{padding:18px 20px}.apex-profile-overview .apex-profile-identity h2{font-size:28px}.apex-profile-overview .apex-profile-art{width:55%;opacity:.55}.apex-service-state{align-items:start;flex-direction:column;gap:12px}.apex-profile-legend{grid-template-columns:64px minmax(0,1fr)}.apex-profile-legend>img{width:64px;height:90px}}
+
 .apex-balance{margin:0 0 28px;padding:20px 0;border-top:1px solid var(--dz-edge);border-bottom:1px solid var(--dz-edge)}.apex-balance>header{display:flex;justify-content:space-between;gap:20px;align-items:center}.apex-balance h2{font-size:20px;margin:5px 0}.apex-balance header p,.apex-balance-note{font-size:13px;color:var(--dz-secondary);margin:0;line-height:1.5}.apex-balance dl{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px;margin:20px 0 16px}.apex-balance dt{font-size:15px;font-weight:600;margin-bottom:6px}.apex-balance dd{font-size:14px;line-height:1.6;margin:0;color:var(--dz-secondary)}@media(max-width:1350px){.apex-balance dl{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:750px){.apex-balance dl{grid-template-columns:1fr;gap:16px}.apex-balance>header{align-items:start;flex-direction:column;gap:8px}}

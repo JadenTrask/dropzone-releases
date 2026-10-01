@@ -1,4 +1,5 @@
 import {clamp,validPoint,fitCamera,project,unproject,zoomCamera,easeZoom,gridText,terrainTileBounds} from './gzw-model.js';
+import {markerCellSize,groupMarkers,markerSymbol} from './gzw-marker-layout.js';
 const COLORS={green:'#c7dfa1',amber:'#f3c772',red:'#ff8e81',blue:'#8dcef5',region:'#e4e9d7',lz:'#a4d6fa'};
 export class GzwMap{
   constructor(canvas,{map,getState,onSelect,onPoint,onCursor,onCamera,onError}){
@@ -22,7 +23,7 @@ export class GzwMap{
   updateCursor(){if(!this.cursor||!this.camera){this.onCursor(null);return;}const point=this.world(this.cursor);this.onCursor(validPoint(point,this.map)?{screen:this.cursor,point,text:gridText(point)}:null);}
   hit(p){return [...this.hitTargets].reverse().find(t=>Math.abs(t.screen.x-p.x)<t.rx&&Math.abs(t.screen.y-p.y)<t.ry)?.item;}
   down(e){if(this.drag||![0,1,2].includes(e.button))return;e.preventDefault();this.stop();this.canvas.focus({preventScroll:true});this.canvas.setPointerCapture(e.pointerId);const p=this.mouse(e);this.drag={id:e.pointerId,start:p,last:p,moved:false,button:e.button};this.canvas.classList.add('dragging');}
-  move(e){const p=this.mouse(e);this.cursor=p;if(this.drag&&e.pointerId===this.drag.id){const d=this.drag;if(Math.hypot(p.x-d.start.x,p.y-d.start.y)>4)d.moved=true;if(d.moved){this.camera.x-=(p.x-d.last.x)/this.camera.scale;this.camera.y+=(p.y-d.last.y)/this.camera.scale;this.constrain();}d.last=p;this.draw();}else{const hit=this.hit(p);this.canvas.style.cursor=hit?'pointer':this.getState().tool==='pan'?'grab':'crosshair';const id=hit?.type==='lz'?hit.id:null;if(id!==this.hoverId){this.hoverId=id;this.draw();}}this.updateCursor();}
+  move(e){const p=this.mouse(e);this.cursor=p;if(this.drag&&e.pointerId===this.drag.id){const d=this.drag;if(Math.hypot(p.x-d.start.x,p.y-d.start.y)>4)d.moved=true;if(d.moved){this.camera.x-=(p.x-d.last.x)/this.camera.scale;this.camera.y+=(p.y-d.last.y)/this.camera.scale;this.constrain();}d.last=p;this.draw();}else{const hit=this.hit(p);this.canvas.style.cursor=hit?'pointer':this.getState().tool==='pan'?'grab':'crosshair';const id=hit?.id||null;this.canvas.title=hit?.name|| (hit?.type==='cluster'?hit.points.length+' locations · click to expand':'Drag to pan · Scroll to zoom');if(id!==this.hoverId){this.hoverId=id;this.draw();}}this.updateCursor();}
   up(e){if(!this.drag||this.drag.id!==e.pointerId)return;const d=this.drag;this.drag=null;this.canvas.classList.remove('dragging');if(this.canvas.hasPointerCapture(e.pointerId))this.canvas.releasePointerCapture(e.pointerId);const p=this.mouse(e);if(!d.moved&&d.button===0){const hit=this.hit(p),tool=this.getState().tool;if(hit&&tool==='pan')this.onSelect(hit);else if(tool!=='pan'){const point=this.world(p);if(validPoint(point,this.map))this.onPoint(point,tool);}}this.draw();}
   key(e){if(['ArrowUp','ArrowDown','ArrowLeft','ArrowRight'].includes(e.key)){e.preventDefault();this.stop();const step=(e.shiftKey?180:70)/this.camera.scale;this.camera.x+=(e.key==='ArrowRight'?step:e.key==='ArrowLeft'?-step:0);this.camera.y+=(e.key==='ArrowUp'?step:e.key==='ArrowDown'?-step:0);this.constrain();this.draw();}else if(['+','=','-'].includes(e.key)){e.preventDefault();this.zoom(e.key==='-'?1/1.35:1.35);}else if(e.key==='0'){e.preventDefault();this.fit();}}
   image(src){let slot=this.images.get(src);if(!slot){slot={image:new Image(),loaded:false,failed:false};if(src.startsWith('https://cdn.gzwtacmap.com/'))slot.image.crossOrigin='anonymous';this.images.set(src,slot);if(this.images.size>350){const key=this.images.keys().next().value;if(key!==this.map.overview)this.images.delete(key);else{const value=this.images.get(key);this.images.delete(key);this.images.set(key,value);}}slot.image.onload=()=>{slot.loaded=true;if(!this.dead)this.draw();};slot.image.onerror=()=>{slot.failed=true;if(!this.dead){this.onError?.();this.draw();}};slot.image.src=src;}return slot.loaded?slot.image:null;}
@@ -48,6 +49,7 @@ export class GzwMap{
     for(const r of s.regions||[]){if(!s.layers.regions&&!s.selectedRegions.includes(r.id))continue;const q=this.screen(r);if(q.x<-130||q.x>this.width+130||q.y<-50||q.y>this.height+50)continue;if(s.selectedRegions.includes(r.id)){c.beginPath();c.arc(q.x,q.y,Math.min(180,Math.max(40,3*this.camera.scale)),0,Math.PI*2);c.fillStyle='#d4db9a1a';c.fill();c.strokeStyle='#d4db9ac9';c.setLineDash([6,6]);c.lineWidth=1.5;c.stroke();c.setLineDash([]);}this.region(r,s);}
     this.pois([...(s.pois||[]),...(s.objectives||[])],s);
     this.lzLabels=[];
+    if(!this.zoomTarget){const ratio=this.camera.scale/this.fitScale;if(ratio>=2)this.showLzNames=true;else if(ratio<=1.5)this.showLzNames=false;}
     this.lzSymbols=(s.locations||[]).map(p=>({id:p.id,...this.screen(p)}));
     for(const p of [...(s.locations||[])].sort((a,b)=>Number(b.id===s.selected)-Number(a.id===s.selected)))this.marker(p,s);
     if(s.layers.pins)for(const p of s.pins||[])this.marker({...p,type:'pin'},s);
@@ -74,11 +76,12 @@ export class GzwMap{
     this.ctx.drawImage(image,tl.x,tl.y,br.x-tl.x+.3,br.y-tl.y+.3);
   }
   pois(points,s){
-    const buckets=new Map();
-    for(const p of points){const q=this.screen(p);if(q.x<-30||q.y<-30||q.x>this.width+30||q.y>this.height+30)continue;const key=this.camera.scale<70&&s.selected!==p.id?Math.floor(q.x/32)+','+Math.floor(q.y/32):p.id;const group=buckets.get(key)||[];group.push(p);buckets.set(key,group);}
-    for(const list of buckets.values()){
+    if(this.clusterCell===undefined||!this.zoomTarget)this.clusterCell=markerCellSize(this.camera.scale,this.clusterCell);
+    for(const group of groupMarkers(points,this.clusterCell,s.selected)){
+      const list=group.points,q=this.screen(group);
+      if(q.x<-30||q.y<-30||q.x>this.width+30||q.y>this.height+30)continue;
       if(list.length===1){const p=list[0],colors={18:'amber',3:'amber',48:'amber',40:'blue',22:'red',45:'green',36:'red'};this.marker({...p,color:colors[p.category]||'green'},s);continue;}
-      const point={x:list.reduce((v,p)=>v+p.x,0)/list.length,y:list.reduce((v,p)=>v+p.y,0)/list.length},q=this.screen(point),c=this.ctx;
+      const c=this.ctx;
       c.beginPath();c.arc(q.x,q.y,15,0,Math.PI*2);c.fillStyle='#193736';c.fill();c.strokeStyle='#b8d0aa';c.lineWidth=1.5;c.stroke();c.font='600 12px Forge, Segoe UI, sans-serif';c.textAlign='center';c.fillStyle='#eff7e4';c.fillText(list.length,q.x,q.y+4);c.textAlign='left';this.hitTargets.push({item:{type:'cluster',points:list},screen:q,rx:18,ry:18});
     }
   }
@@ -96,14 +99,23 @@ export class GzwMap{
     c.font='600 14px Forge, Segoe UI, sans-serif';const width=c.measureText(label).width+16;
     const candidates=[{x:q.x+half+5,y:q.y-12},{x:q.x-half-5-width,y:q.y-12},{x:q.x-width/2,y:q.y-half-28},{x:q.x-width/2,y:q.y+half+5}].map(p=>({...p,width,height:24}));
     const overlaps=(a,b)=>a.x<b.x+b.width+4&&a.x+a.width+4>b.x&&a.y<b.y+b.height+3&&a.y+a.height+3>b.y;
-    const showName=active||this.hoverId===item.id||this.camera.scale>=this.fitScale*1.7;
-    const labelBox=showName?(candidates.find(a=>a.x>=3&&a.y>=3&&a.x+width<this.width-3&&a.y+24<this.height-3&&!(this.lzLabels||[]).some(b=>overlaps(a,b))&&!(this.lzSymbols||[]).some(p=>p.id!==item.id&&overlaps(a,{x:p.x-half,y:p.y-half,width:size,height:size})))||(active?candidates[0]:null)):null;
+    const showName=active||this.hoverId===item.id||this.showLzNames;
+    const labelBox=showName?(candidates.slice(0,1).find(a=>a.x>=3&&a.y>=3&&a.x+width<this.width-3&&a.y+24<this.height-3&&!(this.lzLabels||[]).some(b=>overlaps(a,b))&&!(this.lzSymbols||[]).some(p=>p.id!==item.id&&overlaps(a,{x:p.x-half,y:p.y-half,width:size,height:size})))||(active?candidates[0]:null)):null;
     const visible=!!labelBox,labelX=labelBox?.x,labelY=labelBox?.y;
     if(visible){this.lzLabels??=[];this.lzLabels.push(labelBox);c.fillStyle='#08100ff5';c.fillRect(labelX,labelY,width,24);c.textAlign='left';c.fillStyle=active?'#e9f4c5':'#d5ecff';c.fillText(label,labelX+8,labelY+12);}
     c.restore();
     this.hitTargets.push({item,screen:q,rx:half+3,ry:half+3});
     if(visible)this.hitTargets.push({item,screen:{x:labelX+width/2,y:labelY+12},rx:width/2,ry:12});
   }
-  marker(item,s){if(item.type==='lz')return this.lzMarker(item,s);const c=this.ctx,q=this.screen(item);if(q.x<-40||q.y<-40||q.x>this.width+40||q.y>this.height+40)return;const active=s.selected===item.id,color=COLORS[item.color||item.type]||COLORS.green;c.beginPath();c.arc(q.x,q.y,active?10:7,0,Math.PI*2);c.fillStyle=color;c.fill();c.strokeStyle='#0a1111';c.lineWidth=2;c.stroke();if(item.type==='route'||s.labels||active){const label=item.name.length>36?item.name.slice(0,34)+'…':item.name;c.font='12px Forge, Segoe UI, sans-serif';const w=c.measureText(label).width;c.fillStyle='#08100feb';c.fillRect(q.x+11,q.y-12,w+12,24);c.fillStyle=color;c.fillText(label,q.x+17,q.y+4);}if(item.type!=='route')this.hitTargets.push({item,screen:q,rx:16,ry:16});}
+  marker(item,s){
+    if(item.type==='lz')return this.lzMarker(item,s);
+    const c=this.ctx,q=this.screen(item);if(q.x<-40||q.y<-40||q.x>this.width+40||q.y>this.height+40)return;
+    const active=s.selected===item.id,hover=this.hoverId===item.id,color=COLORS[item.color||item.type]||COLORS.green;
+    c.save();c.beginPath();c.roundRect(q.x-11,q.y-11,22,22,6);c.fillStyle=active?'#31463f':'#10201ded';c.fill();c.strokeStyle=color;c.lineWidth=active?2.5:1.3;c.stroke();
+    const symbol=item.type==='route'?item.name:markerSymbol(item.category,item.type);
+    c.font=(symbol.length>1?'600 9px':'600 14px')+' Segoe UI Symbol, Segoe UI, sans-serif';c.textAlign='center';c.textBaseline='middle';c.fillStyle=color;c.fillText(symbol,q.x,q.y+.5);
+    if(s.labels||active||hover){const label=item.name.length>36?item.name.slice(0,34)+'…':item.name;c.font='12px Forge, Segoe UI, sans-serif';const w=c.measureText(label).width;c.fillStyle='#08100feb';c.fillRect(q.x+15,q.y-12,w+12,24);c.textAlign='left';c.fillStyle='#edf5ea';c.fillText(label,q.x+21,q.y+.5);}
+    c.restore();if(item.type!=='route')this.hitTargets.push({item,screen:q,rx:14,ry:14});
+  }
   scale(){const c=this.ctx;const desired=110/this.camera.scale*100;const distances=[10,25,50,100,200,500,1000,2000,5000];const meters=distances.reduce((best,n)=>Math.abs(n-desired)<Math.abs(best-desired)?n:best);const width=meters/100*this.camera.scale;const x=16,y=this.height-22;c.fillStyle='#08100fe8';c.fillRect(8,y-28,Math.max(110,width+20),43);c.strokeStyle='#e1e8d8';c.lineWidth=2;c.beginPath();c.moveTo(x,y-4);c.lineTo(x+width,y-4);c.stroke();c.fillStyle='#e1e8d8';c.font='12px Forge, Segoe UI, sans-serif';c.fillText((meters>=1000?meters/1000+' km':meters+' m')+(this.map.remoteTiles?'':' · approx.'),x,y-12);}
 }

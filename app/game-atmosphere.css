@@ -46,6 +46,8 @@ html[data-game] :is(.titlebar,.global-toolbar,.game-tabs-shell,.app-rail) {
   box-shadow:inset 0 1px #ffffff24,0 4px 22px #00000018;
 }
 html[data-game] :is(.game-tabs-shell,.global-toolbar) {box-shadow:inset 0 -1px rgb(var(--atmos-primary) / .17),0 5px 22px rgb(var(--atmos-primary) / .07)}
+html[data-game] .game-tabs-shell{position:relative;z-index:20}
+html[data-game] .game-page-tabs button{color:var(--atmos-ink);opacity:1}
 html[data-game] :is(.rail-link[aria-current=page],.game-page-tabs button.active,.mode-tabs button.active,.rl-tabs button[aria-pressed=true]) {
   background:linear-gradient(135deg,rgb(var(--atmos-primary) / .3),rgb(var(--atmos-secondary) / .1))!important;
   border-color:rgb(var(--atmos-primary) / .55)!important;color:var(--atmos-ink)!important;
@@ -54,7 +56,7 @@ html[data-game] :is(.rail-link[aria-current=page],.game-page-tabs button.active,
 html[data-game] :is(.rail-link:hover,.game-page-tabs button:hover) {background:rgb(var(--atmos-primary) / .15)!important;color:var(--atmos-ink)!important}
 html[data-game] :is(.hub-eyebrow,.eyebrow,.titlebrand,.game-page-tabs strong) {color:var(--atmos-accent)}
 html[data-game] :is(.rail-section-label,.rail-footer,.global-nav-link) {color:var(--atmos-muted)!important}
-html[data-game] :is(.root-game,.game-card,.app-update-card,.release-notes,.patch-feature,.patch-row,.arsenal-main,.arsenal-sidebar,.loadout-card,.operator-card,.operator-hero,.wd-panel,.market-chart,.market-stat,.sens-panel,.rl-panel,.rl-card,.rl-scoreboard,.rl-profile-hero,.rl-profile-section,.rl-setup,.apex-rank,.apex-legend,.apex-article,.apex-balance,.fn-build-browser,.fn-weapon-stage,.fn-equipment-card,.fn-news-card) {
+html[data-game] :is(.root-game,.game-card,.app-update-card,.release-notes,.patch-feature,.patch-row,.arsenal-main,.arsenal-sidebar,.loadout-card,.operator-card,.operator-hero,.wd-panel,.market-chart,.market-stat,.sens-panel,.rl-panel,.rl-card,.rl-scoreboard,.rl-profile-hero,.rl-profile-section,.rl-setup,.apex-legend,.apex-article,.apex-balance,.fn-weapon-stage,.fn-equipment-card,.fn-news-card) {
   background:var(--atmos-panel);border-color:var(--dz-edge);box-shadow:var(--atmos-shadow);
 }
 html[data-game] #hub-app .app-settings>.panel {background:var(--atmos-panel);padding:22px;border:1px solid var(--dz-edge);border-radius:12px;margin-bottom:16px;box-shadow:var(--atmos-shadow)}
@@ -66,7 +68,7 @@ html[data-game] :is(.gz-sidebar,.sotf-sidebar,#league-app .sidebar,.arsenal-side
   background:linear-gradient(155deg,#ffffff14,#ffffff04 70%),#14161c40!important;
   border-color:var(--dz-edge)!important;box-shadow:inset -1px 0 rgb(var(--atmos-primary) / .12),10px 0 30px #00000016;
 }
-html[data-game] :is(.gz-inspector,.gz-map-tools,.sotf-map-tools,.sotf-detail,.wd-tools,.wd-map-overlay) {background:var(--atmos-panel)!important;border-color:var(--dz-edge)!important;box-shadow:var(--atmos-shadow);backdrop-filter:blur(12px)}
+html[data-game] :is(.gz-inspector,.gz-map-tools,.sotf-map-tools,.sotf-detail,.wd-map-overlay) {background:var(--atmos-panel)!important;border-color:var(--dz-edge)!important;box-shadow:var(--atmos-shadow);backdrop-filter:blur(12px)}
 html[data-game] #hub-app :is(.gz-sidebar,.sotf-sidebar,.app-settings) input[type=checkbox]:checked {background:rgb(var(--atmos-primary) / .7);border-color:var(--atmos-accent);box-shadow:0 0 9px rgb(var(--atmos-primary) / .2)}
 html[data-game] :is(dialog,.workspace-dialog,.select-options,.source-status[open]>.source-status-content):not(.wd-tour) {
   background:linear-gradient(145deg,#ffffff14,#ffffff05),rgb(var(--atmos-base) / .72)!important;
@@ -94,8 +96,8 @@ html[data-game] #hub-app .game-card {border:1px solid var(--dz-edge);border-radi
 html[data-game] #hub-app .game-card:hover {border-color:color-mix(in srgb,var(--card-accent) 65%,transparent);box-shadow:0 0 28px color-mix(in srgb,var(--card-accent) 20%,transparent)}
 html[data-game] #league-app {--league-surface:rgb(var(--atmos-base) / .6);--league-raised:rgb(var(--atmos-primary) / .08);--league-border:var(--dz-edge);--league-accent:var(--atmos-accent)}
 html[data-game] #league-app .panel {background:var(--atmos-panel);border-color:var(--dz-edge);box-shadow:var(--atmos-shadow)}
-html[data-game] #hub-app :is(.arsenal-search,.weapon-tile,.weapon-detail,.weapon-hero,.weapon-build,.arsenal-detail,.attachment-detail) {background:var(--atmos-panel);border-color:var(--dz-edge);box-shadow:var(--atmos-shadow)}
-html[data-game] #hub-app :is(.weapon-row,.loadout-detail,.weapon-body) {background:var(--atmos-panel);border-color:var(--dz-edge);box-shadow:var(--atmos-shadow)}
+html[data-game] #hub-app :is(.arsenal-search,.weapon-tile,.weapon-detail,.weapon-build,.arsenal-detail,.attachment-detail) {background:var(--atmos-panel);border-color:var(--dz-edge);box-shadow:var(--atmos-shadow)}
+html[data-game] #hub-app .weapon-row {background:var(--atmos-panel);border-color:var(--dz-edge);box-shadow:var(--atmos-shadow)}
 html[data-game] #hub-app .weapon-row.selected {background:var(--dz-control-active);border-color:var(--atmos-accent)}
 /* Full-screen tours are transparent positioning layers, never glass sheets. */
 html[data-game] dialog.wd-tour {background:transparent!important;border:0;box-shadow:none;backdrop-filter:none}
@@ -113,7 +115,7 @@ html[data-game] #hub-app .cod-search {background:#14161c47!important;border-colo
 html[data-game] #hub-app .cod-search #cod-search {background:transparent!important;box-shadow:none;backdrop-filter:none}
 /* Search is the center of Apex; artwork fades into the surrounding workspace. */
 html[data-game="apex"] .apex-page[data-apex-view="overview"] {position:relative;isolation:isolate}
-html[data-game="apex"] .apex-page[data-apex-view="overview"]::before {content:'';position:absolute;inset:0 0 auto;height:660px;z-index:-1;pointer-events:none;background-image:linear-gradient(90deg,rgb(var(--atmos-base) / .34),rgb(var(--atmos-base) / .15)),var(--apex-scene);background-position:center;background-size:cover;mask-image:linear-gradient(to bottom,#000 12%,#000a 55%,transparent);opacity:.8}
+html[data-game="apex"] .apex-page[data-apex-view="overview"]::before {content:'';position:fixed;inset:36px 0 0 var(--rail-width,72px);z-index:-1;pointer-events:none;background-image:linear-gradient(180deg,rgb(var(--atmos-base) / .2),rgb(var(--atmos-base) / .62)),var(--apex-scene);background-position:center;background-size:cover;opacity:.72}
 html[data-game="apex"] #hub-app .apex-search-stage {background:transparent;box-shadow:none;border:0;border-radius:0;min-height:330px;margin-bottom:24px;overflow:visible}
 html[data-game="apex"] .apex-search-content {padding:66px 24px 28px;max-width:960px;margin:auto;text-align:center}
 html[data-game="apex"] .apex-search-content h1 {font-size:34px;margin:10px 0 28px;text-shadow:0 2px 18px #0009}
@@ -122,10 +124,38 @@ html[data-game="apex"] #hub-app .apex-player-form :is(input,.select-control) {ba
 html[data-game="apex"] #hub-app .apex-player-form input::placeholder {color:#ffffff;opacity:1}
 html[data-game="apex"] .apex-search-help {color:#e4dfe5;text-shadow:0 1px 8px #000a}
 html[data-game="apex"] #hub-app .apex-search-help .source-link {color:#ffbdc1}
-html[data-game="apex"] #hub-app .apex-search-stage.has-profile {min-height:190px}
+html[data-game="apex"] #hub-app .apex-search-stage.has-profile {min-height:140px}
 html[data-game="apex"] .apex-search-stage.has-profile .apex-search-content {padding-top:24px;padding-bottom:10px}
 html[data-game="apex"] .apex-search-stage.has-profile .apex-search-content h1 {font-size:24px;margin:6px 0 14px}
 @media(max-width:750px){html[data-game="apex"] .apex-search-content{padding:30px 0 12px}html[data-game="apex"] .apex-search-content h1{font-size:28px}html[data-game="apex"] #hub-app .apex-search-stage{min-height:0}}
+
+/* A surface belongs to its rounded component, never its layout wrapper. */
+html[data-game=wardogs] #hub-app .wd-fixed .wd-map-toolbar :is(.wd-tools,.wd-view-tools){background:transparent!important;border:0!important;box-shadow:none;backdrop-filter:none}
+html[data-game=wardogs] #hub-app .wd-fixed .wd-map-toolbar button{--dz-control-surface:linear-gradient(140deg,#ffffff18,#ffffff06),#14161c70;backdrop-filter:blur(8px)!important}
+html[data-game=wardogs] #hub-app .wd-fixed .wd-map-toolbar button:is(.active,[aria-pressed=true]){--dz-control-surface:linear-gradient(140deg,rgb(var(--atmos-primary) / .3),#ffffff08),#14161c70}
+html[data-game=wardogs] #hub-app .wd-fixed .wd-map-toolbar button:hover:not(:disabled){--dz-control-surface:linear-gradient(140deg,#ffffff30,#ffffff12),#14161c70}
+html[data-game=gray-zone] #hub-app .gz-page .gz-map-area{background:transparent}
+html[data-game=gray-zone] #hub-app .gz-page .gz-map-toolbar{background:var(--atmos-panel);border:0;border-bottom:1px solid var(--dz-edge);box-shadow:none;backdrop-filter:blur(8px)}
+html[data-game=gray-zone] #hub-app .gz-page .gz-map-toolbar button{border-radius:10px;box-shadow:var(--dz-control-shadow)}
+html[data-game=gray-zone] #hub-app .gz-results-heading{gap:8px}
+html[data-game=gray-zone] #hub-app .gz-sort{min-width:0;gap:8px}
+html[data-game=gray-zone] #hub-app .gz-sort>span{white-space:nowrap}
+html[data-game=gray-zone] #hub-app .gz-sort .select-control{flex:none;width:90px;min-width:90px;min-height:30px;padding:4px 8px;font-size:12px;gap:5px}
+html[data-game=gray-zone] #hub-app .gz-results-heading>[data-gz-action="reset-filters"]{flex:none;min-height:30px;padding:4px 9px;font-size:12px}
+html[data-game=gray-zone] #hub-app .gz-status{flex-wrap:nowrap;gap:12px;padding:4px 10px}
+html[data-game=gray-zone] #hub-app .gz-status>span{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+html[data-game=gray-zone] #hub-app .gz-status>div{flex:none;flex-wrap:nowrap;gap:6px}
+html[data-game=gray-zone] #hub-app .gz-status button{min-height:26px;padding:3px 10px;border-radius:7px;line-height:18px;font-size:12px;white-space:nowrap}
+html[data-game=finals] #hub-app :is(.fn-workspace-switch,.fn-media-segments,.fn-team-selector,.fn-build-browser){background:transparent;border:0;box-shadow:none}
+html[data-game=finals] #hub-app .finals-page :is(.fn-weapon-stage,.fn-loadout-detail){border-radius:14px;overflow:hidden}
+html[data-game=finals] #hub-app .finals-page .fn-weapon-stage{border:1px solid var(--dz-edge)}
+html[data-game=finals] #hub-app .finals-page .fn-equipment{background:var(--atmos-panel);border:1px solid var(--dz-edge);border-radius:10px;box-shadow:var(--atmos-shadow)}
+html[data-game] #hub-app .weapon-build{border-radius:14px;overflow:hidden}
+html[data-game] #hub-app .loadout-detail{background:transparent;box-shadow:none;border:0}
+html[data-game] #hub-app .weapon-build :is(.weapon-hero,.weapon-body){background:transparent;box-shadow:none}
+html[data-game] #hub-app .weapon-hero{border-radius:inherit}
+html[data-game=apex] #hub-app .apex-page[data-profile-loaded=true]::before{opacity:.18;filter:blur(5px) saturate(.65)}
+
 /* Light and high-contrast preferences retain their legibility. */
 html[data-appearance="light"][data-game] {--atmos-base:239 244 251;--atmos-ink:#1d2d41;--atmos-muted:#455970;--atmos-accent:color-mix(in srgb,rgb(var(--atmos-primary)) 60%,#182838)}
 html[data-appearance="light"][data-game] body {background:radial-gradient(ellipse at 5% 0%,rgb(var(--atmos-primary) / .2),transparent 60%),radial-gradient(ellipse at 100% 100%,rgb(var(--atmos-secondary) / .17),transparent 65%),#edf2f8!important}
@@ -141,3 +171,17 @@ html[data-game] body.app-high-contrast {--atmos-muted:var(--atmos-ink);--dz-edge
 html[data-game] body.app-high-contrast :is(dialog:not(.wd-tour),.select-options,.gz-sidebar,.sotf-sidebar) {backdrop-filter:none;background:rgb(var(--atmos-base))!important}
 @media(prefers-reduced-transparency:reduce){html[data-game] :is(.titlebar,.global-toolbar,.game-tabs-shell,.app-rail,dialog:not(.wd-tour),.select-options,.gz-inspector,.sotf-detail){backdrop-filter:none;background:rgb(var(--atmos-base))!important}}
 @media(max-width:750px){html[data-game] #hub-app .r6-round-plan,html[data-game] .apex-balance{padding:16px}html[data-game] #hub-app .app-settings>.panel{padding:18px}}
+
+/* Status messages share the same rounded material as other workspace notices. */
+html[data-game] .rl-main-panel #rl-error:not(:empty){padding:14px 16px;background:var(--atmos-panel);border:1px solid var(--dz-edge);border-radius:12px;box-shadow:var(--atmos-shadow);color:var(--dz-secondary);font-size:14px;line-height:1.5}
+html[data-game=wardogs] #hub-app :is(.damage-config,.damage-readout,.damage-model,.damage-decisions,.damage-comparison,.gun-comparison,.gun-comparison-card){background:var(--atmos-panel);border-color:var(--dz-edge);box-shadow:var(--atmos-shadow)}
+
+html[data-game=league] .picker-search{background:var(--atmos-panel);border-color:var(--dz-edge);border-radius:10px;box-shadow:var(--atmos-shadow);color:var(--dz-secondary)}
+html[data-game=league] :is(#league-app,dialog) .picker-search input:not([type=checkbox]):not([type=radio]):not([type=range]){background:transparent!important;box-shadow:none;border:0;outline:none;backdrop-filter:none;color:var(--dz-ink);text-shadow:none}
+html[data-game=league] .picker-search:focus-within{outline:2px solid var(--atmos-accent);outline-offset:3px}
+html[data-game=league] .picker-search input::placeholder{color:var(--dz-secondary)}
+html[data-game=league] .picker-champion{background:var(--atmos-panel);border-color:var(--dz-edge)}
+html[data-game=league] .picker-champion:is(:hover,.selected){background:var(--dz-control-active);border-color:var(--atmos-accent)}
+
+html[data-game=finals] #hub-app .fn-video-search>div{background:var(--atmos-panel);border-color:var(--dz-edge);box-shadow:var(--atmos-shadow)}
+html[data-game=finals] #hub-app .fn-video-search input:not([type=checkbox]):not([type=radio]):not([type=range]){background:transparent!important;border:0;box-shadow:none;backdrop-filter:none}

@@ -8,6 +8,7 @@ export const api=window.rift||{
   unlockAdmin:password=>fetch('/api/admin-unlock',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({password})}).then(r=>r.json()),
   lockAdmin:()=>fetch('/api/admin-lock',{method:'POST'}).then(r=>r.json()),
   appContext:()=>fetch('/api/app-context').then(r=>r.json()),
+  loginStartup:async()=>({available:false,enabled:false,message:'Available in the installed Windows app. Browser preview does not change startup settings.'}),
   games:()=>fetch('/api/games').then(r=>r.json()),
   loadouts:options=>fetch('/api/loadouts?'+new URLSearchParams(options)).then(r=>r.json()),
   media:options=>fetch('/api/media?'+new URLSearchParams(options||{})).then(r=>r.json()),

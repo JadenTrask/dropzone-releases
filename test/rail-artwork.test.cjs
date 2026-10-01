@@ -14,7 +14,8 @@ test('rail uses official art without changing game routes or library images',()=
  for(const row of rows){
   const game=list.find(game=>game.id===row.dataset.route);assert.ok(game&&!game.parent);assert.ok(row.getAttribute('aria-label').startsWith(game.name));
   const img=row.querySelector('img'),asset=path.join(root,'app',img.getAttribute('src'));assert.ok(fs.existsSync(asset),asset);assert.equal(img.width,40);assert.equal(img.height,40);
-  if(game.status!=='active')assert.ok(row.querySelector('.rail-soon'));
+  if(game.status==='under-construction')assert.equal(row.querySelector('.rail-game-state')?.textContent,'Under construction');
+  else if(game.status!=='active')assert.ok(row.querySelector('.rail-soon'));
  }
  for(const id of ['sotf','wardogs','lol'])assert.match(dom.window.document.querySelector(`[data-route="${id}"] img`).getAttribute('src'),new RegExp(`${id}-official\\.jpg$`));
  assert.match(dom.window.document.querySelector('[data-route="siege"] img').getAttribute('src'),/siege-icon-official\.jpg$/);

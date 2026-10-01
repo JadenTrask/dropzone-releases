@@ -1,5 +1,6 @@
 import {stored,persist,e,api} from './shared.js';
 import {applyAppearance,appearancePreference} from './appearance.js';
+import {mountStartupSetting} from './startup-settings.js';
 const key='dropzone-accessibility-v1';
 const preferences=()=>stored(key,null)||stored('dropzone-command-v1',{}).preferences||{};
 export function applyAccessibility(){applyAppearance();const p=preferences();document.body.classList.toggle('app-high-contrast',!!p.contrast);document.body.classList.toggle('app-reduced-motion',!!p.reducedMotion);}
@@ -14,6 +15,7 @@ export function mountSettings(games=[]){
  if(admin){document.querySelector('#admin-lock').onclick=async()=>{await api.lockAdmin();document.documentElement.dataset.admin='false';mountSettings(games);};}
  else{const section=document.createElement('section');section.className='panel';section.innerHTML='<details><summary>Admin access</summary><form id="admin-unlock-form"><label for="admin-password">Admin password</label><input id="admin-password" type="password" autocomplete="current-password" maxlength="256" required><button class="hub-button secondary" type="submit">Unlock</button><p id="admin-result" role="status"></p></form></details>';document.querySelector('.app-settings').append(section);document.querySelector('#admin-unlock-form').onsubmit=async event=>{event.preventDefault();const input=document.querySelector('#admin-password'),button=event.target.querySelector('button'),status=document.querySelector('#admin-result');button.disabled=true;try{const result=await api.unlockAdmin(input.value);input.value='';if(result.ok){document.documentElement.dataset.admin='true';mountSettings(games);}else status.textContent=result.message;}catch{status.textContent='Could not unlock admin. Try again.';}finally{button.disabled=false;}};}
  const theme=document.querySelector('#appearance-theme');theme.value=appearancePreference();theme.onchange=()=>{persist('dropzone-appearance',theme.value);applyAppearance();};
+ mountStartupSetting(document.querySelector('#startup-game').closest('.panel'));
  document.querySelector('#startup-game').onchange=event=>persist('dropzone-startup-game',event.target.value);
  document.querySelectorAll('[data-access]').forEach(input=>input.onchange=()=>{persist(key,{...preferences(),[input.dataset.access]:input.checked});applyAccessibility();});
 }

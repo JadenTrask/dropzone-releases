@@ -95,7 +95,8 @@
     "theme": "gray-zone",
     "accent": "#d4db9a",
     "cover": "assets/games/gray-zone.webp",
-    "status": "active",
+    "status": "under-construction",
+    "patches": false,
     "videos": false,
     "modes": []
   },

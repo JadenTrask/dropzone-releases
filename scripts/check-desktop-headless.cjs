@@ -9,7 +9,7 @@ const profile=fs.mkdtempSync(path.join(base,'headless-'));
 const binary=process.env.DROPZONE_HEADLESS_BROWSER||path.join(process.env['ProgramFiles(x86)']||'C:/Program Files (x86)','Microsoft/Edge/Application/msedge.exe');
 if(!fs.existsSync(binary))throw Error('Installed headless browser unavailable; no visible-browser fallback.');
 const stderr=fs.openSync(path.join(profile,'browser.log'),'w');
-const child=spawn(binary,['--headless=new','--disable-gpu','--window-size=1920,1080','--no-first-run','--no-default-browser-check','--disable-background-mode','--remote-debugging-address=127.0.0.1','--remote-debugging-port=0','--user-data-dir='+profile,'about:blank'],{windowsHide:true,stdio:['ignore','ignore',stderr]});
+const child=spawn(binary,['--headless=new','--disable-gpu','--disable-background-timer-throttling','--disable-renderer-backgrounding','--disable-backgrounding-occluded-windows','--window-size=1920,1080','--no-first-run','--no-default-browser-check','--disable-background-mode','--remote-debugging-address=127.0.0.1','--remote-debugging-port=0','--user-data-dir='+profile,'about:blank'],{windowsHide:true,stdio:['ignore','ignore',stderr]});
 try{os.setPriority(child.pid,os.constants.priority.PRIORITY_BELOW_NORMAL);}catch{}
 let socket,sequence=0;const pending=new Map(),listeners=new Map();
 const pause=ms=>new Promise(resolve=>setTimeout(resolve,ms));
@@ -32,7 +32,7 @@ const ready=(async()=>{
  // native window because no browser window is created by --headless.
  await send('Emulation.setFocusEmulationEnabled',{enabled:true});
  // Capture settled designs, without platform view-transition snapshots.
- await send('Emulation.setEmulatedMedia',{features:[{name:'prefers-reduced-motion',value:'reduce'}]});
+ await send('Emulation.setEmulatedMedia',{features:[{name:'prefers-reduced-motion',value:process.argv.includes('--performance')?'no-preference':'reduce'}]});
 })();
 class BrowserWindow{
  constructor(){

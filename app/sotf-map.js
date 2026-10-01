@@ -53,7 +53,7 @@ export class ForestMap{
       if(icon.complete&&icon.naturalWidth){const size=selected?26:22,scale=size/Math.max(icon.naturalWidth,icon.naturalHeight),w=icon.naturalWidth*scale,h=icon.naturalHeight*scale;ctx.drawImage(icon,s.x-w/2,s.y-h/2,w,h);}
       if(done.has(p.id)){ctx.globalAlpha=1;ctx.beginPath();ctx.arc(s.x+10,s.y+10,6,0,Math.PI*2);ctx.fillStyle='#aac9bb';ctx.fill();ctx.fillStyle='#10191f';ctx.font='bold 10px sans-serif';ctx.textAlign='center';ctx.fillText('✓',s.x+10,s.y+14);}
     }
-    ctx.globalAlpha=1;ctx.fillStyle=document.documentElement.dataset.appearance==='light'?'#25201e':'#e8f3f2';ctx.font='bold 13px sans-serif';ctx.textAlign='left';ctx.fillText('N ↑',18,25);
+    ctx.globalAlpha=1;
   }
   destroy(){this.dead=true;this.events.abort();this.observer.disconnect();this.appearanceObserver.disconnect();cancelAnimationFrame(this.frame);this.images.forEach(i=>{i.onload=null;i.onerror=null;});this.images.clear();}
 }

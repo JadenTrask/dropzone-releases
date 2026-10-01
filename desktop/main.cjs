@@ -62,6 +62,8 @@ app.whenReady().then(async()=>{
   handle('visual-updates',()=>visuals.status());
   const adminAccess=new (require('../core/admin-access.cjs').AdminAccess)();let adminUnlocked=false;
   handle('app-context',()=>({admin:adminUnlocked}));
+  const loginStartup=require('./login-startup.cjs').createLoginStartup({app,installed:fsSync.existsSync(path.join(process.resourcesPath,'dropzone-installed'))});
+  handle('login-startup',input=>loginStartup.command(input));
   handle('admin-unlock',async password=>{const result=await adminAccess.verify(password);if(result.ok)adminUnlocked=true;return result;});
   handle('admin-lock',()=>{adminUnlocked=false;return {ok:true};});
   handle('games',()=>games.list());

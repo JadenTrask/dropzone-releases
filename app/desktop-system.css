@@ -204,7 +204,7 @@ html.rl-workspace-active .rl-main-panel{grid-column:1!important;width:100%;min-w
 /* Explicitly opt text navigation out of the older shared boxed-button rule. */
 html[data-game="gray-zone"] #hub-app .gz-nav button{--dz-control-surface:transparent;--dz-control-border:transparent;border:0!important;border-bottom:2px solid transparent!important;border-radius:0!important;box-shadow:none;padding:7px 3px;font-weight:500}
 html[data-game="gray-zone"] #hub-app .gz-nav button[aria-pressed=true]{--dz-control-surface:transparent;border-bottom-color:#93b5cc!important}
-html[data-game="gray-zone"] #hub-app .gz-page .gz-result{border:0;border-bottom:1px solid var(--dz-edge);border-radius:0;padding:10px 4px;background:transparent;gap:4px}
+html[data-game="gray-zone"] #hub-app .gz-page .gz-result{border:0;border-bottom:1px solid var(--dz-edge);border-radius:9px;padding:10px 12px;background:transparent;gap:4px}
 html[data-game="gray-zone"] #hub-app .gz-result:hover{background:var(--dz-control-hover)}
 html[data-game="gray-zone"] #hub-app :is(.gz-panel,.gz-results-heading,.gz-map-hint,.gz-section-label){color:var(--dz-secondary);scrollbar-color:#59616e var(--dz-surface)}
 html[data-game] #hub-app button.source-link,html[data-game="sotf"] #hub-app .sotf-sidebar footer button{--dz-control-surface:transparent;--dz-control-border:transparent;border:0!important;border-radius:0;box-shadow:none;padding:4px 0;font-weight:500;min-height:24px}
@@ -237,11 +237,11 @@ html[data-game="sotf"] #hub-app #sotf-results strong{font-size:14px}
 @media(max-width:850px){#hub-app .r6-match-context{grid-template-columns:100px minmax(0,1fr)}#hub-app .r6-match-context>.source-link{grid-column:2}#hub-app .r6-context-fields{grid-template-columns:minmax(0,1fr) 100px}#hub-app .r6-briefing-body{grid-template-columns:1fr;gap:14px}}
 
 /* Wider desktops use the available workspace without stretching prose or controls. */
-html[data-game=wardogs] #hub-app .wd-fixed .wd-map-toolbar{background:var(--dz-surface)!important;border:1px solid var(--dz-edge);border-radius:7px;box-shadow:0 3px 12px #0003;padding:6px;gap:6px;backdrop-filter:none}
-html[data-game=wardogs] #hub-app .wd-fixed .wd-map-toolbar button{--dz-control-surface:var(--dz-control-base);border-radius:5px;min-height:34px;font-size:13px;padding:6px 9px;box-shadow:none}
+html[data-game=wardogs] #hub-app .wd-fixed .wd-map-toolbar{background:transparent!important;border:0;border-radius:0;box-shadow:none;padding:0;gap:6px;backdrop-filter:none}
+html[data-game=wardogs] #hub-app .wd-fixed .wd-map-toolbar button{--dz-control-surface:var(--dz-control-base);border-radius:10px;min-height:38px;font-size:13px;padding:8px 10px;box-shadow:var(--dz-control-shadow);backdrop-filter:blur(6px)}
 html[data-game=wardogs] #hub-app .wd-fixed .wd-map-toolbar button:hover:not(:disabled):not([aria-disabled=true]){--dz-control-surface:var(--dz-control-hover)}
-html[data-game=wardogs] #hub-app .wd-fixed .wd-map-toolbar button:is(.active,[aria-pressed=true]){--dz-control-surface:#654936;box-shadow:none}
-html[data-game=wardogs] #hub-app .wd-fixed .wd-map-toolbar button:is(.active,[aria-pressed=true]):hover:not(:disabled){--dz-control-surface:#795940}
+html[data-game=wardogs] #hub-app .wd-fixed .wd-map-toolbar button:is(.active,[aria-pressed=true]){--dz-control-surface:var(--dz-control-active);box-shadow:var(--dz-control-shadow)}
+html[data-game=wardogs] #hub-app .wd-fixed .wd-map-toolbar button:is(.active,[aria-pressed=true]):hover:not(:disabled){--dz-control-surface:var(--dz-control-hover)}
 @media(min-width:900px) and (max-width:1200px){
  html:not([data-text-size="150"]):not([data-text-size="175"]):not([data-text-size="200"]) #hub-app .arsenal-layout{grid-template-columns:250px minmax(0,1fr);gap:20px}
  html:not([data-text-size="150"]):not([data-text-size="175"]):not([data-text-size="200"]) #hub-app .weapon-results{display:flex;max-height:calc(100vh - 490px);min-height:240px}
@@ -299,3 +299,12 @@ dialog.wd-dialog .wd-method h3{color:var(--dz-ink)}
 .workspace-dialog .workspace-result{min-height:36px;padding:8px 12px;border:0;border-radius:5px;background:transparent!important;border:0!important;box-shadow:none!important;font-size:14px}
 .workspace-dialog .workspace-result:hover{background:var(--dz-control-hover)!important;transform:none}
 .workspace-dialog input{min-height:38px;border-radius:7px;font-size:14px}
+.startup-setting{margin-top:20px;padding-top:18px;border-top:1px solid var(--dz-edge)}
+.app-rail .rail-game-state{display:block;font-size:11px;line-height:1.3;color:var(--dz-secondary);font-weight:400}
+.app-settings .startup-setting-toggle{display:flex;align-items:center;justify-content:flex-start;gap:10px;max-width:580px}
+#hub-app .app-settings .startup-setting-toggle input[type=checkbox]{flex:0 0 18px;width:18px;height:18px;margin:0}
+.startup-setting p{font-size:13px;line-height:1.5;color:var(--dz-secondary);margin:8px 0 0 28px}
+.gz-category-symbol{display:inline-flex;align-items:center;justify-content:center;min-width:24px;height:24px;margin-right:8px;border:1px solid var(--dz-edge);border-radius:6px;color:var(--dz-ink);font:600 12px "Segoe UI Symbol","Segoe UI",sans-serif;vertical-align:middle}
+.gz-symbol-legend{display:flex;flex-wrap:wrap;gap:8px 12px;padding:12px 0 4px;font-size:12px;color:var(--dz-secondary)}
+.gz-symbol-legend>span{display:inline-flex;align-items:center;gap:5px}
+.gz-symbol-legend b{font:600 11px "Segoe UI Symbol","Segoe UI",sans-serif;color:var(--dz-ink);min-width:19px;text-align:center}

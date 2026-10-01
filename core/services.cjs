@@ -26,8 +26,10 @@ function createServices({cacheDir,bundleDir,leagueCacheDir=path.join(cacheDir,'l
   const serverStatus=new (require('./wardogs-servers.cjs').ServersProvider)({cacheDir:path.join(cacheDir,'wardogs-status')});
   const market=new (require('./wardogs-market.cjs').MarketProvider)({cacheDir:path.join(cacheDir,'market'),bundleDir:path.join(bundleDir,'wardogs')});
   const siege=new SiegeProvider({cacheDir:path.join(cacheDir,'siege'),bundleDir:path.join(bundleDir,'siege')});
-  const gzw=new GzwProvider({cacheDir:path.join(cacheDir,'gzw'),bundleDir:path.join(bundleDir,'gzw')});
-  const gzwMap=new GzwMarkersProvider({cacheDir:path.join(cacheDir,'gzw'),bundleDir:path.join(bundleDir,'gzw')});
+  const gzwEnabled=games.list().some(g=>g.id==='gray-zone'&&g.status==='active');
+  const unavailableGzw=async()=>({unavailable:true,underConstruction:true,game:'gray-zone',message:'Gray Zone Warfare is under construction.'});
+  const gzw=gzwEnabled?new GzwProvider({cacheDir:path.join(cacheDir,'gzw'),bundleDir:path.join(bundleDir,'gzw')}):{get:unavailableGzw};
+  const gzwMap=gzwEnabled?new GzwMarkersProvider({cacheDir:path.join(cacheDir,'gzw'),bundleDir:path.join(bundleDir,'gzw')}):{get:unavailableGzw};
   const apexContent=new ApexContentProvider({cacheDir:path.join(cacheDir,'apex'),bundleDir:path.join(bundleDir,'apex')});
   const apexPlayer=new ApexPlayerProvider();
   const updates=new UpdateService([
@@ -48,7 +50,7 @@ function createServices({cacheDir,bundleDir,leagueCacheDir=path.join(cacheDir,'l
       {id:c.id+'-streams',name:c.name+' · broadcasts',scope:'Official broadcast archive',sourceUrl:c.url+'/streams',run:()=>media.archives.streamFeeds.get(c.id).get(true),detail:d=>`${d.videos.length} matching broadcasts from the channel’s public archive page.`}
     ]),
     ...CHANNELS.map(c=>({id:c.id,name:c.name+' · YouTube',scope:'Official channel uploads',sourceUrl:c.url,run:()=>media.feeds.get(c.id).get(true),detail:()=> 'Recent public uploads from the verified official channel. Some uploads are highlights, Shorts, or game announcements.'}))
-  ]);
+  ].filter(job=>gzwEnabled||!job.id.startsWith('gzw-')));
   return {provider,cod,finals,media,games,updates,patches,wardogs,market,serverStatus,siege,gzw,gzwMap,apexContent,apexPlayer,personalIntel:require('./personal-intel.cjs').createPersonalIntel(patches),modes:MODES};
 }
 module.exports={createServices};

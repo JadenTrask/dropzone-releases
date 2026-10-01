@@ -1,6 +1,7 @@
 import {lockRailHover} from './rail-hover.js';
 import {startFriendNotifications} from './friend-notifications.js';
 import {transitionPage} from './page-transition.js';
+import {scheduleFeatureWarmup} from './feature-warmup.js';
 import {showPlayerCount} from './wardogs-player-count.js';
 import {sourceStatus} from './source-status.js';
 import {startWhatsNew} from './whats-new.js';
@@ -53,11 +54,14 @@ function featureStyle(module){
 async function mountFeature(module,method,...args){
  const revision=navigationRevision;
  if(!loadedFeatures.has(module))$('#hub-app').innerHTML='<main class="hub-main"><p role="status">Opening workspace…</p></main>';
- if(!featureLoads.has(module))featureLoads.set(module,import('./'+module+'.js').then(value=>{loadedFeatures.set(module,value);return value;}).catch(error=>{featureLoads.delete(module);throw error;}));
- const [feature]=await Promise.all([featureLoads.get(module),featureStyle(module)]);
+ const feature=await loadFeature(module);
  // A slow module load must not replace a newer navigation destination.
  if(revision!==navigationRevision)return;
  return feature[method](...args);
+}
+function loadFeature(module){
+ if(!featureLoads.has(module))featureLoads.set(module,import('./'+module+'.js').then(value=>{loadedFeatures.set(module,value);return value;}).catch(error=>{featureLoads.delete(module);throw error;}));
+ return Promise.all([featureLoads.get(module),featureStyle(module)]).then(([feature])=>feature);
 }
 
 const game=()=>state.games.find(g=>g.id===state.route);
@@ -79,13 +83,13 @@ function renderHome(){
 }
 // Navigation uses official key art; map previews remain available in the library.
 const railArtwork={lol:'assets/games/lol-official.jpg',siege:'assets/games/siege-icon-official.jpg',sotf:'assets/games/sotf-official.jpg',wardogs:'assets/games/wardogs-official.jpg'};
-function renderRail(){ $('#rail-games').innerHTML=state.games.filter(g=>!g.parent).sort((a,b)=>(a.status==='active'?0:1)-(b.status==='active'?0:1)).map(g=>`<button class="rail-link rail-game ${g.status!=='active'?'rail-game-upcoming':''}" data-route="${e(g.id)}" aria-label="${e(g.name)}${g.status!=='active'?' · '+e(releaseStatus(g)):''}" title="${e(g.name)}${g.status!=='active'?' · '+e(releaseStatus(g)):''}"><img src="${e(railArtwork[g.id]||g.cover)}" alt="" width="40" height="40" decoding="async"><span>${e(g.name)}</span>${g.status!=='active'?'<span class="rail-soon" aria-label="In development">Soon</span>':''}</button>`).join(''); }
+function renderRail(){ $('#rail-games').innerHTML=state.games.filter(g=>!g.parent).sort((a,b)=>(a.status==='active'?0:1)-(b.status==='active'?0:1)).map(g=>`<button class="rail-link rail-game ${g.status!=='active'?'rail-game-upcoming':''}" data-route="${e(g.id)}" aria-label="${e(g.name)}${g.status!=='active'?' · '+e(releaseStatus(g)):''}" title="${e(g.name)}${g.status!=='active'?' · '+e(releaseStatus(g)):''}"><img src="${e(railArtwork[g.id]||g.cover)}" alt="" width="40" height="40" decoding="async"><span>${e(g.name)}${g.status==='under-construction'?'<small class="rail-game-state">Under construction</small>':''}</span>${g.status!=='active'&&g.status!=='under-construction'?'<span class="rail-soon" aria-label="In development">Soon</span>':''}</button>`).join(''); }
 function renderCollection(g){
   const children=state.games.filter(x=>x.parent===g.id);
   $('#hub-app').innerHTML=`<main class="hub-main library-page collection-page"><div class="library-intro"><div><span class="hub-eyebrow">GAME COLLECTION</span><h1>${e(g.name)}</h1><p>Pick your game. Find your next loadout.</p></div><span class="library-count">${children.length} titles</span></div><div class="game-grid collection-games">${children.filter(g=>g.status==='active').map(card).join('')}</div>${children.some(g=>g.status!=='active')?`<section class="upcoming-games" aria-label="Upcoming titles"><h2>Coming next</h2>${children.filter(g=>g.status!=='active').map(g=>`<button class="upcoming-game" data-route="${e(g.id)}"><img src="${e(g.cover)}" alt=""><span><strong>${e(g.name)}</strong><small>${e(releaseStatus(g))}</small></span>${icon('arrow')}</button>`).join('')}</section>`:''}${footer()}</main>`;
 }
 function renderUnderConstruction(g){
-  $('#hub-app').innerHTML=`<main class="hub-main"><section class="release-hero construction-hero"><img src="${e(g.cover)}" alt=""><div class="release-shade"></div><div><span class="hub-eyebrow">UNDER CONSTRUCTION</span><h1>${e(g.name)}</h1><p>Under construction.</p><div class="hub-action-row"><button class="hub-button secondary" data-route="home">Back to games</button></div></div></section></main>`;
+  $('#hub-app').innerHTML=`<main class="hub-main"><section class="release-hero construction-hero"><img src="${e(g.cover)}" alt=""><div class="release-shade"></div><div><span class="hub-eyebrow">UNDER CONSTRUCTION</span><h1>${e(g.name)}</h1><p>The tactical map and planning tools are being reworked. They are unavailable in this update.</p><div class="hub-action-row"><button class="hub-button secondary" data-route="home">Back to games</button></div></div></section></main>`;
 }
 function renderComingSoon(g){
   $('#hub-app').innerHTML=`<main class="hub-main"><section class="release-hero"><img src="${e(g.cover)}" alt="${e(g.coverAlt||g.name+' official artwork')}"><div class="release-shade"></div><div><span class="hub-eyebrow">${e(releaseStatus(g).toUpperCase())}</span><h1>${e(g.name)}</h1>${g.releaseDate?`<p class="release-date">${releaseDate(g)}</p>`:''}<p>${e(g.comingSoonDescription||'Build support will be added in a future app update.')}</p><div class="hub-action-row">${g.releaseSource?`<button class="hub-button" data-hub-source="${e(g.releaseSource)}">Official announcement ${icon('external')}</button>`:''}<button class="hub-button secondary" data-route="${e(g.parent||'home')}">Back to games</button></div>${g.releaseVerifiedAt?`<small>Announcement last checked ${date(g.releaseVerifiedAt)}.${g.releaseError?" Automatic refresh failed; verify the date in the official announcement.":""}</small>`:''}</div></section>${footer()}</main>`;
@@ -93,6 +97,10 @@ function renderComingSoon(g){
 async function route(...args){lockRailHover();return transitionPage(()=>renderRoute(...args));}
 let navigationHistoryStarted=false;
 async function renderRoute(id,watchGame=null,initialView=null,fromHistory=false){
+  // Gate the owner before resolving subpages, restored workspaces or history.
+  const contextual=['watch','patches','operators','progression','server-status','market','damage','planner','squad'].includes(id);
+  const owner=state.games.find(g=>g.id===id)||state.games.find(g=>g.id===(watchGame||(contextual?(game()?.id||state.watchGame):null)));
+  if(owner?.status==='under-construction'){id=owner.id;watchGame=null;initialView=null;}
   if(id==='sources'&&document.documentElement.dataset.admin!=='true')id='settings';
   if(['progression','planner','squad'].includes(id)){id='wardogs';watchGame=null;}if(id==='command')id='home';if(id==='saved'){id='lol';initialView='saved';}
   const navigation=++navigationRevision;
@@ -110,7 +118,7 @@ async function renderRoute(id,watchGame=null,initialView=null,fromHistory=false)
   if(id==='lol'){await startLeague(initialView);return;}
   if(id==='sensitivity'){gameTabs(null);location(null,'Sensitivity converter');await mountFeature('sensitivity-ui','mountSensitivity');return;}
   if(id==='settings'){gameTabs(null);location(null,'Settings');mountSettings(state.games);return;}
-  if(id==='home')renderHome();else if(id==='watch')await mountFeature('watch-ui','mountWatch',state.watchGame);else if(id==='patches')await mountFeature('patches-ui','mountPatches',g);else if(id==='operators')await mountFeature('siege-operators-ui','mountOperators',initialView);else if(id==='server-status')await mountFeature('wardogs-status-ui','mountServerStatus');else if(id==='market')await mountFeature('wardogs-market-ui','mountMarket');else if(id==='damage')await mountFeature('wardogs-damage-ui','mountWardogsDamage');else if(id==='intel')mountIntel();else if(id==='updates')mountAppUpdates();else if(id==='sources')mountSources();else if(id==='saved')renderSaved();else if(!g){state.route='home';renderHome();}else if(g.status==='under-construction')renderUnderConstruction(g);else if(g.status!=='active')renderComingSoon(g);else if(g.kind==='collection')renderCollection(g);else if(g.kind==='finals')await mountFeature('finals-ui','mountFinals',initialView);else if(g.kind==='rocket-league')await mountFeature('rocket-league-ui','mountRocketLeague');else if(g.kind==='calculator')await mountFeature('wardogs-ui','mountWardogs');else if(g.kind==='siege')await mountFeature('siege-ui','mountSiege');else if(g.kind==='forest')await mountFeature('sotf-ui','mountForest');else if(g.kind==='tacmap')await mountFeature('gzw-ui','mountGzw');else if(g.kind==='apex')await mountFeature('apex-ui','mountApex',initialView);else{
+  if(id==='home')renderHome();else if(id==='watch')await mountFeature('watch-ui','mountWatch',state.watchGame);else if(id==='patches')await mountFeature('patches-ui','mountPatches',g);else if(id==='operators')await mountFeature('siege-operators-ui','mountOperators',initialView);else if(id==='server-status')await mountFeature('wardogs-status-ui','mountServerStatus');else if(id==='market')await mountFeature('wardogs-market-ui','mountMarket');else if(id==='damage')await mountFeature('wardogs-damage-ui','mountWardogsDamage');else if(id==='intel')mountIntel();else if(id==='updates')mountAppUpdates();else if(id==='sources')mountSources();else if(id==='saved')renderSaved();else if(!g){state.route='home';renderHome();}else if(g.status==='under-construction')renderUnderConstruction(g);else if(g.status!=='active')renderComingSoon(g);else if(g.kind==='collection')renderCollection(g);else if(g.kind==='finals')await mountFeature('finals-ui','mountFinals',initialView);else if(g.kind==='rocket-league')await mountFeature('rocket-league-ui','mountRocketLeague',initialView);else if(g.kind==='calculator')await mountFeature('wardogs-ui','mountWardogs');else if(g.kind==='siege')await mountFeature('siege-ui','mountSiege');else if(g.kind==='forest')await mountFeature('sotf-ui','mountForest');else if(g.kind==='tacmap')await mountFeature('gzw-ui','mountGzw');else if(g.kind==='apex')await mountFeature('apex-ui','mountApex',initialView);else{
     state.mode=stored('tbb-mode-'+g.id,g.modes[0]?.id);if(!g.modes.some(m=>m.id===state.mode))state.mode=g.modes[0]?.id;
     resetFilters();await loadBuilds();
   }
@@ -184,6 +192,7 @@ document.addEventListener('click',async event=>{
     if(b.dataset.gamePage){const id=$('#game-tabs').dataset.game;if(id==='apex')return await route('apex',null,b.dataset.gamePage);return await route(b.dataset.gamePage==='videos'?'watch':['patches','operators','progression','server-status','market','damage','planner','squad'].includes(b.dataset.gamePage)?b.dataset.gamePage:id,id);}
     if(b.hasAttribute('data-watch-current'))return await route('watch',game()?.id||state.watchGame);
     if(b.dataset.watchGame)return await route('watch',b.dataset.watchGame);
+    if(b.hasAttribute('data-apex-sign-in'))return await route('rocket-league',null,'account');
     if(b.dataset.apexPage)return await route('apex',null,({overview:'loadouts',legends:'apex-legends',news:'apex-news',esports:'apex-esports'})[b.dataset.apexPage]||'loadouts');
     if(b.dataset.savedWorkspace)return await route(b.dataset.savedWorkspace,null,'saved');
     if(b.dataset.openOperator)return await route('operators','siege',b.dataset.openOperator);
@@ -211,6 +220,8 @@ try{await applyVisualUpdates();document.documentElement.dataset.admin=String(!!(
 
 // Signal only after the destination (or its error state) has mounted and painted.
 requestAnimationFrame(()=>requestAnimationFrame(()=>window.dispatchEvent(new Event('dropzone-page-ready'))));
+const stopWarmup=scheduleFeatureWarmup({load:loadFeature,preferred:[{'finals':'finals-ui','siege':'siege-ui','apex':'apex-ui'}[state.route]]});
+window.addEventListener('pagehide',stopWarmup,{once:true});
 
 window.addEventListener('dropzone-favorites-change',()=>{renderRail();if(state.route==='home')renderHome();});
 

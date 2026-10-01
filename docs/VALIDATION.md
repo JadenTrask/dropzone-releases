@@ -1,3 +1,18 @@
+## 2.4.9 - 1 October 2026
+
+The owner requested that Gray Zone Warfare be closed as Under construction and approved publishing the accumulated regression fixes. Version 2.4.8 was already public; this update uses a new version and preserves its release.
+
+- All 284 Node tests passed against versioned 2.4.9 source, with no failures or skips. All 34 changed/new JavaScript files passed syntax checks; diff whitespace checks passed.
+- The final headless renderer matrix passed 110 captures and 27 interaction flows with zero recorded errors at 1920x1080, 2560x1440, 3840x2160 and 1000x900. This includes active game workspaces, Settings, update states and keyboard/dialog behavior. Counts describe automated checks, not exhaustive manual QA.
+- A separate construction-gate run passed 20 flows and four captures: Home, rail, direct routes, old contextual news/video URLs, restored workspaces and browser history cannot reopen GZW tools. No GZW module, canvas or terrain requests loaded. Other game routes remained usable. The construction screen and Home placement were inspected as actual screenshots, including narrow and 4K captures.
+- Before the final GZW closure/version change, focused regression runs passed 36 interaction captures, nine GZW motion captures, four shared-search captures, 20 detail-state captures, five final-control captures and eight fresh Apex-profile captures. GZW's map implementation and data are retained but are not shipped as an available feature. These overlapping runs are not added up as unique screens.
+- A fresh authenticated Apex request through the existing production account boundary returned HTTP 200 on October 1 at 03:15:22 UTC. The normalized response supplied one rank, two overview metrics and 22 legends. Renderer checks replayed that real response; not-found/quota/auth UI states in that renderer run were explicitly simulated. No credentials or private response fixtures are included in source or packages.
+- Controlled headless timing checks showed destination DOM creation no longer waits for a delayed provider response. Optional idle warmup loads at most two small local modules, without provider calls, maps or images. This is not a guarantee of native or in-game performance.
+- Startup preference status/save/failure paths passed mocks. The setting defaults off and is restricted to installed Windows copies; no actual Windows startup entry was written during validation.
+- Parent review accepted the representative updated workspace captures. Pixel review covered shared material, padding, Wardogs controls, Finals equipment, CoD details, Apex profile/recents, Sons, Siege, Settings and supporting states. The approved clear-glass direction is preserved.
+- Native installation/upgrade, real Windows boot, full multi-monitor behavior and resource impact while gaming remain unverified. The earlier focus-stealing error was not conclusively identified. Validation ran in isolated background/headless processes.
+- The existing release workflow must separately verify the exact committed source, Windows x64 installer, ASAR contents, update metadata and hashes of all four uploaded release artifacts before publication.
+
 ## 2.4.8 - 1 October 2026
 
 The owner approved the clear neutral glass direction on October 1: visible artwork, modest blur and thin reflective white edges. The full renderer matrix was repeated on that material. Follow-up pixel review corrected light-mode field contrast and removed opaque nested search fills without changing the approved dark theme.

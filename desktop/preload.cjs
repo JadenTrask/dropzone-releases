@@ -15,6 +15,7 @@ contextBridge.exposeInMainWorld('rift',Object.freeze({
   unlockAdmin:password=>ipcRenderer.invoke('admin-unlock',password),
   lockAdmin:()=>ipcRenderer.invoke('admin-lock'),
   appContext:()=>ipcRenderer.invoke('app-context'),
+  loginStartup:input=>ipcRenderer.invoke('login-startup',input),
   games:()=>ipcRenderer.invoke('games'),
   loadouts:options=>ipcRenderer.invoke('loadouts',options),
   media:options=>ipcRenderer.invoke('media',options),
