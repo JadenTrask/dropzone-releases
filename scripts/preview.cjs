@@ -33,6 +33,10 @@ http.createServer(async(req,res)=>{
       else if(u.pathname==='/api/personal-intel'&&req.method==='POST'){let raw='';for await(const chunk of req){raw+=chunk;if(raw.length>16000)throw Error('Request too large.');}data=await services.personalIntel(JSON.parse(raw));}
       else if(u.pathname==='/api/patches')data=await services.patches.list(Object.fromEntries(u.searchParams));
       else if(u.pathname==='/api/siege')data=await services.siege.get(Object.fromEntries(u.searchParams));
+      else if(u.pathname==='/api/gzw')data=await services.gzw.get(Object.fromEntries(u.searchParams));
+      else if(u.pathname==='/api/gzw-map')data=await services.gzwMap.get(Object.fromEntries(u.searchParams));
+      else if(u.pathname==='/api/apex-content')data=await services.apexContent.get(Object.fromEntries(u.searchParams));
+      else if(u.pathname==='/api/apex-player')data=await services.apexPlayer.get(Object.fromEntries(u.searchParams));
       else if(u.pathname==='/api/wardogs-status')data=await services.serverStatus.get(Object.fromEntries(u.searchParams));
       else if(u.pathname==='/api/wardogs-market')data=await services.market.get();
       else if(u.pathname==='/api/wardogs')data=await services.wardogs.get(Object.fromEntries(u.searchParams));
@@ -49,5 +53,5 @@ http.createServer(async(req,res)=>{
     if(!file.startsWith(root+path.sep)){res.writeHead(403);return res.end();}
     let content=await fs.readFile(file);if(path.extname(file)==='.html')content=content.toString().replace('</body>','<script src="/__preview_reload.js"></script></body>');res.writeHead(200,{'Content-Type':types[path.extname(file)]||'application/octet-stream','Cache-Control':'no-store'});res.end(content);
   }catch(e){res.writeHead(e.code==='ENOENT'?404:500,{'Content-Type':'application/json'});res.end(JSON.stringify({error:e.message}));}
-}).listen(port,'0.0.0.0',()=>{console.log(`Dropzone preview: http://localhost:${port}`);services.updates.check();void services.serverStatus.get();});
+}).listen(port,'127.0.0.1',()=>{console.log(`Dropzone preview: http://localhost:${port}`);services.updates.check();void services.serverStatus.get();});
 setInterval(()=>services.updates.check(),15*60_000).unref();

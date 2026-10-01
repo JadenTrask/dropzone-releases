@@ -1,3 +1,19 @@
+## 2.4.8 - 1 October 2026
+
+The owner approved the clear neutral glass direction on October 1: visible artwork, modest blur and thin reflective white edges. The full renderer matrix was repeated on that material. Follow-up pixel review corrected light-mode field contrast and removed opaque nested search fills without changing the approved dark theme.
+
+Static release preparation verified matching version metadata, inclusion of new runtime modules/assets, exclusion of private validation evidence, the established GitHub update feed and no flagged credential patterns across 496 source text files. This is not a built-installer or complete security guarantee.
+
+- 273 automated tests passed against versioned 2.4.8 source. Diff whitespace and changed JavaScript syntax checks passed.
+- The final revised glass theme passed 112 headless Edge captures and 29 interaction flows with zero reported errors. Captures verified actual PNG dimensions at 1920x1080, 2560x1440, 3840x2160 and 1000x900. All 96 requested terrain images loaded without network failures. These are renderer checks with labeled fixtures, not exhaustive native application QA.
+- Actual authenticated Apex production lookup returned HTTP 200 and a guarded profile contract. Separate actual checks verified unauthenticated 401 and bounded quota 429. Profile renderer checks replayed the recorded real contract; not-found and other UI states were simulated and are not claimed as live provider outcomes.
+- Follow-up runs passed 43 state captures / 13 flows and 12 actual-profile replay captures / 5 flows. Wardogs tutorial transparency and Escape dismissal are regression-checked. Finals redundant primary-weapon filler is removed. Screenshots were inspected for composition, typography, artwork and material consistency, not only overflow.
+- The final navigation pass covered 83 captures / 21 flows; the shared shell and command palette passed 6 captures / 2 flows. These overlapping runs are reported separately rather than added up as unique screens.
+- After the last search-surface correction, 46 additional module/state captures and 12 interaction flows passed with zero errors. The corrected CoD field and palette were visually inspected. All 45 changed/new JavaScript modules passed syntax checks, and the application-content ASAR matched 5,211 configured source files.
+- After the user's reported focus-stealing error, validation uses hidden, isolated, headless Edge processes only. The original error was not identified. An independently reproduced hidden-document view-transition rejection was fixed and unit-tested; it is not established as the cause of the user's dialog.
+- Native installation/upgrade, gameplay resource impact, embedded video playback and the full multi-monitor matrix remain unverified. Earlier 117-case layout and Rocket League wheel checks predate the final theme and are not represented as fresh runs.
+- Local application-content ASAR verification compares every configured application file against its source bytes. The established release workflow separately builds Windows x64, verifies the exact commit, installer/update metadata and all four uploaded artifacts before publication; local renderer tests do not substitute for those gates.
+
 ## Unreleased Rocket League integration - 26 September 2026
 
 - All 189 automated tests passed, including eight Rocket League model, socket/storage and UI checks. Targeted checks passed again after final query and display refinements.

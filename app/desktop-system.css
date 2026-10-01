@@ -1,0 +1,301 @@
+/* Desktop type, rhythm and elevation. Game artwork and canvas engines retain
+   their own geometry; surrounding controls share these materials and states. */
+:root {
+  --dz-space-1: 4px; --dz-space-2: 8px; --dz-space-3: 12px;
+  --dz-space-4: 16px; --dz-space-6: 24px; --dz-space-8: 32px;
+  --dz-type-caption: .75rem; --dz-type-secondary: .8125rem;
+  --dz-type-body: .875rem; --dz-type-section: 1.25rem; --dz-type-title: 1.75rem;
+  --dz-control-height: 36px; --dz-control-radius: 7px;
+  --dz-surface: #1b1d22; --dz-surface-raised: #24272e;
+  --dz-edge: #ffffff16; --dz-ink: #eef0f4; --dz-secondary: #b6bbc5;
+  --dz-control-base: #ffffff08; --dz-control-hover: #ffffff12;
+  --dz-control-active: #ffffff1c; --dz-control-primary: #a56c422b;
+  --dz-control-primary-hover: #a56c4242;
+  --dz-control-danger: #d25c581a; --dz-control-danger-hover: #d25c582b;
+  --dz-control-well: #00000020; --dz-control-menu: #26292ff5;
+  --dz-control-shadow: inset 0 1px #ffffff08;
+  --dz-motion: 140ms; --dz-elevation: 0 12px 36px #0005;
+}
+html[data-appearance="light"] {
+  --dz-surface: #f5f6f8; --dz-surface-raised: #fff;
+  --dz-edge: #17243a24; --dz-ink: #253043; --dz-secondary: #556073;
+  --dz-control-base: #ffffffb0; --dz-control-hover: #e5e9f1;
+  --dz-control-active: #d7dfea; --dz-control-primary: #eddbc8;
+  --dz-control-primary-hover: #e7d1b8;
+  --dz-control-danger: #f3dede; --dz-control-danger-hover: #edcaca;
+  --dz-control-well: #17243a08; --dz-control-menu: #f8f9fcfa;
+  --dz-control-shadow: inset 0 1px #fff;
+}
+body {font-family: Forge, "Segoe UI", system-ui, sans-serif; line-height: 1.5}
+:where(button,input,select,textarea) {font:inherit}
+:where(button,a,input,select,textarea,summary,[tabindex]):focus-visible {
+  outline:2px solid var(--dz-control-focus,#e2b68e); outline-offset:3px;
+}
+:where(button):disabled {cursor:default; opacity:.5}
+:where(.hub-button,.select-control) {min-height:var(--dz-control-height);border-radius:var(--dz-control-radius)}
+.hub-button {background:var(--dz-control-primary);border-color:var(--dz-edge);box-shadow:var(--dz-control-shadow)}
+.hub-button:hover {background:var(--dz-control-primary-hover);box-shadow:var(--dz-control-shadow)}
+.hub-button.secondary,.select-control {background:var(--dz-control-base)}
+.hub-button.secondary:hover,.select-control:hover {background:var(--dz-control-hover)}
+.hub-button:active,.select-control:active {background:var(--dz-control-active);transform:none}
+.select-options {background:var(--dz-control-menu);border-color:var(--dz-edge);border-radius:9px;box-shadow:var(--dz-elevation)}
+.select-options [role="option"] {border-radius:5px;min-height:34px}
+.select-options [role="option"]:hover,.select-options [role="option"]:focus-visible {background:var(--dz-control-hover)}
+:where(input[type="checkbox"],input[type="radio"]) {accent-color:var(--dz-control-focus)}
+#hub-app .game-simple-heading h1 {font-size:var(--dz-type-title); line-height:1.2; letter-spacing:-.025em}
+#hub-app .game-simple-heading {margin-bottom:24px; align-items:flex-start}
+.game-simple-heading p {font-size:var(--dz-type-body); line-height:1.6; max-width:70ch}
+.hub-eyebrow {font-size:11px; letter-spacing:.09em; line-height:1.5}
+.page-header-actions {gap:8px; align-items:center}
+dialog {border:1px solid var(--dz-edge); box-shadow:var(--dz-elevation)}
+:where(.select-popover,.workspace-popover,.font-menu[open]) {box-shadow:var(--dz-elevation)}
+/* Settings read as aligned preferences rather than large nested panels. */
+#hub-app .app-settings>header h1 {font-size:var(--dz-type-title);line-height:1.2;letter-spacing:-.025em;margin:8px 0 24px}
+#hub-app .app-settings>.panel {background:transparent;box-shadow:none;border:0;border-top:1px solid var(--line);border-radius:0;margin:0;padding:24px 0}
+#hub-app .app-settings>.panel:has(>h2) {display:grid;grid-template-columns:230px minmax(0,1fr);gap:12px 32px;align-items:start}
+#hub-app .app-settings>.panel>h2 {grid-column:1;grid-row:1;font-size:18px;line-height:1.4;margin:0}
+#hub-app .app-settings>.panel>:not(h2) {grid-column:2;min-width:0}
+#hub-app .app-settings>.panel>label {margin:0;max-width:480px;font-size:14px}
+#hub-app .app-settings>.panel>p {font-size:13px;line-height:1.5;color:var(--muted);margin:0}
+#hub-app .app-settings .select-control {margin-top:8px}
+/* One match context, one briefing, one five-person team. */
+#hub-app .r6-match-context {display:flex;align-items:center;gap:20px;margin:20px 0 24px}
+#hub-app .r6-context-image {width:164px;height:94px;object-fit:cover;border-radius:8px}
+#hub-app .r6-context-fields {display:flex;gap:12px;flex:1;max-width:530px}
+#hub-app .r6-context-fields label:first-child {flex:2;min-width:0}
+#hub-app .r6-context-fields label:last-child {flex:1;min-width:0}
+#hub-app .r6-round-plan {margin:0 0 24px;max-width:92ch}
+#hub-app .r6-round-plan p {font-size:15px;line-height:1.65;margin:8px 0;color:var(--copy)}
+#hub-app .r6-round-plan small {color:var(--muted);font-size:12px}
+#hub-app .r6-label {color:var(--muted);font-size:11px;letter-spacing:.075em}
+#hub-app .r6-team {display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:16px}
+#hub-app .r6-team-member {display:flex;flex-direction:column;text-align:left;padding:0;min-width:0;border:1px solid transparent!important;border-radius:8px;background:transparent!important;color:var(--copy);overflow:hidden;transition:background-color var(--dz-motion),border-color var(--dz-motion)}
+#hub-app .r6-team-member:hover {background:var(--dz-control-hover)!important;border-color:var(--dz-edge)!important}
+#hub-app .r6-team-art {display:block;width:100%;height:230px;background:#ffffff03;overflow:hidden}
+#hub-app .r6-team-art img {display:block;width:100%;height:100%;object-fit:contain;object-position:center bottom}
+#hub-app .r6-team-copy {display:flex;flex-direction:column;gap:7px;padding:14px 10px 16px;width:100%;box-sizing:border-box}
+#hub-app .r6-team-name {display:flex;justify-content:space-between;gap:8px;font-size:18px;font-weight:650;line-height:1.3}
+#hub-app .r6-team-name>span {font-size:13px;color:var(--muted)}
+#hub-app .r6-team-role {font-size:12px;line-height:1.45;color:var(--muted);font-weight:400}
+#hub-app .r6-team-gadget {font-size:13px;font-weight:600}
+#hub-app .r6-team-reason {font-size:13px;font-weight:400;line-height:1.6;color:var(--muted)}
+#hub-app .r6-ban-choices {background:transparent;border:0;padding:8px 0}
+#hub-app .r6-method {background:transparent;border:0;border-top:1px solid var(--line);padding:16px 0}
+/* Map workspaces retain full height and independently scrolling sidebars. */
+/* Keep real Finals art while reducing the old nested, oversized workbench. */
+#hub-app .finals-page {--fn-text:var(--dz-ink);--fn-muted:var(--dz-secondary);--fn-border:var(--dz-edge)}
+#hub-app .finals-page .fn-loadouts-container {max-width:1320px}
+#hub-app .finals-page .fn-page-intro h1 {font-size:var(--dz-type-title);line-height:1.2;font-weight:650;letter-spacing:-.025em}
+#hub-app .finals-page .fn-class-choice {min-height:80px;padding:16px 20px;border-radius:8px;background:var(--dz-control-base);box-shadow:none}
+#hub-app .finals-page .fn-class-choice:after,#hub-app .finals-page .fn-weapon-stage:after {display:none}
+#hub-app .finals-page .fn-class-choice:hover {transform:none;box-shadow:none;background:var(--dz-control-hover)}
+#hub-app .finals-page .fn-class-choice.active {background:var(--dz-control-active);box-shadow:inset 2px 0 var(--fn-accent)}
+#hub-app .finals-page .fn-workspace-switch {background:transparent;border:0;padding:0;border-radius:0;gap:6px}
+#hub-app .finals-page .fn-workspace-switch>button {font-family:inherit;border-radius:var(--dz-control-radius);min-height:var(--dz-control-height)}
+#hub-app .finals-page .fn-workspace-switch>button.active {background:var(--dz-control-active);box-shadow:none;color:var(--dz-ink)}
+#hub-app .finals-page .fn-build-stage {background:var(--dz-surface);border-radius:9px;box-shadow:none}
+#hub-app .finals-page .fn-build-intro {min-height:112px;padding:20px 24px}
+#hub-app .finals-page .fn-build-intro h2 {font-size:26px;line-height:1.25;font-weight:650}
+#hub-app .finals-page .fn-build-contestant {opacity:.65}
+#hub-app .finals-page .fn-weapon-stage {background:transparent;border:0;border-radius:0;min-height:220px}
+#hub-app .finals-page .fn-weapon-symbol {height:130px;width:min(100%,340px)}
+#hub-app .finals-page .fn-weapon-display h3 {font-size:24px;line-height:1.25}
+#hub-app .finals-page .fn-equipment {background:transparent;border:0;border-bottom:1px solid var(--dz-edge);border-radius:0}
+#hub-app .finals-page .fn-equipment:hover {transform:none;background:var(--dz-control-hover)}
+#hub-app .finals-page .fn-tier-badge {background:transparent;border:0;padding-left:0}
+#hub-app .finals-page .fn-team-player,#hub-app .finals-page .fn-saved-card {background:var(--dz-surface);border-radius:9px;box-shadow:none}
+/* Rocket League keeps its blue identity and working desktop workspace. */
+html.rl-workspace-active .rl-page {background:var(--rl-bg);font-family:Forge,"Segoe UI",system-ui,sans-serif}
+html.rl-workspace-active .rl-page .rl-standby {min-height:220px;padding:24px 28px;border-radius:9px;background:var(--rl-surface)}
+html.rl-workspace-active .rl-page .rl-standby h2 {font-size:24px;line-height:1.25;letter-spacing:-.025em}
+html.rl-workspace-active .rl-tabs>button {border-radius:var(--dz-control-radius);min-height:var(--dz-control-height)}
+html.rl-workspace-active .rl-tabs>button[aria-pressed=true] {background:#29415c;box-shadow:none}
+/* Shared utility pages use aligned content and modest elevation. */
+#hub-app :is(.app-updates-intro,.sensitivity-page>header) h1 {font-size:var(--dz-type-title);line-height:1.2;letter-spacing:-.025em}
+#hub-app :is(.app-update-card,.sens-panel,.sens-output,.sens-help) {background:var(--dz-surface);border-color:var(--dz-edge);border-radius:9px;box-shadow:none}
+#hub-app .sens-panel {padding:24px}
+#hub-app .weapon-title h2 {font-size:30px;line-height:1.2;letter-spacing:-.025em}
+#hub-app .weapon-hero {background:var(--dz-surface);box-shadow:none}
+#hub-app :is(.gz-map-toolbar,.gz-status) {background:var(--dz-surface);border-color:var(--dz-edge)}
+#hub-app .gz-result {background:var(--dz-control-base);border-color:var(--dz-edge)}
+#hub-app :is(.gz-page,.sotf-workspace) {color:var(--dz-ink);background:var(--dz-surface);font-size:14px}
+#hub-app .gz-page {gap:0;padding:0;grid-template-columns:320px minmax(0,1fr)}
+#hub-app :is(.gz-sidebar,.sotf-sidebar) {background:var(--dz-surface);border-radius:0;border:0;border-right:1px solid var(--dz-edge)}
+#hub-app :is(.gz-sidebar-top,.sotf-sidebar header) {padding:20px 20px 14px}
+#hub-app :is(.gz-sidebar h1,.sotf-sidebar h1) {font-size:24px;line-height:1.25;letter-spacing:-.025em;margin:5px 0 14px}
+#hub-app .gz-nav {grid-template-columns:repeat(5,minmax(0,1fr));gap:2px;padding:0 12px 12px}
+#hub-app .gz-nav button {padding:6px 3px;font-size:12px;min-width:0;min-height:34px;border-radius:5px}
+#hub-app :is(.gz-sidebar-bottom,.sotf-sidebar footer) {background:var(--dz-surface);border-top:1px solid var(--dz-edge)}
+#hub-app :is(.gz-search input,.sotf-search input,.gz-field select,.gz-filters select) {background:var(--dz-control-well);border-color:var(--dz-edge);border-radius:7px;color:var(--dz-ink);min-height:36px;font-size:14px}
+#hub-app :is(.gz-detail,.sotf-detail,.gz-dialog) {background:var(--dz-control-menu);border:1px solid var(--dz-edge);box-shadow:var(--dz-elevation);border-radius:9px;color:var(--dz-ink)}
+#hub-app :is(.gz-detail h2,.sotf-detail h2) {font-size:20px;line-height:1.3;letter-spacing:-.02em}
+#hub-app :is(.gz-map-toolbar,.sotf-map-tools) {box-shadow:none}
+#hub-app :is(.gz-map-toolbar button,.sotf-map-tools button) {min-height:36px;border-radius:7px;font-size:13px}
+#hub-app :is(.gz-result,.sotf-results button) {border-radius:6px}
+#hub-app :is(.gz-result:hover,.gz-result.selected,#sotf-results button:hover,#sotf-results button.selected) {background:var(--dz-control-hover);border-color:var(--dz-edge)}
+#hub-app :is(.gz-small,.gz-map-hint,.sotf-map-caption small,.sotf-sidebar footer small) {font-size:12px;line-height:1.5}
+#hub-app .sotf-map-tools {gap:6px}
+@media(min-width:2200px) {#hub-app .hub-main.r6-page {--page-content-width:1560px} #hub-app .r6-team-art {height:280px}}
+@media(min-width:2200px) {#hub-app .finals-page .fn-loadouts-container {max-width:1560px}}
+@media(max-width:1250px) {#hub-app .r6-team {gap:8px} #hub-app .r6-team-art {height:190px} #hub-app .r6-team-copy {padding:12px 6px} #hub-app .r6-team-name {font-size:16px}}
+@media(max-width:1050px) {#hub-app .r6-team {grid-template-columns:repeat(3,minmax(0,1fr))} #hub-app .r6-match-context {flex-wrap:wrap} #hub-app .gz-page {grid-template-columns:280px minmax(0,1fr)}}
+@media(max-width:700px) {#hub-app .r6-team {grid-template-columns:repeat(2,minmax(0,1fr))} #hub-app .r6-context-image {width:110px;height:76px} #hub-app .r6-context-fields {flex-wrap:wrap} #hub-app .r6-match-context {gap:12px} #hub-app .gz-page {grid-template-columns:1fr;height:auto;overflow:visible} #hub-app .gz-sidebar {max-height:50vh} #hub-app .gz-map-area {height:65vh;min-height:400px}}
+@media(max-width:800px) {#hub-app .app-settings>.panel:has(>h2) {grid-template-columns:1fr;gap:12px} #hub-app .app-settings>.panel>h2 {grid-column:1;grid-row:auto;margin-bottom:4px} #hub-app .app-settings>.panel>:not(h2) {grid-column:1}}
+@media(prefers-reduced-motion:reduce) {*,*::before,*::after {scroll-behavior:auto!important;transition-duration:0s!important;animation-duration:0s!important}}
+
+/* Compact desktop controls and content rows, with an unobstructed RL workspace. */
+.hub-button,.select-control{min-height:36px;border-radius:7px;color:var(--dz-ink);font-size:14px}
+.hub-button{padding:8px 12px}.hub-button:hover{filter:none}.hub-button:disabled:hover{background:var(--dz-control-primary)}
+#hub-app .weapon-hero:after{display:none}
+html.rl-workspace-active .rl-workspace{grid-template-columns:minmax(0,1fr)!important;gap:0}
+html.rl-workspace-active .rl-main-panel{grid-column:1!important;width:100%;min-width:0}
+#hub-app .r6-match-context{display:grid;grid-template-columns:140px minmax(0,1fr) auto;gap:20px;align-items:end;margin:20px 0}
+#hub-app .r6-context-image{width:140px;height:84px}
+#hub-app .r6-context-fields{display:grid;grid-template-columns:minmax(200px,1fr) 160px;gap:12px;max-width:none;width:100%}
+#hub-app .r6-context-fields label{display:grid;gap:7px;margin:0;font-size:12px;color:var(--dz-secondary)}
+#hub-app .r6-context-fields .select-control{margin:0;width:100%}
+#hub-app .r6-match-context>.source-link{height:36px;align-self:end;margin:0}
+#hub-app .r6-round-plan{max-width:none;padding:20px 0;margin:0 0 20px;border-top:1px solid var(--dz-edge);border-bottom:1px solid var(--dz-edge)}
+#hub-app .r6-briefing-heading{display:flex;align-items:baseline;gap:14px;margin-bottom:10px}
+#hub-app .r6-briefing-heading h2{font-size:20px;line-height:1.3;margin:0;color:var(--dz-ink)}
+#hub-app .r6-briefing-heading>span{font-size:12px;color:var(--dz-secondary)}
+#hub-app .r6-round-plan .r6-objective{font-size:17px;line-height:1.45;font-weight:600;max-width:85ch;margin:0 0 6px}
+#hub-app .r6-round-plan .r6-plan-note{font-size:13px;color:var(--dz-secondary);margin:0 0 14px}
+#hub-app .r6-requirements{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;margin-top:14px}
+#hub-app .r6-requirements>div{display:grid;gap:4px;font-size:13px;line-height:1.5}
+#hub-app .r6-requirements strong{font-weight:600;color:var(--dz-ink)}
+#hub-app .r6-requirements span{color:var(--dz-secondary)}
+#hub-app :is(.gz-sidebar h1,.sotf-sidebar h1){font-size:20px;margin:4px 0 12px}
+#hub-app :is(.gz-sidebar-top,.sotf-sidebar header){padding:18px 18px 12px}
+#hub-app .gz-field{display:flex;align-items:center;gap:12px;font-size:12px;color:var(--dz-secondary)}
+#hub-app .gz-field>.select-control{flex:1;min-width:0;margin:0}
+#hub-app .gz-nav{padding:0 12px;gap:0;border-bottom:1px solid var(--dz-edge)}
+#hub-app .gz-nav button{border:0;border-bottom:2px solid transparent;border-radius:0;background:transparent;color:var(--dz-secondary);min-height:38px}
+#hub-app .gz-nav button[aria-pressed=true]{color:var(--dz-ink);border-bottom-color:#93b5cc;background:transparent}
+#hub-app .gz-panel{padding:14px 18px}
+#hub-app .gz-results{gap:0}
+#hub-app .gz-result{background:transparent;border:0;border-bottom:1px solid var(--dz-edge);border-radius:0;padding:11px 4px;gap:4px;min-height:0}
+#hub-app .gz-result strong{font-size:13px;font-weight:600;color:var(--dz-ink)}
+#hub-app .gz-result>span:not(.gz-result-title),#hub-app .gz-result small{font-size:12px;line-height:1.4;color:var(--dz-secondary)}
+#hub-app .gz-lz-badge{background:transparent;color:#aac8dc;border:0;padding:0;font-size:11px}
+#hub-app :is(.gz-marker-presets,.sotf-presets){gap:6px}
+#hub-app :is(.gz-marker-presets button,.sotf-presets button){min-height:30px;padding:5px 9px;border-color:var(--dz-edge);background:var(--dz-control-base);font-size:12px;color:var(--dz-ink)}
+#hub-app :is(.gz-layer-list label,#sotf-layers label){min-height:32px;padding:4px 6px;gap:8px;font-size:13px;box-sizing:border-box;color:var(--dz-ink)}
+#hub-app :is(.gz-sidebar,.sotf-sidebar,.app-settings) input[type=checkbox]{appearance:none;width:16px;height:16px;border:1px solid #87909b;border-radius:4px;background:var(--dz-control-well);display:grid;place-content:center;margin:0;flex-shrink:0}
+#hub-app :is(.gz-sidebar,.sotf-sidebar,.app-settings) input[type=checkbox]:checked{background:#667a8b;border-color:#879bae}
+#hub-app :is(.gz-sidebar,.sotf-sidebar,.app-settings) input[type=checkbox]:checked:after{content:'';width:7px;height:4px;border-left:2px solid white;border-bottom:2px solid white;transform:rotate(-45deg);margin-top:-2px}
+#hub-app :is(.gz-sidebar,.sotf-sidebar,.app-settings) input[type=checkbox]:disabled{opacity:.5}
+#hub-app .sotf-marker-icon{border:0!important;background:transparent;border-radius:0;width:24px;height:24px}
+#hub-app .sotf-marker-icon img{width:22px;height:22px}
+#hub-app .sotf-search{padding:0 18px;gap:6px;font-size:12px;color:var(--dz-secondary)}
+#hub-app .sotf-presets{padding:12px 18px}
+#hub-app .sotf-region{padding:0 18px;font-size:12px;color:var(--dz-secondary)}
+#hub-app .sotf-hide{padding:12px 18px;font-size:13px}
+#hub-app .sotf-sidebar-scroll{padding:0 12px}
+#hub-app .sotf-sidebar summary{font-size:13px;border-color:var(--dz-edge);padding:11px 6px}
+#hub-app #sotf-results{gap:0}
+#hub-app #sotf-results button{padding:8px 6px;border-radius:4px;gap:8px}
+#hub-app :is(.sotf-sidebar footer,.gz-sidebar-bottom){padding:10px 18px}
+#hub-app .sotf-sidebar footer button{font-size:12px;color:var(--dz-secondary)}
+#hub-app .sotf-sidebar footer small{font-size:11px;margin-top:4px;color:var(--dz-secondary)}
+#hub-app :is(.gz-status,.gz-kicker,.gz-small,.sotf-index-help,.sotf-sidebar summary span,#sotf-layers label small,#sotf-results small){color:var(--dz-secondary)}
+@media(max-width:1050px){#hub-app .r6-match-context{grid-template-columns:110px minmax(0,1fr)}#hub-app .r6-context-image{width:110px}#hub-app .r6-match-context>.source-link{grid-column:2;justify-self:end}#hub-app .r6-context-fields{grid-template-columns:minmax(0,1fr) 120px}}
+@media(max-width:700px){#hub-app .r6-requirements{grid-template-columns:1fr;gap:12px}#hub-app .r6-context-fields{grid-template-columns:1fr}#hub-app .r6-briefing-heading{flex-wrap:wrap}}
+/* Explicitly opt text navigation out of the older shared boxed-button rule. */
+html[data-game="gray-zone"] #hub-app .gz-nav button{--dz-control-surface:transparent;--dz-control-border:transparent;border:0!important;border-bottom:2px solid transparent!important;border-radius:0!important;box-shadow:none;padding:7px 3px;font-weight:500}
+html[data-game="gray-zone"] #hub-app .gz-nav button[aria-pressed=true]{--dz-control-surface:transparent;border-bottom-color:#93b5cc!important}
+html[data-game="gray-zone"] #hub-app .gz-page .gz-result{border:0;border-bottom:1px solid var(--dz-edge);border-radius:0;padding:10px 4px;background:transparent;gap:4px}
+html[data-game="gray-zone"] #hub-app .gz-result:hover{background:var(--dz-control-hover)}
+html[data-game="gray-zone"] #hub-app :is(.gz-panel,.gz-results-heading,.gz-map-hint,.gz-section-label){color:var(--dz-secondary);scrollbar-color:#59616e var(--dz-surface)}
+html[data-game] #hub-app button.source-link,html[data-game="sotf"] #hub-app .sotf-sidebar footer button{--dz-control-surface:transparent;--dz-control-border:transparent;border:0!important;border-radius:0;box-shadow:none;padding:4px 0;font-weight:500;min-height:24px}
+html[data-game="sotf"] #hub-app .sotf-workspace .sotf-map-tools{border:0;background:transparent;padding:0;border-radius:0;gap:5px;box-shadow:none;backdrop-filter:none}
+html[data-game="sotf"] #hub-app .sotf-workspace .sotf-map-tools button{background:var(--dz-surface)!important;color:var(--dz-ink)!important;border:1px solid var(--dz-edge);border-radius:7px;box-shadow:0 2px 8px #0003}
+html[data-game="sotf"] #hub-app .sotf-workspace .sotf-map-tools button:hover:not(:disabled){background:var(--dz-surface-raised)!important}
+
+/* Review refinements: readable type, compact context and progressive map names. */
+:root{--dz-type-caption:.8125rem;--dz-type-secondary:.875rem;--dz-type-body:.9375rem}
+.hub-eyebrow{font-size:12px}
+#hub-app .r6-match-context{grid-template-columns:120px 430px auto;justify-content:start;gap:16px;align-items:end}
+#hub-app .r6-context-image{width:120px;height:76px}
+#hub-app .r6-context-fields{grid-template-columns:280px 134px;gap:16px}
+#hub-app .r6-match-context>.source-link{grid-column:auto;justify-self:start;height:36px}
+#hub-app .r6-briefing-body{display:grid;grid-template-columns:1.1fr 1fr;gap:32px;max-width:1100px}
+#hub-app .r6-briefing-label{font-size:13px;font-weight:600;color:var(--dz-secondary)}
+#hub-app .r6-round-plan .r6-objective{font-size:17px;margin-top:6px;font-weight:500;line-height:1.5}
+#hub-app .r6-round-plan .r6-capabilities{font-size:15px;font-weight:500;margin:6px 0}
+#hub-app .r6-round-plan .r6-plan-note{font-size:14px;line-height:1.5;margin:6px 0}
+#hub-app .r6-team-reason{font-size:14px;line-height:1.5}
+#hub-app .r6-team-role,#hub-app .r6-team-gadget{font-size:13px}
+html[data-game="gray-zone"] #hub-app .gz-results-heading{min-height:24px;margin:8px 0 0;font-size:13px}
+html[data-game="gray-zone"] #hub-app .gz-category-picker{margin-bottom:0}
+html[data-game="gray-zone"] #hub-app .gz-category-picker summary{padding:8px 0;font-size:13px}
+html[data-game="gray-zone"] #hub-app .gz-result strong{font-size:14px}
+html[data-game="gray-zone"] #hub-app .gz-result>span:not(.gz-result-title){font-size:13px}
+html[data-game="sotf"] #hub-app #sotf-layers label{font-size:14px}
+html[data-game="sotf"] #hub-app #sotf-results strong{font-size:14px}
+@media(max-width:1100px){#hub-app .r6-match-context{grid-template-columns:100px minmax(0,430px) auto}#hub-app .r6-context-image{width:100px}#hub-app .r6-context-fields{grid-template-columns:minmax(180px,1fr) 120px}}
+@media(max-width:850px){#hub-app .r6-match-context{grid-template-columns:100px minmax(0,1fr)}#hub-app .r6-match-context>.source-link{grid-column:2}#hub-app .r6-context-fields{grid-template-columns:minmax(0,1fr) 100px}#hub-app .r6-briefing-body{grid-template-columns:1fr;gap:14px}}
+
+/* Wider desktops use the available workspace without stretching prose or controls. */
+html[data-game=wardogs] #hub-app .wd-fixed .wd-map-toolbar{background:var(--dz-surface)!important;border:1px solid var(--dz-edge);border-radius:7px;box-shadow:0 3px 12px #0003;padding:6px;gap:6px;backdrop-filter:none}
+html[data-game=wardogs] #hub-app .wd-fixed .wd-map-toolbar button{--dz-control-surface:var(--dz-control-base);border-radius:5px;min-height:34px;font-size:13px;padding:6px 9px;box-shadow:none}
+html[data-game=wardogs] #hub-app .wd-fixed .wd-map-toolbar button:hover:not(:disabled):not([aria-disabled=true]){--dz-control-surface:var(--dz-control-hover)}
+html[data-game=wardogs] #hub-app .wd-fixed .wd-map-toolbar button:is(.active,[aria-pressed=true]){--dz-control-surface:#654936;box-shadow:none}
+html[data-game=wardogs] #hub-app .wd-fixed .wd-map-toolbar button:is(.active,[aria-pressed=true]):hover:not(:disabled){--dz-control-surface:#795940}
+@media(min-width:900px) and (max-width:1200px){
+ html:not([data-text-size="150"]):not([data-text-size="175"]):not([data-text-size="200"]) #hub-app .arsenal-layout{grid-template-columns:250px minmax(0,1fr);gap:20px}
+ html:not([data-text-size="150"]):not([data-text-size="175"]):not([data-text-size="200"]) #hub-app .weapon-results{display:flex;max-height:calc(100vh - 490px);min-height:240px}
+ #hub-app .weapon-row{padding:12px;column-gap:9px;grid-template-columns:56px minmax(0,1fr)}
+ #hub-app .weapon-row h3{font-size:16px}
+}
+@media(min-width:2200px){
+ #hub-app .hub-main.arsenal-page{--page-content-width:1800px}
+ #hub-app .finals-page .fn-weapon-symbol{width:min(100%,460px);height:160px}
+ #hub-app .finals-page .fn-equipment-symbol{width:80px;height:60px}
+ #hub-app .hub-main.library-page{--page-content-width:1540px}
+ #hub-app .hub-main.r6-page{--page-content-width:1800px}
+ #hub-app .r6-team-art{height:320px}
+}
+@media(min-width:3200px){
+ #hub-app .hub-main.arsenal-page{--page-content-width:2180px}
+ #hub-app .hub-main.library-page{--page-content-width:1960px}
+ #hub-app .hub-main.r6-page{--page-content-width:2180px}
+ #hub-app .r6-team-art{height:380px}
+ #hub-app .r6-team-copy{padding:18px 14px}
+ #hub-app .r6-team-name{font-size:22px}
+ #hub-app .r6-team-role,#hub-app .r6-team-gadget,#hub-app .r6-team-reason{font-size:15px}
+}
+
+/* Secondary desktop dialogs keep the same readable scale as the workspaces. */
+dialog.rl-setup.rl-welcome{width:min(820px,calc(100vw - 40px));min-height:0}
+dialog.rl-setup .rl-welcome-content{padding:36px 40px}
+dialog.rl-setup .rl-welcome-content h2{font-family:inherit;font-size:32px;line-height:1.15;letter-spacing:-.025em;margin:14px 0 24px}
+dialog.rl-setup .rl-welcome-brand{width:48px;height:48px}
+dialog.wd-dialog{background:var(--dz-surface);color:var(--dz-ink);border-color:var(--dz-edge)}
+dialog.wd-dialog .wd-method{background:transparent;border:0;color:var(--dz-secondary)}
+
+/* Secondary dialogs use the same neutral surface as the workspace. */
+dialog.r6-chart-dialog{background:var(--dz-surface);border-color:var(--dz-edge)}
+dialog.wd-dialog .wd-method{padding:0 18px;border-radius:0}
+dialog.wd-dialog .wd-method h3{color:var(--dz-ink)}
+#hub-app .operator-hero .operator-identity h2{font-size:40px;line-height:1.2}
+
+/* Editorial screens share the same hierarchy and restrained row treatment. */
+#hub-app .patch-row{background:transparent;border:0;border-bottom:1px solid var(--dz-edge);border-radius:0;padding:20px 0;box-shadow:none}
+#hub-app .patch-list{gap:0}
+#hub-app .patch-feature{background:var(--dz-surface);border-color:var(--dz-edge);border-radius:9px;padding:24px}
+#hub-app .patch-feature h2{font-size:26px;line-height:1.3;max-width:70ch}
+#hub-app .fn-media-heading h1{font-size:var(--dz-type-title);line-height:1.2;letter-spacing:-.025em}
+#hub-app .fn-news-feature{min-height:240px;border-radius:9px;box-shadow:none}
+#hub-app .fn-news-feature h2{font-size:32px;line-height:1.2;letter-spacing:-.025em;margin:16px 0 12px}
+#hub-app .fn-news-card{border-radius:9px;background:var(--dz-surface);box-shadow:none}
+#hub-app .fn-news-card:hover{transform:none;box-shadow:none}
+#hub-app .fn-news-card-art{min-height:88px;background:var(--dz-surface-raised)}
+#hub-app .fn-news-card-art:after{display:none}
+
+.workspace-dialog{background:var(--dz-surface);border-color:var(--dz-edge);border-radius:9px}
+.workspace-dialog h2{font-size:20px;line-height:1.3}
+.workspace-dialog #workspace-results{display:grid;gap:2px}
+.workspace-dialog .workspace-result{min-height:36px;padding:8px 12px;border:0;border-radius:5px;background:transparent!important;border:0!important;box-shadow:none!important;font-size:14px}
+.workspace-dialog .workspace-result:hover{background:var(--dz-control-hover)!important;transform:none}
+.workspace-dialog input{min-height:38px;border-radius:7px;font-size:14px}

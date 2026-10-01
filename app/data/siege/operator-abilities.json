@@ -1,0 +1,306 @@
+{
+  "ace": {
+    "name": "S.E.L.M.A. AQUA BREACHER",
+    "sourceUrl": "https://www.ubisoft.com/en-us/game/rainbow-six/siege/game-info/operators/ace"
+  },
+  "alibi": {
+    "name": "Prisma",
+    "sourceUrl": "https://www.ubisoft.com/en-us/game/rainbow-six/siege/game-info/operators/alibi"
+  },
+  "amaru": {
+    "name": "Garra Hook",
+    "sourceUrl": "https://www.ubisoft.com/en-us/game/rainbow-six/siege/game-info/operators/amaru"
+  },
+  "aruni": {
+    "name": "Surya Gate",
+    "sourceUrl": "https://www.ubisoft.com/en-us/game/rainbow-six/siege/game-info/operators/aruni"
+  },
+  "ash": {
+    "name": "BREACHING ROUND",
+    "sourceUrl": "https://www.ubisoft.com/en-us/game/rainbow-six/siege/game-info/operators/ash"
+  },
+  "azami": {
+    "name": "KIBA BARRIER",
+    "sourceUrl": "https://www.ubisoft.com/en-us/game/rainbow-six/siege/game-info/operators/azami"
+  },
+  "bandit": {
+    "name": "Shock Wire",
+    "sourceUrl": "https://www.ubisoft.com/en-us/game/rainbow-six/siege/game-info/operators/bandit"
+  },
+  "blackbeard": {
+    "name": "H.U.L.L. ADAPTABLE SHIELD",
+    "sourceUrl": "https://www.ubisoft.com/en-us/game/rainbow-six/siege/game-info/operators/blackbeard"
+  },
+  "blitz": {
+    "name": "G52-TACTICAL SHIELD",
+    "sourceUrl": "https://www.ubisoft.com/en-us/game/rainbow-six/siege/game-info/operators/blitz"
+  },
+  "brava": {
+    "name": "Kludge Drone",
+    "sourceUrl": "https://www.ubisoft.com/en-us/game/rainbow-six/siege/game-info/operators/brava"
+  },
+  "buck": {
+    "name": "Skeleton Key",
+    "sourceUrl": "https://www.ubisoft.com/en-us/game/rainbow-six/siege/game-info/operators/buck"
+  },
+  "capitao": {
+    "name": "Tactical Crossbow",
+    "sourceUrl": "https://www.ubisoft.com/en-us/game/rainbow-six/siege/game-info/operators/capitao"
+  },
+  "castle": {
+    "name": "Armor Panel",
+    "sourceUrl": "https://www.ubisoft.com/en-us/game/rainbow-six/siege/game-info/operators/castle"
+  },
+  "caveira": {
+    "name": "Silent Step",
+    "sourceUrl": "https://www.ubisoft.com/en-us/game/rainbow-six/siege/game-info/operators/caveira"
+  },
+  "clash": {
+    "name": "CCE SHIELD MK2",
+    "sourceUrl": "https://www.ubisoft.com/en-us/game/rainbow-six/siege/game-info/operators/clash"
+  },
+  "deimos": {
+    "name": "DEATHMARK TRACKER",
+    "sourceUrl": "https://www.ubisoft.com/en-us/game/rainbow-six/siege/game-info/operators/deimos"
+  },
+  "denari": {
+    "name": "T.R.I.P. Connector",
+    "sourceUrl": "https://www.ubisoft.com/en-us/game/rainbow-six/siege/game-info/operators/denari"
+  },
+  "doc": {
+    "name": "Stim Pistol",
+    "sourceUrl": "https://www.ubisoft.com/en-us/game/rainbow-six/siege/game-info/operators/doc"
+  },
+  "dokkaebi": {
+    "name": "Jegeo Payload",
+    "sourceUrl": "https://www.ubisoft.com/en-us/game/rainbow-six/siege/game-info/operators/dokkaebi"
+  },
+  "echo": {
+    "name": "Yokai",
+    "sourceUrl": "https://www.ubisoft.com/en-us/game/rainbow-six/siege/game-info/operators/echo"
+  },
+  "ela": {
+    "name": "Grzmot Mine",
+    "sourceUrl": "https://www.ubisoft.com/en-us/game/rainbow-six/siege/game-info/operators/ela"
+  },
+  "fenrir": {
+    "name": "F-Natt Dread Mine",
+    "sourceUrl": "https://www.ubisoft.com/en-us/game/rainbow-six/siege/game-info/operators/fenrir"
+  },
+  "finka": {
+    "name": "Adrenal Surge",
+    "sourceUrl": "https://www.ubisoft.com/en-us/game/rainbow-six/siege/game-info/operators/finka"
+  },
+  "flores": {
+    "name": "RCE-RATERO CHARGE",
+    "sourceUrl": "https://www.ubisoft.com/en-us/game/rainbow-six/siege/game-info/operators/flores"
+  },
+  "frost": {
+    "name": "Welcome Mat",
+    "sourceUrl": "https://www.ubisoft.com/en-us/game/rainbow-six/siege/game-info/operators/frost"
+  },
+  "fuze": {
+    "name": "Cluster Charge",
+    "sourceUrl": "https://www.ubisoft.com/en-us/game/rainbow-six/siege/game-info/operators/fuze"
+  },
+  "glaz": {
+    "name": "Flip Sight",
+    "sourceUrl": "https://www.ubisoft.com/en-us/game/rainbow-six/siege/game-info/operators/glaz"
+  },
+  "goyo": {
+    "name": "Volcán Canister",
+    "sourceUrl": "https://www.ubisoft.com/en-us/game/rainbow-six/siege/game-info/operators/goyo"
+  },
+  "gridlock": {
+    "name": "Trax Stingers",
+    "sourceUrl": "https://www.ubisoft.com/en-us/game/rainbow-six/siege/game-info/operators/gridlock"
+  },
+  "grim": {
+    "name": "Kawan Hive Launcher",
+    "sourceUrl": "https://www.ubisoft.com/en-us/game/rainbow-six/siege/game-info/operators/grim"
+  },
+  "hibana": {
+    "name": "X-Kairos",
+    "sourceUrl": "https://www.ubisoft.com/en-us/game/rainbow-six/siege/game-info/operators/hibana"
+  },
+  "iana": {
+    "name": "GEMINI REPLICATOR",
+    "sourceUrl": "https://www.ubisoft.com/en-us/game/rainbow-six/siege/game-info/operators/iana"
+  },
+  "iq": {
+    "name": "Electronics Detector",
+    "sourceUrl": "https://www.ubisoft.com/en-us/game/rainbow-six/siege/game-info/operators/iq"
+  },
+  "jackal": {
+    "name": "Eyenox Model III",
+    "sourceUrl": "https://www.ubisoft.com/en-us/game/rainbow-six/siege/game-info/operators/jackal"
+  },
+  "jager": {
+    "name": "ACTIVE DEFENSE",
+    "sourceUrl": "https://www.ubisoft.com/en-us/game/rainbow-six/siege/game-info/operators/jager"
+  },
+  "kaid": {
+    "name": "\"Rtila\" Electroclaw",
+    "sourceUrl": "https://www.ubisoft.com/en-us/game/rainbow-six/siege/game-info/operators/kaid"
+  },
+  "kali": {
+    "name": "LV Explosive Lance",
+    "sourceUrl": "https://www.ubisoft.com/en-us/game/rainbow-six/siege/game-info/operators/kali"
+  },
+  "kapkan": {
+    "name": "Entry Denial Device",
+    "sourceUrl": "https://www.ubisoft.com/en-us/game/rainbow-six/siege/game-info/operators/kapkan"
+  },
+  "lesion": {
+    "name": "GU",
+    "sourceUrl": "https://www.ubisoft.com/en-us/game/rainbow-six/siege/game-info/operators/lesion"
+  },
+  "lion": {
+    "name": "EE-ONE-D",
+    "sourceUrl": "https://www.ubisoft.com/en-us/game/rainbow-six/siege/game-info/operators/lion"
+  },
+  "maestro": {
+    "name": "Evil Eye",
+    "sourceUrl": "https://www.ubisoft.com/en-us/game/rainbow-six/siege/game-info/operators/maestro"
+  },
+  "maverick": {
+    "name": "Breaching Torch",
+    "sourceUrl": "https://www.ubisoft.com/en-us/game/rainbow-six/siege/game-info/operators/maverick"
+  },
+  "melusi": {
+    "name": "BANSHEE SONIC DEFENSE",
+    "sourceUrl": "https://www.ubisoft.com/en-us/game/rainbow-six/siege/game-info/operators/melusi"
+  },
+  "mira": {
+    "name": "Black mirror",
+    "sourceUrl": "https://www.ubisoft.com/en-us/game/rainbow-six/siege/game-info/operators/mira"
+  },
+  "montagne": {
+    "name": "LE ROC SHIELD",
+    "sourceUrl": "https://www.ubisoft.com/en-us/game/rainbow-six/siege/game-info/operators/montagne"
+  },
+  "mozzie": {
+    "name": "Pest Launcher",
+    "sourceUrl": "https://www.ubisoft.com/en-us/game/rainbow-six/siege/game-info/operators/mozzie"
+  },
+  "mute": {
+    "name": "Signal Disruptor",
+    "sourceUrl": "https://www.ubisoft.com/en-us/game/rainbow-six/siege/game-info/operators/mute"
+  },
+  "nokk": {
+    "name": "HEL Presence Reduction",
+    "sourceUrl": "https://www.ubisoft.com/en-us/game/rainbow-six/siege/game-info/operators/nokk"
+  },
+  "nomad": {
+    "name": "Airjab Launcher",
+    "sourceUrl": "https://www.ubisoft.com/en-us/game/rainbow-six/siege/game-info/operators/nomad"
+  },
+  "noor": {
+    "name": "Horus Lance Launcher",
+    "sourceUrl": "https://www.ubisoft.com/en-us/game/rainbow-six/siege/game-info/operators/noor"
+  },
+  "oryx": {
+    "name": "REMAH DASH",
+    "sourceUrl": "https://www.ubisoft.com/en-us/game/rainbow-six/siege/game-info/operators/oryx"
+  },
+  "osa": {
+    "name": "TALON-8 CLEAR SHIELD",
+    "sourceUrl": "https://www.ubisoft.com/en-us/game/rainbow-six/siege/game-info/operators/osa"
+  },
+  "pulse": {
+    "name": "Cardiac Sensor",
+    "sourceUrl": "https://www.ubisoft.com/en-us/game/rainbow-six/siege/game-info/operators/pulse"
+  },
+  "ram": {
+    "name": "BU-GI AUTO BREACHER",
+    "sourceUrl": "https://www.ubisoft.com/en-us/game/rainbow-six/siege/game-info/operators/ram"
+  },
+  "rauora": {
+    "name": "D.O.M. Panel Launcher",
+    "sourceUrl": "https://www.ubisoft.com/en-us/game/rainbow-six/siege/game-info/operators/rauora"
+  },
+  "rook": {
+    "name": "Armor Pack",
+    "sourceUrl": "https://www.ubisoft.com/en-us/game/rainbow-six/siege/game-info/operators/rook"
+  },
+  "sens": {
+    "name": "R.O.U. Projector System",
+    "sourceUrl": "https://www.ubisoft.com/en-us/game/rainbow-six/siege/game-info/operators/sens"
+  },
+  "skopos": {
+    "name": "V10 Pantheon Shells",
+    "sourceUrl": "https://www.ubisoft.com/en-us/game/rainbow-six/siege/game-info/operators/skopos"
+  },
+  "sledge": {
+    "name": "BREACHING HAMMER",
+    "sourceUrl": "https://www.ubisoft.com/en-us/game/rainbow-six/siege/game-info/operators/sledge"
+  },
+  "smoke": {
+    "name": "Remote Gas Grenade",
+    "sourceUrl": "https://www.ubisoft.com/en-us/game/rainbow-six/siege/game-info/operators/smoke"
+  },
+  "solid-snake": {
+    "name": "SOLITON RADAR MK III",
+    "sourceUrl": "https://www.ubisoft.com/en-us/game/rainbow-six/siege/game-info/operators/solid-snake"
+  },
+  "solis": {
+    "name": "Spec-IO Electro-Sensor",
+    "sourceUrl": "https://www.ubisoft.com/en-us/game/rainbow-six/siege/game-info/operators/solis"
+  },
+  "tachanka": {
+    "name": "SHUMIKHA LAUNCHER",
+    "sourceUrl": "https://www.ubisoft.com/en-us/game/rainbow-six/siege/game-info/operators/tachanka"
+  },
+  "thatcher": {
+    "name": "E.G.S. Disruptor (Electronic Gear Scanner Disruptor)",
+    "sourceUrl": "https://www.ubisoft.com/en-us/game/rainbow-six/siege/game-info/operators/thatcher"
+  },
+  "thermite": {
+    "name": "Exothermic Charge",
+    "sourceUrl": "https://www.ubisoft.com/en-us/game/rainbow-six/siege/game-info/operators/thermite"
+  },
+  "thorn": {
+    "name": "RAZORBLOOM SHELL",
+    "sourceUrl": "https://www.ubisoft.com/en-us/game/rainbow-six/siege/game-info/operators/thorn"
+  },
+  "thunderbird": {
+    "name": "KÓNA STATION",
+    "sourceUrl": "https://www.ubisoft.com/en-us/game/rainbow-six/siege/game-info/operators/thunderbird"
+  },
+  "tubarao": {
+    "name": "Zoto Canister",
+    "sourceUrl": "https://www.ubisoft.com/en-us/game/rainbow-six/siege/game-info/operators/tubarao"
+  },
+  "twitch": {
+    "name": "SHOCK DRONE",
+    "sourceUrl": "https://www.ubisoft.com/en-us/game/rainbow-six/siege/game-info/operators/twitch"
+  },
+  "valkyrie": {
+    "name": "Black Eye",
+    "sourceUrl": "https://www.ubisoft.com/en-us/game/rainbow-six/siege/game-info/operators/valkyrie"
+  },
+  "vigil": {
+    "name": "ERC-7",
+    "sourceUrl": "https://www.ubisoft.com/en-us/game/rainbow-six/siege/game-info/operators/vigil"
+  },
+  "wamai": {
+    "name": "Mag-net System",
+    "sourceUrl": "https://www.ubisoft.com/en-us/game/rainbow-six/siege/game-info/operators/wamai"
+  },
+  "warden": {
+    "name": "Glance Smart Glasses",
+    "sourceUrl": "https://www.ubisoft.com/en-us/game/rainbow-six/siege/game-info/operators/warden"
+  },
+  "ying": {
+    "name": "Candela",
+    "sourceUrl": "https://www.ubisoft.com/en-us/game/rainbow-six/siege/game-info/operators/ying"
+  },
+  "zero": {
+    "name": "ARGUS LAUNCHER",
+    "sourceUrl": "https://www.ubisoft.com/en-us/game/rainbow-six/siege/game-info/operators/zero"
+  },
+  "zofia": {
+    "name": "KS79 Lifeline",
+    "sourceUrl": "https://www.ubisoft.com/en-us/game/rainbow-six/siege/game-info/operators/zofia"
+  }
+}

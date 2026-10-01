@@ -39,6 +39,13 @@ export function routeDistance(points){return points.slice(1).reduce((n,p,i)=>n+M
 export function nearestLocations(point,locations,count=3){return locations.map(p=>({...p,distance:Math.hypot(p.x-point.x,p.y-point.y)*100})).sort((a,b)=>a.distance-b.distance).slice(0,count);}
 export const gridText=p=>`${p.x.toFixed(2)} / ${p.y.toFixed(2)}`;
 
+// The publisher places Lamang in local metre coordinates on the standard XYZ
+// tile grid. Convert tile edges into the same game grid as its markers.
+export function terrainTileBounds(z,x,y){
+  const half=20037508.342789244,span=half*2/2**z;
+  return {minX:100+(x*span-half)/100,maxX:100+((x+1)*span-half)/100,maxY:100+(half-y*span)/100,minY:100+(half-(y+1)*span)/100};
+}
+
 export function validPoint(p,map){return pointInBounds(p,map);}
 
 // Keep existing progress IDs while adding missions only supplied by the marker feed.

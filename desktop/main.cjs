@@ -18,7 +18,7 @@ if(!app.isPackaged&&process.argv.includes('--isolated-preview')){
 const applicationId='com.dropzone.desktop';
 if(process.platform==='win32')app.setAppUserModelId(applicationId);
 let window,provider,games,services,appUpdates;
-const allowed=new Set(['www.rocketleague.com','wardogservers.com','wardogshub.gg','aimlabs.com','sensconverter.app','lolalytics.com','mobalytics.gg','www.metasrc.com','www.leagueoflegends.com','developer.riotgames.com','codmunity.gg','www.callofduty.com','thefinalsloadout.com','www.reachthefinals.com','www.youtube.com','lolesports.com','www.callofdutyleague.com','callofduty.worldseriesofwarzone.com','support.activision.com','wardogs-artillery.com','wardogs.tools','metaforge.app','github.com','store.steampowered.com','steamcommunity.com','steamstore-a.akamaihd.net','gzw-data.dev','gray-zone-warfare.fandom.com','gzwtacmap.com','www.grayzonewarfare.com','www.ubisoft.com','dropzonecompanion.com','sonsoftheforest.wiki.gg','playvalorant.com','www.marvelrivals.com','www.marvelrivalsesports.com','valorantesports.com','valorant-api.com']);
+const allowed=new Set(['www.rocketleague.com','wardogservers.com','wardogshub.gg','aimlabs.com','sensconverter.app','lolalytics.com','mobalytics.gg','www.metasrc.com','www.leagueoflegends.com','developer.riotgames.com','codmunity.gg','www.callofduty.com','thefinalsloadout.com','www.reachthefinals.com','www.youtube.com','lolesports.com','www.callofdutyleague.com','callofduty.worldseriesofwarzone.com','support.activision.com','wardogs-artillery.com','wardogs.tools','metaforge.app','github.com','store.steampowered.com','steamcommunity.com','steamstore-a.akamaihd.net','gzw-data.dev','gray-zone-warfare.fandom.com','gzwtacmap.com','www.grayzonewarfare.com','www.ubisoft.com','dropzonecompanion.com','sonsoftheforest.wiki.gg','playvalorant.com','www.marvelrivals.com','www.marvelrivalsesports.com','valorantesports.com','valorant-api.com','help.ea.com','www.ea.com','algs.ea.com','apexlegendsapi.com','apexlegendsstatus.com']);
 function safeSource(value){try{const u=new URL(value);return u.protocol==='https:'&&allowed.has(u.hostname)&&!u.username&&!u.password;}catch{return false;}}
 if(!app.requestSingleInstanceLock())app.quit();
 app.on('second-instance',()=>{services?.updates.check();appUpdates?.check();const visible=window;if(visible&&!visible.isDestroyed()){if(visible.isMinimized())visible.restore();visible.show();visible.focus();}});
@@ -48,6 +48,7 @@ app.whenReady().then(async()=>{
   const handle=(name,fn)=>ipcMain.handle(name,(e,...args)=>{if(!trusted(e))throw new Error('Untrusted caller.');return fn(...args);});
   const rocketLeague=require('./rocket-league.cjs').createRocketLeague({directory:path.join(app.getPath('userData'),'rocket-league'),window,app});
   handle('rocket-league',input=>rocketLeague.command(input));
+  services.apexPlayer.setInvoke(input=>rocketLeague.invokeApex(input));
   const coaching=require('./coaching-overlay.cjs').createCoachingOverlay({BrowserWindow,globalShortcut,screen,ipcMain,desktopCapturer,nativeImage,shell,directory:path.join(app.getPath('userData'),'rocket-league'),main:window,getReplay:async()=>{const state=await rocketLeague.command({action:'state'});return state.status==='replay';},onError:message=>{void dialog.showMessageBox({type:'info',title:'Coaching overlay',message});}});
   handle('coaching',input=>coaching.command(input));
   app.on('before-quit',()=>coaching.destroy());
@@ -70,6 +71,10 @@ app.whenReady().then(async()=>{
   handle('personal-intel',input=>services.personalIntel(input));
   handle('squad',input=>require('../core/squad-client.cjs').squadRequest(input));
   handle('siege',options=>services.siege.get(options));
+  handle('gzw',options=>services.gzw.get(options));
+  handle('gzw-map',options=>services.gzwMap.get(options));
+  handle('apex-content',options=>services.apexContent.get(options));
+  handle('apex-player',options=>services.apexPlayer.get(options));
   handle('wardogs-status',options=>services.serverStatus.get(options));
   handle('wardogs-market',()=>services.market.get());
   handle('wardogs',options=>services.wardogs.get(options));

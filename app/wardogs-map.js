@@ -120,7 +120,7 @@ export class WardogsMap {
     const c=this.ctx;c.font=`${14*this.fontScale}px system-ui,sans-serif`;c.textAlign=align;c.lineWidth=4;c.strokeStyle='#101512';c.strokeText(value,x,y);c.fillStyle=color;c.fillText(value,x,y);
   }
   line(points,color,dash=[],width=2){const c=this.ctx;c.beginPath();points.forEach((p,i)=>{const q=this.screen(p);i?c.lineTo(q.x,q.y):c.moveTo(q.x,q.y);});c.strokeStyle=color;c.lineWidth=width;c.setLineDash(dash);c.stroke();c.setLineDash([]);}
-  pin(point,label,color,outline=false){
+  pin(point,label,color,outline=false,labelBoxes=null){
     if(!point)return;const p=this.screen(point),c=this.ctx;
     if(p.x<-80||p.x>this.width+80||p.y<-80||p.y>this.height+80)return;
     const gun=!outline&&label.startsWith('GUN'),target=!outline&&label==='TARGET';
@@ -147,14 +147,20 @@ export class WardogsMap {
     }else{
       c.beginPath();c.arc(p.x,p.y,outline?6:11,0,Math.PI*2);c.fillStyle=outline?'#141a18':color;c.fill();c.strokeStyle=outline?color:'#101411';c.lineWidth=outline?2:3;c.stroke();
     }
-    this.label(label,p.x+25,p.y-24,color);
+    if(labelBoxes){
+      c.font=`${14*this.fontScale}px system-ui,sans-serif`;
+      const width=c.measureText(label).width,height=18*this.fontScale;
+      const candidates=[[14,-14],[14,height+6],[-width-14,-14],[-width-14,height+6],[14,-height-22],[14,height*2+14]];
+      const spot=candidates.map(([dx,dy])=>({x:p.x+dx,y:p.y+dy-height,w:width,h:height})).find(box=>box.x>=6&&box.y>=6&&box.x+box.w<this.width-6&&box.y+box.h<this.height-6&&!labelBoxes.some(other=>box.x<other.x+other.w+8&&box.x+box.w+8>other.x&&box.y<other.y+other.h+6&&box.y+box.h+6>other.y));
+      if(spot){labelBoxes.push(spot);this.label(label,spot.x,spot.y+height,color);}
+    }else this.label(label,p.x+25,p.y-24,color);
   }
   paint(){
     if(!this.camera)return;
     const c=this.ctx,s={...this.getState()},b=this.map.bounds,t=this.map.tileBounds;
     if(this.drag?.preview)s[this.drag.mode]=this.drag.preview;
     this.fontScale=clamp(parseFloat(getComputedStyle(document.documentElement).fontSize)/16,1,2);
-    c.setTransform(this.dpr,0,0,this.dpr,0,0);c.clearRect(0,0,this.width,this.height);c.fillStyle=document.documentElement.dataset.appearance==='light'?'#f5f4f1':'#0d1312';c.fillRect(0,0,this.width,this.height);
+    c.setTransform(this.dpr,0,0,this.dpr,0,0);c.clearRect(0,0,this.width,this.height);
     const nw=this.screen({x:b.minX,y:b.maxY}),se=this.screen({x:b.maxX,y:b.minY});
     c.save();c.beginPath();c.rect(nw.x,nw.y,se.x-nw.x,se.y-nw.y);c.clip();
     const topLeft=this.world({x:0,y:0}),bottomRight=this.world({x:this.width,y:this.height});
@@ -193,7 +199,7 @@ export class WardogsMap {
       c.beginPath();c.arc(p.x,p.y,minimum,0,Math.PI*2);c.fillStyle='rgba(240,79,67,.15)';c.fill();
       for(const [radius,color] of [[maximum,'#f2d471bb'],[minimum,'#fb937dbb']]){c.beginPath();c.arc(p.x,p.y,radius,0,Math.PI*2);c.strokeStyle=color;c.setLineDash([8,7]);c.lineWidth=2;c.stroke();c.setLineDash([]);}
     }
-    if(s.landmarks)for(const p of this.map.markers||[])this.pin(p,p.name,'#d2d5cb',true);
+    if(s.landmarks){const labelBoxes=[];for(const p of this.map.markers||[])this.pin(p,p.name,'#d2d5cb',true,labelBoxes);}
     for(const record of s.saved||[])if(record.map===this.map.id)this.pin(record.target,record.name,'#b0bdcc',true);
     if(s.origin&&s.target)this.line([s.origin,s.target],'#f4d276',[8,5],2);
     if(this.ruler.length){for(let i=0;i<this.ruler.length;i++)this.pin(this.ruler[i],i?'B':'A','#79d5e6');if(this.ruler.length===2){this.line(this.ruler,'#79d5e6',[3,5]);const g=geometry(...this.ruler,this.map);if(g){const a=this.screen(this.ruler[0]),b=this.screen(this.ruler[1]),text=`${Math.round(g.distance).toLocaleString()} m`,size=18*this.fontScale;c.save();c.font=`700 ${size}px system-ui,sans-serif`;const w=c.measureText(text).width+24,h=size+20,x=clamp((a.x+b.x)/2,w/2+8,this.width-w/2-8),y=clamp((a.y+b.y)/2,h/2+8,this.height-h/2-8);c.fillStyle='#102126';c.strokeStyle='#79d5e6';c.lineWidth=2;c.beginPath();c.roundRect(x-w/2,y-h/2,w,h,8);c.fill();c.stroke();c.fillStyle='#d5f7ff';c.textAlign='center';c.textBaseline='middle';c.fillText(text,x,y);c.restore();}}}

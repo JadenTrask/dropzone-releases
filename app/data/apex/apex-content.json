@@ -1,0 +1,692 @@
+{
+  "source": "EA / Respawn and ALGS official pages",
+  "sourceUrl": "https://www.ea.com/games/apex-legends/apex-legends/news",
+  "catalog": {
+    "sourceUrl": "https://help.ea.com/en/articles/apex-legends/abilities/",
+    "updatedAt": "2026-09-15",
+    "legends": [
+      {
+        "name": "Alter",
+        "role": "Skirmisher",
+        "abilities": [
+          {
+            "type": "Tactical",
+            "name": "Void Passage"
+          },
+          {
+            "type": "Passive",
+            "name": "Gift from the Rift"
+          },
+          {
+            "type": "Ultimate",
+            "name": "Void Nexus"
+          }
+        ]
+      },
+      {
+        "name": "Ash",
+        "role": "Assault",
+        "abilities": [
+          {
+            "type": "Tactical",
+            "name": "Arc Snare"
+          },
+          {
+            "type": "Passive",
+            "name": "Predator’s Pursuit"
+          },
+          {
+            "type": "Second Passive",
+            "name": "Dash"
+          },
+          {
+            "type": "Ultimate",
+            "name": "Phase Breach"
+          }
+        ]
+      },
+      {
+        "name": "Axle",
+        "role": "Skirmisher",
+        "abilities": [
+          {
+            "type": "Tactical",
+            "name": "Nitro Gate"
+          },
+          {
+            "type": "Passive",
+            "name": "Drift"
+          },
+          {
+            "type": "Ultimate",
+            "name": "Kickstart"
+          }
+        ]
+      },
+      {
+        "name": "Ballistic",
+        "role": "Assault",
+        "abilities": [
+          {
+            "type": "Tactical",
+            "name": "Whistler"
+          },
+          {
+            "type": "Passive",
+            "name": "Sling"
+          },
+          {
+            "type": "Ultimate",
+            "name": "Tempest"
+          }
+        ]
+      },
+      {
+        "name": "Bangalore",
+        "role": "Assault",
+        "abilities": [
+          {
+            "type": "Tactical",
+            "name": "Smoke Launcher"
+          },
+          {
+            "type": "Passive",
+            "name": "Double Time"
+          },
+          {
+            "type": "Ultimate",
+            "name": "Rolling Thunder"
+          }
+        ]
+      },
+      {
+        "name": "Bloodhound",
+        "role": "Recon",
+        "abilities": [
+          {
+            "type": "Tactical",
+            "name": "Eye of the Allfather"
+          },
+          {
+            "type": "Passive",
+            "name": "Tracker"
+          },
+          {
+            "type": "Ultimate",
+            "name": "Allfather’s Cloak"
+          }
+        ]
+      },
+      {
+        "name": "Catalyst",
+        "role": "Controller",
+        "abilities": [
+          {
+            "type": "Tactical",
+            "name": "Piercing Spikes"
+          },
+          {
+            "type": "Passive",
+            "name": "Barricade"
+          },
+          {
+            "type": "Ultimate",
+            "name": "Dark Veil"
+          }
+        ]
+      },
+      {
+        "name": "Caustic",
+        "role": "Controller",
+        "abilities": [
+          {
+            "type": "Tactical",
+            "name": "Nox Gas Trap"
+          },
+          {
+            "type": "Passive",
+            "name": "Nox Vision"
+          },
+          {
+            "type": "Second Passive",
+            "name": "Field Research"
+          },
+          {
+            "type": "Ultimate",
+            "name": "Nox Gas Grenade"
+          }
+        ]
+      },
+      {
+        "name": "Conduit",
+        "role": "Support",
+        "abilities": [
+          {
+            "type": "Tactical",
+            "name": "Radiant Transfer"
+          },
+          {
+            "type": "Passive",
+            "name": "Savior’s Speed"
+          },
+          {
+            "type": "Ultimate",
+            "name": "Energy Barricade"
+          }
+        ]
+      },
+      {
+        "name": "Crypto",
+        "role": "Recon",
+        "abilities": [
+          {
+            "type": "Tactical",
+            "name": "Surveillance Drone"
+          },
+          {
+            "type": "Passive",
+            "name": "Neurolink"
+          },
+          {
+            "type": "Ultimate",
+            "name": "Drone EMP"
+          }
+        ]
+      },
+      {
+        "name": "Fuse",
+        "role": "Assault",
+        "abilities": [
+          {
+            "type": "Tactical",
+            "name": "Knuckle Cluster"
+          },
+          {
+            "type": "Passive",
+            "name": "Grenadier"
+          },
+          {
+            "type": "Ultimate",
+            "name": "The Motherlode"
+          }
+        ]
+      },
+      {
+        "name": "Gibraltar",
+        "role": "Support",
+        "abilities": [
+          {
+            "type": "Tactical",
+            "name": "Dome of Protection"
+          },
+          {
+            "type": "Passive",
+            "name": "Gun Shield"
+          },
+          {
+            "type": "Second Passive",
+            "name": "Momentum Boost"
+          },
+          {
+            "type": "Ultimate",
+            "name": "Defensive Bombardment"
+          }
+        ]
+      },
+      {
+        "name": "Horizon",
+        "role": "Skirmisher",
+        "abilities": [
+          {
+            "type": "Tactical",
+            "name": "Gravity Lift"
+          },
+          {
+            "type": "Passive",
+            "name": "Spacewalk"
+          },
+          {
+            "type": "Ultimate",
+            "name": "Black Hole"
+          }
+        ]
+      },
+      {
+        "name": "Lifeline",
+        "role": "Support",
+        "abilities": [
+          {
+            "type": "Tactical",
+            "name": "D.O.C Heal Drone"
+          },
+          {
+            "type": "Passive",
+            "name": "Combat Medic"
+          },
+          {
+            "type": "Second Passive",
+            "name": "Combat Glide"
+          },
+          {
+            "type": "Ultimate",
+            "name": "D.O.C Halo"
+          }
+        ]
+      },
+      {
+        "name": "Loba",
+        "role": "Support",
+        "abilities": [
+          {
+            "type": "Tactical",
+            "name": "Burglar’s Best Friend"
+          },
+          {
+            "type": "Passive",
+            "name": "Eye for Quality"
+          },
+          {
+            "type": "Ultimate",
+            "name": "Black Market Boutique"
+          }
+        ]
+      },
+      {
+        "name": "Mad Maggie",
+        "role": "Assault",
+        "abilities": [
+          {
+            "type": "Tactical",
+            "name": "Riot Drill"
+          },
+          {
+            "type": "Passive",
+            "name": "Warlord’s Ire"
+          },
+          {
+            "type": "Ultimate",
+            "name": "Wrecking Ball"
+          }
+        ]
+      },
+      {
+        "name": "Mirage",
+        "role": "Support",
+        "abilities": [
+          {
+            "type": "Tactical",
+            "name": "Psyche Out"
+          },
+          {
+            "type": "Passive",
+            "name": "Now You See Me"
+          },
+          {
+            "type": "Ultimate",
+            "name": "Life of the Party"
+          }
+        ]
+      },
+      {
+        "name": "Newcastle",
+        "role": "Support",
+        "abilities": [
+          {
+            "type": "Tactical",
+            "name": "Mobile Shield"
+          },
+          {
+            "type": "Passive",
+            "name": "Retrieve the Wounded"
+          },
+          {
+            "type": "Ultimate",
+            "name": "Castle Wall"
+          }
+        ]
+      },
+      {
+        "name": "Octane",
+        "role": "Skirmisher",
+        "abilities": [
+          {
+            "type": "Tactical",
+            "name": "Stim"
+          },
+          {
+            "type": "Passive",
+            "name": "Swift Mend"
+          },
+          {
+            "type": "Ultimate",
+            "name": "Launch Pad"
+          }
+        ]
+      },
+      {
+        "name": "Pathfinder",
+        "role": "Skirmisher",
+        "abilities": [
+          {
+            "type": "Tactical",
+            "name": "Grappling Hook"
+          },
+          {
+            "type": "Passive",
+            "name": "Insider Knowledge"
+          },
+          {
+            "type": "Ultimate",
+            "name": "Zipline Gun"
+          }
+        ]
+      },
+      {
+        "name": "Rampart",
+        "role": "Controller",
+        "abilities": [
+          {
+            "type": "Tactical",
+            "name": "Amped Cover"
+          },
+          {
+            "type": "Passive",
+            "name": "Battle Modder"
+          },
+          {
+            "type": "Ultimate",
+            "name": "Emplaced Minigun “Sheila”"
+          }
+        ]
+      },
+      {
+        "name": "Revenant",
+        "role": "Skirmisher",
+        "abilities": [
+          {
+            "type": "Tactical",
+            "name": "Shadow Pounce"
+          },
+          {
+            "type": "Passive",
+            "name": "Assassin’s Instinct"
+          },
+          {
+            "type": "Ultimate",
+            "name": "Forged Shadows"
+          }
+        ]
+      },
+      {
+        "name": "Seer",
+        "role": "Recon",
+        "abilities": [
+          {
+            "type": "Tactical",
+            "name": "Focus of Attention"
+          },
+          {
+            "type": "Passive",
+            "name": "Heart Seeker"
+          },
+          {
+            "type": "Ultimate",
+            "name": "Exhibit"
+          }
+        ]
+      },
+      {
+        "name": "Sparrow",
+        "role": "Recon",
+        "abilities": [
+          {
+            "type": "Passive",
+            "name": "Double Jump"
+          },
+          {
+            "type": "Tactical",
+            "name": "Tracker Dart"
+          },
+          {
+            "type": "Ultimate",
+            "name": "Stinger Bolt"
+          }
+        ]
+      },
+      {
+        "name": "Valkyrie",
+        "role": "Recon",
+        "abilities": [
+          {
+            "type": "Tactical",
+            "name": "Missile Swarm"
+          },
+          {
+            "type": "Passive",
+            "name": "VTOL Jets"
+          },
+          {
+            "type": "Ultimate",
+            "name": "Skyward Dive"
+          }
+        ]
+      },
+      {
+        "name": "Vantage",
+        "role": "Recon",
+        "abilities": [
+          {
+            "type": "Tactical",
+            "name": "Echo Relocation"
+          },
+          {
+            "type": "Passive",
+            "name": "Spotter’s Lens"
+          },
+          {
+            "type": "Ultimate",
+            "name": "Sniper’s Mark"
+          }
+        ]
+      },
+      {
+        "name": "Wattson",
+        "role": "Controller",
+        "abilities": [
+          {
+            "type": "Tactical",
+            "name": "Perimeter Security"
+          },
+          {
+            "type": "Passive",
+            "name": "Spark of Genius"
+          },
+          {
+            "type": "Ultimate",
+            "name": "Interception Pylon"
+          }
+        ]
+      },
+      {
+        "name": "Wraith",
+        "role": "Skirmisher",
+        "abilities": [
+          {
+            "type": "Tactical",
+            "name": "Into the Void"
+          },
+          {
+            "type": "Passive",
+            "name": "Voices from the Void"
+          },
+          {
+            "type": "Ultimate",
+            "name": "Dimensional Rift"
+          }
+        ]
+      }
+    ]
+  },
+  "news": [
+    {
+      "title": "Breaking Down Matchmaking Test Results",
+      "publishedAt": "2026-09-30T10:00:00.000-07:00",
+      "url": "https://www.ea.com/games/apex-legends/apex-legends/news/matchmaking-test-results",
+      "imageUrl": "https://drop-assets.ea.com/images/2YcU8XoDXd5Ir7WpX5P2yR/b78b8cfafabfd58d631c009ac0a41379/apex-legends-generic-keyart-16x9.jpg?im=AspectCrop=(16,9),xPosition=0.5,yPosition=0.5",
+      "image": "assets/apex/53cf1216723b3971.jpg"
+    },
+    {
+      "title": "EA Javelin Anticheat is Coming to Apex Legends",
+      "publishedAt": "2026-09-24T08:00:00.000-07:00",
+      "url": "https://www.ea.com/games/apex-legends/apex-legends/news/javelin-anticheat-announcement",
+      "imageUrl": "https://drop-assets.ea.com/images/2YcU8XoDXd5Ir7WpX5P2yR/b78b8cfafabfd58d631c009ac0a41379/apex-legends-generic-keyart-16x9.jpg?im=AspectCrop=(16,9),xPosition=0.5,yPosition=0.5",
+      "image": "assets/apex/53cf1216723b3971.jpg"
+    },
+    {
+      "title": "Throw down in the Apex Legends VS Street Fighter 6 Event",
+      "publishedAt": "2026-09-15T10:00:00.000-07:00",
+      "url": "https://www.ea.com/games/apex-legends/apex-legends/news/street-fighter-6-event",
+      "imageUrl": "https://drop-assets.ea.com/images/7i9a47Y51J87kgMXlWGeBs/4d268290faa8b12863c4a574d3fed81a/ApexS30_SnapBack_3840x2160.jpg?im=AspectCrop=(16,9),xPosition=0.5114583333333333,yPosition=0.5305555555555556",
+      "image": "assets/apex/d74ea8bbcf92b236.jpg"
+    },
+    {
+      "title": "Apex Legends™: Marked Midseason Patch Notes",
+      "publishedAt": "2026-09-14T10:00:00.000-07:00",
+      "url": "https://www.ea.com/games/apex-legends/apex-legends/news/marked-midseason-patch-notes",
+      "imageUrl": "https://drop-assets.ea.com/images/5uCFWOM7mt8GaS4vOAqmzA/831ed306c62a47adb5d3694f22c10c95/Apex_S30-Season-Page-16x9.jpg?im=AspectCrop=(16,9),xPosition=0.565625,yPosition=0.9388888888888889",
+      "image": "assets/apex/bf55781fc5fa1ff5.jpg"
+    },
+    {
+      "title": "Marked Midseason Designer’s Notes",
+      "publishedAt": "2026-09-10T08:00:00.000-07:00",
+      "url": "https://www.ea.com/games/apex-legends/apex-legends/news/30-1-designers-notes",
+      "imageUrl": "https://drop-assets.ea.com/images/5uCFWOM7mt8GaS4vOAqmzA/831ed306c62a47adb5d3694f22c10c95/Apex_S30-Season-Page-16x9.jpg?im=AspectCrop=(16,9),xPosition=0.565625,yPosition=0.9388888888888889",
+      "image": "assets/apex/bf55781fc5fa1ff5.jpg"
+    },
+    {
+      "title": "Claim the power of the gods in the Ascended Hunt Event",
+      "publishedAt": "2026-08-13T08:00:00.000-07:00",
+      "url": "https://www.ea.com/games/apex-legends/apex-legends/news/ascended-hunt-event",
+      "imageUrl": "https://drop-assets.ea.com/images/3DcAYZU3qaeezGFzFOgyZG/aed208defe2378a9033d944448b3c3ae/Apex_S30_Ascended_Hunt_KeyArt_3840x2160.jpg?im=AspectCrop=(16,9),xPosition=0.5,yPosition=0.5",
+      "image": "assets/apex/1290a3c876206124.jpg"
+    },
+    {
+      "title": "Apex Legends™: Marked Patch Notes",
+      "publishedAt": "2026-08-03T08:00:00.000-07:00",
+      "url": "https://www.ea.com/games/apex-legends/apex-legends/news/marked-patch-notes",
+      "imageUrl": "https://drop-assets.ea.com/images/5uCFWOM7mt8GaS4vOAqmzA/831ed306c62a47adb5d3694f22c10c95/Apex_S30-Season-Page-16x9.jpg?im=AspectCrop=(16,9),xPosition=0.565625,yPosition=0.9388888888888889",
+      "image": "assets/apex/bf55781fc5fa1ff5.jpg"
+    },
+    {
+      "title": "Marked Designer’s Notes",
+      "publishedAt": "2026-07-30T08:00:00.000-07:00",
+      "url": "https://www.ea.com/games/apex-legends/apex-legends/news/30-0-designers-notes",
+      "imageUrl": "https://drop-assets.ea.com/images/5uCFWOM7mt8GaS4vOAqmzA/831ed306c62a47adb5d3694f22c10c95/Apex_S30-Season-Page-16x9.jpg?im=AspectCrop=(16,9),xPosition=0.565625,yPosition=0.9388888888888889",
+      "image": "assets/apex/bf55781fc5fa1ff5.jpg"
+    },
+    {
+      "title": "New Updates Coming with Apex Legends™: Marked",
+      "publishedAt": "2026-07-28T08:00:00.000-07:00",
+      "url": "https://www.ea.com/games/apex-legends/apex-legends/news/marked-game-updates",
+      "imageUrl": "https://drop-assets.ea.com/images/3dK3vDXEdXMTd223TD9FpJ/8bfb10faa77bca4f923a5f4794d0c99d/Apex_S30-Season_Bloodhound-Rework-16x9.jpg?im=AspectCrop=(16,9),xPosition=0.7026041666666667,yPosition=0.44907407407407407",
+      "image": "assets/apex/97a9d618cc1fb465.jpg"
+    },
+    {
+      "title": "Chrome up in the Apex Legends x Cyberpunk Event",
+      "publishedAt": "2026-07-07T08:00:00.000-07:00",
+      "url": "https://www.ea.com/games/apex-legends/apex-legends/news/cyberpunk-event",
+      "imageUrl": "https://drop-assets.ea.com/images/gAJBlJcTXnwSFQkoCny7R/7f0d08f4a35b07e31b637d0850c7f6a5/Apex_S29_Clockup_PrimaryArt_3840x2160.jpg?im=AspectCrop=(16,9),xPosition=0.45989583333333334,yPosition=0.2310185185185185",
+      "image": "assets/apex/05b0c4ae2a6766a2.jpg"
+    },
+    {
+      "title": "Apex Legends™: Overclocked Midseason Patch Notes",
+      "publishedAt": "2026-06-22T10:00:00.000-07:00",
+      "url": "https://www.ea.com/games/apex-legends/apex-legends/news/overclocked-midseason-patch-notes",
+      "imageUrl": "https://drop-assets.ea.com/images/bkMLMqEITjTrdGhB8iEut/de1c3ebe1345f4bf67c4cf2c8d3a95fa/Apex_S29-Season-Page-16x9.jpg?im=AspectCrop=(16,9),xPosition=0.32864583333333336,yPosition=0.4898148148148148",
+      "image": "assets/apex/41887613fb059b99.jpg"
+    },
+    {
+      "title": "Overclocked Midseason Designer’s Notes",
+      "publishedAt": "2026-06-18T10:00:00.000-07:00",
+      "url": "https://www.ea.com/games/apex-legends/apex-legends/news/29-1-designers-notes",
+      "imageUrl": "https://drop-assets.ea.com/images/bkMLMqEITjTrdGhB8iEut/de1c3ebe1345f4bf67c4cf2c8d3a95fa/Apex_S29-Season-Page-16x9.jpg?im=AspectCrop=(16,9),xPosition=0.32864583333333336,yPosition=0.4898148148148148",
+      "image": "assets/apex/41887613fb059b99.jpg"
+    },
+    {
+      "title": "Apex Legends: Matchmaking Tests Update",
+      "publishedAt": "2026-06-08T10:00:00.000-07:00",
+      "url": "https://www.ea.com/games/apex-legends/apex-legends/news/overclocked-matchmaking-update",
+      "imageUrl": "https://drop-assets.ea.com/images/2YcU8XoDXd5Ir7WpX5P2yR/b78b8cfafabfd58d631c009ac0a41379/apex-legends-generic-keyart-16x9.jpg?im=AspectCrop=(16,9),xPosition=0.5,yPosition=0.5",
+      "image": "assets/apex/53cf1216723b3971.jpg"
+    },
+    {
+      "title": "Push past your limits in the Power Trip Event",
+      "publishedAt": "2026-05-28T08:00:00.000-07:00",
+      "url": "https://www.ea.com/games/apex-legends/apex-legends/news/power-trip-event",
+      "imageUrl": "https://drop-assets.ea.com/images/7upR0dy2N8VE4FRPYL6mmD/7a686000a68b5fe80cfa83a59cf498af/ApexS29_PowerTrip_KeyArt_3840x2160.jpg?im=AspectCrop=(16,9),xPosition=0.765625,yPosition=0.4388888888888889",
+      "image": "assets/apex/c7df5be747f5f131.jpg"
+    }
+  ],
+  "esports": [
+    {
+      "title": "Year 6 Championship Tickets",
+      "url": "https://algs.ea.com/en/news/year-6-championship-tickets",
+      "publishedAt": null,
+      "imageUrl": "https://images.ctfassets.net/yiybmxu7wtzi/XdlhrbrzhJLjwxpOsmgzb/ad58ef8b8a89350b549be5f57d955e7a/ALGS6_CHAMPS_GENERIC_GRAPHIC_TICKET_EDUCATION_THUMBNAIL_GENERIC_20260826.jpg",
+      "image": "assets/apex/6d08b48c31b04049.jpg"
+    },
+    {
+      "title": "ALGS Split 2 Pro League Kicks Off!",
+      "url": "https://algs.ea.com/en/news/algs-split-2-pro-league",
+      "publishedAt": null,
+      "imageUrl": "https://images.ctfassets.net/yiybmxu7wtzi/1fMaX3CJXd5vEHYmoAw19D/c6126b4ba24ffeecace67b7a8a06fb38/ALGS6_PL2_PROLEAGUE_GRAPHIC_EYNTK_THUMBNAIL_HOR_BLOG_POST_GENERIC_20260817.jpg",
+      "image": "assets/apex/3af6f1649e5a0139.jpg"
+    },
+    {
+      "title": "Win 11,500 Apex Coins During ALGS Split 1 Playoffs at EWC",
+      "url": "https://algs.ea.com/en/news/win-algs-split-1-playoffs-coins",
+      "publishedAt": null,
+      "imageUrl": "https://images.ctfassets.net/yiybmxu7wtzi/7hjJyEDaYQFZTyP78MG6a0/4bc0be904dfa50d4c2de1384f8ba76b1/image__1_.png",
+      "image": "assets/apex/8e34a2289062c604.png"
+    },
+    {
+      "title": "The Road to The Esports Nations Cup 2026 Starts Here!",
+      "url": "https://algs.ea.com/en/news/esports-nations-cup-2026",
+      "publishedAt": null,
+      "imageUrl": "https://images.ctfassets.net/yiybmxu7wtzi/6wxueXvMv6aqdJdMKawd2n/f01458d477b9429978a5338eb22d23e4/ENC_APEX_LOCKUP_WORDMARK_WHITE_HORIZONTAL.jpg",
+      "image": "assets/apex/138b7319e7bd80e7.jpg"
+    },
+    {
+      "title": "Everything You Need To Know for Split 1 Playoffs at EWC",
+      "url": "https://algs.ea.com/en/news/eyntk-split-1-playoffs-at-ewc",
+      "publishedAt": null,
+      "imageUrl": "https://images.ctfassets.net/yiybmxu7wtzi/1yf54eXmc6sUupK2GltoMX/17f061cde17af8835f052ad14fa6d410/ALGS_Split_1_Playoffs_EYNTK_Thumbnail.jpg",
+      "image": "assets/apex/e200e2b062f8341e.jpg"
+    },
+    {
+      "title": "ALGS Split 2 Tickets On Sale Now",
+      "url": "https://algs.ea.com/en/news/algs-split-2-tickets-on-sale",
+      "publishedAt": null,
+      "imageUrl": "https://images.ctfassets.net/yiybmxu7wtzi/1YGqlokaULyNtRMNl2EOFI/bbd20b1307dfa36ed38a53e8f6b4520c/Ticketlive_NewsArticle.jpg",
+      "image": "assets/apex/2a47dd55faa39448.jpg"
+    },
+    {
+      "title": "Apex Packs Are Dropping In!",
+      "url": "https://algs.ea.com/en/news/apex-packs",
+      "publishedAt": null,
+      "imageUrl": "https://images.ctfassets.net/yiybmxu7wtzi/5ATTfCWDmp0cStgyqIlLC4/cd8f2df024ff7977878135474d3be998/ApexPacks_Thumbnail.jpg",
+      "image": "assets/apex/6c3c6e732d0c084e.jpg"
+    },
+    {
+      "title": "Win ALGS Split 2 Playoff Tickets",
+      "url": "https://algs.ea.com/en/news/win-algs-split-2-playoff-tickets",
+      "publishedAt": null,
+      "imageUrl": "https://images.ctfassets.net/yiybmxu7wtzi/5Q7PYkRzDjIEM098E5wqLI/28c3e36661f1886328b83ca6d0da8490/ALGS_SPL2_Playoff_TicketGiveaway_NoCTA__1_.jpg",
+      "image": "assets/apex/9bf184048b05eb9c.jpg"
+    }
+  ],
+  "schema": 1,
+  "feed": "apex-content",
+  "fetchedAt": "2026-09-30T20:48:53.204Z",
+  "cover": "assets/apex/53cf1216723b3971.jpg"
+}

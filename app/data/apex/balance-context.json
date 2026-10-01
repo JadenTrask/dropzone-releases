@@ -1,0 +1,12 @@
+{
+  "title": "Marked midseason",
+  "publishedAt": "2026-09-14",
+  "checkedAt": "2026-09-30",
+  "sourceUrl": "https://www.ea.com/games/apex-legends/apex-legends/news/marked-midseason-patch-notes",
+  "changes": [
+    {"name": "Conduit", "summary": "Energy Barricade deploys and activates faster, with a new forward-line option and two replacement Level 2 upgrades."},
+    {"name": "Fuse", "summary": "Knuckle Jump and 25% explosive damage resistance join his base kit. Motherlode fires and detonates more quickly."},
+    {"name": "Catalyst", "summary": "Spikes can rebuild or reinforce doors on placement; cooldown falls from 20 to 15 seconds. Allies cross her wall without slowing or blindness."},
+    {"name": "Axle & Seer", "summary": "The included August 25 hotfix reduces Axle's drone health and stun, increases its cooldown, and removes Seer's tactical turn slowdown."}
+  ]
+}

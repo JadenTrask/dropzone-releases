@@ -17,7 +17,19 @@ function createAccounts({directory,safeStorage,config=require('../core/account-c
  const password=v=>{if(typeof v!=='string'||v.length<12||v.length>128)throw Error('Use a password with 12 to 128 characters.');return v;};
  const uuid=v=>{if(typeof v!=='string'||!/^[0-9a-f-]{36}$/i.test(v))throw Error('Invalid friend.');return v;};
  async function state(){await load();if(!enabled)return {enabled:false};if(!session)return {enabled:true,user:null};await token();const profiles=await rest('profiles?id=eq.'+session.user.id+'&select=id,handle,display_name,avatar,share_stats');return {enabled:true,user:session.user,profile:profiles?.[0]||null};}
- return {async command(q){switch(q.action){
+ return {async invokeApex(input){
+  const {request,FUNCTION}=require('../core/apex-player.cjs');const body=request(input);
+  await load();if(!enabled||!session)return {status:'sign-in-required'};
+  let access;try{access=await token();}catch{return {status:'sign-in-required'};}
+  try{
+   const response=await fetcher(config.url+'/functions/v1/'+FUNCTION,{method:'POST',redirect:'error',signal:AbortSignal.timeout(20000),headers:{apikey:config.publishableKey,Authorization:'Bearer '+access,'Content-Type':'application/json'},body:JSON.stringify(body)});
+   if(response.status===401||response.status===403)return {status:'sign-in-required'};
+   const text=await response.text();if(text.length>512000)return {status:'service-unavailable'};
+   let result;try{result=JSON.parse(text);}catch{return {status:'service-unavailable'};}
+   if(response.status===404&&!result?.status)return {status:'service-unavailable'};
+   return require('../core/apex-player.cjs').sanitize(result);
+  }catch{return {status:'service-unavailable'};}
+ },async command(q){switch(q.action){
  case 'account-history-policy':await load();return {days:session?365:30};
  case 'account-state':return state();
  case 'account-signup':{const handle=String(q.handle||'').trim().toLowerCase();if(!/^[a-z0-9_]{3,24}$/.test(handle))throw Error('Use 3–24 letters, numbers or underscores for your username.');await send('/auth/v1/signup',{method:'POST',body:{email:email(q.email),password:password(q.password),data:{handle}}});return {message:'Check your email for a verification code.'};}

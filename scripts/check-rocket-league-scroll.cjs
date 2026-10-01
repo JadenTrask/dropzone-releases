@@ -19,6 +19,7 @@ app.whenReady().then(async () => {
   let win, server;
   try {
     await fs.mkdir(cache, { recursive: true });
+    assert.doesNotMatch(await fs.readFile(path.join(root, 'app', 'rocket-league-ui.js'), 'utf8'), /<aside id="rl-profile"|id="rl-profile-toggle"/);
     const source = await fs.readFile(path.join(root, 'app', 'index.html'), 'utf8');
     const html = source
       .replace(/<script\b[^>]*>[\s\S]*?<\/script>/gi, '')
@@ -50,8 +51,7 @@ app.whenReady().then(async () => {
       document.querySelector('#hub-app').innerHTML = `<main class="hub-main rl-page">
         <div class="rl-commandbar"><header class="rl-heading"><div class="rl-brand"><div><h1>Rocket League</h1><span>DROPZONE TRACKER</span></div></div><span id="rl-status">Connected</span></header>
           <nav class="rl-tabs"><button aria-pressed="true">Live tracker</button><button>Match history</button><button>My profile</button></nav></div>
-        <div class="rl-workspace" data-page="history"><button id="rl-profile-toggle" class="rl-panel-toggle" aria-label="Toggle sidebar"></button>
-          <aside id="rl-profile"><div class="rl-sidebar-identity"><h2>Player</h2></div>${Array.from({ length: 55 }, (_, i) => `<p>Career detail ${i + 1}</p>`).join('')}<p data-sidebar-end>Last career detail</p></aside>
+        <div class="rl-workspace" data-page="history">
           <div class="rl-main-panel"><p id="rl-error"></p><div id="rl-content">${Array.from({ length: 60 }, (_, i) => `<section class="rl-section"><h2>Recorded match ${i + 1}</h2><p>Ranked doubles · Goals 3 · Saves 2 · Score 529</p></section>`).join('')}<p data-content-end>End of match history</p></div></div>
         </div></main>`;
       await document.fonts.ready;
@@ -80,12 +80,12 @@ app.whenReady().then(async () => {
     for (const [width, height] of sizes) {
       win.setContentSize(width, height);
       await win.webContents.debugger.sendCommand('Emulation.setDeviceMetricsOverride', { width, height, deviceScaleFactor: 1, mobile: false });
-      for (const collapsed of [false, true]) {
-        const label = `${width}×${height}, sidebar ${collapsed ? 'collapsed' : 'shown'}`;
+      for (const collapsed of [false]) {
+        const label = [width,height].join("x") + ", full main workspace";
         await run(collapsed => {
-          document.querySelector('.rl-workspace').classList.toggle('rl-profile-collapsed', collapsed);
+
           document.querySelector('.rl-main-panel').scrollTop = 0;
-          document.querySelector('#rl-profile').scrollTop = 0;
+
         }, collapsed);
         await pause(80);
         const before = await measure('.rl-main-panel');
@@ -104,18 +104,12 @@ app.whenReady().then(async () => {
         const bottom = await measure('.rl-main-panel');
         assert.ok(bottom.scrollHeight - bottom.height - bottom.scrollTop <= 2, `${label}: cannot reach the end`);
         assert.ok(bottom.endBottom <= bottom.bottom + 1, `${label}: final history entry remains clipped`);
-        const sidebar = await measure('#rl-profile');
-        if (!collapsed && sidebar.width && sidebar.scrollHeight > sidebar.height + 10) {
-          await wheelAt(sidebar, 350);
-          assert.ok((await measure('#rl-profile')).scrollTop > 50, `${label}: native wheel did not scroll the sidebar`);
-          assert.equal((await measure('.rl-main-panel')).scrollTop, bottom.scrollTop, `${label}: sidebar wheel moved main content`);
-        }
         results.push({ label, contentHeight: before.height, scrollHeight: before.scrollHeight, wheelScroll: after.scrollTop });
         console.log(`PASS ${label}`);
       }
     }
     await fs.writeFile(path.join(cache, 'report.json'), JSON.stringify({ generatedAt: new Date().toISOString(), results }, null, 2));
-    console.log('PASS: 6 Rocket League native-wheel layouts; bottom content reachable and header remains fixed.');
+    console.log('PASS: 3 Rocket League native-wheel layouts; bottom content reachable and header remains fixed.');
     server.close();
     app.exit(0);
   } catch (error) {

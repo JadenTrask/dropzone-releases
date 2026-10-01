@@ -1,0 +1,259 @@
+{
+  "owner": "EA / Respawn",
+  "sourceUrl": "https://www.ea.com/games/apex-legends/apex-legends/characters-hub",
+  "checkedAt": "2026-09-30T22:57:03.011Z",
+  "legends": [
+    {
+      "name": "Alter",
+      "role": "Skirmisher",
+      "localPath": "assets/apex/legends/alter.jpg",
+      "sourceUrl": "https://www.ea.com/games/apex-legends/apex-legends/characters-hub/alter",
+      "imageUrl": "https://drop-assets.ea.com/images/2IfZi30O5KjeTbAHqMGPys/dbd942301f0b723e4f3e30ce27569824/apex-grid-tile-legends-Alter.jpg",
+      "sha256": "c353a71ce641a41fa40c097b4fbe4a98b1ce81b6e8274e14592f7b5a6377c3cf",
+      "bytes": 73605
+    },
+    {
+      "name": "Ash",
+      "role": "Skirmisher",
+      "localPath": "assets/apex/legends/ash.jpg",
+      "sourceUrl": "https://www.ea.com/games/apex-legends/apex-legends/characters-hub/ash",
+      "imageUrl": "https://drop-assets.ea.com/images/4WVk1SMnlzgjk2E3T7f7HC/2db236ad12e23d7a953fa5278b641d5d/apex-grid-tile-legends-Ash.jpg",
+      "sha256": "2e31efd86c97b925e9ad19273990208745bd17a1c5f9498118889d17dd627d03",
+      "bytes": 54846
+    },
+    {
+      "name": "Axle",
+      "role": "Skirmisher",
+      "localPath": "assets/apex/legends/axle.jpg",
+      "sourceUrl": "https://www.ea.com/games/apex-legends/apex-legends/characters-hub/axle",
+      "imageUrl": "https://drop-assets.ea.com/images/6qfSn0cTb5QKHs9YnQEvXI/e4dcb18fd400ea18b7e0cb3ccfba02e0/apex-grid-tile-legends-Axle.jpg",
+      "sha256": "4be76c833257e94c3dd836d10f489af452343f9d4ec0bb33eb020064af03ac7e",
+      "bytes": 72626
+    },
+    {
+      "name": "Ballistic",
+      "role": "Assault",
+      "localPath": "assets/apex/legends/ballistic.jpg",
+      "sourceUrl": "https://www.ea.com/games/apex-legends/apex-legends/characters-hub/ballistic",
+      "imageUrl": "https://drop-assets.ea.com/images/2GzrmZx2WNaOzbrdvxf1XB/f7d4fe018c53977c08347bb4f8d92e0d/apex-grid-tile-legends-Ballistic.jpg",
+      "sha256": "b1e75408aa9182c4f453a8525cc47e2579fb4af4f9b9e6799df2e02bc766069c",
+      "bytes": 65035
+    },
+    {
+      "name": "Bangalore",
+      "role": "Assault",
+      "localPath": "assets/apex/legends/bangalore.jpg",
+      "sourceUrl": "https://www.ea.com/games/apex-legends/apex-legends/characters-hub/bangalore",
+      "imageUrl": "https://drop-assets.ea.com/images/59uaaKwAaQVFS2Z5o6JPoM/788687f62d13fdfd3afd71639dcea271/apex-grid-tile-legends-Bangalore.jpg",
+      "sha256": "134889ded918a8f7e7c23e5156de3fd419452c70317f7cf783384cda1da9ebf6",
+      "bytes": 49997
+    },
+    {
+      "name": "Bloodhound",
+      "role": "Recon",
+      "localPath": "assets/apex/legends/bloodhound.jpg",
+      "sourceUrl": "https://www.ea.com/games/apex-legends/apex-legends/characters-hub/bloodhound",
+      "imageUrl": "https://drop-assets.ea.com/images/57Lw4lAodWsiNYTO1zvT6I/ec740d776b1d24172f5c9ed65f6d71af/apex-grid-tile-legends-Bloodhound.jpg",
+      "sha256": "3cce12de35c585b933f6afc6935d101e16a38bedb5e7b209b752e6f3aed00ba9",
+      "bytes": 57446
+    },
+    {
+      "name": "Catalyst",
+      "role": "Controller",
+      "localPath": "assets/apex/legends/catalyst.jpg",
+      "sourceUrl": "https://www.ea.com/games/apex-legends/apex-legends/characters-hub/catalyst",
+      "imageUrl": "https://drop-assets.ea.com/images/I01amfukfvzrqbSSg1xQB/6147400ff2102b3ddd5f5c931a374be8/apex-grid-tile-legends-Catalyst.jpg",
+      "sha256": "846858421d0fe1a60b31febe1f56d1e416f62c87cfee721e4f2725dd6ebf9f98",
+      "bytes": 63687
+    },
+    {
+      "name": "Caustic",
+      "role": "Controller",
+      "localPath": "assets/apex/legends/caustic.jpg",
+      "sourceUrl": "https://www.ea.com/games/apex-legends/apex-legends/characters-hub/caustic",
+      "imageUrl": "https://drop-assets.ea.com/images/30vsaqTmflB9MEo7GTcgXB/96eb6e78a15a275cd7e85040986985f8/apex-grid-tile-legends-Caustic.jpg",
+      "sha256": "c60b9aaafcf08c9b5a65594057773f47ae37112ec4e447a16303df462478003c",
+      "bytes": 54063
+    },
+    {
+      "name": "Conduit",
+      "role": "Support",
+      "localPath": "assets/apex/legends/conduit.jpg",
+      "sourceUrl": "https://www.ea.com/games/apex-legends/apex-legends/characters-hub/conduit",
+      "imageUrl": "https://drop-assets.ea.com/images/4Ksr2ZX6ImduJHxxeYONtU/277537c176c74b951319f92d86f4698e/apex-grid-tile-legends-Conduit.jpg",
+      "sha256": "2402562f6418d45676b381ee4973d354cb6027bbdb57b5b8c43a1dab5113574b",
+      "bytes": 72345
+    },
+    {
+      "name": "Crypto",
+      "role": "Recon",
+      "localPath": "assets/apex/legends/crypto.jpg",
+      "sourceUrl": "https://www.ea.com/games/apex-legends/apex-legends/characters-hub/crypto",
+      "imageUrl": "https://drop-assets.ea.com/images/xnWqynrhqueemWjVw44E9/a39d43a0bf4d58a040f3d1a51815f899/apex-grid-tile-legends-Crypto.jpg",
+      "sha256": "458530d9f2a29b2dbca120cce3762da4e8f83244f823f030131a1f3dcf34d4bb",
+      "bytes": 56646
+    },
+    {
+      "name": "Fuse",
+      "role": "Assault",
+      "localPath": "assets/apex/legends/fuse.jpg",
+      "sourceUrl": "https://www.ea.com/games/apex-legends/apex-legends/characters-hub/fuse",
+      "imageUrl": "https://drop-assets.ea.com/images/1ed5jzmnEE2F3VYADHiAb1/e2a5e038f7fe26d8cd1b6eab882e5247/apex-grid-tile-legends-Fuse.jpg",
+      "sha256": "5d257b5c021249ff6f4ee13312e3eb6b92765d0080b617edfd08b1a0739ed9cc",
+      "bytes": 61798
+    },
+    {
+      "name": "Gibraltar",
+      "role": "Support",
+      "localPath": "assets/apex/legends/gibraltar.jpg",
+      "sourceUrl": "https://www.ea.com/games/apex-legends/apex-legends/characters-hub/gibraltar",
+      "imageUrl": "https://drop-assets.ea.com/images/2uZ8i6QAJcG0twyVOIjC5S/80185d7d5cd8373684bf268c13f07fe0/apex-grid-tile-legends-Gibraltar.jpg",
+      "sha256": "69d0923c5cf8bfa36abad17b5f071607823f02c411ea1f7af3342aad8363cac6",
+      "bytes": 69084
+    },
+    {
+      "name": "Horizon",
+      "role": "Skirmisher",
+      "localPath": "assets/apex/legends/horizon.jpg",
+      "sourceUrl": "https://www.ea.com/games/apex-legends/apex-legends/characters-hub/horizon",
+      "imageUrl": "https://drop-assets.ea.com/images/3wEl6hnRZRfE0kpIhHe16Y/3dc98b90c70516c9a3ee563586c28d63/apex-grid-tile-legends-Horizon.jpg",
+      "sha256": "db69c992484b58488ca3667d4285ea3f892e21048f79f83effbccab9f3e76b03",
+      "bytes": 61167
+    },
+    {
+      "name": "Lifeline",
+      "role": "Support",
+      "localPath": "assets/apex/legends/lifeline.jpg",
+      "sourceUrl": "https://www.ea.com/games/apex-legends/apex-legends/characters-hub/lifeline",
+      "imageUrl": "https://drop-assets.ea.com/images/2CB26KqVrs5AahlXuSCSgl/c1b815b029a81b654a1ea34497cf8926/apex-grid-tile-legends-Lifeline.jpg",
+      "sha256": "7728405cc0596b2f896ed45e6a9d7c082f852244db465748b76e2a7e62cf2b18",
+      "bytes": 64508
+    },
+    {
+      "name": "Loba",
+      "role": "Support",
+      "localPath": "assets/apex/legends/loba.jpg",
+      "sourceUrl": "https://www.ea.com/games/apex-legends/apex-legends/characters-hub/loba",
+      "imageUrl": "https://drop-assets.ea.com/images/5sYrsr2r1tJSjCGM9nwODq/40d430203a315af1900431e26a288619/apex-grid-tile-legends-Loba.jpg",
+      "sha256": "287edb52f59e9c5a863bf4a393193097f7c0fff7b2b859912965d5c51ad0879d",
+      "bytes": 66711
+    },
+    {
+      "name": "Mad Maggie",
+      "role": "Assault",
+      "localPath": "assets/apex/legends/mad-maggie.jpg",
+      "sourceUrl": "https://www.ea.com/games/apex-legends/apex-legends/characters-hub/mad-maggie",
+      "imageUrl": "https://drop-assets.ea.com/images/4X6EN7HLCByvyHbSVi5I6C/c881852cfd2ca864f578134212a23d55/apex-grid-tile-legends-MadMaggie.jpg",
+      "sha256": "51f2facf3c77d5f99b92f6e944844ea68df881f555eda1dcfcd6410631ffb52e",
+      "bytes": 52659
+    },
+    {
+      "name": "Mirage",
+      "role": "Support",
+      "localPath": "assets/apex/legends/mirage.jpg",
+      "sourceUrl": "https://www.ea.com/games/apex-legends/apex-legends/characters-hub/mirage",
+      "imageUrl": "https://drop-assets.ea.com/images/JVVgPeCz9D5hCuzdltvTW/8de2e63ef240ab578ff2cab7905918c9/apex-grid-tile-legends-Mirage.jpg",
+      "sha256": "2e0478b48fa2e35293266f78e2b8ea78dd5ca11f3d906662fff2e98a6c46a34f",
+      "bytes": 56995
+    },
+    {
+      "name": "Newcastle",
+      "role": "Support",
+      "localPath": "assets/apex/legends/newcastle.jpg",
+      "sourceUrl": "https://www.ea.com/games/apex-legends/apex-legends/characters-hub/newcastle",
+      "imageUrl": "https://drop-assets.ea.com/images/2aqce7tHWCzjdVxcHl0iaS/dd4e76b7c8b007d5bcde01d4e4cae00f/apex-grid-tile-legends-Newcastle.jpg",
+      "sha256": "804f8a4fb4c06adb8bc321048161afb62c5803e3ebe6f41586c06ed5c2f2ad85",
+      "bytes": 60020
+    },
+    {
+      "name": "Octane",
+      "role": "Skirmisher",
+      "localPath": "assets/apex/legends/octane.jpg",
+      "sourceUrl": "https://www.ea.com/games/apex-legends/apex-legends/characters-hub/octane",
+      "imageUrl": "https://drop-assets.ea.com/images/15R4OhvkVEF8UgnM2x6iGO/cbfbadf786010c548a900b7cb2cc5960/apex-grid-tile-legends-Octane.jpg",
+      "sha256": "43695e7b00822e5a9f3174a43caca2e0d304033914173ef8a3a00d5f0d4588e4",
+      "bytes": 59332
+    },
+    {
+      "name": "Pathfinder",
+      "role": "Skirmisher",
+      "localPath": "assets/apex/legends/pathfinder.jpg",
+      "sourceUrl": "https://www.ea.com/games/apex-legends/apex-legends/characters-hub/pathfinder",
+      "imageUrl": "https://drop-assets.ea.com/images/6zanV6x46IQntfmXVJuxWs/08090312744a04dc243b138d0e8fe72a/apex-grid-tile-legends-Pathfinder.jpg",
+      "sha256": "becf2469c24895ebe65a549d068aeae8e6e2db112904ef8fef0532050c7e37eb",
+      "bytes": 49005
+    },
+    {
+      "name": "Rampart",
+      "role": "Controller",
+      "localPath": "assets/apex/legends/rampart.jpg",
+      "sourceUrl": "https://www.ea.com/games/apex-legends/apex-legends/characters-hub/rampart",
+      "imageUrl": "https://drop-assets.ea.com/images/21QdZAxCn7qZWCLNPR4X3C/ec7c5e4cbf7a2aad48702b4fb4103878/apex-grid-tile-legends-Rampart.jpg",
+      "sha256": "e9ca7e270ec02c8dac5a5a2fe685b4f748e124cb08de1ea42314c526d18da65e",
+      "bytes": 77696
+    },
+    {
+      "name": "Revenant",
+      "role": "Assault",
+      "localPath": "assets/apex/legends/revenant.jpg",
+      "sourceUrl": "https://www.ea.com/games/apex-legends/apex-legends/characters-hub/revenant",
+      "imageUrl": "https://drop-assets.ea.com/images/40px8AHVKdZDFzG0v2IHSl/ae12ef0b2b3aa82d113d06f78885b345/apex-grid-tile-legends-Revenant.jpg",
+      "sha256": "8cddddca5c98a80ab0373cd5a1e0adf9dc3d5f8fb0b01c8b9c887e14c2b52e9f",
+      "bytes": 51102
+    },
+    {
+      "name": "Seer",
+      "role": "Recon",
+      "localPath": "assets/apex/legends/seer.jpg",
+      "sourceUrl": "https://www.ea.com/games/apex-legends/apex-legends/characters-hub/seer",
+      "imageUrl": "https://drop-assets.ea.com/images/4Lv7MVV4qMAK4elah1iZoz/10466b756099f26a00aff51cf23bd2f0/apex-grid-tile-legends-Seer.jpg",
+      "sha256": "c16d898f810e1593f88aeb0ddb19fd8ee69fdc4030e9723bf8e9ed921c483951",
+      "bytes": 51757
+    },
+    {
+      "name": "Sparrow",
+      "role": "Recon",
+      "localPath": "assets/apex/legends/sparrow.jpg",
+      "sourceUrl": "https://www.ea.com/games/apex-legends/apex-legends/characters-hub/sparrow",
+      "imageUrl": "https://drop-assets.ea.com/images/ZpRorS2mnGb98mIt53sy9/0962732ad880c5f42754776e035316cc/apex-grid-tile-legends-sparrow.jpg",
+      "sha256": "13e82eb7c0a5a904ebeed8a89f7c30a56b85515449c0fe41049faf6e32f33929",
+      "bytes": 84222
+    },
+    {
+      "name": "Valkyrie",
+      "role": "Recon",
+      "localPath": "assets/apex/legends/valkyrie.jpg",
+      "sourceUrl": "https://www.ea.com/games/apex-legends/apex-legends/characters-hub/valkyrie",
+      "imageUrl": "https://drop-assets.ea.com/images/4FPEvAK1WOqJbMeQhaaGkq/cf3a24ed788f219b79974f20c1ef84f8/apex-grid-tile-legends-Valkyrie.jpg",
+      "sha256": "5f5b8c74cbf84f0c30dcb55edbf147ce09e741ee077f9a795b2e25edab45fa12",
+      "bytes": 72330
+    },
+    {
+      "name": "Vantage",
+      "role": "Recon",
+      "localPath": "assets/apex/legends/vantage.jpg",
+      "sourceUrl": "https://www.ea.com/games/apex-legends/apex-legends/characters-hub/vantage",
+      "imageUrl": "https://drop-assets.ea.com/images/6wNJrehz7BfFeKFwWINpCD/e25ce64fad589ca8fee6e4024119cd92/apex-grid-tile-legends-Vantage.jpg",
+      "sha256": "9024fd2ceb401fc27a3c6c18af239e7567f5ccd208fb4e14dcf37860d8376683",
+      "bytes": 67542
+    },
+    {
+      "name": "Wattson",
+      "role": "Controller",
+      "localPath": "assets/apex/legends/wattson.jpg",
+      "sourceUrl": "https://www.ea.com/games/apex-legends/apex-legends/characters-hub/wattson",
+      "imageUrl": "https://drop-assets.ea.com/images/35A7Ebi3AQ5jtXhZlXcgfm/ddc8902fd90e0cf669e9ce4182ab8e1f/apex-grid-tile-legends-Wattson.jpg",
+      "sha256": "7c09706890e7aa75ff45df28b604c2e6f5a5e47413821e0389cb9aea3fcb63db",
+      "bytes": 62942
+    },
+    {
+      "name": "Wraith",
+      "role": "Skirmisher",
+      "localPath": "assets/apex/legends/wraith.jpg",
+      "sourceUrl": "https://www.ea.com/games/apex-legends/apex-legends/characters-hub/wraith",
+      "imageUrl": "https://drop-assets.ea.com/images/4J0UloeNHP6KD21QNrgMcj/cec0cb8949bb3cfe2149a6ca7c2d8a5d/apex-grid-tile-legends-Wraith.jpg",
+      "sha256": "0f54e30636d4f57ddb91381fe7f44e8f7b2b3c3b29d916d9ff6dbd4b63f54b21",
+      "bytes": 47760
+    }
+  ]
+}

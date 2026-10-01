@@ -1,14 +1,18 @@
 # Dropzone
 
-Version 2.2.0 · Windows x64 · local, unpublished build
+Version 2.4.8 · Windows x64
 
-A desktop companion for League, COD, THE FINALS, WARDOGS and Siege. Existing Sons of the Forest support is preserved without new game-specific features.
+A desktop companion for Rocket League, Apex Legends, League of Legends, Call of Duty, THE FINALS, Rainbow Six Siege, Gray Zone Warfare, Sons of the Forest and WARDOGS.
 
-## New in 2.2.0
+## New in 2.4.8
 
-Game-first workspaces, linked builds and notes, tactics boards, squad drafts and LAN phone pairing, practice timers, goals, calendar, clip tools, settings backups, performance imports and portable content packs. The Tonight dashboard, VALORANT and Marvel Rivals have been removed at the owner's request; optional session tracking lives under Game tools → More tools → History. The WARDOGS invite code is visible and its room layout is aligned. Height correction is removed; heights are reference only.
+- Game-colored workspaces with clear glass controls, readable shared typography and consistent navigation.
+- Apex player lookup through your Dropzone account, supported rank/trackers, local recent players and favorites, official legend art, dated balance context, news and esports.
+- A restored Lamang map with corrected terrain/marker calibration and working search, filters and inspector.
+- A five-operator Siege team and a concise, sourced round briefing.
+- Real imagery for Finals weapons, gadgets and specializations; a wider Rocket League workspace; consistent Sons map controls.
 
-See [the feature and verification handoff](docs/SESSION-CENTER-2.2.0.md) for run instructions, data sources and explicit integration limits. Encrypted workspace sync is implemented and tested locally but is not published. Automatic game-account progression sync is not available.
+See [release notes](docs/RELEASE-NOTES.md), [verification and limits](docs/VALIDATION.md), and [Apex provider setup](docs/apex-provider-setup.md). Apex uses the unofficial Apex Legends Status provider; the provider key remains server-side. Unsupported history, peak rank and leaderboard data are not invented.
 
 ## Earlier releases
 
@@ -34,11 +38,11 @@ See [accuracy limits, data provenance and validation](docs/WARDOGS-2.0.2.md). Co
 - A compact Sources overview with game/status filters, grouped rows, and expandable dates, review preferences, and coverage details.
 - Text-size shortcuts remain available while using the Sons of the Forest map.
 
-The existing game tools, saved builds, map progress, targets, source preferences, and text settings retain their existing storage formats and app profile. See [the 2.0 release notes](docs/RELEASE-NOTES.md).
+The existing game tools, saved builds, map progress, targets, source preferences, and text settings retain their existing storage formats and app profile. See [the current release notes](docs/RELEASE-NOTES.md).
 
 ## Install or update
 
-Run **Dropzone-Setup-2.0.0-x64.exe** from the [GitHub releases page](https://github.com/JadenTrask/dropzone-releases/releases). Once 2.0.0 is published, existing installed copies can receive it through **App updates**. Older portable copies need the installer once. The installer remains unsigned.
+Download the Windows installer from the [GitHub releases page](https://github.com/JadenTrask/dropzone-releases/releases). Existing installed copies use **App updates**; portable copies need the installer once. The installer remains unsigned.
 
 The release workflow builds and verifies the installer, blockmap, updater metadata, and full source archive before publication. See [the publishing guide](docs/PUBLISH-RELEASE.md). The existence of this source or guide does not mean the release has already been published.
 
@@ -51,7 +55,7 @@ Sons of the Forest joined the game library with an offline island map, 1,023 loc
 - Gray Zone Warfare now shows **Under construction**. Its map, missions, keys, patch notes and background refreshes are disabled.
 - Existing GZW progress remains stored on your PC.
 
-## Previous changes in 1.2.0 (GZW support is currently disabled)
+## Previous changes in 1.2.0 (historical; GZW restored in 2.4.8)
 
 - Gray Zone Warfare: 55 permanently labeled square LZ icons; 4,921 approved markers, including 57 key spawns, 291 intel locations, 168 buried caches and 10 Easter eggs. Search and filter marker layers, inspect coordinates, and focus mapped mission objectives.
 - The marker source supplies 490 objective entries across 198 missions. Map-only missions are merged into the existing mission index without changing existing progress IDs. Full instructions open in source guides.
@@ -70,7 +74,7 @@ See `docs/GRAY-ZONE-WARFARE.md`, `docs/SIEGE.md`, and `docs/UPDATE-COVERAGE.md` 
 - A two-second local splash and per-user Windows installer.
 - Update-page alignment and the website footer fix in 1.0.2.
 
-The user confirmed the earlier Beta 2 to 1.0.0 automatic upgrade worked. That historical result is not verification of a 2.0.0 installation or upgrade. Current checks and their limits belong in [the validation record](docs/VALIDATION.md).
+The user confirmed the earlier Beta 2 to 1.0.0 automatic upgrade worked. That historical result is not verification of a current installation or upgrade. Current checks and their limits belong in [the validation record](docs/VALIDATION.md).
 
 The historical development notes below are retained from the source archive and apply only to the versions they name.
 
@@ -228,7 +232,7 @@ See [the integration guide](docs/ADDING-GAMES.md) for adding games and [the vali
 
 ## Attribution
 
-Dropzone is independent and is not endorsed by Riot Games, Activision, Embark Studios, BULKHEAD, Team17, YouTube, or CODMunity. Game names, artwork, and source data belong to their owners. Source links appear in the app; weapon-image provenance is recorded in `app/assets/weapons/sources.json`. App code is MIT licensed. The MIT license does not transfer ownership of third-party artwork or data.
+Dropzone is independent and is not endorsed by Riot Games, Activision, EA, Respawn Entertainment, Ubisoft, MADFINGER Games, Endnight Games, Embark Studios, BULKHEAD, Team17, YouTube, or CODMunity. Game names, artwork, and source data belong to their owners. Source links appear in the app; weapon-image provenance is recorded in `app/assets/weapons/sources.json`. App code is MIT licensed. The MIT license does not transfer ownership of third-party artwork or data.
 
 WARDOGS reference code/calibration credits and the MIT notice are in `third-party/`. Map imagery remains the game rights holders’ property; the source repository’s MIT license does not license the game artwork. Map asset hashes and source revision are recorded in `app/data/wardogs/assets.json`.
 

@@ -81,19 +81,19 @@
 html[data-game=wardogs] #hub-app .wardogs-page.wd-fixed .wd-sight-dock .wd-sight-tab,
 html[data-game=wardogs] #hub-app .wardogs-page.wd-fixed .wd-sight-dock .wd-sight-tab:is(:hover,:active,:focus-visible){transform:translate(-100%,-50%)}
 html[data-game=wardogs] #hub-app .wardogs-page.wd-fixed .wd-sight-dock .wd-sight-tab{
-  --dz-control-surface:linear-gradient(140deg,#25323ff2,#14202bf5);
-  --dz-control-color:#edf4fa;--dz-control-border:#ccdfef47;
+  --dz-control-surface:var(--atmos-panel,linear-gradient(140deg,#ffffff38,#ffffff14));
+  --dz-control-color:var(--atmos-ink,#f2f5fc);--dz-control-border:rgb(var(--atmos-primary,176 154 80) / .44);
   background:var(--dz-control-surface)!important;color:var(--dz-control-color)!important;
   border-color:var(--dz-control-border)!important;border-right:0;border-radius:10px 0 0 10px;
-  box-shadow:inset 0 1px #e9f4ff16,-3px 3px 12px #0003;backdrop-filter:none;
+  box-shadow:inset 0 1px #fff7dc20,-3px 3px 12px #0003;backdrop-filter:blur(12px);
 }
 html[data-game=wardogs] #hub-app .wardogs-page.wd-fixed .wd-sight-dock .wd-sight-tab:hover:not(:disabled){
-  --dz-control-surface:linear-gradient(140deg,#344455f5,#233243f7);
-  --dz-control-color:#fff;--dz-control-border:#d8e7f56b;
+  --dz-control-surface:var(--dz-control-hover,linear-gradient(140deg,#ffffff26,#ffffff0d));
+  --dz-control-color:var(--atmos-ink,#f2f5fc);--dz-control-border:rgb(var(--atmos-primary,176 154 80) / .64);
 }
 html[data-game=wardogs] #hub-app .wardogs-page.wd-fixed .wd-sight-dock .wd-sight-tab[aria-expanded=true]{
-  --dz-control-surface:linear-gradient(140deg,#584738f2,#302b28f5);
-  --dz-control-color:#ffe7cf;--dz-control-border:#f0b37d6b;
+  --dz-control-surface:linear-gradient(140deg,rgb(var(--atmos-primary,176 154 80) / .44),rgb(var(--atmos-base,31 31 26) / .92));
+  --dz-control-color:var(--atmos-accent,#e2ce8a);--dz-control-border:var(--atmos-accent,#e2ce8a);
 }
 @media(prefers-reduced-motion:reduce){#hub-app .wd-fixed .wd-sight-dock{transition:none;will-change:auto}}
 

@@ -75,7 +75,7 @@
     "description": "Artillery maps, weapon damage, live servers and gold market.",
     "theme": "wardogs",
     "accent": "#efcf69",
-    "cover": "assets/games/wardogs.svg",
+    "cover": "assets/games/wardogs-official.jpg",
     "status": "active",
     "videos": false,
     "pages": [
@@ -91,11 +91,11 @@
     "name": "Gray Zone Warfare",
     "shortName": "Gray Zone Warfare",
     "eyebrow": "GRAY ZONE WARFARE",
-    "description": "Under construction.",
+    "description": "Lamang map, landing zones, missions and keys.",
     "theme": "gray-zone",
     "accent": "#d4db9a",
     "cover": "assets/games/gray-zone.webp",
-    "status": "under-construction",
+    "status": "active",
     "videos": false,
     "modes": []
   },
@@ -219,5 +219,21 @@
     "status": "active",
     "patches": false,
     "videos": false
+  },
+  {
+      "id": "apex",
+      "parent": null,
+      "kind": "apex",
+      "name": "Apex Legends",
+      "shortName": "APEX",
+      "eyebrow": "APEX LEGENDS",
+      "description": "Legends, official news, esports and player availability.",
+      "theme": "apex",
+      "accent": "#cf655b",
+      "cover": "assets/apex/53cf1216723b3971.jpg",
+      "status": "active",
+      "patches": false,
+      "videos": false,
+      "modes": []
   }
 ]

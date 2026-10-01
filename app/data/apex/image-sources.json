@@ -1,0 +1,160 @@
+{
+  "owner": "EA / Respawn / ALGS",
+  "retrievedAt": "2026-09-30T20:48:53.204Z",
+  "assets": [
+    {
+      "localPath": "assets/apex/53cf1216723b3971.jpg",
+      "sourceUrl": "https://www.ea.com/games/apex-legends/apex-legends/news/matchmaking-test-results",
+      "imageUrl": "https://drop-assets.ea.com/images/2YcU8XoDXd5Ir7WpX5P2yR/b78b8cfafabfd58d631c009ac0a41379/apex-legends-generic-keyart-16x9.jpg?im=AspectCrop=(16,9),xPosition=0.5,yPosition=0.5",
+      "sha256": "b1209ec895bd4078a7ad6169adfcc58c8ba5c859a5e13426377213aa7bb05d7c",
+      "bytes": 1086939
+    },
+    {
+      "localPath": "assets/apex/53cf1216723b3971.jpg",
+      "sourceUrl": "https://www.ea.com/games/apex-legends/apex-legends/news/javelin-anticheat-announcement",
+      "imageUrl": "https://drop-assets.ea.com/images/2YcU8XoDXd5Ir7WpX5P2yR/b78b8cfafabfd58d631c009ac0a41379/apex-legends-generic-keyart-16x9.jpg?im=AspectCrop=(16,9),xPosition=0.5,yPosition=0.5",
+      "sha256": "b1209ec895bd4078a7ad6169adfcc58c8ba5c859a5e13426377213aa7bb05d7c",
+      "bytes": 1086939
+    },
+    {
+      "localPath": "assets/apex/d74ea8bbcf92b236.jpg",
+      "sourceUrl": "https://www.ea.com/games/apex-legends/apex-legends/news/street-fighter-6-event",
+      "imageUrl": "https://drop-assets.ea.com/images/7i9a47Y51J87kgMXlWGeBs/4d268290faa8b12863c4a574d3fed81a/ApexS30_SnapBack_3840x2160.jpg?im=AspectCrop=(16,9),xPosition=0.5114583333333333,yPosition=0.5305555555555556",
+      "sha256": "58a25161c426fc6d00a651336e1a6e05d792c6d9dd01228d431aa8ae2a362c11",
+      "bytes": 2087076
+    },
+    {
+      "localPath": "assets/apex/bf55781fc5fa1ff5.jpg",
+      "sourceUrl": "https://www.ea.com/games/apex-legends/apex-legends/news/marked-midseason-patch-notes",
+      "imageUrl": "https://drop-assets.ea.com/images/5uCFWOM7mt8GaS4vOAqmzA/831ed306c62a47adb5d3694f22c10c95/Apex_S30-Season-Page-16x9.jpg?im=AspectCrop=(16,9),xPosition=0.565625,yPosition=0.9388888888888889",
+      "sha256": "52062f19c1c55a01e7f8c061fa762dca12becec5148638b6ca221611c522bda3",
+      "bytes": 469578
+    },
+    {
+      "localPath": "assets/apex/bf55781fc5fa1ff5.jpg",
+      "sourceUrl": "https://www.ea.com/games/apex-legends/apex-legends/news/30-1-designers-notes",
+      "imageUrl": "https://drop-assets.ea.com/images/5uCFWOM7mt8GaS4vOAqmzA/831ed306c62a47adb5d3694f22c10c95/Apex_S30-Season-Page-16x9.jpg?im=AspectCrop=(16,9),xPosition=0.565625,yPosition=0.9388888888888889",
+      "sha256": "52062f19c1c55a01e7f8c061fa762dca12becec5148638b6ca221611c522bda3",
+      "bytes": 469578
+    },
+    {
+      "localPath": "assets/apex/1290a3c876206124.jpg",
+      "sourceUrl": "https://www.ea.com/games/apex-legends/apex-legends/news/ascended-hunt-event",
+      "imageUrl": "https://drop-assets.ea.com/images/3DcAYZU3qaeezGFzFOgyZG/aed208defe2378a9033d944448b3c3ae/Apex_S30_Ascended_Hunt_KeyArt_3840x2160.jpg?im=AspectCrop=(16,9),xPosition=0.5,yPosition=0.5",
+      "sha256": "91f412ab6eeba8457021fa0e479f9ee7076b027c81e56339bfcff9d5d79743d1",
+      "bytes": 2314602
+    },
+    {
+      "localPath": "assets/apex/bf55781fc5fa1ff5.jpg",
+      "sourceUrl": "https://www.ea.com/games/apex-legends/apex-legends/news/marked-patch-notes",
+      "imageUrl": "https://drop-assets.ea.com/images/5uCFWOM7mt8GaS4vOAqmzA/831ed306c62a47adb5d3694f22c10c95/Apex_S30-Season-Page-16x9.jpg?im=AspectCrop=(16,9),xPosition=0.565625,yPosition=0.9388888888888889",
+      "sha256": "52062f19c1c55a01e7f8c061fa762dca12becec5148638b6ca221611c522bda3",
+      "bytes": 469578
+    },
+    {
+      "localPath": "assets/apex/bf55781fc5fa1ff5.jpg",
+      "sourceUrl": "https://www.ea.com/games/apex-legends/apex-legends/news/30-0-designers-notes",
+      "imageUrl": "https://drop-assets.ea.com/images/5uCFWOM7mt8GaS4vOAqmzA/831ed306c62a47adb5d3694f22c10c95/Apex_S30-Season-Page-16x9.jpg?im=AspectCrop=(16,9),xPosition=0.565625,yPosition=0.9388888888888889",
+      "sha256": "52062f19c1c55a01e7f8c061fa762dca12becec5148638b6ca221611c522bda3",
+      "bytes": 469578
+    },
+    {
+      "localPath": "assets/apex/97a9d618cc1fb465.jpg",
+      "sourceUrl": "https://www.ea.com/games/apex-legends/apex-legends/news/marked-game-updates",
+      "imageUrl": "https://drop-assets.ea.com/images/3dK3vDXEdXMTd223TD9FpJ/8bfb10faa77bca4f923a5f4794d0c99d/Apex_S30-Season_Bloodhound-Rework-16x9.jpg?im=AspectCrop=(16,9),xPosition=0.7026041666666667,yPosition=0.44907407407407407",
+      "sha256": "f42cf334faf45c5cbde7ea574205bf9c6df61d88e8b420a81a80d40fc9dc7d6d",
+      "bytes": 546828
+    },
+    {
+      "localPath": "assets/apex/05b0c4ae2a6766a2.jpg",
+      "sourceUrl": "https://www.ea.com/games/apex-legends/apex-legends/news/cyberpunk-event",
+      "imageUrl": "https://drop-assets.ea.com/images/gAJBlJcTXnwSFQkoCny7R/7f0d08f4a35b07e31b637d0850c7f6a5/Apex_S29_Clockup_PrimaryArt_3840x2160.jpg?im=AspectCrop=(16,9),xPosition=0.45989583333333334,yPosition=0.2310185185185185",
+      "sha256": "88197f49a46326d9239c62aa85478ef0219654c881a53d811cbe88a3331c3d3b",
+      "bytes": 1749785
+    },
+    {
+      "localPath": "assets/apex/41887613fb059b99.jpg",
+      "sourceUrl": "https://www.ea.com/games/apex-legends/apex-legends/news/overclocked-midseason-patch-notes",
+      "imageUrl": "https://drop-assets.ea.com/images/bkMLMqEITjTrdGhB8iEut/de1c3ebe1345f4bf67c4cf2c8d3a95fa/Apex_S29-Season-Page-16x9.jpg?im=AspectCrop=(16,9),xPosition=0.32864583333333336,yPosition=0.4898148148148148",
+      "sha256": "8785e8e873fecac73e7539d6b419015161738a3a6be4fb70aa01b486af82f3b4",
+      "bytes": 520331
+    },
+    {
+      "localPath": "assets/apex/41887613fb059b99.jpg",
+      "sourceUrl": "https://www.ea.com/games/apex-legends/apex-legends/news/29-1-designers-notes",
+      "imageUrl": "https://drop-assets.ea.com/images/bkMLMqEITjTrdGhB8iEut/de1c3ebe1345f4bf67c4cf2c8d3a95fa/Apex_S29-Season-Page-16x9.jpg?im=AspectCrop=(16,9),xPosition=0.32864583333333336,yPosition=0.4898148148148148",
+      "sha256": "8785e8e873fecac73e7539d6b419015161738a3a6be4fb70aa01b486af82f3b4",
+      "bytes": 520331
+    },
+    {
+      "localPath": "assets/apex/53cf1216723b3971.jpg",
+      "sourceUrl": "https://www.ea.com/games/apex-legends/apex-legends/news/overclocked-matchmaking-update",
+      "imageUrl": "https://drop-assets.ea.com/images/2YcU8XoDXd5Ir7WpX5P2yR/b78b8cfafabfd58d631c009ac0a41379/apex-legends-generic-keyart-16x9.jpg?im=AspectCrop=(16,9),xPosition=0.5,yPosition=0.5",
+      "sha256": "b1209ec895bd4078a7ad6169adfcc58c8ba5c859a5e13426377213aa7bb05d7c",
+      "bytes": 1086939
+    },
+    {
+      "localPath": "assets/apex/c7df5be747f5f131.jpg",
+      "sourceUrl": "https://www.ea.com/games/apex-legends/apex-legends/news/power-trip-event",
+      "imageUrl": "https://drop-assets.ea.com/images/7upR0dy2N8VE4FRPYL6mmD/7a686000a68b5fe80cfa83a59cf498af/ApexS29_PowerTrip_KeyArt_3840x2160.jpg?im=AspectCrop=(16,9),xPosition=0.765625,yPosition=0.4388888888888889",
+      "sha256": "71ecd088690a6bf251c878e2a855c69d278dc7b7cea263e1d33c44101eb40ad9",
+      "bytes": 2389773
+    },
+    {
+      "localPath": "assets/apex/6d08b48c31b04049.jpg",
+      "sourceUrl": "https://algs.ea.com/en/news/year-6-championship-tickets",
+      "imageUrl": "https://images.ctfassets.net/yiybmxu7wtzi/XdlhrbrzhJLjwxpOsmgzb/ad58ef8b8a89350b549be5f57d955e7a/ALGS6_CHAMPS_GENERIC_GRAPHIC_TICKET_EDUCATION_THUMBNAIL_GENERIC_20260826.jpg",
+      "sha256": "8924fa5417c8816e89afbb76fc134982d0a4bad0259b221364f51a455df46e17",
+      "bytes": 201013
+    },
+    {
+      "localPath": "assets/apex/3af6f1649e5a0139.jpg",
+      "sourceUrl": "https://algs.ea.com/en/news/algs-split-2-pro-league",
+      "imageUrl": "https://images.ctfassets.net/yiybmxu7wtzi/1fMaX3CJXd5vEHYmoAw19D/c6126b4ba24ffeecace67b7a8a06fb38/ALGS6_PL2_PROLEAGUE_GRAPHIC_EYNTK_THUMBNAIL_HOR_BLOG_POST_GENERIC_20260817.jpg",
+      "sha256": "22fc689ec74a167967cc8508d6b126f951a5d7a52448d80c3ef7f09f8a0d1025",
+      "bytes": 183018
+    },
+    {
+      "localPath": "assets/apex/8e34a2289062c604.png",
+      "sourceUrl": "https://algs.ea.com/en/news/win-algs-split-1-playoffs-coins",
+      "imageUrl": "https://images.ctfassets.net/yiybmxu7wtzi/7hjJyEDaYQFZTyP78MG6a0/4bc0be904dfa50d4c2de1384f8ba76b1/image__1_.png",
+      "sha256": "c73d73a91d6d2c8d6e336b6999e63e1e73202570013ec48f85c6e0a59f5c3bf8",
+      "bytes": 3030852
+    },
+    {
+      "localPath": "assets/apex/138b7319e7bd80e7.jpg",
+      "sourceUrl": "https://algs.ea.com/en/news/esports-nations-cup-2026",
+      "imageUrl": "https://images.ctfassets.net/yiybmxu7wtzi/6wxueXvMv6aqdJdMKawd2n/f01458d477b9429978a5338eb22d23e4/ENC_APEX_LOCKUP_WORDMARK_WHITE_HORIZONTAL.jpg",
+      "sha256": "bc3fea5abf10e92f4e66410b02eaedd29774e52163cbb8414c7221dd2aeee2eb",
+      "bytes": 97752
+    },
+    {
+      "localPath": "assets/apex/e200e2b062f8341e.jpg",
+      "sourceUrl": "https://algs.ea.com/en/news/eyntk-split-1-playoffs-at-ewc",
+      "imageUrl": "https://images.ctfassets.net/yiybmxu7wtzi/1yf54eXmc6sUupK2GltoMX/17f061cde17af8835f052ad14fa6d410/ALGS_Split_1_Playoffs_EYNTK_Thumbnail.jpg",
+      "sha256": "aa4dbd132571a9aa23ccb9203030a8d35bcb123f557e785b607f32c4a5c9ef10",
+      "bytes": 154379
+    },
+    {
+      "localPath": "assets/apex/2a47dd55faa39448.jpg",
+      "sourceUrl": "https://algs.ea.com/en/news/algs-split-2-tickets-on-sale",
+      "imageUrl": "https://images.ctfassets.net/yiybmxu7wtzi/1YGqlokaULyNtRMNl2EOFI/bbd20b1307dfa36ed38a53e8f6b4520c/Ticketlive_NewsArticle.jpg",
+      "sha256": "bee05cc10b4c144a876b71b84763dc01b0cef9fb5322e11e2168ac4dd7a9f96b",
+      "bytes": 204988
+    },
+    {
+      "localPath": "assets/apex/6c3c6e732d0c084e.jpg",
+      "sourceUrl": "https://algs.ea.com/en/news/apex-packs",
+      "imageUrl": "https://images.ctfassets.net/yiybmxu7wtzi/5ATTfCWDmp0cStgyqIlLC4/cd8f2df024ff7977878135474d3be998/ApexPacks_Thumbnail.jpg",
+      "sha256": "dd872f4066ba298280a83ebd670417db4f9179c77ce818fc5ede023fe679c832",
+      "bytes": 190878
+    },
+    {
+      "localPath": "assets/apex/9bf184048b05eb9c.jpg",
+      "sourceUrl": "https://algs.ea.com/en/news/win-algs-split-2-playoff-tickets",
+      "imageUrl": "https://images.ctfassets.net/yiybmxu7wtzi/5Q7PYkRzDjIEM098E5wqLI/28c3e36661f1886328b83ca6d0da8490/ALGS_SPL2_Playoff_TicketGiveaway_NoCTA__1_.jpg",
+      "sha256": "cdc7b75b089812d115e5bdda38a49edba8771534e1bcf66bd506e6a6ecbf9ac8",
+      "bytes": 242759
+    }
+  ]
+}

@@ -8,7 +8,7 @@ const path = require('node:path');
 app.setPath('userData',path.resolve(__dirname,'../.validation-cache/layout-browser'));
 const origin = process.env.DROPZONE_PREVIEW_URL || 'http://127.0.0.1:4177';
 const views = {
-  finals: ['.game-simple-heading', '.finals-class-tabs', '.finals-layout', '.finals-source'],
+  finals: ['.fn-page-intro', '.fn-class-selector', '.fn-loadout-workspace', '.fn-sources'],
   operators: ['.game-simple-heading','.operator-filters','#operator-results','.operator-credit'],
   siege: ['.game-simple-heading', '.r6-toolbar', '.r6-map-detail', '.r6-method'],
   market: ['.market-page>header', '#market-content', '.market-stats', '.market-chart'],
@@ -90,7 +90,7 @@ app.whenReady().then(async () => {
         }
         if (game==='finals') {
           await run(()=>document.querySelector('[data-finals-tab="teams"]').click());
-          await verify(label+' teams',['.game-simple-heading','.team-player-grid','.finals-source']);
+          await verify(label+' teams',['.fn-page-intro','.fn-team-player-grid','.fn-sources']);
         }
         if (game==='siege') for (const tab of ['stats']) {
           await run(tab=>document.querySelector(`[data-r6-tab="${tab}"]`).click(),tab);

@@ -336,6 +336,237 @@
   "calibration": "Estimated against an in-game grid screenshot. Map imagery is an undated community snapshot and may omit changes in later patches.",
   "referenceUrl": "https://gray-zone-warfare.fandom.com/wiki/Locations",
   "reviewedAt": "2026-09-06",
-  "remoteTiles": false,
-  "markerCoordinateSource": "https://gzwtacmap.com/maps/lamang"
+  "remoteTiles": true,
+  "markerCoordinateSource": "https://gzwtacmap.com/maps/lamang",
+  "terrain": {
+    "version": "0.4",
+    "bounds": {
+      "minX": 100,
+      "maxX": 240,
+      "minY": 100,
+      "maxY": 180
+    },
+    "coordinateSystem": "Publisher local metres on the standard XYZ tile grid; game grid = 100 + metres / 100.",
+    "sourceUrl": "https://gzwtacmap.com/maps/lamang",
+    "fetchedAt": "2026-09-30T21:24:15.723Z",
+    "imageryDate": null,
+    "tiles": [
+      {
+        "z": 14,
+        "x": 8192,
+        "y": 8188,
+        "asset": "assets/gzw/terrain-0.4/14-8192-8188.png",
+        "sourceUrl": "https://cdn.gzwtacmap.com/0.4/lamang/14/8192/8188.png",
+        "bytes": 18872,
+        "sha256": "38a4abdfc8e085b0fca58360d7fe0686e1121976487d62140cf2bbbba58d552e"
+      },
+      {
+        "z": 14,
+        "x": 8192,
+        "y": 8189,
+        "asset": "assets/gzw/terrain-0.4/14-8192-8189.png",
+        "sourceUrl": "https://cdn.gzwtacmap.com/0.4/lamang/14/8192/8189.png",
+        "bytes": 63967,
+        "sha256": "6334da19b2ccb02381bd84960c2216fa086afd89f3a31b381c328532bf8b4e59"
+      },
+      {
+        "z": 14,
+        "x": 8192,
+        "y": 8190,
+        "asset": "assets/gzw/terrain-0.4/14-8192-8190.png",
+        "sourceUrl": "https://cdn.gzwtacmap.com/0.4/lamang/14/8192/8190.png",
+        "bytes": 65223,
+        "sha256": "9dfc839c90a7ca8cbb1cdfbd6d7192928ea32df3a6ff338e9ad76ee4aeaa5566"
+      },
+      {
+        "z": 14,
+        "x": 8192,
+        "y": 8191,
+        "asset": "assets/gzw/terrain-0.4/14-8192-8191.png",
+        "sourceUrl": "https://cdn.gzwtacmap.com/0.4/lamang/14/8192/8191.png",
+        "bytes": 65978,
+        "sha256": "bd47d1ac164db9db75659693f8fdadc033ac32d4cda1ac97571bc25bb5270771"
+      },
+      {
+        "z": 14,
+        "x": 8193,
+        "y": 8188,
+        "asset": "assets/gzw/terrain-0.4/14-8193-8188.png",
+        "sourceUrl": "https://cdn.gzwtacmap.com/0.4/lamang/14/8193/8188.png",
+        "bytes": 18812,
+        "sha256": "8d6d4f37241ed06d05bb717141ec5b56133678899e291e2e49888ba41d696a08"
+      },
+      {
+        "z": 14,
+        "x": 8193,
+        "y": 8189,
+        "asset": "assets/gzw/terrain-0.4/14-8193-8189.png",
+        "sourceUrl": "https://cdn.gzwtacmap.com/0.4/lamang/14/8193/8189.png",
+        "bytes": 64024,
+        "sha256": "3c69917276cc1776d5666211f0fd7969a1143ef90d73c5eeef9f91b639ea3012"
+      },
+      {
+        "z": 14,
+        "x": 8193,
+        "y": 8190,
+        "asset": "assets/gzw/terrain-0.4/14-8193-8190.png",
+        "sourceUrl": "https://cdn.gzwtacmap.com/0.4/lamang/14/8193/8190.png",
+        "bytes": 63628,
+        "sha256": "af782bb5019d96af8a58f1be2748e1959255cb5b554413a479b88af935788c78"
+      },
+      {
+        "z": 14,
+        "x": 8193,
+        "y": 8191,
+        "asset": "assets/gzw/terrain-0.4/14-8193-8191.png",
+        "sourceUrl": "https://cdn.gzwtacmap.com/0.4/lamang/14/8193/8191.png",
+        "bytes": 63974,
+        "sha256": "0f104a755a9ed8b0d79954f31362fc8317aa53a0c31077d0f86278eb6f32bc88"
+      },
+      {
+        "z": 14,
+        "x": 8194,
+        "y": 8188,
+        "asset": "assets/gzw/terrain-0.4/14-8194-8188.png",
+        "sourceUrl": "https://cdn.gzwtacmap.com/0.4/lamang/14/8194/8188.png",
+        "bytes": 18914,
+        "sha256": "6e3eea796b51e36800b22ac44576c91f2e888f6949ce612785ba588a53104c77"
+      },
+      {
+        "z": 14,
+        "x": 8194,
+        "y": 8189,
+        "asset": "assets/gzw/terrain-0.4/14-8194-8189.png",
+        "sourceUrl": "https://cdn.gzwtacmap.com/0.4/lamang/14/8194/8189.png",
+        "bytes": 63320,
+        "sha256": "8845022840276ab7c9b27e283aa984de2b96d70c092a28b701de8cdd46c55149"
+      },
+      {
+        "z": 14,
+        "x": 8194,
+        "y": 8190,
+        "asset": "assets/gzw/terrain-0.4/14-8194-8190.png",
+        "sourceUrl": "https://cdn.gzwtacmap.com/0.4/lamang/14/8194/8190.png",
+        "bytes": 62446,
+        "sha256": "3950a263fdca292dad529b7bcb76a527475011f0c95378154b7f35b1ff9ea5bc"
+      },
+      {
+        "z": 14,
+        "x": 8194,
+        "y": 8191,
+        "asset": "assets/gzw/terrain-0.4/14-8194-8191.png",
+        "sourceUrl": "https://cdn.gzwtacmap.com/0.4/lamang/14/8194/8191.png",
+        "bytes": 62224,
+        "sha256": "6cd36310932ee578e16843d99d94481337680b69497b3afcdbeaabbb362d7c9c"
+      },
+      {
+        "z": 14,
+        "x": 8195,
+        "y": 8188,
+        "asset": "assets/gzw/terrain-0.4/14-8195-8188.png",
+        "sourceUrl": "https://cdn.gzwtacmap.com/0.4/lamang/14/8195/8188.png",
+        "bytes": 18920,
+        "sha256": "baef1861ba2c5eb0ff037c111880131cdbee24eaeb61bcf4322fdb23cfe9409a"
+      },
+      {
+        "z": 14,
+        "x": 8195,
+        "y": 8189,
+        "asset": "assets/gzw/terrain-0.4/14-8195-8189.png",
+        "sourceUrl": "https://cdn.gzwtacmap.com/0.4/lamang/14/8195/8189.png",
+        "bytes": 62212,
+        "sha256": "b6789b8ecf2abe6bd4b8200b3114bd10b1a35a1bea1150459874750fcc2ddf39"
+      },
+      {
+        "z": 14,
+        "x": 8195,
+        "y": 8190,
+        "asset": "assets/gzw/terrain-0.4/14-8195-8190.png",
+        "sourceUrl": "https://cdn.gzwtacmap.com/0.4/lamang/14/8195/8190.png",
+        "bytes": 62786,
+        "sha256": "56b6bc9fc2178106fafbb467378a9e32520979c8162031e7f8c6944b6693eddf"
+      },
+      {
+        "z": 14,
+        "x": 8195,
+        "y": 8191,
+        "asset": "assets/gzw/terrain-0.4/14-8195-8191.png",
+        "sourceUrl": "https://cdn.gzwtacmap.com/0.4/lamang/14/8195/8191.png",
+        "bytes": 62516,
+        "sha256": "fa0eb5133ae0436ba3ce230c24d2695f858c4c260387739db5f49b36a0bdedfa"
+      },
+      {
+        "z": 14,
+        "x": 8196,
+        "y": 8188,
+        "asset": "assets/gzw/terrain-0.4/14-8196-8188.png",
+        "sourceUrl": "https://cdn.gzwtacmap.com/0.4/lamang/14/8196/8188.png",
+        "bytes": 18907,
+        "sha256": "b11dcd4200cc9692d6afb1db7e6617b192e7cbf4109895c80d32c4529a557d0b"
+      },
+      {
+        "z": 14,
+        "x": 8196,
+        "y": 8189,
+        "asset": "assets/gzw/terrain-0.4/14-8196-8189.png",
+        "sourceUrl": "https://cdn.gzwtacmap.com/0.4/lamang/14/8196/8189.png",
+        "bytes": 63365,
+        "sha256": "9befc775a503dec5bac9a00fd93bbf11b17d3d9bb763f5b987e9780fd432cc48"
+      },
+      {
+        "z": 14,
+        "x": 8196,
+        "y": 8190,
+        "asset": "assets/gzw/terrain-0.4/14-8196-8190.png",
+        "sourceUrl": "https://cdn.gzwtacmap.com/0.4/lamang/14/8196/8190.png",
+        "bytes": 52091,
+        "sha256": "5c3050c6d752a8bfc28cf370ba7c43f90b751ada619a39e5578c37f895f93bb9"
+      },
+      {
+        "z": 14,
+        "x": 8196,
+        "y": 8191,
+        "asset": "assets/gzw/terrain-0.4/14-8196-8191.png",
+        "sourceUrl": "https://cdn.gzwtacmap.com/0.4/lamang/14/8196/8191.png",
+        "bytes": 62734,
+        "sha256": "c8ade86befa99160e9c9be81ceb356558049496ccc61f7238d7964ceab887c50"
+      },
+      {
+        "z": 14,
+        "x": 8197,
+        "y": 8188,
+        "asset": "assets/gzw/terrain-0.4/14-8197-8188.png",
+        "sourceUrl": "https://cdn.gzwtacmap.com/0.4/lamang/14/8197/8188.png",
+        "bytes": 14107,
+        "sha256": "a34469725fde75e2b3facbfe1143a4f6fed193450b210c75cffeba0a728dac35"
+      },
+      {
+        "z": 14,
+        "x": 8197,
+        "y": 8189,
+        "asset": "assets/gzw/terrain-0.4/14-8197-8189.png",
+        "sourceUrl": "https://cdn.gzwtacmap.com/0.4/lamang/14/8197/8189.png",
+        "bytes": 36530,
+        "sha256": "f96e5b6c0c712c203c50c1e400c5394de5d45c3749bf5363c912488b76f6c31b"
+      },
+      {
+        "z": 14,
+        "x": 8197,
+        "y": 8190,
+        "asset": "assets/gzw/terrain-0.4/14-8197-8190.png",
+        "sourceUrl": "https://cdn.gzwtacmap.com/0.4/lamang/14/8197/8190.png",
+        "bytes": 38816,
+        "sha256": "87143c1adff21432e38fc4ce2aac60b1271295145417ada699ad5a8ae42e57f9"
+      },
+      {
+        "z": 14,
+        "x": 8197,
+        "y": 8191,
+        "asset": "assets/gzw/terrain-0.4/14-8197-8191.png",
+        "sourceUrl": "https://cdn.gzwtacmap.com/0.4/lamang/14/8197/8191.png",
+        "bytes": 48262,
+        "sha256": "1947f996791d50a25afb5a35565eef9106b3c85d1458636eb968d0acac333dab"
+      }
+    ]
+  }
 }

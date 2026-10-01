@@ -1,0 +1,694 @@
+{
+  "schema": 1,
+  "source": "THE FINALS Wiki",
+  "sourceUrl": "https://www.thefinals.wiki",
+  "retrievedAt": "2026-09-30T20:02:19.098734+00:00",
+  "owners": "THE FINALS game artwork belongs to Embark Studios. Wiki content is CC BY-SA unless otherwise noted; game imagery retains its original ownership.",
+  "aliases": {
+    "Chimera XB": "Chimera-XB",
+    "Charge N Slam": "Charge 'N' Slam",
+    "Infuser": "H+ Infuser"
+  },
+  "items": {
+    "93R": {
+      "kind": "weapon",
+      "pageUrl": "https://www.thefinals.wiki/wiki/93R",
+      "path": "assets/finals/items/93r.webp",
+      "imageUrl": "https://www.thefinals.wiki/w/images/thumb/d/d5/93R_Sideview.png/512px-93R_Sideview.png.webp",
+      "sha256": "2729a3a296ae8c27de1b481c1ff54a02312d7088cb3a10e362b58e8304e1783a",
+      "sizeBytes": 12400
+    },
+    "ARN-220": {
+      "kind": "weapon",
+      "pageUrl": "https://www.thefinals.wiki/wiki/ARN-220",
+      "path": "assets/finals/items/arn-220.webp",
+      "imageUrl": "https://www.thefinals.wiki/w/images/thumb/0/02/ARN-220_sideview.png/512px-ARN-220_sideview.png.webp",
+      "sha256": "97f343fa3ced2f7d8a18cc0671e31aff4333ab6b9edbf948b5ae665527df87a1",
+      "sizeBytes": 19192
+    },
+    "Dagger": {
+      "kind": "weapon",
+      "pageUrl": "https://www.thefinals.wiki/wiki/Dagger",
+      "path": "assets/finals/items/dagger.webp",
+      "imageUrl": "https://www.thefinals.wiki/w/images/thumb/1/15/Knife_Sideview.png/512px-Knife_Sideview.png.webp",
+      "sha256": "cbe88192f86f389662156d68b4bc4ae67d7c11f110e408567c50b98a257af54d",
+      "sizeBytes": 7978
+    },
+    "LH1": {
+      "kind": "weapon",
+      "pageUrl": "https://www.thefinals.wiki/wiki/LH1",
+      "path": "assets/finals/items/lh1.webp",
+      "imageUrl": "https://www.thefinals.wiki/w/images/thumb/4/4b/LH1_Sideview.png/512px-LH1_Sideview.png.webp",
+      "sha256": "a07317c6d0e240ced52d8e387ee9d3e89e1e6cba3b846d825abbdccd5ec269b3",
+      "sizeBytes": 14744
+    },
+    "M11": {
+      "kind": "weapon",
+      "pageUrl": "https://www.thefinals.wiki/wiki/M11",
+      "path": "assets/finals/items/m11.webp",
+      "imageUrl": "https://www.thefinals.wiki/w/images/thumb/b/be/M11_SideView-v2.png/512px-M11_SideView-v2.png.webp",
+      "sha256": "87add146e820e56f6b295440dc325b67d6cb94f727d1244e40ab35864056d48a",
+      "sizeBytes": 13256
+    },
+    "M26 Matter": {
+      "kind": "weapon",
+      "pageUrl": "https://www.thefinals.wiki/wiki/M26_Matter",
+      "path": "assets/finals/items/m26-matter.webp",
+      "imageUrl": "https://www.thefinals.wiki/w/images/thumb/4/45/M26_Matter_Sideview.png/512px-M26_Matter_Sideview.png.webp",
+      "sha256": "c244dc6a801c5a95bd7c2ec0b908778a71ac2bb2afc0b47c4a2711232fa75ba6",
+      "sizeBytes": 15814
+    },
+    "Recurve Bow": {
+      "kind": "weapon",
+      "pageUrl": "https://www.thefinals.wiki/wiki/Recurve_Bow",
+      "path": "assets/finals/items/recurve-bow.webp",
+      "imageUrl": "https://www.thefinals.wiki/w/images/thumb/3/38/Recurve-Bow_Sideview.png/512px-Recurve-Bow_Sideview.png.webp",
+      "sha256": "c6518010cec2ed1dcc59b680fe7297c0429825b105f545578e099288f6d3cf63",
+      "sizeBytes": 19400
+    },
+    "SH1900": {
+      "kind": "weapon",
+      "pageUrl": "https://www.thefinals.wiki/wiki/SH1900",
+      "path": "assets/finals/items/sh1900.webp",
+      "imageUrl": "https://www.thefinals.wiki/w/images/thumb/5/5b/Sawnoff_Sideview.png/512px-Sawnoff_Sideview.png.webp",
+      "sha256": "7748ad80f27517d427122b0d32acf83c01346c3aef716e60fabd893f24e44ceb",
+      "sizeBytes": 9706
+    },
+    "SR-84": {
+      "kind": "weapon",
+      "pageUrl": "https://www.thefinals.wiki/wiki/SR-84",
+      "path": "assets/finals/items/sr-84.webp",
+      "imageUrl": "https://www.thefinals.wiki/w/images/thumb/3/31/SR-84_SideView-v2.png/512px-SR-84_SideView-v2.png.webp",
+      "sha256": "2341f8c9d1d99b2bf0d3fd01b85a65207e7bd6578139035948e879b5271750fb",
+      "sizeBytes": 13900
+    },
+    "Sword": {
+      "kind": "weapon",
+      "pageUrl": "https://www.thefinals.wiki/wiki/Sword",
+      "path": "assets/finals/items/sword.webp",
+      "imageUrl": "https://www.thefinals.wiki/w/images/thumb/8/80/Sword_Sideview.png/512px-Sword_Sideview.png.webp",
+      "sha256": "699506201e9f66cc27bb98abfde66def89443a0c0abbaa76b9c4febf789fa4b1",
+      "sizeBytes": 10596
+    },
+    "Throwing Knives": {
+      "kind": "weapon",
+      "pageUrl": "https://www.thefinals.wiki/wiki/Throwing_Knives",
+      "path": "assets/finals/items/throwing-knives.webp",
+      "imageUrl": "https://www.thefinals.wiki/w/images/thumb/e/e5/ThrowingKnives_Sideview.png/512px-ThrowingKnives_Sideview.png.webp",
+      "sha256": "c514a37d92692b4818cc88048092c85e3a675abf6aa7875ea4cc0d0e5a3b42e4",
+      "sizeBytes": 11078
+    },
+    "V9S": {
+      "kind": "weapon",
+      "pageUrl": "https://www.thefinals.wiki/wiki/V9S",
+      "path": "assets/finals/items/v9s.webp",
+      "imageUrl": "https://www.thefinals.wiki/w/images/thumb/e/e2/V9S_Sideview.png/512px-V9S_Sideview.png.webp",
+      "sha256": "09c7144bca6192ec906f7f38affef0176402150d16bad828caf1f4121e4a16ea",
+      "sizeBytes": 10878
+    },
+    "XP-54": {
+      "kind": "weapon",
+      "pageUrl": "https://www.thefinals.wiki/wiki/XP-54",
+      "path": "assets/finals/items/xp-54.webp",
+      "imageUrl": "https://www.thefinals.wiki/w/images/thumb/b/b6/XP54_Sideview.png/512px-XP54_Sideview.png.webp",
+      "sha256": "78df580b062fca3a253841dfd761d33a359ad88991c83a1695114c37e8d65d5e",
+      "sizeBytes": 15702
+    },
+    "AKM": {
+      "kind": "weapon",
+      "pageUrl": "https://www.thefinals.wiki/wiki/AKM",
+      "path": "assets/finals/items/akm.webp",
+      "imageUrl": "https://www.thefinals.wiki/w/images/thumb/8/83/AKM_Sideview.png/512px-AKM_Sideview.png.webp",
+      "sha256": "0bd4357dc1b748a89ded34c818ab99b1873a5231f0cb2c7954819cb36464facb",
+      "sizeBytes": 16444
+    },
+    "CB-01 Repeater": {
+      "kind": "weapon",
+      "pageUrl": "https://www.thefinals.wiki/wiki/CB-01_Repeater",
+      "path": "assets/finals/items/cb-01-repeater.webp",
+      "imageUrl": "https://www.thefinals.wiki/w/images/thumb/8/83/CB-01_Repeater_sideview.png/512px-CB-01_Repeater_sideview.png.webp",
+      "sha256": "c98b7304adcb81b82ee5b5f6d7bad2279559cec2a958203afcbbbc8a4dd42830",
+      "sizeBytes": 16410
+    },
+    "Cerberus 12GA": {
+      "kind": "weapon",
+      "pageUrl": "https://www.thefinals.wiki/wiki/Cerberus_12GA",
+      "path": "assets/finals/items/cerberus-12ga.webp",
+      "imageUrl": "https://www.thefinals.wiki/w/images/thumb/9/97/Cerberus_12GA.png/512px-Cerberus_12GA.png.webp",
+      "sha256": "560f4938c0e9cb6000c75f07cd729424176502e2f4ef9f65ed7a27ce2d0718bf",
+      "sizeBytes": 16212
+    },
+    "Chimera-XB": {
+      "kind": "weapon",
+      "pageUrl": "https://www.thefinals.wiki/wiki/Chimera-XB",
+      "path": "assets/finals/items/chimera-xb.webp",
+      "imageUrl": "https://www.thefinals.wiki/w/images/thumb/9/97/Chimera-XB_Sideview.png/512px-Chimera-XB_Sideview.png.webp",
+      "sha256": "e829ba6509d2314d043924af41194526641433d33e49c81535745fcad8cdc429",
+      "sizeBytes": 14728
+    },
+    "CL-40": {
+      "kind": "weapon",
+      "pageUrl": "https://www.thefinals.wiki/wiki/CL-40",
+      "path": "assets/finals/items/cl-40.webp",
+      "imageUrl": "https://www.thefinals.wiki/w/images/thumb/d/db/Pump_GL_Standardissue.png/512px-Pump_GL_Standardissue.png.webp",
+      "sha256": "4b5f347e88cd742bec087569cf98544b2eb36f47ab3e1bcd52de237eb6e4c0e1",
+      "sizeBytes": 16476
+    },
+    "Dual Blades": {
+      "kind": "weapon",
+      "pageUrl": "https://www.thefinals.wiki/wiki/Dual_Blades",
+      "path": "assets/finals/items/dual-blades.webp",
+      "imageUrl": "https://www.thefinals.wiki/w/images/thumb/2/25/Dual-Blades_Sideview.png/512px-Dual-Blades_Sideview.png.webp",
+      "sha256": "fec6dad708e43abd4784de509211edb10349697fa7ba7c8ec5a2bb027ea0b235",
+      "sizeBytes": 13080
+    },
+    "FAMAS": {
+      "kind": "weapon",
+      "pageUrl": "https://www.thefinals.wiki/wiki/FAMAS",
+      "path": "assets/finals/items/famas.webp",
+      "imageUrl": "https://www.thefinals.wiki/w/images/thumb/3/38/FAMAS_Sideview.png/512px-FAMAS_Sideview.png.webp",
+      "sha256": "53a271c7ccb347649f1bc3c412403929269447d71464148346398deaa868580f",
+      "sizeBytes": 18410
+    },
+    "FCAR": {
+      "kind": "weapon",
+      "pageUrl": "https://www.thefinals.wiki/wiki/FCAR",
+      "path": "assets/finals/items/fcar.webp",
+      "imageUrl": "https://www.thefinals.wiki/w/images/thumb/f/f3/FCAR_Side-View.png/512px-FCAR_Side-View.png.webp",
+      "sha256": "88f592b8496fbf3538e24786f4b0f9d988b99f79521d36d2f7193a11554886eb",
+      "sizeBytes": 18756
+    },
+    "Model 1887": {
+      "kind": "weapon",
+      "pageUrl": "https://www.thefinals.wiki/wiki/Model_1887",
+      "path": "assets/finals/items/model-1887.webp",
+      "imageUrl": "https://www.thefinals.wiki/w/images/thumb/6/64/Repeater_Standardissue.png/512px-Repeater_Standardissue.png.webp",
+      "sha256": "da5c4b2c3e4813c4efacd96f7fb372d62db06bd614a4ea9b6460e49d94c931f6",
+      "sizeBytes": 11692
+    },
+    "P90": {
+      "kind": "weapon",
+      "pageUrl": "https://www.thefinals.wiki/wiki/P90",
+      "path": "assets/finals/items/p90.png",
+      "imageUrl": "https://www.thefinals.wiki/w/images/c/c2/P90.png",
+      "sha256": "30fe7e3cc0a8931bc770bb45ba2eaf1b6dd184853f1dd2774791fdbb5c11605a",
+      "sizeBytes": 47345
+    },
+    "Pike-556": {
+      "kind": "weapon",
+      "pageUrl": "https://www.thefinals.wiki/wiki/Pike-556",
+      "path": "assets/finals/items/pike-556.webp",
+      "imageUrl": "https://www.thefinals.wiki/w/images/thumb/f/f5/Pike-556_Sideview.png/512px-Pike-556_Sideview.png.webp",
+      "sha256": "dc38ba61f2754104f14f1b00020b7b7e8f7551c8d1325d039b614d7550aa3b93",
+      "sizeBytes": 12950
+    },
+    "R .357": {
+      "kind": "weapon",
+      "pageUrl": "https://www.thefinals.wiki/wiki/R_.357",
+      "path": "assets/finals/items/r-357.webp",
+      "imageUrl": "https://www.thefinals.wiki/w/images/thumb/f/fb/R.357_SideView2.png/512px-R.357_SideView2.png.webp",
+      "sha256": "fe8c644381f87658dd8c807b781c67806c350a8c190291314bc0dd72da0c5873",
+      "sizeBytes": 10654
+    },
+    "Riot Shield": {
+      "kind": "weapon",
+      "pageUrl": "https://www.thefinals.wiki/wiki/Riot_Shield",
+      "path": "assets/finals/items/riot-shield.webp",
+      "imageUrl": "https://www.thefinals.wiki/w/images/thumb/9/9a/THE_FINALS_Riot-Shield-Infobox.png/512px-THE_FINALS_Riot-Shield-Infobox.png.webp",
+      "sha256": "591c562debb06601ae365671ef0c739883387d9c597b9eeef2107a57c842ddff",
+      "sizeBytes": 15394
+    },
+    ".50 Akimbo": {
+      "kind": "weapon",
+      "pageUrl": "https://www.thefinals.wiki/wiki/.50_Akimbo",
+      "path": "assets/finals/items/50-akimbo.webp",
+      "imageUrl": "https://www.thefinals.wiki/w/images/thumb/3/34/.50_Akimbo_Sideview.png/512px-.50_Akimbo_Sideview.png.webp",
+      "sha256": "58c21abcbde4733f15fa2348f6cba0cb620e9a8a13ea80c4774c690412023a3d",
+      "sizeBytes": 19758
+    },
+    "BFR Titan": {
+      "kind": "weapon",
+      "pageUrl": "https://www.thefinals.wiki/wiki/BFR_Titan",
+      "path": "assets/finals/items/bfr-titan.png",
+      "imageUrl": "https://www.thefinals.wiki/w/images/f/fb/BFR_Titan.png",
+      "sha256": "b624647d98131f7b31a7b2aadfc6e01b695f4c0db34584ecad2a3bc002298300",
+      "sizeBytes": 28602
+    },
+    "Flamethrower": {
+      "kind": "weapon",
+      "pageUrl": "https://www.thefinals.wiki/wiki/Flamethrower",
+      "path": "assets/finals/items/flamethrower.webp",
+      "imageUrl": "https://www.thefinals.wiki/w/images/thumb/e/e3/Flamethrower_StandardIssue.png/512px-Flamethrower_StandardIssue.png.webp",
+      "sha256": "a0273af33c74e59750b8ed9ad149ae7faa1f44a15ef9328806920fea92d0619b",
+      "sizeBytes": 23252
+    },
+    "KS-23": {
+      "kind": "weapon",
+      "pageUrl": "https://www.thefinals.wiki/wiki/KS-23",
+      "path": "assets/finals/items/ks-23.webp",
+      "imageUrl": "https://www.thefinals.wiki/w/images/thumb/2/2b/KS-23_Sideview.png/512px-KS-23_Sideview.png.webp",
+      "sha256": "1414d72e3b52411b10e03e9ac3a4979556648f972b91101830f7f2b05cd9f0b0",
+      "sizeBytes": 13258
+    },
+    "Lewis Gun": {
+      "kind": "weapon",
+      "pageUrl": "https://www.thefinals.wiki/wiki/Lewis_Gun",
+      "path": "assets/finals/items/lewis-gun.webp",
+      "imageUrl": "https://www.thefinals.wiki/w/images/thumb/0/0c/Lewis-Gun_Side-View.png/512px-Lewis-Gun_Side-View.png.webp",
+      "sha256": "9b547b844aee4e8b2f3c6b04c5374b5da6867117bd705f23f6ebe2252a8cf76c",
+      "sizeBytes": 21818
+    },
+    "M134 Minigun": {
+      "kind": "weapon",
+      "pageUrl": "https://www.thefinals.wiki/wiki/M134_Minigun",
+      "path": "assets/finals/items/m134-minigun.webp",
+      "imageUrl": "https://www.thefinals.wiki/w/images/thumb/6/69/M134_Minigun_sideview.png/512px-M134_Minigun_sideview.png.webp",
+      "sha256": "fb14391208f99065d6cf49bd5e8a9dd09f25014b15924b2e9ac965d25077575d",
+      "sizeBytes": 20294
+    },
+    "M60": {
+      "kind": "weapon",
+      "pageUrl": "https://www.thefinals.wiki/wiki/M60",
+      "path": "assets/finals/items/m60.webp",
+      "imageUrl": "https://www.thefinals.wiki/w/images/thumb/6/6d/M60_StandardIssue.png/512px-M60_StandardIssue.png.webp",
+      "sha256": "2eb1800757b3eef12ec954c21d426354329ac74487085fa3be563ede8c7f32b2",
+      "sizeBytes": 23266
+    },
+    "MGL32": {
+      "kind": "weapon",
+      "pageUrl": "https://www.thefinals.wiki/wiki/MGL32",
+      "path": "assets/finals/items/mgl32.webp",
+      "imageUrl": "https://www.thefinals.wiki/w/images/thumb/7/73/M23GL_Sideview.png/512px-M23GL_Sideview.png.webp",
+      "sha256": "03073403c4b920c0efe44b2a5f815083d2c5ab54d4b62fa759d701be143d15f0",
+      "sizeBytes": 22040
+    },
+    "SA1216": {
+      "kind": "weapon",
+      "pageUrl": "https://www.thefinals.wiki/wiki/SA1216",
+      "path": "assets/finals/items/sa1216.webp",
+      "imageUrl": "https://www.thefinals.wiki/w/images/thumb/0/0e/SA1216_Sideview.png/512px-SA1216_Sideview.png.webp",
+      "sha256": "5431098ddd5921bd1ab6a295e128a3cc6e1d1fb51e605c6dceb476628b72e83c",
+      "sizeBytes": 13382
+    },
+    "ShAK-50": {
+      "kind": "weapon",
+      "pageUrl": "https://www.thefinals.wiki/wiki/ShAK-50",
+      "path": "assets/finals/items/shak-50.webp",
+      "imageUrl": "https://www.thefinals.wiki/w/images/thumb/0/0e/ShAK-50.png/512px-ShAK-50.png.webp",
+      "sha256": "04641fa1a145ec09ffbf95d1aa968d1aeeac936f24632f0b3c08317d8e313c86",
+      "sizeBytes": 23518
+    },
+    "Sledgehammer": {
+      "kind": "weapon",
+      "pageUrl": "https://www.thefinals.wiki/wiki/Sledgehammer",
+      "path": "assets/finals/items/sledgehammer.webp",
+      "imageUrl": "https://www.thefinals.wiki/w/images/thumb/9/9e/Sledgehammer_Infobox.png/512px-Sledgehammer_Infobox.png.webp",
+      "sha256": "dc51b7102aeb55cf413b9730fc10afe2a471e21d076edc452ab16bc5b34afdc2",
+      "sizeBytes": 9926
+    },
+    "Spear": {
+      "kind": "weapon",
+      "pageUrl": "https://www.thefinals.wiki/wiki/Spear",
+      "path": "assets/finals/items/spear.webp",
+      "imageUrl": "https://www.thefinals.wiki/w/images/thumb/b/b3/Spear_Sideview.png/512px-Spear_Sideview.png.webp",
+      "sha256": "b0d37b5fd08d120428f5eb134208beec96b140564237e00399c48ebeea752ef7",
+      "sizeBytes": 8834
+    },
+    "Breach Charge": {
+      "kind": "gadget",
+      "pageUrl": "https://www.thefinals.wiki/wiki/Breach_Charge",
+      "path": "assets/finals/items/breach-charge.webp",
+      "imageUrl": "https://www.thefinals.wiki/w/images/thumb/d/d3/Breaching_Charge1.png/512px-Breaching_Charge1.png.webp",
+      "sha256": "528e9855886f1f4981adbf65d57bebd56547b7399c2a001112a5898bd60cf723",
+      "sizeBytes": 12016
+    },
+    "Gateway": {
+      "kind": "gadget",
+      "pageUrl": "https://www.thefinals.wiki/wiki/Gateway",
+      "path": "assets/finals/items/gateway.webp",
+      "imageUrl": "https://www.thefinals.wiki/w/images/thumb/0/0c/Gateway.png/512px-Gateway.png.webp",
+      "sha256": "d6ca716e1e8315219f04263fa9ae5249bfbef08edd73d9b5c0da4d46b7385d2e",
+      "sizeBytes": 14988
+    },
+    "Glitch Grenade": {
+      "kind": "gadget",
+      "pageUrl": "https://www.thefinals.wiki/wiki/Glitch_Grenade",
+      "path": "assets/finals/items/glitch-grenade.webp",
+      "imageUrl": "https://www.thefinals.wiki/w/images/thumb/6/6c/Glitch_Grenade.png/512px-Glitch_Grenade.png.webp",
+      "sha256": "538e45eef29baeaeb74fc326effe84db11c287e24d1192a64ec50af02d48d7a1",
+      "sizeBytes": 11230
+    },
+    "Gravity Vortex": {
+      "kind": "gadget",
+      "pageUrl": "https://www.thefinals.wiki/wiki/Gravity_Vortex",
+      "path": "assets/finals/items/gravity-vortex.webp",
+      "imageUrl": "https://www.thefinals.wiki/w/images/thumb/a/a0/Gravity_Vortex.png/512px-Gravity_Vortex.png.webp",
+      "sha256": "9bfa866992e9729b67fda4c665d492e078ce4552cb4b5af2d9583611b0063a6f",
+      "sizeBytes": 17800
+    },
+    "H+ Infuser": {
+      "kind": "gadget",
+      "pageUrl": "https://www.thefinals.wiki/wiki/H%2B_Infuser",
+      "path": "assets/finals/items/h-infuser.png",
+      "imageUrl": "https://www.thefinals.wiki/w/images/e/e5/H%2B_Infuser_Infobox.png",
+      "sha256": "aed05dfe340785be926b5c111e501a6e5befa418d2c36ac40b5b404888a72f1a",
+      "sizeBytes": 47147
+    },
+    "Sonar Grenade": {
+      "kind": "gadget",
+      "pageUrl": "https://www.thefinals.wiki/wiki/Sonar_Grenade",
+      "path": "assets/finals/items/sonar-grenade.webp",
+      "imageUrl": "https://www.thefinals.wiki/w/images/thumb/8/87/Sonar_Grenade_Icon.png/512px-Sonar_Grenade_Icon.png.webp",
+      "sha256": "3936466e9f8a7574fad3d632d4a11a14ab7c1bd7e7624d6ab0d3f3ebe61884ff",
+      "sizeBytes": 10562
+    },
+    "Nullifier": {
+      "kind": "gadget",
+      "pageUrl": "https://www.thefinals.wiki/wiki/Nullifier",
+      "path": "assets/finals/items/nullifier.webp",
+      "imageUrl": "https://www.thefinals.wiki/w/images/thumb/f/f1/Stun_Gun.png/512px-Stun_Gun.png.webp",
+      "sha256": "a547b422457568d3fe0b4150b5f7c4076ec18685769cc11224c4b747301392d3",
+      "sizeBytes": 13886
+    },
+    "Thermal Bore": {
+      "kind": "gadget",
+      "pageUrl": "https://www.thefinals.wiki/wiki/Thermal_Bore",
+      "path": "assets/finals/items/thermal-bore.webp",
+      "imageUrl": "https://www.thefinals.wiki/w/images/thumb/9/9e/Thermal_Bore_Sideview.png/512px-Thermal_Bore_Sideview.png.webp",
+      "sha256": "3e587efc447507419b32f9ce1abaeeb4186afd00406a580477e544d29b4a59a9",
+      "sizeBytes": 16030
+    },
+    "Thermal Vision": {
+      "kind": "gadget",
+      "pageUrl": "https://www.thefinals.wiki/wiki/Thermal_Vision",
+      "path": "assets/finals/items/thermal-vision.png",
+      "imageUrl": "https://www.thefinals.wiki/w/images/8/83/Thermal_Vision.png",
+      "sha256": "7fdcd5cdb04a521b772b1ff11bfee81ba7171c5db017c0780b01a2e79f1b4bed",
+      "sizeBytes": 50595
+    },
+    "Tracking Dart": {
+      "kind": "gadget",
+      "pageUrl": "https://www.thefinals.wiki/wiki/Tracking_Dart",
+      "path": "assets/finals/items/tracking-dart.png",
+      "imageUrl": "https://www.thefinals.wiki/w/images/b/be/Tracking_Dart.png",
+      "sha256": "e5f2968ac404efeb29516289390d1eca3c931d813a7101cbe31c89bbec2576c4",
+      "sizeBytes": 21191
+    },
+    "Vanishing Bomb": {
+      "kind": "gadget",
+      "pageUrl": "https://www.thefinals.wiki/wiki/Vanishing_Bomb",
+      "path": "assets/finals/items/vanishing-bomb.webp",
+      "imageUrl": "https://www.thefinals.wiki/w/images/thumb/3/3d/Vanishing_Bomb_Icon.png/512px-Vanishing_Bomb_Icon.png.webp",
+      "sha256": "8153408133f2c60339e9fe01438a967a039e56ef4e19455fb41ffb3c21b8ab53",
+      "sizeBytes": 13200
+    },
+    "APS Turret": {
+      "kind": "gadget",
+      "pageUrl": "https://www.thefinals.wiki/wiki/APS_Turret",
+      "path": "assets/finals/items/aps-turret.webp",
+      "imageUrl": "https://www.thefinals.wiki/w/images/thumb/b/be/APS_Turret.png/512px-APS_Turret.png.webp",
+      "sha256": "cb8b5fc63980a5436f793192cbcb346318d32f8654cf8299882ced5c44dab552",
+      "sizeBytes": 13350
+    },
+    "Breach Drill": {
+      "kind": "gadget",
+      "pageUrl": "https://www.thefinals.wiki/wiki/Breach_Drill",
+      "path": "assets/finals/items/breach-drill.png",
+      "imageUrl": "https://www.thefinals.wiki/w/images/c/c6/BreachDrill_Infobox.png",
+      "sha256": "9a74e6894eb8c1ab0e7a0a1262cca38bbd0ff7d27d2bcb455e11029f4b1964e7",
+      "sizeBytes": 34496
+    },
+    "Data Reshaper": {
+      "kind": "gadget",
+      "pageUrl": "https://www.thefinals.wiki/wiki/Data_Reshaper",
+      "path": "assets/finals/items/data-reshaper.png",
+      "imageUrl": "https://www.thefinals.wiki/w/images/4/45/Data_Reshaper.png",
+      "sha256": "692a773659588b48d9acfcb46706830252d7b4ea4c4e53658b963271fdce372b",
+      "sizeBytes": 49080
+    },
+    "Defibrillator": {
+      "kind": "gadget",
+      "pageUrl": "https://www.thefinals.wiki/wiki/Defibrillator",
+      "path": "assets/finals/items/defibrillator.webp",
+      "imageUrl": "https://www.thefinals.wiki/w/images/thumb/5/5f/Defibrillator.png/512px-Defibrillator.png.webp",
+      "sha256": "7bd91c8f374a5e989e4491abf2d2400adc0002fb1c3c2afb070b7d15d6ed4fae",
+      "sizeBytes": 17434
+    },
+    "Gas Mine": {
+      "kind": "gadget",
+      "pageUrl": "https://www.thefinals.wiki/wiki/Gas_Mine",
+      "path": "assets/finals/items/gas-mine.webp",
+      "imageUrl": "https://www.thefinals.wiki/w/images/thumb/c/ce/Gas_Mine.png/512px-Gas_Mine.png.webp",
+      "sha256": "4c4cfa2e7ff97638838bc71a5665b792233fc5dda6eed04035dbb817badd19fb",
+      "sizeBytes": 19546
+    },
+    "Glitch Trap": {
+      "kind": "gadget",
+      "pageUrl": "https://www.thefinals.wiki/wiki/Glitch_Trap",
+      "path": "assets/finals/items/glitch-trap.webp",
+      "imageUrl": "https://www.thefinals.wiki/w/images/thumb/7/75/Glitch_Trap.png/512px-Glitch_Trap.png.webp",
+      "sha256": "6785ebf10e0dd288894541cb922fe4d0709467493c47d97975607eb89a60af18",
+      "sizeBytes": 18154
+    },
+    "Hover Pad": {
+      "kind": "gadget",
+      "pageUrl": "https://www.thefinals.wiki/wiki/Hover_Pad",
+      "path": "assets/finals/items/hover-pad.webp",
+      "imageUrl": "https://www.thefinals.wiki/w/images/thumb/d/da/Hover_Pad_sideview.png/512px-Hover_Pad_sideview.png.webp",
+      "sha256": "6676155ea29eb22f5393b06deaf5852ed7ce806af09db84a5ea97c7ea3f1bac6",
+      "sizeBytes": 21954
+    },
+    "Jump Pad": {
+      "kind": "gadget",
+      "pageUrl": "https://www.thefinals.wiki/wiki/Jump_Pad",
+      "path": "assets/finals/items/jump-pad.webp",
+      "imageUrl": "https://www.thefinals.wiki/w/images/thumb/4/4c/Jump_Pad.png/512px-Jump_Pad.png.webp",
+      "sha256": "66f257bf37a4f617a2bea4502c1bf01bb724ea0902f7ef23d5db1fe2cff7b158",
+      "sizeBytes": 18336
+    },
+    "Zipline": {
+      "kind": "gadget",
+      "pageUrl": "https://www.thefinals.wiki/wiki/Zipline",
+      "path": "assets/finals/items/zipline.webp",
+      "imageUrl": "https://www.thefinals.wiki/w/images/thumb/f/f9/Zipline.png/512px-Zipline.png.webp",
+      "sha256": "06dcadac5c93c4e6645a0edb9ba9718ea2e15829ec33c52fb9c7a74dd9c08daf",
+      "sizeBytes": 3450
+    },
+    "Anti-Gravity Cube": {
+      "kind": "gadget",
+      "pageUrl": "https://www.thefinals.wiki/wiki/Anti-Gravity_Cube",
+      "path": "assets/finals/items/anti-gravity-cube.webp",
+      "imageUrl": "https://www.thefinals.wiki/w/images/thumb/1/1c/Anti-Gravity_Cube.png/512px-Anti-Gravity_Cube.png.webp",
+      "sha256": "5968a9b53291c4e422752aad687a3bfeeea9ebddf2c233363c31a5eca2d1a49b",
+      "sizeBytes": 12826
+    },
+    "Barricade": {
+      "kind": "gadget",
+      "pageUrl": "https://www.thefinals.wiki/wiki/Barricade",
+      "path": "assets/finals/items/barricade.webp",
+      "imageUrl": "https://www.thefinals.wiki/w/images/thumb/c/cd/Barricade_Gadget.png/512px-Barricade_Gadget.png.webp",
+      "sha256": "ecc1fb5299029055eea37ea91d9899c4f7088901b6297cd05edc7baa65be8908",
+      "sizeBytes": 11442
+    },
+    "C4": {
+      "kind": "gadget",
+      "pageUrl": "https://www.thefinals.wiki/wiki/C4",
+      "path": "assets/finals/items/c4.webp",
+      "imageUrl": "https://www.thefinals.wiki/w/images/thumb/e/e3/C4_charge.png/512px-C4_charge.png.webp",
+      "sha256": "c880ffb34c581736b8b41ce88ea7ea808b3ce76fa82ce961bd727c39e95ed4ce",
+      "sizeBytes": 18116
+    },
+    "Dome Shield": {
+      "kind": "gadget",
+      "pageUrl": "https://www.thefinals.wiki/wiki/Dome_Shield",
+      "path": "assets/finals/items/dome-shield.webp",
+      "imageUrl": "https://www.thefinals.wiki/w/images/thumb/4/42/Dome_Shield.png/512px-Dome_Shield.png.webp",
+      "sha256": "ac950f6ab03a3b00f3e88e03da2e3d0fbf82c389f45bbac6889ade51a842ed45",
+      "sizeBytes": 10748
+    },
+    "Healing Emitter": {
+      "kind": "gadget",
+      "pageUrl": "https://www.thefinals.wiki/wiki/Healing_Emitter",
+      "path": "assets/finals/items/healing-emitter.png",
+      "imageUrl": "https://www.thefinals.wiki/w/images/0/08/HealingEmitter_Infobox.png",
+      "sha256": "e88d90197e78147bbaa835a1cb191a166d0b9ffb74cf2532cb69e2d414501ba1",
+      "sizeBytes": 42773
+    },
+    "Lockbolt": {
+      "kind": "gadget",
+      "pageUrl": "https://www.thefinals.wiki/wiki/Lockbolt",
+      "path": "assets/finals/items/lockbolt.webp",
+      "imageUrl": "https://www.thefinals.wiki/w/images/thumb/4/45/Lockbolt_Launcher.png/512px-Lockbolt_Launcher.png.webp",
+      "sha256": "e2d8a1491593312f0cf4ad808656278010d94f698e53894c32bb78bd9c01545e",
+      "sizeBytes": 19680
+    },
+    "Pyro Mine": {
+      "kind": "gadget",
+      "pageUrl": "https://www.thefinals.wiki/wiki/Pyro_Mine",
+      "path": "assets/finals/items/pyro-mine.png",
+      "imageUrl": "https://www.thefinals.wiki/w/images/a/a2/Pyro_Mine.png",
+      "sha256": "1d2578bc9be2a80ba14afa5a1ffc7767592924c62cea25f3ec091301d9eaf588",
+      "sizeBytes": 49447
+    },
+    "RPG-7": {
+      "kind": "gadget",
+      "pageUrl": "https://www.thefinals.wiki/wiki/RPG-7",
+      "path": "assets/finals/items/rpg-7.png",
+      "imageUrl": "https://www.thefinals.wiki/w/images/b/b8/RPG_Sideview.png",
+      "sha256": "67afa4e6b2d06103a3058e8319dcf379d925353c93a7b32e0becd47b63324849",
+      "sizeBytes": 21314
+    },
+    "Flashbang": {
+      "kind": "gadget",
+      "pageUrl": "https://www.thefinals.wiki/wiki/Flashbang",
+      "path": "assets/finals/items/flashbang.webp",
+      "imageUrl": "https://www.thefinals.wiki/w/images/thumb/8/86/Flashbang.png/512px-Flashbang.png.webp",
+      "sha256": "d8fdb5ae1eb404915a7b4e6403a870db52af886e717160ad0ea5e3c5a36a4be5",
+      "sizeBytes": 15842
+    },
+    "Frag Grenade": {
+      "kind": "gadget",
+      "pageUrl": "https://www.thefinals.wiki/wiki/Frag_Grenade",
+      "path": "assets/finals/items/frag-grenade.webp",
+      "imageUrl": "https://www.thefinals.wiki/w/images/thumb/6/6b/Frag_Grenade.png/512px-Frag_Grenade.png.webp",
+      "sha256": "d530b89a33b3b21ad990961e46ffef55b2b890ec94faf4cd876810e4b9d2973e",
+      "sizeBytes": 9734
+    },
+    "Gas Grenade": {
+      "kind": "gadget",
+      "pageUrl": "https://www.thefinals.wiki/wiki/Gas_Grenade",
+      "path": "assets/finals/items/gas-grenade.webp",
+      "imageUrl": "https://www.thefinals.wiki/w/images/thumb/f/fe/Gas_Grenade.png/512px-Gas_Grenade.png.webp",
+      "sha256": "dbfa7757c5d28dd6b7361869efa6d93f133d9cdc6b7d5c583fe85024122d312a",
+      "sizeBytes": 14964
+    },
+    "Goo Grenade": {
+      "kind": "gadget",
+      "pageUrl": "https://www.thefinals.wiki/wiki/Goo_Grenade",
+      "path": "assets/finals/items/goo-grenade.webp",
+      "imageUrl": "https://www.thefinals.wiki/w/images/thumb/d/d9/Goo_Grenade.png/512px-Goo_Grenade.png.webp",
+      "sha256": "93fc514ef0cf102828f0267d97d707ce93456ee55fabbd9d991134ec48ba192d",
+      "sizeBytes": 13282
+    },
+    "Pyro Grenade": {
+      "kind": "gadget",
+      "pageUrl": "https://www.thefinals.wiki/wiki/Pyro_Grenade",
+      "path": "assets/finals/items/pyro-grenade.webp",
+      "imageUrl": "https://www.thefinals.wiki/w/images/thumb/0/02/Pyro_Grenade.png/512px-Pyro_Grenade.png.webp",
+      "sha256": "7bbffa3868470d7600eb9e130eba657dbc0c8027b2c0e91f258994d73b6118c2",
+      "sizeBytes": 13720
+    },
+    "Smoke Grenade": {
+      "kind": "gadget",
+      "pageUrl": "https://www.thefinals.wiki/wiki/Smoke_Grenade",
+      "path": "assets/finals/items/smoke-grenade.webp",
+      "imageUrl": "https://www.thefinals.wiki/w/images/thumb/d/d5/Smoke_Grenade.png/512px-Smoke_Grenade.png.webp",
+      "sha256": "6f782c666a9f22d660688bade693d1df86d28921eaaf57dd2baf56f599ab2a51",
+      "sizeBytes": 13632
+    },
+    "Proximity Sensor": {
+      "kind": "gadget",
+      "pageUrl": "https://www.thefinals.wiki/wiki/Proximity_Sensor",
+      "path": "assets/finals/items/proximity-sensor.webp",
+      "imageUrl": "https://www.thefinals.wiki/w/images/thumb/0/0e/Motion_Sensor.png/512px-Motion_Sensor.png.webp",
+      "sha256": "292382574d6f74c8c9869be758db7d6b8a14e344d68fd70d17e70a0458b5a4e3",
+      "sizeBytes": 16208
+    },
+    "Explosive Mine": {
+      "kind": "gadget",
+      "pageUrl": "https://www.thefinals.wiki/wiki/Explosive_Mine",
+      "path": "assets/finals/items/explosive-mine.webp",
+      "imageUrl": "https://www.thefinals.wiki/w/images/thumb/2/22/Explosive_Mine.png/512px-Explosive_Mine.png.webp",
+      "sha256": "b778b5f62f955c9cc972038fc32f4c1c335733fef992b1deb9c08e017d3057d8",
+      "sizeBytes": 16230
+    },
+    "Cloaking Device": {
+      "kind": "specialization",
+      "pageUrl": "https://www.thefinals.wiki/wiki/Cloaking_Device",
+      "path": "assets/finals/items/cloaking-device.webp",
+      "imageUrl": "https://www.thefinals.wiki/w/images/thumb/0/08/Cloaking_Device.png/512px-Cloaking_Device.png.webp",
+      "sha256": "031253ab975c3e09ec549a7cfb13df2fb9d111b1489d55881511b690fdac88f0",
+      "sizeBytes": 19038
+    },
+    "Evasive Dash": {
+      "kind": "specialization",
+      "pageUrl": "https://www.thefinals.wiki/wiki/Evasive_Dash",
+      "path": "assets/finals/items/evasive-dash.webp",
+      "imageUrl": "https://www.thefinals.wiki/w/images/thumb/a/a9/Evasive_Dash.png/512px-Evasive_Dash.png.webp",
+      "sha256": "eb8aeef7c810e2fd388c7682fc76780d995ea916a6600dfc8426cf5f0c24c366",
+      "sizeBytes": 18474
+    },
+    "Grappling Hook": {
+      "kind": "specialization",
+      "pageUrl": "https://www.thefinals.wiki/wiki/Grappling_Hook",
+      "path": "assets/finals/items/grappling-hook.webp",
+      "imageUrl": "https://www.thefinals.wiki/w/images/thumb/3/3d/Grappling_Hook.png/512px-Grappling_Hook.png.webp",
+      "sha256": "11e63c998fd509d2fc774bfc536cf9f53dcc85709fe92afa123ecddcabc3ac30",
+      "sizeBytes": 17550
+    },
+    "Dematerializer": {
+      "kind": "specialization",
+      "pageUrl": "https://www.thefinals.wiki/wiki/Dematerializer",
+      "path": "assets/finals/items/dematerializer.webp",
+      "imageUrl": "https://www.thefinals.wiki/w/images/thumb/a/ad/Dematerializer.png/512px-Dematerializer.png.webp",
+      "sha256": "5212083c90b24be90c60f457ada093e6fbfeb79020a9dec2516aa430948b6ab4",
+      "sizeBytes": 18174
+    },
+    "Guardian Turret": {
+      "kind": "specialization",
+      "pageUrl": "https://www.thefinals.wiki/wiki/Guardian_Turret",
+      "path": "assets/finals/items/guardian-turret.webp",
+      "imageUrl": "https://www.thefinals.wiki/w/images/thumb/3/36/Guardian_Turret.png/512px-Guardian_Turret.png.webp",
+      "sha256": "97ddeebd8a4fad1d27454cb5317243d270dc002a0e68b2a2c9c06c31c0570809",
+      "sizeBytes": 26846
+    },
+    "Healing Beam": {
+      "kind": "specialization",
+      "pageUrl": "https://www.thefinals.wiki/wiki/Healing_Beam",
+      "path": "assets/finals/items/healing-beam.webp",
+      "imageUrl": "https://www.thefinals.wiki/w/images/thumb/8/82/Healing_Beam.png/512px-Healing_Beam.png.webp",
+      "sha256": "537e8994514d897bddd468e739425b32e7fa3e9d0818d54f994beffcc4c7b01a",
+      "sizeBytes": 20422
+    },
+    "Shockwave": {
+      "kind": "specialization",
+      "pageUrl": "https://www.thefinals.wiki/wiki/Shockwave",
+      "path": "assets/finals/items/shockwave.webp",
+      "imageUrl": "https://www.thefinals.wiki/w/images/thumb/6/65/Shockwave.png/512px-Shockwave.png.webp",
+      "sha256": "d48baa7908b89a6bbe842a473bc5fc4d167833e937319332dd41b848509f53b6",
+      "sizeBytes": 27360
+    },
+    "Charge 'N' Slam": {
+      "kind": "specialization",
+      "pageUrl": "https://www.thefinals.wiki/wiki/Charge_%27N%27_Slam",
+      "path": "assets/finals/items/charge-n-slam.webp",
+      "imageUrl": "https://www.thefinals.wiki/w/images/thumb/3/39/Charge_N_Slam.png/512px-Charge_N_Slam.png.webp",
+      "sha256": "aadefbfbeb03f56d1ad86ca8e038eab0799b9b5a33605e3f48eda3a7811ede88",
+      "sizeBytes": 18230
+    },
+    "Goo Gun": {
+      "kind": "specialization",
+      "pageUrl": "https://www.thefinals.wiki/wiki/Goo_Gun",
+      "path": "assets/finals/items/goo-gun.webp",
+      "imageUrl": "https://www.thefinals.wiki/w/images/thumb/6/62/Goo_Gun.png/512px-Goo_Gun.png.webp",
+      "sha256": "2819d6f4be93b1e221e8c91401f5b33ffc23702d0475c11c7b6e520572655fe6",
+      "sizeBytes": 20268
+    },
+    "Mesh Shield": {
+      "kind": "specialization",
+      "pageUrl": "https://www.thefinals.wiki/wiki/Mesh_Shield",
+      "path": "assets/finals/items/mesh-shield.webp",
+      "imageUrl": "https://www.thefinals.wiki/w/images/thumb/f/ff/Mesh_Shield.png/512px-Mesh_Shield.png.webp",
+      "sha256": "1ac54923bee7c8206a1a88f2d078620cccd94d12d9c816cf64ade450bd14d038",
+      "sizeBytes": 18870
+    },
+    "Winch Claw": {
+      "kind": "specialization",
+      "pageUrl": "https://www.thefinals.wiki/wiki/Winch_Claw",
+      "path": "assets/finals/items/winch-claw.webp",
+      "imageUrl": "https://www.thefinals.wiki/w/images/thumb/5/5c/Winch_Claw.png/512px-Winch_Claw.png.webp",
+      "sha256": "73080c73b477898fc2a01aa672e13c1a06bb8659191a74be514324d9f5a4c480",
+      "sizeBytes": 20964
+    }
+  }
+}
