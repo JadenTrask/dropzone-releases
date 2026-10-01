@@ -1,0 +1,33 @@
+{
+  "assets": [
+    {
+      "asset": "siege.png",
+      "source": "User-supplied local original, saved 2026-10-01",
+      "originalFilename": "Rainbow-Six-Logo.png",
+      "sha256": "f82c0368f5456f870da20858c1f24d3ea732e055265aa4c48f3c3ba16c996789",
+      "unchangedBytes": true
+    },
+    {
+      "asset": "lol.png",
+      "source": "User-supplied local original, saved 2026-10-01",
+      "originalFilename": "lol-league-of-Legends-logo-1.png",
+      "sha256": "72b6d41066ded2ad3a9cdf35d6994d8bc368d4d23a6e3e964d0c4dff7e290fda",
+      "unchangedBytes": true
+    },
+    {
+      "asset": "rlcs.webp",
+      "source": "User-supplied local original, saved 2026-10-01",
+      "originalFilename": "RLCS_Logo.png",
+      "sha256": "206881c15b3a9b258c74ddd11226c8c8ac34d3b44b8402b6b5bc0f0a9fde0b0d",
+      "unchangedBytes": true
+    },
+    {
+      "asset": "finals.svg",
+      "source": "User-supplied local original, saved 2026-10-01",
+      "originalFilename": "The_Finals_logo_stacked.png",
+      "sha256": "4f9629fd9c53ec9a6f9b92e48af40e5d8d33734a4f0b88552e3fc81fd8375042",
+      "unchangedBytes": true
+    }
+  ],
+  "notes": "Original bytes preserved. File extensions match actual encoded formats. Logo colour and transparent-padding placement are handled by CSS; no generated or substituted artwork."
+}

@@ -1,10 +1,10 @@
 export const RELEASE_NOTES={
- version:'2.5.1',
- title:'Smoother navigation. Videos together.',
+ version:'2.5.2',
+ title:'Your matches. Your coaching style.',
  items:[
-  {title:'Less flicker, steadier controls',body:'Saving launch preferences keeps the page still. Rocket League tab transitions leave the glass navigation header stable.'},
-  {title:'One Videos experience',body:'Consistent search, archives and playback controls across Call of Duty, Apex, Siege, League of Legends, THE FINALS and Rocket League. Show more keeps your scroll position.'},
-  {title:'Official Rocket League Videos',body:'Find RL Esports uploads, broadcasts and playlists in the existing top navigation. New game-logo backgrounds are still pending; the clear-glass material is unchanged.'},
+  {title:'Rocket League AI Overview',body:'Choose Nice Coach or Brutal Coach and copy a prompt built from your retained match history. Paste it into your preferred AI; Dropzone does not call an AI service.'},
+  {title:'Game artwork behind Videos',body:'Siege, League of Legends, RLCS and THE FINALS now have their supplied logo backgrounds, centered beneath the clear-glass panels as you scroll.'},
+  {title:'Everything in its place',body:'AI Overview sits beside Tracker settings, with Videos at the end of the Rocket League navigation. Both coaching styles use the same recorded facts and label missing data.'},
  ]
 };
 export const shouldShowRelease=(seen,version)=>seen!==version;

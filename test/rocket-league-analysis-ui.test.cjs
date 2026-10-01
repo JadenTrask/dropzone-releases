@@ -1,0 +1,21 @@
+'use strict';
+const {test}=require('node:test'),assert=require('node:assert/strict'),{JSDOM}=require('jsdom');
+const settle=()=>new Promise(r=>setImmediate(r));
+const result=()=>({text:'PRIVATE PROMPT MUST NEVER APPEAR IN THE DOM',summary:{matches:63,retentionDays:365,first:'2026-01-01T00:00:00Z',last:'2026-10-01T00:00:00Z',cloud:true,detailIncluded:50,detailTotal:63}});
+async function setup(bridge={}){const dom=new JSDOM('<main id="root"></main>',{url:'http://localhost/'});global.window=dom.window;global.document=dom.window.document;global.localStorage=dom.window.localStorage;const {mountAnalysisOverview}=await import('../app/rocket-league-analysis.js'),root=document.querySelector('#root'),dispose=mountAnalysisOverview(root,bridge);return{dom,root,dispose,button:root.querySelector('[data-ai-copy]'),status:root.querySelector('[role=status]')};}
+test('analysis screen copies only after deliberate action, locks repeat clicks, and never renders prompt data',async()=>{
+ let resolve,loads=0,copies=0,chosen;const f=await setup({load:tone=>{loads++;chosen=tone;return new Promise(r=>resolve=r);},copy:text=>{assert.equal(text,result().text);copies++;return true;}});
+ try{assert.equal(loads,0);assert.equal(copies,0);const brutal=f.root.querySelector('[data-ai-tone=brutal]');brutal.click();assert.equal(brutal.getAttribute('aria-pressed'),'true');assert.equal(copies,0);f.button.click();f.button.click();assert.equal(loads,1);assert.equal(chosen,'brutal');assert.equal(f.button.disabled,true);assert.equal(brutal.disabled,true);assert.match(f.status.textContent,/Reading/);assert.equal(f.button.textContent,'Copy analysis prompt');resolve(result());await settle();assert.equal(copies,1);assert.equal(f.button.disabled,false);assert.match(f.status.textContent,/All 63 matches/);assert.match(f.status.textContent,/50 recent/);assert.match(f.root.querySelector('[data-ai-coverage]').textContent,/Local \+ cloud/);assert.doesNotMatch(f.root.textContent,/PRIVATE PROMPT/);assert.equal(document.querySelector('textarea'),null);
+  f.root.querySelector('[data-ai-tone=nice]').click();assert.equal(f.root.querySelector('[data-ai-tone=nice]').getAttribute('aria-pressed'),'true');assert.equal(f.status.textContent,'');assert.match(f.root.querySelector('.rl-ai-tone-description').textContent,/Encouraging/);assert.equal(JSON.parse(localStorage.getItem('rl-analysis-tone')),'nice');
+ }finally{f.dispose();f.dom.window.close();}
+});
+test('analysis leaving a page cancels pending clipboard action',async()=>{
+ let resolve,copies=0;const f=await setup({load:()=>new Promise(r=>resolve=r),copy:()=>{copies++;}});f.button.click();f.dispose();f.root.innerHTML='Another page';resolve(result());await settle();assert.equal(copies,0);f.dom.window.close();
+});
+test('analysis errors and clipboard failure recover in the same screen without exposing exception details',async()=>{
+ let phase=0,copies=0;const f=await setup({load:async()=>{if(phase===0)throw Error('Your account history could not be read.');if(phase===1)return{text:'bad',summary:{}};return result();},copy:async()=>{copies++;throw Error('private clipboard diagnostic');}});try{const shell=f.root.firstElementChild;f.button.click();await settle();assert.match(f.status.textContent,/account history/);assert.equal(f.button.disabled,false);phase=1;f.button.click();await settle();assert.match(f.status.textContent,/could not be prepared/);assert.equal(copies,0);phase=2;f.button.click();await settle();assert.match(f.status.textContent,/Clipboard access failed/);assert.doesNotMatch(f.root.textContent,/private clipboard/);assert.equal(f.button.disabled,false);assert.equal(f.root.firstElementChild,shell);}finally{f.dispose();f.dom.window.close();}
+});
+test('browser preview and empty history communicate their actual limits',async()=>{
+ const unavailable=await setup();unavailable.button.click();assert.match(unavailable.status.textContent,/Open the desktop app/);unavailable.dispose();unavailable.dom.window.close();
+ const empty=await setup({load:async()=>({text:'No data',summary:{matches:0,retentionDays:30,detailIncluded:0,detailTotal:0}}),copy:async()=>true});try{empty.button.click();await settle();assert.match(empty.status.textContent,/no-data prompt/);assert.match(empty.root.querySelector('[data-ai-period]').textContent,/No recorded matches/);}finally{empty.dispose();empty.dom.window.close();}
+});

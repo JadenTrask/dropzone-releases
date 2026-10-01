@@ -270,9 +270,13 @@ const themeReview=process.argv.includes('--theme-review');
   const boot=async(query='?game=apex')=>{await win.loadURL('http://127.0.0.1:'+server.address().port+'/'+query);await run(fixture,data);await win.webContents.executeJavaScript("(async()=>{await import('/hub.js');return true;})()");await pause(250);};
   await require(process.argv.includes('--appearance')?'./check-appearance.cjs':process.argv.includes('--apex-meta')?'./check-apex-meta.cjs':'./check-apex-composition.cjs')({boot,run,win,pause,capture,report,data});return;
  }
- if(process.argv.includes('--videos')){
+ if(process.argv.includes('--ai-overview')){
+  const boot=async setup=>{await win.loadURL('http://127.0.0.1:'+server.address().port+'/?game=rocket-league');await run(fixture,data);await setup();await win.webContents.executeJavaScript("(async()=>{await import('/hub.js');return true;})()");await pause(400);};
+  await require('./check-rocket-league-analysis.cjs')({boot,run,win,pause,capture,report});return;
+ }
+ if(process.argv.includes('--videos')||process.argv.includes('--watch-backgrounds')){
   const boot=async game=>{await win.loadURL('http://127.0.0.1:'+server.address().port+'/?game='+game);await run(fixture,data);await win.webContents.executeJavaScript("(async()=>{await import('/hub.js');return true;})()");await pause(400);};
-  await require('./check-video-pages.cjs')({boot,run,win,pause,capture,report,output,data});return;
+  await require(process.argv.includes('--watch-backgrounds')?'./check-watch-backgrounds.cjs':'./check-video-pages.cjs')({boot,run,win,pause,capture,report,output,data});return;
  }
  if(process.argv.includes('--flicker')){
   await win.loadURL('http://127.0.0.1:'+server.address().port+'/?game=settings');await run(fixture,data);await win.webContents.executeJavaScript("(async()=>{await import('/hub.js');return true;})()");await pause(600);

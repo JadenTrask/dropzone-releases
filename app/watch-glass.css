@@ -104,3 +104,33 @@ html[data-game="apex"] #hub-app .watch-page[data-watch-game="apex"] {--watch-log
 html[data-game="apex"] #hub-app .watch-page[data-watch-game="apex"]::before {aspect-ratio:467/200}
 
 html[data-game] #hub-app .watch-page:is([data-watch-game="bo7"],[data-watch-game="mw4"]) {--watch-logo:url('./assets/cdl/league-white.svg')}
+
+/* User-supplied marks: size the visible artwork, not its transparent canvas.
+   The shared fixed layer stays centered while the video workspace scrolls. */
+html[data-game] #hub-app .watch-page:is([data-watch-game="siege"],[data-watch-game="lol"],[data-watch-game="finals"],[data-watch-game="rocket-league"])::before {
+  width:min(calc(100vw - var(--rail-width,72px) - 64px),calc(78vh * var(--watch-logo-ratio)));
+  aspect-ratio:var(--watch-logo-ratio);
+  background-size:var(--watch-logo-size,contain);
+  background-position:var(--watch-logo-position,center);
+  opacity:var(--watch-logo-opacity,.18);
+  filter:var(--watch-logo-filter,blur(1.25px));
+  mask-image:none;
+}
+html[data-game] #hub-app .watch-page[data-watch-game="siege"] {
+  --watch-logo:url('./assets/watch/siege.png');--watch-logo-ratio:2.9674086;
+  --watch-logo-size:102.8663274% auto;--watch-logo-position:50.4672897% 50.1108647%;
+  --watch-logo-filter:brightness(0) invert(1) blur(1.25px);
+}
+html[data-game] #hub-app .watch-page[data-watch-game="lol"] {
+  --watch-logo:url('./assets/watch/lol.png');--watch-logo-ratio:2.4553734;
+  --watch-logo-size:106.8249258% auto;--watch-logo-position:41.3043478% 25.8064516%;
+  --watch-logo-opacity:.24;
+}
+html[data-game] #hub-app .watch-page[data-watch-game="finals"] {
+  --watch-logo:url('./assets/watch/finals.svg');--watch-logo-ratio:2.1647965;
+  --watch-logo-filter:brightness(0) invert(1) blur(1.25px);
+}
+html[data-game] #hub-app .watch-page[data-watch-game="rocket-league"] {
+  --watch-logo:url('./assets/watch/rlcs.webp');--watch-logo-ratio:1;
+  --watch-logo-opacity:.22;
+}
