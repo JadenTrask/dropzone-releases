@@ -1,6 +1,9 @@
 import {api} from './shared.js';
 
 export function mountStartupSetting(parent){
+ const announcement=document.createElement('span');
+ announcement.className='startup-save-announcement';announcement.setAttribute('role','status');parent.append(announcement);
+ const pending=(item,text)=>{item.input.setAttribute('aria-busy','true');announcement.textContent=text;};
  const environment=document.createElement('p');
  environment.id='launch-environment';environment.className='startup-environment';environment.hidden=true;environment.setAttribute('role','status');
  const availability=new Map();
@@ -22,6 +25,7 @@ export function mountStartupSetting(parent){
  const showStartup=result=>{
   if(!windows.row.isConnected)return;
   value=!!result.enabled;windows.input.checked=value;windows.input.disabled=!result.available;
+  windows.input.removeAttribute('aria-busy');
   setAvailability('windows',result.available||!environmentOnly(result));
   // Keep actionable Windows failures/disabled-registration messages, but the
   // switch itself already communicates ordinary on/off success.
@@ -31,9 +35,10 @@ export function mountStartupSetting(parent){
  const unavailable={available:false,enabled:false,message:'Available in the installed Windows app.'};
  const startupCall=options=>api.loginStartup?api.loginStartup(options):Promise.resolve(unavailable);
  windows.input.onchange=async()=>{
-  const enabled=windows.input.checked;windows.input.disabled=true;setMessage(windows.message,'Saving startup preference.');
+  const enabled=windows.input.checked;windows.input.disabled=true;pending(windows,'Saving startup preference.');
   try{showStartup(await startupCall({action:'set',enabled}));}
   catch{showStartup({available:true,enabled:value,message:'Could not save the startup preference. Try again.'});}
+  finally{announcement.textContent='';}
  };
  void startupCall({action:'status'}).then(showStartup).catch(()=>showStartup({...unavailable,message:'Startup settings could not be read. Try again after reopening Dropzone.'}));
 
@@ -46,15 +51,17 @@ export function mountStartupSetting(parent){
   for(const item of rows){
    if(!item.row.isConnected)continue;
    item.input.checked=result[item.key]===true;item.input.disabled=!result.available;
+   item.input.removeAttribute('aria-busy');
    const failed=item.key===failedKey||!result.available&&!environmentOnly(result)&&item===rows[0];
    setMessage(item.message,failed?result.message:'');
   }
  };
  for(const item of rows)item.input.onchange=async()=>{
   for(const row of rows)row.input.disabled=true;
-  setMessage(item.message,'Saving preference.');
+  pending(item,'Saving preference.');
   try{const result=await launchCall({action:'set',key:item.key,enabled:item.input.checked});showLaunch(result,result.saved===false?item.key:null);}
   catch{showLaunch({...current,message:'Could not save this preference. Try again.'},item.key);}
+  finally{announcement.textContent='';}
  };
  void launchCall({action:'status'}).then(result=>showLaunch(result)).catch(()=>showLaunch({...launchUnavailable,message:'Launch preferences could not be read. Try again after reopening Dropzone.'}));
  parent.append(environment);

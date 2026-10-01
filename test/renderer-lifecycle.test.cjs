@@ -9,7 +9,7 @@ const settle=()=>new Promise(resolve=>setImmediate(resolve));
 
 test('leaving videos removes the embedded player and a pending fetch cannot recreate it',async()=>{
   let resolveMedia,playerPresent=true,renderCount=0;
-  const root={set innerHTML(value){renderCount++;}};
+  const root={isConnected:true,set innerHTML(value){renderCount++;}};
   const player={remove(){playerPresent=false;}};
   global.document={addEventListener(){},querySelector(selector){
     if(selector==='#hub-app')return root;

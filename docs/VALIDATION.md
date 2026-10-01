@@ -1,3 +1,15 @@
+## 2.5.1 - 1 October 2026
+
+This patch includes the completed settings/navigation flicker fixes and shared Videos experience, including Rocket League Videos. Newly supplied logo backgrounds are explicitly excluded while their supported file transfer remains blocked. The published 2.5.0 release is preserved.
+
+- The full Node suite passed 325 tests against versioned 2.5.1 source, with no failures, skips or cancellations. An initial in-app release-note version mismatch was corrected before the successful rerun. The established Windows release workflow repeats the suite before packaging.
+- Changed/new JavaScript syntax and diff whitespace checks passed. The six Videos pages passed a 36-capture/86-flow layout pass at 1920x1080, 2560x1440, 3840x2160 and 1000x900, followed by a 24-capture/61-flow interaction pass; both recorded zero errors. Coverage includes loading, empty/error recovery, search, filters, scrolling, Show more retention, player close and stale embedded responses. These overlapping counts are not exhaustive manual QA.
+- The final combined flicker run passed seven flows with zero errors: settings geometry moved 0px and Rocket League header variation during local tab transitions was 0.648/255, compared with the recorded baseline of 24.5px and 16.165/255. Earlier focused runs on the same transition/settings implementation passed 21 motion flows and 14 settings flows, including interruption, reduced motion, delayed providers, rollback and enlarged text.
+- Actual pixels were reviewed for all six Videos pages at 1920px and representative 1440p, 4K, narrow and scrolled states. Existing COD/Apex artwork is retained; no unrelated logo is used as a fallback for another game.
+- The official RL Esports channel and playlist ownership were verified through existing provider requests. The local media endpoint returned real normalized uploads, broadcasts and playlists. Partially extracted playlists retain their partial flag; dates and counts were not invented.
+- Native installation, installed-version upgrade, real gameplay, physical fullscreen/multi-monitor behavior and streamed playback were not exercised during this patch pass. All new renderer checks ran headlessly without opening or focusing an app window. The installer remains unsigned. Prior 2.5.0 native/account evidence below is historical, not a new 2.5.1 runtime pass.
+- Publication remains gated by the existing workflow's exact-commit source/package checks, Windows x64 version checks, full source ZIP validation, updater SHA512/size, downloaded asset hashes and tag identity. No website or backend deployment is part of this patch.
+
 ## 2.5.0 - 1 October 2026
 
 The owner authorized version 2.5.0 after the local design and behavior refinements. The existing 2.4.9 release is preserved. Gray Zone Warfare remains under construction.

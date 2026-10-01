@@ -1,6 +1,7 @@
-let revision=0,current;
-export async function transitionPage(render){
+let revision=0,current,clearScope=()=>{};
+export async function transitionPage(render,{target}={}){
  const ticket=++revision;current?.skipTransition();current=null;
+ clearScope();clearScope=()=>{};
  document.documentElement.classList.remove('dz-transitioning');
  if(document.visibilityState==='hidden'||document.querySelector('.dz-intro')||!document.startViewTransition||matchMedia('(prefers-reduced-motion: reduce)').matches||document.documentElement.classList.contains('cc-reduced-motion')||document.body?.classList.contains('app-reduced-motion'))return render();
  let resolve,reject,started=false;
@@ -19,11 +20,16 @@ export async function transitionPage(render){
   // A persistent named snapshot root suppresses descendant backdrop sampling
   // in Chromium, even when no transition is active. Scope it to the capture.
   document.documentElement.classList.add('dz-transitioning');
+  if(target?.isConnected){
+   document.documentElement.setAttribute('data-dz-transition-scoped','');
+   target.setAttribute('data-dz-transition-root','');
+   clearScope=()=>{target.removeAttribute('data-dz-transition-root');document.documentElement.removeAttribute('data-dz-transition-scoped');};
+  }
   const transition=document.startViewTransition(update);current=transition;
   transition.ready.catch(()=>{});
   transition.updateCallbackDone.catch(reject);
-  const clear=()=>{if(current===transition){current=null;document.documentElement.classList.remove('dz-transitioning');}};
+  const clear=()=>{if(current===transition){current=null;clearScope();clearScope=()=>{};document.documentElement.classList.remove('dz-transitioning');}};
   transition.finished.then(clear,clear);
- }catch{document.documentElement.classList.remove('dz-transitioning');update();}
+ }catch{clearScope();clearScope=()=>{};document.documentElement.classList.remove('dz-transitioning');update();}
  return rendered;
 }

@@ -12,6 +12,7 @@ const data={version:require('../package.json').version,apex:read('apex/apex-cont
 if(process.argv.includes('--interactions'))data.cod['bo7-public']=JSON.parse(fs.readFileSync(path.resolve(__dirname,'../.validation-cache/regressions-248/current-bo7.json'),'utf8'));
 data.patches=Object.fromEntries(['lol','bo7','warzone','mw4','finals','siege','wardogs','gray-zone'].map(game=>[game,{...read('patches/patches-'+game+'.json'),cacheState:'bundled'}]));
 data.media=Object.fromEntries(require('../core/media-provider.cjs').CHANNELS.map(channel=>{const safeRead=name=>fs.existsSync(path.join(root,'data/media',name+'.json'))?read('media/'+name+'.json'):{};return[channel.id,{...channel,...safeRead(channel.id),broadcasts:safeRead(channel.id+'-streams'),catalog:safeRead(channel.id+'-playlists')}];}));
+data.mediaPlaylists=Object.fromEntries(fs.readdirSync(path.join(root,'data/media')).filter(name=>/-PL.+\.json$/.test(name)).map(name=>{const p=read('media/'+name);return[p.id,p];}));
 const report={fixture:'Bundled source snapshots; offline accounts and update state. These are renderer checks, not live-service or native gameplay QA.',captures:[],errors:[]};
 if(process.argv.includes('--live-apex')||process.argv.includes('--theme-review')||process.argv.includes('--regressions')||process.argv.includes('--interactions')){data.liveApex=JSON.parse(fs.readFileSync(path.resolve(__dirname,'../.validation-cache/apex-live-profile.json'),'utf8'));if(data.liveApex.status!=='ready'||!data.liveApex.profile)throw Error('Actual normalized profile evidence required');report.fixture='Apex profile from successful authenticated production lookup, '+data.liveApex.profile.checkedAt+'. Replay of that actual display contract in isolated Chromium; no invented player statistics.';}
 report.flows=[];
@@ -26,7 +27,7 @@ function fixture(data){
  window.rift={games:async()=>data.games,appContext:async()=>({admin:false}),visualUpdates:async()=>({}),updates:async()=>({rows:[],checking:false}),personalIntel:async()=>({alerts:[]}),appUpdates:async()=>({version:data.version,status:'disabled',reason:'development',enabled:false}),onAppUpdate:()=>()=>{},copy:async()=>{},openSource:async()=>{},window:()=>{},catalog:async()=>data.catalog,build:async()=>data.leagueBuild,modes:async()=>data.modes,status:async()=>({}),siege:async q=>q?.operator?data.operatorProfiles[q.operator]:data.siege,gzw:async()=>data.gzw,gzwMap:async()=>data.markers,wardogs:async()=>data.wardogs,market:async()=>data.market,loadouts:async q=>q.game==='finals'?data.finals:{...data.cod[q.game==='bo7'?'bo7-'+(q.mode||'public'):q.mode==='ranked'?'warzone-ranked':'warzone'],game:q.game,mode:q.mode},apexContent:async()=>data.apex,apexPlayer:async()=>({configured:false,status:'setup-required',available:false,message:'Player lookup requires approved provider access and secure backend configuration.'})};
  window.qaActions=[];window.qaUpdate=null;
  window.rift.patches=async q=>{if(window.qaFeedFailure)throw Error('News could not be reached. Try again later.');return data.patches[q.game];};
- window.rift.media=async q=>{const channel=Object.values(data.media).find(c=>c.games.includes(q.game));return{game:q.game,channels:channel?[channel]:[]};};
+ window.rift.media=async q=>{const channel=Object.values(data.media).find(c=>c.games.includes(q.game));if(q.playlist){const playlist=data.mediaPlaylists[q.playlist];if(!playlist||playlist.channelId!==channel?.channelId)throw Error('This archive is unavailable in the renderer fixture.');return{game:q.game,playlist};}return{game:q.game,channels:channel?[channel]:[]};};
  if(data.liveApex){window.qaApexResult=data.liveApex;window.qaApexCalls=[];window.rift.apexPlayer=async q=>{window.qaApexCalls.push(q);return q.action==='status'?{...data.liveApex,profile:undefined}:window.qaApexResult;};}
  Object.assign(window.rift,{onAppUpdate:callback=>{window.qaUpdate=callback;return()=>{};},checkAppUpdates:async()=>{window.qaActions.push('check-update');return{version:data.version,status:'current',enabled:true,checkedAt:new Date().toISOString()};},installAppUpdate:async()=>{window.qaActions.push('install-update');throw Error('Installation prohibited in renderer QA');}});
 }
@@ -269,6 +270,14 @@ const themeReview=process.argv.includes('--theme-review');
   const boot=async(query='?game=apex')=>{await win.loadURL('http://127.0.0.1:'+server.address().port+'/'+query);await run(fixture,data);await win.webContents.executeJavaScript("(async()=>{await import('/hub.js');return true;})()");await pause(250);};
   await require(process.argv.includes('--appearance')?'./check-appearance.cjs':process.argv.includes('--apex-meta')?'./check-apex-meta.cjs':'./check-apex-composition.cjs')({boot,run,win,pause,capture,report,data});return;
  }
+ if(process.argv.includes('--videos')){
+  const boot=async game=>{await win.loadURL('http://127.0.0.1:'+server.address().port+'/?game='+game);await run(fixture,data);await win.webContents.executeJavaScript("(async()=>{await import('/hub.js');return true;})()");await pause(400);};
+  await require('./check-video-pages.cjs')({boot,run,win,pause,capture,report,output,data});return;
+ }
+ if(process.argv.includes('--flicker')){
+  await win.loadURL('http://127.0.0.1:'+server.address().port+'/?game=settings');await run(fixture,data);await win.webContents.executeJavaScript("(async()=>{await import('/hub.js');return true;})()");await pause(600);
+  await require('./check-flicker.cjs')({run,win,pause,report,output,data});return;
+ }
  if(process.argv.includes('--fade-motion')){
   await win.loadURL('http://127.0.0.1:'+server.address().port+'/?game=home');await run(fixture,data);await win.webContents.executeJavaScript("(async()=>{await import('/hub.js');return true;})()");await pause(500);
   await require('./check-page-motion.cjs')({run,win,report,pause,output});return;
@@ -288,8 +297,8 @@ const routes=process.argv.includes('--launch-options')?['settings']:process.argv
   if(process.argv.includes('--map-motion')){await require('./check-map-motion.cjs').run({run,win,pause,capture,report});continue;}
   if(process.argv.includes('--search-surfaces')){
    await run(route=>document.querySelector(route==='lol'?'[data-action="pick-champion"]':'[data-game-page="videos"]').click(),route);await pause(500);
-   const style=await run(route=>{const s=getComputedStyle(document.querySelector(route==='lol'?'.picker-search input':'.fn-video-search input'));return{background:s.backgroundColor,shadow:s.boxShadow,backdrop:s.backdropFilter};},route);
-   report.flows.push({name:route+' search wrapper owns its single glass surface',passed:style.background==='rgba(0, 0, 0, 0)'&&style.shadow==='none'&&style.backdrop==='none',style});
+   const style=await run(route=>{const s=getComputedStyle(document.querySelector(route==='lol'?'.picker-search input':'.watch-search input'));return{background:s.backgroundColor,shadow:s.boxShadow,backdrop:s.backdropFilter};},route);
+   report.flows.push({name:route+' search uses its current shared material',passed:route==='lol'?style.background==='rgba(0, 0, 0, 0)'&&style.shadow==='none'&&style.backdrop==='none':style.backdrop!=='none',style});
    for(const [w,h]of [[1000,900],[1920,1080]])await capture(route==='lol'?'lol-champion-picker-final':'finals-video-search-final',w,h);continue;
   }
   for(const [width,height]of themeReview?[[1920,1080]]:process.argv.includes('--regressions')?[[1920,1080],[2560,1440],[3840,2160],[1680,1050],[1280,800],[1000,900]]:[[1920,1080],[2560,1440],[3840,2160],[1000,900]])await capture((themeReview?'clear-glass-':'')+route,width,height);

@@ -11,7 +11,7 @@
 :root{transition-property:--atmos-primary,--atmos-secondary,--atmos-base,--atmos-accent;transition-duration:300ms;transition-timing-function:cubic-bezier(.4,0,.2,1)}
 html.cc-reduced-motion,html:has(body.app-reduced-motion){transition:none}
 #hub-app,#league-app{view-transition-name:none}
-html.dz-transitioning :is(#hub-app,#league-app){view-transition-name:workspace-page}
+html.dz-transitioning:not([data-dz-transition-scoped]) :is(#hub-app,#league-app),html.dz-transitioning [data-dz-transition-root]{view-transition-name:workspace-page}
 ::view-transition,::view-transition-group(*),::view-transition-image-pair(*),::view-transition-old(*),::view-transition-new(*){pointer-events:none}
 ::view-transition-group(workspace-page){animation-duration:300ms;animation-timing-function:cubic-bezier(.4,0,.2,1)}
 ::view-transition-old(workspace-page),::view-transition-new(workspace-page){animation-duration:300ms;animation-timing-function:cubic-bezier(.4,0,.2,1)}

@@ -1,70 +1,106 @@
-/* Shared CDL / ALGS video glass. Other games retain their existing materials. */
-html:is([data-game="bo7"],[data-game="apex"]) #hub-app .watch-page:is([data-watch-game="bo7"],[data-watch-game="apex"]) {
+/* One video component and material across all official game channels. */
+html[data-game] #hub-app .watch-page[data-watch-game] {
   --watch-glass:var(--glass-surface);
   --watch-glass-hover:var(--glass-hover);
   --watch-edge:var(--glass-edge);
   --watch-copy:var(--atmos-ink,#f2f5fc);
   --watch-muted:var(--atmos-muted,#bec9db);
+  --page-content-width:1320px;
+  --page-gutter:32px;
+  font-family:Forge,"Segoe UI",system-ui,sans-serif;
   position:relative;isolation:isolate;
 }
-html:is([data-game="bo7"],[data-game="apex"]) #hub-app .watch-page:is([data-watch-game="bo7"],[data-watch-game="apex"])::before {
+html[data-game] #hub-app .watch-page [hidden]{display:none!important}
+html[data-game] #hub-app .watch-page .video-thumb{position:relative;isolation:isolate}
+.watch-page .video-fallback{position:absolute;inset:0;display:grid;place-items:center;padding:20px;background:rgb(var(--atmos-base));color:var(--atmos-muted);font-size:14px}
+.watch-page .video-thumb>img{position:relative}
+.watch-page .watch-results-heading{display:flex;justify-content:space-between;align-items:baseline;gap:20px;margin:22px 0 16px}
+#hub-app .watch-page .watch-results-heading h2{font-size:16px;line-height:1.4;font-weight:600;margin:0}
+.watch-page .watch-results-heading p{color:var(--watch-muted);margin:6px 0 0;font-size:13px}
+.watch-page .watch-results-heading>span{color:var(--watch-muted);font-size:12px;white-space:nowrap}
+.watch-page .watch-empty{grid-column:1/-1;min-height:180px;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:12px;padding:28px;text-align:center;color:var(--watch-muted)}
+#hub-app .watch-page .watch-empty h2{font-size:20px;margin:0;color:var(--watch-copy)}
+.watch-page .watch-empty p{margin:0;line-height:1.6}
+.watch-page .watch-alert{display:flex;align-items:center;justify-content:space-between;gap:18px;border:1px solid var(--watch-edge);background:var(--watch-glass);border-radius:12px;padding:18px 20px;margin:20px 0;backdrop-filter:var(--glass-panel-backdrop)}
+.watch-page .watch-alert p{margin:5px 0;color:var(--watch-muted);line-height:1.6;font-size:13px}
+.watch-page .watch-alert details{margin-top:8px;font-size:12px}
+.watch-page .watch-alert details p{white-space:pre-wrap;overflow-wrap:anywhere}
+.watch-page .watch-alert>button{flex-shrink:0}
+/* Embedded in the tracker: one scroller, with the existing command bar intact. */
+html.rl-workspace-active #hub-app .rl-workspace[data-page="videos"]{max-width:none;padding:0}
+html.rl-workspace-active #hub-app .rl-workspace[data-page="videos"] .rl-main-panel{--page-content-width:1320px;max-width:none;width:100%;padding:28px max(32px,calc((100% - var(--page-content-width))/2))}
+html.rl-workspace-active #hub-app .rl-workspace[data-page="videos"] #rl-content{container-type:normal;max-width:none}
+html.rl-workspace-active #hub-app #rl-content>.watch-page{padding:0;margin:0;max-width:none;width:100%;height:auto;min-height:0;overflow:visible;background:transparent;border:0}
+html[data-game] #hub-app .watch-page .watch-filter>label{display:flex;flex-direction:column;align-items:stretch;gap:8px;margin:0;min-width:0}
+html[data-game] #hub-app .watch-page .watch-filter>label>span{font-size:12px;line-height:1.5;white-space:nowrap}
+html[data-game] #hub-app .watch-page :is(.hub-button,.select-control,input,select){font-family:inherit;font-size:13px;font-weight:500;line-height:1.4;min-height:38px;border-radius:10px;color:var(--watch-copy);border-color:var(--watch-edge);background:var(--watch-glass);box-shadow:var(--glass-rim);backdrop-filter:var(--glass-control-backdrop)}
+html[data-game] #hub-app .watch-page button.select-control{display:flex;justify-content:space-between;text-align:left;width:100%}
+html[data-game] #hub-app .watch-page .watch-section-tabs{background:var(--watch-glass)!important;border:1px solid var(--watch-edge);border-radius:12px;padding:4px;gap:4px;backdrop-filter:var(--glass-control-backdrop)}
+html[data-game] #hub-app .watch-page .watch-section-tabs>button{font-family:inherit;font-size:13px;font-weight:500;line-height:1.4;min-height:34px;padding:8px 12px;border:1px solid transparent;border-radius:9px;background:transparent;color:var(--watch-copy);box-shadow:none}
+html[data-game] #hub-app .watch-page .watch-section-tabs>button:is(:hover,[aria-pressed="true"]){background:var(--watch-glass-hover);border-color:var(--watch-edge);color:var(--watch-copy)}
+@media(min-width:2400px){html[data-game] #hub-app .watch-page[data-watch-game],html.rl-workspace-active #hub-app .rl-workspace[data-page="videos"] .rl-main-panel{--page-content-width:1760px}}
+@media(min-width:3400px){html[data-game] #hub-app .watch-page[data-watch-game],html.rl-workspace-active #hub-app .rl-workspace[data-page="videos"] .rl-main-panel{--page-content-width:2160px}}
+@media(max-width:700px){.watch-page .watch-alert{align-items:flex-start;flex-direction:column}}
+html[data-game] #hub-app .watch-page[data-watch-game]::before {
   content:"";position:fixed;z-index:-1;pointer-events:none;
   top:50vh;left:calc(50vw + var(--rail-width,72px)/2);transform:translate(-50%,-50%);
   width:calc(100vw - var(--rail-width,72px) - 32px);aspect-ratio:1243.9/320.2;
-  background:var(--watch-logo,url('./assets/cdl/league-white.svg')) center/contain no-repeat;
+  background:var(--watch-logo,none) center/contain no-repeat;
   opacity:.12;filter:blur(1.25px);
   mask-image:linear-gradient(180deg,transparent,#000 15%,#000 65%,transparent);
 }
-html:is([data-game="bo7"],[data-game="apex"]) #hub-app .watch-page:is([data-watch-game="bo7"],[data-watch-game="apex"]) .watch-filter {
+html[data-game] #hub-app .watch-page[data-watch-game] .watch-filter {
   position:relative;z-index:3;
   background:var(--watch-glass)!important;border:1px solid var(--watch-edge);
   border-color:var(--watch-edge)!important;border-radius:14px;
   box-shadow:inset 0 1px #ffffff30,inset 0 -1px #ffffff12,0 5px 18px #00000012;
   backdrop-filter:var(--glass-panel-backdrop);padding:18px;gap:18px;
 }
-html:is([data-game="bo7"],[data-game="apex"]) #hub-app .watch-page:is([data-watch-game="bo7"],[data-watch-game="apex"]) .watch-filter>label>span {
+html[data-game] #hub-app .watch-page[data-watch-game] .watch-filter>label>span {
   color:var(--watch-muted)!important;
 }
-html:is([data-game="bo7"],[data-game="apex"]) #hub-app .watch-page:is([data-watch-game="bo7"],[data-watch-game="apex"]) .video-card {
+html[data-game] #hub-app .watch-page[data-watch-game] .video-card {
   background:transparent!important;border:1px solid var(--watch-edge);
   border-color:var(--watch-edge)!important;border-radius:14px;padding:0;
   box-shadow:0 4px 16px #00000016;
 }
-html:is([data-game="bo7"],[data-game="apex"]) #hub-app .watch-page:is([data-watch-game="bo7"],[data-watch-game="apex"]) .video-copy {
+html[data-game] #hub-app .watch-page[data-watch-game] .video-copy {
   display:flex;flex:1;flex-direction:column;gap:10px;padding:15px 16px;
   background:var(--watch-glass);backdrop-filter:var(--glass-panel-backdrop);
   box-shadow:inset 0 1px #ffffff26,inset 0 -1px #ffffff12;
 }
-html:is([data-game="bo7"],[data-game="apex"]) #hub-app .watch-page:is([data-watch-game="bo7"],[data-watch-game="apex"]) .video-copy>strong {
+html[data-game] #hub-app .watch-page[data-watch-game] .video-copy>strong {
   display:block;color:var(--watch-copy)!important;font-size:.875rem;
   line-height:1.55;font-weight:550;overflow-wrap:anywhere;
 }
-html:is([data-game="bo7"],[data-game="apex"]) #hub-app .watch-page:is([data-watch-game="bo7"],[data-watch-game="apex"]) .video-copy>small {
+html[data-game] #hub-app .watch-page[data-watch-game] .video-copy>small {
   display:block;color:var(--watch-muted)!important;font-size:.75rem;
   line-height:1.6;margin-top:auto;
 }
-html:is([data-game="bo7"],[data-game="apex"]) #hub-app .watch-page:is([data-watch-game="bo7"],[data-watch-game="apex"]) .video-card:is(:hover,.selected) {
+html[data-game] #hub-app .watch-page[data-watch-game] .video-card:is(:hover,.selected) {
   border-color:var(--atmos-accent)!important;
 }
-html:is([data-game="bo7"],[data-game="apex"]) #hub-app .watch-page:is([data-watch-game="bo7"],[data-watch-game="apex"]) .video-card:is(:hover,.selected) .video-copy {
+html[data-game] #hub-app .watch-page[data-watch-game] .video-card:is(:hover,.selected) .video-copy {
   background:var(--watch-glass-hover);
 }
-html[data-appearance="light"]:is([data-game="bo7"],[data-game="apex"]) #hub-app .watch-page:is([data-watch-game="bo7"],[data-watch-game="apex"]) {
+html[data-appearance="light"][data-game] #hub-app .watch-page[data-watch-game] {
   --watch-glass:linear-gradient(140deg,#ffffff30,#ffffff0d),#ffffff24;
   --watch-glass-hover:linear-gradient(140deg,#ffffff50,#ffffff18),#ffffff30;
   --watch-edge:#20314538;
 }
-html[data-appearance="light"]:is([data-game="bo7"],[data-game="apex"]) #hub-app .watch-page:is([data-watch-game="bo7"],[data-watch-game="apex"])::before {filter:brightness(0) blur(1.25px);opacity:.07}
-html:is([data-game="bo7"],[data-game="apex"]) .app-high-contrast #hub-app .watch-page:is([data-watch-game="bo7"],[data-watch-game="apex"]) {
+html[data-appearance="light"][data-game] #hub-app .watch-page[data-watch-game]::before {filter:brightness(0) blur(1.25px);opacity:.07}
+html[data-game] .app-high-contrast #hub-app .watch-page[data-watch-game] {
   --watch-glass:rgb(var(--atmos-base));--watch-glass-hover:rgb(var(--atmos-base));--watch-edge:var(--atmos-accent);
 }
-html:is([data-game="bo7"],[data-game="apex"]) .app-high-contrast #hub-app .watch-page:is([data-watch-game="bo7"],[data-watch-game="apex"]) :is(.watch-filter,.video-copy) {backdrop-filter:none}
-html:is([data-game="bo7"],[data-game="apex"]) .app-high-contrast #hub-app .watch-page:is([data-watch-game="bo7"],[data-watch-game="apex"])::before {display:none}
+html[data-game] .app-high-contrast #hub-app .watch-page[data-watch-game] :is(.watch-filter,.video-copy) {backdrop-filter:none}
+html[data-game] .app-high-contrast #hub-app .watch-page[data-watch-game]::before {display:none}
 @media(prefers-reduced-transparency:reduce) {
-  html:is([data-game="bo7"],[data-game="apex"]) #hub-app .watch-page:is([data-watch-game="bo7"],[data-watch-game="apex"]) {--watch-glass:rgb(var(--atmos-base));--watch-glass-hover:rgb(var(--atmos-base))}
-  html:is([data-game="bo7"],[data-game="apex"]) #hub-app .watch-page:is([data-watch-game="bo7"],[data-watch-game="apex"]) :is(.watch-filter,.video-copy) {backdrop-filter:none}
-  html:is([data-game="bo7"],[data-game="apex"]) #hub-app .watch-page:is([data-watch-game="bo7"],[data-watch-game="apex"])::before {display:none}
+  html[data-game] #hub-app .watch-page[data-watch-game] {--watch-glass:rgb(var(--atmos-base));--watch-glass-hover:rgb(var(--atmos-base))}
+  html[data-game] #hub-app .watch-page[data-watch-game] :is(.watch-filter,.video-copy) {backdrop-filter:none}
+  html[data-game] #hub-app .watch-page[data-watch-game]::before {display:none}
 }
 
 html[data-game="apex"] #hub-app .watch-page[data-watch-game="apex"] {--watch-logo:url('./assets/apex/algs-logo.svg')}
 html[data-game="apex"] #hub-app .watch-page[data-watch-game="apex"]::before {aspect-ratio:467/200}
+
+html[data-game] #hub-app .watch-page:is([data-watch-game="bo7"],[data-watch-game="mw4"]) {--watch-logo:url('./assets/cdl/league-white.svg')}

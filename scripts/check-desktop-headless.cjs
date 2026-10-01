@@ -32,7 +32,7 @@ const ready=(async()=>{
  // native window because no browser window is created by --headless.
  await send('Emulation.setFocusEmulationEnabled',{enabled:true});
  // Capture settled designs, without platform view-transition snapshots.
- await send('Emulation.setEmulatedMedia',{features:[{name:'prefers-reduced-motion',value:(process.argv.includes('--performance')||process.argv.includes('--fade-motion'))?'no-preference':'reduce'}]});
+ await send('Emulation.setEmulatedMedia',{features:[{name:'prefers-reduced-motion',value:(process.argv.includes('--performance')||process.argv.includes('--fade-motion')||process.argv.includes('--flicker'))?'no-preference':'reduce'}]});
 })();
 class BrowserWindow{
  constructor(){
@@ -41,7 +41,7 @@ class BrowserWindow{
   on('Network.loadingFailed',e=>{const url=requests.get(e.requestId)||'';if(url.startsWith('https://cdn.gzwtacmap.com/'))for(const fn of failed)fn({url,error:e.errorText});});
   this.webContents={
    executeJavaScript:async expression=>{const r=await send('Runtime.evaluate',{expression,awaitPromise:true,returnByValue:true});if(r.exceptionDetails)throw Error(r.exceptionDetails.exception?.description||r.exceptionDetails.text);return r.result.value;},
-   debugger:{isAttached:()=>true,attach:()=>{},sendCommand:send},
+   debugger:{isAttached:()=>true,attach:()=>{},sendCommand:send,on:(event,fn)=>{if(event==='message')on('Page.screencastFrame',params=>fn({},'Page.screencastFrame',params));}},
    session:{webRequest:{onCompleted:(_filter,fn)=>completed.push(fn),onErrorOccurred:(_filter,fn)=>failed.push(fn)}},
    on:(event,fn)=>{if(event==='console-message'){on('Runtime.consoleAPICalled',e=>fn({},0,e.args.map(a=>a.value||a.description||'').join(' ')));on('Runtime.exceptionThrown',e=>fn({},3,'Uncaught '+(e.exceptionDetails.exception?.description||e.exceptionDetails.text)));}}
   };

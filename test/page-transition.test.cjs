@@ -1,8 +1,10 @@
 const {test}=require('node:test'),assert=require('node:assert/strict'),fs=require('node:fs'),vm=require('node:vm');
 const deferred=()=>{let resolve,reject;const promise=new Promise((yes,no)=>{resolve=yes;reject=no;});return{promise,resolve,reject};};
 function harness(options={}){
+ const element=()=>{const attributes=new Map();return{isConnected:true,setAttribute:(k,v)=>attributes.set(k,v),removeAttribute:k=>attributes.delete(k),hasAttribute:k=>attributes.has(k)};};
  const transitions=[],classes=new Set(options.legacyReduced?['cc-reduced-motion']:[]);
  const document={visibilityState:options.hidden?'hidden':'visible',querySelector:()=>options.splash?{}:null,documentElement:{classList:{contains:key=>classes.has(key),add:key=>classes.add(key),remove:key=>classes.delete(key)}},body:{classList:{contains:()=>!!options.appReduced}}};
+ Object.assign(document.documentElement,element());
  if(!options.unsupported)document.startViewTransition=update=>{
   if(options.apiThrows)throw Error('Capture unavailable');
   const ready=deferred(),done=deferred(),finished=deferred();
@@ -14,8 +16,19 @@ function harness(options={}){
  };
  const context={document,matchMedia:()=>({matches:!!options.reduced})};vm.createContext(context);
  vm.runInContext(fs.readFileSync('app/page-transition.js','utf8').replace('export async function','async function'),context);
- return {render:fn=>context.transitionPage(fn),transitions,document};
+ return {render:(fn,options)=>context.transitionPage(fn,options),transitions,document,element};
 }
+
+test('content-only snapshots exclude the shell and release their scope on interruption and completion',async()=>{
+ const h=harness(),a=h.element(),b=h.element();
+ const first=h.render(()=>1,{target:a});assert.equal(a.hasAttribute('data-dz-transition-root'),true);
+ const second=h.render(()=>2,{target:b});assert.equal(a.hasAttribute('data-dz-transition-root'),false);assert.equal(b.hasAttribute('data-dz-transition-root'),true);
+ h.transitions[0].run();h.transitions[1].run();h.transitions[0].end();await first;
+ assert.equal(h.document.documentElement.hasAttribute('data-dz-transition-scoped'),true,'Stale completion keeps the current scope');
+ h.transitions[1].end();await second;await Promise.resolve();
+ assert.equal(b.hasAttribute('data-dz-transition-root'),false);assert.equal(h.document.documentElement.hasAttribute('data-dz-transition-scoped'),false);
+ const failed=harness({apiThrows:true}),target=failed.element();await failed.render(()=>3,{target});assert.equal(target.hasAttribute('data-dz-transition-root'),false);assert.equal(failed.document.documentElement.hasAttribute('data-dz-transition-scoped'),false);
+});
 test('the crossfade callback settles independently of slow provider work',async()=>{
  const h=harness(),provider=deferred();let mounted=false,completed=false;
  const route=h.render(()=>{mounted=true;return provider.promise;}).then(value=>{completed=true;return value;});

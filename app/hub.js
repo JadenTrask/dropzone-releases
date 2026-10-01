@@ -105,7 +105,7 @@ async function renderRoute(id,watchGame=null,initialView=null,fromHistory=false)
   const owner=state.games.find(g=>g.id===id)||state.games.find(g=>g.id===(watchGame||(contextual?(game()?.id||state.watchGame):null)));
   if(owner?.status==='under-construction'){id=owner.id;watchGame=null;initialView=null;}
   if(id==='sources'&&document.documentElement.dataset.admin!=='true')id='settings';
-  if(['progression','planner','squad'].includes(id)){id='wardogs';watchGame=null;}if(id==='command')id='home';if(id==='saved'){id='lol';initialView='saved';}
+  if(['progression','planner','squad'].includes(id)){id='wardogs';watchGame=null;}if(id==='command')id='home';if(id==='watch'&&watchGame==='rocket-league'){id='rocket-league';initialView='videos';watchGame=null;}if(id==='saved'){id='lol';initialView='saved';}
   const navigation=++navigationRevision;
   loadedFeatures.get('rocket-league-ui')?.leaveRocketLeague?.();loadedFeatures.get('wardogs-status-ui')?.leaveServerStatus?.();loadedFeatures.get('wardogs-market-ui')?.leaveMarket?.();leaveIntel();loadedFeatures.get('finals-ui')?.leaveFinals?.();loadedFeatures.get('watch-ui')?.leaveWatch?.();leaveSources();loadedFeatures.get('patches-ui')?.leavePatches?.();loadedFeatures.get('wardogs-ui')?.leaveWardogs?.();loadedFeatures.get('siege-ui')?.leaveSiege?.();loadedFeatures.get('siege-operators-ui')?.leaveOperators?.();loadedFeatures.get('sotf-ui')?.leaveForest?.();loadedFeatures.get('gzw-ui')?.leaveGzw?.();loadedFeatures.get('apex-ui')?.leaveApex?.();
   if(['operators','progression','server-status','market','damage','planner','squad'].includes(id)){const target=state.games.find(g=>g.id===(watchGame||state.watchGame));if(!target?.pages?.includes(id))return;state.watchGame=target.id;}
