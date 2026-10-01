@@ -62,6 +62,8 @@ function saveMatch(m){if(!isRecordableMatch(m)){put('pending',null);return;}prun
 
  });if(saved){failedSaves.delete(m.id);if(!failedSaves.size)error='';}else{if(failedSaves.size<8||failedSaves.has(m.id))failedSaves.set(m.id,m);else error='Storage unavailable; recovery queue is full. Free disk space and restart Dropzone.';if(!saveRetry)saveRetry=setTimeout(()=>{saveRetry=null;for(const item of [...failedSaves.values()])saveMatch(item);emit();},30000);}}
 
+const sessionEdges=require('./rocket-league-session-edge.cjs').createSessionEdges();
+
 const tracker=new MatchTracker({save:saveMatch,checkpoint:m=>{if(settings.record&&settings.keepHistory&&isRecordableMatch(m))put('pending',m);}});
 
 storage(open);
@@ -72,7 +74,7 @@ function state(){return {historyDays,feed:{receivedAt:lastMessage,acceptedAt:las
 
 function emit(force=false){const lifecycle=!settings.tracking?'inactive':tracker.match&&!tracker.match.ended&&connected?'active':connected?'game-detected':'idle';if(lifecycle!==lastLifecycle){lastLifecycle=lifecycle;parentPort.postMessage({event:'lifecycle',value:lifecycle});}if(!visible)return;const wait=settings.mode==='low'?1000:settings.mode==='normal'?100:200,delay=Math.max(0,lastUI+wait-Date.now());if(force||!delay){clearTimeout(flush);flush=null;lastUI=Date.now();parentPort.postMessage({event:'state',value:state()});}else if(!flush)flush=setTimeout(()=>{flush=null;emit();},delay);}
 
-function closeSocket(){playtime.reset();clearTimeout(timeout);const old=socket;socket=null;if(old){old.onclose=old.onerror=old.onmessage=old.onopen=null;try{old.close();}catch{}}connected=false;}
+function closeSocket(){sessionEdges.disconnect();playtime.reset();clearTimeout(timeout);const old=socket;socket=null;if(old){old.onclose=old.onerror=old.onmessage=old.onopen=null;try{old.close();}catch{}}connected=false;}
 
 function schedule(){if(stopped||!settings.tracking)return;clearTimeout(retry);const delays=[2000,5000,15000,30000,60000];retry=setTimeout(connect,delays[Math.min(attempt++,4)]);retry.unref();}
 
@@ -86,7 +88,7 @@ function connect(){if(stopped||!settings.tracking||socket)return;if(attempt===0|
 
  socket.onmessage=event=>{if(typeof event.data!=='string'||event.data.length>262144){tracker.malformed++;return;}try{const msg=JSON.parse(event.data);lastMessage=Date.now();if(msg.Event==='UpdateState'){clearTimeout(disconnectTimer);disconnectTimer=null;}rateCount++;if(lastMessage-rateStart>=1000){rate=rateCount*1000/(lastMessage-rateStart);rateStart=lastMessage;rateCount=0;}
 
- const accepted=tracker.ingest(msg);lastEvent=typeof msg.Event==='string'?msg.Event:'';if(accepted){lastAccepted=lastMessage;if(msg.Event==='UpdateState')playtime.sample(tracker,settings.identity,settings.record&&settings.keepHistory);else if(['ReplayCreated','MatchDestroyed','PodiumStart','MatchEnded','MatchPaused','MatchUnpaused','GoalReplayStart','GoalReplayEnd','MatchCreated','MatchInitialized'].includes(msg.Event))playtime.reset();if(localIdentity&&settings.identity!==localIdentity&&tracker.match?.players.some(p=>p.PrimaryId===localIdentity))linkLocalIdentity();if(tracker.match&&isRecordableMatch(tracker.match)&&!session&&settings.autoSession&&settings.record&&settings.keepHistory&&tracker.match.id!==suppressedSessionMatch)startSession();if(tracker.match?.ended&&!endTimer)endTimer=setTimeout(()=>{endTimer=null;if(tracker.match?.ended)tracker.finish('Match ended');emit();},1500);
+ const accepted=tracker.ingest(msg);lastEvent=typeof msg.Event==='string'?msg.Event:'';const edge=sessionEdges.ingest(msg,tracker);if(edge)parentPort.postMessage({event:'session-start',value:edge});if(accepted){lastAccepted=lastMessage;if(msg.Event==='UpdateState')playtime.sample(tracker,settings.identity,settings.record&&settings.keepHistory);else if(['ReplayCreated','MatchDestroyed','PodiumStart','MatchEnded','MatchPaused','MatchUnpaused','GoalReplayStart','GoalReplayEnd','MatchCreated','MatchInitialized'].includes(msg.Event))playtime.reset();if(localIdentity&&settings.identity!==localIdentity&&tracker.match?.players.some(p=>p.PrimaryId===localIdentity))linkLocalIdentity();if(tracker.match&&isRecordableMatch(tracker.match)&&!session&&settings.autoSession&&settings.record&&settings.keepHistory&&tracker.match.id!==suppressedSessionMatch)startSession();if(tracker.match?.ended&&!endTimer)endTimer=setTimeout(()=>{endTimer=null;if(tracker.match?.ended)tracker.finish('Match ended');emit();},1500);
 
  if(tracker.match&&Date.now()-checkpointAt>30000){checkpointAt=Date.now();if(settings.record&&settings.keepHistory&&isRecordableMatch(tracker.match))put('pending',tracker.match);}
 

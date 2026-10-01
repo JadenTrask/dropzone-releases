@@ -1,0 +1,155 @@
+/* One material system for the application. Layouts and game identity remain in
+   their modules; diffusion, rims, surfaces and interaction states live here.
+   Blur is applied to backdrops only, never to foreground labels or artwork. */
+:root {
+  --glass-surface:linear-gradient(135deg,#ffffff10,#ffffff03 52%,#ffffff09),#11162124;
+  --glass-hover:linear-gradient(135deg,#ffffff18,#ffffff06 52%,#ffffff0e),#1116212b;
+  --glass-edge:#ffffff1c;
+  --glass-edge-hover:#ffffff38;
+  --glass-rim:inset 0 1px #ffffff09;
+  --glass-shadow:var(--glass-rim),0 8px 24px #06091124;
+  --glass-radius:14px;
+  --glass-control-radius:10px;
+  --glass-control-backdrop:blur(24px) saturate(110%) brightness(.74);
+  --glass-panel-backdrop:blur(32px) saturate(110%) brightness(.74);
+  --glass-shell:linear-gradient(135deg,#ffffff0c,#ffffff02),rgb(var(--atmos-primary) / .09);
+}
+html[data-game]:not([data-game="rocket-league"]),html[data-game]:not([data-game="rocket-league"]) body {
+  --atmos-panel:var(--glass-surface);--atmos-shadow:var(--glass-shadow);
+  --dz-surface:var(--glass-surface);--dz-edge:var(--glass-edge);
+  --dz-control-base:var(--glass-surface);--dz-control-hover:var(--glass-hover);
+  --dz-control-well:var(--glass-surface);--dz-control-edge:var(--glass-edge);
+  --dz-control-shadow:var(--glass-rim),0 3px 12px #00000016;
+  --dz-control-radius:var(--glass-control-radius);
+  --watch-glass:var(--glass-surface);--watch-glass-hover:var(--glass-hover);--watch-edge:var(--glass-edge);
+}
+
+/* A continuous shell uses the same neutral reflection and game-coloured light. */
+html[data-game]:not([data-game="rocket-league"]) :is(.titlebar,.app-rail,.game-tabs-shell,.global-toolbar,.rl-commandbar) {
+  background:var(--glass-shell)!important;border-color:var(--glass-edge)!important;
+  box-shadow:none;border-color:transparent!important;backdrop-filter:var(--glass-control-backdrop);
+}
+/* Rocket League keeps its tracker material. Only its surrounding chrome uses
+   the continuous shell, without separate navy blocks or white structural seams. */
+html[data-game="rocket-league"] :is(.titlebar,.app-rail,.game-tabs-shell,.global-toolbar,.rl-commandbar) {
+  background:var(--glass-shell)!important;border-color:transparent!important;
+  box-shadow:none!important;backdrop-filter:blur(24px) saturate(110%) brightness(.74);
+}
+html[data-game="rocket-league"]:has(body.app-high-contrast) :is(.titlebar,.app-rail,.game-tabs-shell,.global-toolbar,.rl-commandbar) {
+  background:rgb(var(--atmos-base))!important;backdrop-filter:none;
+}
+@media(prefers-reduced-transparency:reduce) {
+ html[data-game="rocket-league"] :is(.titlebar,.app-rail,.game-tabs-shell,.global-toolbar,.rl-commandbar) {
+  background:rgb(var(--atmos-base))!important;backdrop-filter:none;
+ }
+}
+html[data-game]:not([data-game="rocket-league"]) :is(.game-page-tabs,.mode-tabs,.rl-tabs,.playlist-tabs,.segmented) button {
+  border-radius:var(--glass-control-radius);
+}
+html[data-game]:not([data-game="rocket-league"]) #hub-app .r6-page.r6-compact .r6-side-switch button {border-radius:var(--glass-control-radius);background:var(--glass-surface);border-color:var(--glass-edge);box-shadow:var(--glass-rim)}
+html[data-game=finals] #hub-app .hub-main {font-family:inherit}
+html[data-game]:not([data-game="rocket-league"]) #hub-app :is(.fn-page-intro h1,.library-intro h1,.game-simple-heading h1) {font-weight:600;line-height:1.2}
+
+/* Existing material surfaces, not every content wrapper or nested row. */
+html[data-game]:not([data-game="rocket-league"]) #hub-app :is(
+ .app-settings>.panel,.app-update-card,.release-notes,.game-card,
+ .arsenal-sidebar,.weapon-row,.weapon-detail,.weapon-build,.attachment-detail,
+ .r6-context-controls,.r6-source-controls,.operator-profile-nav,
+ .fn-class-choice,.fn-loadout-detail,.fn-equipment-card,.fn-news-card,
+ .apex-recent,.apex-landing-news>section,.apex-profile-overview,.apex-article,.apex-balance,
+ .am-balance,.am-utility,.am-composition,.am-directory-legend,
+ .rl-panel,.rl-card,.rl-profile-section,.rl-profile-hero,.rl-profile-card,.rl-settings-section,.rl-empty,.rl-wait,
+ .wd-panel,.wd-controls,.wd-range-legend,.wd-map-scale,.wd-ruler-readout,.wd-cursor-label,.wd-sight-dock,
+ .market-chart,.market-stat,.damage-config,.damage-readout,.damage-model,.damage-decisions,.damage-comparison,.gun-comparison-card,
+ .sotf-sidebar,.sotf-map-tools,.sotf-detail,.gz-sidebar,.gz-inspector,.gz-map-tools,
+ .sens-panel,.watch-filter,.video-copy,.fn-video-copy
+) {
+  background:var(--glass-surface)!important;border-color:var(--glass-edge)!important;
+  box-shadow:var(--glass-shadow);backdrop-filter:var(--glass-panel-backdrop);
+}
+html[data-game]:not([data-game="rocket-league"]) #hub-app :is(.video-card,.fn-video-card) {background:transparent!important;border-color:var(--glass-edge)}
+html[data-game]:not([data-game="rocket-league"]) #league-app :is(.sidebar,.panel) {
+  background:var(--glass-surface)!important;border-color:var(--glass-edge)!important;
+  box-shadow:var(--glass-shadow);backdrop-filter:var(--glass-panel-backdrop);
+}
+/* Nested surfaces stay flat. They inherit the panel's already diffused backdrop. */
+html[data-game]:not([data-game="rocket-league"]) #hub-app :is(.apex-profile-overview,.rl-panel,.rl-profile-section) :is(.rl-card,.rl-empty) {
+  background:transparent!important;box-shadow:none;backdrop-filter:none;
+}
+
+/* Search containers own their glass; their editable content stays clear. */
+html[data-game]:not([data-game="rocket-league"]) #hub-app :is(.apex-player-form,.cod-search,.fn-video-search>div),
+html[data-game]:not([data-game="rocket-league"]) .picker-search {
+  background:var(--glass-surface)!important;border-color:var(--glass-edge)!important;
+  box-shadow:var(--glass-shadow);backdrop-filter:var(--glass-panel-backdrop);
+}
+html[data-game]:not([data-game="rocket-league"]) :is(#hub-app,#league-app,.workspace-dialog) :is(input:not([type=checkbox]):not([type=radio]):not([type=range]),textarea,.select-control) {
+  background:var(--glass-surface)!important;border-color:var(--glass-edge)!important;
+  box-shadow:var(--glass-rim);backdrop-filter:var(--glass-control-backdrop);
+  border-radius:var(--glass-control-radius);
+}
+html[data-game]:not([data-game="rocket-league"]) #hub-app :is(.apex-player-form,.cod-search,.fn-video-search>div) :is(input,.select-control),
+html[data-game]:not([data-game="rocket-league"]) :is(#league-app,dialog) .picker-search input {
+  background:transparent!important;box-shadow:none!important;backdrop-filter:none!important;border-color:transparent!important;
+}
+html[data-game="apex"] #hub-app .apex-page[data-player-view="landing"] .apex-player-form {
+  background:var(--glass-surface);border-color:var(--glass-edge);box-shadow:var(--glass-shadow);backdrop-filter:var(--glass-panel-backdrop);
+}
+
+html[data-game]:not([data-game="rocket-league"]) :is(dialog,.workspace-dialog,.select-options,.font-popover,.source-status-content):not(.wd-tour) {
+  background:var(--glass-surface)!important;border-color:var(--glass-edge)!important;
+  box-shadow:var(--glass-rim),0 24px 70px #0006;backdrop-filter:var(--glass-panel-backdrop);
+  border-radius:var(--glass-radius);
+}
+html[data-game]:not([data-game="rocket-league"]) #hub-app .wd-fixed .wd-map-toolbar button,
+html[data-game]:not([data-game="rocket-league"]) .wd-tour-card {
+  background:var(--glass-surface)!important;border-color:var(--glass-edge)!important;
+  box-shadow:var(--glass-shadow);backdrop-filter:var(--glass-panel-backdrop)!important;
+}
+html[data-game]:not([data-game="rocket-league"]) :is(button,input,textarea,summary,[role=tab]):focus-visible {
+  outline:2px solid var(--atmos-accent);outline-offset:3px;
+}
+html[data-game]:not([data-game="rocket-league"]) :is(.hub-button,.select-control,.workspace-control,.video-card):hover:not(:disabled) {
+  border-color:var(--glass-edge-hover)!important;
+}
+html[data-game]:not([data-game="rocket-league"]) :is(.hub-button,.select-control,.workspace-control):active:not(:disabled) {
+  box-shadow:inset 0 2px 8px #0003,var(--glass-rim);
+}
+
+html[data-appearance="light"][data-game]:not([data-game="rocket-league"]) {
+  --glass-surface:linear-gradient(135deg,#ffffff28,#ffffff10 52%,#ffffff20),#e8eef620;
+  --glass-hover:linear-gradient(135deg,#ffffff40,#ffffff18),#e8eef630;
+  --glass-edge:#293e5840;--glass-edge-hover:#293e5860;
+  --glass-rim:inset 0 1px #ffffff24;
+  --glass-control-backdrop:blur(18px) saturate(110%);--glass-panel-backdrop:blur(28px) saturate(110%);
+}
+/* Accessibility preferences change the shared material itself, once. */
+html[data-game]:not([data-game="rocket-league"]):has(body.app-high-contrast) {
+  --glass-surface:rgb(var(--atmos-base));--glass-hover:rgb(var(--atmos-base));--glass-shell:rgb(var(--atmos-base));
+  --glass-edge:var(--atmos-ink);--glass-control-backdrop:none;--glass-panel-backdrop:none;
+}
+@media(prefers-reduced-transparency:reduce) {
+ html[data-game]:not([data-game="rocket-league"]) {
+  --glass-surface:rgb(var(--atmos-base));--glass-hover:rgb(var(--atmos-base));--glass-shell:rgb(var(--atmos-base));
+  --glass-control-backdrop:none;--glass-panel-backdrop:none;
+ }
+}
+
+/* Structural joins use a surface change, not enclosing white rails. */
+html[data-game]:not([data-game="rocket-league"]) :is(.game-tabs-shell,.titlebar,.global-toolbar,.app-rail){border-color:transparent!important;box-shadow:none!important}
+html[data-game]:not([data-game="rocket-league"]) #hub-app :is(.wd-controls,.sotf-sidebar,.gz-sidebar),html[data-game=league] #league-app .sidebar{border-color:transparent!important;box-shadow:none}
+html[data-game=apex] #hub-app .apex-page[data-player-view=landing] .apex-player-form::before{display:none}
+html[data-game=apex] #hub-app .apex-page[data-player-view=landing] .apex-player-form:focus-within{box-shadow:var(--glass-shadow);border-color:var(--glass-edge-hover)}
+
+html[data-game="apex"] #hub-app .apex-page[data-player-view="landing"] form.apex-player-form :is(input,.select-control){background:transparent!important;border-color:transparent!important;box-shadow:none!important;backdrop-filter:none!important}
+html[data-game="siege"] #hub-app .r6-page.r6-compact .r6-side-switch button[aria-pressed=true]{background:color-mix(in srgb,var(--atmos-accent) 16%,transparent);border-color:color-mix(in srgb,var(--atmos-accent) 40%,transparent)}
+
+/* Landing news rows already sit on a glass panel. Do not blur/tint them again. */
+html[data-game="apex"] #hub-app .apex-page[data-player-view="landing"] .apex-landing-news .apex-article {
+  background:transparent!important;backdrop-filter:none;box-shadow:none!important;border:0!important;
+}
+html[data-game="apex"] #hub-app .apex-page[data-player-view="landing"] .apex-landing-news .apex-article:hover .apex-article-copy strong{text-decoration:underline;text-underline-offset:3px}
+html[data-game="apex"] #hub-app .apex-page[data-player-view="landing"] .apex-landing-news{grid-template-columns:1fr}
+html[data-game="apex"] #hub-app .apex-page[data-player-view="landing"] .apex-landing-news>section{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 26px}
+html[data-game="apex"] #hub-app .apex-page[data-player-view="landing"] .apex-landing-news .apex-section-heading{grid-column:1/-1}
+@media(max-width:750px){html[data-game="apex"] #hub-app .apex-page[data-player-view="landing"] .apex-landing-news>section{grid-template-columns:1fr}}

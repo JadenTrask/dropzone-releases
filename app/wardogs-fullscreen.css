@@ -65,12 +65,6 @@
 
 #hub-app .sight-open .wd-sight-tab{animation:wd-sight-enter .26s cubic-bezier(.22,1,.36,1)}
 @media(prefers-reduced-motion:reduce){#hub-app .sight-open .wd-sight-tab{animation:none}}
-/* Fade completed page snapshots, never individual loading/render passes. */
-:root{view-transition-name:none}
-#hub-app{view-transition-name:workspace-page}
-::view-transition-old(workspace-page),::view-transition-new(workspace-page){animation-duration:300ms;animation-timing-function:cubic-bezier(.4,0,.2,1)}
-@media(prefers-reduced-motion:reduce){::view-transition-group(*),::view-transition-old(*),::view-transition-new(*){animation:none!important}}
-
 /* Move the tab and sight on one composited surface; no display toggle or layout jump. */
 #hub-app .wd-fixed .wd-sight-dock{position:absolute;right:0;top:50%;width:var(--sight-width);z-index:11;transform:translate(100%,-50%);transition:transform 300ms cubic-bezier(.22,1,.36,1);will-change:transform}
 #hub-app .wd-fixed .sight-open .wd-sight-dock{transform:translate(0,-50%)}

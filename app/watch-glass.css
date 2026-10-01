@@ -1,0 +1,70 @@
+/* Shared CDL / ALGS video glass. Other games retain their existing materials. */
+html:is([data-game="bo7"],[data-game="apex"]) #hub-app .watch-page:is([data-watch-game="bo7"],[data-watch-game="apex"]) {
+  --watch-glass:var(--glass-surface);
+  --watch-glass-hover:var(--glass-hover);
+  --watch-edge:var(--glass-edge);
+  --watch-copy:var(--atmos-ink,#f2f5fc);
+  --watch-muted:var(--atmos-muted,#bec9db);
+  position:relative;isolation:isolate;
+}
+html:is([data-game="bo7"],[data-game="apex"]) #hub-app .watch-page:is([data-watch-game="bo7"],[data-watch-game="apex"])::before {
+  content:"";position:fixed;z-index:-1;pointer-events:none;
+  top:50vh;left:calc(50vw + var(--rail-width,72px)/2);transform:translate(-50%,-50%);
+  width:calc(100vw - var(--rail-width,72px) - 32px);aspect-ratio:1243.9/320.2;
+  background:var(--watch-logo,url('./assets/cdl/league-white.svg')) center/contain no-repeat;
+  opacity:.12;filter:blur(1.25px);
+  mask-image:linear-gradient(180deg,transparent,#000 15%,#000 65%,transparent);
+}
+html:is([data-game="bo7"],[data-game="apex"]) #hub-app .watch-page:is([data-watch-game="bo7"],[data-watch-game="apex"]) .watch-filter {
+  position:relative;z-index:3;
+  background:var(--watch-glass)!important;border:1px solid var(--watch-edge);
+  border-color:var(--watch-edge)!important;border-radius:14px;
+  box-shadow:inset 0 1px #ffffff30,inset 0 -1px #ffffff12,0 5px 18px #00000012;
+  backdrop-filter:var(--glass-panel-backdrop);padding:18px;gap:18px;
+}
+html:is([data-game="bo7"],[data-game="apex"]) #hub-app .watch-page:is([data-watch-game="bo7"],[data-watch-game="apex"]) .watch-filter>label>span {
+  color:var(--watch-muted)!important;
+}
+html:is([data-game="bo7"],[data-game="apex"]) #hub-app .watch-page:is([data-watch-game="bo7"],[data-watch-game="apex"]) .video-card {
+  background:transparent!important;border:1px solid var(--watch-edge);
+  border-color:var(--watch-edge)!important;border-radius:14px;padding:0;
+  box-shadow:0 4px 16px #00000016;
+}
+html:is([data-game="bo7"],[data-game="apex"]) #hub-app .watch-page:is([data-watch-game="bo7"],[data-watch-game="apex"]) .video-copy {
+  display:flex;flex:1;flex-direction:column;gap:10px;padding:15px 16px;
+  background:var(--watch-glass);backdrop-filter:var(--glass-panel-backdrop);
+  box-shadow:inset 0 1px #ffffff26,inset 0 -1px #ffffff12;
+}
+html:is([data-game="bo7"],[data-game="apex"]) #hub-app .watch-page:is([data-watch-game="bo7"],[data-watch-game="apex"]) .video-copy>strong {
+  display:block;color:var(--watch-copy)!important;font-size:.875rem;
+  line-height:1.55;font-weight:550;overflow-wrap:anywhere;
+}
+html:is([data-game="bo7"],[data-game="apex"]) #hub-app .watch-page:is([data-watch-game="bo7"],[data-watch-game="apex"]) .video-copy>small {
+  display:block;color:var(--watch-muted)!important;font-size:.75rem;
+  line-height:1.6;margin-top:auto;
+}
+html:is([data-game="bo7"],[data-game="apex"]) #hub-app .watch-page:is([data-watch-game="bo7"],[data-watch-game="apex"]) .video-card:is(:hover,.selected) {
+  border-color:var(--atmos-accent)!important;
+}
+html:is([data-game="bo7"],[data-game="apex"]) #hub-app .watch-page:is([data-watch-game="bo7"],[data-watch-game="apex"]) .video-card:is(:hover,.selected) .video-copy {
+  background:var(--watch-glass-hover);
+}
+html[data-appearance="light"]:is([data-game="bo7"],[data-game="apex"]) #hub-app .watch-page:is([data-watch-game="bo7"],[data-watch-game="apex"]) {
+  --watch-glass:linear-gradient(140deg,#ffffff30,#ffffff0d),#ffffff24;
+  --watch-glass-hover:linear-gradient(140deg,#ffffff50,#ffffff18),#ffffff30;
+  --watch-edge:#20314538;
+}
+html[data-appearance="light"]:is([data-game="bo7"],[data-game="apex"]) #hub-app .watch-page:is([data-watch-game="bo7"],[data-watch-game="apex"])::before {filter:brightness(0) blur(1.25px);opacity:.07}
+html:is([data-game="bo7"],[data-game="apex"]) .app-high-contrast #hub-app .watch-page:is([data-watch-game="bo7"],[data-watch-game="apex"]) {
+  --watch-glass:rgb(var(--atmos-base));--watch-glass-hover:rgb(var(--atmos-base));--watch-edge:var(--atmos-accent);
+}
+html:is([data-game="bo7"],[data-game="apex"]) .app-high-contrast #hub-app .watch-page:is([data-watch-game="bo7"],[data-watch-game="apex"]) :is(.watch-filter,.video-copy) {backdrop-filter:none}
+html:is([data-game="bo7"],[data-game="apex"]) .app-high-contrast #hub-app .watch-page:is([data-watch-game="bo7"],[data-watch-game="apex"])::before {display:none}
+@media(prefers-reduced-transparency:reduce) {
+  html:is([data-game="bo7"],[data-game="apex"]) #hub-app .watch-page:is([data-watch-game="bo7"],[data-watch-game="apex"]) {--watch-glass:rgb(var(--atmos-base));--watch-glass-hover:rgb(var(--atmos-base))}
+  html:is([data-game="bo7"],[data-game="apex"]) #hub-app .watch-page:is([data-watch-game="bo7"],[data-watch-game="apex"]) :is(.watch-filter,.video-copy) {backdrop-filter:none}
+  html:is([data-game="bo7"],[data-game="apex"]) #hub-app .watch-page:is([data-watch-game="bo7"],[data-watch-game="apex"])::before {display:none}
+}
+
+html[data-game="apex"] #hub-app .watch-page[data-watch-game="apex"] {--watch-logo:url('./assets/apex/algs-logo.svg')}
+html[data-game="apex"] #hub-app .watch-page[data-watch-game="apex"]::before {aspect-ratio:467/200}

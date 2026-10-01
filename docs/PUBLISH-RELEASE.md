@@ -1,14 +1,14 @@
-# Publish Dropzone 2.4.9
+# Publish Dropzone 2.5.0
 
 The [Windows release workflow](../.github/workflows/release.yml) builds and publishes to [JadenTrask/dropzone-releases](https://github.com/JadenTrask/dropzone-releases/releases). It creates a draft, verifies the uploaded assets, and only then publishes the latest stable release. This guide describes the process; it is not a publication or runtime-test record.
 
 ## Prepare the final source
 
 1. Complete the app changes and checks. Use Node.js **24.13.0**, matching the workflow.
-2. Set the version with `npm run version:set -- 2.4.9`. Commit `package.json`, `package-lock.json`, `app/version.js`, and `app/index.html` together with all app, asset, build, script, test, and documentation changes.
+2. Set the version with `npm run version:set -- 2.5.0`. Commit `package.json`, `package-lock.json`, `app/version.js`, and `app/index.html` together with all app, asset, build, script, test, and documentation changes.
 3. Update [RELEASE-NOTES.md](RELEASE-NOTES.md), which becomes the release body. Record checks actually completed in [VALIDATION.md](VALIDATION.md); do not infer native installation or upgrade success from unit tests or packaging.
 4. Keep `release-feed.json` pointed at `JadenTrask/dropzone-releases`. The workflow refuses a different destination.
-5. Push the validated commit to `main`. A change to `package.json`, `app/version.js`, or the release workflow triggers publication. The workflow can also be dispatched manually on `main`. Let it create the version tag; creating `v2.4.9` in advance makes its existing-tag guard skip publication.
+5. Push the validated commit to `main`. A change to `package.json`, `app/version.js`, or the release workflow triggers publication. The workflow can also be dispatched manually on `main`. Let it create the version tag; creating `v2.5.0` in advance makes its existing-tag guard skip publication.
 
 The workflow uses a Windows 2022 runner, the committed dependency lockfile, and the repository's `GITHUB_TOKEN` with `contents: write`. It checks out the triggering commit and preserves committed file bytes. No dependency upgrade is part of a release.
 
@@ -33,16 +33,16 @@ The verifier deliberately rejects changed or missing source files. Version-gener
 
 ## Release assets
 
-Tag **v2.4.9** and title **Dropzone 2.4.9** are derived from `package.json`. Exactly four files are uploaded from `release/installer/`:
+Tag **v2.5.0** and title **Dropzone 2.5.0** are derived from `package.json`. Exactly four files are uploaded from `release/installer/`:
 
 | Asset | Purpose |
 | --- | --- |
-| `Dropzone-Setup-2.4.9-x64.exe` | Per-user Windows installer |
-| `Dropzone-Setup-2.4.9-x64.exe.blockmap` | Installer update blockmap |
+| `Dropzone-Setup-2.5.0-x64.exe` | Per-user Windows installer |
+| `Dropzone-Setup-2.5.0-x64.exe.blockmap` | Installer update blockmap |
 | `latest.yml` | Installed-app update metadata |
-| `Dropzone-Source-2.4.9.zip` | Complete source for the same commit |
+| `Dropzone-Source-2.5.0.zip` | Complete source for the same commit |
 
-The ZIP opens to `Dropzone-Source-2.4.9/`. Its contents are suitable for `npm ci`, development, tests, and rebuilding; installed dependencies are downloaded separately.
+The ZIP opens to `Dropzone-Source-2.5.0/`. Its contents are suitable for `npm ci`, development, tests, and rebuilding; installed dependencies are downloaded separately.
 
 ## Draft and publication behavior
 

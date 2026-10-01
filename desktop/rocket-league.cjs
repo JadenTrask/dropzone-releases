@@ -1,7 +1,7 @@
 'use strict';
 const {Worker}=require('node:worker_threads');
 const path=require('node:path');
-function createRocketLeague({directory,window,app}){
+function createRocketLeague({directory,window,app,onSession=()=>{}}){
  const accounts=require('./accounts.cjs').createAccounts({directory,safeStorage:require('electron').safeStorage});
  const setup=require('../core/rocket-league-setup.cjs');let setupFiles=[],setupBusy=false;
  async function configure(input){if(setupBusy)throw Error('Setup is already checking.');setupBusy=true;try{
@@ -13,7 +13,7 @@ function createRocketLeague({directory,window,app}){
  return {installations,...(result?{result}:{})};
  }finally{setupBusy=false;}}
  let worker=null,failure='',pageVisible=false,id=0,lifecycle='idle';const pending=new Map();
- try{worker=new Worker(path.join(__dirname,'../core/rocket-league-worker.cjs'),{workerData:{directory}});worker.on('message',m=>{if(m.event==='lifecycle'){lifecycle=m.value;return;}if(m.event==='state'){if(!window.isDestroyed()&&!window.isMinimized()&&pageVisible)window.webContents.send('rocket-league-state',m.value);return;}const job=pending.get(m.id);if(job){clearTimeout(job.timer);pending.delete(m.id);m.error?job.reject(Error(m.error)):job.resolve(m.value);}});worker.on('error',e=>{failure=e.message;for(const j of pending.values()){clearTimeout(j.timer);j.reject(Error('Rocket League tracker unavailable.'));}pending.clear();});worker.on('exit',()=>{failure='Tracker stopped. Restart Dropzone to retry.';});}catch(e){failure=e.message;}
+ try{worker=new Worker(path.join(__dirname,'../core/rocket-league-worker.cjs'),{workerData:{directory}});worker.on('message',m=>{if(m.event==='session-start'){onSession(m.value);return;}if(m.event==='lifecycle'){lifecycle=m.value;return;}if(m.event==='state'){if(!window.isDestroyed()&&!window.isMinimized()&&pageVisible)window.webContents.send('rocket-league-state',m.value);return;}const job=pending.get(m.id);if(job){clearTimeout(job.timer);pending.delete(m.id);m.error?job.reject(Error(m.error)):job.resolve(m.value);}});worker.on('error',e=>{failure=e.message;for(const j of pending.values()){clearTimeout(j.timer);j.reject(Error('Rocket League tracker unavailable.'));}pending.clear();});worker.on('exit',()=>{failure='Tracker stopped. Restart Dropzone to retry.';});}catch(e){failure=e.message;}
  function request(input){if(failure||!worker)return Promise.reject(Error(failure||'Tracker unavailable.'));if(pending.size>=16)return Promise.reject(Error('Tracker is busy. Try again.'));return new Promise((resolve,reject)=>{const key=++id,timer=setTimeout(()=>{pending.delete(key);reject(Error('Tracker request timed out.'));},10000);pending.set(key,{resolve,reject,timer});worker.postMessage({id:key,input});});}
  async function detectIdentity(){if(process.platform!=='win32')return;try{const {execFile}=require('node:child_process'),{promisify}=require('node:util');const {stdout}=await promisify(execFile)('reg.exe',['query','HKCU\\Software\\Valve\\Steam\\ActiveProcess','/v','ActiveUser'],{windowsHide:true,timeout:3000});const value=stdout.match(/ActiveUser\s+REG_DWORD\s+(0x[0-9a-f]+)/i)?.[1];if(value&&BigInt(value)>0n)await request({action:'local-identity',identity:'Steam|'+(76561197960265728n+BigInt(value))+'|0'});}catch{}}
  async function applyHistoryPolicy(){const policy=await accounts.command({action:'account-history-policy'});return request({action:'history-policy',days:policy.days});}

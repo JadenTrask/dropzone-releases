@@ -3,6 +3,15 @@ import {clamp,clampPoint,validPoint,project,unproject,fitCamera,zoomCamera,easeZ
 export class WardogsMap {
   constructor(canvas,{map,revision,getState,onPoint,onTool,onCursor,onImageStatus}) {
     Object.assign(this,{canvas,map,revision,getState,onPoint,onTool,onCursor,onImageStatus});
+    // Keep measurement chrome above the canvas so its glass can reveal and blur
+    // the terrain. Only presentation moves here; all map math stays below.
+    if(canvas.parentElement){
+      this.scaleOverlay=document.createElement('div');this.scaleOverlay.className='wd-map-scale';
+      this.scaleValue=document.createElement('span');this.scaleBar=document.createElement('i');this.scaleBar.setAttribute('aria-hidden','true');
+      this.scaleOverlay.append(this.scaleValue,this.scaleBar);
+      this.rulerOverlay=document.createElement('div');this.rulerOverlay.className='wd-ruler-readout';this.rulerOverlay.hidden=true;
+      canvas.parentElement.append(this.scaleOverlay,this.rulerOverlay);
+    }
     this.markerArt=new Image();this.markerArt.onload=()=>this.draw();this.markerArt.src='./assets/wardogs-markers-generated.png';
     this.ctx=canvas.getContext('2d');this.images=new Map();this.camera=null;this.pending=0;this.dead=false;this.ruler=[];this.drag=null;this.zoomTarget=null;this.zoomTime=null;this.reducedMotion=window.matchMedia('(prefers-reduced-motion: reduce)');
     this.events=new AbortController();const signal=this.events.signal;
@@ -19,7 +28,7 @@ export class WardogsMap {
     this.appearanceObserver=new MutationObserver(()=>this.draw());this.appearanceObserver.observe(document.documentElement,{attributes:true,attributeFilter:['data-appearance']});
     this.observer=new ResizeObserver(()=>this.resize());this.observer.observe(canvas);this.resize();
   }
-  destroy(){this.dead=true;this.markerArt.onload=null;this.events.abort();this.observer.disconnect();this.appearanceObserver.disconnect();cancelAnimationFrame(this.pending);for(const r of this.images.values()){r.image.onload=null;r.image.onerror=null;r.image.src="";}this.images.clear();}
+  destroy(){this.dead=true;this.markerArt.onload=null;this.events.abort();this.observer.disconnect();this.appearanceObserver.disconnect();cancelAnimationFrame(this.pending);for(const r of this.images.values()){r.image.onload=null;r.image.onerror=null;r.image.src="";}this.images.clear();this.scaleOverlay?.remove();this.rulerOverlay?.remove();}
   resize(){
     const rect=this.canvas.getBoundingClientRect();if(!rect.width||!rect.height)return;
     this.stopZoom();this.width=rect.width;this.height=rect.height;this.dpr=Math.min(window.devicePixelRatio||1,3);
@@ -157,6 +166,7 @@ export class WardogsMap {
   }
   paint(){
     if(!this.camera)return;
+    if(this.rulerOverlay)this.rulerOverlay.hidden=true;
     const c=this.ctx,s={...this.getState()},b=this.map.bounds,t=this.map.tileBounds;
     if(this.drag?.preview)s[this.drag.mode]=this.drag.preview;
     this.fontScale=clamp(parseFloat(getComputedStyle(document.documentElement).fontSize)/16,1,2);
@@ -202,7 +212,7 @@ export class WardogsMap {
     if(s.landmarks){const labelBoxes=[];for(const p of this.map.markers||[])this.pin(p,p.name,'#d2d5cb',true,labelBoxes);}
     for(const record of s.saved||[])if(record.map===this.map.id)this.pin(record.target,record.name,'#b0bdcc',true);
     if(s.origin&&s.target)this.line([s.origin,s.target],'#f4d276',[8,5],2);
-    if(this.ruler.length){for(let i=0;i<this.ruler.length;i++)this.pin(this.ruler[i],i?'B':'A','#79d5e6');if(this.ruler.length===2){this.line(this.ruler,'#79d5e6',[3,5]);const g=geometry(...this.ruler,this.map);if(g){const a=this.screen(this.ruler[0]),b=this.screen(this.ruler[1]),text=`${Math.round(g.distance).toLocaleString()} m`,size=18*this.fontScale;c.save();c.font=`700 ${size}px system-ui,sans-serif`;const w=c.measureText(text).width+24,h=size+20,x=clamp((a.x+b.x)/2,w/2+8,this.width-w/2-8),y=clamp((a.y+b.y)/2,h/2+8,this.height-h/2-8);c.fillStyle='#102126';c.strokeStyle='#79d5e6';c.lineWidth=2;c.beginPath();c.roundRect(x-w/2,y-h/2,w,h,8);c.fill();c.stroke();c.fillStyle='#d5f7ff';c.textAlign='center';c.textBaseline='middle';c.fillText(text,x,y);c.restore();}}}
+    if(this.ruler.length){for(let i=0;i<this.ruler.length;i++)this.pin(this.ruler[i],i?'B':'A','#79d5e6');if(this.ruler.length===2){this.line(this.ruler,'#79d5e6',[3,5]);const g=geometry(...this.ruler,this.map);if(g&&this.rulerOverlay){const a=this.screen(this.ruler[0]),b=this.screen(this.ruler[1]),text=`${Math.round(g.distance).toLocaleString()} m`,size=18*this.fontScale;c.save();c.font=`700 ${size}px system-ui,sans-serif`;const w=c.measureText(text).width+24,h=size+20,x=clamp((a.x+b.x)/2,w/2+8,this.width-w/2-8),y=clamp((a.y+b.y)/2,h/2+8,this.height-h/2-8);c.restore();const el=this.rulerOverlay;if(el.textContent!==text){el.textContent=text;el.setAttribute('aria-label',`Ruler distance: ${text}`);}Object.assign(el.style,{left:`${x}px`,top:`${y}px`,width:`${w}px`,height:`${h}px`,fontSize:`${size}px`});el.hidden=false;}}}
     if(s.impact)this.pin(s.impact,'IMPACT','#79d5e6');
     if(s.adjustedAim){this.line([s.origin,s.adjustedAim],'#79d5e6',[4,4],2);this.pin(s.adjustedAim,'ADJUSTED AIM','#79d5e6',true);}
     this.pin(s.origin,s.lockOrigin?'GUN · LOCKED':'GUN','#a2e9bd');this.pin(s.target,'TARGET','#ff947e');
@@ -211,9 +221,12 @@ export class WardogsMap {
     const metresPerPixel=this.map.coordinateMetersPerUnit/this.camera.scale,nominal=100*metresPerPixel;
     const power=10**Math.floor(Math.log10(nominal));const scaleMetres=[1,2,5,10].map(v=>v*power).filter(v=>v<=nominal).at(-1)||power;
     const length=scaleMetres/metresPerPixel;
-    c.fillStyle='#111714db';c.fillRect(13,this.height-56,Math.max(length+28,120),45);
-    c.strokeStyle='#edf0d8';c.lineWidth=2;c.beginPath();c.moveTo(24,this.height-22);c.lineTo(24+length,this.height-22);c.stroke();
-    this.label(scaleMetres>=1000?`${scaleMetres/1000} km`:`${Math.round(scaleMetres)} m`,24,this.height-33);
+    if(this.scaleOverlay){
+      const text=scaleMetres>=1000?`${scaleMetres/1000} km`:`${Math.round(scaleMetres)} m`;
+      if(this.scaleValue.textContent!==text){this.scaleValue.textContent=text;this.scaleOverlay.setAttribute('aria-label',`Map scale: ${text}`);}
+      this.scaleBar.style.width=`${length}px`;
+      this.scaleOverlay.style.top=`${this.height-11}px`;
+    }
     this.canvas.dataset.tool=s.tool;
     this.updateCursor();
     if(this.images.size>300){const removable=[...this.images].filter(([key,r])=>!key.startsWith('0/')&&r.used<performance.now()-1500).sort((a,b)=>a[1].used-b[1].used);for(const [key,r] of removable.slice(0,this.images.size-260)){r.image.onload=null;r.image.onerror=null;this.images.delete(key);}}

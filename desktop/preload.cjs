@@ -2,6 +2,8 @@ const {contextBridge,ipcRenderer}=require('electron');
 // Buffer readiness even if the first paint precedes the intro module.
 let startupRevealed=false;const startupCallbacks=new Set();
 ipcRenderer.once('startup-reveal',()=>{startupRevealed=true;for(const callback of startupCallbacks)callback();startupCallbacks.clear();});
+let pendingLiveTracker=null;const liveTrackerCallbacks=new Set();
+ipcRenderer.on('open-live-tracker',(_event,value)=>{if(!liveTrackerCallbacks.size){pendingLiveTracker=value;return;}for(const callback of liveTrackerCallbacks)callback(value);});
 contextBridge.exposeInMainWorld('rift',Object.freeze({
   coaching:input=>ipcRenderer.invoke('coaching',input),
   onCoaching:callback=>{const listener=(_event,value)=>callback(value);ipcRenderer.on('coaching-status',listener);return ()=>ipcRenderer.removeListener('coaching-status',listener);},
@@ -16,6 +18,8 @@ contextBridge.exposeInMainWorld('rift',Object.freeze({
   lockAdmin:()=>ipcRenderer.invoke('admin-lock'),
   appContext:()=>ipcRenderer.invoke('app-context'),
   loginStartup:input=>ipcRenderer.invoke('login-startup',input),
+  launchBehavior:input=>ipcRenderer.invoke('launch-behavior',input),
+  onOpenLiveTracker:callback=>{if(typeof callback!=='function')return ()=>{};liveTrackerCallbacks.add(callback);if(pendingLiveTracker){const value=pendingLiveTracker;pendingLiveTracker=null;callback(value);}ipcRenderer.send('live-tracker-ready');return ()=>liveTrackerCallbacks.delete(callback);},
   games:()=>ipcRenderer.invoke('games'),
   loadouts:options=>ipcRenderer.invoke('loadouts',options),
   media:options=>ipcRenderer.invoke('media',options),

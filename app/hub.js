@@ -1,6 +1,7 @@
 import {lockRailHover} from './rail-hover.js';
 import {startFriendNotifications} from './friend-notifications.js';
 import {transitionPage} from './page-transition.js';
+import {recordRoute,restoredRoute} from './navigation-history.js';
 import {scheduleFeatureWarmup} from './feature-warmup.js';
 import {showPlayerCount} from './wardogs-player-count.js';
 import {sourceStatus} from './source-status.js';
@@ -97,6 +98,8 @@ function renderComingSoon(g){
 async function route(...args){lockRailHover();return transitionPage(()=>renderRoute(...args));}
 let navigationHistoryStarted=false;
 async function renderRoute(id,watchGame=null,initialView=null,fromHistory=false){
+  if(id==='apex'&&initialView==='apex-esports')initialView='apex-news';
+  if(id==='patches'&&watchGame==='apex'){id='apex';watchGame=null;initialView='apex-news';}
   // Gate the owner before resolving subpages, restored workspaces or history.
   const contextual=['watch','patches','operators','progression','server-status','market','damage','planner','squad'].includes(id);
   const owner=state.games.find(g=>g.id===id)||state.games.find(g=>g.id===(watchGame||(contextual?(game()?.id||state.watchGame):null)));
@@ -106,12 +109,12 @@ async function renderRoute(id,watchGame=null,initialView=null,fromHistory=false)
   const navigation=++navigationRevision;
   loadedFeatures.get('rocket-league-ui')?.leaveRocketLeague?.();loadedFeatures.get('wardogs-status-ui')?.leaveServerStatus?.();loadedFeatures.get('wardogs-market-ui')?.leaveMarket?.();leaveIntel();loadedFeatures.get('finals-ui')?.leaveFinals?.();loadedFeatures.get('watch-ui')?.leaveWatch?.();leaveSources();loadedFeatures.get('patches-ui')?.leavePatches?.();loadedFeatures.get('wardogs-ui')?.leaveWardogs?.();loadedFeatures.get('siege-ui')?.leaveSiege?.();loadedFeatures.get('siege-operators-ui')?.leaveOperators?.();loadedFeatures.get('sotf-ui')?.leaveForest?.();loadedFeatures.get('gzw-ui')?.leaveGzw?.();loadedFeatures.get('apex-ui')?.leaveApex?.();
   if(['operators','progression','server-status','market','damage','planner','squad'].includes(id)){const target=state.games.find(g=>g.id===(watchGame||state.watchGame));if(!target?.pages?.includes(id))return;state.watchGame=target.id;}
-  if(id==='watch'||id==='patches'){state.watchGame=watchGame||game()?.id||state.watchGame;if(!(id==='watch'?['lol','bo7','warzone','finals','mw4','siege']:['lol','bo7','warzone','finals','mw4','wardogs','siege','gray-zone']).includes(state.watchGame))return;}
+  if(id==='watch'||id==='patches'){state.watchGame=watchGame||game()?.id||state.watchGame;if(!(id==='watch'?['lol','bo7','warzone','finals','mw4','siege','apex']:['lol','bo7','warzone','finals','mw4','wardogs','siege','gray-zone']).includes(state.watchGame))return;}
   rememberWorkspace(id,['command','operators','progression','server-status','market','damage','planner','squad','watch','patches'].includes(id)?(id==='command'?watchGame:state.watchGame):null);
-  if(window.location.protocol!=='file:'){const url=new URL(window.location.href);url.searchParams.set('game',id);if(watchGame)url.searchParams.set('context',watchGame);else url.searchParams.delete('context');if(initialView)url.searchParams.set('view',initialView);else url.searchParams.delete('view');const replace=!navigationHistoryStarted||fromHistory;navigationHistoryStarted=true;if(replace||url.href!==window.location.href)window.history[replace?'replaceState':'pushState']({dropzone:true},'',url);}
+  recordRoute(window.history,window.location,{id,context:watchGame,view:initialView,replace:!navigationHistoryStarted||fromHistory,preserveState:fromHistory});navigationHistoryStarted=true;
   window.dispatchEvent(new CustomEvent('dropzone-workspace-change',{detail:{id,game:watchGame||id}}));
   ++state.request;state.route=id;state.data=null;state.error=null;state.snapshot=false;
-  const g=['watch','patches','operators','progression','server-status','market','damage','planner','squad'].includes(id)?state.games.find(g=>g.id===state.watchGame):game();setTheme(g);gameTabs(g,g?.kind==='apex'?(initialView||'loadouts'):id==='watch'?'videos':['patches','operators','progression','server-status','market','damage','planner','squad'].includes(id)?id:'loadouts');$('#league-app').hidden=id!=='lol';$('#hub-app').hidden=id==='lol';
+  const g=['watch','patches','operators','progression','server-status','market','damage','planner','squad'].includes(id)?state.games.find(g=>g.id===state.watchGame):game();setTheme(g);gameTabs(g,id==='watch'?'videos':g?.kind==='apex'?(initialView||'loadouts'):['patches','operators','progression','server-status','market','damage','planner','squad'].includes(id)?id:'loadouts');$('#league-app').hidden=id!=='lol';$('#hub-app').hidden=id==='lol';
   location(g,id==='operators'?'Rainbow Six Siege / Operators':id==='intel'?'My patch alerts':id==='saved'?'Saved loadouts':id==='watch'?g.name+' / Videos':id==='patches'?g.name+' / News':id==='updates'?'App updates':id==='sources'?'Sources':null);
   document.querySelectorAll('.global-tools [data-route]').forEach(b=>b.setAttribute('aria-current',b.dataset.route===id?'page':'false'));
 
@@ -189,11 +192,11 @@ document.addEventListener('click',async event=>{
   const b=event.target.closest('button');if(!b)return;
   try{
     if(b.dataset.gamePage==='session')return route('command',$('#game-tabs').dataset.game);
-    if(b.dataset.gamePage){const id=$('#game-tabs').dataset.game;if(id==='apex')return await route('apex',null,b.dataset.gamePage);return await route(b.dataset.gamePage==='videos'?'watch':['patches','operators','progression','server-status','market','damage','planner','squad'].includes(b.dataset.gamePage)?b.dataset.gamePage:id,id);}
+    if(b.dataset.gamePage){const id=$('#game-tabs').dataset.game;if(id==='apex')return await (b.dataset.gamePage==='videos'?route('watch','apex'):route('apex',null,b.dataset.gamePage));return await route(b.dataset.gamePage==='videos'?'watch':['patches','operators','progression','server-status','market','damage','planner','squad'].includes(b.dataset.gamePage)?b.dataset.gamePage:id,id);}
     if(b.hasAttribute('data-watch-current'))return await route('watch',game()?.id||state.watchGame);
     if(b.dataset.watchGame)return await route('watch',b.dataset.watchGame);
     if(b.hasAttribute('data-apex-sign-in'))return await route('rocket-league',null,'account');
-    if(b.dataset.apexPage)return await route('apex',null,({overview:'loadouts',legends:'apex-legends',news:'apex-news',esports:'apex-esports'})[b.dataset.apexPage]||'loadouts');
+    if(b.dataset.apexPage)return await route('apex',null,({overview:'loadouts',legends:'apex-legends',news:'apex-news',esports:'apex-news'})[b.dataset.apexPage]||'loadouts');
     if(b.dataset.savedWorkspace)return await route(b.dataset.savedWorkspace,null,'saved');
     if(b.dataset.openOperator)return await route('operators','siege',b.dataset.openOperator);
     if(b.dataset.route)return await route(b.dataset.route);
@@ -218,6 +221,11 @@ document.addEventListener('change',event=>{const fields={'cod-category':'categor
 window.addEventListener('tbb-sources-updated',event=>{const row=event.detail?.rows.find(r=>r.id==='mw4-release'),mw4=state.games.find(g=>g.id==='mw4');if(row&&mw4){if(row.releaseDate)mw4.releaseDate=row.releaseDate;if(row.checkedAt)mw4.releaseVerifiedAt=row.checkedAt;mw4.releaseError=row.error;if(state.route==='mw4')renderComingSoon(mw4);else if(state.route==='cod')renderCollection(game());else if(state.route==='home')renderHome();}if(game()?.kind==='loadouts'&&game().status==='active'&&!state.loading&&!state.snapshot)loadBuilds();});
 try{await applyVisualUpdates();document.documentElement.dataset.admin=String(!!(await api.appContext()).admin);state.games=(await api.games()).filter(g=>!['valorant','rivals'].includes(g.id));if(!Array.isArray(state.games))throw new Error('Game library could not be read.');renderRail();applyAccessibility();startWorkspaceTools(state.games,route);const requested=new URLSearchParams(window.location.search).get('game');let restored=null;try{restored=sessionStorage.getItem('dropzone-preview-page');sessionStorage.removeItem('dropzone-preview-page');}catch{}const previous=restoreWorkspace();const destination=requested||restored||previous?.id||'home';await route(state.games.some(g=>g.id===destination)||['home','sensitivity','settings','command','saved','sources','updates','operators','progression','server-status','market','damage','planner','squad','planner','intel','squad','patches','watch'].includes(destination)?destination:'home',requested?new URLSearchParams(window.location.search).get('context'):restored?null:previous?.game,new URLSearchParams(window.location.search).get('view'));startUpdatePolling();startAppUpdates();startPersonalAlerts();startWhatsNew(route);startFriendNotifications(window.rift?.rocketLeague?input=>window.rift.rocketLeague(input):null,async()=>{await route('rocket-league');document.dispatchEvent(new Event('dropzone-open-friend-requests'));});}catch(error){$('#hub-app').innerHTML=`<main class="hub-main"><div class="cod-empty"><h1>The app could not load</h1><p>${e(error.message)}</p><p>Close and reopen the app with its bundled files together.</p></div></main>`;}
 
+// A trusted main-process session edge only changes the existing renderer route.
+// Window placement and non-activating display stay in the desktop lifecycle.
+const stopLiveTrackerOpen=window.rift?.onOpenLiveTracker?.(()=>{void route('rocket-league',null,'live').catch(error=>toast(error.message||'Could not open Live Tracker.'));});
+window.addEventListener('pagehide',()=>stopLiveTrackerOpen?.(),{once:true});
+
 // Signal only after the destination (or its error state) has mounted and painted.
 requestAnimationFrame(()=>requestAnimationFrame(()=>window.dispatchEvent(new Event('dropzone-page-ready'))));
 const stopWarmup=scheduleFeatureWarmup({load:loadFeature,preferred:[{'finals':'finals-ui','siege':'siege-ui','apex':'apex-ui'}[state.route]]});
@@ -225,4 +233,4 @@ window.addEventListener('pagehide',stopWarmup,{once:true});
 
 window.addEventListener('dropzone-favorites-change',()=>{renderRail();if(state.route==='home')renderHome();});
 
-window.addEventListener('popstate',()=>{const params=new URLSearchParams(window.location.search);void route(params.get('game')||'home',params.get('context'),params.get('view'),true);});
+window.addEventListener('popstate',()=>{void route(...restoredRoute(window.history,window.location),true).catch(error=>toast(error?.message||'Could not restore this workspace.'));});

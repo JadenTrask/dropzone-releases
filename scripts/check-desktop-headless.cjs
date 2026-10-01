@@ -32,7 +32,7 @@ const ready=(async()=>{
  // native window because no browser window is created by --headless.
  await send('Emulation.setFocusEmulationEnabled',{enabled:true});
  // Capture settled designs, without platform view-transition snapshots.
- await send('Emulation.setEmulatedMedia',{features:[{name:'prefers-reduced-motion',value:process.argv.includes('--performance')?'no-preference':'reduce'}]});
+ await send('Emulation.setEmulatedMedia',{features:[{name:'prefers-reduced-motion',value:(process.argv.includes('--performance')||process.argv.includes('--fade-motion'))?'no-preference':'reduce'}]});
 })();
 class BrowserWindow{
  constructor(){

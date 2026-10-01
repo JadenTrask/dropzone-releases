@@ -1,0 +1,12 @@
+{
+  "asset": "league-white.svg",
+  "sourceUrl": "https://images.blz-contentstack.com/v3/assets/blta7b34f1f894a2422/blt135c3f7911a3878c/654167cd82016a04df7e8bd6/cdl_league_white.svg?auto=webp",
+  "sourcePage": "https://www.callofdutyleague.com/en-us",
+  "sourceField": "cdlHeader.logo.src (also cdlFooterInfo.topLogos)",
+  "retrievedAt": "2026-10-01T13:52:09.169Z",
+  "sha256": "ac28d5d24cf70c596199df54d71a1e83c040b0c6b056fcb1a638d795006583dc",
+  "bytes": 4797,
+  "description": "Official Call of Duty League white logo. Artwork is unchanged; XML line endings and trailing whitespace are normalized. CSS alone softens its decorative BO7 video-page backdrop.",
+  "rights": "Call of Duty League name and logo are trademarks of Activision Publishing, Inc. No new license or endorsement is asserted.",
+  "sourceSha256": "e5ed6839b8d0bb4566ae7b8173a28a21485cd93229eb6c0f382a41420fcf529e"
+}

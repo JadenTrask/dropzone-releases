@@ -29,7 +29,11 @@ app.whenReady().then(async()=>{
   ({provider,games}=services);
   window=new BrowserWindow({width:1480,height:980,minWidth:1000,minHeight:720,show:false,frame:false,backgroundColor:'#0b0c10',title:'Dropzone',icon:path.join(__dirname,'../app/assets/icon.png'),webPreferences:{preload:path.join(__dirname,'preload.cjs'),contextIsolation:true,nodeIntegration:false,sandbox:true,webSecurity:true}});
   if(!app.isPackaged&&process.argv.includes('--isolated-preview'))window.on('page-title-updated',event=>{event.preventDefault();window.setTitle('Dropzone - Local test build');});
-  coordinateStartup({main:window});
+  const launchBehavior=require('./launch-behavior.cjs').createLaunchBehavior({directory:app.getPath('userData')});
+  const liveTrackerLaunch=require('./live-tracker-launch.cjs').createLiveTrackerLaunch({window,screen,desktopCapturer,preferences:launchBehavior});
+  coordinateStartup({main:window,startMinimized:launchBehavior.status().startMinimized,onReveal:()=>liveTrackerLaunch.windowReady()});
+  window.webContents.on('did-start-navigation',(_event,_url,isInPlace,isMainFrame)=>{if(isMainFrame&&!isInPlace)liveTrackerLaunch.suspend();});
+  window.on('closed',()=>liveTrackerLaunch.destroy());
   appUpdates=new AppUpdateService({version:app.getVersion(),feed:require('../release-feed.json').feed,packaged:app.isPackaged,installed:fsSync.existsSync(path.join(process.resourcesPath,'dropzone-installed')),createUpdater:()=>new (require('electron-updater').NsisUpdater)()});
   appUpdates.on('status',state=>{if(!window.isDestroyed()&&!window.webContents.isDestroyed())window.webContents.send('app-update-status',state);});
   window.removeMenu();
@@ -46,7 +50,7 @@ app.whenReady().then(async()=>{
   window.webContents.on('will-navigate',(e)=>e.preventDefault());
   const trusted=e=>e.sender===window.webContents&&e.senderFrame===window.webContents.mainFrame;
   const handle=(name,fn)=>ipcMain.handle(name,(e,...args)=>{if(!trusted(e))throw new Error('Untrusted caller.');return fn(...args);});
-  const rocketLeague=require('./rocket-league.cjs').createRocketLeague({directory:path.join(app.getPath('userData'),'rocket-league'),window,app});
+  const rocketLeague=require('./rocket-league.cjs').createRocketLeague({directory:path.join(app.getPath('userData'),'rocket-league'),window,app,onSession:value=>liveTrackerLaunch.session(value)});
   handle('rocket-league',input=>rocketLeague.command(input));
   services.apexPlayer.setInvoke(input=>rocketLeague.invokeApex(input));
   const coaching=require('./coaching-overlay.cjs').createCoachingOverlay({BrowserWindow,globalShortcut,screen,ipcMain,desktopCapturer,nativeImage,shell,directory:path.join(app.getPath('userData'),'rocket-league'),main:window,getReplay:async()=>{const state=await rocketLeague.command({action:'state'});return state.status==='replay';},onError:message=>{void dialog.showMessageBox({type:'info',title:'Coaching overlay',message});}});
@@ -64,6 +68,8 @@ app.whenReady().then(async()=>{
   handle('app-context',()=>({admin:adminUnlocked}));
   const loginStartup=require('./login-startup.cjs').createLoginStartup({app,installed:fsSync.existsSync(path.join(process.resourcesPath,'dropzone-installed'))});
   handle('login-startup',input=>loginStartup.command(input));
+  handle('launch-behavior',input=>launchBehavior.command(input));
+  ipcMain.on('live-tracker-ready',event=>{if(trusted(event))liveTrackerLaunch.rendererReady();});
   handle('admin-unlock',async password=>{const result=await adminAccess.verify(password);if(result.ok)adminUnlocked=true;return result;});
   handle('admin-lock',()=>{adminUnlocked=false;return {ok:true};});
   handle('games',()=>games.list());

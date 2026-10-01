@@ -1,11 +1,14 @@
-# Dropzone 2.4.9
+# Dropzone 2.5.0
 
-Gray Zone Warfare is now marked **Under construction**. Its tactical map and planning tools are temporarily unavailable, including through saved workspaces and direct links. Existing map progress and the underlying implementation are preserved for future work.
+Clear glass, game-coloured workspaces and more focused tools across Dropzone.
 
-- **Workspace polish:** corrected Home and Call of Duty card padding, rounded Finals equipment and CoD weapon details, consistent Wardogs controls, clearer shared searches and dialogs.
-- **Apex Legends:** a calmer profile backdrop, compact legend tracker cards, readable recent players and a sign-in action that opens the existing account flow. Player authentication and server-side protection are unchanged.
-- **Navigation:** destination content can appear before source refreshes finish. At most two small local workspace modules can warm during idle time; map data and provider requests are excluded.
-- **Sons of the Forest:** a smaller initial location list with Show more; searching still covers every bundled location. The map and attribution are preserved.
-- **Windows startup:** an optional “Launch Dropzone when Windows starts” setting for installed copies. It is off by default and unavailable to portable/development/browser copies.
+- **Shared design:** transparent searches and surfaces, softer edges, consistent controls and smoother workspace transitions. Dark appearance is now the supported theme; saved Light/System preferences migrate without changing accessibility settings or other preferences.
+- **Apex Legends:** a centered player search, cleaner real player profiles, concise sourced legend recommendations, team ideas, and an R6-style searchable legend directory with ability details. News uses the shared layout; official ALGS videos and archives have their own Videos tab. Historical competitive evidence is dated and kept separate from editorial recommendations.
+- **Rainbow Six Siege:** a compact map/side context, readable round briefing and a coherent operator lineup using existing guide data.
+- **Rocket League:** centered navigation and consistent surrounding chrome preserve the tracker workspace. Two independent, default-off options can start Dropzone minimized or open the existing Live Tracker when a new freeplay, private or public session is confirmed by telemetry. Automatic opening uses a non-activating window call and prefers a display other than the detected game display.
+- **Videos and maps:** shared CDL/ALGS glass presentation with official artwork; clearer Wardogs overlays and tutorial surroundings. Existing map coordinates, progress and attribution are retained.
+- **Navigation and settings:** file-based desktop back/forward state, keyboard return/focus handling, and clearer launch preferences. Windows startup registration remains a separate opt-in setting for installed copies.
 
-Validation is recorded in docs/VALIDATION.md. The installer remains unsigned. Installed upgrade, real boot/startup behavior and in-game performance are not claimed as tested. No provider key is shipped with the desktop app.
+Gray Zone Warfare remains **Under construction**. Saved map progress is preserved.
+
+Validation details are in docs/VALIDATION.md. Fresh authenticated Apex lookup and isolated Electron checks passed; physical multi-monitor/fullscreen gameplay, real Windows boot, installation and installed-version upgrade remain unverified. The installer remains unsigned. No provider key or private validation data is shipped.

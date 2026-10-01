@@ -222,19 +222,19 @@
     "videos": false
   },
   {
-      "id": "apex",
-      "parent": null,
-      "kind": "apex",
-      "name": "Apex Legends",
-      "shortName": "APEX",
-      "eyebrow": "APEX LEGENDS",
-      "description": "Legends, official news, esports and player availability.",
-      "theme": "apex",
-      "accent": "#cf655b",
-      "cover": "assets/apex/53cf1216723b3971.jpg",
-      "status": "active",
-      "patches": false,
-      "videos": false,
-      "modes": []
+    "id": "apex",
+    "parent": null,
+    "kind": "apex",
+    "name": "Apex Legends",
+    "shortName": "APEX",
+    "eyebrow": "APEX LEGENDS",
+    "description": "Player profiles, legend recommendations, official news and ALGS videos.",
+    "theme": "apex",
+    "accent": "#cf655b",
+    "cover": "assets/apex/53cf1216723b3971.jpg",
+    "status": "active",
+    "patches": false,
+    "videos": true,
+    "modes": []
   }
 ]

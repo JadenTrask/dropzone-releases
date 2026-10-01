@@ -1,6 +1,9 @@
-const systemTheme=matchMedia('(prefers-color-scheme: light)');
-export function appearancePreference(){try{const value=JSON.parse(localStorage.getItem('dropzone-appearance'));return ['light','dark','system'].includes(value)?value:'dark';}catch{return 'dark';}}
-export function applyAppearance(){const preference=appearancePreference(),value=preference==='system'?(systemTheme.matches?'light':'dark'):preference;document.documentElement.dataset.appearance=value;document.documentElement.style.colorScheme=value;}
-systemTheme.addEventListener('change',()=>{if(appearancePreference()==='system')applyAppearance();});
+// The game-coloured dark appearance is the only supported theme. Migrate only
+// this preference; accessibility, account and game settings stay untouched.
+export function appearancePreference(){return 'dark';}
+export function applyAppearance(){
+ document.documentElement.dataset.appearance='dark';document.documentElement.style.colorScheme='dark';
+ try{if(localStorage.getItem('dropzone-appearance')!==JSON.stringify('dark'))localStorage.setItem('dropzone-appearance',JSON.stringify('dark'));}catch{}
+}
 window.addEventListener('storage',event=>{if(event.key==='dropzone-appearance')applyAppearance();});
 applyAppearance();

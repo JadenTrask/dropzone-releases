@@ -1,0 +1,9 @@
+const {test}=require('node:test'),assert=require('node:assert/strict'),{JSDOM}=require('jsdom');
+test('launch settings are distinct, accessible, default off, and only persist the requested preference',async()=>{
+ const dom=new JSDOM('<main></main>',{url:'http://localhost/'});global.window=dom.window;global.document=dom.window.document;const calls=[];let settings={available:true,startMinimized:false,openLiveTrackerOnSession:false};
+ window.rift={loginStartup:async input=>{calls.push(['windows',input]);return {available:true,enabled:false,message:'Off.'};},launchBehavior:async input=>{calls.push(['launch',input]);if(input.action==='set')settings={...settings,[input.key]:input.enabled};return settings;}};
+ const {mountStartupSetting}=await import('../app/startup-settings.js');mountStartupSetting(document.querySelector('main'));const settle=()=>new Promise(r=>setImmediate(r));await settle();
+ const checks=[...document.querySelectorAll('input')];assert.equal(checks.length,3);assert.ok(checks.every(input=>!input.checked&&!input.disabled));assert.match(document.body.textContent,/Open Live Tracker when a session starts/);assert.match(document.body.textContent,/menu does not trigger/);
+ const toggle=document.querySelector('#launch-startMinimized');toggle.checked=true;toggle.dispatchEvent(new window.Event('change'));await settle();assert.equal(document.querySelector('#launch-at-login').checked,false);assert.equal(document.querySelector('#launch-openLiveTrackerOnSession').checked,false);assert.deepEqual(calls.filter(([type,input])=>type==='windows'&&input.action==='set'),[]);assert.deepEqual(calls.at(-1),['launch',{action:'set',key:'startMinimized',enabled:true}]);
+ for(const input of checks)assert.ok(input.getAttribute('aria-describedby').split(' ').every(id=>document.getElementById(id)));dom.window.close();
+});

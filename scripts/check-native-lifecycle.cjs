@@ -1,0 +1,60 @@
+'use strict';
+// Isolated Electron checks. Never loads desktop/main, registers startup, starts
+// gameplay/telemetry, opens a visible window, or accesses the real app profile.
+const fs=require('node:fs'),path=require('node:path'),assert=require('node:assert/strict');
+const {pathToFileURL}=require('node:url');
+const output=path.resolve(__dirname,'../.validation-cache/release-250');fs.mkdirSync(output,{recursive:true});
+const report={runtime:null,checks:[],errors:[],scope:'Real Electron offscreen lifecycle/preload/file-URL checks. Native visible-window, boot and physical display behavior are not exercised.'};
+let app,win;
+function finish(code){fs.writeFileSync(path.join(output,'native-lifecycle.json'),JSON.stringify(report,null,2));if(win&&!win.isDestroyed())win.destroy();app?.exit(code);}
+function fail(error){report.errors.push(error?.message||'Unexpected runtime failure');finish(1);}
+process.on('uncaughtException',fail);process.on('unhandledRejection',fail);
+const electron=require('electron');app=electron.app;
+electron.dialog.showErrorBox=()=>fail(Error('Unexpected native error dialog blocked'));
+electron.dialog.showMessageBox=async()=>{fail(Error('Unexpected native dialog blocked'));return{response:0};};
+const directory=fs.mkdtempSync(path.join(output,'native-profile-'));
+app.setPath('userData',directory);app.setPath('sessionData',directory);app.disableHardwareAcceleration();
+const check=(name,value)=>{assert.ok(value,name);report.checks.push(name);};
+const pause=ms=>new Promise(resolve=>setTimeout(resolve,ms));
+const run=fn=>win.webContents.executeJavaScript('('+fn.toString()+')()');
+const timeout=setTimeout(()=>fail(Error('Native check timed out')),45000);
+app.whenReady().then(async()=>{
+ report.runtime={electron:process.versions.electron,chrome:process.versions.chrome,node:process.versions.node};
+ let shown=0,focused=0,ready=0;
+ win=new electron.BrowserWindow({show:false,skipTaskbar:true,focusable:false,width:1200,height:900,webPreferences:{offscreen:true,backgroundThrottling:false,contextIsolation:true,sandbox:true,preload:path.resolve(__dirname,'../desktop/preload.cjs')}});
+ for(const method of ['show','showInactive','focus','restore'])win[method]=()=>{throw Error('Visible/activating window operation blocked: '+method);};
+ win.on('show',()=>shown++);win.on('focus',()=>focused++);
+ electron.ipcMain.on('live-tracker-ready',event=>{if(event.sender===win.webContents&&event.senderFrame===win.webContents.mainFrame)ready++;});
+ const modules=['navigation-history.js','page-transition.js'].map(n=>pathToFileURL(path.resolve(__dirname,'../app',n)).href);
+ const css=pathToFileURL(path.resolve(__dirname,'../app/page-transition.css')).href;
+ const file=path.join(directory,'lifecycle.html');
+ fs.writeFileSync(file,`<!doctype html><html><head><meta charset="utf-8"><link rel="stylesheet" href="${css}"></head><body><main id="hub-app">Initial</main><script type="module">import * as routes from '${modules[0]}';import {transitionPage} from '${modules[1]}';window.testModules={routes,transitionPage};</script></body></html>`);
+ await win.loadFile(file);for(let n=0;n<100&&!await run(()=>!!window.testModules);n++)await pause(20);
+ check('Production modules import on a real file URL',await run(()=>location.protocol==='file:'&&!!window.testModules));
+ check('Sandboxed production preload exposes bridge without Node',await run(()=>typeof window.rift?.onOpenLiveTracker==='function'&&typeof require==='undefined'));
+ win.webContents.send('open-live-tracker',{kind:'freeplay'});await pause(30);
+ await run(()=>{window.received=[];window.stopTracker=window.rift.onOpenLiveTracker(value=>window.received.push(value.kind));});await pause(30);
+ check('Preload buffers the first edge and sends trusted renderer readiness',ready===1&&await run(()=>received.join(',')==='freeplay'));
+ win.webContents.send('open-live-tracker',{kind:'private'});await pause(30);
+ check('Preload delivers a subsequent session edge',await run(()=>received.join(',')==='freeplay,private'));
+ await run(()=>stopTracker());win.webContents.send('open-live-tracker',{kind:'public'});await pause(30);
+ check('Unsubscribed renderer does not receive session callbacks',await run(()=>received.length===2));
+ await run(()=>{const {recordRoute}=testModules.routes;recordRoute(history,location,{id:'home',replace:true});recordRoute(history,location,{id:'apex',view:'apex-legends'});history.back();});await pause(100);
+ check('File URL history back restores route state',await run(()=>testModules.routes.restoredRoute(history,location)[0]==='home'));
+ await run(()=>history.forward());await pause(100);
+ check('File URL history forward restores subpage',await run(()=>testModules.routes.restoredRoute(history,location)[2]==='apex-legends'));
+ await run(async()=>{document.documentElement.classList.remove('cc-reduced-motion');await testModules.transitionPage(()=>{document.querySelector('main').textContent='Updated';});});await pause(450);
+ check('Production transition settles and releases glass snapshot marker',await run(()=>document.querySelector('main').textContent==='Updated'&&!document.documentElement.classList.contains('dz-transitioning')));
+ await run(async()=>{document.documentElement.classList.add('cc-reduced-motion');await testModules.transitionPage(()=>{document.querySelector('main').textContent='Reduced';});});
+ check('Reduced motion renders destination without retaining transition state',await run(()=>document.querySelector('main').textContent==='Reduced'&&!document.documentElement.classList.contains('dz-transitioning')));
+ const {createLaunchBehavior}=require('../desktop/launch-behavior.cjs'),preferences=createLaunchBehavior({directory});
+ check('Real isolated preference storage defaults both options off',!preferences.status().startMinimized&&!preferences.status().openLiveTrackerOnSession);
+ preferences.command({action:'set',key:'startMinimized',enabled:true});
+ const reopened=createLaunchBehavior({directory});check('Minimized option persists without enabling tracker',reopened.status().startMinimized&&!reopened.status().openLiveTrackerOnSession);
+ let startupReady=0;const lifecycle=require('../desktop/startup.cjs').coordinateStartup({main:win,startMinimized:true,onReveal:()=>startupReady++});lifecycle.finish();lifecycle.finish();
+ check('Minimized startup completes once without show/focus',startupReady===1&&shown===0&&focused===0&&!win.isVisible()&&!win.isFocused());
+ const status=require('../desktop/login-startup.cjs').createLoginStartup({app,installed:false}).command();
+ check('Uninstalled runtime refuses startup registration',status.available===false&&status.enabled===false);
+ check('Only the hidden isolated offscreen window exists',electron.BrowserWindow.getAllWindows().length===1&&shown===0&&focused===0);
+ clearTimeout(timeout);console.log(JSON.stringify({checks:report.checks.length,errors:report.errors,runtime:report.runtime}));finish(0);
+}).catch(fail);

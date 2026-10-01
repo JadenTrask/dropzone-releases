@@ -186,7 +186,25 @@ html[data-workspace="map"] .global-toolbar-inner,html[data-workspace="map"] .gam
 .wd-fixed .wd-paste{margin-top:3px;padding:5px 8px}
 .wd-sidebar-footer{display:flex;align-items:center;justify-content:space-between;gap:8px;padding:10px 12px;border-top:1px solid #503e38;flex-shrink:0}
 .wd-sidebar-footer button{font-size:.8125rem;padding:8px 10px}
-.wd-range-legend{position:absolute;right:14px;bottom:20px;max-width:calc(100% - 130px);display:grid;gap:6px;padding:10px 12px;border:1px solid #645049;background:#181513ee;border-radius:6px;font-size:.8125rem;line-height:1.5;pointer-events:none}
+.wd-range-legend{position:absolute;right:14px;bottom:20px;max-width:calc(100% - 150px);display:grid;gap:6px;padding:10px 12px;font-size:.8125rem;line-height:1.5}
+/* Small, pointer-transparent glass overlays share the floating map controls'
+   clear material. Terrain remains visible; the numbers retain a stable rim. */
+html[data-game=wardogs] #hub-app .wd-fixed :is(.wd-range-legend,.wd-map-scale,.wd-ruler-readout,.wd-cursor-label){
+  box-sizing:border-box;pointer-events:none;user-select:none;
+  border:1px solid #ffffff45;border-color:#ffffff45!important;border-radius:12px;
+  background:linear-gradient(140deg,#ffffff18,#ffffff06),#14161c70!important;
+  box-shadow:inset 0 1px #ffffff30,inset 0 -1px #ffffff14,0 3px 14px #00000026;
+  backdrop-filter:blur(8px) brightness(.75);color:#f4f5f8!important;
+  text-shadow:0 1px 3px #000a;font-variant-numeric:tabular-nums;
+}
+.wd-map-scale{position:absolute;left:13px;transform:translateY(-100%);display:grid;gap:7px;min-width:120px;max-width:calc(100% - 26px);padding:8px 11px 9px;font-size:.875rem;line-height:1.2}
+.wd-map-scale i{display:block;height:2px;background:#edf0d8;box-shadow:0 1px 2px #0008}
+html[data-game=wardogs] #hub-app .wd-fixed :is(.wd-range-legend,.wd-map-scale) :is(span,strong,small){color:inherit!important}
+.wd-ruler-readout{position:absolute;transform:translate(-50%,-50%);display:flex;align-items:center;justify-content:center;z-index:2;font-family:system-ui,sans-serif;font-weight:700;line-height:1}
+html[data-game=wardogs] #hub-app .wd-fixed .wd-ruler-readout{color:#d5f7ff!important}
+.wd-ruler-readout[hidden]{display:none}
+html[data-game=wardogs] .app-high-contrast #hub-app .wd-fixed :is(.wd-range-legend,.wd-map-scale,.wd-ruler-readout,.wd-cursor-label){background:#14161c!important;border-color:#c4ceda!important;backdrop-filter:none;text-shadow:none}
+@media(prefers-reduced-transparency:reduce){html[data-game=wardogs] #hub-app .wd-fixed :is(.wd-range-legend,.wd-map-scale,.wd-ruler-readout,.wd-cursor-label){background:#14161c!important;backdrop-filter:none}}
 .wd-range-legend>span{display:flex;gap:8px;align-items:center;color:#ebe6de;flex-wrap:wrap}
 .wd-range-legend>span:before{content:'';width:22px;border-top:2px dashed;flex-shrink:0}
 .wd-range-legend .wd-ring-min:before{border-color:#fb937d}

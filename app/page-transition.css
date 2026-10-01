@@ -1,0 +1,22 @@
+/* Snapshot only workspace content. Capturing the root makes the live navigation
+   unavailable to hit testing while Chromium shows its snapshot. Shell colors
+   interpolate independently, so the rail remains interactive during a fade. */
+:root{view-transition-name:none}
+/* Typed channels continue from their displayed value when a switch interrupts
+   another. Gradient reassignment alone would otherwise snap to the new color. */
+@property --atmos-primary{syntax:"<number>+";inherits:true;initial-value:245 128 82}
+@property --atmos-secondary{syntax:"<number>+";inherits:true;initial-value:137 113 230}
+@property --atmos-base{syntax:"<number>+";inherits:true;initial-value:25 27 40}
+@property --atmos-accent{syntax:"<color>";inherits:true;initial-value:#ffb28f}
+:root{transition-property:--atmos-primary,--atmos-secondary,--atmos-base,--atmos-accent;transition-duration:300ms;transition-timing-function:cubic-bezier(.4,0,.2,1)}
+html.cc-reduced-motion,html:has(body.app-reduced-motion){transition:none}
+#hub-app,#league-app{view-transition-name:none}
+html.dz-transitioning :is(#hub-app,#league-app){view-transition-name:workspace-page}
+::view-transition,::view-transition-group(*),::view-transition-image-pair(*),::view-transition-old(*),::view-transition-new(*){pointer-events:none}
+::view-transition-group(workspace-page){animation-duration:300ms;animation-timing-function:cubic-bezier(.4,0,.2,1)}
+::view-transition-old(workspace-page),::view-transition-new(workspace-page){animation-duration:300ms;animation-timing-function:cubic-bezier(.4,0,.2,1)}
+/* Keep the former 5px / 200ms entrance, alongside the 300ms crossfade. */
+::view-transition-new(workspace-page){animation-name:dz-workspace-fade-in,dz-workspace-rise;animation-duration:300ms,200ms;animation-timing-function:cubic-bezier(.4,0,.2,1),cubic-bezier(.2,.7,.2,1);animation-fill-mode:both}
+@keyframes dz-workspace-fade-in{from{opacity:0}to{opacity:1}}
+@keyframes dz-workspace-rise{from{transform:translateY(5px)}to{transform:none}}
+@media(prefers-reduced-motion:reduce){:root{transition:none}::view-transition-group(*),::view-transition-old(*),::view-transition-new(*){animation:none!important}}

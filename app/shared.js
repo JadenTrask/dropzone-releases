@@ -9,6 +9,7 @@ export const api=window.rift||{
   lockAdmin:()=>fetch('/api/admin-lock',{method:'POST'}).then(r=>r.json()),
   appContext:()=>fetch('/api/app-context').then(r=>r.json()),
   loginStartup:async()=>({available:false,enabled:false,message:'Available in the installed Windows app. Browser preview does not change startup settings.'}),
+  launchBehavior:async()=>({available:false,startMinimized:false,openLiveTrackerOnSession:false,message:'Available in the Windows desktop app. Browser preview does not change launch preferences.'}),
   games:()=>fetch('/api/games').then(r=>r.json()),
   loadouts:options=>fetch('/api/loadouts?'+new URLSearchParams(options)).then(r=>r.json()),
   media:options=>fetch('/api/media?'+new URLSearchParams(options||{})).then(r=>r.json()),

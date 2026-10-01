@@ -1,0 +1,91 @@
+{
+  "schema": 1,
+  "reviewedAt": "2026-10-01",
+  "season": "Marked · Season 30, Split 2",
+  "sources": {
+    "design": {"label":"EA designer notes","url":"https://www.ea.com/en/games/apex-legends/apex-legends/news/30-1-designers-notes","publishedAt":"2026-09-10","scope":"Developer rationale for the September 15 kit changes; not a post-patch ranking"},
+    "patch": {"label":"EA midseason notes","url":"https://www.ea.com/games/apex-legends/apex-legends/news/marked-midseason-patch-notes","publishedAt":"2026-09-14","scope":"Marked midseason; includes the August 25 hotfix"},
+    "abilities": {"label":"EA ability guide","url":"https://help.ea.com/en/articles/apex-legends/abilities/","publishedAt":"2026-09-15","scope":"Documented legend abilities; not competitive usage"},
+    "classes": {"label":"EA character index","url":"https://www.ea.com/games/apex-legends/apex-legends/characters-hub","scope":"Character classes and artwork"},
+    "algs": {"label":"ALS event statistics","url":"https://apexlegendsstatus.com/algs/Y6-Split2/Pro-League/NA/Finals/Finals","publishedAt":"2026-09-13","scope":"ALGS Year 6 Split 2 Americas Regional Finals; source labels the region North America"},
+    "event": {"label":"Official ALGS event","url":"https://algs.ea.com/en/year-6/split-2-pro-league-americas/competition-overview","scope":"Year 6 Split 2 Americas"},
+    "rules": {"label":"ALGS rules · Appendix G","url":"https://algs.ea.com/year-6-rules.pdf","scope":"Legend bans affect the available picks"}
+  },
+  "recommendations": [
+    {"name":"Conduit","purpose":"Keep your squad fighting","reason":"Temporary shields help your teammates stay in a fight; faster jammers block a push.","use":"Stay close enough to support your fighting teammate, then use the barricade to make a push harder.","sources":["patch","abilities","design"]},
+    {"name":"Fuse","purpose":"Pressure teams out of cover","reason":"Explosive area pressure is more responsive, with Knuckle Jump now available in his base kit.","use":"Pressure an occupied angle with explosives so your team can follow up; save the jump when you need movement.","sources":["patch","abilities","design"]},
+    {"name":"Catalyst","purpose":"Hold your team's position","reason":"Faster spike resets rebuild doors, while teammates can cross your wall without being slowed.","use":"Set up doorways before the fight and use the wall to screen a crossing or split enemy sightlines.","sources":["patch","abilities","design"]}
+  ],
+  "priorities": [
+    {"label":"Revisit your setup","text":"Catalyst, Fuse and Conduit have updated tools. Recheck upgrades before reusing an older composition.","source":"patch"},
+    {"label":"Cover your team's jobs","text":"Consider rotation, information and staying power together. These are planning roles, not a ranked popularity order.","source":"abilities"},
+    {"label":"Separate usage from strength","text":"The event snapshot below predates this patch. Current post-patch strength and ranked pick rates remain unverified.","source":null}
+  ],
+  "event": {
+    "name":"ALGS Americas Regional Finals",
+    "season":"Year 6 · Split 2",
+    "playedAt":"2026-09-13",
+    "teams":20,
+    "matches":10,
+    "denominator":200,
+    "unit":"team-match selections",
+    "scope":"Pre-midseason competitive usage",
+    "method":"Manually reviewed public event snapshot. A legend's presence is counted once per team per match, not as a share of player slots. Bans affect availability. These observations do not establish current strength or ranked popularity.",
+    "legends":[{"name":"Wraith","occurrences":87},{"name":"Mad Maggie","occurrences":56},{"name":"Rampart","occurrences":56},{"name":"Catalyst","occurrences":52}],
+    "compositions":[
+      {"legends":["Seer","Wattson","Wraith"],"occurrences":18,"purpose":"Information, defensive utility and a portal route.","tradeoff":"No dedicated mobile revive shield."},
+      {"legends":["Mad Maggie","Rampart","Wraith"],"occurrences":14,"purpose":"Cover pressure, a firing position and portal movement.","tradeoff":"No dedicated enemy-scanning ability."},
+      {"legends":["Gibraltar","Newcastle","Valkyrie"],"occurrences":13,"purpose":"Layered cover, recovery and a squad redeploy.","tradeoff":"Two support slots; no Controller for trap setup."}
+    ]
+  },
+  "roles": [
+    {"name":"Catalyst","purpose":"Space control","reason":"Reworked door setup and friendlier wall crossings.","strength":"Door reinforcement and a screening wall.","tradeoff":"No longer immune to enemy Catalyst abilities.","source":"patch","context":"Changed this split"},
+    {"name":"Fuse","purpose":"Explosive pressure","reason":"Knuckle Jump now belongs to the base kit.","strength":"Explosive pressure, with faster weapon recovery.","tradeoff":"Knuckle Jump no longer reduces tactical cooldown.","source":"patch","context":"Changed this split"},
+    {"name":"Conduit","purpose":"Shield support","reason":"Energy Barricade establishes its threat area faster.","strength":"Temporary shields and area denial.","tradeoff":"Temporary shields do not replace health recovery.","source":"patch","context":"Changed this split"},
+    {"name":"Valkyrie","purpose":"Squad rotation","reason":"Skyward Dive carries teammates into a new skydive.","strength":"A shared relocation option.","tradeoff":"Jetpack fuel is limited.","source":"abilities","context":"Documented utility"},
+    {"name":"Newcastle","purpose":"Cover & recovery","reason":"Moving cover and protected revives support a reset.","strength":"Shields a revive while moving the ally.","tradeoff":"Cover and recovery do not supply enemy scans.","source":"abilities","context":"Documented utility"},
+    {"name":"Crypto","purpose":"Information & disruption","reason":"Drone scouting pairs with a shield-damaging EMP.","strength":"Locates enemies and disrupts traps.","tradeoff":"A destroyed drone has a replacement cooldown.","source":"abilities","context":"Documented utility"}
+  ],
+  "compositions": [
+    {"name":"Rotate, then establish cover","legends":["Valkyrie","Catalyst","Newcastle"],"purpose":"Reposition together, then set up a defensible foothold.","strength":"Squad travel + door control + revive cover.","tradeoff":"Squad travel depends on Skyward Dive being available.","useCase":"A team practicing planned rotations and recovery.","basis":"Mechanics-based suggestion","sources":["abilities","patch"]},
+    {"name":"Scout, pressure, sustain","legends":["Crypto","Fuse","Conduit"],"purpose":"Gather information before committing damage and shields.","strength":"Scouting + explosive pressure + temporary shields.","tradeoff":"No shared long-range movement ultimate.","useCase":"A coordinated team choosing when to take a fight.","basis":"Mechanics-based suggestion","sources":["abilities","patch"]},
+    {"name":"Supply a settled position","legends":["Loba","Wattson","Newcastle"],"purpose":"Bring nearby loot, defensive utility and recovery together.","strength":"Resupply + ordnance interception + protected revives.","tradeoff":"No squad redeploy or dedicated enemy scan.","useCase":"A team practicing position defense and resource management.","basis":"Mechanics-based suggestion","sources":["abilities"]}
+  ],
+  "balance": [
+    {"name":"Conduit","direction":"Updated support tools","summary":"Faster jammer deployment; forward-line placement; new Level 2 upgrades."},
+    {"name":"Fuse","direction":"Base-kit additions","summary":"Base Knuckle Jump and explosive resistance; quicker Motherlode explosions."},
+    {"name":"Catalyst","direction":"Setup changes","summary":"Spikes rebuild doors; 15-second cooldown; allies cross Dark Veil freely."},
+    {"name":"Bloodhound","direction":"Scan readability","summary":"Sonar snapshots fade sooner. The included August hotfix improved cloak behavior."},
+    {"name":"Axle / Seer","direction":"August hotfix included","summary":"Axle drone durability and stun reduced; Seer tactical turn-slow removed."}
+  ],
+  "identity": {
+    "Alter":"Passages and return routes",
+    "Ash":"Snare, dash and phase travel",
+    "Axle":"Slide mobility and a seeking drone",
+    "Ballistic":"Weapon support and suppression",
+    "Bangalore":"Smoke and bombardment",
+    "Bloodhound":"Tracking, scans and cloaking",
+    "Catalyst":"Doors, spikes and a screening wall",
+    "Caustic":"Gas traps and area denial",
+    "Conduit":"Temporary shields and jammers",
+    "Crypto":"Drone scouting and EMP",
+    "Fuse":"Grenades and explosive pressure",
+    "Gibraltar":"Dome cover and bombardment",
+    "Horizon":"Vertical lift and gravity control",
+    "Lifeline":"Drone healing and revives",
+    "Loba":"Teleportation and nearby loot",
+    "Mad Maggie":"Drilling cover and disruption",
+    "Mirage":"Decoys and concealed revives",
+    "Newcastle":"Mobile cover and protected revives",
+    "Octane":"Stims and launch pads",
+    "Pathfinder":"Grapples and squad ziplines",
+    "Rampart":"Amped walls and a minigun",
+    "Revenant":"Pouncing and shadow protection",
+    "Seer":"Heartbeat tracking and reveals",
+    "Sparrow":"Tracking darts and damaging pulses",
+    "Valkyrie":"Flight and squad redeploys",
+    "Vantage":"Scouting and marked sniper shots",
+    "Wattson":"Fences and ordnance interception",
+    "Wraith":"Phasing and linked portals"
+  }
+}
