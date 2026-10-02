@@ -15,7 +15,7 @@ module.exports=async({boot,run,win,pause,capture,report})=>{
  const click=async selector=>{await run(s=>document.querySelector(s).click(),selector);await pause(120);};
  await click('[data-rl-view=analysis]');
  const tabs=await run(()=>[...document.querySelectorAll('.rl-tabs>[data-rl-view]:not(#rl-live-indicator)')].map(b=>b.textContent));
- check('AI Overview precedes final Videos tab',JSON.stringify(tabs)===JSON.stringify(['Live tracker','Match history','My profile','Friends','Tracker settings','AI Overview','Videos']),{tabs});
+ check('AI Overview precedes final Videos tab',JSON.stringify(tabs)===JSON.stringify(['Live tracker','Match history','My profile','Friends','News','Tracker settings','AI Overview','Videos']),{tabs});
  check('No prompt collection or clipboard write on mount',await run(()=>qaAnalysis.copies.length===0&&!qaAnalysis.calls.some(q=>q.action==='analysis-overview')));
  for(const [w,h]of[[1920,1080],[2560,1440],[3840,2160],[1000,900],[640,900]]){
   await capture('rl-ai-overview',w,h);

@@ -21,7 +21,9 @@ const on=(event,fn)=>{if(!listeners.has(event))listeners.set(event,[]);listeners
 const ready=(async()=>{
  const active=path.join(profile,'DevToolsActivePort');
  for(let n=0;!fs.existsSync(active);n++){if(n>150||child.exitCode!==null)throw Error('Headless browser failed to start; see '+path.join(profile,'browser.log'));await pause(100);}
- const port=fs.readFileSync(active,'utf8').split(/\r?\n/)[0];
+ let port;
+ for(let n=0;n<30;n++){try{port=fs.readFileSync(active,'utf8').split(/\r?\n/)[0];if(/^\d+$/.test(port))break;}catch(error){if(!['EBUSY','ENOENT'].includes(error.code))throw error;}await pause(50);}
+ if(!/^\d+$/.test(port||''))throw Error('Headless browser port file did not settle.');
  const tabs=await (await fetch('http://127.0.0.1:'+port+'/json/list')).json();
  const tab=tabs.find(t=>t.type==='page');if(!tab)throw Error('No headless page target.');
  socket=new WebSocket(tab.webSocketDebuggerUrl);
@@ -47,7 +49,9 @@ class BrowserWindow{
   };
  }
  async loadURL(url){await send('Page.navigate',{url});for(let n=0;n<200;n++){const r=await send('Runtime.evaluate',{expression:'document.readyState',returnByValue:true});if(r.result.value==='complete')return;await pause(25);}throw Error('Headless navigation timed out.');}
- async setContentSize(width,height){const {windowId}=await send('Browser.getWindowForTarget');await send('Browser.setWindowBounds',{windowId,bounds:{width,height}});}
+ // Resize the renderer viewport, not the virtual outer Windows frame. Mixing
+ // both produces transient clipped/tiled backdrop surfaces in software Edge.
+ async setContentSize(width,height){await send('Emulation.setDeviceMetricsOverride',{width,height,screenWidth:width,screenHeight:height,deviceScaleFactor:1,mobile:false});}
  destroy(){}
 }
 function exit(code){for(const job of pending.values())clearTimeout(job.timer);socket?.close();child.kill();process.exitCode=code;setTimeout(()=>process.exit(code),250);}

@@ -40,6 +40,13 @@ test('Previously saved news previews are repaired without changing source metada
 test('Patch refresh failures preserve timestamps and the chosen game rather than substitute another feed',async t=>{
   const dir=await fs.mkdtemp(path.join(os.tmpdir(),'dropzone-patches-'));t.after(()=>fs.rm(dir,{recursive:true,force:true}));
   const provider=new PatchProvider({cacheDir:dir,bundleDir:path.join(__dirname,'../app/data/patches'),requestFn:async()=>{throw new Error('Offline');}});
-  for(const game of ['lol','bo7','warzone','mw4','finals','wardogs']){const before=await provider.list({game});const after=await provider.list({game,refresh:true});assert.equal(after.game,game);assert.equal(after.cacheState,'offline');assert.equal(after.fetchedAt,before.fetchedAt);assert.equal(after.sourceUpdatedAt,before.sourceUpdatedAt);assert.deepEqual(after.articles,before.articles);}
+  for(const game of ['lol','bo7','warzone','mw4','finals','wardogs','rocket-league']){const before=await provider.list({game});const after=await provider.list({game,refresh:true});assert.equal(after.game,game);assert.equal(after.cacheState,'offline');assert.equal(after.fetchedAt,before.fetchedAt);assert.equal(after.sourceUpdatedAt,before.sourceUpdatedAt);assert.deepEqual(after.articles,before.articles);}
   await assert.rejects(provider.list({game:'all'}),/Choose a game/);
+});
+
+test('Rocket League accepts only its own official developer feed',()=>{
+ const item={appid:252950,feedname:'steam_community_announcements',title:'Rocket League S24 Patch Notes v2.76',contents:'[p]Latest official patch.[/p]',date:1790118903,url:'https://store.steampowered.com/news/app/252950/view/123'};
+ const data=normalizeWardogsNews(JSON.stringify({appnews:{appid:252950,newsitems:[item,{...item,feedname:'third_party_news',title:'Ignore this post'}]}}),'rocket-league',252950);
+ assert.equal(data.game,'rocket-league');assert.equal(data.articles.length,1);assert.equal(data.articles[0].kind,'Patch notes');
+ assert.throws(()=>normalizeWardogsNews(JSON.stringify({appnews:{appid:359550,newsitems:[item]}}),'rocket-league',252950));
 });

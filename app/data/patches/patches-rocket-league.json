@@ -1,0 +1,75 @@
+{
+  "game": "rocket-league",
+  "source": "Psyonix / Epic Games",
+  "sourceUrl": "https://store.steampowered.com/news/app/252950",
+  "sourceUpdatedAt": "2026-09-22T23:15:03.000Z",
+  "articles": [
+    {
+      "title": "Rocket League S24 Patch Notes v2.76",
+      "publishedAt": "2026-09-22T23:15:03.000Z",
+      "dateLabel": "Published",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1844751498216898",
+      "excerpt": "Season 24 launches September 23, 2026! NEW THIS SEASON Honor Duels: Starting with Season 24, during a match you can…",
+      "kind": "Patch notes"
+    },
+    {
+      "title": "Rocket League Heads to the Streets in Season 24",
+      "publishedAt": "2026-09-18T17:44:43.000Z",
+      "dateLabel": "Published",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1844115010495663",
+      "excerpt": "Season 24 takes Rocket League underground, where speed, style, and a clean win are all that matters. Pull up on…",
+      "kind": "Announcement"
+    },
+    {
+      "title": "Rocket League World Championship Bundle & LTE",
+      "publishedAt": "2026-09-02T15:54:46.000Z",
+      "dateLabel": "Published",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1842846814440827",
+      "excerpt": "For the first time Rocket League will crown 3s, 2s and 1s all at one World Championship! Show your support…",
+      "kind": "Announcement"
+    },
+    {
+      "title": "Rocket League Patch Notes v2.72",
+      "publishedAt": "2026-08-04T23:22:48.000Z",
+      "dateLabel": "Published",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1840310314337696",
+      "excerpt": "Version: Rocket League v2.72 Scheduled Release: August 4, 2026 4 PM PT / August 4, 2026 11 PM UTC CHANGES…",
+      "kind": "Patch notes"
+    },
+    {
+      "title": "Hit the Pitch for the World Cup in Rocket League Season 23!",
+      "publishedAt": "2026-08-04T22:59:32.000Z",
+      "dateLabel": "Published",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1840310314337668",
+      "excerpt": "The world's biggest tournament is coming to the world's biggest soccar pitch. Rocket League Season 23 kicks off June 10…",
+      "kind": "Announcement"
+    },
+    {
+      "title": "Rocket League Bracket Rivalry",
+      "publishedAt": "2026-03-20T16:11:09.000Z",
+      "dateLabel": "Published",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1827626365758252",
+      "excerpt": "What is Bracket Rivalry? Pick your side and compete. Bracket Rivalry tips off with eight creator duos entering a single-elimination…",
+      "kind": "Announcement"
+    },
+    {
+      "title": "Rocket League Patch Notes v2.66: Season 22 Live",
+      "publishedAt": "2026-03-11T16:07:48.000Z",
+      "dateLabel": "Published",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1826992588590467",
+      "excerpt": "Version : Rocket League v2.66 Season 22 Live ⁠ Platforms : Epic Games Store, Steam, PlayStation, Xbox, Nintendo ⁠ Scheduled…",
+      "kind": "Patch notes"
+    },
+    {
+      "title": "Rocket League Patch Notes v2.66",
+      "publishedAt": "2026-03-10T23:04:21.000Z",
+      "dateLabel": "Published",
+      "url": "https://steamstore-a.akamaihd.net/news/externalpost/steam_community_announcements/1826992588588691",
+      "excerpt": "Version : Rocket League v2.66 ⁠ Platforms : Epic Games Store, Steam, PlayStation, Xbox, Nintendo ⁠ Scheduled Release : March…",
+      "kind": "Patch notes"
+    }
+  ],
+  "schema": 1,
+  "feed": "patches-rocket-league",
+  "fetchedAt": "2026-10-01T23:12:56.163Z"
+}

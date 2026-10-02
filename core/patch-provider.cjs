@@ -1,6 +1,7 @@
 'use strict';
 const {SourceCache,requestText,text,decode,tag,iso} = require('./source-cache.cjs');
 const SOURCES = {
+  'rocket-league':{name:'Psyonix / Epic Games',url:'https://store.steampowered.com/news/app/252950',feed:'https://api.steampowered.com/ISteamNews/GetNewsForApp/v2/?appid=252950&count=30&maxlength=0&feeds=steam_community_announcements'},
   lol:{name:'Riot Games',url:'https://www.leagueoflegends.com/en-us/news/game-updates/'},
   bo7:{name:'Treyarch / Activision',url:'https://www.callofduty.com/patchnotes'},
   warzone:{name:'Raven Software / Activision',url:'https://www.callofduty.com/patchnotes'},
@@ -109,7 +110,7 @@ class PatchProvider {
     };
     for(const [game,source] of Object.entries(SOURCES)) {
       if(options.disabledGames?.includes(game))continue;
-      const normalizer=game==='valorant'?normalizeValorant:game==='rivals'?json=>normalizeWardogsNews(json,'rivals',2767030):game==='lol'?normalizeLeague:game==='finals'?normalizeFinals:game==='wardogs'?normalizeWardogsNews:game==='siege'?json=>normalizeWardogsNews(json,'siege',359550):game==='gray-zone'?json=>normalizeWardogsNews(json,'gray-zone',2479810):html=>normalizeCod(html,game);
+      const normalizer=game==='rocket-league'?json=>normalizeWardogsNews(json,'rocket-league',252950):game==='valorant'?normalizeValorant:game==='rivals'?json=>normalizeWardogsNews(json,'rivals',2767030):game==='lol'?normalizeLeague:game==='finals'?normalizeFinals:game==='wardogs'?normalizeWardogsNews:game==='siege'?json=>normalizeWardogsNews(json,'siege',359550):game==='gray-zone'?json=>normalizeWardogsNews(json,'gray-zone',2479810):html=>normalizeCod(html,game);
       this.feeds.set(game,new SourceCache({...options,id:'patches-'+game,url:source.feed||source.url,requestFn:['bo7','warzone','mw4'].includes(game)?codRequest:request,
         normalize:normalizer,validate:d=>d.game===game&&Array.isArray(d.articles)&&d.articles.length>0&&d.articles.every(a=>typeof a.title==='string'&&typeof a.url==='string'&&Number.isFinite(Date.parse(a.publishedAt)))}));
     }

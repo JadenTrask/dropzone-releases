@@ -60,7 +60,7 @@ html[data-game]:not([data-game="rocket-league"]) #hub-app :is(
  .am-balance,.am-utility,.am-composition,.am-directory-legend,
  .rl-panel,.rl-card,.rl-profile-section,.rl-profile-hero,.rl-profile-card,.rl-settings-section,.rl-empty,.rl-wait,
  .wd-panel,.wd-controls,.wd-range-legend,.wd-map-scale,.wd-ruler-readout,.wd-cursor-label,.wd-sight-dock,
- .market-chart,.market-stat,.damage-config,.damage-readout,.damage-model,.damage-decisions,.damage-comparison,.gun-comparison-card,
+ .market-stat,.damage-config,.damage-readout,.damage-model,.damage-decisions,.damage-comparison,.gun-comparison-card,
  .sotf-sidebar,.sotf-map-tools,.sotf-detail,.gz-sidebar,.gz-inspector,.gz-map-tools,
  .sens-panel,.watch-filter,.video-copy,.fn-video-copy
 ) {
@@ -73,6 +73,40 @@ html[data-game]:not([data-game="rocket-league"]) #league-app :is(.sidebar,.panel
   box-shadow:var(--glass-shadow);backdrop-filter:var(--glass-panel-backdrop);
 }
 /* Nested surfaces stay flat. They inherit the panel's already diffused backdrop. */
+/* The directory is an open workspace; individual rows own their subtle surface.
+   The price chart is one rounded panel, including its heading and readout. */
+html[data-game="wardogs"] #hub-app .servers-page>.market-chart {
+  background:transparent!important;box-shadow:none;backdrop-filter:none;
+}
+html[data-game="wardogs"] #hub-app .market-page .market-chart {
+  background:var(--glass-surface)!important;box-shadow:var(--glass-shadow);backdrop-filter:var(--glass-panel-backdrop);
+  border:1px solid var(--glass-edge)!important;border-radius:var(--glass-radius);
+  padding:22px 24px 8px;overflow:hidden;
+}
+html[data-game="wardogs"] #hub-app .server-table {
+  border-collapse:separate;border-spacing:0 6px;min-width:1060px;
+}
+html[data-game="wardogs"] #hub-app .server-table tbody tr:not(.server-detail-row) {background:#ffffff05}
+html[data-game="wardogs"] #hub-app .server-table tbody tr:not(.server-detail-row):hover {background:#ffffff0b}
+html[data-game="wardogs"] #hub-app .server-table td {
+  padding:13px 12px;border:0;overflow-wrap:break-word;line-height:1.45;
+}
+html[data-game="wardogs"] #hub-app .server-table :is(th,td):first-child {padding-left:12px}
+html[data-game="wardogs"] #hub-app .server-table :is(th,td):last-child {padding-right:12px}
+html[data-game="wardogs"] #hub-app .server-table td:first-child {border-radius:9px 0 0 9px}
+html[data-game="wardogs"] #hub-app .server-table td:last-child {border-radius:0 9px 9px 0}
+html[data-game="wardogs"] #hub-app .server-table th:nth-child(4) {width:18%}
+html[data-game="wardogs"] #hub-app .server-table th:nth-child(8) {width:95px}
+html[data-game="wardogs"] #hub-app .server-table [data-details] {white-space:nowrap;font-size:12px}
+html[data-game="wardogs"] #hub-app .server-table .server-detail-row>td {padding:4px 16px 16px;border-bottom:1px solid var(--glass-edge);border-radius:0}
+html[data-game="wardogs"] #hub-app .server-detail-panel {display:flex;align-items:center;flex-wrap:wrap;gap:12px 32px}
+html[data-game="wardogs"] #hub-app .server-detail-panel dl {display:flex;flex:1;flex-wrap:wrap;gap:12px 32px;margin:0}
+html[data-game="wardogs"] #hub-app .server-detail-panel dt {font-size:11px;color:var(--dz-text-muted,#c5c4bd)}
+html[data-game="wardogs"] #hub-app .server-detail-panel dd {font-size:13px;margin:4px 0 0;overflow-wrap:anywhere}
+html[data-game="wardogs"] #hub-app .server-table :is([data-favorite],[data-details]) {min-height:34px}
+html[data-appearance="light"][data-game="wardogs"] #hub-app .server-table tbody tr:not(.server-detail-row) {background:#181c1407}
+html[data-appearance="light"][data-game="wardogs"] #hub-app .server-table tbody tr:not(.server-detail-row):hover {background:#181c1410}
+@media(max-width:700px){html[data-game="wardogs"] #hub-app .market-page .market-chart{padding:18px 14px 4px}}
 html[data-game]:not([data-game="rocket-league"]) #hub-app :is(.apex-profile-overview,.rl-panel,.rl-profile-section) :is(.rl-card,.rl-empty) {
   background:transparent!important;box-shadow:none;backdrop-filter:none;
 }

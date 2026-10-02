@@ -1,3 +1,13 @@
+## 2.5.3 - 2 October 2026
+
+This patch ships the completed WARDOGS chart/server presentation fixes, shared THE FINALS News, and Rocket League News. News precedes Tracker settings; AI Overview remains immediately before Videos. The separate website screenshot refresh is already published and is not part of this app release.
+
+- The full Node suite passed 343 tests with no failures, skips or cancellations. It covers official-feed filtering, offline cache preservation, readable known/unknown server modes, shared News loading/error/empty states, and stale response handling. The bundled Rocket League articles match eight normalized posts from the captured official developer Steam feed for app 252950.
+- The focused headless News/material pass completed ten captures and 14 interaction checks with zero errors at 1920, 1200, 1000 and 640px widths as applicable. It checks chart keyboard selection, server details/favorites/mock copying/search/refresh, shared News rendering, failure recovery, loading controls and navigation cancellation. Actual chart, collapsed/expanded server and both News screenshots were inspected.
+- The existing AI Overview/navigation audit passed 14 captures with zero errors at 1080p, 1440p, 4K and narrow widths with the new tab order. The normal-speed transition regression includes News and passed seven flows: settings moved 0px; maximum sampled Rocket League header channel variation was 0.00544/255. Keyboard activation and interrupted game/tab transitions remained functional.
+- Browser checks ran in isolated headless Edge with public bundled game content and explicitly synthetic server/tracker fixtures. No personal account data, real clipboard writes, native app/installer launch or gameplay was used. Installation, upgrade and live gameplay remain unverified. Prior release evidence below is historical, not a new native-runtime pass.
+- Publication uses the unchanged exact-commit Windows workflow: repeated tests, packaged source/runtime correspondence, executable version, full source ZIP completeness, updater SHA512/size, downloaded asset hashes and tag identity. Previous releases are preserved; no website or backend deployment is part of this release.
+
 ## 2.5.2 - 1 October 2026
 
 Rocket League now places AI Overview immediately before the final Videos tab. The compact experimental page offers Nice Coach / Brutal Coach and one Copy analysis prompt action, with visible bring-your-own-AI and gameplay-stat privacy explanations. No AI API is called, no raw prompt appears in the page, and no new credential or service is introduced. The existing local video-background work is preserved.

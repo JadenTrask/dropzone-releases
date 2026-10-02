@@ -1,10 +1,10 @@
 export const RELEASE_NOTES={
- version:'2.5.2',
- title:'Your matches. Your coaching style.',
+ version:'2.5.3',
+ title:'Shared news. Clearer game tools.',
  items:[
-  {title:'Rocket League AI Overview',body:'Choose Nice Coach or Brutal Coach and copy a prompt built from your retained match history. Paste it into your preferred AI; Dropzone does not call an AI service.'},
-  {title:'Game artwork behind Videos',body:'Siege, League of Legends, RLCS and THE FINALS now have their supplied logo backgrounds, centered beneath the clear-glass panels as you scroll.'},
-  {title:'Everything in its place',body:'AI Overview sits beside Tracker settings, with Videos at the end of the Rocket League navigation. Both coaching styles use the same recorded facts and label missing data.'},
+  {title:'Rocket League News',body:'Read official developer announcements and patch previews inside the tracker. News sits before Tracker settings, with AI Overview and Videos still at the end.'},
+  {title:'One News experience',body:'THE FINALS now uses the same readable News layout as the other games, including source details, refresh states and saved posts when a refresh fails.'},
+  {title:'Clearer WARDOGS tools',body:'The price-history chart now uses consistent glass. Server rows have readable mode and rules labels, with the original identifier and server code available under Details.'},
  ]
 };
 export const shouldShowRelease=(seen,version)=>seen!==version;
