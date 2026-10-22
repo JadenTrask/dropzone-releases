@@ -1,35 +1,15 @@
-let revision=0,current,clearScope=()=>{};
+let revision=0,current;
 export async function transitionPage(render,{target}={}){
- const ticket=++revision;current?.skipTransition();current=null;
- clearScope();clearScope=()=>{};
- document.documentElement.classList.remove('dz-transitioning');
- if(document.visibilityState==='hidden'||document.querySelector('.dz-intro')||!document.startViewTransition||matchMedia('(prefers-reduced-motion: reduce)').matches||document.documentElement.classList.contains('cc-reduced-motion')||document.body?.classList.contains('app-reduced-motion'))return render();
- let resolve,reject,started=false;
- const rendered=new Promise((done,fail)=>{resolve=done;reject=fail;});
- // Keep application errors separate from optional snapshot/animation failures.
- // An async route may remain pending while its loading view is already visible.
- rendered.catch(()=>{});
- const update=()=>{
-  if(started)return;started=true;
-  if(ticket!==revision){resolve();return;}
-  try{Promise.resolve(render()).then(resolve,reject);}catch(error){reject(error);}
-  // Do not return the provider promise: Chromium suppresses paints until the
-  // update callback settles. The original 300ms workspace crossfade starts now.
- };
+ const ticket=++revision;
+ current?.cancel();current=null;
+ const result=await render();
+ if(ticket!==revision)return result;
+ const content=target&&document.querySelector(target);
+ if(!content?.isConnected||document.visibilityState==='hidden'||document.querySelector('.dz-intro')||matchMedia('(prefers-reduced-motion: reduce)').matches||document.documentElement.classList.contains('cc-reduced-motion')||document.body?.classList.contains('app-reduced-motion'))return result;
+ // Animate the live content only: snapshots resize views and interrupt glass sampling.
  try{
-  // A persistent named snapshot root suppresses descendant backdrop sampling
-  // in Chromium, even when no transition is active. Scope it to the capture.
-  document.documentElement.classList.add('dz-transitioning');
-  if(target?.isConnected){
-   document.documentElement.setAttribute('data-dz-transition-scoped','');
-   target.setAttribute('data-dz-transition-root','');
-   clearScope=()=>{target.removeAttribute('data-dz-transition-root');document.documentElement.removeAttribute('data-dz-transition-scoped');};
-  }
-  const transition=document.startViewTransition(update);current=transition;
-  transition.ready.catch(()=>{});
-  transition.updateCallbackDone.catch(reject);
-  const clear=()=>{if(current===transition){current=null;clearScope();clearScope=()=>{};document.documentElement.classList.remove('dz-transitioning');}};
-  transition.finished.then(clear,clear);
- }catch{clearScope();clearScope=()=>{};document.documentElement.classList.remove('dz-transitioning');update();}
- return rendered;
+  current=content.animate([{opacity:0},{opacity:1}],{duration:180,easing:'ease-out'});
+  current.finished.catch(()=>{});
+ }catch{} // Optional motion must not prevent a screen from rendering.
+ return result;
 }

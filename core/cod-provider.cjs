@@ -2,6 +2,7 @@
 const {SourceCache}=require('./source-cache.cjs');
 const crypto=require('node:crypto');
 const FEEDS=Object.freeze({
+  'mw4-public':{path:'mw4',url:'https://codmunity.gg/mw4',game:'mw4',meta:'mw4-mp',collection:'mw4-mp'},
   'bo7-public':{path:'bo7',url:'https://codmunity.gg/bo7',game:'bo7',meta:'bo7-mp',collection:'bo7-mp'},
   // CODMunity retains its legacy ranked collection name. Require the BO7 game
   // on every row as well as the exact ranked collection; never infer the mode.
@@ -15,7 +16,7 @@ function applyEligibility(data){
   const builds=data.builds.filter(b=>allowedBuild(b,data.feed)).map((b,i)=>({...b,sourceRank:i+1}));
   return {...data,builds,...(data.feed==='bo7-ranked'?{eligibility:rankedPolicy}:{})};
 }
-const SLOTS=['Optic','Muzzle','Barrel','Underbarrel','Magazine','Rear Grip','Stock','Laser','Fire Mods','Conversion Kit','Ammunition','Comb','Rail','Bolt','TriggerAction','Guard','Lever','Sling','Stock Pad','Shard'];
+const SLOTS=['Optic','Muzzle','Barrel','Underbarrel','Magazine','Rear Grip','Stock','Laser','Fire Mods','Conversion Kit','Ammunition','Comb','Rail','Bolt','TriggerAction','Guard','Lever','Sling','Stock Pad','Shard','Apex'];
 const TIERS=['absolute-meta','meta','contender','very-good','viable','other'];
 const TIER_NAMES=['Absolute meta','Meta','Contender','Good','Viable','Other'];
 const clean=v=>typeof v==='string'?v.replace(/<[^>]*>/g,' ').replace(/[\u0000-\u001f]/g,' ').replace(/\s+/g,' ').trim().slice(0,250):'';
@@ -42,7 +43,7 @@ function normalize(payload,feed,fetchedAt=new Date().toISOString()) {
     const tierRank=TIERS.indexOf(section.name);if(tierRank<0||!Array.isArray(section.cards))continue;
     if(section.cards.length>1000)throw new Error('Oversized source response.');
     for(const card of section.cards){
-      if(card.appGame!==config.game || card.meta!==config.meta || card.collec!==config.collection || (config.game==='bo7'&&card.Game!=='bo7'))throw new Error('The source returned builds for a different game mode.');
+      if(card.appGame!==config.game || card.meta!==config.meta || card.collec!==config.collection || (['bo7','mw4'].includes(config.game)&&card.Game!==config.game) || (config.game==='mw4'&&card.weaponGame!=='mw4'))throw new Error('The source returned builds for a different game mode.');
       if(card.active===false)continue;
       const id=clean(card._id),weapon=clean(card.WeaponName);
       if(!/^[a-zA-Z0-9_-]+$/.test(id)||!weapon||seen.has(id)){rejected++;continue;}

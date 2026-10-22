@@ -1,0 +1,15 @@
+/* Scroll-linked transforms stay idle when the list stops moving. */
+@supports(animation-timeline:view()){
+ @media(prefers-reduced-motion:no-preference){
+  html:not(.cc-reduced-motion) body:not(.app-reduced-motion):not(.app-high-contrast) .weapon-results>.weapon-row:not(:focus-visible){
+   animation:loadout-scroll-depth linear both;
+   animation-timeline:view(block);
+   animation-range:entry 0% exit 100%;
+   animation-duration:auto;
+  }
+ }
+}
+@keyframes loadout-scroll-depth{
+ entry 0%,exit 100%{scale:.94;opacity:.75}
+ entry 100%,exit 0%{scale:1;opacity:1}
+}

@@ -1,3 +1,10 @@
+## 2.5.4 - 22 October 2026
+
+- All 344 Node tests passed with zero failures, skips or cancellations. Eighteen focused COD, game-gate and refresh tests and eight transition/navigation-history checks also passed. The release workflow repeats the full test suite and verifies installer/update metadata and source correspondence before publishing.
+- Browser preview checks covered live/history/friends/settings tab navigation without scale transforms, MW4 selection preserving list position, search outlines, WARDOGS entry, and sidebar collapse/expansion. The user confirmed moving blur bands were gone. A temporary removal of sidebar backdrop blur was reverted; the released material is retained.
+- The experimental redesign was backed up outside the release source and excluded. MW4's own feed, BO7/Warzone and saved build identities remain distinct. Reduced-motion and render-error behavior are covered by focused tests.
+- Native installation, installed-version upgrade, signed-in profile/live-game flows and cross-PC GPU acceptance remain unverified. No personal preview data or design experiments are shipped.
+
 ## 2.5.3 - 2 October 2026
 
 This patch ships the completed WARDOGS chart/server presentation fixes, shared THE FINALS News, and Rocket League News. News precedes Tracker settings; AI Overview remains immediately before Videos. The separate website screenshot refresh is already published and is not part of this app release.

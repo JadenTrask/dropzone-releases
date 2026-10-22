@@ -15,7 +15,7 @@ let active=false,view='live',state=null,analytics=null,history=null,detail=null,
 let historyKind='all',historyGroup='',selectedMatches=new Set();
 
 // Keep the glass command bar live while only the selected tab content fades.
-const transitionContent=render=>transitionPage(render,{target:document.querySelector('#rl-content')});
+const transitionContent=render=>transitionPage(render,{target:'#rl-content'});
 const bridge=window.rift;
 const call=input=>bridge?.rocketLeague?bridge.rocketLeague(input):Promise.reject(Error('Live tracking is available in the desktop app.'));
 const fmt=(n,d=0)=>Number.isFinite(n)?n.toLocaleString(undefined,{maximumFractionDigits:d}):'—';

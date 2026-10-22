@@ -6,10 +6,10 @@
     "name": "Call of Duty",
     "shortName": "Call of Duty",
     "eyebrow": "CALL OF DUTY",
-    "description": "Black Ops 7, Warzone, and Modern Warfare 4.",
+    "description": "Modern Warfare 4, Black Ops 7, and Warzone.",
     "theme": "cod",
     "accent": "#ff9b54",
-    "cover": "assets/games/cod.webp",
+    "cover": "assets/games/mw4.webp",
     "status": "active",
     "childPrompt": "Choose your Call of Duty"
   },
@@ -101,6 +101,31 @@
     "modes": []
   },
   {
+    "id": "mw4",
+    "parent": "cod",
+    "kind": "loadouts",
+    "provider": "codmunity",
+    "name": "Modern Warfare 4",
+    "shortName": "MW4",
+    "eyebrow": "MULTIPLAYER",
+    "description": "Multiplayer weapon loadouts.",
+    "theme": "mw4",
+    "accent": "#ffdd00",
+    "cover": "assets/games/mw4.webp",
+    "status": "active",
+    "releaseDate": "2026-10-23",
+    "releaseSource": "https://www.callofduty.com/blog/2026/05/call-of-duty-modern-warfare-4-announcement",
+    "releaseVerifiedAt": "2026-10-22",
+    "modes": [
+      {
+        "id": "public",
+        "name": "Multiplayer",
+        "feed": "mw4-public"
+      }
+    ],
+    "sourceName": "CODMunity"
+  },
+  {
     "id": "bo7",
     "parent": "cod",
     "kind": "loadouts",
@@ -152,25 +177,6 @@
         "feed": "warzone-ranked"
       }
     ],
-    "sourceName": "CODMunity"
-  },
-  {
-    "id": "mw4",
-    "parent": "cod",
-    "kind": "loadouts",
-    "provider": "codmunity",
-    "name": "Modern Warfare 4",
-    "shortName": "MW4",
-    "eyebrow": "COMING SOON",
-    "description": "Modern Warfare 4 launches October 23, 2026.",
-    "theme": "mw4",
-    "accent": "#ffdd00",
-    "cover": "assets/games/mw4.webp",
-    "status": "coming-soon",
-    "releaseDate": "2026-10-23",
-    "releaseSource": "https://www.callofduty.com/blog/2026/05/call-of-duty-modern-warfare-4-announcement",
-    "releaseVerifiedAt": "2026-09-06",
-    "modes": [],
     "sourceName": "CODMunity"
   },
   {

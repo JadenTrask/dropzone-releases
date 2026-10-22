@@ -1,9 +1,9 @@
-# Dropzone 2.5.3
+# Dropzone 2.5.4
 
-- **Rocket League News:** official developer announcements and patch previews now appear inside the tracker, using the shared News layout and existing source-refresh system. News comes before Tracker settings; AI Overview remains immediately before the final Videos tab.
-- **Consistent THE FINALS News:** the page now matches the other games, with readable featured and recent posts, source details, clear loading/error states, and saved articles retained when a refresh fails.
-- **WARDOGS chart and servers:** the entire price-history surface now uses consistent clear glass. Compact server rows show readable mode and rules labels; expanded Details preserves the original source identifier, server code and reserved-slot count. Existing prices, chart controls, filters, favorites and copying remain intact.
+- **Modern Warfare 4:** dedicated multiplayer attachment recommendations now lead the Call of Duty collection. Black Ops 7, Warzone and existing saved builds remain separate and available. MW4 ranked loadouts are not connected.
+- **Rocket League transitions:** tabs now use an opacity-only fade. Removed screen-capture transitions that could resize content and interrupt glass backdrop rendering. The released navigation design and hover collapse remain in place.
+- **Weapon browsing:** selecting another gun fades only its loadout preview and keeps the weapon list in place. Cards gently shrink at the scroll edges. Removed duplicate search focus outlines.
 
-Rocket League News uses the official developer Steam announcement feed. Bundled posts remain available offline; publisher links open the full articles. This update does not add rank/MMR lookup or change gameplay statistics. Gray Zone Warfare remains **Under construction**.
+The experimental iOS-style redesign is not included. Reduced-motion preferences skip the new fades and scroll motion. Provider failures retain the last valid loadout feed.
 
-The 343-test Node suite and focused headless renderer, interaction and normal-speed transition checks passed. Website screenshots were refreshed separately. Native installation, installed-version upgrade, real gameplay and the operating-system clipboard were not exercised in this pass. The Windows installer remains unsigned. No provider keys, personal account data or private validation captures are shipped.
+All 344 Node tests passed; publication repeats the complete Node test suite and artifact-integrity checks. Browser preview checks covered Rocket League tabs, MW4 selection and WARDOGS navigation. Native installation, installed-version upgrade, signed-in profiles, live gameplay and GPU behavior across other PCs were not exercised. The Windows installer remains unsigned.

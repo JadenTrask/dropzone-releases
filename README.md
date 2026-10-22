@@ -1,10 +1,16 @@
 # Dropzone
 
-Version 2.4.8 · Windows x64
+Version 2.5.4 · Windows x64
 
 A desktop companion for Rocket League, Apex Legends, League of Legends, Call of Duty, THE FINALS, Rainbow Six Siege, Gray Zone Warfare, Sons of the Forest and WARDOGS.
 
-## New in 2.4.8
+## New in 2.5.4
+
+- Modern Warfare 4 multiplayer attachment recommendations alongside Black Ops 7 and Warzone.
+- Opacity-only Rocket League tab fades and smoother COD weapon selection.
+- Subtle weapon-card scroll motion and simpler search focus styling.
+
+## Earlier in 2.4.8
 
 - Game-colored workspaces with clear glass controls, readable shared typography and consistent navigation.
 - Apex player lookup through your Dropzone account, supported rank/trackers, local recent players and favorites, official legend art, dated balance context, news and esports.

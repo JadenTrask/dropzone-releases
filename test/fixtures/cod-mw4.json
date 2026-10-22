@@ -1,0 +1,171 @@
+{
+  "sourceUrl": "https://api.codmunity.gg/website/pages/meta-loadouts-ranking/mw4",
+  "lastUpdated": 1792693069191,
+  "metas": [
+    {
+      "name": "mw4-mp",
+      "game": "mw4",
+      "collection": "mw4-mp"
+    },
+    {
+      "name": "mw4-specific",
+      "game": "mw4",
+      "collection": "mw4-mp-specific"
+    }
+  ],
+  "sections": [
+    {
+      "name": "absolute-meta",
+      "cards": [
+        {
+          "_id": "6ad9fd3dfc830f326af432b6",
+          "active": true,
+          "WeaponName": "Han 86",
+          "Game": "mw4",
+          "Category": "Assault Rifle",
+          "Playstyle": "Versatile",
+          "Playstyle2": "Versatile",
+          "Optic": "ZLR Type C",
+          "Muzzle": "XRK Mil-Tac Suppressor",
+          "Barrel": "SA H86 465mm",
+          "Rear Grip": "XRK Justice II Grip",
+          "Laser": "XRK Clutch-LS",
+          "collec": "mw4-mp",
+          "appGame": "mw4",
+          "meta": "mw4-mp",
+          "updated": 1792674736851,
+          "weaponSlug": "han-86",
+          "weaponGame": "mw4",
+          "image": "https://assets.codmunity.gg/optimized/MW4_HAN-86_Green.webp",
+          "countAttachments": 5,
+          "attachments": {
+            "Optic": {
+              "weapon": "Han 86",
+              "levelText": "Level 27",
+              "level": 27,
+              "icon": 0,
+              "label": 0,
+              "game": "mw4",
+              "slug": "han-86"
+            },
+            "Muzzle": {
+              "weapon": "Han 86",
+              "levelText": "Level 44",
+              "level": 44,
+              "icon": 0,
+              "label": 0,
+              "game": "mw4",
+              "slug": "han-86"
+            },
+            "Barrel": {
+              "weapon": "Han 86",
+              "levelText": "Level 68",
+              "level": 68,
+              "icon": 0,
+              "label": 0,
+              "game": "mw4",
+              "slug": "han-86"
+            },
+            "Rear Grip": {
+              "weapon": "Han 86",
+              "levelText": "Level 14",
+              "level": 14,
+              "icon": 0,
+              "label": 0,
+              "game": "mw4",
+              "slug": "han-86"
+            },
+            "Laser": {
+              "weapon": "Han 86",
+              "levelText": "Level 3",
+              "level": 3,
+              "icon": 0,
+              "label": 0,
+              "game": "mw4",
+              "slug": "han-86"
+            }
+          }
+        },
+        {
+          "_id": "6ada0369893bb7f3438abd46",
+          "active": true,
+          "WeaponName": "VEL 46",
+          "Game": "mw4",
+          "Category": "SMG",
+          "Playstyle": "Versatile",
+          "Playstyle2": "Versatile",
+          "Muzzle": "XRK Herder 40",
+          "Barrel": "VB-46 Series 11",
+          "Underbarrel": "FSS Fireline Grip",
+          "Rear Grip": "V46 R-Skel Grip",
+          "Laser": "XRK Clutch-LS",
+          "Apex": "VEL 46 Snap",
+          "collec": "mw4-mp",
+          "appGame": "mw4",
+          "meta": "mw4-mp",
+          "updated": 1792672643077,
+          "weaponSlug": "vel-46",
+          "weaponGame": "mw4",
+          "image": "https://assets.codmunity.gg/optimized/MW4_VEL-46_green.webp",
+          "countAttachments": 6,
+          "attachments": {
+            "Muzzle": {
+              "weapon": "VEL 46",
+              "levelText": "Level 51",
+              "level": 51,
+              "icon": 0,
+              "label": 0,
+              "game": "mw4",
+              "slug": "vel-46"
+            },
+            "Barrel": {
+              "weapon": "VEL 46",
+              "levelText": "Level 3",
+              "level": 3,
+              "icon": 0,
+              "label": 0,
+              "game": "mw4",
+              "slug": "vel-46"
+            },
+            "Underbarrel": {
+              "weapon": "VEL 46",
+              "levelText": "Level 10",
+              "level": 10,
+              "icon": 0,
+              "label": 0,
+              "game": "mw4",
+              "slug": "vel-46"
+            },
+            "Rear Grip": {
+              "weapon": "VEL 46",
+              "levelText": "Level 9",
+              "level": 9,
+              "icon": 0,
+              "label": 0,
+              "game": "mw4",
+              "slug": "vel-46"
+            },
+            "Laser": {
+              "weapon": "VEL 46",
+              "levelText": "Level 39",
+              "level": 39,
+              "icon": 0,
+              "label": 0,
+              "game": "mw4",
+              "slug": "vel-46"
+            },
+            "Apex": {
+              "weapon": "VEL 46",
+              "levelText": "Level 60",
+              "level": 60,
+              "icon": 0,
+              "label": 0,
+              "game": "mw4",
+              "slug": "vel-46"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

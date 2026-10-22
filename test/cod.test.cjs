@@ -6,6 +6,7 @@ const os=require('node:os');
 const {CodProvider,normalize,fromHtml}=require('../core/cod-provider.cjs');
 const {GameService}=require('../core/game-service.cjs');
 const recorded=require('./fixtures/cod-ranked.json');
+const mw4Recorded=require('./fixtures/cod-mw4.json');
 const feed='bo7-ranked';
 const oldDate='2020-01-01T00:00:00.000Z';
 const fixture=()=>structuredClone(recorded);
@@ -68,9 +69,29 @@ test('Successful refresh is reused within the session; a new launch checks again
   const fallback=await reopened.getBuilds({feed});assert.equal(fallback.cacheState,'offline');assert.equal(fallback.builds.length,3);assert.match(fallback.error,/Offline after restart/);assert.equal(calls,2);
 });
 
-test('Coming-soon and invalid modes do not request or substitute another feed',async()=>{
+test('MW4 is the first COD title and dispatches to its own multiplayer feed',async()=>{
+  let received;const service=new GameService({providers:{codmunity:{getBuilds:async options=>{received=options;return normalize(mw4Recorded,'mw4-public');}}}});
+  assert.deepEqual(service.list().filter(g=>g.parent==='cod').map(g=>g.id),['mw4','bo7','warzone']);
+  const data=await service.builds({game:'mw4',mode:'public',refresh:true});
+  assert.deepEqual(received,{feed:'mw4-public',refresh:true});assert.equal(data.game,'mw4');assert.equal(data.mode,'public');assert.equal(data.builds.length,2);
+  const apex=data.builds.find(b=>b.weapon==='VEL 46');assert.equal(apex.attachmentCount,6);assert.deepEqual(apex.attachments.find(a=>a.slot==='Apex'),{slot:'Apex',name:'VEL 46 Snap',unlock:'Level 60',unlockWeapon:'VEL 46'});
+  assert.ok(data.builds.every(b=>b.weaponGame==='mw4'&&b.sourceUrl.startsWith('https://codmunity.gg/weapon/mw4/')));
+});
+
+test('MW4 rejects BO7 identity and preserves its own offline cache after a wrong-game refresh',async t=>{
+  for(const field of ['Game','appGame','meta','collec','weaponGame']){const bad=structuredClone(mw4Recorded);bad.sections[0].cards[0][field]='bo7';assert.throws(()=>normalize(bad,'mw4-public'),/different game/);}
+  assert.throws(()=>normalize(recorded,'mw4-public'),/different game/);
+  assert.throws(()=>normalize(mw4Recorded,'bo7-public'),/different game/);
+  const d=await dirs(t),snapshot=normalize(mw4Recorded,'mw4-public',oldDate);
+  await fs.writeFile(path.join(d.bundleDir,'mw4-public.json'),JSON.stringify(snapshot));
+  const provider=new CodProvider({...d,requestFn:async()=>recorded});
+  const data=await provider.getBuilds({feed:'mw4-public',refresh:true});assert.equal(data.cacheState,'offline');assert.equal(data.fetchedAt,oldDate);assert.ok(data.builds.every(b=>b.weaponGame==='mw4'));
+  await assert.rejects(fs.access(path.join(d.cacheDir,'bo7-public.json')));
+});
+
+test('Invalid modes do not request or substitute another feed',async()=>{
   let calls=0;const service=new GameService({providers:{codmunity:{getBuilds:async()=>{calls++;return {};}}}});
-  const mw4=await service.builds({game:'mw4',mode:'public'});assert.equal(mw4.comingSoon,true);assert.equal(mw4.releaseDate,'2026-10-23');assert.deepEqual(mw4.builds,[]);
+  await assert.rejects(service.builds({game:'mw4',mode:'ranked'}));
   await assert.rejects(service.builds({game:'bo7',mode:'battle-royale'}));await assert.rejects(service.builds({game:'missing',mode:'public'}));assert.equal(calls,0);
 });
 
