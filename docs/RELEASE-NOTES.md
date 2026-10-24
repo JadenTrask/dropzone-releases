@@ -1,9 +1,9 @@
-# Dropzone 2.5.4
+# Dropzone 2.5.5
 
-- **Modern Warfare 4:** dedicated multiplayer attachment recommendations now lead the Call of Duty collection. Black Ops 7, Warzone and existing saved builds remain separate and available. MW4 ranked loadouts are not connected.
-- **Rocket League transitions:** tabs now use an opacity-only fade. Removed screen-capture transitions that could resize content and interrupt glass backdrop rendering. The released navigation design and hover collapse remain in place.
-- **Weapon browsing:** selecting another gun fades only its loadout preview and keeps the weapon list in place. Cards gently shrink at the scroll edges. Removed duplicate search focus outlines.
+- **MW4 DMZ classes:** choose DMZ beside Multiplayer in Modern Warfare 4. Includes 27 complete bundled weapon loadouts from CODMunity, with search, weapon/playstyle filters and source tiers.
+- **DMZ attachments and artwork:** preserves Apex attachments, pistol cylinders and trigger actions, with local weapon images and thumbnails for offline browsing.
+- **Separate mode data:** DMZ uses its own feed, cache and saved-build identity. Multiplayer, Black Ops 7 and Warzone remain available. Wrong-game or wrong-mode responses cannot replace the last valid DMZ data.
 
-The experimental iOS-style redesign is not included. Reduced-motion preferences skip the new fades and scroll motion. Provider failures retain the last valid loadout feed.
+The bundled snapshot comes from CODMunity's October 23, 2026 DMZ feed. One source build has an inconsistent attachment count and is excluded rather than guessing its attachments. Recommendations are the provider's editorial tiers, not measured win rates. Perks and equipment remain outside this attachment feed.
 
-All 344 Node tests passed; publication repeats the complete Node test suite and artifact-integrity checks. Browser preview checks covered Rocket League tabs, MW4 selection and WARDOGS navigation. Native installation, installed-version upgrade, signed-in profiles, live gameplay and GPU behavior across other PCs were not exercised. The Windows installer remains unsigned.
+All 346 Node tests passed with zero failures, skips or cancellations. Twenty focused COD, refresh and game-gate tests also passed. Browser preview checks covered DMZ selection, all 27 builds, Apex/cylinder attachments, loaded weapon artwork, and switching between DMZ and Multiplayer's different Han 86 setup. Publication repeats the full Node suite and installer/source integrity checks. Native installation, installed-version upgrade and gameplay were not exercised. The Windows installer remains unsigned.

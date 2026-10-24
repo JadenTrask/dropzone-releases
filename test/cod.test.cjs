@@ -7,6 +7,7 @@ const {CodProvider,normalize,fromHtml}=require('../core/cod-provider.cjs');
 const {GameService}=require('../core/game-service.cjs');
 const recorded=require('./fixtures/cod-ranked.json');
 const mw4Recorded=require('./fixtures/cod-mw4.json');
+const dmzRecorded=require('./fixtures/cod-mw4-dmz.json');
 const feed='bo7-ranked';
 const oldDate='2020-01-01T00:00:00.000Z';
 const fixture=()=>structuredClone(recorded);
@@ -87,6 +88,27 @@ test('MW4 rejects BO7 identity and preserves its own offline cache after a wrong
   const provider=new CodProvider({...d,requestFn:async()=>recorded});
   const data=await provider.getBuilds({feed:'mw4-public',refresh:true});assert.equal(data.cacheState,'offline');assert.equal(data.fetchedAt,oldDate);assert.ok(data.builds.every(b=>b.weaponGame==='mw4'));
   await assert.rejects(fs.access(path.join(d.cacheDir,'bo7-public.json')));
+});
+
+test('MW4 DMZ dispatches separately and keeps Apex, cylinder and trigger attachments',async()=>{
+  let received;const service=new GameService({providers:{codmunity:{getBuilds:async options=>{received=options;return normalize(dmzRecorded,'mw4-dmz');}}}});
+  const data=await service.builds({game:'mw4',mode:'dmz',refresh:true});
+  assert.deepEqual(received,{feed:'mw4-dmz',refresh:true});assert.equal(data.mode,'dmz');assert.equal(data.builds.length,5);assert.equal(data.rejected,1);
+  assert.equal(data.sourceUrl,'https://codmunity.gg/mw4-dmz');assert.ok(data.builds.every(b=>b.weaponGame==='mw4'));
+  assert.equal(data.builds.find(b=>b.weapon==='VEL 46').attachments.find(a=>a.slot==='Apex').name,'VEL 46 Snap');
+  assert.equal(data.builds.find(b=>b.weapon==='Krait P68').attachments.find(a=>a.slot==='Trigger').name,'P68 Tapper 9');
+  assert.equal(data.builds.find(b=>b.weapon==='Mojave .357').attachments.find(a=>a.slot==='Cylinder').name,'Mojave Speed Cylinder');
+  assert.ok(!data.builds.some(b=>b.weapon==='Rezi 12'),'A source count mismatch must not become an invented attachment set');
+});
+
+test('DMZ rejects wrong identities and an MP refresh cannot overwrite its offline cache',async t=>{
+  assert.throws(()=>normalize(mw4Recorded,'mw4-dmz'),/different game/);assert.throws(()=>normalize(dmzRecorded,'mw4-public'),/different game/);
+  for(const field of ['Game','appGame','meta','collec','weaponGame']){const bad=structuredClone(dmzRecorded);bad.sections[0].cards[0][field]='bo7';assert.throws(()=>normalize(bad,'mw4-dmz'),/different game/);}
+  const d=await dirs(t),dmz=normalize(dmzRecorded,'mw4-dmz',oldDate),mp=normalize(mw4Recorded,'mw4-public',oldDate);await fs.mkdir(d.cacheDir);
+  const file=path.join(d.cacheDir,'mw4-dmz.json');await fs.writeFile(file,JSON.stringify(dmz));await fs.writeFile(path.join(d.cacheDir,'mw4-public.json'),JSON.stringify(mp));
+  const provider=new CodProvider({...d,requestFn:async()=>mw4Recorded});const data=await provider.getBuilds({feed:'mw4-dmz',refresh:true});
+  assert.equal(data.cacheState,'offline');assert.equal(data.fetchedAt,oldDate);assert.deepEqual(JSON.parse(await fs.readFile(file,'utf8')),dmz);
+  assert.deepEqual(JSON.parse(await fs.readFile(path.join(d.cacheDir,'mw4-public.json'),'utf8')),mp);
 });
 
 test('Invalid modes do not request or substitute another feed',async()=>{

@@ -1,0 +1,487 @@
+{
+  "lastUpdated": 1792772973282,
+  "metas": [
+    {
+      "name": "DMZ",
+      "game": "dmz",
+      "collection": "dmz-meta"
+    }
+  ],
+  "sections": [
+    {
+      "name": "absolute-meta",
+      "cards": [
+        {
+          "_id": "6ad7b582aa001a0f7bbd5bd1",
+          "created": 1792521602948,
+          "active": true,
+          "WeaponName": "Han 86",
+          "Game": "mw4",
+          "Category": "Assault Rifle",
+          "Playstyle": "Long Range",
+          "Playstyle2": "Long Range",
+          "Rating": 5.51,
+          "Muzzle": "FSS IS300",
+          "Barrel": "SA H86 465mm",
+          "Optic": "KV Corsac Holo",
+          "Stock": "FR4 Retractable Stock",
+          "Magazine": "60 Round Drum",
+          "Meta": 1,
+          "Id": 2,
+          "collec": "dmz-meta",
+          "appGame": "dmz",
+          "meta": "DMZ",
+          "updated": 1792770190102,
+          "top": 1,
+          "popularity": 48.70511049723757,
+          "weaponSlug": "han-86",
+          "weaponGame": "mw4",
+          "image": "https://assets.codmunity.gg/optimized/MW4_HAN-86_Green.webp",
+          "countAttachments": 5,
+          "attachments": {
+            "Muzzle": {
+              "weapon": "Han 86",
+              "levelText": "Level 6",
+              "level": 6,
+              "icon": "https://assets.codmunity.gg/optimized/fss_is300_mw4_icon.webp",
+              "label": "Heavy Silencer",
+              "game": "mw4",
+              "slug": "han-86"
+            },
+            "Barrel": {
+              "weapon": "Han 86",
+              "levelText": "Level 68",
+              "level": 68,
+              "icon": "https://assets.codmunity.gg/optimized/sa_h86_465mm_mw4_icon.webp",
+              "label": "Long Barrel",
+              "game": "mw4",
+              "slug": "han-86"
+            },
+            "Optic": {
+              "weapon": "Han 86",
+              "levelText": "Level 47",
+              "level": 47,
+              "icon": "https://assets.codmunity.gg/optimized/kv_corsac_holo_mw4_icon.webp",
+              "label": "Holo",
+              "game": "mw4",
+              "slug": "han-86"
+            },
+            "Stock": {
+              "weapon": "Han 86",
+              "levelText": "Level 4",
+              "level": 4,
+              "icon": "https://assets.codmunity.gg/optimized/fr4_retractable_stock_mw4_icon.webp",
+              "label": "Tactical Stock",
+              "game": "mw4",
+              "slug": "han-86"
+            },
+            "Magazine": {
+              "weapon": "Han 86",
+              "levelText": "Level 10",
+              "level": 10,
+              "icon": "https://assets.codmunity.gg/optimized/60_round_drum_mw4_icon.webp",
+              "label": 0,
+              "game": "mw4",
+              "slug": "han-86"
+            }
+          }
+        },
+        {
+          "_id": "6ad7d57e927a11b7a5297d47",
+          "created": 1792529790533,
+          "active": true,
+          "WeaponName": "VEL 46",
+          "Game": "mw4",
+          "Category": "SMG",
+          "Playstyle": "Close Range",
+          "Playstyle2": "Close Range",
+          "Rating": 5.41,
+          "Muzzle": "FSS Crackdown",
+          "Barrel": "VB-46 Series 11",
+          "Magazine": "60 Round Drum",
+          "Underbarrel": "FSS Fireline Grip",
+          "Apex": "VEL 46 Snap",
+          "Laser": "Schlager Visiv-5",
+          "Meta": 1,
+          "Id": 16,
+          "collec": "dmz-meta",
+          "appGame": "dmz",
+          "meta": "DMZ",
+          "updated": 1792772859625,
+          "top": 1,
+          "popularity": 10.808011049723756,
+          "weaponSlug": "vel-46",
+          "weaponGame": "mw4",
+          "image": "https://assets.codmunity.gg/optimized/MW4_VEL-46_green.webp",
+          "countAttachments": 6,
+          "attachments": {
+            "Muzzle": {
+              "weapon": "VEL 46",
+              "levelText": "Level 4",
+              "level": 4,
+              "icon": "https://assets.codmunity.gg/optimized/fss_crackdown_mw4_icon.webp",
+              "label": "Heavy Silencer",
+              "game": "mw4",
+              "slug": "vel-46"
+            },
+            "Barrel": {
+              "weapon": "VEL 46",
+              "levelText": "Level 3",
+              "level": 3,
+              "icon": "https://assets.codmunity.gg/optimized/vb_46_series_11_mw4_icon.webp",
+              "label": "Long Barrel",
+              "game": "mw4",
+              "slug": "vel-46"
+            },
+            "Magazine": {
+              "weapon": "VEL 46",
+              "levelText": "Level 33",
+              "level": 33,
+              "icon": "https://assets.codmunity.gg/optimized/60_round_drum_mw4_icon_v2.webp",
+              "label": 0,
+              "game": "mw4",
+              "slug": "vel-46"
+            },
+            "Underbarrel": {
+              "weapon": "VEL 46",
+              "levelText": "Level 10",
+              "level": 10,
+              "icon": "https://assets.codmunity.gg/optimized/fss_fireline_grip_mw4_icon.webp",
+              "label": "Angled Grip",
+              "game": "mw4",
+              "slug": "vel-46"
+            },
+            "Apex": {
+              "weapon": "VEL 46",
+              "levelText": "Level 60",
+              "level": 60,
+              "icon": "https://assets.codmunity.gg/optimized/vel_46_snap_mw4_icon.webp",
+              "label": 0,
+              "game": "mw4",
+              "slug": "vel-46"
+            },
+            "Laser": {
+              "weapon": "VEL 46",
+              "levelText": "Level 23",
+              "level": 23,
+              "icon": "https://assets.codmunity.gg/optimized/schlager_visiv_5_mw4_icon.webp",
+              "label": "Bright ADS Laser",
+              "game": "mw4",
+              "slug": "vel-46"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "meta",
+      "cards": [
+        {
+          "_id": "6ad7c6b30a885361883e0e8c",
+          "created": 1792526003838,
+          "active": true,
+          "WeaponName": "Rezi 12",
+          "Game": "mw4",
+          "Category": "Shotgun",
+          "Playstyle": "Close Range",
+          "Playstyle2": "Close Range",
+          "Rating": 4.61,
+          "Muzzle": "EXP Firelite 12",
+          "Barrel": "ZLR Rogue 90 25\"",
+          "Stock": "No Stock",
+          "Apex": "Rezi 12 Enforcer",
+          "Bolt": "XRK Quad-80",
+          "Meta": 1,
+          "Id": 6,
+          "collec": "dmz-meta",
+          "appGame": "dmz",
+          "meta": "DMZ",
+          "updated": 1792772859624,
+          "Guard": "Demo Service-12G",
+          "Description": "The sixth attachment is the Demo Service-12G Guard, but a bug is preventing it from showing on the app. Working on getting that fixed ASAP!",
+          "top": 4,
+          "popularity": 0.8459944751381214,
+          "weaponSlug": "rezi-12",
+          "weaponGame": "mw4",
+          "disableTtkStats": true,
+          "image": "https://assets.codmunity.gg/optimized/MW4_Rezi-12_green.webp",
+          "countAttachments": 5,
+          "attachments": {
+            "Muzzle": {
+              "weapon": "Rezi 12",
+              "levelText": "Level 24",
+              "level": 24,
+              "icon": "https://assets.codmunity.gg/optimized/exp_firelite_12_mw4_icon.webp",
+              "label": "Heavy Silencer",
+              "game": "mw4",
+              "slug": "rezi-12"
+            },
+            "Stock": {
+              "weapon": "Rezi 12",
+              "levelText": "Level 18",
+              "level": 18,
+              "icon": "https://assets.codmunity.gg/optimized/no_stock_mw4_icon_v4.webp",
+              "label": 0,
+              "game": "mw4",
+              "slug": "rezi-12"
+            },
+            "Apex": {
+              "weapon": "Rezi 12",
+              "levelText": "Level 60",
+              "level": 60,
+              "icon": "https://assets.codmunity.gg/optimized/rezi_12_enforcer_mw4_icon.webp",
+              "label": 0,
+              "game": "mw4",
+              "slug": "rezi-12"
+            },
+            "Bolt": {
+              "weapon": "Rezi 12",
+              "levelText": "Level 49",
+              "level": 49,
+              "icon": "https://assets.codmunity.gg/optimized/xrk_quad_80_mw4_icon.webp",
+              "label": "Speed Bolt",
+              "game": "mw4",
+              "slug": "rezi-12"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "very-good",
+      "cards": [
+        {
+          "_id": "6ad7ce18ff65257a62e4aadb",
+          "created": 1792527896432,
+          "active": true,
+          "WeaponName": "Signal 50",
+          "Game": "mw4",
+          "Category": "Sniper",
+          "Playstyle": "Sniper",
+          "Playstyle2": "Sniper",
+          "Rating": 3.91,
+          "Muzzle": "FSS HOC-30",
+          "Barrel": "MR50 Tyrant 29\"",
+          "Optic": "Schlager 7x",
+          "Stock": "EXP T50-S Heavy",
+          "Rear Grip": "GL Zero Drop 6",
+          "Apex": "Signal Inferno",
+          "Id": 10,
+          "collec": "dmz-meta",
+          "appGame": "dmz",
+          "meta": "DMZ",
+          "updated": 1792772973280,
+          "top": 1,
+          "popularity": 1.6574585635359116,
+          "weaponSlug": "signal-50",
+          "weaponGame": "mw4",
+          "disableTtkStats": true,
+          "image": "https://assets.codmunity.gg/optimized/MW4_Signal-50_green.webp",
+          "countAttachments": 6,
+          "attachments": {
+            "Muzzle": {
+              "weapon": "Signal 50",
+              "levelText": "Level 60",
+              "level": 60,
+              "icon": "https://assets.codmunity.gg/optimized/fss_hoc_30_mw4_icon.webp",
+              "label": "Heavy Silencer",
+              "game": "mw4",
+              "slug": "signal-50"
+            },
+            "Optic": {
+              "weapon": "Signal 50",
+              "levelText": "Level 28",
+              "level": 28,
+              "icon": "https://assets.codmunity.gg/optimized/schlager_7x_mw4_icon.webp",
+              "label": "Rifle Scope",
+              "game": "mw4",
+              "slug": "signal-50"
+            },
+            "Stock": {
+              "weapon": "Signal 50",
+              "levelText": "Level 9",
+              "level": 9,
+              "icon": "https://assets.codmunity.gg/optimized/exp_t50_s_heavy_mw4_icon.webp",
+              "label": "Heavy Stock",
+              "game": "mw4",
+              "slug": "signal-50"
+            },
+            "Rear Grip": {
+              "weapon": "Signal 50",
+              "levelText": "Level 63",
+              "level": 63,
+              "icon": "https://assets.codmunity.gg/optimized/gl_zero_drop_6_mw4_icon.webp",
+              "label": "Aim Grip",
+              "game": "mw4",
+              "slug": "signal-50"
+            },
+            "Apex": {
+              "weapon": "Signal 50",
+              "levelText": "Level 74",
+              "level": 74,
+              "icon": "https://assets.codmunity.gg/optimized/signal_inferno_mw4_icon.webp",
+              "label": 0,
+              "game": "mw4",
+              "slug": "signal-50"
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "viable",
+      "cards": [
+        {
+          "_id": "6ad7e346ff65257a62e4f735",
+          "created": 1792533318598,
+          "active": true,
+          "WeaponName": "Krait P68",
+          "Game": "mw4",
+          "Category": "Pistol",
+          "Playstyle": "Close Range",
+          "Playstyle2": "Close Range",
+          "Rating": 2.54,
+          "Muzzle": "Expedite Drill L4",
+          "Barrel": "SA Omni 5.5\"",
+          "Optic": "Z-Dot 9",
+          "Rear Grip": "MAGTAC .45",
+          "Apex": "Krait P68 Commando",
+          "Trigger Action": "P68 Tapper 9",
+          "Id": 27,
+          "collec": "dmz-meta",
+          "appGame": "dmz",
+          "meta": "DMZ",
+          "updated": 1792772973279,
+          "top": 8,
+          "popularity": 0.24171270718232044,
+          "weaponSlug": "krait-p68",
+          "weaponGame": "mw4",
+          "image": "https://assets.codmunity.gg/optimized/MW4_Krait-P68_green.webp",
+          "countAttachments": 6,
+          "attachments": {
+            "Muzzle": {
+              "weapon": "Krait P68",
+              "levelText": "Level 36",
+              "level": 36,
+              "icon": "https://assets.codmunity.gg/optimized/expedite_drill_l4_mw4_icon.webp",
+              "label": "Tactical Silencer",
+              "game": "mw4",
+              "slug": "krait-p68"
+            },
+            "Optic": {
+              "weapon": "Krait P68",
+              "levelText": "Level 16",
+              "level": 16,
+              "icon": "https://assets.codmunity.gg/optimized/z_dot_9_mw4_icon.webp",
+              "label": "Mini Reflex",
+              "game": "mw4",
+              "slug": "krait-p68"
+            },
+            "Rear Grip": {
+              "weapon": "Krait P68",
+              "levelText": "Level 5",
+              "level": 5,
+              "icon": "https://assets.codmunity.gg/optimized/magtac_45_mw4_icon.webp",
+              "label": "Flared Grip",
+              "game": "mw4",
+              "slug": "krait-p68"
+            },
+            "Apex": {
+              "weapon": "Krait P68",
+              "levelText": "Level 38",
+              "level": 38,
+              "icon": "https://assets.codmunity.gg/optimized/krait_p68_commando_mw4_icon.webp",
+              "label": 0,
+              "game": "mw4",
+              "slug": "krait-p68"
+            },
+            "Trigger Action": {
+              "weapon": "Krait P68",
+              "levelText": "Level 33",
+              "level": 33,
+              "icon": "https://assets.codmunity.gg/optimized/p68_tapper_9_mw4_icon.webp",
+              "label": "Light Trigger",
+              "game": "mw4",
+              "slug": "krait-p68"
+            }
+          }
+        },
+        {
+          "_id": "6ad7e4ec2da110e958949436",
+          "created": 1792533740228,
+          "active": true,
+          "WeaponName": "Mojave .357",
+          "Game": "mw4",
+          "Category": "Pistol",
+          "Playstyle": "Close Range",
+          "Playstyle2": "Close Range",
+          "Rating": 2.52,
+          "Muzzle": "Matuzek H357-M Comp",
+          "Barrel": "XRK Greywolf 7.5\"",
+          "Ammunition": ".357 Magnum Overpressured",
+          "Apex": "Mojave .357 Lawless",
+          "Cylinder": "Mojave Speed Cylinder",
+          "Laser": "GW MDL-2",
+          "Id": 29,
+          "collec": "dmz-meta",
+          "appGame": "dmz",
+          "meta": "DMZ",
+          "updated": 1792772973279,
+          "top": 10,
+          "popularity": 0,
+          "weaponSlug": "mojave-357",
+          "weaponGame": "mw4",
+          "image": "https://assets.codmunity.gg/optimized/MW4_Mojave-.357_green.webp",
+          "countAttachments": 6,
+          "attachments": {
+            "Muzzle": {
+              "weapon": "Mojave .357",
+              "levelText": "Level 2",
+              "level": 2,
+              "icon": "https://assets.codmunity.gg/optimized/matuzek_h357_m_comp_mw4_icon.webp",
+              "label": "Vertical Comp",
+              "game": "mw4",
+              "slug": "mojave-357"
+            },
+            "Ammunition": {
+              "weapon": "Mojave .357",
+              "levelText": "Level 19",
+              "level": 19,
+              "icon": "https://assets.codmunity.gg/optimized/357_magnum_overpressured_mw4_icon.webp",
+              "label": 0,
+              "game": "mw4",
+              "slug": "mojave-357"
+            },
+            "Apex": {
+              "weapon": "Mojave .357",
+              "levelText": "Level 44",
+              "level": 44,
+              "icon": "https://assets.codmunity.gg/optimized/mojave_357_lawless_mw4_icon.webp",
+              "label": 0,
+              "game": "mw4",
+              "slug": "mojave-357"
+            },
+            "Cylinder": {
+              "weapon": "Mojave .357",
+              "levelText": "Level 9",
+              "level": 9,
+              "icon": "https://assets.codmunity.gg/optimized/mojave_speed_cylinder_mw4_icon.webp",
+              "label": "Light Cylinder",
+              "game": "mw4",
+              "slug": "mojave-357"
+            },
+            "Laser": {
+              "weapon": "Mojave .357",
+              "levelText": "Level 5",
+              "level": 5,
+              "icon": "https://assets.codmunity.gg/optimized/gw_mdl_2_mw4_icon.webp",
+              "label": "Bright Hip Laser",
+              "game": "mw4",
+              "slug": "mojave-357"
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

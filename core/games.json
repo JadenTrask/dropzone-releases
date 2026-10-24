@@ -108,7 +108,7 @@
     "name": "Modern Warfare 4",
     "shortName": "MW4",
     "eyebrow": "MULTIPLAYER",
-    "description": "Multiplayer weapon loadouts.",
+    "description": "Multiplayer & DMZ weapon loadouts.",
     "theme": "mw4",
     "accent": "#ffdd00",
     "cover": "assets/games/mw4.webp",
@@ -121,6 +121,11 @@
         "id": "public",
         "name": "Multiplayer",
         "feed": "mw4-public"
+      },
+      {
+        "id": "dmz",
+        "name": "DMZ",
+        "feed": "mw4-dmz"
       }
     ],
     "sourceName": "CODMunity"

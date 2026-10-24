@@ -1,10 +1,16 @@
 # Dropzone
 
-Version 2.5.4 · Windows x64
+Version 2.5.5 · Windows x64
 
 A desktop companion for Rocket League, Apex Legends, League of Legends, Call of Duty, THE FINALS, Rainbow Six Siege, Gray Zone Warfare, Sons of the Forest and WARDOGS.
 
-## New in 2.5.4
+## New in 2.5.5
+
+- MW4 DMZ loadouts beside Multiplayer, with 27 complete bundled weapon builds.
+- Apex, cylinder and trigger attachments, plus offline weapon artwork.
+- Separate DMZ source/cache and saved builds; existing game modes stay available.
+
+## Earlier in 2.5.4
 
 - Modern Warfare 4 multiplayer attachment recommendations alongside Black Ops 7 and Warzone.
 - Opacity-only Rocket League tab fades and smoother COD weapon selection.

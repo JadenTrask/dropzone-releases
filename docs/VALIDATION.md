@@ -1,3 +1,10 @@
+## 2.5.5 - 24 October 2026
+
+- All 346 Node tests passed with zero failures, skips or cancellations. Twenty focused COD, refresh and game-gate tests also passed. They cover DMZ routing, strict game/mode identities, Apex/cylinder/trigger attachments, rejection of inconsistent attachment counts, and preservation of both modes' cached data after a wrong-mode refresh.
+- Browser preview verified the separate DMZ button, all 27 complete builds through Source tier > All builds, Mojave's Apex/cylinder attachments, loaded artwork, and switching between DMZ and Multiplayer's different Han 86 optic. Bundled artwork and thumbnails exist for every included build.
+- The snapshot retains the provider's October 23 source date. Rezi 12 is excluded because its source attachment count does not match the supplied set. No missing attachment is invented. BO7, Warzone, Multiplayer and saved-build keys remain separate.
+- Native installation, installed-version upgrade and live gameplay were not exercised. The release workflow repeats the full suite and verifies exact source, installer version, update metadata, full source archive and downloaded release assets before publication.
+
 ## 2.5.4 - 22 October 2026
 
 - All 344 Node tests passed with zero failures, skips or cancellations. Eighteen focused COD, game-gate and refresh tests and eight transition/navigation-history checks also passed. The release workflow repeats the full test suite and verifies installer/update metadata and source correspondence before publishing.
