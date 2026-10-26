@@ -1,3 +1,10 @@
+## 2.5.6 - 26 October 2026
+
+- All 358 Node tests passed with zero failures, skips or cancellations. Camo checks cover all 33 weapons/462 challenges, shared weapon unlocks, class/global gates, separate mode mastery checkboxes, persistence, source refresh/history routing, and preservation of damaged or full-storage saves.
+- Browser preview verified clear checked/unchecked colours, clicking labels and artwork, local save persistence across reloads, and the three tabs: Weapon camos (both requirements together), Multiplayer mastery and DMZ mastery. Existing local progress was preserved.
+- Requirements and artwork are bundled from CODMunity, checked October 26. Shared progression was checked against the official MW4 guide. KG-7 Treeline DMZ contains a suspicious zero-kill requirement in the source and is visibly flagged instead of guessing a correction. Tracking is manual and local to this device.
+- Native installation, installed-version upgrade and gameplay remain unverified. Publication repeats the full suite and verifies installer/update metadata, exact source, source archive and downloaded release assets.
+
 ## 2.5.5 - 24 October 2026
 
 - All 346 Node tests passed with zero failures, skips or cancellations. Twenty focused COD, refresh and game-gate tests also passed. They cover DMZ routing, strict game/mode identities, Apex/cylinder/trigger attachments, rejection of inconsistent attachment counts, and preservation of both modes' cached data after a wrong-mode refresh.

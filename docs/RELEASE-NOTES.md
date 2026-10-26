@@ -1,9 +1,10 @@
-# Dropzone 2.5.5
+# Dropzone 2.5.6
 
-- **MW4 DMZ classes:** choose DMZ beside Multiplayer in Modern Warfare 4. Includes 27 complete bundled weapon loadouts from CODMunity, with search, weapon/playstyle filters and source tiers.
-- **DMZ attachments and artwork:** preserves Apex attachments, pistol cylinders and trigger actions, with local weapon images and thumbnails for offline browsing.
-- **Separate mode data:** DMZ uses its own feed, cache and saved-build identity. Multiplayer, Black Ops 7 and Warzone remain available. Wrong-game or wrong-mode responses cannot replace the last valid DMZ data.
+- **MW4 camo tracking:** open Modern Warfare 4 → Camos to track all 33 launch weapons. Military, Special and Completionist weapon camos share one checkbox across Multiplayer and DMZ, with both modes' requirements shown together.
+- **Three clear tracks:** Weapon camos, Multiplayer mastery and DMZ mastery. Mode-specific mastery camos each use a checkbox rather than a numeric counter. Divergence progress follows the recorded Harmonic Break unlocks.
+- **Larger camo previews:** bundled camo and weapon artwork, grouped weapon navigation, search, class filters and clear unlock progress make the next camo easier to find.
+- **Automatic local saves:** progress stays on this PC and survives reopening the tracker. Bundled requirements and artwork work offline; no CODMunity account or cloud connection is required. Existing MW4 Multiplayer/DMZ loadouts and the released app UI remain available.
 
-The bundled snapshot comes from CODMunity's October 23, 2026 DMZ feed. One source build has an inconsistent attachment count and is excluded rather than guessing its attachments. Recommendations are the provider's editorial tiers, not measured win rates. Perks and equipment remain outside this attachment feed.
+Requirements and artwork are bundled from [CODMunity's camo tracker](https://codmunity.gg/camo-tracker), checked October 26, 2026. Shared progression and mode-specific mastery follow the [official MW4 progression guide](https://www.callofduty.com/blog/2026/10/call-of-duty-modern-warfare-4-ready-for-launch-progression-prestige). This is a manual tracker: check off unlocks earned in game; Dropzone does not read camo progress from Call of Duty. Saves are local to this device and do not sync between PCs.
 
-All 346 Node tests passed with zero failures, skips or cancellations. Twenty focused COD, refresh and game-gate tests also passed. Browser preview checks covered DMZ selection, all 27 builds, Apex/cylinder attachments, loaded weapon artwork, and switching between DMZ and Multiplayer's different Han 86 setup. Publication repeats the full Node suite and installer/source integrity checks. Native installation, installed-version upgrade and gameplay were not exercised. The Windows installer remains unsigned.
+Publication runs the full Node suite and installer/source integrity checks before making this release available. Native installation, installed-version upgrade and live gameplay were not exercised for this update. The Windows installer remains unsigned.

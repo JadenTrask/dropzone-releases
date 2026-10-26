@@ -109,6 +109,7 @@
     "shortName": "MW4",
     "eyebrow": "MULTIPLAYER",
     "description": "Multiplayer & DMZ weapon loadouts.",
+    "pages": ["camos"],
     "theme": "mw4",
     "accent": "#ffdd00",
     "cover": "assets/games/mw4.webp",

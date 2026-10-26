@@ -1,10 +1,17 @@
 # Dropzone
 
-Version 2.5.5 · Windows x64
+Version 2.5.6 · Windows x64
 
 A desktop companion for Rocket League, Apex Legends, League of Legends, Call of Duty, THE FINALS, Rainbow Six Siege, Gray Zone Warfare, Sons of the Forest and WARDOGS.
 
-## New in 2.5.5
+## New in 2.5.6
+
+- MW4 camo tracking for all 33 launch weapons, with shared Multiplayer and DMZ weapon unlocks.
+- Weapon camos, Multiplayer mastery and DMZ mastery tabs; one checkbox per camo.
+- Both modes' requirements, large bundled camo previews, weapon search and class filters.
+- Automatic local saves and offline tracking without a CODMunity account. Progress is recorded manually, not imported from the game.
+
+## Earlier in 2.5.5
 
 - MW4 DMZ loadouts beside Multiplayer, with 27 complete bundled weapon builds.
 - Apex, cylinder and trigger attachments, plus offline weapon artwork.
